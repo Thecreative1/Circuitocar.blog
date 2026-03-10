@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuito Car Blog | Conselhos, Guias e Notícias Automóveis</title>
+  <meta name="description" content="Blog da Circuito Car com guias úteis sobre carros usados, híbridos, elétricos, financiamento, retoma e dicas para comprar melhor." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Circuito Car Blog" />
+  <meta property="og:description" content="Conselhos úteis, comparações e guias práticos para quem procura comprar carro com mais confiança." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.circuitocar.blog/img/og-blog.jpg" />
+  <meta property="og:url" content="https://www.circuitocar.blog/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --bg-soft: #121212;
+      --panel: #171717;
+      --panel-2: #1f1f1f;
+      --text: #f4f4f4;
+      --muted: #bdbdbd;
+      --line: rgba(255,255,255,0.08);
+      --accent: #c99b3b;
+      --accent-2: #e0b85d;
+      --success: #25d366;
+      --radius: 18px;
+      --shadow: 0 18px 45px rgba(0,0,0,0.28);
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #070707 0%, #0b0b0b 30%, #101010 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #050505;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-links a:hover,
+    .nav a:hover,
+    .footer-links a:hover {
+      color: var(--accent-2);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(8,8,8,0.88);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      border: 1px solid rgba(201,155,59,0.28);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--accent-2);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.4px;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: #f1f1f1;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #111;
+      box-shadow: 0 10px 28px rgba(201,155,59,0.18);
+    }
+
+    .btn-secondary {
+      border-color: rgba(201,155,59,0.35);
+      background: rgba(201,155,59,0.08);
+      color: #f8e2ad;
+    }
+
+    .btn-whatsapp {
+      border-color: rgba(37,211,102,0.35);
+      background: rgba(37,211,102,0.10);
+      color: #dff7e7;
+      box-shadow: 0 0 0 1px rgba(37,211,102,0.05), 0 10px 24px rgba(37,211,102,0.10);
+    }
+
+    .btn-whatsapp:hover {
+      box-shadow: 0 0 0 1px rgba(37,211,102,0.08), 0 14px 28px rgba(37,211,102,0.14);
+    }
+
+    .btn-phone::before {
+      content: "☎";
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+
+    .btn-whatsapp::before {
+      content: "◉";
+      font-size: 0.82rem;
+      line-height: 1;
+      color: #25d366;
+      text-shadow: 0 0 8px rgba(37,211,102,0.35);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at top right, rgba(201,155,59,0.14), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      padding: 72px 0 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(201,155,59,0.22);
+      border-radius: 999px;
+      background: rgba(201,155,59,0.08);
+      color: #f1d495;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .hero-point {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .hero-point strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-point span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(201,155,59,0.16);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-image {
+      min-height: 240px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1494976688153-c4724e0d54a4?auto=format&fit=crop&w=1200&q=80') center/cover;
+    }
+
+    .hero-card-body {
+      padding: 22px;
+    }
+
+    .hero-card-body small {
+      color: #f2cd7e;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+    }
+
+    .hero-card-body h2 {
+      margin: 10px 0 10px;
+      font-size: 1.35rem;
+    }
+
+    .hero-card-body p {
+      margin: 0 0 16px;
+      font-size: 0.96rem;
+    }
+
+    .section {
+      padding: 62px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .category-card,
+    .post-card,
+    .trust-card,
+    .cta-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: 0.2s ease;
+    }
+
+    .category-card:hover,
+    .post-card:hover,
+    .trust-card:hover,
+    .cta-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201,155,59,0.28);
+      box-shadow: var(--shadow);
+    }
+
+    .category-card {
+      padding: 22px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .category-card span {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(201,155,59,0.1);
+      border: 1px solid rgba(201,155,59,0.18);
+      color: #f4d99b;
+      font-weight: 800;
+    }
+
+    .category-card h3 {
+      margin: 18px 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .category-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+    }
+
+    .post-card-large .post-thumb {
+      min-height: 360px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.56)),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80') center/cover;
+    }
+
+    .post-content {
+      padding: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #f0d38f;
+      background: rgba(201,155,59,0.1);
+      border: 1px solid rgba(201,155,59,0.18);
+      margin-bottom: 14px;
+    }
+
+    .post-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.42rem;
+      line-height: 1.25;
+    }
+
+    .post-content p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: #d5d5d5;
+      font-size: 0.9rem;
+    }
+
+    .post-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .post-list .post-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      min-height: 150px;
+    }
+
+    .post-list .post-thumb {
+      background-size: cover;
+      background-position: center;
+      min-height: 100%;
+    }
+
+    .thumb-1 { background-image: linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50)), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=80'); }
+    .thumb-2 { background-image: linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=80'); }
+    .thumb-3 { background-image: linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50)), url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1000&q=80'); }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .post-grid .post-thumb {
+      min-height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .trust-card {
+      padding: 22px;
+    }
+
+    .trust-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
+    }
+
+    .trust-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cta-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+    }
+
+    .cta-card {
+      padding: 28px;
+    }
+
+    .cta-card h2,
+    .cta-card h3 {
+      margin-top: 0;
+    }
+
+    .cta-card p {
+      color: var(--muted);
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: #060606;
+      padding: 34px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+    }
+
+    .footer-col p,
+    .footer-col a,
+    .copyright {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .copyright {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .featured-grid,
+      .cta-wrap,
+      .footer-grid,
+      .categories,
+      .trust-grid,
+      .post-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-grid,
+      .featured-grid,
+      .cta-wrap,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .seller-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .header-inner,
+      .topbar-inner,
+      .section-header,
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav {
+        gap: 14px;
+      }
+
+      .hero {
+        padding-top: 4px;
+      }
+
+      .hero-grid {
+        padding: 44px 0 42px;
+      }
+
+      .hero-points,
+      .categories,
+      .trust-grid,
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .post-list .post-card {
+        grid-template-columns: 1fr;
+      }
+
+      .post-list .post-thumb {
+        min-height: 180px;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Conselhos úteis para comprar melhor, com mais confiança.</div>
+      <div class="topbar-links">
+        <a href="https://www.circuitocar.pt/viaturas">Ver Stock</a>
+        <a href="#contacto-comercial">Falar com a equipa</a>
+        <a href="https://www.circuitocar.pt/contactos">Contactos</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <div class="brand-mark">CC</div>
+        <div class="brand-text">
+          <strong>Circuito Car Blog</strong>
+          <span>Guias, conselhos e artigos automóveis</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#artigos">Artigos</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="https://www.circuitocar.pt/viaturas">Viaturas</a>
+        <a href="https://www.circuitocar.pt/contactos">Contactos</a>
+        <a class="btn btn-primary" href="#contacto-comercial">Falar com a equipa</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Blog Oficial de Conteúdo Automóvel</div>
+        <h1>Mais clareza para escolher o carro certo. Menos ruído, menos erros, mais confiança.</h1>
+        <p>
+          Um espaço criado para ajudar compradores reais a perceber melhor o mercado, comparar opções,
+          evitar erros comuns e tomar decisões mais seguras na compra de um carro usado.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#artigos">Ler Artigos</a>
+          <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign=blog_leads">Ver Stock Disponível</a>
+          <a class="btn btn-secondary" href="#contacto-comercial">Contactar equipa</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <strong>Guias práticos</strong>
+            <span>Conteúdo pensado para responder a dúvidas reais de compradores.</span>
+          </div>
+          <div class="hero-point">
+            <strong>Comparações úteis</strong>
+            <span>SUV, híbrido, elétrico, familiar ou citadino: o que faz mais sentido?</span>
+          </div>
+          <div class="hero-point">
+            <strong>Ligação ao stock</strong>
+            <span>Do conteúdo para a ação: ver viaturas, pedir ajuda e marcar contacto.</span>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;padding:16px 18px;border:1px solid rgba(201,155,59,0.18);border-radius:14px;background:rgba(255,255,255,0.03);max-width:760px;">
+          <strong style="display:block;margin-bottom:6px;color:#f4d99b;">Localização estratégica</strong>
+          <span style="color:var(--muted);display:block;">
+            Presença física em <strong style="color:#fff;">Joane, Vila Nova de Famalicão</strong>, com proximidade a Famalicão, Guimarães, Braga, Santo Tirso e Trofa.
+            Uma localização forte para quem procura viaturas no eixo do Minho e do Vale do Ave.
+          </span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-image"></div>
+        <div class="hero-card-body">
+          <small>Artigo em destaque</small>
+          <h2>Como escolher um carro usado sem cair em armadilhas</h2>
+          <p>
+            O guia essencial para quem quer comprar melhor, saber o que verificar e reduzir o risco de uma má decisão.
+          </p>
+          <a class="btn btn-primary" href="#artigos">Ler artigos</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="categorias">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Categorias do Blog</h2>
+          <p>Estrutura pensada para atrair tráfego útil, organizar conteúdos e conduzir o visitante até uma decisão com mais confiança.</p>
+        </div>
+      </div>
+
+      <div class="categories">
+        <article class="category-card">
+          <span>01</span>
+          <div>
+            <h3>Comprar Carro Usado</h3>
+            <p>Guias simples sobre inspeção, sinais de alerta, documentação e decisões inteligentes.</p>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <span>02</span>
+          <div>
+            <h3>Híbridos e Elétricos</h3>
+            <p>Conteúdo útil para quem quer perceber custos, autonomia, bateria e se compensa.</p>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <span>03</span>
+          <div>
+            <h3>Família e Dia a Dia</h3>
+            <p>Artigos para famílias, cidade, estrada, conforto, bagageira e uso real.</p>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <span>04</span>
+          <div>
+            <h3>Financiamento e Retoma</h3>
+            <p>Dúvidas práticas sobre prestações, retomas, avaliação e próximos passos.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="artigos">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Artigos em Destaque</h2>
+          <p>Exemplos de conteúdo pensado para captar pesquisa orgânica e transformá-la em interesse real por viaturas e contacto.</p>
+        </div>
+      </div>
+
+      <div class="featured-grid">
+        <article class="post-card post-card-large">
+          <div class="post-thumb"></div>
+          <div class="post-content">
+            <span class="tag">Guia Essencial</span>
+            <h3>Como escolher um carro usado sem cair em armadilhas</h3>
+            <p>
+              Um conteúdo-chave para posicionar a marca e gerar confiança logo no topo do funil.
+              Explica o que verificar, onde muitos falham e como comprar com mais segurança.
+            </p>
+            <div class="meta">
+              <span>8 min de leitura</span>
+              <span>Compra Segura</span>
+              <span>Publicado hoje</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="post-list">
+          <article class="post-card">
+            <div class="post-thumb thumb-1"></div>
+            <div class="post-content">
+              <span class="tag">Comparação</span>
+              <h3>SUV, citadino ou familiar: qual encaixa melhor no teu dia a dia?</h3>
+              <p>Artigo pensado para quem está indeciso e precisa de clareza antes de ver stock.</p>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-thumb thumb-2"></div>
+            <div class="post-content">
+              <span class="tag">Tendência</span>
+              <h3>Vale a pena comprar um híbrido usado em 2026?</h3>
+              <p>Tema forte para captar pesquisas atuais e orientar decisão com lógica e contexto.</p>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-thumb thumb-3"></div>
+            <div class="post-content">
+              <span class="tag">Retoma</span>
+              <h3>O que deve saber antes de entregar o seu carro à retoma</h3>
+              <p>Conteúdo com intenção comercial direta e potencial para gerar novos contactos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Mais Conteúdo para Crescer</h2>
+          <p>Uma grelha editorial pronta para expandir a autoridade online da marca e criar mais portas de entrada no Google.</p>
+        </div>
+      </div>
+
+      <div class="post-grid">
+        <article class="post-card">
+          <div class="post-thumb thumb-1"></div>
+          <div class="post-content">
+            <span class="tag">Cidade</span>
+            <h3>Carros automáticos usados: vantagens, riscos e para quem fazem sentido</h3>
+            <p>Bom tema para tráfego de pesquisa e compradores indecisos.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-thumb thumb-2"></div>
+          <div class="post-content">
+            <span class="tag">Família</span>
+            <h3>Os pontos que mais pesam na escolha de um carro para família</h3>
+            <p>Ajuda o visitante a pensar no uso real e aproxima-o da decisão.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-thumb thumb-3"></div>
+          <div class="post-content">
+            <span class="tag">Decisão</span>
+            <h3>7 erros comuns ao comprar o primeiro carro usado</h3>
+            <p>Conteúdo forte para captar uma audiência ampla e com intenção real.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="localizacao">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Localização com impacto real</h2>
+          <p>Não estamos a falar de uma presença genérica. A localização da Circuito Car coloca a marca numa zona estratégica para servir clientes de vários concelhos com deslocação simples.</p>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <article class="cta-card">
+          <h3>Joane, V. N. Famalicão</h3>
+          <p>
+            A Circuito Car está situada em <strong style="color:#fff;">Rua do Relógio nº 430, 4770-245 Joane</strong>, numa zona com ligação prática a <strong style="color:#fff;">Vila Nova de Famalicão, Guimarães, Braga, Trofa e Santo Tirso</strong>.
+            Isto reforça a conveniência para quem quer visitar o stand, ver viaturas ao vivo e falar diretamente com a equipa.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://maps.google.com/?q=Rua%20do%20Rel%C3%B3gio%20n%C2%BA%20430%2C%204770-245%20Joane&utm_source=blog&utm_medium=maps_cta&utm_campaign=blog_leads">Abrir no Google Maps</a>
+            <a class="btn btn-secondary" href="#contacto-comercial">Falar com a equipa</a>
+          </div>
+        </article>
+
+        <article class="cta-card">
+          <h3>Área de influência</h3>
+          <p>
+            Esta localização permite captar procura local e regional, tanto de clientes que procuram uma visita rápida ao stand como de quem vem com intenção séria de comparar viaturas, discutir retoma ou tratar financiamento.
+          </p>
+          <p>
+            No blog, isto pode ser explorado com conteúdo local como “onde comprar carro usado em Famalicão”, “carros usados perto de Guimarães” e “stands automóveis no eixo Braga–Famalicão”.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="vantagens">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Porque este blog faz sentido para a marca</h2>
+          <p>Não é apenas conteúdo. É uma forma mais inteligente de ganhar visibilidade, confiança e novos pontos de contacto com potenciais compradores.</p>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <article class="trust-card">
+          <h3>Mais presença no Google</h3>
+          <p>Mais artigos úteis significam mais oportunidades de aparecer em pesquisas reais ligadas à compra automóvel.</p>
+        </article>
+
+        <article class="trust-card">
+          <h3>Mais autoridade</h3>
+          <p>A marca deixa de ser apenas um catálogo de stock e passa a parecer mais experiente, útil e confiável.</p>
+        </article>
+
+        <article class="trust-card">
+          <h3>Mais confiança antes do contacto</h3>
+          <p>O visitante chega mais informado e menos desconfiado, o que melhora a qualidade da conversa comercial.</p>
+        </article>
+
+        <article class="trust-card">
+          <h3>Mais oportunidades de lead</h3>
+          <p>Cada artigo pode conduzir o leitor para uma ação concreta: WhatsApp, stock, visita ou pedido de avaliação.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cta-wrap">
+      <article class="cta-card" id="contacto-comercial">
+        <h2>Fale com a nossa equipa comercial</h2>
+        <p>
+          O blog serve para gerar confiança e interesse. O próximo passo é simples: falar com a pessoa certa, sem fricção desnecessária.
+          Escolha o perfil que melhor corresponde ao tipo de ajuda que procura.
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px;" class="seller-grid">
+          <div style="padding:18px;border:1px solid rgba(201,155,59,0.18);border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+              <strong style="font-size:1.05rem;">André Silva</strong>
+              <span style="display:inline-block;padding:6px 10px;border-radius:999px;font-size:0.78rem;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:#111;background:linear-gradient(135deg, var(--accent), var(--accent-2));">Comercial</span>
+            </div>
+            <p style="margin:0 0 14px;color:var(--muted);font-size:0.95rem;">
+              Ideal para primeiras conversas, apoio na escolha da viatura, esclarecimento comercial e acompanhamento do interesse inicial.
+            </p>
+            <div class="cta-actions" style="margin-top:0;">
+              <a class="btn btn-primary btn-phone" href="tel:+351911899092">Ligar André</a>
+              <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=andre_whatsapp&utm_campaign=blog_leads">WhatsApp André</a>
+            </div>
+          </div>
+
+          <div style="padding:18px;border:1px solid rgba(201,155,59,0.18);border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+              <strong style="font-size:1.05rem;">Filipe Rodrigues</strong>
+              <span style="display:inline-block;padding:6px 10px;border-radius:999px;font-size:0.78rem;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:#111;background:linear-gradient(135deg, var(--accent), var(--accent-2));">Técnico</span>
+            </div>
+            <p style="margin:0 0 14px;color:var(--muted);font-size:0.95rem;">
+              Mais indicado para detalhes técnicos, características da viatura, dúvidas específicas e esclarecimentos mais aprofundados.
+            </p>
+            <div class="cta-actions" style="margin-top:0;">
+              <a class="btn btn-primary btn-phone" href="tel:+351964197262">Ligar Filipe</a>
+              <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=filipe_whatsapp&utm_campaign=blog_leads">WhatsApp Filipe</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="cta-card">
+        <h3>Medição de origem e interesse</h3>
+        <p>
+          Todos os links principais desta página usam parâmetros UTM para perceber de onde vieram os cliques: header, hero, mapas, stock, André ou Filipe.
+          Isso permite medir melhor quais os artigos e chamadas para ação que estão a gerar mais interesse real.
+        </p>
+        <p>
+          Se ligares isto ao Google Analytics e ao Search Console, consegues provar valor com dados e não apenas com opinião.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Circuito Car Blog</h4>
+          <p>Conteúdo automóvel pensado para ajudar compradores reais a tomar decisões mais informadas, seguras e confiantes.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <div class="footer-links">
+            <a href="#contacto-comercial">Fale com a equipa comercial</a>
+            <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=blog_leads">Página de Contactos</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-links">
+            <a href="tel:+351911899092">André Silva · 911 899 092</a>
+            <a href="tel:+351964197262">Filipe · 964 197 262</a>
+            <a href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=footer_whatsapp_andre&utm_campaign=blog_leads">WhatsApp André</a>
+            <a href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=footer_whatsapp_filipe&utm_campaign=blog_leads">WhatsApp Filipe</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Localização</h4>
+          <p>Rua do Relógio nº 430<br>4770-245 Joane<br>V. N. Famalicão</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 Circuito Car Blog. Todos os direitos reservados.</span>
+        <span>Conceito editorial alinhado com a marca Circuito Car.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
