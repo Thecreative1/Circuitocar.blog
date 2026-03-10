@@ -16,7 +16,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #080808;
@@ -36,7 +35,6 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -163,8 +161,6 @@
       transition: 0.2s ease;
       border: 1px solid transparent;
       cursor: pointer;
-      min-height: 48px;
-      white-space: nowrap;
     }
 
     .btn:hover { transform: translateY(-1px); }
@@ -532,52 +528,6 @@
       margin-top: 18px;
     }
 
-    .seller-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .seller-card {
-      padding: 18px;
-      border: 1px solid rgba(201,155,59,0.18);
-      border-radius: 16px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-    }
-
-    .seller-card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-    }
-
-    .seller-card h4 {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .seller-role {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #111;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    }
-
-    .seller-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
     footer {
       border-top: 1px solid var(--line);
       background: #060606;
@@ -643,6 +593,12 @@
     }
 
     @media (max-width: 780px) {
+      .brand-mark {
+        width: 68px;
+        height: 46px;
+        padding: 5px 7px;
+      }
+
       .header-inner,
       .topbar-inner,
       .section-header,
@@ -677,23 +633,8 @@
         min-height: 180px;
       }
 
-      .brand-mark {
-        width: 68px;
-        height: 46px;
-        padding: 5px 7px;
-      }
-
       h1 {
         font-size: 2.3rem;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-actions,
-      .cta-actions {
-        flex-direction: column;
       }
     }
   </style>
@@ -744,7 +685,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="onde-comprar-carro-usado-famalicao.html">Ler artigo em destaque</a>
+          <a class="btn btn-primary" href="#artigos">Ler Artigos</a>
           <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign=blog_leads">Ver Stock Disponível</a>
           <a class="btn btn-secondary" href="#contacto-comercial">Contactar equipa</a>
         </div>
@@ -777,11 +718,11 @@
         <div class="hero-card-image"></div>
         <div class="hero-card-body">
           <small>Artigo em destaque</small>
-          <h2>Onde comprar carro usado em Famalicão com mais confiança</h2>
+          <h2>Como escolher um carro usado sem cair em armadilhas</h2>
           <p>
-            Um artigo local e estratégico para atrair tráfego qualificado, gerar confiança e encaminhar o visitante para contacto e stock real.
+            O guia essencial para quem quer comprar melhor, saber o que verificar e reduzir o risco de uma má decisão.
           </p>
-          <a class="btn btn-primary" href="onde-comprar-carro-usado-famalicao.html">Ler artigo</a>
+          <a class="btn btn-primary" href="#artigos">Ler artigos</a>
         </div>
       </aside>
     </div>
@@ -845,18 +786,16 @@
         <article class="post-card post-card-large">
           <div class="post-thumb"></div>
           <div class="post-content">
-            <span class="tag">Guia Local</span>
-            <h3>Onde comprar carro usado em Famalicão com mais confiança</h3>
+            <span class="tag">Guia Essencial</span>
+            <h3>Como escolher um carro usado sem cair em armadilhas</h3>
             <p>
-              Um conteúdo local pensado para captar pesquisa com intenção real, reforçar autoridade e transformar leitura em contacto qualificado.
+              Um conteúdo-chave para posicionar a marca e gerar confiança logo no topo do funil.
+              Explica o que verificar, onde muitos falham e como comprar com mais segurança.
             </p>
             <div class="meta">
-              <span>7 min de leitura</span>
-              <span>SEO Local</span>
+              <span>8 min de leitura</span>
+              <span>Compra Segura</span>
               <span>Publicado hoje</span>
-            </div>
-            <div style="margin-top:16px;">
-              <a class="btn btn-primary" href="onde-comprar-carro-usado-famalicao.html">Ler artigo</a>
             </div>
           </div>
         </article>
@@ -1010,26 +949,30 @@
           Escolha o perfil que melhor corresponde ao tipo de ajuda que procura.
         </p>
 
-        <div class="seller-grid">
-          <div class="seller-card">
-            <div class="seller-card-top">
-              <h4>André Silva</h4>
-              <span class="seller-role">Comercial</span>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px;" class="seller-grid">
+          <div style="padding:18px;border:1px solid rgba(201,155,59,0.18);border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+              <strong style="font-size:1.05rem;">André Silva</strong>
+              <span style="display:inline-block;padding:6px 10px;border-radius:999px;font-size:0.78rem;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:#111;background:linear-gradient(135deg, var(--accent), var(--accent-2));">Comercial</span>
             </div>
-            <p>Ideal para primeiras conversas, apoio na escolha da viatura, esclarecimento comercial e acompanhamento do interesse inicial.</p>
-            <div class="cta-actions">
+            <p style="margin:0 0 14px;color:var(--muted);font-size:0.95rem;">
+              Ideal para primeiras conversas, apoio na escolha da viatura, esclarecimento comercial e acompanhamento do interesse inicial.
+            </p>
+            <div class="cta-actions" style="margin-top:0;">
               <a class="btn btn-primary btn-phone" href="tel:+351911899092">Ligar André</a>
               <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=andre_whatsapp&utm_campaign=blog_leads">WhatsApp André</a>
             </div>
           </div>
 
-          <div class="seller-card">
-            <div class="seller-card-top">
-              <h4>Filipe Rodrigues</h4>
-              <span class="seller-role">Técnico</span>
+          <div style="padding:18px;border:1px solid rgba(201,155,59,0.18);border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+              <strong style="font-size:1.05rem;">Filipe Rodrigues</strong>
+              <span style="display:inline-block;padding:6px 10px;border-radius:999px;font-size:0.78rem;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:#111;background:linear-gradient(135deg, var(--accent), var(--accent-2));">Técnico</span>
             </div>
-            <p>Mais indicado para detalhes técnicos, características da viatura, dúvidas específicas e esclarecimentos mais aprofundados.</p>
-            <div class="cta-actions">
+            <p style="margin:0 0 14px;color:var(--muted);font-size:0.95rem;">
+              Mais indicado para detalhes técnicos, características da viatura, dúvidas específicas e esclarecimentos mais aprofundados.
+            </p>
+            <div class="cta-actions" style="margin-top:0;">
               <a class="btn btn-primary btn-phone" href="tel:+351964197262">Ligar Filipe</a>
               <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=filipe_whatsapp&utm_campaign=blog_leads">WhatsApp Filipe</a>
             </div>
@@ -1061,17 +1004,18 @@
         <div class="footer-col">
           <h4>Explorar</h4>
           <div class="footer-links">
-            <a href="#artigos">Artigos</a>
-            <a href="#categorias">Categorias</a>
-            <a href="https://www.circuitocar.pt/viaturas">Viaturas</a>
+            <a href="#contacto-comercial">Fale com a equipa comercial</a>
+            <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=blog_leads">Página de Contactos</a>
           </div>
         </div>
 
         <div class="footer-col">
           <h4>Contacto</h4>
           <div class="footer-links">
-            <a href="#contacto-comercial">Fale com a equipa comercial</a>
-            <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=blog_leads">Página de Contactos</a>
+            <a href="tel:+351911899092">André Silva · 911 899 092</a>
+            <a href="tel:+351964197262">Filipe · 964 197 262</a>
+            <a href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=footer_whatsapp_andre&utm_campaign=blog_leads">WhatsApp André</a>
+            <a href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=footer_whatsapp_filipe&utm_campaign=blog_leads">WhatsApp Filipe</a>
           </div>
         </div>
 
