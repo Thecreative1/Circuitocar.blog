@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Crédito Automóvel | Circuito Car</title>
+  <meta name="description" content="Simule de forma indicativa a prestação do seu crédito automóvel na Circuito Car. Ferramenta informativa com foco em clareza e contacto direto." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Simulador de Crédito Automóvel | Circuito Car" />
+  <meta property="og:description" content="Uma simulação indicativa para ajudar a perceber valores mensais, montante financiado e custo total estimado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.circuitocar.blog/img/cc.png" />
+  <meta property="og:url" content="https://www.circuitocar.blog/circuitocar_simulador_credito.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --bg-soft: #111111;
+      --panel: #151515;
+      --panel-2: #1d1d1d;
+      --text: #f4f4f4;
+      --muted: #bcbcbc;
+      --line: rgba(255,255,255,0.08);
+      --accent: #d4a63a;
+      --accent-2: #e6bf67;
+      --success: #25d366;
+      --danger: #ff7b7b;
+      --radius: 18px;
+      --shadow: 0 18px 45px rgba(0,0,0,0.28);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg,#070707 0%,#0b0b0b 30%,#101010 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      background: #050505;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(8,8,8,.88);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .brand-mark {
+      width: 78px; height: 52px; border-radius: 14px; background: #0f0f0f;
+      border: 1px solid rgba(212,166,58,.24); display: grid; place-items: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04),0 8px 22px rgba(0,0,0,.22);
+      overflow: hidden; flex-shrink: 0; padding: 6px 8px;
+    }
+    .brand-mark img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+    .brand-text strong { display: block; font-size: 1.05rem; letter-spacing: .4px; }
+    .brand-text span { color: var(--muted); font-size: .9rem; }
+
+    .nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav a { color: #f1f1f1; font-weight: 600; font-size: .95rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 13px 18px; border-radius: 12px; font-weight: 700; transition: .2s ease;
+      border: 1px solid transparent; cursor: pointer; min-height: 48px;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg,var(--accent),var(--accent-2)); color: #111; box-shadow: 0 10px 28px rgba(201,155,59,.18); }
+    .btn-secondary { border-color: rgba(201,155,59,.35); background: rgba(201,155,59,.08); color: #f8e2ad; }
+    .btn-whatsapp { border-color: rgba(37,211,102,.35); background: rgba(37,211,102,.10); color: #dff7e7; box-shadow: 0 0 0 1px rgba(37,211,102,.05),0 10px 24px rgba(37,211,102,.10); }
+    .btn-phone::before { content: "☎"; font-size: .95rem; line-height: 1; }
+    .btn-whatsapp::before { content: "◉"; font-size: .82rem; line-height: 1; color: #25d366; text-shadow: 0 0 8px rgba(37,211,102,.35); }
+
+    .hero {
+      padding: 56px 0 34px;
+      border-bottom: 1px solid var(--line);
+      background: radial-gradient(circle at top right, rgba(201,155,59,.14), transparent 26%);
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px;
+      border: 1px solid rgba(201,155,59,.22); border-radius: 999px;
+      background: rgba(201,155,59,.08); color: #f1d495; font-size: .88rem; font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 16px; font-size: clamp(2.1rem,4vw,3.9rem); line-height: 1.08; letter-spacing: -.03em; max-width: 900px; }
+    .lead { font-size: 1.08rem; color: var(--muted); max-width: 820px; margin: 0 0 22px; }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .page { padding: 36px 0 70px; }
+    .grid { display: grid; grid-template-columns: minmax(0,1fr) 360px; gap: 28px; align-items: start; }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .sim-card { padding: 28px; }
+    .sidebar { display: grid; gap: 18px; position: sticky; top: 92px; }
+    .sidebar-card { padding: 22px; }
+    .sidebar-card h3 { margin: 0 0 10px; font-size: 1.08rem; }
+    .sidebar-card p { margin: 0 0 14px; color: var(--muted); }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .field { display: grid; gap: 8px; }
+    .field label { font-weight: 700; font-size: .95rem; }
+    .field small { color: var(--muted); font-size: .85rem; }
+
+    .input, .select {
+      width: 100%;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.09);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+      outline: none;
+      transition: .2s ease;
+    }
+
+    .input:focus, .select:focus {
+      border-color: rgba(212,166,58,.45);
+      box-shadow: 0 0 0 3px rgba(212,166,58,.08);
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .result-box {
+      padding: 18px;
+      border: 1px solid rgba(212,166,58,.18);
+      border-radius: 16px;
+      background: rgba(255,255,255,.02);
+    }
+
+    .result-box strong {
+      display: block;
+      color: var(--muted);
+      font-size: .9rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .result-box span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      color: #fff;
+    }
+
+    .highlight {
+      border-color: rgba(37,211,102,.18);
+      background: rgba(37,211,102,.06);
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid rgba(212,166,58,.18);
+      border-radius: 16px;
+      background: rgba(212,166,58,.07);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .warning {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid rgba(255,123,123,.16);
+      border-radius: 14px;
+      background: rgba(255,123,123,.06);
+      color: #ffd4d4;
+      font-size: .92rem;
+    }
+
+    .seller {
+      padding: 16px; border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px; background: rgba(255,255,255,.02);
+    }
+    .seller + .seller { margin-top: 14px; }
+    .seller-head { display: flex; justify-content: space-between; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: .76rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #111; background: linear-gradient(135deg,var(--accent),var(--accent-2)); }
+    .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+
+    .calc-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+
+    footer { border-top: 1px solid var(--line); background: #060606; padding: 34px 0 22px; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; gap: 24px; margin-bottom: 24px; }
+    .footer-col h4 { margin: 0 0 12px; font-size: 1rem; }
+    .footer-col p, .footer-col a, .copyright { color: var(--muted); font-size: .95rem; }
+    .footer-links { display: grid; gap: 10px; }
+    .copyright { border-top: 1px solid var(--line); padding-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    @media (max-width: 980px) {
+      .grid, .footer-grid { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+
+    @media (max-width: 780px) {
+      .header-inner, .topbar-inner, .nav { align-items: flex-start; }
+      .brand-mark { width: 68px; height: 46px; padding: 5px 7px; }
+      .form-grid, .result-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.3rem; }
+      .btn { width: 100%; }
+      .hero-actions, .cta-actions, .calc-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Ferramenta indicativa pensada para gerar clareza e encaminhar o cliente para contacto.</div>
+      <div class="topbar-links">
+        <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=topbar_stock&utm_campaign=simulador_credito">Ver Stock</a>
+        <a href="#equipa">Falar com a equipa</a>
+        <a href="index.html">Voltar ao Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"><img src="img/cc.png" alt="Circuito Car" /></div>
+        <div class="brand-text">
+          <strong>Circuito Car</strong>
+          <span>Simulador de crédito automóvel</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="index.html#artigos">Artigos</a>
+        <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=simulador_credito">Viaturas</a>
+        <a href="https://www.circuitocar.pt/contactos?utm_source=simulador&utm_medium=header_contactos&utm_campaign=simulador_credito">Contactos</a>
+        <a class="btn btn-primary" href="#equipa">Falar com a equipa</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Simulação Indicativa · Crédito Automóvel</div>
+      <h1>Perceba rapidamente a prestação estimada antes de avançar</h1>
+      <p class="lead">Este simulador foi pensado para dar uma noção clara de valores mensais, montante financiado e custo total estimado. Não substitui proposta oficial nem aprovação por entidade financeira, mas ajuda a começar a conversa com mais contexto.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#simulador">Simular agora</a>
+        <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=hero_stock&utm_campaign=simulador_credito">Ver viaturas</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+    <div class="container grid">
+      <section class="card sim-card" id="simulador">
+        <h2 style="margin:0 0 8px;font-size:1.9rem;">Simulador de Crédito</h2>
+        <p style="margin:0;color:var(--muted);max-width:760px;">Preencha os valores base e veja uma estimativa simples. A taxa pode ser ajustada conforme o perfil pretendido ou uma futura parceria financeira.</p>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="precoViatura">Preço da viatura (€)</label>
+            <input class="input" id="precoViatura" type="number" min="1000" step="100" value="18950" />
+            <small>Valor total de venda.</small>
+          </div>
+
+          <div class="field">
+            <label for="entradaInicial">Entrada inicial (€)</label>
+            <input class="input" id="entradaInicial" type="number" min="0" step="100" value="3000" />
+            <small>Valor pago à cabeça pelo cliente.</small>
+          </div>
+
+          <div class="field">
+            <label for="prazoMeses">Prazo</label>
+            <select class="select" id="prazoMeses">
+              <option value="24">24 meses</option>
+              <option value="36">36 meses</option>
+              <option value="48">48 meses</option>
+              <option value="60" selected>60 meses</option>
+              <option value="72">72 meses</option>
+              <option value="84">84 meses</option>
+              <option value="96">96 meses</option>
+            </select>
+            <small>Prazos mais longos baixam a prestação, mas aumentam o custo total.</small>
+          </div>
+
+          <div class="field">
+            <label for="taxaAnual">Taxa anual estimada (%)</label>
+            <input class="input" id="taxaAnual" type="number" min="0" max="30" step="0.1" value="8.9" />
+            <small>Valor indicativo, ajustável consoante cenário comercial.</small>
+          </div>
+
+          <div class="field">
+            <label for="comissaoInicial">Comissões / despesas iniciais (€)</label>
+            <input class="input" id="comissaoInicial" type="number" min="0" step="10" value="250" />
+            <small>Use este campo para incluir despesas iniciais estimadas.</small>
+          </div>
+
+          <div class="field">
+            <label for="seguroOpcional">Seguro / extras mensais (€)</label>
+            <input class="input" id="seguroOpcional" type="number" min="0" step="1" value="0" />
+            <small>Campo opcional para aproximar cenários mais completos.</small>
+          </div>
+        </div>
+
+        <div class="calc-actions">
+          <button class="btn btn-primary" type="button" onclick="calcularSimulacao()">Calcular simulação</button>
+          <button class="btn btn-secondary" type="button" onclick="resetSimulacao()">Repor valores</button>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-box highlight">
+            <strong>Prestação mensal estimada</strong>
+            <span id="prestacaoMensal">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>Montante financiado</strong>
+            <span id="montanteFinanciado">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>Total estimado pago</strong>
+            <span id="totalPago">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>Custo total do crédito</strong>
+            <span id="custoCredito">€ 0,00</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong style="color:#fff;">Nota importante:</strong> esta simulação é meramente indicativa e serve apenas para ajudar a perceber a ordem de grandeza da prestação e do custo total. Os valores finais dependem sempre de análise, condições concretas e eventual aprovação por entidade financeira.
+        </div>
+
+        <div class="warning" id="mensagemAviso" style="display:none;"></div>
+      </section>
+
+      <aside class="sidebar" id="equipa">
+        <div class="card sidebar-card">
+          <h3>Porque este simulador faz sentido</h3>
+          <p>Reduz fricção, ajuda o cliente a perceber números rapidamente e cria um ponto de entrada natural para contacto comercial mais qualificado.</p>
+        </div>
+
+        <div class="card sidebar-card">
+          <h3>Fale com a nossa equipa</h3>
+          <div class="seller">
+            <div class="seller-head">
+              <strong>André Silva</strong>
+              <span class="pill">Comercial</span>
+            </div>
+            <p>Mais indicado para primeiras conversas, enquadramento financeiro e próximos passos comerciais.</p>
+            <div class="cta-actions">
+              <a class="btn btn-primary btn-phone" href="tel:+351911899092">Ligar</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/351911899092?text=Olá,%20estive%20a%20usar%20o%20simulador%20de%20crédito%20da%20Circuito%20Car%20e%20quero%20mais%20informação.&utm_source=simulador&utm_medium=sidebar_andre&utm_campaign=simulador_credito">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="seller">
+            <div class="seller-head">
+              <strong>Filipe Rodrigues</strong>
+              <span class="pill">Técnico</span>
+            </div>
+            <p>Mais indicado para esclarecer detalhes da viatura, características e questões mais específicas.</p>
+            <div class="cta-actions">
+              <a class="btn btn-primary btn-phone" href="tel:+351964197262">Ligar</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/351964197262?text=Olá,%20estive%20a%20usar%20o%20simulador%20de%20crédito%20da%20Circuito%20Car%20e%20quero%20mais%20informação.&utm_source=simulador&utm_medium=sidebar_filipe&utm_campaign=simulador_credito">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card sidebar-card">
+          <h3>Fluxo comercial sugerido</h3>
+          <p>Simular → perceber valor mensal → ver stock → falar com a equipa → avançar para cenário real.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=sidebar_stock&utm_campaign=simulador_credito">Ver stock</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Circuito Car</h4>
+          <p>Ferramenta de simulação indicativa criada para melhorar clareza, gerar confiança e facilitar o contacto comercial.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <div class="footer-links">
+            <a href="index.html">Homepage</a>
+            <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_credito">Viaturas</a>
+            <a href="https://www.circuitocar.pt/contactos?utm_source=simulador&utm_medium=footer_contactos&utm_campaign=simulador_credito">Contactos</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Equipa</h4>
+          <div class="footer-links">
+            <a href="tel:+351911899092">André Silva · 911 899 092</a>
+            <a href="tel:+351964197262">Filipe Rodrigues · 964 197 262</a>
+            <a href="#equipa">Falar com a equipa</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
+        <span>Simulação indicativa. Não constitui proposta vinculativa de crédito.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function formatEuro(value) {
+      return new Intl.NumberFormat('pt-PT', {
+        style: 'currency',
+        currency: 'EUR',
+        minimumFractionDigits: 2
+      }).format(value);
+    }
+
+    function calcularSimulacao() {
+      const preco = parseFloat(document.getElementById('precoViatura').value) || 0;
+      const entrada = parseFloat(document.getElementById('entradaInicial').value) || 0;
+      const prazo = parseInt(document.getElementById('prazoMeses').value, 10) || 0;
+      const taxaAnual = parseFloat(document.getElementById('taxaAnual').value) || 0;
+      const comissao = parseFloat(document.getElementById('comissaoInicial').value) || 0;
+      const extraMensal = parseFloat(document.getElementById('seguroOpcional').value) || 0;
+      const aviso = document.getElementById('mensagemAviso');
+
+      aviso.style.display = 'none';
+      aviso.textContent = '';
+
+      if (preco <= 0 || prazo <= 0) {
+        aviso.textContent = 'Introduza valores válidos para preço e prazo.';
+        aviso.style.display = 'block';
+        return;
+      }
+
+      if (entrada < 0 || comissao < 0 || extraMensal < 0) {
+        aviso.textContent = 'Não use valores negativos na entrada, comissões ou extras.';
+        aviso.style.display = 'block';
+        return;
+      }
+
+      const montanteBase = preco - entrada;
+      if (montanteBase <= 0) {
+        aviso.textContent = 'A entrada inicial não pode ser igual ou superior ao preço da viatura.';
+        aviso.style.display = 'block';
+        return;
+      }
+
+      const montanteFinanciado = montanteBase + comissao;
+      const taxaMensal = (taxaAnual / 100) / 12;
+      let prestacaoBase = 0;
+
+      if (taxaMensal === 0) {
+        prestacaoBase = montanteFinanciado / prazo;
+      } else {
+        prestacaoBase = montanteFinanciado * (taxaMensal / (1 - Math.pow(1 + taxaMensal, -prazo)));
+      }
+
+      const prestacaoMensal = prestacaoBase + extraMensal;
+      const totalPago = prestacaoMensal * prazo + entrada;
+      const custoCredito = totalPago - preco;
+
+      document.getElementById('prestacaoMensal').textContent = formatEuro(prestacaoMensal);
+      document.getElementById('montanteFinanciado').textContent = formatEuro(montanteFinanciado);
+      document.getElementById('totalPago').textContent = formatEuro(totalPago);
+      document.getElementById('custoCredito').textContent = formatEuro(custoCredito);
+    }
+
+    function resetSimulacao() {
+      document.getElementById('precoViatura').value = 18950;
+      document.getElementById('entradaInicial').value = 3000;
+      document.getElementById('prazoMeses').value = 60;
+      document.getElementById('taxaAnual').value = 8.9;
+      document.getElementById('comissaoInicial').value = 250;
+      document.getElementById('seguroOpcional').value = 0;
+      document.getElementById('mensagemAviso').style.display = 'none';
+      calcularSimulacao();
+    }
+
+    calcularSimulacao();
+  </script>
+</body>
+</html>
