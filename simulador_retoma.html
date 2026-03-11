@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Retoma | Circuito Car</title>
+  <meta name="description" content="Ferramenta indicativa para estimar a retoma de uma viatura com base em idade, quilometragem, histórico, estado e referência de mercado." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Simulador de Retoma | Circuito Car" />
+  <meta property="og:description" content="Uma estimativa indicativa de retoma pensada para gerar clareza, contacto e avaliação comercial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.circuitocar.blog/img/cc.png" />
+  <meta property="og:url" content="https://www.circuitocar.blog/simulador_retoma.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --surface: #151515;
+      --surface-soft: #1d1d1d;
+      --text: #f4f4f4;
+      --muted: #bcbcbc;
+      --line: rgba(255,255,255,0.08);
+      --brand: #d4a63a;
+      --brand-2: #e6bf67;
+      --ok: #25d366;
+      --warn: #f3c96a;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      --radius: 20px;
+      --radius-sm: 14px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #070707 0%, #0b0b0b 30%, #101010 100%);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .topbar {
+      background: #0b0b0b;
+      color: rgba(255,255,255,.88);
+      font-size: .92rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .topbar .wrap,
+    .header .wrap,
+    .hero .wrap,
+    .section .wrap,
+    .footer .wrap {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: .95;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(10px);
+      background: rgba(8,8,8,.88);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 78px;
+      height: 52px;
+      border-radius: 14px;
+      background: #0f0f0f;
+      border: 1px solid rgba(212,166,58,.24);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 8px 22px rgba(0,0,0,.22);
+      overflow: hidden;
+      flex-shrink: 0;
+      padding: 6px 8px;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.4px;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: #f1f1f1;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    .topbar-links a:hover,
+    .nav a:hover { color: var(--brand-2); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s ease;
+      min-height: 48px;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #111;
+      box-shadow: 0 10px 28px rgba(201,155,59,.18);
+    }
+
+    .btn-secondary {
+      background: rgba(201,155,59,.08);
+      color: #f8e2ad;
+      border-color: rgba(201,155,59,.35);
+    }
+
+    .btn-accent {
+      background: rgba(37,211,102,.10);
+      color: #dff7e7;
+      border-color: rgba(37,211,102,.35);
+      box-shadow: 0 0 0 1px rgba(37,211,102,.05), 0 10px 24px rgba(37,211,102,.10);
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .panel,
+    .aside-card,
+    .feature,
+    .contact-card,
+    .result-card,
+    .note,
+    .faq-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 34px;
+      background:
+        radial-gradient(circle at top right, rgba(201,155,59,.14), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,155,59,.22);
+      background: rgba(201,155,59,.08);
+      color: #f1d495;
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .hero-points {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .feature {
+      padding: 18px;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: .98rem;
+    }
+
+    .feature span {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 20px;
+    }
+
+    .aside-card {
+      padding: 24px;
+    }
+
+    .aside-card h2,
+    .section h2,
+    .faq-card h3 {
+      margin-top: 0;
+      letter-spacing: -.02em;
+    }
+
+    .kpi-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .kpi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+    }
+
+    .kpi small {
+      display: block;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .section {
+      padding: 20px 0 36px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 28px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .panel-header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .badge {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(201,155,59,.10);
+      color: #f0d38f;
+      border: 1px solid rgba(201,155,59,.18);
+      font-weight: 700;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-weight: 700;
+      font-size: .95rem;
+      color: #f1f1f1;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 14px 15px;
+      font: inherit;
+      outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(212,166,58,.45);
+      box-shadow: 0 0 0 3px rgba(212,166,58,.08);
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: .87rem;
+      margin-top: -2px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .checkbox-row input {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .note {
+      padding: 18px 20px;
+      background: rgba(201,155,59,.08);
+      color: #e9d6a2;
+      border: 1px solid rgba(201,155,59,.22);
+      font-size: .95rem;
+    }
+
+    .note strong { color: #fff; }
+
+    .results {
+      margin-top: 28px;
+      display: none;
+      gap: 18px;
+    }
+
+    .results.active {
+      display: grid;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .result-card {
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .result-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      background: rgba(201,155,59,.08);
+    }
+
+    .result-label {
+      font-size: .9rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .result-value {
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .result-text {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .score-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .score-item {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+    }
+
+    .score-item strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .explain {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .faq-card {
+      padding: 22px;
+    }
+
+    .faq-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 18px;
+      position: sticky;
+      top: 102px;
+    }
+
+    .contact-card {
+      padding: 22px;
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .contact-item {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .footer {
+      padding: 34px 0 54px;
+      color: var(--muted);
+    }
+
+    .footer-box {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .success {
+      color: var(--ok);
+      font-weight: 700;
+    }
+
+    .warning {
+      color: var(--warn);
+      font-weight: 700;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .layout,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero-card,
+      .panel,
+      .aside-card,
+      .contact-card,
+      .faq-card,
+      .result-card,
+      .note { padding: 22px; }
+
+      .hero-points,
+      .form-grid,
+      .result-grid,
+      .score-strip,
+      .explain {
+        grid-template-columns: 1fr;
+      }
+
+      .header .wrap {
+        align-items: flex-start;
+      }
+
+      .nav {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div>Ferramenta de retoma com a mesma linguagem visual e comercial da Circuito Car.</div>
+      <div class="topbar-links">
+        <a href="index.html">Voltar ao blog</a>
+        <a href="circuitocar_simulador_credito.html">Simulador de crédito</a>
+        <a href="https://www.circuitocar.pt/contactos">Contactos</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <img src="img/cc.png" alt="Circuito Car" />
+        </span>
+        <span class="brand-text">
+          <strong>Circuito Car Blog</strong>
+          <span>Simulador de retoma</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#artigos">Artigos</a>
+        <a href="onde-comprar-carro-usado-famalicao.html">Artigo Famalicão</a>
+        <a href="circuitocar_simulador_credito.html">Crédito</a>
+        <a href="https://www.circuitocar.pt/viaturas">Viaturas</a>
+        <a href="https://www.circuitocar.pt/contactos">Contactos</a>
+        <a class="btn btn-primary" href="#simulador">Simular retoma</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-card">
+        <span class="eyebrow">Ferramenta indicativa de avaliação</span>
+        <h1>Saiba quanto poderá valer a sua retoma</h1>
+        <p>
+          Esta simulação cruza idade, quilometragem, histórico, estado geral, liquidez de mercado e margem comercial
+          para apresentar uma faixa credível de entrada em retoma. É uma referência inicial, pensada para gerar clareza
+          antes da avaliação final da viatura.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#simulador">Calcular estimativa</a>
+          <a class="btn btn-secondary" href="circuitocar_simulador_credito.html">Abrir simulador de crédito</a>
+          <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas">Ver viaturas em stock</a>
+        </div>
+        <div class="hero-points">
+          <div class="feature">
+            <strong>Base económica real</strong>
+            <span>Considera desgaste, liquidez e custo de preparação comercial.</span>
+          </div>
+          <div class="feature">
+            <strong>Faixa de retoma</strong>
+            <span>Mostra intervalo provável em vez de um valor artificialmente exato.</span>
+          </div>
+          <div class="feature">
+            <strong>Próximo passo claro</strong>
+            <span>Fale com a equipa e transforme a estimativa em avaliação real.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="aside-card">
+          <h2>O que pesa no valor de retoma?</h2>
+          <div class="kpi-list">
+            <div class="kpi">
+              <div>
+                <strong>Quilometragem e idade</strong>
+                <small>Quanto acima da média do segmento, maior o desconto.</small>
+              </div>
+              <span>01</span>
+            </div>
+            <div class="kpi">
+              <div>
+                <strong>Estado e histórico</strong>
+                <small>Manutenção documentada e bom estado geram mais confiança comercial.</small>
+              </div>
+              <span>02</span>
+            </div>
+            <div class="kpi">
+              <div>
+                <strong>Procura de mercado</strong>
+                <small>Algumas combinações vendem melhor e exigem menos desconto comercial.</small>
+              </div>
+              <span>03</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aside-card">
+          <h2>Quando esta ferramenta é mais útil?</h2>
+          <p class="muted">
+            Quando quer perceber se a sua viatura pode servir de entrada na compra de outro carro, reduzir o valor a financiar
+            ou simplesmente obter uma primeira referência antes de falar com a equipa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="simulador">
+    <div class="wrap layout">
+      <main class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Simulador de retoma</h2>
+            <p>
+              Preencha os dados essenciais da viatura. Quanto mais realista for a informação inserida, mais útil será a faixa apresentada.
+            </p>
+          </div>
+          <div class="badge">Estimativa indicativa, não vinculativa</div>
+        </div>
+
+        <form id="tradeInForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="marca">Marca</label>
+              <input id="marca" name="marca" type="text" placeholder="Ex.: Peugeot" required />
+            </div>
+            <div class="field">
+              <label for="modelo">Modelo</label>
+              <input id="modelo" name="modelo" type="text" placeholder="Ex.: 308 SW" required />
+            </div>
+
+            <div class="field">
+              <label for="ano">Ano da matrícula</label>
+              <input id="ano" name="ano" type="number" min="1998" max="2026" placeholder="Ex.: 2018" required />
+            </div>
+            <div class="field">
+              <label for="kms">Quilómetros atuais</label>
+              <input id="kms" name="kms" type="number" min="0" step="1000" placeholder="Ex.: 128000" required />
+            </div>
+
+            <div class="field">
+              <label for="combustivel">Combustível</label>
+              <select id="combustivel" name="combustivel" required>
+                <option value="">Selecione</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="diesel">Diesel</option>
+                <option value="hibrido">Híbrido</option>
+                <option value="plugin">Híbrido Plug-in</option>
+                <option value="eletrico">Elétrico</option>
+                <option value="gpl">GPL</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="caixa">Caixa</label>
+              <select id="caixa" name="caixa" required>
+                <option value="">Selecione</option>
+                <option value="manual">Manual</option>
+                <option value="automatica">Automática</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="estado">Estado geral</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecione</option>
+                <option value="excelente">Excelente</option>
+                <option value="muito_bom">Muito bom</option>
+                <option value="bom">Bom</option>
+                <option value="razoavel">Razoável</option>
+                <option value="fraco">Com desgaste visível</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="historico">Histórico de manutenção</label>
+              <select id="historico" name="historico" required>
+                <option value="">Selecione</option>
+                <option value="completo">Completo/documentado</option>
+                <option value="parcial">Parcial</option>
+                <option value="sem_registo">Sem registo claro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="donos">Número de proprietários</label>
+              <select id="donos" name="donos" required>
+                <option value="">Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4 ou mais</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sinistros">Registo de sinistros relevantes</label>
+              <select id="sinistros" name="sinistros" required>
+                <option value="">Selecione</option>
+                <option value="nao">Não</option>
+                <option value="desconhecido">Desconhecido</option>
+                <option value="sim">Sim</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="liquidez">Procura de mercado para este tipo de carro</label>
+              <select id="liquidez" name="liquidez" required>
+                <option value="">Selecione</option>
+                <option value="alta">Alta</option>
+                <option value="media">Média</option>
+                <option value="baixa">Baixa</option>
+              </select>
+              <div class="hint">Escolha a perceção mais próxima: utilitários e familiares comuns tendem a vender melhor do que nichos difíceis.</div>
+            </div>
+            <div class="field">
+              <label for="mercado">Referência de mercado atual (€)</label>
+              <input id="mercado" name="mercado" type="number" min="1000" step="100" placeholder="Ex.: 14950" />
+              <div class="hint">Opcional. Preencha com uma média realista do mercado para este modelo/ano/km e a estimativa ficará mais afinada.</div>
+            </div>
+
+            <div class="field full">
+              <label for="observacoes">Observações úteis</label>
+              <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex.: revisão feita recentemente, pneus novos, GPS, 7 lugares, alguns riscos na pintura..."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="O seu nome" required />
+            </div>
+            <div class="field">
+              <label for="telefone">Telemóvel</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="9xx xxx xxx" required />
+            </div>
+
+            <div class="field full">
+              <label for="objetivo">Pretende usar a retoma na compra de outra viatura?</label>
+              <select id="objetivo" name="objetivo" required>
+                <option value="">Selecione</option>
+                <option value="sim">Sim, quero trocar de carro</option>
+                <option value="talvez">Talvez, estou a avaliar</option>
+                <option value="nao">Não, quero apenas perceber o valor</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input id="consentimento" type="checkbox" required />
+            <label for="consentimento" style="font-weight:600; margin:0;">
+              Confirmo que os dados inseridos são indicativos e aceito ser contactado pela equipa para afinar a avaliação, se necessário.
+            </label>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Calcular estimativa de retoma</button>
+            <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas">Explorar stock</a>
+          </div>
+        </form>
+
+        <div class="results" id="results">
+          <div class="result-grid">
+            <div class="result-card">
+              <span class="result-label">Faixa provável de retoma</span>
+              <div class="result-value" id="rangeValue">—</div>
+              <div class="result-text" id="rangeText">Estimativa comercial para entrada em retoma.</div>
+            </div>
+            <div class="result-card">
+              <span class="result-label">Valor médio indicativo</span>
+              <div class="result-value" id="midValue">—</div>
+              <div class="result-text">Referência central para conversa com a equipa.</div>
+            </div>
+            <div class="result-card">
+              <span class="result-label">Referência de mercado</span>
+              <div class="result-value" id="marketValue">—</div>
+              <div class="result-text">Valor estimado antes de ajustes comerciais e preparação.</div>
+            </div>
+          </div>
+
+          <div class="score-strip">
+            <div class="score-item">
+              <strong id="scoreEstado">—</strong>
+              <span>Impacto do estado</span>
+            </div>
+            <div class="score-item">
+              <strong id="scoreKms">—</strong>
+              <span>Impacto da quilometragem</span>
+            </div>
+            <div class="score-item">
+              <strong id="scoreHistorico">—</strong>
+              <span>Impacto do histórico</span>
+            </div>
+            <div class="score-item">
+              <strong id="scoreLiquidez">—</strong>
+              <span>Liquidez comercial</span>
+            </div>
+          </div>
+
+          <div class="explain">
+            <div class="note" id="explainBox">
+              <strong>Como chegámos a esta faixa:</strong>
+              <div id="explainText" style="margin-top:10px;">
+                Cruzámos idade, km, combustível, caixa, estado, histórico, donos, sinistros e margem comercial estimada.
+              </div>
+            </div>
+            <div class="note" id="nextStepBox">
+              <strong>Próximo passo recomendado:</strong>
+              <div id="nextStepText" style="margin-top:10px;">
+                Envie fotos e versão exata para afinar a avaliação final.
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn-accent" id="whatsappBtn" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://www.circuitocar.pt/contactos">Pedir avaliação humana</a>
+            <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas">Ver carros disponíveis</a>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:22px;">
+          <strong>Nota importante:</strong>
+          esta ferramenta apresenta apenas uma estimativa indicativa de retoma. O valor final depende sempre da análise presencial da viatura,
+          versão exata, equipamento, estado real, histórico, procura de mercado e eventual custo de preparação comercial.
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="contact-card">
+          <h3>Porque este simulador faz sentido</h3>
+          <p class="muted">
+            O valor de retoma nunca depende apenas do preço anunciado online. Um stand compra com lógica de revenda, preparação, garantia,
+            risco e velocidade de rotação do stock. Esta ferramenta aproxima esse raciocínio da realidade comercial.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Fale com a equipa</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>André</strong>
+              <span class="muted">Apoio comercial e financiamento</span>
+            </div>
+            <div class="contact-item">
+              <strong>Filipe</strong>
+              <span class="muted">Acompanhamento de viaturas e atendimento</span>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:+351911899092">Ligar agora</a>
+            <a class="btn btn-secondary" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Abrir WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Depois da retoma</h3>
+          <p class="muted">
+            Se estiver a pensar trocar de carro, o passo seguinte é cruzar o valor de entrada com o stock atual e perceber que mensalidade faz sentido.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-secondary" href="circuitocar_simulador_credito.html">Simular crédito</a>
+            <a class="btn btn-secondary" href="https://www.circuitocar.pt/viaturas">Ver stock</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Perguntas frequentes sobre retoma</h2>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>Porque é que a retoma costuma ficar abaixo do preço de anúncio?</h3>
+          <p>
+            Porque a retoma precisa de absorver margem comercial, preparação, garantia, risco, eventuais reparações e o tempo até nova venda.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h3>Mais quilómetros baixa sempre o valor?</h3>
+          <p>
+            Sim, em regra pesa negativamente, mas não isoladamente. Um carro bem mantido pode defender melhor o valor do que outro com menos km e pior histórico.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h3>Vale a pena indicar uma referência de mercado?</h3>
+          <p>
+            Sim. Quando essa referência é realista, o simulador consegue trabalhar uma base mais próxima do valor observado no mercado atual.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer-box">
+      <div>© CircuitoCAR — Simulador de retoma indicativo</div>
+      <div>Feito para gerar clareza, confiança e contacto qualificado.</div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('tradeInForm');
+    const results = document.getElementById('results');
+
+    const euro = new Intl.NumberFormat('pt-PT', {
+      style: 'currency',
+      currency: 'EUR',
+      maximumFractionDigits: 0
+    });
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function formatEuro(value) {
+      return euro.format(Math.round(value));
+    }
+
+    function getBaseMarketValue(ano, kms, combustivel, caixa) {
+      const currentYear = new Date().getFullYear();
+      const idade = currentYear - ano;
+
+      let base = 24000;
+      base -= idade * 1500;
+
+      if (kms > 220000) base -= 4500;
+      else if (kms > 170000) base -= 3000;
+      else if (kms > 130000) base -= 1800;
+      else if (kms > 100000) base -= 900;
+      else if (kms < 70000) base += 700;
+      else if (kms < 40000) base += 1600;
+
+      const fuelAdjust = {
+        gasolina: 0,
+        diesel: -300,
+        hibrido: 1000,
+        plugin: 1600,
+        eletrico: 800,
+        gpl: -500
+      };
+
+      const caixaAdjust = {
+        manual: 0,
+        automatica: 650
+      };
+
+      base += fuelAdjust[combustivel] || 0;
+      base += caixaAdjust[caixa] || 0;
+
+      return clamp(base, 2500, 90000);
+    }
+
+    function getMileageFactor(ano, kms) {
+      const currentYear = new Date().getFullYear();
+      const idade = Math.max(1, currentYear - ano);
+      const expected = idade * 17000;
+      const ratio = kms / expected;
+
+      if (ratio <= 0.7) return { factor: 1.04, label: 'Acima da média positiva' };
+      if (ratio <= 0.95) return { factor: 1.015, label: 'Ligeiramente favorável' };
+      if (ratio <= 1.15) return { factor: 1, label: 'Dentro do esperado' };
+      if (ratio <= 1.35) return { factor: 0.95, label: 'Um pouco acima da média' };
+      return { factor: 0.89, label: 'Bem acima da média' };
+    }
+
+    function getStateFactor(estado) {
+      return {
+        excelente: { factor: 1.06, label: 'Estado muito acima da média' },
+        muito_bom: { factor: 1.03, label: 'Estado forte para revenda' },
+        bom: { factor: 1, label: 'Estado comercial normal' },
+        razoavel: { factor: 0.93, label: 'Vai exigir mais desconto' },
+        fraco: { factor: 0.84, label: 'Desgaste visível pesa bastante' }
+      }[estado];
+    }
+
+    function getHistoryFactor(historico) {
+      return {
+        completo: { factor: 1.03, label: 'Histórico completo valoriza confiança' },
+        parcial: { factor: 0.99, label: 'Histórico parcial tem impacto neutro/ligeiro' },
+        sem_registo: { factor: 0.94, label: 'Sem histórico claro reduz confiança' }
+      }[historico];
+    }
+
+    function getOwnersFactor(donos) {
+      return {
+        '1': 1.02,
+        '2': 1,
+        '3': 0.98,
+        '4': 0.95
+      }[donos] || 1;
+    }
+
+    function getClaimFactor(sinistros) {
+      return {
+        nao: 1,
+        desconhecido: 0.97,
+        sim: 0.9
+      }[sinistros] || 1;
+    }
+
+    function getLiquidityFactor(liquidez) {
+      return {
+        alta: { factor: 1.02, label: 'Boa rotação comercial' },
+        media: { factor: 1, label: 'Procura equilibrada' },
+        baixa: { factor: 0.94, label: 'Risco de rotação mais lento' }
+      }[liquidez];
+    }
+
+    function getCommercialMargin(idade, liquidez, estado) {
+      let margin = 0.16;
+      if (idade >= 8) margin += 0.03;
+      if (idade >= 12) margin += 0.03;
+      if (liquidez === 'baixa') margin += 0.03;
+      if (estado === 'razoavel') margin += 0.025;
+      if (estado === 'fraco') margin += 0.05;
+      return clamp(margin, 0.13, 0.3);
+    }
+
+    function getPrepCost(idade, estado, kms, combustivel) {
+      let cost = 650;
+      if (idade >= 8) cost += 250;
+      if (idade >= 12) cost += 300;
+      if (estado === 'razoavel') cost += 450;
+      if (estado === 'fraco') cost += 950;
+      if (kms > 150000) cost += 250;
+      if (combustivel === 'plugin' || combustivel === 'eletrico') cost += 150;
+      return cost;
+    }
+
+    function resultTone(mid, market) {
+      const ratio = mid / market;
+      if (ratio >= 0.8) return 'Retoma forte face à referência de mercado.';
+      if (ratio >= 0.7) return 'Retoma equilibrada para contexto comercial.';
+      return 'A diferença reflete preparação, margem e risco de revenda.';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const data = {
+        marca: document.getElementById('marca').value.trim(),
+        modelo: document.getElementById('modelo').value.trim(),
+        ano: parseInt(document.getElementById('ano').value, 10),
+        kms: parseInt(document.getElementById('kms').value, 10),
+        combustivel: document.getElementById('combustivel').value,
+        caixa: document.getElementById('caixa').value,
+        estado: document.getElementById('estado').value,
+        historico: document.getElementById('historico').value,
+        donos: document.getElementById('donos').value,
+        sinistros: document.getElementById('sinistros').value,
+        liquidez: document.getElementById('liquidez').value,
+        mercado: parseInt(document.getElementById('mercado').value, 10),
+        nome: document.getElementById('nome').value.trim(),
+        telefone: document.getElementById('telefone').value.trim(),
+        objetivo: document.getElementById('objetivo').value,
+        observacoes: document.getElementById('observacoes').value.trim()
+      };
+
+      const currentYear = new Date().getFullYear();
+      const idade = currentYear - data.ano;
+      const marketBase = Number.isFinite(data.mercado) ? data.mercado : getBaseMarketValue(data.ano, data.kms, data.combustivel, data.caixa);
+
+      const mileage = getMileageFactor(data.ano, data.kms);
+      const state = getStateFactor(data.estado);
+      const history = getHistoryFactor(data.historico);
+      const liquidity = getLiquidityFactor(data.liquidez);
+      const ownersFactor = getOwnersFactor(data.donos);
+      const claimFactor = getClaimFactor(data.sinistros);
+      const prepCost = getPrepCost(idade, data.estado, data.kms, data.combustivel);
+      const margin = getCommercialMargin(idade, data.liquidez, data.estado);
+
+      let adjustedMarket = marketBase;
+      adjustedMarket *= mileage.factor;
+      adjustedMarket *= state.factor;
+      adjustedMarket *= history.factor;
+      adjustedMarket *= ownersFactor;
+      adjustedMarket *= claimFactor;
+      adjustedMarket *= liquidity.factor;
+
+      adjustedMarket = clamp(adjustedMarket, 1500, 120000);
+
+      let tradeMid = adjustedMarket * (1 - margin) - prepCost;
+      tradeMid = clamp(tradeMid, 1000, adjustedMarket * 0.92);
+
+      const spread = data.estado === 'fraco' || data.sinistros === 'sim' ? 0.09 : 0.06;
+      const low = clamp(tradeMid * (1 - spread), 800, tradeMid);
+      const high = clamp(tradeMid * (1 + spread), low + 200, adjustedMarket * 0.97);
+
+      document.getElementById('rangeValue').textContent = `${formatEuro(low)} – ${formatEuro(high)}`;
+      document.getElementById('midValue').textContent = formatEuro(tradeMid);
+      document.getElementById('marketValue').textContent = formatEuro(adjustedMarket);
+      document.getElementById('rangeText').textContent = resultTone(tradeMid, adjustedMarket);
+
+      document.getElementById('scoreEstado').textContent = state.label;
+      document.getElementById('scoreKms').textContent = mileage.label;
+      document.getElementById('scoreHistorico').textContent = history.label;
+      document.getElementById('scoreLiquidez').textContent = liquidity.label;
+
+      const explainLines = [
+        `Partimos de uma referência de mercado de ${formatEuro(marketBase)} e ajustámos esse valor pela idade da viatura, quilometragem atual e procura comercial.`,
+        `O estado geral foi lido como "${document.querySelector('#estado option:checked').textContent}", o que influencia diretamente o custo de preparação e o desconto necessário para revenda.`,
+        `Aplicámos uma margem comercial aproximada de ${(margin * 100).toFixed(0)}% e um custo médio de preparação de ${formatEuro(prepCost)}.`
+      ];
+      document.getElementById('explainText').innerHTML = explainLines.map(line => `<p style="margin:0 0 10px;">${line}</p>`).join('');
+
+      let next = 'Envie fotos exteriores, interiores, matrícula e versão exata para afinar a avaliação final.';
+      if (data.objetivo === 'sim') {
+        next = 'Como pretende trocar de carro, o melhor passo seguinte é cruzar esta estimativa com o stock disponível e perceber quanto poderá reduzir no financiamento.';
+      } else if (data.objetivo === 'talvez') {
+        next = 'Tem uma base útil para decidir se faz sentido avançar para avaliação completa ou comparar com outra viatura em stock.';
+      }
+      document.getElementById('nextStepText').textContent = next;
+
+      const msg = [
+        `Olá, sou ${data.nome}.`,
+        `Fiz uma simulação de retoma para ${data.marca} ${data.modelo} (${data.ano}) com ${data.kms.toLocaleString('pt-PT')} km.`,
+        `A faixa indicativa apresentada foi ${formatEuro(low)} a ${formatEuro(high)}.`,
+        `Gostava de afinar a avaliação.${data.observacoes ? ` Observações: ${data.observacoes}` : ''}`
+      ].join(' ');
+
+      document.getElementById('whatsappBtn').href = `https://wa.me/351911899092?text=${encodeURIComponent(msg)}`;
+
+      results.classList.add('active');
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+</html>
