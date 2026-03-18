@@ -642,6 +642,203 @@
         width: 100%;
       }
     }
+
+    :root {
+      --bg: #0e1217;
+      --surface: #181d24;
+      --surface-soft: #20262e;
+      --text: #f4efe7;
+      --muted: #b9b3a7;
+      --line: rgba(241,232,217,0.08);
+      --brand: #c78b47;
+      --brand-2: #e0bc86;
+      --ok: #2fc17d;
+      --warn: #e6c07a;
+      --shadow: 0 18px 42px rgba(0,0,0,0.22);
+      --container: 1100px;
+    }
+
+    body {
+      font-size: 15px;
+      background:
+        radial-gradient(circle at top, rgba(199,139,71,0.08), transparent 20%),
+        linear-gradient(180deg, #0b0d11 0%, #12161b 52%, #181c22 100%);
+    }
+
+    .topbar {
+      background: rgba(10,12,15,0.96);
+      color: rgba(244,239,231,0.88);
+    }
+
+    .topbar .wrap,
+    .header .wrap,
+    .hero .wrap,
+    .section .wrap,
+    .footer .wrap {
+      width: min(var(--container), calc(100% - 40px));
+    }
+
+    .header {
+      background: rgba(11,14,18,0.82);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+    }
+
+    .header .wrap {
+      padding: 14px 0;
+      gap: 18px;
+    }
+
+    .brand-mark {
+      background: #12161b;
+      border-color: rgba(199,139,71,0.22);
+    }
+
+    .brand-text strong { font-size: 1rem; }
+    .brand-text span { font-size: 0.86rem; }
+
+    .nav {
+      gap: 18px;
+    }
+
+    .nav a {
+      color: #ece5d8;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      padding: 11px 16px;
+      border-radius: 11px;
+      min-height: 44px;
+    }
+
+    .btn-primary { box-shadow: 0 12px 26px rgba(199,139,71,0.16); }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.035);
+      color: #efe6d7;
+      border-color: rgba(241,232,217,0.08);
+    }
+
+    .btn-accent {
+      background: rgba(47,193,125,0.09);
+      border-color: rgba(47,193,125,0.24);
+      box-shadow: 0 0 0 1px rgba(47,193,125,0.05), 0 12px 24px rgba(47,193,125,0.08);
+    }
+
+    .hero {
+      padding: 48px 0 24px;
+      background: radial-gradient(circle at top right, rgba(199,139,71,0.1), transparent 30%);
+    }
+
+    .hero-grid {
+      gap: 20px;
+    }
+
+    .hero-card,
+    .panel,
+    .aside-card,
+    .feature,
+    .contact-card,
+    .result-card,
+    .note,
+    .faq-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.018));
+      border-color: rgba(241,232,217,0.07);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(199,139,71,0.12), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.018));
+    }
+
+    .eyebrow {
+      border-color: rgba(199,139,71,0.2);
+      background: rgba(199,139,71,0.11);
+      color: #edd1a8;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 3.2vw, 3rem);
+      line-height: 1.04;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 58ch;
+    }
+
+    .hero-actions {
+      margin-top: 22px;
+      gap: 10px;
+    }
+
+    .hero-points {
+      margin-top: 20px;
+      gap: 12px;
+    }
+
+    .feature { padding: 16px; }
+    .aside-card { padding: 22px; }
+
+    .kpi,
+    .contact-item,
+    .score-item,
+    .checkbox-row {
+      background: rgba(255,255,255,0.025);
+      border-color: rgba(241,232,217,0.07);
+    }
+
+    .section { padding: 16px 0 32px; }
+
+    .layout {
+      grid-template-columns: minmax(0,1fr) 320px;
+      gap: 20px;
+    }
+
+    .panel { padding: 24px; }
+    .panel-header { margin-bottom: 20px; }
+
+    .badge {
+      background: rgba(199,139,71,0.1);
+      color: #edd1a8;
+      border-color: rgba(199,139,71,0.18);
+    }
+
+    input,
+    select,
+    textarea {
+      background: rgba(255,255,255,0.025);
+      border-color: rgba(241,232,217,0.09);
+      padding: 13px 14px;
+    }
+
+    .result-card { padding: 18px; }
+
+    .result-card::after {
+      background: rgba(199,139,71,0.06);
+    }
+
+    .result-value {
+      font-size: clamp(1.35rem, 2.3vw, 1.95rem);
+    }
+
+    .sidebar { top: 96px; }
+    .footer { padding: 30px 0 48px; }
+
+    @media (max-width: 760px) {
+      .topbar .wrap,
+      .header .wrap,
+      .hero .wrap,
+      .section .wrap,
+      .footer .wrap {
+        width: min(var(--container), calc(100% - 28px));
+      }
+
+      h1 { font-size: 1.95rem; }
+    }
   </style>
 </head>
 <body>

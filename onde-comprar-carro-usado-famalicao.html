@@ -89,6 +89,64 @@
     .footer-links{display:grid;gap:10px}.copyright{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     @media (max-width: 980px){.grid{grid-template-columns:1fr}.sidebar{position:static}.footer-grid{grid-template-columns:1fr}}
     @media (max-width: 780px){.header-inner,.topbar-inner,.nav{align-items:flex-start}.brand-mark{width:68px;height:46px;padding:5px 7px}.article{padding:24px}h1{font-size:2.2rem}}
+
+    :root{
+      --bg:#0e1217;
+      --bg-soft:#151a20;
+      --panel:#181d24;
+      --panel-2:#20262e;
+      --text:#f4efe7;
+      --muted:#b9b3a7;
+      --line:rgba(241,232,217,.08);
+      --accent:#c78b47;
+      --accent-2:#e0bc86;
+      --success:#2fc17d;
+      --shadow:0 18px 42px rgba(0,0,0,.22);
+      --max:1100px;
+    }
+    body{
+      font-size:15px;
+      background:
+        radial-gradient(circle at top, rgba(199,139,71,.08), transparent 20%),
+        linear-gradient(180deg,#0b0d11 0%,#12161b 52%,#181c22 100%);
+      line-height:1.68
+    }
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .topbar{background:rgba(10,12,15,.96)}
+    header{background:rgba(11,14,18,.82);box-shadow:0 8px 28px rgba(0,0,0,.16)}
+    .header-inner{gap:20px;padding:15px 0}
+    .brand-mark{background:#12161b;border-color:rgba(199,139,71,.22)}
+    .brand-text strong{font-size:1rem}
+    .brand-text span{font-size:.86rem}
+    .nav{gap:18px}
+    .nav a{color:#ece5d8;font-size:.9rem}
+    .btn{padding:11px 16px;border-radius:11px;min-height:44px}
+    .btn-primary{box-shadow:0 12px 26px rgba(199,139,71,.16)}
+    .btn-secondary{border-color:rgba(241,232,217,.08);background:rgba(255,255,255,.035);color:#efe6d7}
+    .btn-whatsapp{border-color:rgba(47,193,125,.24);background:rgba(47,193,125,.09);box-shadow:0 0 0 1px rgba(47,193,125,.05),0 12px 24px rgba(47,193,125,.08)}
+    .hero{padding:48px 0 22px;background:radial-gradient(circle at top right, rgba(199,139,71,.12), transparent 32%)}
+    .eyebrow{border-color:rgba(199,139,71,.2);background:rgba(199,139,71,.11);color:#edd1a8}
+    h1{font-size:clamp(1.9rem,3.3vw,3.2rem);line-height:1.05;max-width:12ch}
+    .lead{font-size:1rem;max-width:760px}
+    .page{padding:32px 0 60px}
+    .grid{grid-template-columns:minmax(0,1fr) 320px;gap:24px}
+    .article,.sidebar-card{background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.018));border-color:rgba(241,232,217,.07);box-shadow:var(--shadow)}
+    .article{padding:30px}
+    .article h2{font-size:1.55rem;margin:34px 0 12px}
+    .article h3{font-size:1.08rem}
+    .article p,.article ul{color:#efe9df}
+    .note{border-color:rgba(199,139,71,.18);background:rgba(199,139,71,.08)}
+    .cta-inline{border-color:rgba(47,193,125,.16);background:rgba(255,255,255,.025)}
+    .sidebar{top:86px}
+    .sidebar-card{padding:20px}
+    .badge{color:#edd1a8;background:rgba(199,139,71,.1);border-color:rgba(199,139,71,.18)}
+    .seller{background:rgba(255,255,255,.022);border-color:rgba(241,232,217,.07)}
+    footer{background:#0b0d11}
+    @media (max-width: 780px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      .article{padding:22px}
+      h1{font-size:1.95rem;max-width:100%}
+    }
   </style>
 </head>
 <body>

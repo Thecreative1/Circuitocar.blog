@@ -696,6 +696,155 @@
         flex-direction: column;
       }
     }
+
+    :root {
+      --bg: #0e1217;
+      --bg-soft: #151a20;
+      --panel: #181d24;
+      --panel-2: #20262e;
+      --text: #f4efe7;
+      --muted: #b9b3a7;
+      --line: rgba(241,232,217,0.08);
+      --accent: #c78b47;
+      --accent-2: #e0bc86;
+      --success: #2fc17d;
+      --shadow: 0 18px 42px rgba(0,0,0,0.22);
+      --max: 1120px;
+    }
+
+    body {
+      font-size: 15px;
+      background:
+        radial-gradient(circle at top, rgba(199,139,71,0.08), transparent 20%),
+        linear-gradient(180deg, #0b0d11 0%, #12161b 52%, #181c22 100%);
+    }
+
+    .container { width: min(var(--max), calc(100% - 40px)); }
+
+    .topbar { background: rgba(10,12,15,0.96); }
+
+    header {
+      background: rgba(11,14,18,0.82);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+    }
+
+    .header-inner {
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    .brand-mark {
+      background: #12161b;
+      border-color: rgba(199,139,71,0.22);
+    }
+
+    .brand-text strong { font-size: 1rem; }
+    .brand-text span { font-size: 0.86rem; }
+
+    .nav { gap: 18px; }
+    .nav a {
+      color: #ece5d8;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      padding: 11px 16px;
+      min-height: 44px;
+      border-radius: 11px;
+    }
+
+    .btn-primary { box-shadow: 0 12px 26px rgba(199,139,71,0.16); }
+
+    .btn-secondary {
+      border-color: rgba(241,232,217,0.08);
+      background: rgba(255,255,255,0.035);
+      color: #efe6d7;
+    }
+
+    .btn-whatsapp {
+      border-color: rgba(47,193,125,0.24);
+      background: rgba(47,193,125,0.09);
+      box-shadow: 0 0 0 1px rgba(47,193,125,0.05), 0 12px 24px rgba(47,193,125,0.08);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(199,139,71,0.12), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    }
+
+    .hero-grid {
+      gap: 28px;
+      padding: 48px 0 40px;
+    }
+
+    .eyebrow {
+      border-color: rgba(199,139,71,0.2);
+      background: rgba(199,139,71,0.11);
+      color: #edd1a8;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.1vw, 3.1rem);
+      line-height: 1.05;
+      max-width: 13.2ch;
+    }
+
+    .hero p {
+      font-size: 0.99rem;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .hero-point {
+      padding: 14px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .hero-card,
+    .category-card,
+    .post-card,
+    .trust-card,
+    .cta-card,
+    .seller-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.018));
+      border-color: rgba(241,232,217,0.07);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card { border-color: rgba(199,139,71,0.14); }
+    .hero-card-image { min-height: 210px; }
+    .hero-card-body { padding: 20px; }
+
+    .section { padding: 54px 0; }
+    .section-header { margin-bottom: 22px; }
+    .categories,
+    .post-grid,
+    .trust-grid { gap: 16px; }
+
+    .category-card {
+      padding: 20px;
+      min-height: 148px;
+    }
+
+    .post-card-large .post-thumb { min-height: 320px; }
+    .post-grid .post-thumb { min-height: 200px; }
+    .post-content { padding: 20px; }
+    .cta-card { padding: 24px; }
+    footer { background: #0b0d11; }
+
+    @media (max-width: 780px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .hero-grid { padding: 34px 0 30px; }
+      h1 {
+        font-size: 2rem;
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
