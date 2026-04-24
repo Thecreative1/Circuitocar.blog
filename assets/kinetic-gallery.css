@@ -148,6 +148,8 @@ h1 em,
   position: relative !important;
   overflow: hidden !important;
   border: 0 !important;
+  padding-top: clamp(38px, 5vw, 64px) !important;
+  padding-bottom: clamp(40px, 5vw, 68px) !important;
   background:
     radial-gradient(circle at 82% 20%, rgba(254,185,103,0.18), transparent 22rem),
     linear-gradient(180deg, rgba(50,53,59,0.18), rgba(16,19,25,0.02)) !important;
@@ -159,7 +161,7 @@ h1 em,
   inset: auto -8% -22% 42%;
   height: 520px;
   pointer-events: none;
-  opacity: .42;
+  opacity: .18;
   background:
     linear-gradient(180deg, rgba(16,19,25,0.08), rgba(16,19,25,0.9)),
     url('https://omeustand.pt/viaturas/224/7724223933_omeustand_foto.webp') center / contain no-repeat;
@@ -175,6 +177,38 @@ h1 em,
 
 .hero-grid {
   align-items: center !important;
+}
+
+.hero .container:has(a[href*="hero_image"]),
+.hero .wrap:has(a[href*="hero_image"]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 42%);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+.hero .container:has(a[href*="hero_image"]) > :not(a[href*="hero_image"]),
+.hero .wrap:has(a[href*="hero_image"]) > :not(a[href*="hero_image"]) {
+  grid-column: 1;
+}
+
+.hero a[href*="hero_image"] {
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  align-self: stretch;
+  min-height: 320px !important;
+  margin-top: 0 !important;
+  border: 0 !important;
+  border-radius: 28px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  box-shadow: inset 0 0 0 1px rgba(244,239,231,0.06), 0 34px 80px rgba(5,8,13,0.36) !important;
+  overflow: hidden;
+}
+
+.hero .cta-actions,
+.hero .hero-actions {
+  margin-top: 8px !important;
 }
 
 .eyebrow,
@@ -390,11 +424,30 @@ button.btn:hover {
 .result-text,
 .footer-col p,
 .copyright {
-  color: rgba(244, 239, 231, 0.70) !important;
+  color: rgba(244, 239, 231, 0.76) !important;
+}
+
+.grid:has(.article) {
+  grid-template-columns: minmax(0, 760px) minmax(260px, 320px) !important;
+  justify-content: center;
+  align-items: start;
 }
 
 .article {
   font-size: 1.02rem;
+  line-height: 1.78 !important;
+  max-width: 760px;
+}
+
+.article p,
+.article li {
+  color: rgba(244, 239, 231, 0.84) !important;
+}
+
+.article h2 {
+  margin-top: 2.25rem !important;
+  margin-bottom: .85rem !important;
+  color: #fff !important;
 }
 
 .article p:first-child::first-letter {
@@ -511,12 +564,15 @@ footer::before,
 
 @media (min-width: 980px) {
   .hero h1 {
-    max-width: 10.8ch !important;
+    max-width: 18ch !important;
+    font-size: clamp(2.65rem, 4.6vw, 5.2rem) !important;
   }
 
   .hero .lead,
   .hero-lead {
-    max-width: 46rem !important;
+    max-width: 52rem !important;
+    font-size: 1.08rem !important;
+    line-height: 1.72 !important;
   }
 }
 
@@ -527,6 +583,8 @@ footer::before,
   }
 
   .hero-grid,
+  .hero .container:has(a[href*="hero_image"]),
+  .hero .wrap:has(a[href*="hero_image"]),
   .grid,
   .layout,
   .local,
@@ -539,6 +597,12 @@ footer::before,
   .steps,
   .footer-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .hero a[href*="hero_image"] {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 280px !important;
   }
 
   .sidebar {
@@ -606,8 +670,8 @@ footer::before,
   }
 
   h1 {
-    font-size: clamp(2.35rem, 13vw, 4.15rem) !important;
-    max-width: 9.8ch !important;
+    font-size: clamp(2.05rem, 10vw, 3.35rem) !important;
+    max-width: 13.5ch !important;
   }
 
   .lead,
@@ -631,6 +695,7 @@ footer::before,
   .creator,
   .contact-card {
     padding: 22px !important;
+    max-width: none;
   }
 
   .stats-bar,
