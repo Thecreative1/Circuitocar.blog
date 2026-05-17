@@ -22,7 +22,7 @@ heroImageLink: "https://www.circuitocar.pt/viatura/hyundai-ioniq-5-ID149434.html
 heroImageAlt: "Ver Hyundai Ioniq 5 em stock"
 heroWhatsappMsg: "Olá, vi o artigo sobre híbridos usados e quero mais informação."
 
-topbarLeft: "Guia pensado para responder a uma dúvida cada vez mais comum: híbrido usado compensa mesmo?"
+topbarLeft: "Guia pensado para responder a uma dúvida cada vez mais comum: híbrido usado compensa mêsmo?"
 topbarLinks:
   - url: "https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=blog_hibrido"
     label: "Ver Stock"
@@ -36,12 +36,12 @@ sidebarTitle: "Menos moda, mais lógica"
 sidebarDescription: "Este artigo existe para ajudar a perceber quando o híbrido usado é uma escolha sensata e quando o melhor é procurar outra solução."
 
 relatedArticles:
+  - title: "Guerra no Irão: como a instabilidade pode influenciar a escolha do carro"
+    url: "guerra-irao-impacto-escolha-carro-usado.html"
   - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
     url: "carros-automaticos-usados-vantagens-riscos.html"
   - title: "Os pontos que mais pesam na escolha de um carro para família"
-    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html"
-  - title: "Onde comprar carro usado em Famalicão com mais confiança"
-    url: "onde-comprar-carro-usado-famalicao.html"
+    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-família.html"
 
 andreDescription: "Mais indicado para ajudar a enquadrar a escolha entre híbrido, gasolina ou diesel."
 filipeDescription: "Mais indicado para esclarecer dúvidas sobre tecnologia e comportamento da viatura."
@@ -63,7 +63,7 @@ Para muitos compradores, o híbrido usado parece o equilíbrio certo: menos cons
 
 - **Comportamento do sistema:** a transição entre motor térmico e elétrico deve ser natural.
 - **Histórico de manutenção:** um híbrido bem acompanhado transmite muito mais confiança.
-- **Consumos realistas:** é importante enquadrar promessas com o uso que vai ser feito.
+- **Consumos realistas:** é importante enquadrar promêssas com o uso que vai ser feito.
 - **Sensação global da viatura:** coerência, suavidade e confiança contam muito.
 
 ## Quando pode não compensar?

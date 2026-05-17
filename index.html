@@ -37,7 +37,7 @@ a { color: inherit; text-decoration: none; }
 .cc-topbar__inner { max-width: 1280px; margin: 0 auto; padding: 8px 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .cc-topbar__pill { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; color: var(--cc-yellow); }
 .cc-topbar__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cc-yellow); animation: ccPulse 2.2s ease-in-out infinite; }
-@keyframes ccPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(.7)} }
+@keyframês ccPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(.7)} }
 .cc-topbar__links { display: flex; gap: 20px; }
 .cc-topbar__links a { color: var(--cc-asphalt-300); transition: color var(--cc-dur-fast) var(--cc-ease-out); }
 .cc-topbar__links a:hover { color: var(--cc-yellow); }
@@ -176,6 +176,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Thumbnail backgrounds for article tiles */
 .t-hero    { background-image: url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp'); }
+.t-iran    { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
 .t-finance { background-image: url('https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp'); }
 .t-hybrid  { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
 .t-retoma  { background-image: url('https://omeustand.pt/viaturas/224/7724357454_omeustand_foto.webp'); }
@@ -485,7 +486,7 @@ a { color: inherit; text-decoration: none; }
         <p>Usa os simuladores gratuitos de crédito e retoma para saberes ao certo a prestação mensal e quanto vale o teu carro atual — antes de falar com alguém.</p>
       </div>
       <div class="cc-step">
-        <div class="cc-step__icon"><i data-lucide="message-square"></i></div>
+        <div class="cc-step__icon"><i data-lucide="mêssage-square"></i></div>
         <span class="cc-step__num">Passo 03</span>
         <h3>Contacta quando estiveres pronto</h3>
         <p>Quando a dúvida estiver esclarecida, fala com a equipa da Circuito Car por WhatsApp ou telefone — sem compromisso, sem pressão.</p>
@@ -520,16 +521,24 @@ a { color: inherit; text-decoration: none; }
       <p class="cc-section__sub">Conteúdo útil para quem está a ponderar comprar — escrito sem jargão e sem agenda de venda.</p>
     </div>
     <div class="cc-articles">
-      <a href="/Circuitocar.blog/onde-comprar-carro-usado-famalicao.html" class="cc-art-hero">
-        <div class="cc-art-hero__media"><div class="cc-art-hero__img t-hero"></div></div>
+      <a href="/Circuitocar.blog/guerra-irao-impacto-escolha-carro-usado.html" class="cc-art-hero">
+        <div class="cc-art-hero__media"><div class="cc-art-hero__img t-iran"></div></div>
         <div class="cc-art-hero__body">
-          <span class="cc-art-eyebrow">Guia Local</span>
-          <h3 class="cc-art-hero__title">Onde comprar carro usado em Famalicão com mais confiança</h3>
-          <p class="cc-art-hero__excerpt">O que saber antes de comprar, o que perguntar ao stand e como reconhecer uma boa oferta — para o eixo Famalicão, Guimarães e Braga.</p>
-          <div class="cc-art-hero__meta"><span>7 min de leitura</span><span>·</span><span>Guia Local</span><span>·</span><span>Atualizado 2026</span></div>
+          <span class="cc-art-eyebrow">Atualidade</span>
+          <h3 class="cc-art-hero__title">Guerra no Irão: como pode influenciar a escolha do carro</h3>
+          <p class="cc-art-hero__excerpt">Combustiveis mais voláteis, custo mensal e a escolha entre gasolina, diesel, híbrido e elétrico — sem pânico, com contas claras.</p>
+          <div class="cc-art-hero__meta"><span>8 min de leitura</span><span>·</span><span>Compra e Venda</span><span>·</span><span>Atualizado 2026</span></div>
         </div>
       </a>
       <div class="cc-art-list">
+        <a href="/Circuitocar.blog/onde-comprar-carro-usado-famalicao.html" class="cc-art-mini">
+          <div class="cc-art-mini__media t-hero"></div>
+          <div class="cc-art-mini__body">
+            <span class="cc-art-eyebrow">Guia Local</span>
+            <h4 class="cc-art-mini__title">Onde comprar carro usado em Famalicão com mais confiança</h4>
+            <p class="cc-art-mini__excerpt">O que perguntar ao stand e como reconhecer uma boa oferta.</p>
+          </div>
+        </a>
         <a href="/Circuitocar.blog/circuitocar_simulador_credito.html" class="cc-art-mini">
           <div class="cc-art-mini__media t-finance"></div>
           <div class="cc-art-mini__body">
@@ -552,14 +561,6 @@ a { color: inherit; text-decoration: none; }
             <span class="cc-art-eyebrow">Retoma</span>
             <h4 class="cc-art-mini__title">Simulador de retoma — quanto vale o seu carro?</h4>
             <p class="cc-art-mini__excerpt">Estimativa imediata para transformar curiosidade em lead.</p>
-          </div>
-        </a>
-        <a href="/Circuitocar.blog/carros-automaticos-usados-vantagens-riscos.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-auto"></div>
-          <div class="cc-art-mini__body">
-            <span class="cc-art-eyebrow">Cidade</span>
-            <h4 class="cc-art-mini__title">Carros automáticos usados: vantagens e para quem fazem sentido</h4>
-            <p class="cc-art-mini__excerpt">Para quem anda no trânsito todos os dias e quer saber se a caixa automática faz mesmo diferença.</p>
           </div>
         </a>
       </div>
@@ -648,7 +649,7 @@ a { color: inherit; text-decoration: none; }
           <div class="cc-hours--closed">Domingo · Fechado</div>
         </div>
         <div style="margin-top:18px;">
-          <a class="cc-btn cc-btn--wa" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20queria%20marcar%20uma%20visita%20ao%20stand.&utm_source=blog&utm_medium=local_wa&utm_campaign=homepage"><i data-lucide="message-circle"></i>Marcar visita por WhatsApp</a>
+          <a class="cc-btn cc-btn--wa" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20queria%20marcar%20uma%20visita%20ao%20stand.&utm_source=blog&utm_medium=local_wa&utm_campaign=homepage"><i data-lucide="mêssage-circle"></i>Marcar visita por WhatsApp</a>
         </div>
       </div>
     </div>
@@ -716,7 +717,7 @@ a { color: inherit; text-decoration: none; }
             <p>Primeiras conversas, escolha de viatura e acompanhamento comercial.</p>
             <div class="cc-seller__btns">
               <a class="cc-btn cc-btn--dark" href="tel:+351911899092"><i data-lucide="phone"></i>Ligar</a>
-              <a class="cc-btn cc-btn--wa" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=andre_wa&utm_campaign=blog_leads"><i data-lucide="message-circle"></i>WhatsApp</a>
+              <a class="cc-btn cc-btn--wa" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=andre_wa&utm_campaign=blog_leads"><i data-lucide="mêssage-circle"></i>WhatsApp</a>
             </div>
           </div>
           <div class="cc-seller">
@@ -724,7 +725,7 @@ a { color: inherit; text-decoration: none; }
             <p>Detalhes técnicos, características da viatura e dúvidas específicas.</p>
             <div class="cc-seller__btns">
               <a class="cc-btn cc-btn--dark" href="tel:+351964197262"><i data-lucide="phone"></i>Ligar</a>
-              <a class="cc-btn cc-btn--wa" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=filipe_wa&utm_campaign=blog_leads"><i data-lucide="message-circle"></i>WhatsApp</a>
+              <a class="cc-btn cc-btn--wa" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=filipe_wa&utm_campaign=blog_leads"><i data-lucide="mêssage-circle"></i>WhatsApp</a>
             </div>
           </div>
         </div>

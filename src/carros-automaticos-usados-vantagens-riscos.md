@@ -15,7 +15,7 @@ readTime: "6 min de leitura"
 utmCampaign: "blog_automaticos"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
-lead: "Os carros automáticos já não são uma exceção. Para muita gente, são a forma mais confortável de viver o dia a dia. O importante é perceber quando isso compensa mesmo e o que deve ser verificado antes de comprar usado."
+lead: "Os carros automáticos já não são uma exceção. Para muita gente, são a forma mais confortável de viver o dia a dia. O importante é perceber quando isso compensa mêsmo e o que deve ser verificado antes de comprar usado."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp"
 heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID157628.html"
@@ -36,12 +36,12 @@ sidebarTitle: "Conforto com contexto"
 sidebarDescription: "Este artigo ajuda a perceber quando o automático é uma melhoria real e quando pode ser apenas impulso."
 
 relatedArticles:
+  - title: "Guerra no Irão: como a instabilidade pode influenciar a escolha do carro"
+    url: "guerra-irao-impacto-escolha-carro-usado.html"
   - title: "Vale a pena comprar um híbrido usado em 2026?"
     url: "vale-a-pena-comprar-hibrido-usado-2026.html"
   - title: "Os pontos que mais pesam na escolha de um carro para família"
-    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html"
-  - title: "Onde comprar carro usado em Famalicão com mais confiança"
-    url: "onde-comprar-carro-usado-famalicao.html"
+    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-família.html"
 
 andreDescription: "Mais indicado para enquadrar uso, perfil e opções disponíveis."
 filipeDescription: "Mais indicado para dúvidas técnicas sobre caixa e comportamento da viatura."
@@ -63,7 +63,7 @@ Um automático usado pode ser uma excelente compra quando existe contexto. O err
 - **Passagens de caixa suaves:** sem pancadas, hesitações ou vibrações estranhas.
 - **Comportamento a frio e a quente:** a viatura deve reagir de forma coerente.
 - **Histórico de manutenção:** sobretudo revisões e troca de óleo da caixa quando aplicável.
-- **Tipo de caixa:** CVT, dupla embraiagem ou conversor de binário não se comportam da mesma forma.
+- **Tipo de caixa:** CVT, dupla embraiagem ou conversor de binário não se comportam da mêsma forma.
 
 ## Os riscos mais comuns
 
