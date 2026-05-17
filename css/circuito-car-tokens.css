@@ -1,0 +1,272 @@
+/* ============================================================
+   CIRCUITO CAR — Colors & Type
+   ============================================================
+   Brand: Circuito Car (circuitocar.pt) — stand automóvel, V.N. Famalicão
+   Anchor: electric yellow logo on dark, racing/motion energy,
+   Portuguese SME warmth. Optimised for the BLOG surface.
+   ============================================================ */
+
+/* ---------- 1. COLOR PRIMITIVES ---------- */
+:root {
+  /* Brand */
+  --cc-yellow:        #FFFF00;   /* Pure brand yellow (sampled from logo) */
+  --cc-yellow-hot:    #FFE600;   /* Slightly warmer, for hover/active */
+  --cc-yellow-deep:   #E5CC00;   /* For text on light bg (AA contrast helper) */
+  --cc-yellow-tint:   #FFFCD6;   /* Soft wash for callouts on light surfaces */
+
+  /* Asphalt — primary dark scale (cool, not pure neutral) */
+  --cc-ink:           #0A0B0D;   /* Body bg in dark mode / true black surface */
+  --cc-asphalt-900:   #131418;   /* Card / elevated surface on dark */
+  --cc-asphalt-800:   #1C1E24;   /* Hover surface on dark */
+  --cc-asphalt-700:   #2A2D35;   /* Borders on dark */
+  --cc-asphalt-600:   #3E424C;   /* Disabled / divider on dark */
+  --cc-asphalt-500:   #6B6F7A;   /* Muted text on dark */
+  --cc-asphalt-400:   #9A9EA8;   /* Secondary text on dark */
+  --cc-asphalt-300:   #C4C7CD;   /* Light borders on light bg */
+
+  /* Paper — light scale (slightly warm, like a workshop manual) */
+  --cc-paper:         #FAFAF7;   /* Page bg on light mode */
+  --cc-paper-warm:    #F4F2EA;   /* Sectioned bg on light, vintage feel */
+  --cc-paper-card:    #FFFFFF;   /* Pure card on light */
+  --cc-paper-border:  #E8E6DE;   /* Subtle borders on light */
+
+  /* Signal — semantic accents (used sparingly; yellow does most work) */
+  --cc-signal-red:    #E5342B;   /* Stop / error / "vendido" */
+  --cc-signal-green:  #1F9D55;   /* Disponível / success */
+  --cc-signal-amber:  #F08C00;   /* Warning */
+
+  /* Semantic — light mode default */
+  --cc-bg:            var(--cc-paper);
+  --cc-bg-elev:       var(--cc-paper-card);
+  --cc-bg-muted:      var(--cc-paper-warm);
+  --cc-fg:            var(--cc-ink);
+  --cc-fg-muted:      #4A4D55;
+  --cc-fg-subtle:     #757882;
+  --cc-border:        var(--cc-paper-border);
+  --cc-border-strong: #B9B6AA;
+  --cc-accent:        var(--cc-yellow);
+  --cc-accent-fg:     var(--cc-ink);   /* text on yellow chips/buttons */
+  --cc-link:          var(--cc-ink);
+  --cc-link-hover:    var(--cc-yellow-deep);
+}
+
+/* Dark surface override — apply with [data-theme="dark"] or .cc-dark */
+[data-theme="dark"], .cc-dark {
+  --cc-bg:            var(--cc-ink);
+  --cc-bg-elev:       var(--cc-asphalt-900);
+  --cc-bg-muted:      var(--cc-asphalt-800);
+  --cc-fg:            #F5F5F0;
+  --cc-fg-muted:      var(--cc-asphalt-400);
+  --cc-fg-subtle:     var(--cc-asphalt-500);
+  --cc-border:        var(--cc-asphalt-700);
+  --cc-border-strong: var(--cc-asphalt-600);
+  --cc-link:          var(--cc-yellow);
+  --cc-link-hover:    var(--cc-paper);
+}
+
+/* ---------- 2. TYPE PRIMITIVES ---------- */
+:root {
+  /* Families */
+  --cc-font-display:  "Saira Condensed", "Saira", "Oswald", system-ui, sans-serif;
+  --cc-font-body:     "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --cc-font-mono:     "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Sizes — modular, blog-content optimised */
+  --cc-fs-2xs:  11px;
+  --cc-fs-xs:   12px;
+  --cc-fs-sm:   14px;
+  --cc-fs-base: 16px;
+  --cc-fs-md:   18px;
+  --cc-fs-lg:   20px;
+  --cc-fs-xl:   24px;
+  --cc-fs-2xl:  32px;
+  --cc-fs-3xl:  44px;
+  --cc-fs-4xl:  60px;
+  --cc-fs-5xl:  84px;
+  --cc-fs-6xl:  120px;
+
+  /* Weights */
+  --cc-fw-regular:  400;
+  --cc-fw-medium:   500;
+  --cc-fw-semibold: 600;
+  --cc-fw-bold:     700;
+  --cc-fw-black:    900;
+
+  /* Line heights */
+  --cc-lh-tight:  0.95;
+  --cc-lh-snug:   1.15;
+  --cc-lh-normal: 1.45;
+  --cc-lh-loose:  1.65;
+
+  /* Tracking */
+  --cc-tracking-tight:  -0.02em;
+  --cc-tracking-normal: 0;
+  --cc-tracking-wide:   0.08em;
+  --cc-tracking-wider:  0.16em;
+}
+
+/* ---------- 3. SHAPE / SHADOW / SPACING ---------- */
+:root {
+  /* Radii — modest, never pillowy. Cards are rectilinear, buttons slight. */
+  --cc-radius-xs: 2px;
+  --cc-radius-sm: 4px;
+  --cc-radius-md: 8px;
+  --cc-radius-lg: 14px;
+  --cc-radius-pill: 999px;
+
+  /* Shadows — sparing, leans on borders + dark contrast */
+  --cc-shadow-sm: 0 1px 0 rgba(10,11,13,0.04), 0 1px 2px rgba(10,11,13,0.06);
+  --cc-shadow-md: 0 6px 16px -6px rgba(10,11,13,0.12), 0 2px 4px rgba(10,11,13,0.06);
+  --cc-shadow-lg: 0 24px 48px -12px rgba(10,11,13,0.22);
+  --cc-shadow-yellow: 0 0 0 4px rgba(255,255,0,0.18);   /* focus ring */
+
+  /* Motion */
+  --cc-ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --cc-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --cc-dur-fast:   140ms;
+  --cc-dur-base:   220ms;
+  --cc-dur-slow:   420ms;
+
+  /* Spacing scale */
+  --cc-sp-1: 4px;
+  --cc-sp-2: 8px;
+  --cc-sp-3: 12px;
+  --cc-sp-4: 16px;
+  --cc-sp-5: 24px;
+  --cc-sp-6: 32px;
+  --cc-sp-7: 48px;
+  --cc-sp-8: 64px;
+  --cc-sp-9: 96px;
+}
+
+/* ---------- 4. WEBFONTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ---------- 5. SEMANTIC ELEMENT STYLES ---------- */
+/* Apply to bare elements OR via class aliases (.cc-h1, .cc-body, etc.) */
+
+body, .cc-body {
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-fs-base);
+  line-height: var(--cc-lh-normal);
+  color: var(--cc-fg);
+  background: var(--cc-bg);
+  font-weight: var(--cc-fw-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .cc-h1 {
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-fs-4xl);
+  font-weight: var(--cc-fw-black);
+  font-style: italic;
+  line-height: var(--cc-lh-tight);
+  letter-spacing: var(--cc-tracking-tight);
+  color: var(--cc-fg);
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+h2, .cc-h2 {
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-fs-3xl);
+  font-weight: var(--cc-fw-black);
+  font-style: italic;
+  line-height: var(--cc-lh-snug);
+  letter-spacing: var(--cc-tracking-tight);
+  text-transform: uppercase;
+  color: var(--cc-fg);
+  text-wrap: balance;
+}
+
+h3, .cc-h3 {
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-fs-2xl);
+  font-weight: var(--cc-fw-bold);
+  font-style: italic;
+  line-height: var(--cc-lh-snug);
+  letter-spacing: var(--cc-tracking-tight);
+  text-transform: uppercase;
+  color: var(--cc-fg);
+}
+
+h4, .cc-h4 {
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-fs-xl);
+  font-weight: var(--cc-fw-bold);
+  line-height: var(--cc-lh-snug);
+  color: var(--cc-fg);
+}
+
+p, .cc-p {
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-fs-md);
+  line-height: var(--cc-lh-loose);
+  color: var(--cc-fg);
+  text-wrap: pretty;
+}
+
+.cc-lead {
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-fs-lg);
+  line-height: var(--cc-lh-loose);
+  color: var(--cc-fg-muted);
+  font-weight: var(--cc-fw-regular);
+}
+
+.cc-eyebrow {
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-fs-xs);
+  font-weight: var(--cc-fw-bold);
+  letter-spacing: var(--cc-tracking-wider);
+  text-transform: uppercase;
+  color: var(--cc-fg-muted);
+  font-style: italic;
+}
+
+.cc-caption, small {
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-fs-sm);
+  color: var(--cc-fg-subtle);
+}
+
+.cc-meta {
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-fs-xs);
+  font-weight: var(--cc-fw-semibold);
+  letter-spacing: var(--cc-tracking-wide);
+  text-transform: uppercase;
+  color: var(--cc-fg-subtle);
+}
+
+code, .cc-code, .cc-mono {
+  font-family: var(--cc-font-mono);
+  font-size: 0.92em;
+  background: var(--cc-bg-muted);
+  padding: 2px 6px;
+  border-radius: var(--cc-radius-xs);
+}
+
+a, .cc-a {
+  color: var(--cc-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--cc-yellow);
+  transition: color var(--cc-dur-fast) var(--cc-ease-out);
+}
+a:hover, .cc-a:hover {
+  color: var(--cc-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* Price tag — used everywhere on listings */
+.cc-price {
+  font-family: var(--cc-font-display);
+  font-style: italic;
+  font-weight: var(--cc-fw-black);
+  font-size: var(--cc-fs-2xl);
+  color: var(--cc-fg);
+  letter-spacing: var(--cc-tracking-tight);
+}

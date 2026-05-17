@@ -1,0 +1,141 @@
+backend:
+  name: github
+  repo: thecreative1/Circuitocar.blog
+  branch: main
+  auth_type: pkce
+  app_id: REPLACE_WITH_YOUR_GITHUB_OAUTH_APP_CLIENT_ID
+
+media_folder: src/img/uploads
+public_folder: /img/uploads
+
+locale: pt
+
+collections:
+  - name: articles
+    label: Artigos do Blog
+    label_singular: Artigo
+    folder: src/articles
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    fields:
+
+      # --- Hidden Eleventy fields (set automatically) ---
+      - { label: Layout,  name: layout, widget: hidden, default: "article.njk" }
+      - { label: Tags,    name: tags,   widget: hidden, default: "article" }
+
+      # --- Core content ---
+      - label: "Título"
+        name: title
+        widget: string
+        hint: "O título principal do artigo."
+
+      - label: "Data de publicação"
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+
+      - label: "Categoria"
+        name: category
+        widget: select
+        options:
+          - { label: "Família e Dia a Dia",   value: "Família e Dia a Dia" }
+          - { label: "Condução e Cidade",      value: "Condução e Cidade" }
+          - { label: "Híbridos e Elétricos",   value: "Híbridos e Elétricos" }
+          - { label: "Guias Locais",           value: "Guias Locais" }
+          - { label: "Compra e Venda",         value: "Compra e Venda" }
+          - { label: "Manutenção",             value: "Manutenção" }
+
+      - label: "Descrição (SEO)"
+        name: description
+        widget: string
+        hint: "Resumo para motores de busca. Idealmente entre 120 e 160 caracteres."
+
+      - label: "Tempo de leitura"
+        name: readTime
+        widget: string
+        default: "5 min de leitura"
+        hint: "Ex: 5 min de leitura"
+
+      - label: "Lead (introdução em destaque)"
+        name: lead
+        widget: text
+        hint: "Parágrafo curto que aparece em destaque abaixo do título. Resume o tema do artigo em 2-3 linhas."
+
+      - label: "Conteúdo do artigo"
+        name: body
+        widget: markdown
+
+      # --- Hero image ---
+      - label: "URL da imagem principal"
+        name: heroImage
+        widget: string
+        required: false
+        hint: "URL da foto da viatura. Ex: https://omeustand.pt/viaturas/224/foto.webp"
+
+      - label: "Link da imagem (página da viatura)"
+        name: heroImageLink
+        widget: string
+        required: false
+        hint: "URL da página da viatura em circuitocar.pt"
+
+      - label: "Texto alternativo da imagem"
+        name: heroImageAlt
+        widget: string
+        required: false
+        default: "Ver viatura em stock"
+
+      # --- UTM tracking ---
+      - label: "Campanha UTM"
+        name: utmCampaign
+        widget: string
+        required: false
+        hint: "Código de tracking para os links do artigo. Minúsculas e underscores. Ex: blog_familias"
+
+      # --- Sidebar ---
+      - label: "Etiqueta da sidebar"
+        name: sidebarBadge
+        widget: string
+        required: false
+        default: "Guia prático"
+
+      - label: "Título da sidebar"
+        name: sidebarTitle
+        widget: string
+        required: false
+
+      - label: "Descrição da sidebar"
+        name: sidebarDescription
+        widget: text
+        required: false
+
+      # --- WhatsApp messages ---
+      - label: "Mensagem WhatsApp (botão do artigo)"
+        name: heroWhatsappMsg
+        widget: string
+        required: false
+        default: "Olá, vi um artigo no blog e quero mais informação."
+
+      - label: "Mensagem WhatsApp (sidebar)"
+        name: sidebarWhatsappMsg
+        widget: string
+        required: false
+        default: "Olá, quero mais informação."
+
+      # --- Team descriptions ---
+      - label: "Nota sobre o André (sidebar)"
+        name: andreDescription
+        widget: string
+        required: false
+        default: "Mais indicado para primeiras conversas e orientação comercial."
+
+      - label: "Nota sobre o Filipe (sidebar)"
+        name: filipeDescription
+        widget: string
+        required: false
+        default: "Mais indicado para dúvidas técnicas sobre a viatura."
