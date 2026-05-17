@@ -1,0 +1,24 @@
+---
+permalink: rss.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Guias práticos sobre compra de carros usados, híbridos, automáticos e crédito automóvel.</description>
+    <language>pt</language>
+    <lastBuildDate>{{ collections.articles[0].date | dateIso }}</lastBuildDate>
+    {%- for post in collections.articles %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ site.url }}/{{ post.fileSlug }}.html</link>
+      <guid>{{ site.url }}/{{ post.fileSlug }}.html</guid>
+      <pubDate>{{ post.date | dateIso }}</pubDate>
+      <description>{{ post.data.description }}</description>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

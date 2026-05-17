@@ -1,0 +1,31 @@
+{
+  "title": "Circuito Car Blog",
+  "description": "Blog automóvel com conteúdo SEO local, ferramentas interativas e geração de leads. Desenvolvido por Flavio Martins para concessionários que querem crescer online em Portugal.",
+  "url": "https://www.circuitocar.blog",
+  "lang": "pt",
+  "logo": "https://www.circuitocar.blog/img/cc.png",
+  "contact": {
+    "andre": {
+      "name": "André Silva",
+      "role": "Comercial",
+      "phone": "+351911899092",
+      "phoneDisplay": "911 899 092",
+      "whatsappBase": "https://wa.me/351911899092"
+    },
+    "filipe": {
+      "name": "Filipe Rodrigues",
+      "role": "Técnico",
+      "phone": "+351964197262",
+      "phoneDisplay": "964 197 262",
+      "whatsappBase": "https://wa.me/351964197262"
+    }
+  },
+  "address": {
+    "street": "Rua do Relógio nº 430",
+    "zip": "4770-245",
+    "city": "Joane",
+    "region": "V. N. Famalicão",
+    "mapsUrl": "https://maps.google.com/?q=Rua%20do%20Rel%C3%B3gio%20n%C2%BA%20430%2C%204770-245%20Joane"
+  },
+  "mainSite": "https://www.circuitocar.pt"
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <title>{{ pageTitle if pageTitle else title }}</title>
+  <meta name="description" content="{{ description }}" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
+  <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
+  <meta property="og:type" content="{{ ogType if ogType else 'website' }}" />
+  <meta property="og:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#090c11" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  {% if pageType === 'article' %}
+  <link rel="stylesheet" href="/assets/article.css" />
+  {% endif %}
+  {% if inlineStyle %}
+  <style>{{ inlineStyle | safe }}</style>
+  {% endif %}
+  <link rel="stylesheet" href="/assets/kinetic-gallery.css" />
+  {% if schemaOrg %}{{ schemaOrg | safe }}{% endif %}
+  {% if pageType === 'article' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ title | dump | safe }},
+    "description": {{ description | dump | safe }},
+    "datePublished": "{{ date | dateIso }}",
+    "dateModified": "{{ date | dateIso }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "image": "{{ heroImage if heroImage else site.logo }}",
+    "author": {
+      "@type": "Person",
+      "name": "Flavio Martins"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Circuito Car Blog",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/img/cc.png"
+      }
+    }
+  }
+  </script>
+  {% endif %}
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      {% if topbarLeft %}
+        <div>{{ topbarLeft | safe }}</div>
+      {% else %}
+        <div class="topbar-pill"><span class="pulse"></span>Blog Automóvel · Portugal</div>
+      {% endif %}
+      <div class="topbar-links">
+        {% if topbarLinks %}
+          {% for link in topbarLinks %}
+            <a href="{{ link.url }}">{{ link.label }}</a>
+          {% endfor %}
+        {% else %}
+          <a href="{{ site.mainSite }}/viaturas">Ver Stock</a>
+          <a href="#contacto">Equipa</a>
+          <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign=homepage">Contactos</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <div class="brand-mark"><img src="/img/cc.png" alt="Circuito Car" /></div>
+        <div class="brand-text">
+          <strong>Circuito Car Blog</strong>
+          <span>{{ headerTagline if headerTagline else 'Estratégia de conteúdo automóvel' }}</span>
+        </div>
+      </a>
+      <nav class="nav">
+        {% if pageType === 'article' %}
+          <a href="/#artigos">Blog</a>
+          <a href="/#categorias">Categorias</a>
+          <a href="/circuitocar_simulador_credito.html">Crédito</a>
+          <a href="/simulador_retoma.html">Retoma</a>
+          <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign={{ utmCampaign }}">Viaturas</a>
+          <a class="btn btn-primary" href="#equipa">Falar com a equipa</a>
+        {% else %}
+          <a href="#artigos">Blog</a>
+          <a href="#ferramentas">Ferramentas</a>
+          <a href="#local-seo">SEO Local</a>
+          <a href="#sobre">Sobre</a>
+          <a href="{{ site.mainSite }}/viaturas">Viaturas</a>
+          <a class="btn btn-gold" href="#contacto">Falar connosco</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <footer>
+    <div class="container">
+      {% if pageType === 'article' %}
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Circuito Car Blog</h4>
+          <p>Conteúdo automóvel pensado para gerar confiança, captar tráfego útil e criar mais oportunidades de contacto para a marca.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <div class="footer-links">
+            <a href="/">Homepage</a>
+            <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
+            <a href="/simulador_retoma.html">Simulador de retoma</a>
+            <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign }}">Viaturas</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Equipa</h4>
+          <div class="footer-links">
+            <a href="tel:{{ site.contact.andre.phone }}">{{ site.contact.andre.name }} · {{ site.contact.andre.phoneDisplay }}</a>
+            <a href="tel:{{ site.contact.filipe.phone }}">{{ site.contact.filipe.name }} · {{ site.contact.filipe.phoneDisplay }}</a>
+            <a href="#equipa">Falar com a equipa</a>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Circuito Car Blog</h4>
+          <p>Conteúdo automóvel pensado para ajudar compradores reais — e para demonstrar o que uma estratégia digital bem executada pode fazer por um stand em Portugal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <div class="footer-links">
+            <a href="#artigos">Blog</a>
+            <a href="#ferramentas">Ferramentas</a>
+            <a href="#categorias">Categorias</a>
+            <a href="{{ site.mainSite }}/viaturas">Viaturas</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-links">
+            <a href="#contacto">Falar com a equipa</a>
+            <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de Contactos</a>
+            <a href="/circuitocar_simulador_credito.html">Simulador de Crédito</a>
+            <a href="/simulador_retoma.html">Simulador de Retoma</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Localização</h4>
+          <p>{{ site.address.street }}<br>{{ site.address.zip }} {{ site.address.city }}<br>{{ site.address.region }}</p>
+        </div>
+      </div>
+      {% endif %}
+      <div class="copyright">
+        <span>© 2026 Circuito Car Blog. Todos os direitos reservados.</span>
+        <span>{{ footerNote if footerNote else 'Desenvolvido por Flavio Martins · Estratégia de conteúdo automóvel' }}</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-dock" aria-label="Navegação mobile">
+    <a href="/" data-icon="C">Início</a>
+    <a href="/#artigos" data-icon="B">Blog</a>
+    <a href="/circuitocar_simulador_credito.html" data-icon="€">Crédito</a>
+    <a href="/simulador_retoma.html" data-icon="R">Retoma</a>
+    <a href="{{ '#equipa' if pageType === 'article' else '#contacto' }}" data-icon="@">Contacto</a>
+  </nav>
+
+</body>
+</html>

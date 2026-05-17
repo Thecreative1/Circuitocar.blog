@@ -1,0 +1,74 @@
+---
+layout: base.njk
+pageType: article
+ogType: article
+headerTagline: "Conteúdo útil alinhado com a marca"
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Blog · {{ category }}</div>
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ lead | safe }}</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign={{ utmCampaign }}">Ver viaturas disponíveis</a>
+      <a class="btn btn-secondary btn-whatsapp" href="{{ site.contact.andre.whatsappBase }}?text={{ heroWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=hero_whatsapp&utm_campaign={{ utmCampaign }}">WhatsApp André</a>
+    </div>
+    <a href="{{ heroImageLink }}?utm_source=blog&utm_medium=hero_image&utm_campaign={{ utmCampaign }}"
+       aria-label="{{ heroImageAlt }}"
+       style="display:block;margin-top:24px;min-height:360px;border-radius:22px;border:1px solid rgba(241,232,217,.08);box-shadow:0 18px 42px rgba(0,0,0,.22);background-color:#0b0d11;background-image:url('{{ heroImage }}');background-size:contain;background-position:center;background-repeat:no-repeat;"></a>
+  </div>
+</section>
+
+<main class="page">
+  <div class="container grid">
+    <article class="article">
+      {{ content | safe }}
+    </article>
+
+    <aside class="sidebar" id="equipa">
+
+      <div class="sidebar-card">
+        <span class="badge">{{ sidebarBadge }}</span>
+        <h3>{{ sidebarTitle }}</h3>
+        <p>{{ sidebarDescription }}</p>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Mais no blog</h3>
+        <div class="footer-links">
+          {% for rel in relatedArticles %}
+            <a href="/{{ rel.url }}">{{ rel.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Fale com a nossa equipa</h3>
+        <div class="seller">
+          <div class="seller-head">
+            <strong>{{ site.contact.andre.name }}</strong>
+            <span class="pill">{{ site.contact.andre.role }}</span>
+          </div>
+          <p>{{ andreDescription }}</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-phone" href="tel:{{ site.contact.andre.phone }}">Ligar</a>
+            <a class="btn btn-secondary btn-whatsapp" href="{{ site.contact.andre.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=sidebar_andre&utm_campaign={{ utmCampaign }}">WhatsApp</a>
+          </div>
+        </div>
+        <div class="seller">
+          <div class="seller-head">
+            <strong>{{ site.contact.filipe.name }}</strong>
+            <span class="pill">{{ site.contact.filipe.role }}</span>
+          </div>
+          <p>{{ filipeDescription }}</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-phone" href="tel:{{ site.contact.filipe.phone }}">Ligar</a>
+            <a class="btn btn-secondary btn-whatsapp" href="{{ site.contact.filipe.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=sidebar_filipe&utm_campaign={{ utmCampaign }}">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</main>
