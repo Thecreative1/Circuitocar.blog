@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: article-cc.njk
 permalink: onde-comprar-carro-usado-famalicao.html
 tags: article
 date: 2026-04-10

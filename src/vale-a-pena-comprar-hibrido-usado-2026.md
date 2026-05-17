@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: article-cc.njk
 permalink: vale-a-pena-comprar-hibrido-usado-2026.html
 tags: article
 date: 2026-04-24

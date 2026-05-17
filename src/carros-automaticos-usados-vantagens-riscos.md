@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: article-cc.njk
 permalink: carros-automaticos-usados-vantagens-riscos.html
 tags: article
 date: 2026-05-01

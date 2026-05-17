@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <title>{{ pageTitle if pageTitle else title }}</title>
+  <meta name="description" content="{{ description }}" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
+  <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0A0B0D" />
+  <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
+
+  <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
+  <link rel="stylesheet" href="/css/article-cc.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ title | dump | safe }},
+    "description": {{ description | dump | safe }},
+    "datePublished": "{{ date | dateIso }}",
+    "dateModified": "{{ date | dateIso }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "image": "{{ heroImage if heroImage else site.logo }}",
+    "author": { "@type": "Organization", "name": "Circuito Car" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Circuito Car",
+      "logo": { "@type": "ImageObject", "url": "{{ site.url }}/img/logo-yellow.png" }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="cc-topbar">
+    <div class="cc-topbar__inner">
+      <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
+      <div class="cc-topbar__links">
+        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign={{ utmCampaign }}">Ver stock</a>
+        <a href="#equipa">Equipa</a>
+        <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign={{ utmCampaign }}">Contactos</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="cc-header">
+    <div class="cc-header__inner">
+      <a class="cc-header__logo" href="/" aria-label="Circuito Car — voltar à homepage">
+        <img src="/img/logo-yellow.png" alt="Circuito Car" />
+      </a>
+      <span class="cc-header__brand-tag">Blog</span>
+      <nav class="cc-header__nav" aria-label="Navegação principal">
+        <a href="/#artigos">Artigos</a>
+        <a href="/#ferramentas">Ferramentas</a>
+        <a href="/#local-seo">Onde estamos</a>
+        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign={{ utmCampaign }}">Viaturas</a>
+      </nav>
+      <a class="cc-header__cta" href="#equipa">
+        <i data-lucide="message-square"></i>Falar com a equipa
+      </a>
+    </div>
+  </header>
+
+  <!-- ── POST HERO (dark) ── -->
+  <section class="cc-post-hero">
+    <div class="cc-post-hero__inner">
+      <span class="cc-post-hero__eyebrow">Blog · {{ category }}</span>
+      <h1>{{ title }}</h1>
+      <p class="cc-post-hero__lead">{{ lead | safe }}</p>
+      <div class="cc-post-hero__meta">
+        <span><i data-lucide="clock"></i>{{ readTime }}</span>
+        <span>·</span>
+        <span><i data-lucide="calendar"></i>{{ date | dateReadable }}</span>
+        <span>·</span>
+        <span><i data-lucide="map-pin"></i>Joane, Famalicão</span>
+      </div>
+      <div class="cc-post-hero__actions">
+        <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver viaturas disponíveis</a>
+        <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.andre.whatsappBase }}?text={{ heroWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=hero_whatsapp&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp André</a>
+      </div>
+    </div>
+    <div class="cc-post-hero__chevron" aria-hidden="true"></div>
+  </section>
+
+  <!-- Cover image (bleeds into next section) -->
+  {% if heroImage %}
+  <div class="cc-post-cover">
+    <a href="{{ heroImageLink }}?utm_source=blog&utm_medium=hero_image&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener" aria-label="{{ heroImageAlt }}">
+      <img class="cc-post-cover__img" src="{{ heroImage }}" alt="{{ heroImageAlt }}" />
+    </a>
+  </div>
+  {% endif %}
+
+  <!-- ── ARTICLE + SIDEBAR ── -->
+  <div class="cc-post-wrap">
+    <article class="cc-prose">
+      {{ content | safe }}
+    </article>
+
+    <aside class="cc-sidebar" id="equipa">
+
+      <div class="cc-side-card cc-side-card--warm">
+        <span class="cc-side-card__eyebrow">{{ sidebarBadge }}</span>
+        <h3>{{ sidebarTitle }}</h3>
+        <p>{{ sidebarDescription }}</p>
+      </div>
+
+      <div class="cc-side-card">
+        <span class="cc-side-card__eyebrow">Mais no blog</span>
+        <h3>Continuar a ler</h3>
+        {% for rel in relatedArticles %}
+          <a href="/{{ rel.url }}" class="cc-side-link">{{ rel.title }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="cc-side-card">
+        <span class="cc-side-card__eyebrow">Equipa</span>
+        <h3>Fala com quem percebe</h3>
+
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.andre.name }}</strong>
+            <span class="cc-side-seller__role">{{ site.contact.andre.role }}</span>
+          </div>
+          <p>{{ andreDescription }}</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.andre.phone }}"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.andre.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=sidebar_andre&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.filipe.name }}</strong>
+            <span class="cc-side-seller__role">{{ site.contact.filipe.role }}</span>
+          </div>
+          <p>{{ filipeDescription }}</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.filipe.phone }}"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.filipe.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=sidebar_filipe&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ── RELATED ARTICLES ── -->
+  {% if relatedArticles and relatedArticles.length %}
+  <section class="cc-related">
+    <div class="cc-related__inner">
+      <h2>Mais guias para <em>ler</em></h2>
+      <div class="cc-related__grid">
+        {% for rel in relatedArticles %}
+          <a class="cc-related-card" href="/{{ rel.url }}">
+            <span class="cc-related-card__eyebrow">Artigo</span>
+            <h3 class="cc-related-card__title">{{ rel.title }}</h3>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <footer class="cc-footer">
+    <div class="cc-footer__inner">
+      <div class="cc-footer__grid">
+        <div class="cc-footer__col cc-footer__brand">
+          <img src="/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
+          <p>Stand automóvel em Joane, Vila Nova de Famalicão. Viaturas usadas verificadas, com garantia e financiamento próprio.</p>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Explorar</h4>
+          <a href="/#artigos">Artigos</a>
+          <a href="/#ferramentas">Ferramentas</a>
+          <a href="/#stock">Stock em destaque</a>
+          <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign }}">Ver stock completo</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Contacto</h4>
+          <a href="#equipa">Falar com a equipa</a>
+          <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign={{ utmCampaign }}">Página de contactos</a>
+          <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
+          <a href="/simulador_retoma.html">Simulador de retoma</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Localização</h4>
+          <p style="margin:0">{{ site.address.street }}<br>{{ site.address.zip }} {{ site.address.city }}<br>{{ site.address.region }}</p>
+        </div>
+      </div>
+      <div class="cc-footer__bottom">
+        <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
+        <span>{{ footerNote if footerNote else 'Stand em Joane, Vila Nova de Famalicão · circuitocar.pt' }}</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="cc-mobile-dock" aria-label="Navegação mobile">
+    <a href="/"><i data-lucide="home"></i><span>Início</span></a>
+    <a href="/#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
+    <a href="/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
+    <a href="#equipa"><i data-lucide="message-square"></i><span>Equipa</span></a>
+  </nav>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

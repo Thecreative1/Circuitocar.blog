@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: article-cc.njk
 permalink: os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html
 tags: article
 date: 2026-05-08
