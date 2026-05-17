@@ -104,7 +104,9 @@ inlineStyle: |
   .stat strong { display: block; font-size: 1.65rem; font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--gold), var(--gold-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .stat span { font-size: 0.78rem; color: var(--muted); font-weight: 500; }
   .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border: 1px solid rgba(199,137,60,0.16); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
-  .hero-card-img { height: 215px; background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.62)), url('https://omeustand.pt/viaturas/224/7724223933_omeustand_foto.webp') center/cover; }
+  .hero-card-img { aspect-ratio: 4/3; background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.55)), url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp') center/cover; position: relative; }
+  .hero-card-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%); pointer-events: none; }
+  .hero-card-price { position: absolute; bottom: 14px; left: 14px; z-index: 2; padding: 6px 12px; border-radius: 999px; background: rgba(199,137,60,0.95); color: #1a0e02; font-weight: 900; font-size: 0.95rem; letter-spacing: -0.01em; }
   .hero-card-body { padding: 20px; }
   .hero-card-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-2); margin-bottom: 8px; }
   .hero-card-body h2 { font-size: 1.15rem; line-height: 1.3; margin-bottom: 9px; font-weight: 700; }
@@ -130,7 +132,7 @@ inlineStyle: |
   .articles { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .art-hero { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .17s, box-shadow .17s; display: flex; flex-direction: column; }
   .art-hero:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-  .art-hero-thumb { height: 290px; background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.64)), url('https://omeustand.pt/viaturas/224/7724222988_omeustand_foto.webp') center/cover; }
+  .art-hero-thumb { height: 290px; background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.64)), url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp') center/cover; }
   .art-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
   .art-tag { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid rgba(199,137,60,0.22); color: var(--gold-2); background: rgba(199,137,60,0.08); margin-bottom: 11px; width: fit-content; }
   .art-body h3 { font-size: 1.3rem; font-weight: 700; line-height: 1.24; margin-bottom: 9px; }
@@ -144,11 +146,25 @@ inlineStyle: |
   .mini-body .art-tag { margin-bottom: 7px; }
   .mini-body h4 { font-size: 0.9rem; font-weight: 700; line-height: 1.3; margin-bottom: 5px; }
   .mini-body p { font-size: 0.8rem; color: var(--muted); }
-  .t-finance  { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7723893882_omeustand_foto.webp'); }
-  .t-hybrid   { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7723979753_omeustand_foto.webp'); }
-  .t-retoma   { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp'); }
-  .t-auto     { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp'); }
-  .t-family   { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7724136150_omeustand_foto.webp'); }
+  .t-finance  { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp'); }
+  .t-hybrid   { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
+  .t-retoma   { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7724357454_omeustand_foto.webp'); }
+  .t-auto     { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
+  .t-family   { background-image: linear-gradient(180deg, rgba(0,0,0,.1),rgba(0,0,0,.55)), url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp'); }
+  .stock-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .stock-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .17s, border-color .17s, box-shadow .17s; display: flex; flex-direction: column; color: inherit; }
+  .stock-card:hover { transform: translateY(-3px); border-color: rgba(199,137,60,0.32); box-shadow: 0 18px 42px rgba(0,0,0,0.32); }
+  .stock-img { aspect-ratio: 4/3; background-size: cover; background-position: center; position: relative; }
+  .stock-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.6) 100%); }
+  .stock-price { position: absolute; bottom: 10px; left: 10px; z-index: 2; padding: 5px 11px; border-radius: 999px; background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #1a0e02; font-weight: 900; font-size: 0.92rem; letter-spacing: -0.01em; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+  .stock-tag { position: absolute; top: 10px; right: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: rgba(8,11,17,0.78); backdrop-filter: blur(6px); color: var(--gold-2); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid rgba(199,137,60,0.3); }
+  .stock-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+  .stock-body h3 { font-size: 0.97rem; font-weight: 700; line-height: 1.3; margin-bottom: 8px; min-height: 2.6em; }
+  .stock-meta { display: flex; gap: 10px; font-size: 0.78rem; color: var(--muted); flex-wrap: wrap; margin-bottom: 12px; }
+  .stock-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .stock-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; color: var(--gold-2); margin-top: auto; }
+  .stock-card:hover .stock-cta { color: var(--gold); }
+  .stock-foot { text-align: center; margin-top: 28px; }
   .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .tool { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; transition: transform .17s, box-shadow .17s; }
   .tool:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
@@ -203,9 +219,9 @@ inlineStyle: |
   .footer-links { display: grid; gap: 8px; }
   .footer-links a:hover { color: var(--gold-2); transition: color .15s; }
   .copyright { border-top: 1px solid var(--line); padding-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); }
-  @media (max-width: 1100px) { .hero-grid { grid-template-columns: 1fr; } .hero-card { max-width: 420px; } .values, .cats { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } .creator { grid-template-columns: 1fr; gap: 26px; } }
-  @media (max-width: 780px) { .container { width: min(var(--max), calc(100% - 24px)); } .hero { padding: 42px 0 38px; } h1 { font-size: 2rem; } .hero-lead { font-size: 0.93rem; } .hero-actions .btn { width: 100%; } .steps, .articles, .tools, .local, .contact-wrap { grid-template-columns: 1fr; } .sellers { grid-template-columns: 1fr; } .cats { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr; } .art-mini { grid-template-columns: 80px 1fr; } .creator { padding: 26px 18px; } .topbar-pill { display: none; } }
-  @media (max-width: 520px) { .values, .cats { grid-template-columns: 1fr; } }
+  @media (max-width: 1100px) { .hero-grid { grid-template-columns: 1fr; } .hero-card { max-width: 420px; } .values, .cats, .stock-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } .creator { grid-template-columns: 1fr; gap: 26px; } }
+  @media (max-width: 780px) { .container { width: min(var(--max), calc(100% - 24px)); } .hero { padding: 42px 0 38px; } h1 { font-size: 2rem; } .hero-lead { font-size: 0.93rem; } .hero-actions .btn { width: 100%; } .steps, .articles, .tools, .local, .contact-wrap { grid-template-columns: 1fr; } .sellers { grid-template-columns: 1fr; } .cats, .stock-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr; } .art-mini { grid-template-columns: 80px 1fr; } .creator { padding: 26px 18px; } .topbar-pill { display: none; } }
+  @media (max-width: 520px) { .values, .cats { grid-template-columns: 1fr; } .stock-grid { grid-template-columns: 1fr 1fr; gap: 12px; } .stock-body h3 { font-size: 0.88rem; } }
 ---
 
 <!-- ── HERO ── -->
@@ -225,19 +241,94 @@ inlineStyle: |
         <a class="btn btn-outline btn-lg" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero&utm_campaign=blog_leads">Ver stock</a>
       </div>
       <div class="stats-bar">
-        <div class="stat"><strong>4</strong><span>Artigos publicados</span></div>
-        <div class="stat"><strong>2</strong><span>Simuladores gratuitos</span></div>
-        <div class="stat"><strong>5</strong><span>Concelhos em cobertura</span></div>
+        <div class="stat"><strong>50+</strong><span>Viaturas em stock</span></div>
+        <div class="stat"><strong>Joane</strong><span>Famalicão · Vale do Ave</span></div>
+        <div class="stat"><strong>5★</strong><span>Atendimento sem pressão</span></div>
       </div>
     </div>
-    <div class="hero-card">
-      <div class="hero-card-img"></div>
-      <div class="hero-card-body">
-        <div class="hero-card-label">★ Artigo em destaque</div>
-        <h2>Onde comprar carro usado em Famalicão com mais confiança</h2>
-        <p>O que deve perguntar, o que deve verificar e como reconhecer um stand de confiança na sua zona.</p>
-        <a class="btn btn-gold" href="/onde-comprar-carro-usado-famalicao.html">Ler artigo</a>
+    <a class="hero-card" href="https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html?utm_source=blog&utm_medium=hero_car&utm_campaign=homepage" target="_blank" rel="noopener" style="display:block;">
+      <div class="hero-card-img">
+        <span class="hero-card-price">12.495 €</span>
       </div>
+      <div class="hero-card-body">
+        <div class="hero-card-label">★ Em destaque no stand</div>
+        <h2 style="font-size:1.08rem;line-height:1.3;margin-bottom:6px;">Citroën C3 1.2 PureTech Shine</h2>
+        <p style="margin-bottom:14px;">2022 · 23.185 km · Gasolina · Como novo, garantia incluída.</p>
+        <span class="btn btn-gold" style="width:100%;">Ver detalhes →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── STOCK EM DESTAQUE ── -->
+<section class="section" id="stock">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">Stock atualizado</div>
+      <h2 class="sec-title">Viaturas em destaque no stand</h2>
+      <p class="sec-sub">Uma seleção do nosso stock atual em Joane. Todas verificadas, com garantia, prontas a sair. Stock completo em circuitocar.pt.</p>
+    </div>
+    <div class="stock-grid">
+
+      <a class="stock-card" href="https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage" target="_blank" rel="noopener">
+        <div class="stock-img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp');">
+          <span class="stock-tag">Baixa km</span>
+          <span class="stock-price">12.495 €</span>
+        </div>
+        <div class="stock-body">
+          <h3>Citroën C3 1.2 PureTech Shine</h3>
+          <div class="stock-meta">
+            <span>📅 2022</span><span>⛽ Gasolina</span><span>🛣 23.185 km</span>
+          </div>
+          <span class="stock-cta">Ver detalhes →</span>
+        </div>
+      </a>
+
+      <a class="stock-card" href="https://www.circuitocar.pt/viatura/ford-ecosport-ID146050.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage" target="_blank" rel="noopener">
+        <div class="stock-img" style="background-image:url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp');">
+          <span class="stock-tag">SUV</span>
+          <span class="stock-price">13.995 €</span>
+        </div>
+        <div class="stock-body">
+          <h3>Ford EcoSport 1.5 TDCi Titanium</h3>
+          <div class="stock-meta">
+            <span>📅 2018</span><span>⛽ Gasóleo</span><span>🛣 91.592 km</span>
+          </div>
+          <span class="stock-cta">Ver detalhes →</span>
+        </div>
+      </a>
+
+      <a class="stock-card" href="https://www.circuitocar.pt/viatura/bmw-116-ID167756.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage" target="_blank" rel="noopener">
+        <div class="stock-img" style="background-image:url('https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp');">
+          <span class="stock-tag">Premium</span>
+          <span class="stock-price">10.750 €</span>
+        </div>
+        <div class="stock-body">
+          <h3>BMW 116 D EfficientDynamics Line</h3>
+          <div class="stock-meta">
+            <span>📅 2016</span><span>⛽ Gasóleo</span><span>🛣 232.000 km</span>
+          </div>
+          <span class="stock-cta">Ver detalhes →</span>
+        </div>
+      </a>
+
+      <a class="stock-card" href="https://www.circuitocar.pt/viatura/ford-fiesta-ID162460.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage" target="_blank" rel="noopener">
+        <div class="stock-img" style="background-image:url('https://omeustand.pt/viaturas/224/7724357454_omeustand_foto.webp');">
+          <span class="stock-tag">Económico</span>
+          <span class="stock-price">5.500 €</span>
+        </div>
+        <div class="stock-body">
+          <h3>Ford Fiesta 1.6 TDCi Trend</h3>
+          <div class="stock-meta">
+            <span>📅 2012</span><span>⛽ Gasóleo</span><span>🛣 272.349 km</span>
+          </div>
+          <span class="stock-cta">Ver detalhes →</span>
+        </div>
+      </a>
+
+    </div>
+    <div class="stock-foot">
+      <a class="btn btn-gold btn-lg" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=stock_all&utm_campaign=homepage" target="_blank" rel="noopener">Ver stock completo em circuitocar.pt →</a>
     </div>
   </div>
 </section>
