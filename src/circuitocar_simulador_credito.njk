@@ -16,10 +16,10 @@ permalink: circuitocar_simulador_credito.html
   <meta property="og:url" content="{{ site.url }}/circuitocar_simulador_credito.html" />
   <link rel="canonical" href="{{ site.url }}/circuitocar_simulador_credito.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
+  <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
 
-  <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
-  <link rel="stylesheet" href="/css/article-cc.css" />
+  <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
+  <link rel="stylesheet" href="{{ site.basePath }}/css/article-cc.css" />
 
   <style>
     /* ----- Simulator-specific styles, on top of article-cc.css ----- */
@@ -69,20 +69,20 @@ permalink: circuitocar_simulador_credito.html
       <div class="cc-topbar__links">
         <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=topbar_stock&utm_campaign=simulador_credito">Ver stock</a>
         <a href="#equipa">Falar com a equipa</a>
-        <a href="/">Voltar ao blog</a>
+        <a href="{{ site.basePath }}/">Voltar ao blog</a>
       </div>
     </div>
   </header>
 
   <header class="cc-header">
     <div class="cc-header__inner">
-      <a class="cc-header__logo" href="/" aria-label="Circuito Car — voltar à homepage">
-        <img src="/img/logo-yellow.png" alt="Circuito Car" />
+      <a class="cc-header__logo" href="{{ site.basePath }}/" aria-label="Circuito Car — voltar à homepage">
+        <img src="{{ site.basePath }}/img/logo-yellow.png" alt="Circuito Car" />
       </a>
       <span class="cc-header__brand-tag">Simulador</span>
       <nav class="cc-header__nav" aria-label="Navegação principal">
-        <a href="/#artigos">Blog</a>
-        <a href="/simulador_retoma.html">Retoma</a>
+        <a href="{{ site.basePath }}/#artigos">Blog</a>
+        <a href="{{ site.basePath }}/simulador_retoma.html">Retoma</a>
         <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=simulador_credito">Viaturas</a>
       </nav>
       <a class="cc-header__cta" href="#equipa">
@@ -232,14 +232,14 @@ permalink: circuitocar_simulador_credito.html
     <div class="cc-footer__inner">
       <div class="cc-footer__grid">
         <div class="cc-footer__col cc-footer__brand">
-          <img src="/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
+          <img src="{{ site.basePath }}/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
           <p>Simulador gratuito para estimares a prestação mensal do teu próximo carro. Valores indicativos — a proposta final depende de aprovação da entidade financeira.</p>
         </div>
         <div class="cc-footer__col">
           <h4>Explorar</h4>
-          <a href="/">Homepage</a>
-          <a href="/simulador_retoma.html">Simulador de retoma</a>
-          <a href="/#artigos">Artigos</a>
+          <a href="{{ site.basePath }}/">Homepage</a>
+          <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
+          <a href="{{ site.basePath }}/#artigos">Artigos</a>
           <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_credito">Viaturas</a>
         </div>
         <div class="cc-footer__col">
@@ -261,10 +261,10 @@ permalink: circuitocar_simulador_credito.html
   </footer>
 
   <nav class="cc-mobile-dock" aria-label="Navegação mobile">
-    <a href="/"><i data-lucide="home"></i><span>Início</span></a>
-    <a href="/#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
-    <a href="/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
-    <a href="/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
+    <a href="{{ site.basePath }}/"><i data-lucide="home"></i><span>Início</span></a>
+    <a href="{{ site.basePath }}/#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
+    <a href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
     <a href="#equipa"><i data-lucide="message-square"></i><span>Equipa</span></a>
   </nav>
 

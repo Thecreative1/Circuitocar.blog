@@ -18,12 +18,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   {% if pageType === 'article' %}
-  <link rel="stylesheet" href="/assets/article.css" />
+  <link rel="stylesheet" href="{{ site.basePath }}/assets/article.css" />
   {% endif %}
   {% if inlineStyle %}
   <style>{{ inlineStyle | safe }}</style>
   {% endif %}
-  <link rel="stylesheet" href="/assets/kinetic-gallery.css" />
+  <link rel="stylesheet" href="{{ site.basePath }}/assets/kinetic-gallery.css" />
   {% if schemaOrg %}{{ schemaOrg | safe }}{% endif %}
   {% if pageType === 'article' %}
   <script type="application/ld+json">
@@ -77,8 +77,8 @@
 
   <header>
     <div class="container header-inner">
-      <a class="brand" href="/">
-        <div class="brand-mark"><img src="/img/cc.png" alt="Circuito Car" /></div>
+      <a class="brand" href="{{ site.basePath }}/">
+        <div class="brand-mark"><img src="{{ site.basePath }}/img/cc.png" alt="Circuito Car" /></div>
         <div class="brand-text">
           <strong>Circuito Car Blog</strong>
           <span>{{ headerTagline if headerTagline else 'Guias, simuladores e stock em Joane' }}</span>
@@ -86,10 +86,10 @@
       </a>
       <nav class="nav">
         {% if pageType === 'article' %}
-          <a href="/#artigos">Blog</a>
-          <a href="/#categorias">Categorias</a>
-          <a href="/circuitocar_simulador_credito.html">Crédito</a>
-          <a href="/simulador_retoma.html">Retoma</a>
+          <a href="{{ site.basePath }}/#artigos">Blog</a>
+          <a href="{{ site.basePath }}/#categorias">Categorias</a>
+          <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Crédito</a>
+          <a href="{{ site.basePath }}/simulador_retoma.html">Retoma</a>
           <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign={{ utmCampaign }}">Viaturas</a>
           <a class="btn btn-primary" href="#equipa">Falar com a equipa</a>
         {% else %}
@@ -117,9 +117,9 @@
         <div class="footer-col">
           <h4>Navegação</h4>
           <div class="footer-links">
-            <a href="/">Homepage</a>
-            <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
-            <a href="/simulador_retoma.html">Simulador de retoma</a>
+            <a href="{{ site.basePath }}/">Homepage</a>
+            <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
+            <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
             <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign }}">Viaturas</a>
           </div>
         </div>
@@ -152,8 +152,8 @@
           <div class="footer-links">
             <a href="#contacto">Falar com a equipa</a>
             <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de Contactos</a>
-            <a href="/circuitocar_simulador_credito.html">Simulador de Crédito</a>
-            <a href="/simulador_retoma.html">Simulador de Retoma</a>
+            <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de Crédito</a>
+            <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de Retoma</a>
           </div>
         </div>
         <div class="footer-col">
@@ -170,10 +170,10 @@
   </footer>
 
   <nav class="mobile-dock" aria-label="Navegação mobile">
-    <a href="/" data-icon="C">Início</a>
-    <a href="/#artigos" data-icon="B">Blog</a>
-    <a href="/circuitocar_simulador_credito.html" data-icon="€">Crédito</a>
-    <a href="/simulador_retoma.html" data-icon="R">Retoma</a>
+    <a href="{{ site.basePath }}/" data-icon="C">Início</a>
+    <a href="{{ site.basePath }}/#artigos" data-icon="B">Blog</a>
+    <a href="{{ site.basePath }}/circuitocar_simulador_credito.html" data-icon="€">Crédito</a>
+    <a href="{{ site.basePath }}/simulador_retoma.html" data-icon="R">Retoma</a>
     <a href="{{ '#equipa' if pageType === 'article' else '#contacto' }}" data-icon="@">Contacto</a>
   </nav>
 

@@ -14,9 +14,9 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0A0B0D" />
-  <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
+  <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
 
-  <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
+  <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
   {% if inlineStyle %}<style>{{ inlineStyle | safe }}</style>{% endif %}
   {% if schemaOrg %}{{ schemaOrg | safe }}{% endif %}
 </head>
@@ -35,8 +35,8 @@
 
   <header class="cc-header">
     <div class="cc-header__inner">
-      <a class="cc-header__logo" href="/" aria-label="Circuito Car — voltar à homepage">
-        <img src="/img/logo-yellow.png" alt="Circuito Car" />
+      <a class="cc-header__logo" href="{{ site.basePath }}/" aria-label="Circuito Car — voltar à homepage">
+        <img src="{{ site.basePath }}/img/logo-yellow.png" alt="Circuito Car" />
       </a>
       <span class="cc-header__brand-tag">Blog</span>
       <nav class="cc-header__nav" aria-label="Navegação principal">
@@ -58,7 +58,7 @@
     <div class="cc-footer__inner">
       <div class="cc-footer__grid">
         <div class="cc-footer__col cc-footer__brand">
-          <img src="/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
+          <img src="{{ site.basePath }}/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
           <p>Guias e ferramentas para quem quer comprar carro usado no eixo Famalicão, Braga e Guimarães — com a equipa do stand a um WhatsApp de distância.</p>
         </div>
         <div class="cc-footer__col">
@@ -72,8 +72,8 @@
           <h4>Contacto</h4>
           <a href="#contacto">Falar com a equipa</a>
           <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de contactos</a>
-          <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
-          <a href="/simulador_retoma.html">Simulador de retoma</a>
+          <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
+          <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
         </div>
         <div class="cc-footer__col">
           <h4>Localização</h4>
@@ -88,10 +88,10 @@
   </footer>
 
   <nav class="cc-mobile-dock" aria-label="Navegação mobile">
-    <a href="/"><i data-lucide="home"></i><span>Início</span></a>
+    <a href="{{ site.basePath }}/"><i data-lucide="home"></i><span>Início</span></a>
     <a href="#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
-    <a href="/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
-    <a href="/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
+    <a href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
+    <a href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
     <a href="#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
   </nav>
 

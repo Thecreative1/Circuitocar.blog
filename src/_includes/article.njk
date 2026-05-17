@@ -38,7 +38,7 @@ headerTagline: "Conteúdo útil alinhado com a marca"
         <h3>Mais no blog</h3>
         <div class="footer-links">
           {% for rel in relatedArticles %}
-            <a href="/{{ rel.url }}">{{ rel.title }}</a>
+            <a href="{{ site.basePath }}/{{ rel.url }}">{{ rel.title }}</a>
           {% endfor %}
         </div>
       </div>
