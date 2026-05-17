@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
 
   // Copy static assets as-is
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/admin");
 
