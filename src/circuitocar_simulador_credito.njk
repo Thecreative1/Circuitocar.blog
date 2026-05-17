@@ -14,8 +14,13 @@ permalink: circuitocar_simulador_credito.html
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{{ site.url }}/img/logo-yellow.png" />
   <meta property="og:url" content="{{ site.url }}/circuitocar_simulador_credito.html" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:locale" content="pt_PT" />
   <link rel="canonical" href="{{ site.url }}/circuitocar_simulador_credito.html" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Simulador de Crédito Automóvel | Circuito Car" />
+  <meta name="twitter:description" content="Simulador gratuito de crédito automóvel — calcula a tua prestação mensal em segundos, sem registo nem compromisso." />
+  <meta name="twitter:image" content="{{ site.url }}/img/logo-yellow.png" />
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
 
   <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
@@ -54,10 +59,12 @@ permalink: circuitocar_simulador_credito.html
       .sim-wrap { grid-template-columns: 1fr; padding: 40px 24px 80px; }
     }
     @media (max-width: 640px) {
+      .sim-wrap { padding: 32px 16px 72px; }
       .sim-card { padding: 24px; }
       .form-grid, .result-grid { grid-template-columns: 1fr; }
       .calc-actions { flex-direction: column; }
       .calc-actions .cc-btn { width: 100%; }
+      .field, .input, .select { min-width: 0; }
     }
   </style>
 </head>

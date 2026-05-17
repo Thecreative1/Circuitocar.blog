@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thecreative1.github.io/Circuitocar.blog/sitemap.xml

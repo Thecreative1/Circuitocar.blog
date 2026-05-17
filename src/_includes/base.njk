@@ -12,7 +12,12 @@
   <meta property="og:type" content="{{ ogType if ogType else 'website' }}" />
   <meta property="og:image" content="{{ heroImage if heroImage else site.logo }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:locale" content="pt_PT" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
+  <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
+  <meta name="twitter:image" content="{{ heroImage if heroImage else site.logo }}" />
   <meta name="theme-color" content="#090c11" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
