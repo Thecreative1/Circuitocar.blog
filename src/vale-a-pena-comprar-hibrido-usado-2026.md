@@ -13,7 +13,7 @@ ogDescription: "Um guia claro para perceber custos, utilização real e pontos c
 category: "Híbridos e Elétricos"
 readTime: "7 min de leitura"
 utmCampaign: "blog_hibrido"
-footerNote: "Artigo pensado para clarificar decisão e reduzir ruído na compra."
+footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
 lead: "O interesse por híbridos usados continua forte porque muita gente quer baixar consumos sem dar o salto direto para o elétrico. A questão é perceber se faz sentido para o uso real e para o orçamento, não apenas seguir tendência."
 

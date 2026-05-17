@@ -13,7 +13,7 @@ ogDescription: "Um guia prático para escolher melhor, evitar erros e falar com 
 category: "Guias Locais"
 readTime: "8 min de leitura"
 utmCampaign: "blog_leads"
-footerNote: "Artigo de demonstração com foco em SEO local e geração de leads."
+footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
 lead: "Quem procura carro usado na zona de Vila Nova de Famalicão quer basicamente três coisas: **não perder tempo**, **não cair numa má compra** e **falar com alguém que saiba orientar**. Este guia foi pensado exatamente para isso."
 
@@ -22,7 +22,7 @@ heroImageLink: "https://www.circuitocar.pt/viatura/jeep-renegade-ID159868.html"
 heroImageAlt: "Ver Jeep Renegade em stock"
 heroWhatsappMsg: "Olá, vi o artigo sobre comprar carro usado em Famalicão e quero mais informação."
 
-topbarLeft: "Artigo estratégico de demonstração para captar tráfego local qualificado."
+topbarLeft: "Guia para quem quer comprar carro usado em Famalicão e arredores."
 topbarLinks:
   - url: "https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=blog_leads"
     label: "Ver Stock"
@@ -31,9 +31,9 @@ topbarLinks:
   - url: "https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign=blog_leads"
     label: "Contactos"
 
-sidebarBadge: "Objetivo do artigo"
-sidebarTitle: "Tráfego local com intenção real"
-sidebarDescription: "Este conteúdo foi pensado para captar pessoas que já estão numa fase próxima da decisão e precisam de confiança, não apenas de mais anúncios."
+sidebarBadge: "Stand em Joane"
+sidebarTitle: "A 10 minutos de Famalicão"
+sidebarDescription: "Visita o stand sem marcação ou fala com a equipa por WhatsApp para preparar uma viatura específica para teste."
 
 relatedArticles:
   - title: "Vale a pena comprar um híbrido usado em 2026?"
@@ -91,16 +91,6 @@ Muita gente pesquisa durante dias e só depois tenta pedir ajuda. Ao contrário 
 ### 3. Procurar uma viatura sem clarificar o uso real
 
 Um utilitário para cidade, um SUV para família e um carro para viagens longas não respondem da mesma forma. Sem essa clareza, a compra fica mais emocional do que racional.
-
-## O que este tipo de artigo faz pela marca
-
-Este artigo não existe só para "encher" um blog. Ele tem três funções concretas:
-
-- **captar tráfego local** de pessoas que pesquisam por termos como "carro usado Famalicão" ou "onde comprar carro usado em Famalicão";
-- **criar autoridade**, mostrando que a marca não é apenas catálogo, mas também orientação útil;
-- **gerar contacto qualificado**, porque o leitor sai do artigo com um próximo passo claro.
-
-É isto que diferencia um conteúdo estratégico de um texto genérico. O objetivo não é ter visitas vazias. O objetivo é atrair pessoas que já estão perto de precisar de ajuda.
 
 ## Se procura carro usado na zona, o próximo passo é simples
 

@@ -13,7 +13,7 @@ ogDescription: "Um guia prático para perceber os verdadeiros benefícios de um 
 category: "Condução e Cidade"
 readTime: "6 min de leitura"
 utmCampaign: "blog_automaticos"
-footerNote: "Artigo de apoio à decisão com foco em tráfego qualificado."
+footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
 lead: "Os carros automáticos já não são uma exceção. Para muita gente, são a forma mais confortável de viver o dia a dia. O importante é perceber quando isso compensa mesmo e o que deve ser verificado antes de comprar usado."
 

@@ -13,7 +13,7 @@ ogDescription: "Um guia prático para escolher um carro familiar usado com mais 
 category: "Família e Dia a Dia"
 readTime: "5 min de leitura"
 utmCampaign: "blog_familia"
-footerNote: "Artigo pensado para ajudar famílias a escolher com mais confiança."
+footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
 lead: "Quando a compra passa a servir uma família inteira, o critério muda. Espaço, bagageira, conforto, acessos e custos do dia a dia começam a pesar mais do que um anúncio bonito ou um detalhe estético."
 
