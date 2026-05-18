@@ -82,8 +82,8 @@ a { color: inherit; text-decoration: none; }
 .cc-prose li { margin-bottom: 8px; }
 .cc-prose li::marker { color: var(--cc-yellow-deep); font-weight: bold; }
 .cc-prose blockquote { border-left: 4px solid var(--cc-yellow); padding: 6px 0 6px 24px; margin: 32px 0; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xl); line-height: var(--cc-lh-snug); color: var(--cc-ink); }
-.cc-prose a { color: var(--cc-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--cc-yellow); font-weight: var(--cc-fw-semibold); transition: color var(--cc-dur-fast) var(--cc-ease-out); }
-.cc-prose a:hover { color: var(--cc-yellow-deep); text-decoration-thickness: 2px; }
+.cc-prose a:not(.btn):not(.cc-btn) { color: var(--cc-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--cc-yellow); font-weight: var(--cc-fw-semibold); transition: color var(--cc-dur-fast) var(--cc-ease-out); }
+.cc-prose a:not(.btn):not(.cc-btn):hover { color: var(--cc-yellow-deep); text-decoration-thickness: 2px; }
 .cc-prose hr { border: 0; border-top: 1px solid var(--cc-border); margin: 40px 0; }
 
 /* Inline article CTA block (used in markdown via <div class="cta-inline">) */
