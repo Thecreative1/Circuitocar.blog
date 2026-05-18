@@ -6,6 +6,13 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["@11ty/eleventy", "--serve", "--port", "8080"],
       "port": 8080
+    },
+    {
+      "name": "circuitocar-local",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "local"],
+      "port": 4000,
+      "env": { "BASEPATH": "" }
     }
   ]
 }
