@@ -2,7 +2,7 @@ module.exports = {
   title: "Circuito Car Blog",
   description: "Guias práticos, simuladores de crédito e retoma e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga, Guimarães e Vale do Ave.",
   url: "https://thecreative1.github.io/Circuitocar.blog",
-  basePath: process.env.BASEPATH ?? "/Circuitocar.blog",
+  basePath: ["local", "dev", "start"].includes(process.env.npm_lifecycle_event) ? "" : "/Circuitocar.blog",
   lang: "pt",
   logo: "https://thecreative1.github.io/Circuitocar.blog/img/cc.png",
   contact: {
