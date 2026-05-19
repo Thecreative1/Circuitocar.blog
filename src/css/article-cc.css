@@ -106,10 +106,11 @@ a { color: inherit; text-decoration: none; }
 .cc-btn--ghost-dark:hover, .btn-secondary:hover { border-color: var(--cc-ink); background: var(--cc-paper-warm); color: var(--cc-ink); }
 .cc-btn--ghost-blue { background: transparent; color: var(--cc-blue-light); border: 1px solid rgba(22,53,96,0.35); }
 .cc-btn--ghost-blue:hover { background: var(--cc-blue); color: var(--cc-paper); border-color: var(--cc-blue); }
-.cc-btn--wa, .btn-whatsapp { background: var(--cc-blue); color: var(--cc-yellow); border: 1px solid var(--cc-blue-mid); }
-.cc-btn--wa:hover, .btn-whatsapp:hover { background: var(--cc-blue-mid); color: var(--cc-yellow-hot); border-color: var(--cc-blue-light); }
-.btn-phone { background: var(--cc-ink); color: var(--cc-paper); border: 0; }
-.btn-phone:hover { background: var(--cc-asphalt-800); }
+.cc-btn--wa, .btn-whatsapp { background: var(--cc-blue); color: var(--cc-yellow); border: 1px solid rgba(37,211,102,0.35); }
+.cc-btn--wa i, .btn-whatsapp i { color: #25D366; }
+.cc-btn--wa:hover, .btn-whatsapp:hover { background: var(--cc-blue-mid); color: var(--cc-yellow-hot); border-color: rgba(37,211,102,0.65); box-shadow: 0 0 16px rgba(37,211,102,0.22); }
+.btn-phone { background: var(--cc-ink); color: var(--cc-paper); border: 1px solid var(--cc-asphalt-600); }
+.btn-phone:hover { background: var(--cc-asphalt-800); color: var(--cc-paper); border-color: var(--cc-asphalt-500); }
 
 /* Buttons inside dark hero need ghost-light styling */
 .cc-post-hero__actions .btn-secondary { background: transparent; color: var(--cc-paper); border-color: var(--cc-asphalt-600); }
