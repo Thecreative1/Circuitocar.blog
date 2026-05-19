@@ -98,8 +98,8 @@ a { color: inherit; text-decoration: none; }
 .cc-btn i, .btn i { width: 16px; height: 16px; }
 .cc-btn--yellow, .btn-primary { background: var(--cc-yellow); color: var(--cc-ink); }
 .cc-btn--yellow:hover, .btn-primary:hover { background: var(--cc-yellow-hot); color: var(--cc-blue); }
-.cc-btn--dark { background: var(--cc-ink); color: var(--cc-paper); }
-.cc-btn--dark:hover { background: var(--cc-asphalt-800); }
+.cc-btn--dark { background: var(--cc-ink); color: var(--cc-paper); border: 1px solid var(--cc-blue-light); box-shadow: 0 0 10px -2px rgba(30,74,138,0.45); }
+.cc-btn--dark:hover { background: var(--cc-asphalt-800); border-color: var(--cc-blue-light); box-shadow: 0 0 16px -2px rgba(30,74,138,0.65); }
 .cc-btn--ghost-light { background: transparent; color: var(--cc-paper); border: 1px solid var(--cc-asphalt-600); }
 .cc-btn--ghost-light:hover { border-color: var(--cc-yellow); color: var(--cc-yellow); }
 .cc-btn--ghost-dark, .btn-secondary { background: transparent; color: var(--cc-ink); border: 1px solid var(--cc-border-strong); }
