@@ -30,6 +30,12 @@
   --cc-paper-card:    #FFFFFF;   /* Pure card on light */
   --cc-paper-border:  #E8E6DE;   /* Subtle borders on light */
 
+  /* Blue — brand navy (second identity color, used as a refined accent) */
+  --cc-blue:          #0D1F3C;   /* Brand navy — sampled from Circuito Car visual identity */
+  --cc-blue-mid:      #163560;   /* Hover / elevated variant */
+  --cc-blue-light:    #1E4A8A;   /* Small accent; readable text on light surfaces */
+  --cc-blue-tint:     rgba(13, 31, 60, 0.05);  /* Subtle wash on light bg */
+
   /* Signal — semantic accents (used sparingly; yellow does most work) */
   --cc-signal-red:    #E5342B;   /* Stop / error / "vendido" */
   --cc-signal-green:  #1F9D55;   /* Disponível / success */
