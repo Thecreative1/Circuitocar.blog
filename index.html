@@ -91,8 +91,8 @@ a { color: inherit; text-decoration: none; }
 .cc-btn i { width: 16px; height: 16px; }
 .cc-btn--yellow { background: var(--cc-yellow); color: var(--cc-ink); }
 .cc-btn--yellow:hover { background: var(--cc-yellow-hot); color: var(--cc-blue); box-shadow: 0 6px 16px -6px rgba(255,255,0,0.4); }
-.cc-btn--dark { background: var(--cc-ink); color: var(--cc-paper); }
-.cc-btn--dark:hover { background: var(--cc-asphalt-800); }
+.cc-btn--dark { background: var(--cc-ink); color: var(--cc-paper); border: 1px solid var(--cc-blue-light); box-shadow: 0 0 10px -2px rgba(30,74,138,0.45); }
+.cc-btn--dark:hover { background: var(--cc-asphalt-800); border-color: var(--cc-blue-light); box-shadow: 0 0 16px -2px rgba(30,74,138,0.65); }
 .cc-btn--ghost-light { background: transparent; color: var(--cc-paper); border: 1px solid var(--cc-asphalt-600); }
 .cc-btn--ghost-light:hover { border-color: var(--cc-yellow); color: var(--cc-yellow); }
 .cc-btn--ghost-dark { background: transparent; color: var(--cc-ink); border: 1px solid var(--cc-border-strong); }
@@ -227,7 +227,7 @@ a { color: inherit; text-decoration: none; }
 .cc-about__left h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.05; color: var(--cc-ink); margin: 12px 0 16px; }
 .cc-about__left p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0 0 12px; }
 .cc-about__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-.cc-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--cc-radius-pill); font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); color: var(--cc-ink); }
+.cc-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--cc-radius-pill); font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); background: var(--cc-paper-warm); border: 1px solid var(--cc-blue-mid); color: var(--cc-ink); }
 .cc-badge i { width: 13px; height: 13px; color: var(--cc-yellow-deep); }
 .cc-about__right { display: grid; gap: 12px; }
 .cc-skill { background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); padding: 16px 18px; display: flex; align-items: center; gap: 14px; }
