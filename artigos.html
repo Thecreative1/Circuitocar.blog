@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://circuitocar.blog/artigos.html" />
+  <title>Todos os Artigos | Circuito Car Blog</title>
+  <meta name="description" content="Guias práticos, análises e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga e Guimarães. Todos os artigos do Circuito Car Blog." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Todos os Artigos — Circuito Car Blog" />
+  <meta property="og:description" content="Guias práticos e conselhos honestos sobre compra de carros usados no Vale do Ave." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://circuitocar.blog/img/cc.png" />
+  <meta property="og:url" content="https://circuitocar.blog/artigos.html" />
+  <meta property="og:site_name" content="Circuito Car Blog" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Todos os Artigos — Circuito Car Blog" />
+  <meta name="twitter:description" content="Guias práticos e conselhos honestos sobre compra de carros usados no Vale do Ave." />
+  <meta name="twitter:image" content="https://circuitocar.blog/img/cc.png" />
+  <meta name="theme-color" content="#0A0B0D" />
+  <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
+
+  <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
+  <link rel="stylesheet" href="/css/article-cc.css" />
+  <style>/* ── ARCHIVE HERO ── */
+.cc-archive-hero { background: var(--cc-ink); color: var(--cc-paper); padding: 64px 0 52px; position: relative; overflow: hidden; border-bottom: 1px solid var(--cc-asphalt-800); }
+.cc-archive-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(30,74,138,0.18) 0%, transparent 70%); pointer-events: none; }
+.cc-archive-hero__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+.cc-archive-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--cc-yellow); font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin-bottom: 18px; }
+.cc-archive-hero__eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--cc-yellow); }
+.cc-archive-hero h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; color: var(--cc-paper); font-size: clamp(36px, 4.2vw, 60px); line-height: 0.98; letter-spacing: var(--cc-tracking-tight); margin: 0 0 16px; }
+.cc-archive-hero p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); max-width: 600px; margin: 0; }
+
+/* ── FILTER CHIPS ── */
+.cc-filter-bar { background: var(--cc-paper-card); border-bottom: 1px solid var(--cc-border); position: sticky; top: 57px; z-index: 40; }
+.cc-filter-bar__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+.cc-filter-bar__inner::-webkit-scrollbar { display: none; }
+.cc-filter-chip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; padding: 10px 16px; color: var(--cc-fg-muted); border-bottom: 2px solid transparent; transition: color var(--cc-dur-fast) var(--cc-ease-out), border-color var(--cc-dur-fast) var(--cc-ease-out); }
+.cc-filter-chip:hover { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
+.cc-filter-chip--all { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
+
+/* ── ARCHIVE BODY ── */
+.cc-archive-body { max-width: 1280px; margin: 0 auto; padding: 56px 32px 80px; }
+
+/* ── CATEGORY SECTION ── */
+.cc-cat-section { margin-bottom: 64px; }
+.cc-cat-section:last-child { margin-bottom: 0; }
+.cc-cat-section__head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--cc-border); }
+.cc-cat-section__label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-2xl); color: var(--cc-ink); line-height: 1; }
+.cc-cat-section__count { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); letter-spacing: 0.08em; }
+
+/* ── ARTICLE CARDS GRID ── */
+.cc-archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cc-archive-card { display: flex; flex-direction: column; background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); overflow: hidden; transition: transform var(--cc-dur-base) var(--cc-ease-out), box-shadow var(--cc-dur-base) var(--cc-ease-out), border-color var(--cc-dur-base) var(--cc-ease-out); }
+.cc-archive-card:hover { transform: translateY(-3px); box-shadow: var(--cc-shadow-md); border-color: var(--cc-blue-mid); }
+.cc-archive-card:hover .cc-archive-card__title { color: var(--cc-yellow-deep); }
+.cc-archive-card:hover .cc-archive-card__img { transform: scale(1.04); }
+.cc-archive-card__media { aspect-ratio: 16/9; overflow: hidden; }
+.cc-archive-card__img { width: 100%; height: 100%; background-size: cover; background-position: center; transition: transform var(--cc-dur-slow) var(--cc-ease-out); }
+.cc-archive-card__body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.cc-archive-card__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); letter-spacing: 0.14em; text-transform: uppercase; color: var(--cc-fg-muted); }
+.cc-archive-card__eyebrow::before { content: ''; display: inline-block; width: 16px; height: 2px; background: var(--cc-yellow-deep); }
+.cc-archive-card__title { font-family: var(--cc-font-body); font-size: var(--cc-fs-lg); font-weight: var(--cc-fw-bold); line-height: 1.25; color: var(--cc-ink); margin: 0; transition: color var(--cc-dur-fast) var(--cc-ease-out); text-wrap: balance; }
+.cc-archive-card__desc { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0; flex: 1; }
+.cc-archive-card__meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); margin-top: auto; padding-top: 12px; letter-spacing: 0.04em; }
+
+/* ── BACK LINK ── */
+.cc-archive-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin-bottom: 40px; transition: color var(--cc-dur-fast) var(--cc-ease-out); }
+.cc-archive-back:hover { color: var(--cc-yellow-deep); }
+.cc-archive-back i { width: 16px; height: 16px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .cc-archive-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .cc-archive-hero { padding: 48px 0 36px; }
+  .cc-archive-body { padding: 36px 20px 60px; }
+  .cc-archive-hero__inner { padding: 0 20px; }
+  .cc-filter-bar__inner { padding: 0 20px; }
+  .cc-archive-grid { grid-template-columns: 1fr; }
+  .cc-cat-section { margin-bottom: 48px; }
+  .cc-mobile-dock { display: flex; }
+}
+@media (min-width: 641px) {
+  .cc-mobile-dock { display: none; }
+}
+</style>
+  
+</head>
+<body>
+
+  <header class="cc-topbar">
+    <div class="cc-topbar__inner">
+      <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
+      <div class="cc-topbar__links">
+        <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=homepage">Ver stock</a>
+        <a href="/#contacto">Equipa</a>
+        <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign=homepage">Contactos</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="cc-header">
+    <div class="cc-header__inner">
+      <a class="cc-header__logo" href="/" aria-label="Circuito Car — voltar à homepage">
+        <img src="/img/logo-yellow.png" alt="Circuito Car" />
+      </a>
+      <span class="cc-header__brand-tag">Blog</span>
+      <nav class="cc-header__nav" aria-label="Navegação principal">
+        <a href="/artigos.html">Artigos</a>
+        <a href="/#ferramentas">Ferramentas</a>
+        <a href="/#local-seo">Onde estamos</a>
+        <a href="/#sobre">Sobre</a>
+        <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign=homepage">Viaturas</a>
+      </nav>
+      <a class="cc-header__cta" href="/#contacto">
+        <i data-lucide="message-square"></i>Falar connosco
+      </a>
+    </div>
+  </header>
+
+  
+
+
+<!-- ── ARCHIVE HERO ── -->
+<section class="cc-archive-hero">
+  <div class="cc-archive-hero__inner">
+    <span class="cc-archive-hero__eyebrow">Circuito Car Blog</span>
+    <h1>Todos os <em>Artigos</em></h1>
+    <p>Guias práticos e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga e Guimarães — escritos pela equipa do stand.</p>
+  </div>
+</section>
+
+<!-- ── CATEGORY FILTER BAR ── -->
+<div class="cc-filter-bar">
+  <div class="cc-filter-bar__inner">
+    <a class="cc-filter-chip cc-filter-chip--all" href="#todos">
+      <i data-lucide="layout-grid"></i>Todos
+    </a>
+    
+      
+      
+        <a class="cc-filter-chip" href="#atualidade">Atualidade</a>
+      
+    
+      
+      
+        <a class="cc-filter-chip" href="#guia-de-compra">Guia de Compra</a>
+      
+    
+      
+      
+        <a class="cc-filter-chip" href="#desportivos">Desportivos</a>
+      
+    
+      
+      
+        <a class="cc-filter-chip" href="#guia-local">Guia Local</a>
+      
+    
+      
+      
+        <a class="cc-filter-chip" href="#hibridos">Híbridos</a>
+      
+    
+  </div>
+</div>
+
+<!-- ── ARCHIVE BODY ── -->
+<div class="cc-archive-body" id="todos">
+
+  <a class="cc-archive-back" href="/">
+    <i data-lucide="arrow-left"></i>Voltar à homepage
+  </a>
+
+  
+    
+    
+    <section class="cc-cat-section" id="atualidade">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Atualidade</h2>
+        <span class="cc-cat-section__count">1 artigo</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        <a class="cc-archive-card" href="/guerra-irao-impacto-escolha-carro-usado.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Atualidade</span>
+            <h3 class="cc-archive-card__title">Guerra no Irão: como a instabilidade pode influenciar a escolha do carro</h3>
+            <p class="cc-archive-card__desc">Perceba como a guerra no Irão, os combustíveis mais voláteis e a incerteza energética podem pesar na escolha de um carro usado.</p>
+            <div class="cc-archive-card__meta">
+              <span>8 min de leitura</span>
+              <span>·</span>
+              <span>18 de maio de 2026</span>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+    
+  
+    
+    
+    <section class="cc-cat-section" id="guia-de-compra">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Guia de Compra</h2>
+        <span class="cc-cat-section__count">2 artigos</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        <a class="cc-archive-card" href="/os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724136150_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia de Compra</span>
+            <h3 class="cc-archive-card__title">Os pontos que mais pesam na escolha de um carro para família</h3>
+            <p class="cc-archive-card__desc">Saiba o que realmente importa ao escolher um carro de família usado: espaço, segurança, bagageira, conforto e custos do dia a dia.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>8 de maio de 2026</span>
+            </div>
+          </div>
+        </a>
+        
+        <a class="cc-archive-card" href="/carros-automaticos-usados-vantagens-riscos.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia de Compra</span>
+            <h3 class="cc-archive-card__title">Carros automáticos usados: vantagens, riscos e para quem fazem sentido</h3>
+            <p class="cc-archive-card__desc">Descubra quando faz sentido comprar um carro automático usado, que sinais de alerta deve verificar e como escolher com mais confiança.</p>
+            <div class="cc-archive-card__meta">
+              <span>6 min de leitura</span>
+              <span>·</span>
+              <span>1 de maio de 2026</span>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+    
+  
+    
+    
+    <section class="cc-cat-section" id="desportivos">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Desportivos</h2>
+        <span class="cc-cat-section__count">1 artigo</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        <a class="cc-archive-card" href="/opel-gt-roadster-usado-2009.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Desportivos</span>
+            <h3 class="cc-archive-card__title">Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá arrepios</h3>
+            <p class="cc-archive-card__desc">264 cv, tração traseira, caixa manual e apenas 7.000 unidades produzidas no mundo. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um.</p>
+            <div class="cc-archive-card__meta">
+              <span>7 min de leitura</span>
+              <span>·</span>
+              <span>18 de maio de 2026</span>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+    
+  
+    
+    
+    <section class="cc-cat-section" id="guia-local">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Guia Local</h2>
+        <span class="cc-cat-section__count">1 artigo</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        <a class="cc-archive-card" href="/onde-comprar-carro-usado-famalicao.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724223933_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Onde comprar carro usado em Famalicão com mais confiança</h3>
+            <p class="cc-archive-card__desc">Descubra o que deve analisar antes de comprar carro usado em Famalicão, que erros evitar e como escolher com mais confiança.</p>
+            <div class="cc-archive-card__meta">
+              <span>8 min de leitura</span>
+              <span>·</span>
+              <span>10 de abril de 2026</span>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+    
+  
+    
+    
+    <section class="cc-cat-section" id="hibridos">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Híbridos</h2>
+        <span class="cc-cat-section__count">1 artigo</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        <a class="cc-archive-card" href="/vale-a-pena-comprar-hibrido-usado-2026.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7723979753_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Híbridos</span>
+            <h3 class="cc-archive-card__title">Vale a pena comprar um híbrido usado em 2026?</h3>
+            <p class="cc-archive-card__desc">Perceba quando um híbrido usado compensa, o que deve verificar na bateria e para que perfis faz realmente sentido em 2026.</p>
+            <div class="cc-archive-card__meta">
+              <span>7 min de leitura</span>
+              <span>·</span>
+              <span>24 de abril de 2026</span>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+    
+  
+
+</div>
+
+
+  <footer class="cc-footer">
+    <div class="cc-footer__inner">
+      <div class="cc-footer__grid">
+        <div class="cc-footer__col cc-footer__brand">
+          <img src="/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
+          <p>Guias e ferramentas para quem quer comprar carro usado no eixo Famalicão, Braga e Guimarães — com a equipa do stand a um WhatsApp de distância.</p>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Explorar</h4>
+          <a href="/artigos.html">Artigos</a>
+          <a href="/#ferramentas">Ferramentas</a>
+          <a href="/#stock">Stock em destaque</a>
+          <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=homepage">Ver stock completo</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Contacto</h4>
+          <a href="/#contacto">Falar com a equipa</a>
+          <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de contactos</a>
+          <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
+          <a href="/simulador_retoma.html">Simulador de retoma</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Localização</h4>
+          <p style="margin:0">Rua do Relógio nº 430<br>4770-245 Joane<br>V. N. Famalicão</p>
+        </div>
+      </div>
+      <div class="cc-footer__bottom">
+        <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
+        <span>Stand em Joane, Vila Nova de Famalicão · circuitocar.pt</span>
+      </div>
+      <div class="cc-credit">
+        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener">
+          <i data-lucide="feather"></i>desenvolvido por Estúdio Flávio Martins
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="cc-mobile-dock" aria-label="Navegação mobile">
+    <a href="/"><i data-lucide="home"></i><span>Início</span></a>
+    <a href="/artigos.html"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
+    <a href="/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
+    <a href="/#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
+  </nav>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
