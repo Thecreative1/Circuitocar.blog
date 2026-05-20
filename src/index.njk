@@ -489,7 +489,7 @@ inlineStyle: |
     </div>
     <div class="cc-articles">
       {% for featured in collections.featuredArticle %}
-      <a href="{{ site.basePath }}/{{ featured.fileSlug }}.html" class="cc-art-hero">
+      <a href="{{ site.basePath }}{{ featured.url }}" class="cc-art-hero">
         <div class="cc-art-hero__media">
           <div class="cc-art-hero__img" style="background-image:url('{{ featured.data.heroImage }}');"></div>
         </div>
@@ -509,7 +509,7 @@ inlineStyle: |
       {% endfor %}
       <div class="cc-art-list">
         {% for art in collections.homeArticles %}
-        <a href="{{ site.basePath }}/{{ art.fileSlug }}.html" class="cc-art-mini">
+        <a href="{{ site.basePath }}{{ art.url }}" class="cc-art-mini">
           <div class="cc-art-mini__media" style="background-image:url('{{ art.data.heroImage }}');"></div>
           <div class="cc-art-mini__body">
             <span class="cc-art-eyebrow">{{ art.data.category }}</span>
@@ -680,7 +680,7 @@ inlineStyle: |
               <h4>{{ site.contact.marco.name }}</h4>
               <span class="cc-seller__role" style="background: var(--cc-blue-light); color: var(--cc-paper);">{{ site.contact.marco.role }}</span>
             </div>
-            <p>Viaturas, visitas, financiamento, retoma — ou qualquer coisa que precises. Estamos sempre disponíveis, a um clique.</p>
+            <p>Disponível para informações sobre viaturas, visitas, financiamento, retoma — ou qualquer coisa que precises. Estamos sempre disponíveis, a um clique.</p>
             <div class="cc-seller__btns">
               <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar</a>
               <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20pelo%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=marco_wa&utm_campaign=blog_leads"><i data-lucide="message-circle"></i>WhatsApp Circuito Car</a>

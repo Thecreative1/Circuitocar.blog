@@ -26,7 +26,7 @@ eleventyExcludeFromCollections: true
   </url>
   {%- for post in collections.articles %}
   <url>
-    <loc>{{ site.url }}/{{ post.fileSlug }}.html</loc>
+    <loc>{{ site.url }}{{ post.url }}</loc>
     <lastmod>{{ post.date | dateIso }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

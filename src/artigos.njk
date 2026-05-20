@@ -74,6 +74,7 @@ inlineStyle: |
 ---
 
 {% set categories = [
+  { name: "Importação",    id: "importacao" },
   { name: "Atualidade",    id: "atualidade" },
   { name: "Guia de Compra", id: "guia-de-compra" },
   { name: "Desportivos",   id: "desportivos" },
@@ -122,7 +123,7 @@ inlineStyle: |
       </div>
       <div class="cc-archive-grid">
         {% for art in catArticles %}
-        <a class="cc-archive-card" href="{{ site.basePath }}/{{ art.fileSlug }}.html">
+        <a class="cc-archive-card" href="{{ site.basePath }}{{ art.url }}">
           {% if art.data.heroImage %}
           <div class="cc-archive-card__media">
             <div class="cc-archive-card__img" style="background-image:url('{{ art.data.heroImage }}');"></div>
