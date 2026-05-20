@@ -112,7 +112,7 @@ permalink: simulador_retoma.html
       <div class="cc-topbar__links">
         <a href="{{ site.basePath }}/">Voltar ao blog</a>
         <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
-        <a href="https://www.circuitocar.pt/contactos?utm_source=simulador&utm_medium=topbar_contactos&utm_campaign=simulador_retoma">Contactos</a>
+        <a href="{{ site.basePath }}/#contacto">Contacto equipa</a>
       </div>
     </div>
   </header>
@@ -124,7 +124,7 @@ permalink: simulador_retoma.html
       </a>
       <span class="cc-header__brand-tag">Simulador</span>
       <nav class="cc-header__nav" aria-label="Navegação principal">
-        <a href="{{ site.basePath }}/#artigos">Blog</a>
+        <a href="{{ site.basePath }}/artigos.html">Blog</a>
         <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Crédito</a>
         <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=simulador_retoma">Viaturas</a>
       </nav>
@@ -324,28 +324,49 @@ permalink: simulador_retoma.html
         </div>
 
         <div class="actions">
-          <a class="cc-btn btn-accent" id="whatsappBtn" href="#" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Enviar por WhatsApp</a>
-          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/contactos?utm_source=simulador&utm_medium=results_contactos&utm_campaign=simulador_retoma"><i data-lucide="phone"></i>Pedir avaliação humana</a>
+          <a class="cc-btn btn-accent" id="whatsappBtn" href="#" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Enviar dados da retoma ao Marco</a>
+          <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/#contacto"><i data-lucide="phone"></i>Pedir avaliação da viatura</a>
           <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=cta_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver carros disponíveis</a>
         </div>
       </div>
 
       <div class="note" style="margin-top:22px;">
-        <strong>Nota importante:</strong> esta ferramenta apresenta apenas uma estimativa indicativa de retoma. O valor final depende sempre da análise presencial da viatura, versão exata, equipamento, estado real, histórico, procura de mercado e eventual custo de preparação comercial.
+        <strong>Nota:</strong> esta simulação serve como orientação inicial. O valor final depende sempre da análise presencial da viatura — versão exata, equipamento, estado real, histórico, procura de mercado e custos de preparação comercial.
       </div>
     </main>
 
     <aside class="cc-sidebar">
       <div class="cc-side-card cc-side-card--warm">
         <span class="cc-side-card__eyebrow">Como funciona</span>
-        <h3>Lógica de revenda, não de anúncio</h3>
-        <p>O valor de retoma nunca depende apenas do preço anunciado online. Um stand compra com lógica de revenda, preparação, garantia, risco e velocidade de rotação do stock.</p>
+        <h3>Valor de retoma não é o mesmo que preço de anúncio</h3>
+        <p>Na retoma, o valor é calculado com lógica de revenda. Além do preço de mercado, contam o estado da viatura, quilometragem, histórico, custos de preparação, garantia, risco e facilidade de venda. Por isso, dois carros aparentemente iguais podem ter valores de retoma diferentes.</p>
+        <p style="margin-top:12px; font-size:var(--cc-fs-xs); color:var(--cc-fg-subtle); line-height:1.5;">Esta simulação serve como orientação inicial. A avaliação final depende sempre da análise real da viatura.</p>
       </div>
 
       <div class="cc-side-card">
         <span class="cc-side-card__eyebrow">Equipa</span>
         <h3>Fala com quem percebe</h3>
 
+        <!-- Marco — apoio ao cliente, contacto principal -->
+        <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.marco.name }}</strong>
+            <span class="cc-side-seller__role" style="background: var(--cc-blue-light); color: var(--cc-paper);">{{ site.contact.marco.role }}</span>
+          </div>
+          <p>Para dúvidas sobre retomas, marcações, disponibilidade de viaturas ou acompanhamento inicial — fala com Marco. Ele encaminha o pedido para a pessoa certa da equipa sempre que necessário.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar Marco</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_marco&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp Marco</a>
+          </div>
+        </div>
+
+        <!-- Divider direção -->
+        <div style="display: flex; align-items: center; gap: 8px; padding: 4px 0;">
+          <span style="font-family: var(--cc-font-display); font-style: italic; font-weight: 700; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cc-fg-subtle); white-space: nowrap;">Direção</span>
+          <div style="flex: 1; height: 1px; background: var(--cc-border);"></div>
+        </div>
+
+        <!-- André — direção comercial -->
         <div class="cc-side-seller">
           <div class="cc-side-seller__top">
             <strong>{{ site.contact.andre.name }}</strong>
@@ -358,6 +379,7 @@ permalink: simulador_retoma.html
           </div>
         </div>
 
+        <!-- Filipe — direção técnica -->
         <div class="cc-side-seller">
           <div class="cc-side-seller__top">
             <strong>{{ site.contact.filipe.name }}</strong>
@@ -415,14 +437,15 @@ permalink: simulador_retoma.html
           <h4>Explorar</h4>
           <a href="{{ site.basePath }}/">Homepage</a>
           <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
-          <a href="{{ site.basePath }}/#artigos">Artigos</a>
+          <a href="{{ site.basePath }}/artigos.html">Artigos</a>
           <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_retoma">Viaturas</a>
         </div>
         <div class="cc-footer__col">
           <h4>Contacto</h4>
+          <a href="tel:{{ site.contact.marco.phone }}">{{ site.contact.marco.name }} · {{ site.contact.marco.phoneDisplay }}</a>
           <a href="tel:{{ site.contact.andre.phone }}">{{ site.contact.andre.name }} · {{ site.contact.andre.phoneDisplay }}</a>
           <a href="tel:{{ site.contact.filipe.phone }}">{{ site.contact.filipe.name }} · {{ site.contact.filipe.phoneDisplay }}</a>
-          <a href="https://www.circuitocar.pt/contactos?utm_source=simulador&utm_medium=footer_contactos&utm_campaign=simulador_retoma">Página de contactos</a>
+          <a href="{{ site.basePath }}/#contacto">Falar com a equipa</a>
         </div>
         <div class="cc-footer__col">
           <h4>Localização</h4>
@@ -438,10 +461,10 @@ permalink: simulador_retoma.html
 
   <nav class="cc-mobile-dock" aria-label="Navegação mobile">
     <a href="{{ site.basePath }}/"><i data-lucide="home"></i><span>Início</span></a>
-    <a href="{{ site.basePath }}/#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="{{ site.basePath }}/artigos.html"><i data-lucide="book-open"></i><span>Blog</span></a>
     <a href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
     <a href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
-    <a href="https://www.circuitocar.pt/contactos?utm_source=simulador&utm_medium=dock_contactos&utm_campaign=simulador_retoma"><i data-lucide="message-square"></i><span>Contacto</span></a>
+    <a href="{{ site.basePath }}/#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
   </nav>
 
   <script>
@@ -608,7 +631,7 @@ permalink: simulador_retoma.html
         `Gostava de afinar a avaliação.${data.observacoes ? ` Observações: ${data.observacoes}` : ''}`
       ].join(' ');
 
-      document.getElementById('whatsappBtn').href = `https://wa.me/351911899092?text=${encodeURIComponent(msg)}`;
+      document.getElementById('whatsappBtn').href = `https://wa.me/351922017034?text=${encodeURIComponent(msg)}`;
 
       results.classList.add('active');
       results.scrollIntoView({ behavior: 'smooth', block: 'start' });
