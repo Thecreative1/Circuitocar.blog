@@ -265,6 +265,10 @@ a { color: inherit; text-decoration: none; }
 .cc-footer__col a:hover { color: var(--cc-yellow); }
 .cc-footer__col p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-asphalt-400); line-height: 1.6; }
 .cc-footer__bottom { border-top: 1px solid var(--cc-asphalt-800); padding-top: 20px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: var(--cc-fs-xs); color: var(--cc-asphalt-500); }
+.cc-credit { text-align: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--cc-asphalt-800); }
+.cc-credit a { font-family: var(--cc-font-body); font-size: 11px; font-style: italic; color: var(--cc-asphalt-500); text-decoration: none; letter-spacing: 0.09em; display: inline-flex; align-items: center; gap: 5px; transition: color var(--cc-dur-fast) var(--cc-ease-out); }
+.cc-credit a:hover { color: var(--cc-yellow); }
+.cc-credit i { width: 11px; height: 11px; }
 
 /* ===== MOBILE DOCK ===== */
 .cc-mobile-dock { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60; background: color-mix(in srgb, var(--cc-ink) 92%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--cc-asphalt-800); padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); justify-content: space-around; }
@@ -820,6 +824,11 @@ a { color: inherit; text-decoration: none; }
       <div class="cc-footer__bottom">
         <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
         <span>Stand em Joane, Vila Nova de Famalicão · circuitocar.pt</span>
+      </div>
+      <div class="cc-credit">
+        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener">
+          <i data-lucide="feather"></i>desenvolvido por Estúdio Flávio Martins
+        </a>
       </div>
     </div>
   </footer>
