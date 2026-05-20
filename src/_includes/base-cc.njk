@@ -10,16 +10,18 @@
   <meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta property="og:type" content="{{ ogType if ogType else 'website' }}" />
-  <meta property="og:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta property="og:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="pt_PT" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
-  <meta name="twitter:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta name="twitter:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
   <meta name="theme-color" content="#0A0B0D" />
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
 
   <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
   {% if extraCss %}<link rel="stylesheet" href="{{ site.basePath }}/css/{{ extraCss }}" />{% endif %}
@@ -32,9 +34,9 @@
     <div class="cc-topbar__inner">
       <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
       <div class="cc-topbar__links">
-        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=homepage">Ver stock</a>
+        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign={{ utmCampaign if utmCampaign else 'blog_geral' }}" target="_blank" rel="noopener noreferrer">Ver stock</a>
         <a href="{{ site.basePath }}/#contacto">Equipa</a>
-        <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign=homepage">Contactos</a>
+        <a href="{{ site.basePath }}/#contacto">Contactos</a>
       </div>
     </div>
   </header>
@@ -50,7 +52,7 @@
         <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
         <a href="{{ site.basePath }}/#local-seo">Onde estamos</a>
         <a href="{{ site.basePath }}/#sobre">Sobre</a>
-        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign=homepage">Viaturas</a>
+        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign={{ utmCampaign if utmCampaign else 'blog_geral' }}" target="_blank" rel="noopener noreferrer">Viaturas</a>
       </nav>
       <a class="cc-header__cta" href="{{ site.basePath }}/#contacto">
         <i data-lucide="message-square"></i>Falar connosco
@@ -72,12 +74,12 @@
           <a href="{{ site.basePath }}/artigos.html">Artigos</a>
           <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
           <a href="{{ site.basePath }}/#stock">Stock em destaque</a>
-          <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=homepage">Ver stock completo</a>
+          <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign if utmCampaign else 'blog_geral' }}" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">
           <h4>Contacto</h4>
           <a href="{{ site.basePath }}/#contacto">Falar com a equipa</a>
-          <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de contactos</a>
+          <a href="{{ site.basePath }}/#contacto">Falar com a equipa</a>
           <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
           <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
         </div>
@@ -91,7 +93,7 @@
         <span>{{ footerNote if footerNote else 'Stand em Joane, Vila Nova de Famalicão · circuitocar.pt' }}</span>
       </div>
       <div class="cc-credit">
-        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener">
+        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener noreferrer">
           <i data-lucide="feather"></i>desenvolvido por Estúdio Flávio Martins
         </a>
       </div>
@@ -106,7 +108,7 @@
     <a href="{{ site.basePath }}/#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
   </nav>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@1.16.0"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

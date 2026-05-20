@@ -10,16 +10,18 @@
   <meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta property="og:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="pt_PT" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
-  <meta name="twitter:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta name="twitter:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
   <meta name="theme-color" content="#0A0B0D" />
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
 
   <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
   <link rel="stylesheet" href="{{ site.basePath }}/css/article-cc.css" />
@@ -31,7 +33,7 @@
     "headline": {{ title | dump | safe }},
     "description": {{ description | dump | safe }},
     "datePublished": "{{ date | dateIso }}",
-    "dateModified": "{{ date | dateIso }}",
+    "dateModified": "{{ lastmod if lastmod else date | dateIso }}",
     "url": "{{ site.url }}{{ page.url }}",
     "image": "{{ heroImage if heroImage else site.logo }}",
     "author": { "@type": "Organization", "name": "Circuito Car" },
@@ -49,9 +51,9 @@
     <div class="cc-topbar__inner">
       <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
       <div class="cc-topbar__links">
-        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign={{ utmCampaign }}">Ver stock</a>
+        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">Ver stock</a>
         <a href="#equipa">Equipa</a>
-        <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign={{ utmCampaign }}">Contactos</a>
+        <a href="{{ site.basePath }}/#contacto">Contactos</a>
       </div>
     </div>
   </header>
@@ -66,7 +68,7 @@
         <a href="{{ site.basePath }}/artigos.html">Artigos</a>
         <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
         <a href="{{ site.basePath }}/#local-seo">Onde estamos</a>
-        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign={{ utmCampaign }}">Viaturas</a>
+        <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">Viaturas</a>
       </nav>
       <a class="cc-header__cta" href="#equipa">
         <i data-lucide="message-square"></i>Falar com a equipa
@@ -88,7 +90,7 @@
         <span><i data-lucide="map-pin"></i>Joane, Famalicão</span>
       </div>
       <div class="cc-post-hero__actions">
-        <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver viaturas disponíveis</a>
+        <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver viaturas disponíveis</a>
         <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.marco.whatsappBase }}?text={{ heroWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=hero_whatsapp&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp Circuito Car</a>
       </div>
     </div>
@@ -98,7 +100,7 @@
   <!-- Cover image (bleeds into next section) -->
   {% if heroImage %}
   <div class="cc-post-cover">
-    <a href="{{ heroImageLink }}?utm_source=blog&utm_medium=hero_image&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener" aria-label="{{ heroImageAlt }}">
+    <a href="{{ heroImageLink }}?utm_source=blog&utm_medium=hero_image&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer" aria-label="{{ heroImageAlt }}">
       <img class="cc-post-cover__img" src="{{ heroImage }}" alt="{{ heroImageAlt }}" />
     </a>
   </div>
@@ -183,7 +185,7 @@
   {% if relatedArticles and relatedArticles.length %}
   <section class="cc-related">
     <div class="cc-related__inner">
-      <h2>Mais guias para <em>ler</em></h2>
+      <h3>Mais guias para <em>ler</em></h3>
       <div class="cc-related__grid">
         {% for rel in relatedArticles %}
           <a class="cc-related-card" href="{{ site.basePath }}/{{ rel.url }}">
@@ -208,12 +210,12 @@
           <a href="{{ site.basePath }}/artigos.html">Artigos</a>
           <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
           <a href="{{ site.basePath }}/#stock">Stock em destaque</a>
-          <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign }}">Ver stock completo</a>
+          <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">
           <h4>Contacto</h4>
           <a href="#equipa">Falar com a equipa</a>
-          <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign={{ utmCampaign }}">Página de contactos</a>
+          <a href="{{ site.basePath }}/#contacto">Falar com a equipa</a>
           <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
           <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
         </div>
@@ -227,7 +229,7 @@
         <span>{{ footerNote if footerNote else 'Stand em Joane, Vila Nova de Famalicão · circuitocar.pt' }}</span>
       </div>
       <div class="cc-credit">
-        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener">
+        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener noreferrer">
           <i data-lucide="feather"></i>desenvolvido por Estúdio Flávio Martins
         </a>
       </div>
@@ -242,7 +244,7 @@
     <a href="#equipa"><i data-lucide="message-square"></i><span>Equipa</span></a>
   </nav>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@1.16.0"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

@@ -22,6 +22,54 @@ permalink: simulador_retoma.html
   <meta name="twitter:description" content="Simulador gratuito de retoma para teres uma ideia de quanto vale o teu carro atual antes de visitares o stand." />
   <meta name="twitter:image" content="{{ site.url }}/img/logo-yellow.png" />
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}/simulador_retoma.html",
+        "url": "{{ site.url }}/simulador_retoma.html",
+        "name": "Simulador de Retoma | Circuito Car",
+        "description": "Simulador gratuito de retoma para teres uma ideia de quanto vale o teu carro atual antes de visitares o stand.",
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "inLanguage": "pt-PT"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Porque é que a retoma costuma ficar abaixo do preço de anúncio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Porque a retoma precisa de absorver margem comercial, preparação, garantia, risco, eventuais reparações e o tempo até nova venda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mais quilómetros baixa sempre o valor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, em regra pesa negativamente, mas não isoladamente. Um carro bem mantido pode defender melhor o valor do que outro com menos km e pior histórico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vale a pena indicar uma referência de mercado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Quando essa referência é realista, o simulador consegue trabalhar uma base mais próxima do valor observado no mercado atual."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
   <link rel="stylesheet" href="{{ site.basePath }}/css/article-cc.css" />
@@ -126,7 +174,7 @@ permalink: simulador_retoma.html
       <nav class="cc-header__nav" aria-label="Navegação principal">
         <a href="{{ site.basePath }}/artigos.html">Blog</a>
         <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Crédito</a>
-        <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=simulador_retoma">Viaturas</a>
+        <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer">Viaturas</a>
       </nav>
       <a class="cc-header__cta" href="#simulador">
         <i data-lucide="calculator"></i>Simular retoma
@@ -143,7 +191,7 @@ permalink: simulador_retoma.html
       <div class="cc-post-hero__actions">
         <a class="cc-btn cc-btn--yellow" href="#simulador"><i data-lucide="calculator"></i>Calcular estimativa</a>
         <a class="cc-btn cc-btn--ghost-light" href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="euro"></i>Abrir simulador de crédito</a>
-        <a class="cc-btn cc-btn--ghost-light" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=hero_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver viaturas em stock</a>
+        <a class="cc-btn cc-btn--ghost-light" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=hero_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver viaturas em stock</a>
       </div>
     </div>
     <div class="cc-post-hero__chevron" aria-hidden="true"></div>
@@ -282,7 +330,7 @@ permalink: simulador_retoma.html
 
         <div class="actions">
           <button class="cc-btn cc-btn--yellow" type="submit"><i data-lucide="calculator"></i>Calcular estimativa de retoma</button>
-          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=results_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="car"></i>Explorar stock</a>
+          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=results_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Explorar stock</a>
         </div>
       </form>
 
@@ -324,9 +372,9 @@ permalink: simulador_retoma.html
         </div>
 
         <div class="actions">
-          <a class="cc-btn btn-accent" id="whatsappBtn" href="#" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Enviar dados da retoma ao Marco</a>
+          <a class="cc-btn btn-accent" id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Enviar dados da retoma ao Marco</a>
           <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/#contacto"><i data-lucide="phone"></i>Pedir avaliação da viatura</a>
-          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=cta_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver carros disponíveis</a>
+          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=cta_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver carros disponíveis</a>
         </div>
       </div>
 
@@ -356,7 +404,7 @@ permalink: simulador_retoma.html
           <p>Marco Marinho acompanha o primeiro contacto com o cliente e encaminha cada pedido para a pessoa certa da equipa CircuitoCar sempre que necessário.</p>
           <div class="cta-actions">
             <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar para a CircuitoCar</a>
-            <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_marco&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Falar com a CircuitoCar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_marco&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Falar com a CircuitoCar</a>
           </div>
         </div>
 
@@ -375,7 +423,7 @@ permalink: simulador_retoma.html
           <p>Apoio comercial, financiamento e enquadramento da retoma.</p>
           <div class="cta-actions">
             <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.andre.phone }}"><i data-lucide="phone"></i>Ligar</a>
-            <a class="cc-btn cc-btn--wa" href="{{ site.contact.andre.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_andre&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.andre.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_andre&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp</a>
           </div>
         </div>
 
@@ -388,7 +436,7 @@ permalink: simulador_retoma.html
           <p>Acompanhamento de viaturas e atendimento presencial.</p>
           <div class="cta-actions">
             <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.filipe.phone }}"><i data-lucide="phone"></i>Ligar</a>
-            <a class="cc-btn cc-btn--wa" href="{{ site.contact.filipe.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_filipe&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.filipe.whatsappBase }}?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20de%20retoma%20no%20blog%20da%20Circuito%20Car%20e%20quero%20afinar%20a%20avalia%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_filipe&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp</a>
           </div>
         </div>
       </div>
@@ -399,7 +447,7 @@ permalink: simulador_retoma.html
         <p>Se estás a pensar trocar de carro, o passo seguinte é cruzar o valor de entrada com o stock atual e perceber que mensalidade faz sentido.</p>
         <div class="cta-actions" style="gap:8px;">
           <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="euro"></i>Simular crédito</a>
-          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver stock</a>
+          <a class="cc-btn cc-btn--ghost-dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock</a>
         </div>
       </div>
     </aside>
@@ -438,7 +486,7 @@ permalink: simulador_retoma.html
           <a href="{{ site.basePath }}/">Homepage</a>
           <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
           <a href="{{ site.basePath }}/artigos.html">Artigos</a>
-          <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_retoma">Viaturas</a>
+          <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=footer_stock&utm_campaign=simulador_retoma" target="_blank" rel="noopener noreferrer">Viaturas</a>
         </div>
         <div class="cc-footer__col">
           <h4>Contacto</h4>
@@ -638,7 +686,7 @@ permalink: simulador_retoma.html
     });
   </script>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@1.16.0"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

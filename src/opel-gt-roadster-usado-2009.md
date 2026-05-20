@@ -62,7 +62,7 @@ A produção durou apenas três anos — 2007, 2008 e 2009. Estima-se que foram 
 <h3>Este é um dos últimos disponíveis em Portugal</h3>
 <p>Com menos de 7.000 unidades produzidas, encontrar um Opel GT em bom estado e com garantia não é fácil. Este tem 18 meses de garantia e está em Joane, Famalicão.</p>
 <div class="cta-actions">
-<a class="btn btn-primary" href="https://www.circuitocar.pt/viatura/opel-gt-ID166512.html?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_opel_gt" target="_blank" rel="noopener">Ver a ficha completa</a>
+<a class="btn btn-primary" href="https://www.circuitocar.pt/viatura/opel-gt-ID166512.html?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_opel_gt" target="_blank" rel="noopener noreferrer">Ver a ficha completa</a>
 <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20o%20Opel%20GT%20e%20tenho%20interesse.%20Podem%20dar-me%20mais%20informa%C3%A7%C3%B5es%3F&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_opel_gt">WhatsApp Filipe</a>
 </div>
 </div>

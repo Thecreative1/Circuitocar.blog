@@ -152,10 +152,10 @@ A nossa equipa conhece o mercado de usados e as questões que surgem com mais fr
 **Não encontra o carro que procura?** Fale com a CircuitoCar e diga-nos que viatura tem em mente — marca, modelo, motorização, versão. Analisamos o que existe no mercado nacional e, quando fizer sentido, estudamos consigo a possibilidade de importação.
 
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 8px;">
-  <a class="cc-btn cc-btn--yellow" href="{{ site.contact.marco.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=article_cta&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener">
+  <a class="cc-btn cc-btn--yellow" href="{{ site.contact.marco.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=article_cta&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">
     <i data-lucide="message-circle"></i>Falar com a CircuitoCar
   </a>
-  <a class="cc-btn cc-btn--dark" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=article_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener">
+  <a class="cc-btn cc-btn--dark" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=article_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">
     <i data-lucide="car"></i>Pedir ajuda para encontrar carro
   </a>
 </div>
