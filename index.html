@@ -22,6 +22,7 @@
   <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
 
   <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
+  
   <style>/* ===== RESET + BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -178,14 +179,9 @@ a { color: inherit; text-decoration: none; }
 .cc-art-mini__title { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); font-weight: var(--cc-fw-bold); line-height: 1.25; color: var(--cc-ink); margin: 0; transition: color var(--cc-dur-fast) var(--cc-ease-out); }
 .cc-art-mini__excerpt { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); line-height: 1.5; color: var(--cc-fg-muted); margin: 0; }
 
-/* Thumbnail backgrounds for article tiles */
-.t-opelgt  { background-image: url('https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp'); }
-.t-hero    { background-image: url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp'); }
-.t-iran    { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
-.t-finance { background-image: url('https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp'); }
-.t-hybrid  { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
-.t-retoma  { background-image: url('https://omeustand.pt/viaturas/224/7724357454_omeustand_foto.webp'); }
-.t-auto    { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
+/* Article CTA */
+.cc-articles__cta { display: flex; justify-content: center; margin-top: 32px; }
+.cc-articles__cta .cc-btn { padding: 14px 32px; font-size: var(--cc-fs-sm); }
 
 /* ===== TOOLS ===== */
 .cc-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -350,7 +346,7 @@ a { color: inherit; text-decoration: none; }
       <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
       <div class="cc-topbar__links">
         <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=homepage">Ver stock</a>
-        <a href="#contacto">Equipa</a>
+        <a href="/#contacto">Equipa</a>
         <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign=homepage">Contactos</a>
       </div>
     </div>
@@ -363,13 +359,13 @@ a { color: inherit; text-decoration: none; }
       </a>
       <span class="cc-header__brand-tag">Blog</span>
       <nav class="cc-header__nav" aria-label="Navegação principal">
-        <a href="#artigos">Artigos</a>
-        <a href="#ferramentas">Ferramentas</a>
-        <a href="#local-seo">Onde estamos</a>
-        <a href="#sobre">Sobre</a>
+        <a href="/artigos.html">Artigos</a>
+        <a href="/#ferramentas">Ferramentas</a>
+        <a href="/#local-seo">Onde estamos</a>
+        <a href="/#sobre">Sobre</a>
         <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign=homepage">Viaturas</a>
       </nav>
-      <a class="cc-header__cta" href="#contacto">
+      <a class="cc-header__cta" href="/#contacto">
         <i data-lucide="message-square"></i>Falar connosco
       </a>
     </div>
@@ -541,49 +537,69 @@ a { color: inherit; text-decoration: none; }
       <p class="cc-section__sub">Conteúdo útil para quem está a ponderar comprar — escrito sem jargão e sem agenda de venda.</p>
     </div>
     <div class="cc-articles">
+      
       <a href="/opel-gt-roadster-usado-2009.html" class="cc-art-hero">
-        <div class="cc-art-hero__media"><div class="cc-art-hero__img t-opelgt"></div></div>
+        <div class="cc-art-hero__media">
+          <div class="cc-art-hero__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp');"></div>
+        </div>
         <div class="cc-art-hero__body">
           <span class="cc-art-eyebrow">Desportivos</span>
-          <h3 class="cc-art-hero__title">Opel GT: o roadster que ninguém esperava — e que ainda dá arrepios</h3>
-          <p class="cc-art-hero__excerpt">264 cv, tração traseira, caixa manual e menos de 7.000 unidades no mundo. O desportivo usado mais subestimado do mercado.</p>
-          <div class="cc-art-hero__meta"><span>7 min de leitura</span><span>·</span><span>Desportivos</span><span>·</span><span>Em stock agora</span></div>
+          <h3 class="cc-art-hero__title">Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá arrepios</h3>
+          <p class="cc-art-hero__excerpt">264 cv, tração traseira, caixa manual e apenas 7.000 unidades produzidas no mundo. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um.</p>
+          <div class="cc-art-hero__meta">
+            <span>7 min de leitura</span>
+            <span>·</span>
+            <span>Desportivos</span>
+            <span>·</span>
+            <span>18 de maio de 2026</span>
+          </div>
         </div>
       </a>
+      
       <div class="cc-art-list">
+        
         <a href="/guerra-irao-impacto-escolha-carro-usado.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-iran"></div>
+          <div class="cc-art-mini__media" style="background-image:url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp');"></div>
           <div class="cc-art-mini__body">
             <span class="cc-art-eyebrow">Atualidade</span>
-            <h4 class="cc-art-mini__title">Guerra no Irão: como pode influenciar a escolha do carro</h4>
-            <p class="cc-art-mini__excerpt">Combustíveis voláteis, custo mensal e como decidir com clareza.</p>
+            <h4 class="cc-art-mini__title">Guerra no Irão: como a instabilidade pode influenciar a escolha do carro</h4>
+            <p class="cc-art-mini__excerpt">Perceba como a guerra no Irão, os combustíveis mais voláteis e a incerteza energética...</p>
           </div>
         </a>
-        <a href="/onde-comprar-carro-usado-famalicao.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-hero"></div>
+        
+        <a href="/os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html" class="cc-art-mini">
+          <div class="cc-art-mini__media" style="background-image:url('https://omeustand.pt/viaturas/224/7724136150_omeustand_foto.webp');"></div>
           <div class="cc-art-mini__body">
-            <span class="cc-art-eyebrow">Guia Local</span>
-            <h4 class="cc-art-mini__title">Onde comprar carro usado em Famalicão com mais confiança</h4>
-            <p class="cc-art-mini__excerpt">O que perguntar ao stand e como reconhecer uma boa oferta.</p>
+            <span class="cc-art-eyebrow">Guia de Compra</span>
+            <h4 class="cc-art-mini__title">Os pontos que mais pesam na escolha de um carro para família</h4>
+            <p class="cc-art-mini__excerpt">Saiba o que realmente importa ao escolher um carro de família usado: espaço, segurança,...</p>
           </div>
         </a>
+        
         <a href="/carros-automaticos-usados-vantagens-riscos.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-auto"></div>
+          <div class="cc-art-mini__media" style="background-image:url('https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp');"></div>
           <div class="cc-art-mini__body">
             <span class="cc-art-eyebrow">Guia de Compra</span>
             <h4 class="cc-art-mini__title">Carros automáticos usados: vantagens, riscos e para quem fazem sentido</h4>
-            <p class="cc-art-mini__excerpt">Tudo o que precisa de saber antes de comprar uma caixa automática usada.</p>
+            <p class="cc-art-mini__excerpt">Descubra quando faz sentido comprar um carro automático usado, que sinais de alerta deve...</p>
           </div>
         </a>
+        
         <a href="/vale-a-pena-comprar-hibrido-usado-2026.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-hybrid"></div>
+          <div class="cc-art-mini__media" style="background-image:url('https://omeustand.pt/viaturas/224/7723979753_omeustand_foto.webp');"></div>
           <div class="cc-art-mini__body">
             <span class="cc-art-eyebrow">Híbridos</span>
             <h4 class="cc-art-mini__title">Vale a pena comprar um híbrido usado em 2026?</h4>
-            <p class="cc-art-mini__excerpt">Guia com custos reais e fatores de decisão atualizados.</p>
+            <p class="cc-art-mini__excerpt">Perceba quando um híbrido usado compensa, o que deve verificar na bateria e para que...</p>
           </div>
         </a>
+        
       </div>
+    </div>
+    <div class="cc-articles__cta">
+      <a class="cc-btn cc-btn--yellow" href="/artigos.html">
+        <i data-lucide="book-open"></i>Ver todos os artigos
+      </a>
     </div>
   </div>
 </section>
@@ -804,14 +820,14 @@ a { color: inherit; text-decoration: none; }
         </div>
         <div class="cc-footer__col">
           <h4>Explorar</h4>
-          <a href="#artigos">Artigos</a>
-          <a href="#ferramentas">Ferramentas</a>
-          <a href="#stock">Stock em destaque</a>
+          <a href="/artigos.html">Artigos</a>
+          <a href="/#ferramentas">Ferramentas</a>
+          <a href="/#stock">Stock em destaque</a>
           <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=homepage">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">
           <h4>Contacto</h4>
-          <a href="#contacto">Falar com a equipa</a>
+          <a href="/#contacto">Falar com a equipa</a>
           <a href="https://www.circuitocar.pt/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de contactos</a>
           <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
           <a href="/simulador_retoma.html">Simulador de retoma</a>
@@ -835,10 +851,10 @@ a { color: inherit; text-decoration: none; }
 
   <nav class="cc-mobile-dock" aria-label="Navegação mobile">
     <a href="/"><i data-lucide="home"></i><span>Início</span></a>
-    <a href="#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="/artigos.html"><i data-lucide="book-open"></i><span>Blog</span></a>
     <a href="/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
     <a href="/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
-    <a href="#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
+    <a href="/#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
   </nav>
 
   <script src="https://unpkg.com/lucide@latest"></script>
