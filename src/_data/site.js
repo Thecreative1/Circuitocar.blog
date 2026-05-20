@@ -8,7 +8,7 @@ module.exports = {
   contact: {
     marco: {
       name: "Marco Marinho",
-      role: "Apoio Comercial",
+      role: "Contacto Principal",
       phone: "+351922017034",
       phoneDisplay: "922 017 034",
       whatsappBase: "https://wa.me/351922017034"
