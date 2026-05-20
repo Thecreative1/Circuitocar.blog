@@ -1,6 +1,6 @@
 ---
 layout: article-cc.njk
-permalink: artigos/importar-carro-usado-portugal.html
+permalink: importar-carro-usado-portugal.html
 tags: article
 date: 2026-05-20
 
