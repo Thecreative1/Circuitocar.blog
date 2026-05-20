@@ -24,6 +24,7 @@ schemaOrg: |
       "addressCountry": "PT"
     },
     "contactPoint": [
+      { "@type": "ContactPoint", "telephone": "+351922017034", "contactType": "customer support", "name": "Marco Marinho" },
       { "@type": "ContactPoint", "telephone": "+351911899092", "contactType": "sales", "name": "André Silva" },
       { "@type": "ContactPoint", "telephone": "+351964197262", "contactType": "customer support", "name": "Filipe Rodrigues" }
     ]
@@ -616,7 +617,7 @@ inlineStyle: |
           <div class="cc-hours--closed">Domingo · Fechado</div>
         </div>
         <div style="margin-top:18px;">
-          <a class="cc-btn cc-btn--wa" href="{{ site.contact.andre.whatsappBase }}?text=Ol%C3%A1%21%20Vim%20pelo%20blog%20da%20Circuito%20Car%20e%20queria%20marcar%20uma%20visita%20ao%20stand.%20Quando%20%C3%A9%20poss%C3%ADvel%3F&utm_source=blog&utm_medium=local_wa&utm_campaign=homepage"><i data-lucide="message-circle"></i>Marcar visita por WhatsApp</a>
+          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%21%20Vim%20pelo%20blog%20da%20Circuito%20Car%20e%20queria%20marcar%20uma%20visita%20ao%20stand.%20Quando%20%C3%A9%20poss%C3%ADvel%3F&utm_source=blog&utm_medium=local_wa&utm_campaign=homepage"><i data-lucide="message-circle"></i>Marcar visita por WhatsApp</a>
         </div>
       </div>
     </div>
@@ -657,8 +658,9 @@ inlineStyle: |
         </div>
       </div>
       <div class="cc-about__right">
-        <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="handshake"></i></div><div><h4>{{ site.contact.andre.name }} · Comercial</h4><p>Acompanha o processo de compra do início ao fim — escolha da viatura, proposta, financiamento e entrega.</p></div></div>
-        <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="wrench"></i></div><div><h4>{{ site.contact.filipe.name }} · Técnico</h4><p>Conhece cada viatura ao pormenor. Disponível para responder às dúvidas mais técnicas sobre o estado e características.</p></div></div>
+        <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="message-circle"></i></div><div><h4>{{ site.contact.marco.name }} · Apoio Comercial</h4><p>Primeiro ponto de contacto da Circuito Car. Informa sobre viaturas, visitas, financiamento e encaminha para a pessoa certa.</p></div></div>
+        <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="handshake"></i></div><div><h4>{{ site.contact.andre.name }} · Direção Comercial</h4><p>Acompanha o processo de compra do início ao fim — escolha da viatura, proposta, financiamento e entrega.</p></div></div>
+        <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="wrench"></i></div><div><h4>{{ site.contact.filipe.name }} · Direção Técnica</h4><p>Conhece cada viatura ao pormenor. Disponível para responder às dúvidas mais técnicas sobre o estado e características.</p></div></div>
         <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="euro"></i></div><div><h4>Financiamento próprio</h4><p>Crédito automóvel tratado diretamente no stand, com resposta rápida e condições adaptadas a cada situação.</p></div></div>
         <div class="cc-skill"><div class="cc-skill__icon"><i data-lucide="repeat"></i></div><div><h4>Retoma do teu carro</h4><p>Avaliamos o teu carro atual de forma justa e transparente — podes usá-lo como entrada na próxima viatura.</p></div></div>
       </div>
@@ -672,16 +674,24 @@ inlineStyle: |
     <div class="cc-section__head">
       <span class="cc-section__eyebrow">Contacto</span>
       <h2 class="cc-section__title">Fala com a equipa <em>Circuito Car</em></h2>
-      <p class="cc-section__sub">Do artigo ao stand — o próximo passo é simples. Escolha quem melhor pode ajudar.</p>
+      <p class="cc-section__sub">Do artigo ao stand — o próximo passo é simples.</p>
     </div>
     <div class="cc-contact">
       <div class="cc-contact-card">
-        <h3>Equipa Comercial</h3>
-        <p>Escolha o perfil que melhor corresponde à sua necessidade — primeira conversa, dúvida técnica ou interesse numa viatura específica.</p>
+        <h3>Falar com a Circuito Car</h3>
+        <p>Para informações sobre viaturas, disponibilidade, visitas ou financiamento — fala com o Marco. Encaminha para a pessoa certa se precisar.</p>
         <div class="cc-sellers">
+          <div class="cc-seller" style="grid-column: 1 / -1;">
+            <div class="cc-seller__top"><h4>{{ site.contact.marco.name }}</h4><span class="cc-seller__role">{{ site.contact.marco.role }}</span></div>
+            <p>Contacto principal da Circuito Car. Disponível para responder sobre viaturas, marcar visitas, esclarecer dúvidas de financiamento e retoma.</p>
+            <div class="cc-seller__btns">
+              <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar</a>
+              <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20pelo%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=marco_wa&utm_campaign=blog_leads"><i data-lucide="message-circle"></i>WhatsApp Circuito Car</a>
+            </div>
+          </div>
           <div class="cc-seller">
             <div class="cc-seller__top"><h4>{{ site.contact.andre.name }}</h4><span class="cc-seller__role">{{ site.contact.andre.role }}</span></div>
-            <p>Primeiras conversas, escolha de viatura e acompanhamento comercial.</p>
+            <p>Diretor comercial. Acompanha processos de compra, propostas e financiamento.</p>
             <div class="cc-seller__btns">
               <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.andre.phone }}"><i data-lucide="phone"></i>Ligar</a>
               <a class="cc-btn cc-btn--wa" href="{{ site.contact.andre.whatsappBase }}?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=andre_wa&utm_campaign=blog_leads"><i data-lucide="message-circle"></i>WhatsApp</a>
@@ -689,7 +699,7 @@ inlineStyle: |
           </div>
           <div class="cc-seller">
             <div class="cc-seller__top"><h4>{{ site.contact.filipe.name }}</h4><span class="cc-seller__role">{{ site.contact.filipe.role }}</span></div>
-            <p>Detalhes técnicos, características da viatura e dúvidas específicas.</p>
+            <p>Diretor técnico. Responde a dúvidas sobre o estado e características das viaturas.</p>
             <div class="cc-seller__btns">
               <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.filipe.phone }}"><i data-lucide="phone"></i>Ligar</a>
               <a class="cc-btn cc-btn--wa" href="{{ site.contact.filipe.whatsappBase }}?text=Ol%C3%A1%2C%20vi%20o%20blog%20da%20Circuito%20Car%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=filipe_wa&utm_campaign=blog_leads"><i data-lucide="message-circle"></i>WhatsApp</a>

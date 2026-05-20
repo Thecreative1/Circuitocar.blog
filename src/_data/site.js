@@ -6,16 +6,23 @@ module.exports = {
   lang: "pt",
   logo: "https://circuitocar.blog/img/cc.png",
   contact: {
+    marco: {
+      name: "Marco Marinho",
+      role: "Apoio Comercial",
+      phone: "+351922017034",
+      phoneDisplay: "922 017 034",
+      whatsappBase: "https://wa.me/351922017034"
+    },
     andre: {
       name: "André Silva",
-      role: "Comercial",
+      role: "Direção Comercial",
       phone: "+351911899092",
       phoneDisplay: "911 899 092",
       whatsappBase: "https://wa.me/351911899092"
     },
     filipe: {
       name: "Filipe Rodrigues",
-      role: "Técnico",
+      role: "Direção Técnica",
       phone: "+351964197262",
       phoneDisplay: "964 197 262",
       whatsappBase: "https://wa.me/351964197262"

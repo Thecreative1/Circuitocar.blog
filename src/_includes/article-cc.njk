@@ -89,7 +89,7 @@
       </div>
       <div class="cc-post-hero__actions">
         <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener"><i data-lucide="car"></i>Ver viaturas disponíveis</a>
-        <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.andre.whatsappBase }}?text={{ heroWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=hero_whatsapp&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp André</a>
+        <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.marco.whatsappBase }}?text={{ heroWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=hero_whatsapp&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp Circuito Car</a>
       </div>
     </div>
     <div class="cc-post-hero__chevron" aria-hidden="true"></div>
@@ -127,8 +127,20 @@
       </div>
 
       <div class="cc-side-card">
-        <span class="cc-side-card__eyebrow">Equipa</span>
-        <h3>Fala com quem percebe</h3>
+        <span class="cc-side-card__eyebrow">Contacto</span>
+        <h3>Fala com a Circuito Car</h3>
+
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.marco.name }}</strong>
+            <span class="cc-side-seller__role">{{ site.contact.marco.role }}</span>
+          </div>
+          <p>Contacto principal — informa sobre viaturas, visitas, financiamento e encaminha para quem precisas.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=sidebar_marco&utm_campaign={{ utmCampaign }}"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
 
         <div class="cc-side-seller">
           <div class="cc-side-seller__top">
