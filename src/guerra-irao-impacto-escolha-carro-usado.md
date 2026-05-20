@@ -10,7 +10,7 @@ description: "Perceba como a guerra no Irão, os combustíveis mais voláteis e 
 ogTitle: "Guerra no Irão e escolha de carro usado: o que muda?"
 ogDescription: "Um guia prático para decidir com mais calma entre gasolina, diesel, híbrido e elétrico num período de combustíveis voláteis."
 
-category: "Compra e Venda"
+category: "Atualidade"
 readTime: "8 min de leitura"
 utmCampaign: "blog_irao_combustiveis"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"

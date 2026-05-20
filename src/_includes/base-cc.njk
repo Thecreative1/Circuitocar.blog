@@ -22,6 +22,7 @@
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
 
   <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
+  {% if extraCss %}<link rel="stylesheet" href="{{ site.basePath }}/css/{{ extraCss }}" />{% endif %}
   {% if inlineStyle %}<style>{{ inlineStyle | safe }}</style>{% endif %}
   {% if schemaOrg %}{{ schemaOrg | safe }}{% endif %}
 </head>
@@ -32,7 +33,7 @@
       <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
       <div class="cc-topbar__links">
         <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=homepage">Ver stock</a>
-        <a href="#contacto">Equipa</a>
+        <a href="{{ site.basePath }}/#contacto">Equipa</a>
         <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=topbar_contactos&utm_campaign=homepage">Contactos</a>
       </div>
     </div>
@@ -45,13 +46,13 @@
       </a>
       <span class="cc-header__brand-tag">Blog</span>
       <nav class="cc-header__nav" aria-label="Navegação principal">
-        <a href="#artigos">Artigos</a>
-        <a href="#ferramentas">Ferramentas</a>
-        <a href="#local-seo">Onde estamos</a>
-        <a href="#sobre">Sobre</a>
+        <a href="{{ site.basePath }}/artigos.html">Artigos</a>
+        <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
+        <a href="{{ site.basePath }}/#local-seo">Onde estamos</a>
+        <a href="{{ site.basePath }}/#sobre">Sobre</a>
         <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=header_stock&utm_campaign=homepage">Viaturas</a>
       </nav>
-      <a class="cc-header__cta" href="#contacto">
+      <a class="cc-header__cta" href="{{ site.basePath }}/#contacto">
         <i data-lucide="message-square"></i>Falar connosco
       </a>
     </div>
@@ -68,14 +69,14 @@
         </div>
         <div class="cc-footer__col">
           <h4>Explorar</h4>
-          <a href="#artigos">Artigos</a>
-          <a href="#ferramentas">Ferramentas</a>
-          <a href="#stock">Stock em destaque</a>
+          <a href="{{ site.basePath }}/artigos.html">Artigos</a>
+          <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
+          <a href="{{ site.basePath }}/#stock">Stock em destaque</a>
           <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=homepage">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">
           <h4>Contacto</h4>
-          <a href="#contacto">Falar com a equipa</a>
+          <a href="{{ site.basePath }}/#contacto">Falar com a equipa</a>
           <a href="{{ site.mainSite }}/contactos?utm_source=blog&utm_medium=footer_contactos&utm_campaign=homepage">Página de contactos</a>
           <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
           <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
@@ -99,10 +100,10 @@
 
   <nav class="cc-mobile-dock" aria-label="Navegação mobile">
     <a href="{{ site.basePath }}/"><i data-lucide="home"></i><span>Início</span></a>
-    <a href="#artigos"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="{{ site.basePath }}/artigos.html"><i data-lucide="book-open"></i><span>Blog</span></a>
     <a href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
     <a href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i><span>Retoma</span></a>
-    <a href="#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
+    <a href="{{ site.basePath }}/#contacto"><i data-lucide="message-square"></i><span>Contacto</span></a>
   </nav>
 
   <script src="https://unpkg.com/lucide@latest"></script>

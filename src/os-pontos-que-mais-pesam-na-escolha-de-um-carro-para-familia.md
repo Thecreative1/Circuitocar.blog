@@ -10,7 +10,7 @@ description: "Saiba o que realmente importa ao escolher um carro de família usa
 ogTitle: "Os pontos que mais pesam na escolha de um carro para família"
 ogDescription: "Um guia prático para escolher um carro familiar usado com mais clareza, menos impulso e mais critério."
 
-category: "Família e Dia a Dia"
+category: "Guia de Compra"
 readTime: "5 min de leitura"
 utmCampaign: "blog_familia"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"

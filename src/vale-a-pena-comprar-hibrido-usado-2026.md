@@ -10,7 +10,7 @@ description: "Perceba quando um híbrido usado compensa, o que deve verificar na
 ogTitle: "Vale a pena comprar um híbrido usado em 2026?"
 ogDescription: "Um guia claro para perceber custos, utilização real e pontos críticos antes de comprar um híbrido usado."
 
-category: "Híbridos e Elétricos"
+category: "Híbridos"
 readTime: "7 min de leitura"
 utmCampaign: "blog_hibrido"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"

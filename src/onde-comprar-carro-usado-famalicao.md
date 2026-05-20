@@ -10,7 +10,7 @@ description: "Descubra o que deve analisar antes de comprar carro usado em Famal
 ogTitle: "Onde comprar carro usado em Famalicão com mais confiança"
 ogDescription: "Um guia prático para escolher melhor, evitar erros e falar com a equipa certa antes de comprar carro usado."
 
-category: "Guias Locais"
+category: "Guia Local"
 readTime: "8 min de leitura"
 utmCampaign: "blog_leads"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"

@@ -11,6 +11,7 @@ ogTitle: "Opel GT usado: 264 cv, tração traseira, série limitada"
 ogDescription: "A história do roadster mais improvável da Opel, o que o torna especial — e se faz sentido para si."
 
 category: "Desportivos"
+featured: true
 readTime: "7 min de leitura"
 utmCampaign: "blog_opel_gt"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"

@@ -190,14 +190,9 @@ inlineStyle: |
   .cc-art-mini__title { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); font-weight: var(--cc-fw-bold); line-height: 1.25; color: var(--cc-ink); margin: 0; transition: color var(--cc-dur-fast) var(--cc-ease-out); }
   .cc-art-mini__excerpt { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); line-height: 1.5; color: var(--cc-fg-muted); margin: 0; }
 
-  /* Thumbnail backgrounds for article tiles */
-  .t-opelgt  { background-image: url('https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp'); }
-  .t-hero    { background-image: url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp'); }
-  .t-iran    { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
-  .t-finance { background-image: url('https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp'); }
-  .t-hybrid  { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
-  .t-retoma  { background-image: url('https://omeustand.pt/viaturas/224/7724357454_omeustand_foto.webp'); }
-  .t-auto    { background-image: url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp'); }
+  /* Article CTA */
+  .cc-articles__cta { display: flex; justify-content: center; margin-top: 32px; }
+  .cc-articles__cta .cc-btn { padding: 14px 32px; font-size: var(--cc-fs-sm); }
 
   /* ===== TOOLS ===== */
   .cc-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -493,49 +488,42 @@ inlineStyle: |
       <p class="cc-section__sub">Conteúdo útil para quem está a ponderar comprar — escrito sem jargão e sem agenda de venda.</p>
     </div>
     <div class="cc-articles">
-      <a href="{{ site.basePath }}/opel-gt-roadster-usado-2009.html" class="cc-art-hero">
-        <div class="cc-art-hero__media"><div class="cc-art-hero__img t-opelgt"></div></div>
+      {% for featured in collections.featuredArticle %}
+      <a href="{{ site.basePath }}/{{ featured.fileSlug }}.html" class="cc-art-hero">
+        <div class="cc-art-hero__media">
+          <div class="cc-art-hero__img" style="background-image:url('{{ featured.data.heroImage }}');"></div>
+        </div>
         <div class="cc-art-hero__body">
-          <span class="cc-art-eyebrow">Desportivos</span>
-          <h3 class="cc-art-hero__title">Opel GT: o roadster que ninguém esperava — e que ainda dá arrepios</h3>
-          <p class="cc-art-hero__excerpt">264 cv, tração traseira, caixa manual e menos de 7.000 unidades no mundo. O desportivo usado mais subestimado do mercado.</p>
-          <div class="cc-art-hero__meta"><span>7 min de leitura</span><span>·</span><span>Desportivos</span><span>·</span><span>Em stock agora</span></div>
+          <span class="cc-art-eyebrow">{{ featured.data.category }}</span>
+          <h3 class="cc-art-hero__title">{{ featured.data.title }}</h3>
+          <p class="cc-art-hero__excerpt">{{ featured.data.description }}</p>
+          <div class="cc-art-hero__meta">
+            <span>{{ featured.data.readTime }}</span>
+            <span>·</span>
+            <span>{{ featured.data.category }}</span>
+            <span>·</span>
+            <span>{{ featured.date | dateReadable }}</span>
+          </div>
         </div>
       </a>
+      {% endfor %}
       <div class="cc-art-list">
-        <a href="{{ site.basePath }}/guerra-irao-impacto-escolha-carro-usado.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-iran"></div>
+        {% for art in collections.homeArticles %}
+        <a href="{{ site.basePath }}/{{ art.fileSlug }}.html" class="cc-art-mini">
+          <div class="cc-art-mini__media" style="background-image:url('{{ art.data.heroImage }}');"></div>
           <div class="cc-art-mini__body">
-            <span class="cc-art-eyebrow">Atualidade</span>
-            <h4 class="cc-art-mini__title">Guerra no Irão: como pode influenciar a escolha do carro</h4>
-            <p class="cc-art-mini__excerpt">Combustíveis voláteis, custo mensal e como decidir com clareza.</p>
+            <span class="cc-art-eyebrow">{{ art.data.category }}</span>
+            <h4 class="cc-art-mini__title">{{ art.data.title }}</h4>
+            <p class="cc-art-mini__excerpt">{{ art.data.description | truncate(90) }}</p>
           </div>
         </a>
-        <a href="{{ site.basePath }}/onde-comprar-carro-usado-famalicao.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-hero"></div>
-          <div class="cc-art-mini__body">
-            <span class="cc-art-eyebrow">Guia Local</span>
-            <h4 class="cc-art-mini__title">Onde comprar carro usado em Famalicão com mais confiança</h4>
-            <p class="cc-art-mini__excerpt">O que perguntar ao stand e como reconhecer uma boa oferta.</p>
-          </div>
-        </a>
-        <a href="{{ site.basePath }}/carros-automaticos-usados-vantagens-riscos.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-auto"></div>
-          <div class="cc-art-mini__body">
-            <span class="cc-art-eyebrow">Guia de Compra</span>
-            <h4 class="cc-art-mini__title">Carros automáticos usados: vantagens, riscos e para quem fazem sentido</h4>
-            <p class="cc-art-mini__excerpt">Tudo o que precisa de saber antes de comprar uma caixa automática usada.</p>
-          </div>
-        </a>
-        <a href="{{ site.basePath }}/vale-a-pena-comprar-hibrido-usado-2026.html" class="cc-art-mini">
-          <div class="cc-art-mini__media t-hybrid"></div>
-          <div class="cc-art-mini__body">
-            <span class="cc-art-eyebrow">Híbridos</span>
-            <h4 class="cc-art-mini__title">Vale a pena comprar um híbrido usado em 2026?</h4>
-            <p class="cc-art-mini__excerpt">Guia com custos reais e fatores de decisão atualizados.</p>
-          </div>
-        </a>
+        {% endfor %}
       </div>
+    </div>
+    <div class="cc-articles__cta">
+      <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/artigos.html">
+        <i data-lucide="book-open"></i>Ver todos os artigos
+      </a>
     </div>
   </div>
 </section>

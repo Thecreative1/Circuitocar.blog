@@ -1,0 +1,148 @@
+---
+layout: base-cc.njk
+permalink: artigos.html
+extraCss: article-cc.css
+pageTitle: "Todos os Artigos | Circuito Car Blog"
+title: "Todos os Artigos | Circuito Car Blog"
+description: "Guias práticos, análises e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga e Guimarães. Todos os artigos do Circuito Car Blog."
+ogTitle: "Todos os Artigos — Circuito Car Blog"
+ogDescription: "Guias práticos e conselhos honestos sobre compra de carros usados no Vale do Ave."
+inlineStyle: |
+  /* ── ARCHIVE HERO ── */
+  .cc-archive-hero { background: var(--cc-ink); color: var(--cc-paper); padding: 64px 0 52px; position: relative; overflow: hidden; border-bottom: 1px solid var(--cc-asphalt-800); }
+  .cc-archive-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(30,74,138,0.18) 0%, transparent 70%); pointer-events: none; }
+  .cc-archive-hero__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+  .cc-archive-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--cc-yellow); font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin-bottom: 18px; }
+  .cc-archive-hero__eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--cc-yellow); }
+  .cc-archive-hero h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; color: var(--cc-paper); font-size: clamp(36px, 4.2vw, 60px); line-height: 0.98; letter-spacing: var(--cc-tracking-tight); margin: 0 0 16px; }
+  .cc-archive-hero p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); max-width: 600px; margin: 0; }
+
+  /* ── FILTER CHIPS ── */
+  .cc-filter-bar { background: var(--cc-paper-card); border-bottom: 1px solid var(--cc-border); position: sticky; top: 57px; z-index: 40; }
+  .cc-filter-bar__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+  .cc-filter-bar__inner::-webkit-scrollbar { display: none; }
+  .cc-filter-chip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; padding: 10px 16px; color: var(--cc-fg-muted); border-bottom: 2px solid transparent; transition: color var(--cc-dur-fast) var(--cc-ease-out), border-color var(--cc-dur-fast) var(--cc-ease-out); }
+  .cc-filter-chip:hover { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
+  .cc-filter-chip--all { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
+
+  /* ── ARCHIVE BODY ── */
+  .cc-archive-body { max-width: 1280px; margin: 0 auto; padding: 56px 32px 80px; }
+
+  /* ── CATEGORY SECTION ── */
+  .cc-cat-section { margin-bottom: 64px; }
+  .cc-cat-section:last-child { margin-bottom: 0; }
+  .cc-cat-section__head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--cc-border); }
+  .cc-cat-section__label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-2xl); color: var(--cc-ink); line-height: 1; }
+  .cc-cat-section__count { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); letter-spacing: 0.08em; }
+
+  /* ── ARTICLE CARDS GRID ── */
+  .cc-archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .cc-archive-card { display: flex; flex-direction: column; background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); overflow: hidden; transition: transform var(--cc-dur-base) var(--cc-ease-out), box-shadow var(--cc-dur-base) var(--cc-ease-out), border-color var(--cc-dur-base) var(--cc-ease-out); }
+  .cc-archive-card:hover { transform: translateY(-3px); box-shadow: var(--cc-shadow-md); border-color: var(--cc-blue-mid); }
+  .cc-archive-card:hover .cc-archive-card__title { color: var(--cc-yellow-deep); }
+  .cc-archive-card:hover .cc-archive-card__img { transform: scale(1.04); }
+  .cc-archive-card__media { aspect-ratio: 16/9; overflow: hidden; }
+  .cc-archive-card__img { width: 100%; height: 100%; background-size: cover; background-position: center; transition: transform var(--cc-dur-slow) var(--cc-ease-out); }
+  .cc-archive-card__body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .cc-archive-card__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); letter-spacing: 0.14em; text-transform: uppercase; color: var(--cc-fg-muted); }
+  .cc-archive-card__eyebrow::before { content: ''; display: inline-block; width: 16px; height: 2px; background: var(--cc-yellow-deep); }
+  .cc-archive-card__title { font-family: var(--cc-font-body); font-size: var(--cc-fs-lg); font-weight: var(--cc-fw-bold); line-height: 1.25; color: var(--cc-ink); margin: 0; transition: color var(--cc-dur-fast) var(--cc-ease-out); text-wrap: balance; }
+  .cc-archive-card__desc { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0; flex: 1; }
+  .cc-archive-card__meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); margin-top: auto; padding-top: 12px; letter-spacing: 0.04em; }
+
+  /* ── BACK LINK ── */
+  .cc-archive-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin-bottom: 40px; transition: color var(--cc-dur-fast) var(--cc-ease-out); }
+  .cc-archive-back:hover { color: var(--cc-yellow-deep); }
+  .cc-archive-back i { width: 16px; height: 16px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .cc-archive-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .cc-archive-hero { padding: 48px 0 36px; }
+    .cc-archive-body { padding: 36px 20px 60px; }
+    .cc-archive-hero__inner { padding: 0 20px; }
+    .cc-filter-bar__inner { padding: 0 20px; }
+    .cc-archive-grid { grid-template-columns: 1fr; }
+    .cc-cat-section { margin-bottom: 48px; }
+    .cc-mobile-dock { display: flex; }
+  }
+  @media (min-width: 641px) {
+    .cc-mobile-dock { display: none; }
+  }
+---
+
+{% set categories = [
+  { name: "Atualidade",    id: "atualidade" },
+  { name: "Guia de Compra", id: "guia-de-compra" },
+  { name: "Desportivos",   id: "desportivos" },
+  { name: "Guia Local",    id: "guia-local" },
+  { name: "Híbridos",      id: "hibridos" }
+] %}
+
+<!-- ── ARCHIVE HERO ── -->
+<section class="cc-archive-hero">
+  <div class="cc-archive-hero__inner">
+    <span class="cc-archive-hero__eyebrow">Circuito Car Blog</span>
+    <h1>Todos os <em>Artigos</em></h1>
+    <p>Guias práticos e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga e Guimarães — escritos pela equipa do stand.</p>
+  </div>
+</section>
+
+<!-- ── CATEGORY FILTER BAR ── -->
+<div class="cc-filter-bar">
+  <div class="cc-filter-bar__inner">
+    <a class="cc-filter-chip cc-filter-chip--all" href="#todos">
+      <i data-lucide="layout-grid"></i>Todos
+    </a>
+    {% for cat in categories %}
+      {% set catArticles = collections.articles | filterByCategory(cat.name) %}
+      {% if catArticles.length %}
+        <a class="cc-filter-chip" href="#{{ cat.id }}">{{ cat.name }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ── ARCHIVE BODY ── -->
+<div class="cc-archive-body" id="todos">
+
+  <a class="cc-archive-back" href="{{ site.basePath }}/">
+    <i data-lucide="arrow-left"></i>Voltar à homepage
+  </a>
+
+  {% for cat in categories %}
+    {% set catArticles = collections.articles | filterByCategory(cat.name) %}
+    {% if catArticles.length %}
+    <section class="cc-cat-section" id="{{ cat.id }}">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">{{ cat.name }}</h2>
+        <span class="cc-cat-section__count">{{ catArticles.length }} {% if catArticles.length == 1 %}artigo{% else %}artigos{% endif %}</span>
+      </div>
+      <div class="cc-archive-grid">
+        {% for art in catArticles %}
+        <a class="cc-archive-card" href="{{ site.basePath }}/{{ art.fileSlug }}.html">
+          {% if art.data.heroImage %}
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('{{ art.data.heroImage }}');"></div>
+          </div>
+          {% endif %}
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">{{ art.data.category }}</span>
+            <h3 class="cc-archive-card__title">{{ art.data.title }}</h3>
+            <p class="cc-archive-card__desc">{{ art.data.description }}</p>
+            <div class="cc-archive-card__meta">
+              <span>{{ art.data.readTime }}</span>
+              <span>·</span>
+              <span>{{ art.date | dateReadable }}</span>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+
+</div>

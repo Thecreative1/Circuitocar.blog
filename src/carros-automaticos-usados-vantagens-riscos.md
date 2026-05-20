@@ -10,7 +10,7 @@ description: "Descubra quando faz sentido comprar um carro automático usado, qu
 ogTitle: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
 ogDescription: "Um guia prático para perceber os verdadeiros benefícios de um automático usado e o que deve analisar antes de comprar."
 
-category: "Condução e Cidade"
+category: "Guia de Compra"
 readTime: "6 min de leitura"
 utmCampaign: "blog_automaticos"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
