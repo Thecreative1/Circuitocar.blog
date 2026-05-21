@@ -225,7 +225,7 @@ a { color: inherit; text-decoration: none; }
 .article-share__button--copy.is-copied { background: var(--cc-paper-warm); border-color: var(--cc-yellow); color: var(--cc-ink); }
 .article-share__button--copy.is-copied .article-share__text { display: none; }
 .article-share__button--copy.is-copied .article-share__feedback { display: inline; }
-/* Bottom variant: warmer bg, slightly larger targets */
+/* Bottom variant */
 .article-share--bottom { background: var(--cc-paper-warm); }
 .article-share--bottom .article-share__inner { padding-top: 18px; padding-bottom: 18px; }
 .article-share--bottom .article-share__button { min-height: 40px; padding: 8px 15px; }
