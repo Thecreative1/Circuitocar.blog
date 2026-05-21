@@ -107,6 +107,33 @@
   </div>
   
 
+  <!-- ── SHARE (top) ── -->
+  
+  <div class="article-share article-share--top" aria-label="Partilhar artigo">
+  <div class="article-share__inner">
+    <span class="article-share__label">Partilhar artigo</span>
+    <div class="article-share__buttons">
+      <button class="article-share__button article-share__button--native" type="button" data-share-action="native" aria-label="Partilhar via opção nativa do dispositivo">
+        <i data-lucide="share-2"></i><span>Partilhar</span>
+      </button>
+      <a class="article-share__button" data-share="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no WhatsApp">WhatsApp</a>
+      <a class="article-share__button" data-share="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no Facebook">Facebook</a>
+      <a class="article-share__button" data-share="x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no X">X</a>
+      <a class="article-share__button" data-share="linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no LinkedIn">LinkedIn</a>
+      <a class="article-share__button" data-share="telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no Telegram">Telegram</a>
+      <a class="article-share__button" data-share="email" href="#" aria-label="Partilhar por email">
+        <i data-lucide="mail"></i>Email
+      </a>
+      <button class="article-share__button article-share__button--copy" type="button" data-share-action="copy" aria-label="Copiar link do artigo">
+        <i data-lucide="link"></i>
+        <span class="article-share__text">Copiar link</span>
+        <span class="article-share__feedback" aria-live="polite" aria-atomic="true">Link copiado!</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
   <!-- ── ARTICLE + SIDEBAR ── -->
   <div class="cc-post-wrap">
     <article class="cc-prose">
@@ -214,6 +241,33 @@
     </aside>
   </div>
 
+  <!-- ── SHARE (bottom) ── -->
+  
+  <div class="article-share article-share--bottom" aria-label="Partilhar artigo">
+  <div class="article-share__inner">
+    <span class="article-share__label">Partilhar artigo</span>
+    <div class="article-share__buttons">
+      <button class="article-share__button article-share__button--native" type="button" data-share-action="native" aria-label="Partilhar via opção nativa do dispositivo">
+        <i data-lucide="share-2"></i><span>Partilhar</span>
+      </button>
+      <a class="article-share__button" data-share="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no WhatsApp">WhatsApp</a>
+      <a class="article-share__button" data-share="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no Facebook">Facebook</a>
+      <a class="article-share__button" data-share="x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no X">X</a>
+      <a class="article-share__button" data-share="linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no LinkedIn">LinkedIn</a>
+      <a class="article-share__button" data-share="telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Partilhar no Telegram">Telegram</a>
+      <a class="article-share__button" data-share="email" href="#" aria-label="Partilhar por email">
+        <i data-lucide="mail"></i>Email
+      </a>
+      <button class="article-share__button article-share__button--copy" type="button" data-share-action="copy" aria-label="Copiar link do artigo">
+        <i data-lucide="link"></i>
+        <span class="article-share__text">Copiar link</span>
+        <span class="article-share__feedback" aria-live="polite" aria-atomic="true">Link copiado!</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
   <!-- ── RELATED ARTICLES ── -->
   
   <section class="cc-related">
@@ -288,5 +342,72 @@
 
   <script src="https://unpkg.com/lucide@1.16.0"></script>
   <script>lucide.createIcons();</script>
+
+  <script>
+  (function () {
+    var pageUrl  = window.location.origin + window.location.pathname;
+    var pageTitle = document.title;
+    var pageDesc  = (document.querySelector('meta[name="description"]') || {}).content || '';
+    var campaign  = 'article_share';
+
+    function tagged(source) {
+      return pageUrl + '?utm_source=' + source + '&utm_medium=social&utm_campaign=' + campaign;
+    }
+
+    var urls = {
+      whatsapp: 'https://wa.me/?text='    + encodeURIComponent(pageTitle + ' ' + tagged('whatsapp')),
+      facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(tagged('facebook')),
+      x:        'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pageTitle) + '&url=' + encodeURIComponent(tagged('x')),
+      linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(tagged('linkedin')),
+      telegram: 'https://t.me/share/url?url=' + encodeURIComponent(tagged('telegram')) + '&text=' + encodeURIComponent(pageTitle),
+      email:    'mailto:?subject=' + encodeURIComponent(pageTitle) + '&body=' + encodeURIComponent(pageTitle + '\n\n' + tagged('email'))
+    };
+
+    /* Set hrefs on all platform anchors */
+    document.querySelectorAll('[data-share]').forEach(function (el) {
+      var platform = el.dataset.share;
+      if (urls[platform]) el.href = urls[platform];
+    });
+
+    /* Native share */
+    var nativeBtns = document.querySelectorAll('[data-share-action="native"]');
+    if (typeof navigator.share === 'function') {
+      nativeBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          navigator.share({
+            title: pageTitle,
+            text:  pageDesc,
+            url:   tagged('native_share')
+          }).catch(function () {});
+        });
+      });
+    } else {
+      nativeBtns.forEach(function (btn) { btn.style.display = 'none'; });
+    }
+
+    /* Copy link */
+    document.querySelectorAll('[data-share-action="copy"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var copyUrl = tagged('copy');
+        function showFeedback() {
+          btn.classList.add('is-copied');
+          setTimeout(function () { btn.classList.remove('is-copied'); }, 2200);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(copyUrl).then(showFeedback).catch(showFeedback);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = copyUrl;
+          ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          showFeedback();
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
