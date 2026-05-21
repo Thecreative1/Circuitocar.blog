@@ -122,7 +122,7 @@ a { color: inherit; text-decoration: none; }
 .cc-post-hero__actions .btn-secondary:hover { border-color: var(--cc-yellow); color: var(--cc-yellow); background: transparent; }
 
 /* ===== SIDEBAR ===== */
-.cc-sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 92px; }
+.cc-sidebar { display: flex; flex-direction: column; gap: 18px; }
 .cc-side-card { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-top: 3px solid var(--cc-blue); border-radius: var(--cc-radius-lg); padding: 22px 24px; }
 .cc-side-card--warm { background: var(--cc-paper-warm); }
 .cc-side-card__eyebrow { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-yellow-deep); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px; }
