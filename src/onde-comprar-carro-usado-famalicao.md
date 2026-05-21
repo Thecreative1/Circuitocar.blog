@@ -74,7 +74,7 @@ Isso não serve apenas para "dar jeito". Serve para algo mais importante: **dar 
 <p>Em vez de andar a saltar entre dezenas de anúncios sem contexto, pode começar por ver o stock disponível e falar com a equipa sobre aquilo que procura.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_leads">Ver stock</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20comprar%20carro%20usado%20em%20Famalic%C3%A3o%20e%20quero%20falar%20sobre%20uma%20viatura.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_leads">WhatsApp Filipe</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20comprar%20carro%20usado%20em%20Famalic%C3%A3o%20e%20quero%20falar%20sobre%20uma%20viatura.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp Circuito Car</a>
 </div>
 </div>
 

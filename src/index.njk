@@ -112,6 +112,8 @@ inlineStyle: |
   .cc-btn--ghost-dark:hover { border-color: var(--cc-ink); background: var(--cc-paper-warm); color: var(--cc-ink); }
   .cc-btn--ghost-blue { background: transparent; color: var(--cc-blue-light); border: 1px solid rgba(22,53,96,0.35); }
   .cc-btn--ghost-blue:hover { background: var(--cc-blue); color: var(--cc-paper); border-color: var(--cc-blue); }
+  .cc-btn--blue { background: var(--cc-blue-light); color: var(--cc-paper); border: 1px solid var(--cc-blue-mid); box-shadow: 0 0 0 1px rgba(30,74,138,0.4), 0 4px 16px rgba(30,74,138,0.3); }
+  .cc-btn--blue:hover { background: var(--cc-blue-mid); color: var(--cc-paper); box-shadow: 0 0 0 1px rgba(30,74,138,0.6), 0 6px 20px rgba(30,74,138,0.45); }
   .cc-btn--wa { background: #25D366; color: var(--cc-ink); border: 0; box-shadow: 0 0 0 1px rgba(37,211,102,0.4), 0 4px 20px rgba(37,211,102,0.5), 0 0 40px rgba(37,211,102,0.2); }
   .cc-btn--wa i { color: var(--cc-ink); transition: color var(--cc-dur-fast) var(--cc-ease-out); }
   .cc-btn--wa:hover { background: var(--cc-blue); color: var(--cc-yellow); box-shadow: 0 0 0 2px rgba(37,211,102,0.65), 0 0 24px rgba(37,211,102,0.7), 0 0 48px rgba(37,211,102,0.32); }
@@ -598,7 +600,7 @@ inlineStyle: |
           <span class="cc-loc-tag">Santo Tirso · 20 min</span>
         </div>
         <div style="margin-top:18px;">
-          <a class="cc-btn cc-btn--ghost-dark" href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="map"></i>Abrir no Google Maps</a>
+          <a class="cc-btn cc-btn--blue" href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="map"></i>Abrir no Google Maps</a>
         </div>
       </div>
       <div class="cc-local-card">

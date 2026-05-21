@@ -6,6 +6,13 @@
   "lang": "pt",
   "logo": "https://circuitocar.blog/img/cc.png",
   "contact": {
+    "marco": {
+      "name": "Marco Marinho",
+      "role": "Apoio Comercial",
+      "phone": "+351922017034",
+      "phoneDisplay": "922 017 034",
+      "whatsappBase": "https://wa.me/351922017034"
+    },
     "andre": {
       "name": "André Silva",
       "role": "Comercial",
