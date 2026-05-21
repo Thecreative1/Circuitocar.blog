@@ -102,7 +102,7 @@ Se está a procurar carro usado em Famalicão ou arredores, o mais inteligente �
 <div class="cta-actions">
 <a class="btn btn-primary btn-phone" href="tel:+351911899092">Ligar André</a>
 <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20comprar%20carro%20usado%20em%20Famalic%C3%A3o%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=bottom_whatsapp_andre&utm_campaign=blog_leads">WhatsApp André</a>
-<a class="btn btn-primary btn-phone" href="tel:+351964197262">Ligar Filipe</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20comprar%20carro%20usado%20em%20Famalic%C3%A3o%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=bottom_whatsapp_filipe&utm_campaign=blog_leads">WhatsApp Filipe</a>
+<a class="btn btn-primary btn-phone" href="tel:+351922017034">Ligar Marco</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20comprar%20carro%20usado%20em%20Famalic%C3%A3o%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=blog&utm_medium=bottom_whatsapp_marco&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp Marco</a>
 </div>
 </div>

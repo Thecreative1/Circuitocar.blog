@@ -75,7 +75,7 @@ Os erros mais frequentes são decidir só pela estética, subestimar a bagageira
 <p>Em vez de ver dezenas de anúncios sem contexto, pode começar por perceber que tipo de viatura encaixa melhor no uso da sua família.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_familia">Ver stock</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20quero%20ajuda%20para%20escolher%20um%20carro%20para%20fam%C3%ADlia.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_familia">WhatsApp Filipe</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20quero%20ajuda%20para%20escolher%20um%20carro%20para%20fam%C3%ADlia.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_familia" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp CircuitoCar</a>
 </div>
 </div>
 

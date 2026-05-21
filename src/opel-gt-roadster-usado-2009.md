@@ -63,7 +63,7 @@ A produção durou apenas três anos — 2007, 2008 e 2009. Estima-se que foram 
 <p>Com menos de 7.000 unidades produzidas, encontrar um Opel GT em bom estado e com garantia não é fácil. Este tem 18 meses de garantia e está em Joane, Famalicão.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viatura/opel-gt-ID166512.html?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_opel_gt" target="_blank" rel="noopener noreferrer">Ver a ficha completa</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20o%20Opel%20GT%20e%20tenho%20interesse.%20Podem%20dar-me%20mais%20informa%C3%A7%C3%B5es%3F&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_opel_gt">WhatsApp Filipe</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20o%20Opel%20GT%20e%20tenho%20interesse.%20Podem%20dar-me%20mais%20informa%C3%A7%C3%B5es%3F&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_opel_gt" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp CircuitoCar</a>
 </div>
 </div>
 
@@ -116,8 +116,8 @@ A honestidade é importante: este não é um carro para amadores que querem pare
 <div class="cta-actions">
 <a class="btn btn-primary btn-phone" href="tel:+351911899092">Ligar André</a>
 <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20o%20Opel%20GT%20e%20quero%20perceber%20se%20faz%20sentido%20para%20mim.&utm_source=blog&utm_medium=bottom_whatsapp_andre&utm_campaign=blog_opel_gt">WhatsApp André</a>
-<a class="btn btn-primary btn-phone" href="tel:+351964197262">Ligar Filipe</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20o%20Opel%20GT%20e%20tenho%20d%C3%BAvidas%20t%C3%A9cnicas.&utm_source=blog&utm_medium=bottom_whatsapp_filipe&utm_campaign=blog_opel_gt">WhatsApp Filipe</a>
+<a class="btn btn-primary btn-phone" href="tel:+351922017034">Ligar Marco</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20vi%20o%20artigo%20sobre%20o%20Opel%20GT%20e%20tenho%20d%C3%BAvidas%20t%C3%A9cnicas.&utm_source=blog&utm_medium=bottom_whatsapp_marco&utm_campaign=blog_opel_gt" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp Marco</a>
 </div>
 </div>
 

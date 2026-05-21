@@ -104,7 +104,7 @@ Ainda assim, o híbrido não é magia. É preciso confirmar o estado da viatura,
 <p>Explique-nos a sua rotina: quilómetros por semana, tipo de percurso, família, orçamento e se pretende financiamento. A escolha fica muito mais clara.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_irao_combustiveis">Ver stock</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Olá%2C%20vi%20o%20artigo%20sobre%20combustíveis%20e%20quero%20ajuda%20para%20escolher%20entre%20gasolina%2C%20diesel%20ou%20híbrido.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_irao_combustiveis">WhatsApp Filipe</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Olá%2C%20vi%20o%20artigo%20sobre%20combustíveis%20e%20quero%20ajuda%20para%20escolher%20entre%20gasolina%2C%20diesel%20ou%20híbrido.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_irao_combustiveis" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp CircuitoCar</a>
 </div>
 </div>
 
@@ -147,7 +147,7 @@ O essencial é não comprar por medo. Comprar bem e perceber a sua rotina, fazer
 <div class="cta-actions">
 <a class="btn btn-primary btn-phone" href="tel:+351911899092">Ligar André</a>
 <a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351911899092?text=Olá%2C%20quero%20ajuda%20para%20escolher%20carro%20tendo%20em%20conta%20combustíveis%20e%20orçamento.&utm_source=blog&utm_medium=bottom_whatsapp_andre&utm_campaign=blog_irao_combustiveis">WhatsApp André</a>
-<a class="btn btn-primary btn-phone" href="tel:+351964197262">Ligar Filipe</a>
-<a class="btn btn-secondary btn-whatsapp" href="https://wa.me/351964197262?text=Olá%2C%20quero%20comparar%20gasolina%2C%20diesel%2C%20híbrido%20e%20elétrico%20para%20o%20meu%20uso.&utm_source=blog&utm_medium=bottom_whatsapp_filipe&utm_campaign=blog_irao_combustiveis">WhatsApp Filipe</a>
+<a class="btn btn-primary btn-phone" href="tel:+351922017034">Ligar Marco</a>
+<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Olá%2C%20quero%20comparar%20gasolina%2C%20diesel%2C%20híbrido%20e%20elétrico%20para%20o%20meu%20uso.&utm_source=blog&utm_medium=bottom_whatsapp_marco&utm_campaign=blog_irao_combustiveis" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp Marco</a>
 </div>
 </div>
