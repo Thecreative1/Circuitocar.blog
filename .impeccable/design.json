@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-21T00:00:00Z",
+  "title": "Design System: Circuito Car Blog",
+  "extensions": {
+    "colorMeta": {
+      "logo-yellow":       { "role": "primary",   "displayName": "Logo Yellow",        "canonical": "oklch(97.5% 0.294 111)", "tonalRamp": ["oklch(40% 0.15 105)","oklch(52% 0.20 107)","oklch(64% 0.25 108)","oklch(74% 0.27 109)","oklch(84% 0.28 110)","oklch(92% 0.29 111)","oklch(97.5% 0.294 111)","oklch(99% 0.05 108)"] },
+      "logo-yellow-hot":   { "role": "primary",   "displayName": "Logo Yellow Hot",    "canonical": "oklch(94% 0.26 103)",    "tonalRamp": ["oklch(38% 0.14 103)","oklch(50% 0.18 103)","oklch(62% 0.22 103)","oklch(72% 0.25 103)","oklch(82% 0.26 103)","oklch(90% 0.26 103)","oklch(94% 0.26 103)","oklch(98% 0.06 103)"] },
+      "logo-yellow-deep":  { "role": "primary",   "displayName": "Logo Yellow Deep",   "canonical": "oklch(85% 0.22 105)",    "tonalRamp": ["oklch(35% 0.13 104)","oklch(47% 0.17 104)","oklch(58% 0.20 105)","oklch(68% 0.21 105)","oklch(78% 0.22 105)","oklch(85% 0.22 105)","oklch(92% 0.18 106)","oklch(97% 0.07 107)"] },
+      "workshop-dark":     { "role": "neutral",   "displayName": "Workshop Dark",      "canonical": "oklch(5% 0.003 265)",    "tonalRamp": ["oklch(5% 0.003 265)","oklch(10% 0.004 265)","oklch(16% 0.005 264)","oklch(22% 0.006 263)","oklch(32% 0.008 263)","oklch(45% 0.010 263)","oklch(60% 0.012 262)","oklch(78% 0.008 262)"] },
+      "asphalt-900":       { "role": "neutral",   "displayName": "Asphalt 900",        "canonical": "oklch(10% 0.004 265)",   "tonalRamp": ["oklch(5% 0.003 265)","oklch(10% 0.004 265)","oklch(16% 0.005 264)","oklch(24% 0.006 263)","oklch(36% 0.008 263)","oklch(50% 0.010 263)","oklch(65% 0.010 262)","oklch(80% 0.007 262)"] },
+      "paper":             { "role": "neutral",   "displayName": "Paper",              "canonical": "oklch(98% 0.005 100)",   "tonalRamp": ["oklch(40% 0.010 95)","oklch(54% 0.010 97)","oklch(68% 0.010 98)","oklch(80% 0.008 99)","oklch(88% 0.007 99)","oklch(93% 0.006 100)","oklch(96% 0.005 100)","oklch(98% 0.005 100)"] },
+      "paper-warm":        { "role": "neutral",   "displayName": "Paper Warm",         "canonical": "oklch(96% 0.010 95)",    "tonalRamp": ["oklch(38% 0.012 90)","oklch(52% 0.012 92)","oklch(66% 0.012 93)","oklch(78% 0.011 94)","oklch(86% 0.011 95)","oklch(91% 0.010 95)","oklch(94% 0.010 95)","oklch(96% 0.010 95)"] },
+      "circuit-navy":      { "role": "secondary", "displayName": "Circuit Navy",       "canonical": "oklch(14% 0.060 258)",   "tonalRamp": ["oklch(8% 0.040 258)","oklch(14% 0.060 258)","oklch(22% 0.080 262)","oklch(33% 0.110 263)","oklch(45% 0.120 262)","oklch(60% 0.100 260)","oklch(75% 0.070 258)","oklch(88% 0.030 256)"] },
+      "circuit-navy-light":{ "role": "secondary", "displayName": "Circuit Navy Light", "canonical": "oklch(33% 0.110 263)",   "tonalRamp": ["oklch(12% 0.050 258)","oklch(20% 0.075 260)","oklch(28% 0.095 262)","oklch(33% 0.110 263)","oklch(44% 0.115 262)","oklch(58% 0.100 261)","oklch(72% 0.075 259)","oklch(86% 0.038 257)"] },
+      "signal-red":        { "role": "tertiary",  "displayName": "Signal Red",         "canonical": "oklch(48% 0.200 25)",    "tonalRamp": ["oklch(22% 0.12 22)","oklch(30% 0.15 23)","oklch(38% 0.17 24)","oklch(48% 0.20 25)","oklch(58% 0.20 26)","oklch(70% 0.18 27)","oklch(82% 0.14 28)","oklch(93% 0.06 30)"] },
+      "whatsapp-green":    { "role": "tertiary",  "displayName": "WhatsApp Green",     "canonical": "oklch(74% 0.170 150)",   "tonalRamp": ["oklch(28% 0.10 148)","oklch(38% 0.12 149)","oklch(50% 0.14 150)","oklch(62% 0.16 150)","oklch(74% 0.17 150)","oklch(83% 0.14 151)","oklch(91% 0.08 152)","oklch(96% 0.04 153)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1s and article page titles. Always Saira Condensed italic black uppercase." },
+      "headline": { "displayName": "Headline", "purpose": "Article section H2s, card titles. Same display stack as Display but smaller." },
+      "title":    { "displayName": "Title",    "purpose": "Sidebar and feature card headings. Manrope bold, no italic, no uppercase." },
+      "body":     { "displayName": "Body",     "purpose": "Article prose. Manrope regular. Max 65-75ch line length." },
+      "label":    { "displayName": "Label",    "purpose": "Eyebrows, metadata, CTA text, category tags. Saira Condensed italic bold, wide tracking, uppercase." }
+    },
+    "shadows": [
+      { "name": "surface",      "value": "0 1px 0 rgba(10,11,13,0.04), 0 1px 2px rgba(10,11,13,0.06)",                                                   "purpose": "Cards at rest on Paper backgrounds. Barely-there lift." },
+      { "name": "raised",       "value": "0 6px 16px -6px rgba(10,11,13,0.12), 0 2px 4px rgba(10,11,13,0.06)",                                            "purpose": "Cards on hover, modals. Structural lift." },
+      { "name": "elevated",     "value": "0 24px 48px -12px rgba(10,11,13,0.22)",                                                                          "purpose": "Overlays. Use sparingly." },
+      { "name": "focus-yellow", "value": "0 0 0 4px rgba(255,255,0,0.18)",                                                                                 "purpose": "Keyboard focus ring. Yellow at 18% opacity." },
+      { "name": "blue-glow",    "value": "0 0 0 1px rgba(30,74,138,0.4), 0 0 16px rgba(30,74,138,0.55), 0 0 32px rgba(30,74,138,0.2)",                    "purpose": "Dark button border-glow signature. Circuit Navy luminous treatment." },
+      { "name": "blue-glow-hover","value": "0 0 0 1px rgba(30,74,138,0.6), 0 0 24px rgba(30,74,138,0.75), 0 0 48px rgba(30,74,138,0.35)",                 "purpose": "Dark button hover state. Intensified blue glow." },
+      { "name": "yellow-cta",   "value": "0 0 0 2px rgba(13,31,60,0.18), 0 0 14px rgba(13,31,60,0.14)",                                                   "purpose": "Primary yellow button shadow. Ink-tinted shadow grounds the bright fill." },
+      { "name": "wa-glow",      "value": "0 0 0 1px rgba(37,211,102,0.4), 0 4px 20px rgba(37,211,102,0.5), 0 0 40px rgba(37,211,102,0.2)",                "purpose": "WhatsApp button glow. Green-tinted outer glow." }
+    ],
+    "motion": [
+      { "name": "ease-out",     "value": "cubic-bezier(0.22, 1, 0.36, 1)",    "purpose": "Default easing. All interactive transitions." },
+      { "name": "ease-in-out",  "value": "cubic-bezier(0.65, 0, 0.35, 1)",    "purpose": "Symmetric transitions. Page-level changes." },
+      { "name": "dur-fast",     "value": "140ms",                              "purpose": "Micro-feedback: hover colors, focus rings." },
+      { "name": "dur-base",     "value": "220ms",                              "purpose": "Layout-level transitions: card lifts, cover image hover." },
+      { "name": "dur-slow",     "value": "420ms",                              "purpose": "Entrance animations, scroll-driven reveals." }
+    ],
+    "breakpoints": [
+      { "name": "mobile",   "value": "520px",  "notes": "Share bar stacks, hero actions go full-width." },
+      { "name": "tablet",   "value": "820px",  "notes": "Nav collapses to mobile dock, post wrap goes single-column." },
+      { "name": "desktop",  "value": "1000px", "notes": "Two-column article layout activates." },
+      { "name": "wide",     "value": "1280px", "notes": "Max content width container." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary action. Logo Yellow, Workshop Dark text. One per section.",
+      "html": "<button class=\"ds-btn-primary\"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12h14M12 5l7 7-7 7'/></svg>Ver viaturas</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; min-height: 46px; background: #FFFF00; color: #0A0B0D; border: 0; border-radius: 4px; cursor: pointer; font-family: 'Saira Condensed', 'Oswald', sans-serif; font-style: italic; font-weight: 900; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: 0 0 0 2px rgba(13,31,60,0.18), 0 0 14px rgba(13,31,60,0.14); transition: background 140ms cubic-bezier(0.22,1,0.36,1), color 140ms cubic-bezier(0.22,1,0.36,1), box-shadow 140ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-primary:hover { background: #FFE600; color: #1E4A8A; box-shadow: 0 6px 16px -6px rgba(255,255,0,0.4), 0 0 0 2px rgba(30,74,138,0.55), 0 0 20px rgba(30,74,138,0.7); } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary svg { width: 16px; height: 16px; flex-shrink: 0; }"
+    },
+    {
+      "name": "Dark Trust Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Trust-signal action. Workshop Dark with Circuit Navy blue glow. Used when yellow is already spoken for.",
+      "html": "<button class=\"ds-btn-dark\"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'/></svg>Ligar</button>",
+      "css": ".ds-btn-dark { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; min-height: 46px; background: #0A0B0D; color: #FAFAF7; border: 1px solid #1E4A8A; border-radius: 4px; cursor: pointer; font-family: 'Saira Condensed', 'Oswald', sans-serif; font-style: italic; font-weight: 900; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: 0 0 0 1px rgba(30,74,138,0.4), 0 0 16px rgba(30,74,138,0.55), 0 0 32px rgba(30,74,138,0.2); transition: background 140ms cubic-bezier(0.22,1,0.36,1), box-shadow 140ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-dark:hover { background: #1C1E24; box-shadow: 0 0 0 1px rgba(30,74,138,0.6), 0 0 24px rgba(30,74,138,0.75), 0 0 48px rgba(30,74,138,0.35); } .ds-btn-dark:active { transform: scale(0.98); } .ds-btn-dark svg { width: 16px; height: 16px; flex-shrink: 0; }"
+    },
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-wa",
+      "description": "WhatsApp CTA. Green fill, green glow. Hover inverts to Circuit Navy + Logo Yellow — the brand behind the green.",
+      "html": "<a class=\"ds-btn-wa\" href=\"#\"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z'/></svg>WhatsApp CircuitoCar</a>",
+      "css": ".ds-btn-wa { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; min-height: 46px; background: #25D366; color: #0A0B0D; border: 0; border-radius: 4px; cursor: pointer; text-decoration: none; font-family: 'Saira Condensed', 'Oswald', sans-serif; font-style: italic; font-weight: 900; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: 0 0 0 1px rgba(37,211,102,0.4), 0 4px 20px rgba(37,211,102,0.5); transition: background 140ms cubic-bezier(0.22,1,0.36,1), color 140ms cubic-bezier(0.22,1,0.36,1), box-shadow 140ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-wa:hover { background: #0D1F3C; color: #FFFF00; box-shadow: 0 0 0 2px rgba(37,211,102,0.65), 0 0 24px rgba(37,211,102,0.7), 0 0 48px rgba(37,211,102,0.32); } .ds-btn-wa svg { width: 16px; height: 16px; flex-shrink: 0; } .ds-btn-wa:hover svg { stroke: #25D366; }"
+    },
+    {
+      "name": "Ghost Light Button",
+      "kind": "button",
+      "refersTo": "button-ghost-light",
+      "description": "Secondary hero action on dark surfaces. Transparent, paper-colored. Sharpens to Logo Yellow on hover.",
+      "html": "<button class=\"ds-btn-ghost-light\">Saber mais</button>",
+      "css": ".ds-btn-ghost-light { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; min-height: 46px; background: transparent; color: #FAFAF7; border: 1px solid #3E424C; border-radius: 4px; cursor: pointer; font-family: 'Saira Condensed', 'Oswald', sans-serif; font-style: italic; font-weight: 900; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 140ms cubic-bezier(0.22,1,0.36,1), color 140ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-ghost-light:hover { border-color: #FFFF00; color: #FFFF00; } .ds-btn-ghost-light:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Share Pill Button",
+      "kind": "button",
+      "refersTo": "share-pill",
+      "description": "Lightweight secondary action. Pill shape signals ephemeral, not primary. Used only in the article share bar.",
+      "html": "<button class=\"ds-share-pill\"><svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/><path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/></svg>Copiar link</button>",
+      "css": ".ds-share-pill { display: inline-flex; align-items: center; gap: 5px; padding: 6px 13px; min-height: 34px; background: #FFFFFF; color: #757882; border: 1px solid #E8E6DE; border-radius: 999px; cursor: pointer; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 600; white-space: nowrap; transition: background 140ms cubic-bezier(0.22,1,0.36,1), color 140ms cubic-bezier(0.22,1,0.36,1), border-color 140ms cubic-bezier(0.22,1,0.36,1); } .ds-share-pill:hover { background: #0A0B0D; color: #FAFAF7; border-color: #0A0B0D; } .ds-share-pill svg { flex-shrink: 0; }"
+    },
+    {
+      "name": "Side Card",
+      "kind": "card",
+      "refersTo": "side-card",
+      "description": "Sidebar trust widget. Paper Card bg, 3px Circuit Navy top border identifies it as a Circuito Car recommendation zone.",
+      "html": "<div class=\"ds-side-card\"><span class=\"ds-side-card__eyebrow\">Precisa de ajuda?</span><h3 class=\"ds-side-card__title\">Fale com a nossa equipa</h3><p class=\"ds-side-card__body\">Disponível para informações, visitas e financiamento.</p></div>",
+      "css": ".ds-side-card { background: #FFFFFF; border: 1px solid #E8E6DE; border-top: 3px solid #163560; border-radius: 14px; padding: 22px 24px; } .ds-side-card__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'Saira Condensed', sans-serif; font-style: italic; font-weight: 700; font-size: 12px; color: #E5CC00; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px; } .ds-side-card__eyebrow::before { content: ''; display: inline-block; width: 18px; height: 2px; background: #FFFF00; } .ds-side-card__title { font-family: 'Saira Condensed', sans-serif; font-style: italic; font-weight: 900; font-size: 20px; text-transform: uppercase; color: #0A0B0D; margin: 0 0 8px; line-height: 1.1; } .ds-side-card__body { font-family: 'Manrope', sans-serif; font-size: 14px; line-height: 1.65; color: #4A4D55; margin: 0; }"
+    },
+    {
+      "name": "Price Tag",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Numeric display for car prices and simulator results. letter-spacing: 0 and subpixel-antialiased are non-negotiable at this size.",
+      "html": "<span class=\"ds-price\">16 200,00 €</span>",
+      "css": ".ds-price { font-family: 'Saira Condensed', 'Oswald', sans-serif; font-style: italic; font-weight: 900; font-size: 32px; color: #0A0B0D; letter-spacing: 0; line-height: 1; -webkit-font-smoothing: subpixel-antialiased; font-variant-numeric: tabular-nums; display: block; }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "refersTo": "share-pill",
+      "description": "Section and article category label. Always preceded by a short Logo Yellow rule. Never used as decorative text.",
+      "html": "<span class=\"ds-eyebrow\">Compra de Carros Usados</span>",
+      "css": ".ds-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Saira Condensed', sans-serif; font-style: italic; font-weight: 700; font-size: 12px; color: #E5CC00; letter-spacing: 0.16em; text-transform: uppercase; } .ds-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: #FFFF00; flex-shrink: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Corner Garage",
+    "overview": "The corner garage has been on that street for twenty years. It earned trust one honest repair at a time. It does not need to look expensive. It has the manual, the tools, and the knowledge — and when it tells you what is wrong with your car, you believe it.\n\nThat is the model for circuitocar.blog. Content carries the weight. The design clears the path: dark surfaces anchor authority, the Logo Yellow cuts through exactly where it needs to, and the warm paper tones of article pages feel like something worth reading rather than scanning.\n\nThe system operates in two modes. Dark — header, hero bands, stat bars — is where the brand asserts itself. Light — article prose, simulators, card grids — is where the content speaks, on warm paper tones that recall the printed guide rather than the digital feed.",
+    "keyCharacteristics": [
+      "Dual-surface: dark brand shell, warm paper content interior",
+      "Condensed italic display type as the primary brand signal",
+      "Logo Yellow used sparingly — header CTA, price tags, active states — never decoratively",
+      "Circuit Navy as the structural accent: card top borders, button glows, trust signals",
+      "Contact CTAs treated as primary UI, not afterthoughts"
+    ],
+    "rules": [
+      { "name": "The Logo Yellow Rule",       "body": "Logo Yellow appears in exactly one role per surface zone. Its rarity is its power. Diluting it dilutes the brand.", "section": "colors" },
+      { "name": "The Dark-First Rule",        "body": "The header, hero, topbar, and any full-bleed band section default to the dark surface. Light surfaces belong to the content interior. Never invert for novelty.", "section": "colors" },
+      { "name": "The Italic-Uppercase Rule",  "body": "All Saira Condensed display text is italic AND uppercase. Never one without the other.", "section": "typography" },
+      { "name": "The Tracking Rule for Numbers","body": "Never apply --cc-tracking-tight to numeric display text 32px or larger. Use letter-spacing: 0. The fractional value causes visible blurriness on DPR-1 screens.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule",   "body": "Surfaces are flat at rest. Shadows appear only as a response to state (hover, focus) or to establish a hard layer hierarchy.", "section": "elevation" },
+      { "name": "The Tonal Depth Rule",       "body": "On dark surfaces, depth is expressed through Asphalt tonal steps, not shadows. Asphalt 900 on Workshop Dark. Asphalt 800 is hover. Shadow on dark is only the Blue Glow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Logo Yellow exclusively on primary CTAs, price tags, active nav states, and the pulsing topbar indicator.",
+      "Do apply letter-spacing: 0 and -webkit-font-smoothing: subpixel-antialiased to all numeric display text 32px and above.",
+      "Do treat WhatsApp and phone buttons as primary UI elements in the content flow at the moment of conviction.",
+      "Do use cubic-bezier(0.22, 1, 0.36, 1) for all interactive transitions at 140ms micro / 220ms layout.",
+      "Do name towns, streets, and people in copy. Joane and Marco are design decisions.",
+      "Do use Circuit Navy 3px top border to signal a trust element on Side Cards.",
+      "Do cap article body text at 65-75ch and apply text-wrap: pretty."
+    ],
+    "donts": [
+      "Don't make the site look like a generic car classifieds site (OLX, StandVirtual): thumbnail grids, no personality, purely transactional.",
+      "Don't make the site feel like a corporate franchise dealer portal: cold, over-polished, machine-scaled.",
+      "Don't produce clickbait auto blog aesthetics: stock photography, SEO-stuffed headings, no genuine expertise.",
+      "Don't use over-designed agency patterns: heavy scroll animations, gradient hero overlays, glassmorphism as decoration.",
+      "Don't use gradient text (background-clip: text with gradient background). Prohibited absolutely.",
+      "Don't use side-stripe borders greater than 1px on cards or list items as decorative accents.",
+      "Don't use Logo Yellow decoratively. If it appears more than once per screen zone, one use is wrong.",
+      "Don't apply --cc-tracking-tight to numeric text 32px or larger.",
+      "Don't use pill-shaped buttons outside the article share bar.",
+      "Don't separate the WhatsApp button from its phone counterpart in bottom CTAs. The pair is a single decision unit.",
+      "Don't put generic motivational copy in CTAs. Write the actual action."
+    ]
+  }
+}
