@@ -107,6 +107,10 @@
   </div>
   {% endif %}
 
+  <!-- ── SHARE (top) ── -->
+  {% set shareModifier = "top" %}
+  {% include "article-share.njk" %}
+
   <!-- ── ARTICLE + SIDEBAR ── -->
   <div class="cc-post-wrap">
     <article class="cc-prose">
@@ -182,6 +186,10 @@
     </aside>
   </div>
 
+  <!-- ── SHARE (bottom) ── -->
+  {% set shareModifier = "bottom" %}
+  {% include "article-share.njk" %}
+
   <!-- ── RELATED ARTICLES ── -->
   {% if relatedArticles and relatedArticles.length %}
   <section class="cc-related">
@@ -246,5 +254,72 @@
 
   <script src="https://unpkg.com/lucide@1.16.0"></script>
   <script>lucide.createIcons();</script>
+
+  <script>
+  (function () {
+    var pageUrl  = window.location.origin + window.location.pathname;
+    var pageTitle = document.title;
+    var pageDesc  = (document.querySelector('meta[name="description"]') || {}).content || '';
+    var campaign  = 'article_share';
+
+    function tagged(source) {
+      return pageUrl + '?utm_source=' + source + '&utm_medium=social&utm_campaign=' + campaign;
+    }
+
+    var urls = {
+      whatsapp: 'https://wa.me/?text='    + encodeURIComponent(pageTitle + ' ' + tagged('whatsapp')),
+      facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(tagged('facebook')),
+      x:        'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pageTitle) + '&url=' + encodeURIComponent(tagged('x')),
+      linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(tagged('linkedin')),
+      telegram: 'https://t.me/share/url?url=' + encodeURIComponent(tagged('telegram')) + '&text=' + encodeURIComponent(pageTitle),
+      email:    'mailto:?subject=' + encodeURIComponent(pageTitle) + '&body=' + encodeURIComponent(pageTitle + '\n\n' + tagged('email'))
+    };
+
+    /* Set hrefs on all platform anchors */
+    document.querySelectorAll('[data-share]').forEach(function (el) {
+      var platform = el.dataset.share;
+      if (urls[platform]) el.href = urls[platform];
+    });
+
+    /* Native share */
+    var nativeBtns = document.querySelectorAll('[data-share-action="native"]');
+    if (typeof navigator.share === 'function') {
+      nativeBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          navigator.share({
+            title: pageTitle,
+            text:  pageDesc,
+            url:   tagged('native_share')
+          }).catch(function () {});
+        });
+      });
+    } else {
+      nativeBtns.forEach(function (btn) { btn.style.display = 'none'; });
+    }
+
+    /* Copy link */
+    document.querySelectorAll('[data-share-action="copy"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var copyUrl = tagged('copy');
+        function showFeedback() {
+          btn.classList.add('is-copied');
+          setTimeout(function () { btn.classList.remove('is-copied'); }, 2200);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(copyUrl).then(showFeedback).catch(showFeedback);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = copyUrl;
+          ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          showFeedback();
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
