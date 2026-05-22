@@ -40,6 +40,15 @@ collections:
         date_format: "DD/MM/YYYY"
         time_format: false
 
+      - label: "Data de última atualização"
+        name: lastmod
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        required: false
+        hint: "Preenche apenas quando atualizas o conteúdo do artigo. Usado pelo Google para sinais de frescura."
+
       - label: "Categoria"
         name: category
         widget: select
