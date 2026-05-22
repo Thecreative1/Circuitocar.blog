@@ -34,7 +34,9 @@
 </head>
 <body>
 
-  <header class="cc-topbar">
+  <a class="cc-skip-link" href="#cc-main">Saltar para o conteúdo</a>
+
+  <div class="cc-topbar">
     <div class="cc-topbar__inner">
       <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
       <div class="cc-topbar__links">
@@ -43,7 +45,7 @@
         <a href="{{ site.basePath }}/#contacto">Contactos</a>
       </div>
     </div>
-  </header>
+  </div>
 
   <header class="cc-header">
     <div class="cc-header__inner">
@@ -64,7 +66,9 @@
     </div>
   </header>
 
-  {{ content | safe }}
+  <main id="cc-main">
+    {{ content | safe }}
+  </main>
 
   <footer class="cc-footer">
     <div class="cc-footer__inner">
@@ -112,6 +116,6 @@
   </nav>
 
   <script src="{{ site.basePath }}/assets/lucide.min.js"></script>
-  <script>lucide.createIcons();</script>
+  <script>lucide.createIcons({ attrs: { 'aria-hidden': 'true', focusable: 'false' } });</script>
 </body>
 </html>
