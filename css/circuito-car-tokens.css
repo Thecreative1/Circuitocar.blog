@@ -148,7 +148,35 @@
 /* ---------- 4. WEBFONTS ---------- */
 /* Fonts are loaded via <link> in the HTML <head> for faster LCP — see base-cc.njk / article-cc.njk */
 
-/* ---------- 5. SEMANTIC ELEMENT STYLES ---------- */
+/* ---------- 5. ACCESSIBILITY ---------- */
+
+/* Skip-to-content link — hidden until focused by keyboard */
+.cc-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 8px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background: var(--cc-yellow);
+  color: var(--cc-ink);
+  font-family: var(--cc-font-display);
+  font-weight: var(--cc-fw-bold);
+  font-size: var(--cc-fs-sm);
+  letter-spacing: var(--cc-tracking-wide);
+  text-decoration: none;
+  border-radius: 0 0 var(--cc-radius-sm) var(--cc-radius-sm);
+  transition: top var(--cc-dur-fast) var(--cc-ease-out);
+}
+.cc-skip-link:focus { top: 0; }
+
+/* Global focus-visible ring — applies to every interactive element */
+:focus-visible {
+  outline: 2px solid var(--cc-yellow);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- 6. SEMANTIC ELEMENT STYLES ---------- */
 /* Apply to bare elements OR via class aliases (.cc-h1, .cc-body, etc.) */
 
 body, .cc-body {
