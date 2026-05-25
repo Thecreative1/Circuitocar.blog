@@ -371,7 +371,9 @@ a { color: inherit; text-decoration: none; }
 </head>
 <body>
 
-  <header class="cc-topbar">
+  <a class="cc-skip-link" href="#cc-main">Saltar para o conteúdo</a>
+
+  <div class="cc-topbar">
     <div class="cc-topbar__inner">
       <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Stand em Joane · Famalicão</span>
       <div class="cc-topbar__links">
@@ -380,7 +382,7 @@ a { color: inherit; text-decoration: none; }
         <a href="/#contacto">Contactos</a>
       </div>
     </div>
-  </header>
+  </div>
 
   <header class="cc-header">
     <div class="cc-header__inner">
@@ -401,7 +403,8 @@ a { color: inherit; text-decoration: none; }
     </div>
   </header>
 
-  
+  <main id="cc-main">
+    
 <!-- ── HERO ── -->
 <section class="cc-hero">
   <div class="cc-wrap cc-hero__grid">
@@ -842,6 +845,7 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+  </main>
 
   <footer class="cc-footer">
     <div class="cc-footer__inner">
@@ -889,6 +893,6 @@ a { color: inherit; text-decoration: none; }
   </nav>
 
   <script src="/assets/lucide.min.js"></script>
-  <script>lucide.createIcons();</script>
+  <script>lucide.createIcons({ attrs: { 'aria-hidden': 'true', focusable: 'false' } });</script>
 </body>
 </html>
