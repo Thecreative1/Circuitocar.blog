@@ -60,6 +60,7 @@ permalink: simulador_isv.html
     .field label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
     .input, .select { font-family: var(--cc-font-body); font-size: var(--cc-fs-md); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); border-radius: var(--cc-radius-sm); padding: 12px 14px; outline: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), box-shadow var(--cc-dur-fast) var(--cc-ease-out); width: 100%; }
     .input:focus, .select:focus { border-color: var(--cc-ink); box-shadow: var(--cc-shadow-yellow); }
+    .input[aria-invalid="true"] { border-color: var(--cc-signal-red); box-shadow: 0 0 0 3px rgba(229,52,43,0.15); }
     .field small { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
 
     .norma-hint { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-sm); padding: 10px 14px; line-height: 1.5; margin-bottom: 20px; }
@@ -179,37 +180,37 @@ permalink: simulador_isv.html
       <div class="form-grid form-grid--3">
         <div class="field">
           <label for="cilindrada">Cilindrada (cm³)</label>
-          <input class="input" id="cilindrada" type="number" min="500" max="9000" step="1" placeholder="ex: 1600" />
-          <small>Consta na ficha técnica ou livrete do veículo.</small>
+          <input class="input" id="cilindrada" type="number" min="500" max="9000" step="1" placeholder="ex: 1600" aria-required="true" aria-describedby="hint-cilindrada" autocomplete="off" />
+          <small id="hint-cilindrada">Consta na ficha técnica ou livrete do veículo.</small>
         </div>
         <div class="field">
           <label for="co2">Emissões CO2 (g/km)</label>
-          <input class="input" id="co2" type="number" min="0" max="600" step="1" placeholder="ex: 145" />
-          <small>Consta no Certificado de Conformidade (CoC) ou ficha técnica, linha CO₂.</small>
+          <input class="input" id="co2" type="number" min="0" max="600" step="1" placeholder="ex: 145" aria-required="true" aria-describedby="hint-co2" autocomplete="off" />
+          <small id="hint-co2">Consta no Certificado de Conformidade (CoC) ou ficha técnica, linha CO₂.</small>
         </div>
         <div class="field">
           <label for="anoMatricula">Ano de matrícula</label>
-          <input class="input" id="anoMatricula" type="number" min="1990" max="2026" step="1" placeholder="ex: 2020" />
-          <small>Ano da primeira matrícula no país de origem.</small>
+          <input class="input" id="anoMatricula" type="number" min="1990" max="2026" step="1" placeholder="ex: 2020" aria-required="true" aria-describedby="hint-ano" autocomplete="off" />
+          <small id="hint-ano">Ano da primeira matrícula no país de origem.</small>
         </div>
       </div>
 
       <div class="form-grid">
         <div class="field">
           <label for="combustivel">Combustível</label>
-          <select class="select" id="combustivel">
+          <select class="select" id="combustivel" aria-describedby="hint-combustivel">
             <option value="gasolina">Gasolina</option>
             <option value="gasoleo">Gasóleo</option>
           </select>
-          <small>Eléctrico ou híbrido plug-in? Fale connosco — aplicam-se regras especiais.</small>
+          <small id="hint-combustivel">Eléctrico ou híbrido plug-in? Fale connosco — aplicam-se regras especiais.</small>
         </div>
         <div class="field">
           <label for="norma">Norma de emissões CO2</label>
-          <select class="select" id="norma">
+          <select class="select" id="norma" aria-describedby="hint-norma">
             <option value="wltp">WLTP (a partir de ~2019)</option>
             <option value="nedc">NEDC (até ~2018)</option>
           </select>
-          <small>Ver explicação abaixo.</small>
+          <small id="hint-norma">Ver explicação abaixo.</small>
         </div>
       </div>
 
@@ -257,7 +258,7 @@ permalink: simulador_isv.html
       </div>
 
       <!-- Resultados -->
-      <div class="resultados" id="resultados">
+      <div class="resultados" id="resultados" aria-live="polite" aria-atomic="false">
 
         <span class="result-section-label">Resultado</span>
 
@@ -323,7 +324,7 @@ permalink: simulador_isv.html
 
       </div>
 
-      <div class="warning" id="mensagemAviso" style="display:none;"></div>
+      <div class="warning" id="mensagemAviso" role="alert" aria-live="assertive" style="display:none;"></div>
 
     </section>
 
@@ -549,6 +550,9 @@ permalink: simulador_isv.html
   function calcularISV() {
     var aviso = document.getElementById('mensagemAviso');
     aviso.style.display = 'none';
+    ['cilindrada','co2','anoMatricula'].forEach(function(id) {
+      document.getElementById(id).removeAttribute('aria-invalid');
+    });
 
     var cilindrada   = parseInt(document.getElementById('cilindrada').value)   || 0;
     var co2          = parseInt(document.getElementById('co2').value)           || 0;
@@ -557,17 +561,24 @@ permalink: simulador_isv.html
     var norma        = document.getElementById('norma').value;
     var incluirOutros = document.getElementById('incluirOutros').checked;
 
+    function invalidar(id, msg) {
+      document.getElementById(id).setAttribute('aria-invalid', 'true');
+      document.getElementById(id).focus();
+      aviso.textContent = msg;
+      aviso.style.display = 'block';
+    }
+
     if (cilindrada < 500 || cilindrada > 9000) {
-      aviso.textContent = 'Introduza uma cilindrada válida (entre 500 e 9.000 cm³).';
-      aviso.style.display = 'block'; return;
+      invalidar('cilindrada', 'Introduza uma cilindrada válida (entre 500 e 9.000 cm³).');
+      return;
     }
     if (co2 < 0 || co2 > 600) {
-      aviso.textContent = 'Introduza um valor de CO2 válido (entre 0 e 600 g/km).';
-      aviso.style.display = 'block'; return;
+      invalidar('co2', 'Introduza um valor de CO2 válido (entre 0 e 600 g/km).');
+      return;
     }
     if (ano < 1990 || ano > new Date().getFullYear()) {
-      aviso.textContent = 'Introduza um ano de matrícula entre 1990 e ' + new Date().getFullYear() + '.';
-      aviso.style.display = 'block'; return;
+      invalidar('anoMatricula', 'Introduza um ano de matrícula entre 1990 e ' + new Date().getFullYear() + '.');
+      return;
     }
 
     var tabelaCO2Key = combustivel + '_' + norma;
