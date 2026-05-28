@@ -1,0 +1,665 @@
+---
+permalink: simulador_isv.html
+---
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de ISV 2026 | Circuito Car</title>
+  <meta name="description" content="Calcule o ISV do seu carro importado em segundos. Tabelas oficiais 2026 — gasolina e gasóleo, NEDC e WLTP. Gratuito, sem registo." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Simulador de ISV 2026 | Circuito Car" />
+  <meta property="og:description" content="Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gasolina e gasóleo, NEDC e WLTP. Gratuito, sem registo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ site.url }}/img/logo-yellow.png" />
+  <meta property="og:url" content="{{ site.url }}/simulador_isv.html" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:locale" content="pt_PT" />
+  <link rel="canonical" href="{{ site.url }}/simulador_isv.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Simulador de ISV 2026 | Circuito Car" />
+  <meta name="twitter:description" content="Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gratuito, sem registo." />
+  <meta name="twitter:image" content="{{ site.url }}/img/logo-yellow.png" />
+  <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
+  <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
+  {% include "google-tag.njk" %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "{{ site.url }}/simulador_isv.html",
+    "url": "{{ site.url }}/simulador_isv.html",
+    "name": "Simulador de ISV 2026 | Circuito Car",
+    "description": "Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gratuito, sem registo.",
+    "isPartOf": { "@id": "{{ site.url }}/#website" },
+    "inLanguage": "pt-PT"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="{{ site.basePath }}/css/circuito-car-tokens.css" />
+  <link rel="stylesheet" href="{{ site.basePath }}/css/article-cc.css" />
+
+  <style>
+    .sim-wrap { max-width: 1280px; margin: 0 auto; padding: 56px 32px 96px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; align-items: start; }
+    .sim-card { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 36px; }
+    .sim-card h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.05; letter-spacing: var(--cc-tracking-tight); color: var(--cc-ink); margin: 0 0 10px; }
+    .sim-card > p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0 0 28px; max-width: 740px; }
+
+    .sim-section-label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin: 28px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--cc-border); display: block; }
+
+    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 8px; }
+    .form-grid--3 { grid-template-columns: repeat(3, 1fr); }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
+    .input, .select { font-family: var(--cc-font-body); font-size: var(--cc-fs-md); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); border-radius: var(--cc-radius-sm); padding: 12px 14px; outline: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), box-shadow var(--cc-dur-fast) var(--cc-ease-out); width: 100%; }
+    .input:focus, .select:focus { border-color: var(--cc-ink); box-shadow: var(--cc-shadow-yellow); }
+    .field small { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
+
+    .norma-hint { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-sm); padding: 10px 14px; line-height: 1.5; margin-bottom: 20px; }
+    .norma-hint strong { color: var(--cc-ink); }
+
+    .toggle-row { display: flex; align-items: center; gap: 10px; margin: 4px 0 14px; cursor: pointer; }
+    .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--cc-ink); cursor: pointer; flex-shrink: 0; }
+    .toggle-row span { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); }
+
+    .outros-custos { display: none; }
+    .outros-custos.visible { display: block; }
+
+    .calc-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0 28px; padding-top: 8px; }
+
+    .resultados { display: none; }
+    .resultados.visible { display: block; }
+
+    .result-section-label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin: 24px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--cc-border); display: block; }
+
+    .result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 20px; }
+    .result-box { background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .result-box strong { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
+    .result-box span { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); font-size: var(--cc-fs-2xl); color: var(--cc-ink); letter-spacing: 0; line-height: 1; -webkit-font-smoothing: subpixel-antialiased; font-variant-numeric: tabular-nums; }
+    .result-box small { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
+    .result-box.highlight { background: var(--cc-ink); border-color: var(--cc-ink); }
+    .result-box.highlight strong { color: var(--cc-yellow); }
+    .result-box.highlight span { color: var(--cc-yellow); font-size: var(--cc-fs-3xl); }
+    .result-box.highlight small { color: rgba(255,255,255,0.55); }
+    .result-box.total { background: var(--cc-blue-mid); border-color: var(--cc-blue-mid); grid-column: 1 / -1; }
+    .result-box.total strong { color: rgba(255,255,255,0.7); }
+    .result-box.total span { color: #fff; font-size: var(--cc-fs-3xl); }
+    .result-box.total small { color: rgba(255,255,255,0.55); }
+
+    .reducao-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--cc-yellow-tint); border: 1px solid var(--cc-yellow); border-radius: var(--cc-radius-sm); padding: 6px 12px; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-ink); letter-spacing: 0.06em; margin-bottom: 16px; }
+
+    .breakdown-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); }
+    .breakdown-table td { padding: 8px 12px; border-bottom: 1px solid var(--cc-border); color: var(--cc-ink); }
+    .breakdown-table td:last-child { text-align: right; font-weight: var(--cc-fw-semibold); font-variant-numeric: tabular-nums; }
+    .breakdown-table tr.total-row td { font-weight: var(--cc-fw-bold); border-top: 2px solid var(--cc-border-strong); border-bottom: none; }
+    .breakdown-table tr.deduct-row td { color: var(--cc-fg-muted); }
+
+    .note { background: var(--cc-yellow-tint); border-left: 4px solid var(--cc-yellow); border-radius: 0 var(--cc-radius-md) var(--cc-radius-md) 0; padding: 16px 20px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: 1.6; color: var(--cc-ink); margin-top: 20px; }
+    .note strong { color: var(--cc-ink) !important; font-weight: var(--cc-fw-bold); }
+
+    .warning { background: rgba(229,52,43,0.08); border: 1px solid rgba(229,52,43,0.3); border-radius: var(--cc-radius-sm); padding: 12px 16px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-signal-red); margin-top: 14px; font-weight: var(--cc-fw-semibold); }
+
+    .wa-cta-block { background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); padding: 20px; margin-top: 20px; }
+    .wa-cta-block p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin: 0 0 14px; line-height: 1.5; }
+
+    @media (max-width: 1000px) {
+      .sim-wrap { grid-template-columns: 1fr; padding: 40px 24px 80px; }
+    }
+    @media (max-width: 640px) {
+      .sim-wrap { padding: 32px 16px 72px; }
+      .sim-card { padding: 24px; }
+      .form-grid, .form-grid--3, .result-grid { grid-template-columns: 1fr; }
+      .calc-actions { flex-direction: column; }
+      .calc-actions .cc-btn { width: 100%; }
+      .field, .input, .select { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cc-topbar">
+    <div class="cc-topbar__inner">
+      <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Simulador · ISV 2026</span>
+      <div class="cc-topbar__links">
+        <a href="{{ site.basePath }}/">Voltar ao blog</a>
+        <a href="{{ site.basePath }}/quanto-custa-importar-carro-usado-portugal.html">Guia de custos</a>
+        <a href="{{ site.basePath }}/#contacto">Contacto equipa</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="cc-header">
+    <div class="cc-header__inner">
+      <a class="cc-header__logo" href="{{ site.basePath }}/" aria-label="Circuito Car — voltar à homepage">
+        <img src="{{ site.basePath }}/img/logo-yellow.png" alt="Circuito Car" />
+      </a>
+      <span class="cc-header__brand-tag">Simulador</span>
+      <nav class="cc-header__nav" aria-label="Navegação principal">
+        <a href="{{ site.basePath }}/artigos.html">Artigos</a>
+        <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Crédito</a>
+        <a href="{{ site.basePath }}/simulador_retoma.html">Retoma</a>
+        <a href="{{ site.mainSite }}/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=simulador_isv" target="_blank" rel="noopener noreferrer">Viaturas</a>
+      </nav>
+      <a class="cc-header__cta" href="#equipa">
+        <i data-lucide="message-square"></i>Falar connosco
+      </a>
+    </div>
+  </header>
+
+  <!-- ── POST HERO (dark) ── -->
+  <section class="cc-post-hero">
+    <div class="cc-post-hero__inner">
+      <span class="cc-post-hero__eyebrow">Ferramenta Gratuita · ISV 2026</span>
+      <h1>Calcule o ISV do seu carro <em>antes</em> de importar</h1>
+      <p class="cc-post-hero__lead">Tabelas oficiais de 2026 — gasolina e gasóleo, normas NEDC e WLTP, com redução por antiguidade incluída. Resultado em segundos, sem registo, sem compromisso.</p>
+      <div class="cc-post-hero__actions">
+        <a class="cc-btn cc-btn--yellow" href="#simulador"><i data-lucide="calculator"></i>Calcular ISV agora</a>
+        <a class="cc-btn cc-btn--ghost-light" href="{{ site.basePath }}/quanto-custa-importar-carro-usado-portugal.html"><i data-lucide="file-text"></i>Guia completo de custos</a>
+      </div>
+    </div>
+    <div class="cc-post-hero__chevron" aria-hidden="true"></div>
+  </section>
+
+  <!-- ── SIMULATOR + SIDEBAR ── -->
+  <div class="sim-wrap">
+    <section class="sim-card" id="simulador">
+      <h2>Simulador de ISV</h2>
+      <p>Preencha os dados do veículo e obtenha uma estimativa do ISV a pagar na importação para Portugal. Os valores baseiam-se nas tabelas oficiais em vigor para 2026.</p>
+
+      <!-- Dados do veículo -->
+      <span class="sim-section-label">Dados do veículo</span>
+
+      <div class="form-grid form-grid--3">
+        <div class="field">
+          <label for="cilindrada">Cilindrada (cm³)</label>
+          <input class="input" id="cilindrada" type="number" min="500" max="9000" step="1" placeholder="ex: 1600" />
+          <small>Valor em centímetros cúbicos (cc).</small>
+        </div>
+        <div class="field">
+          <label for="co2">Emissões CO2 (g/km)</label>
+          <input class="input" id="co2" type="number" min="0" max="600" step="1" placeholder="ex: 145" />
+          <small>Valor no documento técnico do veículo.</small>
+        </div>
+        <div class="field">
+          <label for="anoMatricula">Ano de matrícula</label>
+          <input class="input" id="anoMatricula" type="number" min="1990" max="2026" step="1" placeholder="ex: 2020" />
+          <small>Ano da primeira matrícula no país de origem.</small>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="combustivel">Combustível</label>
+          <select class="select" id="combustivel">
+            <option value="gasolina">Gasolina</option>
+            <option value="gasoleo">Gasóleo</option>
+          </select>
+          <small>Seleccione o tipo de combustível do motor.</small>
+        </div>
+        <div class="field">
+          <label for="norma">Norma de homologação CO2</label>
+          <select class="select" id="norma">
+            <option value="wltp">WLTP (a partir de ~2019)</option>
+            <option value="nedc">NEDC (até ~2018)</option>
+          </select>
+          <small>Verifique nos documentos do veículo.</small>
+        </div>
+      </div>
+
+      <div class="norma-hint">
+        <strong>Como saber a norma?</strong> Carros matriculados antes de 2018 usam geralmente <strong>NEDC</strong>. A partir de 2020, <strong>WLTP</strong>. Carros de 2018 e 2019 podem ser de qualquer uma — verifique no Certificado de Conformidade (CoC) ou na ficha técnica do veículo.
+      </div>
+
+      <!-- Custos adicionais (opcional) -->
+      <span class="sim-section-label">Custos adicionais (opcional)</span>
+
+      <label class="toggle-row" for="incluirOutros">
+        <input type="checkbox" id="incluirOutros" onchange="toggleOutrosCustos()" />
+        <span>Incluir custos fixos de importação para ver o total estimado</span>
+      </label>
+
+      <div class="outros-custos" id="outrosCustos">
+        <div class="form-grid">
+          <div class="field">
+            <label for="precoCompra">Preço de compra (€)</label>
+            <input class="input" id="precoCompra" type="number" min="0" step="100" placeholder="ex: 12000" />
+            <small>Valor pago ao vendedor estrangeiro.</small>
+          </div>
+          <div class="field">
+            <label for="transporte">Transporte (€)</label>
+            <input class="input" id="transporte" type="number" min="0" step="50" value="400" />
+            <small>Estimativa típica: 300–600 €.</small>
+          </div>
+          <div class="field">
+            <label for="despachante">Despachante (€)</label>
+            <input class="input" id="despachante" type="number" min="0" step="50" value="350" />
+            <small>Honorários habituais: 200–500 €.</small>
+          </div>
+          <div class="field">
+            <label for="inspecaoLegal">Inspecção B + legalização (€)</label>
+            <input class="input" id="inspecaoLegal" type="number" min="0" step="10" value="289" />
+            <small>Inspecção B (93,52 €) + DUA, registo e chapas (~195 €).</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões -->
+      <div class="calc-actions">
+        <button class="cc-btn cc-btn--yellow" type="button" onclick="calcularISV()"><i data-lucide="calculator"></i>Calcular ISV</button>
+        <button class="cc-btn cc-btn--ghost-dark" type="button" onclick="resetSimulador()"><i data-lucide="rotate-ccw"></i>Limpar</button>
+      </div>
+
+      <!-- Resultados -->
+      <div class="resultados" id="resultados">
+
+        <span class="result-section-label">Resultado</span>
+
+        <div id="reducaoBadge" class="reducao-badge">
+          <i data-lucide="tag"></i>
+          <span id="reducaoTexto"></span>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-box">
+            <strong>Componente cilindrada</strong>
+            <span id="rCompCilindrada">—</span>
+          </div>
+          <div class="result-box">
+            <strong>Componente ambiental CO2</strong>
+            <span id="rCompCO2">—</span>
+          </div>
+          <div class="result-box">
+            <strong>ISV base (antes da redução)</strong>
+            <span id="rISVBase">—</span>
+          </div>
+          <div class="result-box highlight">
+            <strong>ISV estimado a pagar</strong>
+            <span id="rISVFinal">—</span>
+            <small>Após redução por antiguidade</small>
+          </div>
+        </div>
+
+        <!-- Detalhe do cálculo -->
+        <details style="margin-bottom: 16px;">
+          <summary style="font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); cursor: pointer; padding: 8px 0;">Ver detalhe do cálculo</summary>
+          <table class="breakdown-table" style="margin-top: 12px;">
+            <tbody id="detalheCalculo"></tbody>
+          </table>
+        </details>
+
+        <!-- Total com outros custos (se activo) -->
+        <div id="blocoTotal" style="display:none;">
+          <span class="result-section-label">Total estimado de importação</span>
+          <div class="result-grid">
+            <div class="result-box total" style="grid-column: 1 / -1;">
+              <strong>Total estimado</strong>
+              <span id="rTotal">—</span>
+              <small>Preço de compra + ISV + transporte + despachante + legalização</small>
+            </div>
+          </div>
+          <table class="breakdown-table">
+            <tbody id="detalheTotal"></tbody>
+          </table>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <div class="wa-cta-block">
+          <p>Quer perceber se vale a pena avançar com esta importação ou se encontra melhor negócio directamente em Portugal? A nossa equipa analisa o caso consigo — sem compromisso.</p>
+          <a class="cc-btn cc-btn--wa" id="btnWhatsApp" href="#" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="message-circle"></i>Enviar simulação por WhatsApp
+          </a>
+        </div>
+
+        <div class="note">
+          <strong>Atenção:</strong> este simulador é uma ferramenta de estimativa baseada nas tabelas oficiais do ISV em vigor em 2026. O valor final do ISV é determinado pela Autoridade Tributária com base nos documentos do veículo. Em caso de dúvida, consulte sempre um despachante aduaneiro antes de avançar.
+        </div>
+
+      </div>
+
+      <div class="warning" id="mensagemAviso" style="display:none;"></div>
+
+    </section>
+
+    <aside class="cc-sidebar" id="equipa">
+      <div class="cc-side-card cc-side-card--warm">
+        <span class="cc-side-card__eyebrow">Como usar</span>
+        <h3>Simule → compare → decida</h3>
+        <p>Calcule o ISV, some os restantes custos e compare com o preço de um carro equivalente já em Portugal. Se a diferença não compensar, fale connosco — temos stock seleccionado pronto a circular.</p>
+      </div>
+
+      <div class="cc-side-card">
+        <span class="cc-side-card__eyebrow">Tabelas ISV 2026</span>
+        <h3>Escalões de redução</h3>
+        <p style="font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin-bottom: 12px; line-height: 1.5;">A redução por antiguidade aplica-se ao ISV total e varia com a idade do veículo:</p>
+        <table style="width:100%; font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); border-collapse: collapse;">
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Até 1 ano</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">10%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">1 a 2 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">20%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">2 a 3 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">28%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">3 a 4 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">35%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">4 a 5 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">43%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">5 a 6 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">52%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">6 a 7 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">60%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">7 a 8 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">65%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">8 a 9 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">70%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">9 a 10 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">75%</td></tr>
+            <tr><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 10 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">80%</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); margin-top: 10px; line-height: 1.4;">Fonte: Tabelas ISV 2026 — Autoridade Tributária. Aplicável a importações da UE.</p>
+      </div>
+
+      <div class="cc-side-card">
+        <span class="cc-side-card__eyebrow">Equipa</span>
+        <h3>Fala com quem percebe</h3>
+
+        <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.marco.name }}</strong>
+            <span class="cc-side-seller__role" style="background: var(--cc-blue-light); color: var(--cc-paper);">{{ site.contact.marco.role }}</span>
+          </div>
+          <p>Disponível para informações sobre viaturas, marcar visitas, esclarecer dúvidas de importação e financiamento.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar para a CircuitoCar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20usei%20o%20simulador%20de%20ISV%20da%20Circuito%20Car%20e%20quero%20perceber%20se%20compensa%20importar.&utm_source=simulador&utm_medium=sidebar_marco&utm_campaign=simulador_isv"><i data-lucide="message-circle"></i>Falar com a CircuitoCar</a>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px; padding: 4px 0;">
+          <span style="font-family: var(--cc-font-display); font-style: italic; font-weight: 700; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cc-fg-subtle); white-space: nowrap;">Direção</span>
+          <div style="flex: 1; height: 1px; background: var(--cc-border);"></div>
+        </div>
+
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.andre.name }}</strong>
+            <span class="cc-side-seller__role">{{ site.contact.andre.role }}</span>
+          </div>
+          <p>Enquadramento financeiro, propostas e condições comerciais.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.andre.phone }}"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.andre.whatsappBase }}?text=Ol%C3%A1%2C%20usei%20o%20simulador%20de%20ISV%20e%20quero%20saber%20mais.&utm_source=simulador&utm_medium=sidebar_andre&utm_campaign=simulador_isv"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>{{ site.contact.filipe.name }}</strong>
+            <span class="cc-side-seller__role">{{ site.contact.filipe.role }}</span>
+          </div>
+          <p>Detalhes técnicos da viatura, características e questões específicas.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.filipe.phone }}"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="{{ site.contact.filipe.whatsappBase }}?text=Ol%C3%A1%2C%20usei%20o%20simulador%20de%20ISV%20e%20quero%20saber%20mais.&utm_source=simulador&utm_medium=sidebar_filipe&utm_campaign=simulador_isv"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-side-card cc-side-card--warm">
+        <span class="cc-side-card__eyebrow">Stock</span>
+        <h3>Próximo passo: ver viaturas</h3>
+        <p>Vê o stock actual em circuitocar.pt — viaturas verificadas, com garantia, já legalizadas e prontas a circular.</p>
+        <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=simulador&utm_medium=sidebar_stock&utm_campaign=simulador_isv" target="_blank" rel="noopener noreferrer" style="width:100%;"><i data-lucide="car"></i>Ver stock</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="cc-footer">
+    <div class="cc-footer__inner">
+      <div class="cc-footer__grid">
+        <div class="cc-footer__col cc-footer__brand">
+          <img src="{{ site.basePath }}/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
+          <p>Simulador gratuito para estimar o ISV na importação de carros usados para Portugal. Valores indicativos — o ISV definitivo é apurado pela Autoridade Tributária.</p>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Explorar</h4>
+          <a href="{{ site.basePath }}/">Homepage</a>
+          <a href="{{ site.basePath }}/quanto-custa-importar-carro-usado-portugal.html">Guia de custos</a>
+          <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a>
+          <a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a>
+          <a href="{{ site.basePath }}/artigos.html">Artigos</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Contacto</h4>
+          <a href="tel:{{ site.contact.marco.phone }}">{{ site.contact.marco.name }} · {{ site.contact.marco.phoneDisplay }}</a>
+          <a href="tel:{{ site.contact.andre.phone }}">{{ site.contact.andre.name }} · {{ site.contact.andre.phoneDisplay }}</a>
+          <a href="tel:{{ site.contact.filipe.phone }}">{{ site.contact.filipe.name }} · {{ site.contact.filipe.phoneDisplay }}</a>
+          <a href="{{ site.basePath }}/#contacto">Falar com a equipa</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Localização</h4>
+          <p style="margin:0">{{ site.address.street }}<br>{{ site.address.zip }} {{ site.address.city }}<br>{{ site.address.region }}</p>
+        </div>
+      </div>
+      <div class="cc-footer__bottom">
+        <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
+        <span>Simulação indicativa com base nas tabelas ISV 2026 — não constitui liquidação oficial.</span>
+      </div>
+      <div class="cc-credit">
+        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="feather"></i>desenvolvido por Estúdio Flávio Martins
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="cc-mobile-dock" aria-label="Navegação mobile">
+    <a href="{{ site.basePath }}/"><i data-lucide="home"></i><span>Início</span></a>
+    <a href="{{ site.basePath }}/artigos.html"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="{{ site.basePath }}/simulador_isv.html" aria-current="page"><i data-lucide="calculator"></i><span>ISV</span></a>
+    <a href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="euro"></i><span>Crédito</span></a>
+    <a href="#equipa"><i data-lucide="message-square"></i><span>Contacto</span></a>
+  </nav>
+
+  <script src="{{ site.basePath }}/assets/lucide.min.js"></script>
+  <script>lucide.createIcons({ attrs: { 'aria-hidden': 'true', focusable: 'false' } });</script>
+
+  <script>
+  // ── ISV 2026 — Tabelas oficiais ─────────────────────────────────────────────
+  var ISV = {
+    cilindrada: [
+      { max: 1000,       rate: 1.09,   deduct: 849.03   },
+      { max: 1250,       rate: 1.18,   deduct: 850.69   },
+      { max: Infinity,   rate: 5.61,   deduct: 6194.88  }
+    ],
+    gasolina_nedc: [
+      { max: 99,         rate: 4.62,   deduct: 427.00   },
+      { max: 115,        rate: 8.09,   deduct: 750.99   },
+      { max: 145,        rate: 52.56,  deduct: 5903.94  },
+      { max: 175,        rate: 61.24,  deduct: 7140.17  },
+      { max: 195,        rate: 155.97, deduct: 23627.27 },
+      { max: Infinity,   rate: 205.65, deduct: 33390.12 }
+    ],
+    gasolina_wltp: [
+      { max: 110,        rate: 0.44,   deduct: 43.02    },
+      { max: 115,        rate: 1.10,   deduct: 115.80   },
+      { max: 120,        rate: 1.38,   deduct: 147.79   },
+      { max: 130,        rate: 5.27,   deduct: 619.17   },
+      { max: 145,        rate: 6.38,   deduct: 762.73   },
+      { max: 175,        rate: 41.54,  deduct: 5819.56  },
+      { max: 195,        rate: 51.38,  deduct: 7247.39  },
+      { max: 235,        rate: 193.01, deduct: 34190.52 },
+      { max: Infinity,   rate: 233.81, deduct: 41910.96 }
+    ],
+    gasoleo_nedc: [
+      { max: 79,         rate: 5.78,   deduct: 439.04   },
+      { max: 95,         rate: 23.45,  deduct: 1848.58  },
+      { max: 120,        rate: 79.22,  deduct: 7195.63  },
+      { max: 140,        rate: 175.73, deduct: 18924.92 },
+      { max: 160,        rate: 195.43, deduct: 21720.92 },
+      { max: Infinity,   rate: 268.42, deduct: 33447.90 }
+    ],
+    gasoleo_wltp: [
+      { max: 110,        rate: 1.72,   deduct: 11.50    },
+      { max: 120,        rate: 18.96,  deduct: 1906.19  },
+      { max: 140,        rate: 65.04,  deduct: 7360.85  },
+      { max: 150,        rate: 127.40, deduct: 16080.57 },
+      { max: 160,        rate: 160.81, deduct: 21176.06 },
+      { max: 170,        rate: 221.69, deduct: 29227.38 },
+      { max: 190,        rate: 274.08, deduct: 36987.98 },
+      { max: Infinity,   rate: 282.35, deduct: 38271.32 }
+    ]
+  };
+
+  var REDUCOES = [
+    { maxAnos: 1,        pct: 10 },
+    { maxAnos: 2,        pct: 20 },
+    { maxAnos: 3,        pct: 28 },
+    { maxAnos: 4,        pct: 35 },
+    { maxAnos: 5,        pct: 43 },
+    { maxAnos: 6,        pct: 52 },
+    { maxAnos: 7,        pct: 60 },
+    { maxAnos: 8,        pct: 65 },
+    { maxAnos: 9,        pct: 70 },
+    { maxAnos: 10,       pct: 75 },
+    { maxAnos: Infinity, pct: 80 }
+  ];
+
+  function fmt(v) {
+    return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2 }).format(v);
+  }
+
+  function calcComponente(tabela, valor) {
+    var entry = tabela.find(function(e) { return valor <= e.max; });
+    if (!entry) return 0;
+    return Math.max(0, valor * entry.rate - entry.deduct);
+  }
+
+  function getReducao(ano) {
+    var anoAtual = new Date().getFullYear();
+    var idade = anoAtual - ano;
+    if (idade <= 0) return { pct: 0, anos: 0 };
+    var entry = REDUCOES.find(function(e) { return idade <= e.maxAnos; });
+    return { pct: entry ? entry.pct : 80, anos: idade };
+  }
+
+  function toggleOutrosCustos() {
+    var cb = document.getElementById('incluirOutros');
+    var bloco = document.getElementById('outrosCustos');
+    bloco.classList.toggle('visible', cb.checked);
+  }
+
+  function calcularISV() {
+    var aviso = document.getElementById('mensagemAviso');
+    aviso.style.display = 'none';
+
+    var cilindrada   = parseInt(document.getElementById('cilindrada').value)   || 0;
+    var co2          = parseInt(document.getElementById('co2').value)           || 0;
+    var ano          = parseInt(document.getElementById('anoMatricula').value)  || 0;
+    var combustivel  = document.getElementById('combustivel').value;
+    var norma        = document.getElementById('norma').value;
+    var incluirOutros = document.getElementById('incluirOutros').checked;
+
+    if (cilindrada < 500 || cilindrada > 9000) {
+      aviso.textContent = 'Introduza uma cilindrada válida (entre 500 e 9.000 cm³).';
+      aviso.style.display = 'block'; return;
+    }
+    if (co2 < 0 || co2 > 600) {
+      aviso.textContent = 'Introduza um valor de CO2 válido (entre 0 e 600 g/km).';
+      aviso.style.display = 'block'; return;
+    }
+    if (ano < 1990 || ano > new Date().getFullYear()) {
+      aviso.textContent = 'Introduza um ano de matrícula válido.';
+      aviso.style.display = 'block'; return;
+    }
+
+    var tabelaCO2Key = combustivel + '_' + norma;
+    var compCil = calcComponente(ISV.cilindrada, cilindrada);
+    var compCO2 = calcComponente(ISV[tabelaCO2Key], co2);
+    var isvBase = compCil + compCO2;
+
+    var reducao = getReducao(ano);
+    var isvFinal = isvBase * (1 - reducao.pct / 100);
+
+    document.getElementById('rCompCilindrada').textContent = fmt(compCil);
+    document.getElementById('rCompCO2').textContent        = fmt(compCO2);
+    document.getElementById('rISVBase').textContent        = fmt(isvBase);
+    document.getElementById('rISVFinal').textContent       = fmt(isvFinal);
+
+    var reducaoTexto = reducao.anos > 0
+      ? reducao.anos + (reducao.anos === 1 ? ' ano' : ' anos') + ' de idade — redução de ' + reducao.pct + '%'
+      : 'Carro do ano corrente — sem redução por antiguidade';
+    document.getElementById('reducaoTexto').textContent = reducaoTexto;
+
+    var normaLabel = norma.toUpperCase();
+    var combLabel  = combustivel.charAt(0).toUpperCase() + combustivel.slice(1);
+    var detalhe = document.getElementById('detalheCalculo');
+    detalhe.innerHTML = [
+      '<tr><td>Cilindrada: ' + cilindrada + ' cc × ' + ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).rate.toFixed(2) + ' €</td><td>' + fmt(cilindrada * ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).rate) + '</td></tr>',
+      '<tr class="deduct-row"><td>— Parcela a abater</td><td>− ' + fmt(ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).deduct) + '</td></tr>',
+      '<tr class="total-row"><td>Componente cilindrada</td><td>' + fmt(compCil) + '</td></tr>',
+      '<tr><td>CO2: ' + co2 + ' g/km × ' + ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate.toFixed(2) + ' € (' + combLabel + ' ' + normaLabel + ')</td><td>' + fmt(co2 * ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate) + '</td></tr>',
+      '<tr class="deduct-row"><td>— Parcela a abater</td><td>− ' + fmt(ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).deduct) + '</td></tr>',
+      '<tr class="total-row"><td>Componente ambiental CO2</td><td>' + fmt(compCO2) + '</td></tr>',
+      '<tr><td><strong>ISV base (soma das componentes)</strong></td><td><strong>' + fmt(isvBase) + '</strong></td></tr>',
+      '<tr class="deduct-row"><td>Redução por antiguidade (' + reducao.pct + '%)</td><td>− ' + fmt(isvBase * reducao.pct / 100) + '</td></tr>',
+      '<tr class="total-row"><td><strong>ISV estimado a pagar</strong></td><td><strong>' + fmt(isvFinal) + '</strong></td></tr>'
+    ].join('');
+
+    var blocoTotal = document.getElementById('blocoTotal');
+    if (incluirOutros) {
+      var precoCompra    = parseFloat(document.getElementById('precoCompra').value)    || 0;
+      var transporte     = parseFloat(document.getElementById('transporte').value)     || 0;
+      var despachante    = parseFloat(document.getElementById('despachante').value)    || 0;
+      var inspecaoLegal  = parseFloat(document.getElementById('inspecaoLegal').value)  || 0;
+      var total = precoCompra + isvFinal + transporte + despachante + inspecaoLegal;
+      document.getElementById('rTotal').textContent = fmt(total);
+      var dt = document.getElementById('detalheTotal');
+      dt.innerHTML = [
+        precoCompra   ? '<tr><td>Preço de compra</td><td>' + fmt(precoCompra)   + '</td></tr>' : '',
+        '<tr><td>ISV estimado</td><td>' + fmt(isvFinal) + '</td></tr>',
+        transporte    ? '<tr><td>Transporte</td><td>' + fmt(transporte)    + '</td></tr>' : '',
+        despachante   ? '<tr><td>Despachante</td><td>' + fmt(despachante)   + '</td></tr>' : '',
+        inspecaoLegal ? '<tr><td>Inspecção B + legalização</td><td>' + fmt(inspecaoLegal) + '</td></tr>' : '',
+        '<tr class="total-row"><td><strong>Total estimado</strong></td><td><strong>' + fmt(total) + '</strong></td></tr>'
+      ].join('');
+      blocoTotal.style.display = 'block';
+    } else {
+      blocoTotal.style.display = 'none';
+    }
+
+    var msgPartes = [
+      'Olá, calculei o ISV no vosso simulador:',
+      'Cilindrada: ' + cilindrada + ' cc | CO2: ' + co2 + ' g/km (' + combLabel + ', ' + normaLabel + ') | Ano: ' + ano,
+      'Redução por antiguidade: ' + reducao.pct + '% (' + reducao.anos + ' anos)',
+      'ISV estimado: ' + fmt(isvFinal)
+    ];
+    if (incluirOutros) {
+      var precoC = parseFloat(document.getElementById('precoCompra').value) || 0;
+      var totC   = precoC + isvFinal + (parseFloat(document.getElementById('transporte').value)||0) + (parseFloat(document.getElementById('despachante').value)||0) + (parseFloat(document.getElementById('inspecaoLegal').value)||0);
+      if (precoC > 0) msgPartes.push('Preço compra: ' + fmt(precoC) + ' | Total estimado: ' + fmt(totC));
+    }
+    msgPartes.push('Gostava de perceber se compensa importar ou comprar directamente em Portugal.');
+    document.getElementById('btnWhatsApp').href = '{{ site.contact.marco.whatsappBase }}?text=' + encodeURIComponent(msgPartes.join('\n')) + '&utm_source=simulador&utm_medium=isv_resultado&utm_campaign=simulador_isv';
+
+    var res = document.getElementById('resultados');
+    res.classList.add('visible');
+    if (window.lucide) lucide.createIcons({ attrs: { 'aria-hidden': 'true', focusable: 'false' } });
+    res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function resetSimulador() {
+    ['cilindrada','co2','anoMatricula','precoCompra'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    document.getElementById('combustivel').value = 'gasolina';
+    document.getElementById('norma').value = 'wltp';
+    document.getElementById('transporte').value = 400;
+    document.getElementById('despachante').value = 350;
+    document.getElementById('inspecaoLegal').value = 289;
+    document.getElementById('incluirOutros').checked = false;
+    document.getElementById('outrosCustos').classList.remove('visible');
+    document.getElementById('resultados').classList.remove('visible');
+    document.getElementById('mensagemAviso').style.display = 'none';
+  }
+  </script>
+
+</body>
+</html>
