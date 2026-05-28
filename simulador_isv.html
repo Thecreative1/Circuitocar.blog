@@ -21,15 +21,16 @@
   <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
   <link rel="apple-touch-icon" href="/img/logo-yellow.png" />
   <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="https://circuitocar.blog/rss.xml" />
-
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SVM6PQS2C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8SVM6PQS2C');
-  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SVM6PQS2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8SVM6PQS2C');
+</script>
+
 
   <script type="application/ld+json">
   {
@@ -44,6 +45,9 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
   <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
   <link rel="stylesheet" href="/css/article-cc.css" />
 
@@ -443,6 +447,11 @@
         <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
         <span>Simulação indicativa com base nas tabelas ISV 2026 — não constitui liquidação oficial.</span>
       </div>
+      <div class="cc-credit">
+        <a href="https://thecreative1.github.io/Estudio-Flavio-Martins/" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="feather"></i>desenvolvido por Estúdio Flávio Martins
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -566,17 +575,14 @@
       aviso.style.display = 'block'; return;
     }
 
-    // Calcular componentes
     var tabelaCO2Key = combustivel + '_' + norma;
     var compCil = calcComponente(ISV.cilindrada, cilindrada);
     var compCO2 = calcComponente(ISV[tabelaCO2Key], co2);
     var isvBase = compCil + compCO2;
 
-    // Redução por antiguidade
     var reducao = getReducao(ano);
     var isvFinal = isvBase * (1 - reducao.pct / 100);
 
-    // Actualizar resultados principais
     document.getElementById('rCompCilindrada').textContent = fmt(compCil);
     document.getElementById('rCompCO2').textContent        = fmt(compCO2);
     document.getElementById('rISVBase').textContent        = fmt(isvBase);
@@ -587,7 +593,6 @@
       : 'Carro do ano corrente — sem redução por antiguidade';
     document.getElementById('reducaoTexto').textContent = reducaoTexto;
 
-    // Detalhe do cálculo
     var normaLabel = norma.toUpperCase();
     var combLabel  = combustivel.charAt(0).toUpperCase() + combustivel.slice(1);
     var detalhe = document.getElementById('detalheCalculo');
@@ -603,7 +608,6 @@
       '<tr class="total-row"><td><strong>ISV estimado a pagar</strong></td><td><strong>' + fmt(isvFinal) + '</strong></td></tr>'
     ].join('');
 
-    // Total com outros custos
     var blocoTotal = document.getElementById('blocoTotal');
     if (incluirOutros) {
       var precoCompra    = parseFloat(document.getElementById('precoCompra').value)    || 0;
@@ -626,7 +630,6 @@
       blocoTotal.style.display = 'none';
     }
 
-    // WhatsApp link
     var msgPartes = [
       'Olá, calculei o ISV no vosso simulador:',
       'Cilindrada: ' + cilindrada + ' cc | CO2: ' + co2 + ' g/km (' + combLabel + ', ' + normaLabel + ') | Ano: ' + ano,
@@ -641,7 +644,6 @@
     msgPartes.push('Gostava de perceber se compensa importar ou comprar directamente em Portugal.');
     document.getElementById('btnWhatsApp').href = 'https://wa.me/351922017034?text=' + encodeURIComponent(msgPartes.join('\n')) + '&utm_source=simulador&utm_medium=isv_resultado&utm_campaign=simulador_isv';
 
-    // Mostrar resultados e re-inicializar ícones Lucide
     var res = document.getElementById('resultados');
     res.classList.add('visible');
     if (window.lucide) lucide.createIcons({ attrs: { 'aria-hidden': 'true', focusable: 'false' } });
