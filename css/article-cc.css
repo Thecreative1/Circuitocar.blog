@@ -76,7 +76,7 @@ a { color: inherit; text-decoration: none; }
 .cc-post-wrap { max-width: 1180px; margin: 0 auto; padding: 64px 32px 96px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 56px; align-items: start; }
 
 /* ===== PROSE ===== */
-.cc-prose { max-width: 720px; }
+.cc-prose { max-width: 720px; overflow-wrap: break-word; }
 .cc-prose > *:first-child { margin-top: 0; }
 .cc-prose h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: clamp(26px, 2.4vw, 36px); line-height: 1.05; letter-spacing: var(--cc-tracking-tight); color: var(--cc-ink); margin: 56px 0 16px; text-wrap: balance; }
 .cc-prose h3 { font-family: var(--cc-font-body); font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xl); color: var(--cc-ink); margin: 36px 0 12px; line-height: 1.3; }
