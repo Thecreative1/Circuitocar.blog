@@ -43,7 +43,7 @@ relatedArticles:
   - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
     url: "carros-automaticos-usados-vantagens-riscos.html"
   - title: "Os pontos que mais pesam na escolha de um carro para família"
-    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-família.html"
+    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html"
 
 andreDescription: "Mais indicado para ajudar a enquadrar a escolha entre híbrido, gasolina ou diesel."
 filipeDescription: "Mais indicado para esclarecer dúvidas sobre tecnologia e comportamento da viatura."

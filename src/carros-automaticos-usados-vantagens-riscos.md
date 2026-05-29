@@ -43,7 +43,7 @@ relatedArticles:
   - title: "Vale a pena comprar um híbrido usado em 2026?"
     url: "vale-a-pena-comprar-hibrido-usado-2026.html"
   - title: "Os pontos que mais pesam na escolha de um carro para família"
-    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-família.html"
+    url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html"
 
 andreDescription: "Mais indicado para enquadrar uso, perfil e opções disponíveis."
 filipeDescription: "Mais indicado para dúvidas técnicas sobre caixa e comportamento da viatura."

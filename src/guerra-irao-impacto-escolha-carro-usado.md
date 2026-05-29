@@ -42,8 +42,8 @@ relatedArticles:
     url: "vale-a-pena-comprar-hibrido-usado-2026.html"
   - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
     url: "carros-automaticos-usados-vantagens-riscos.html"
-  - title: "Simulador de crédito automóvel - calcule a prestação"
-    url: "circuitocar_simulador_credito.html"
+  - title: "Quanto custa importar um carro usado para Portugal: a conta real"
+    url: "quanto-custa-importar-carro-usado-portugal.html"
 
 andreDescription: "Mais indicado para enquadrar orçamento, financiamento e tipo de viatura."
 filipeDescription: "Mais indicado para comparar consumos, motores e utilização real."
