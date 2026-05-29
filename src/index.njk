@@ -107,6 +107,14 @@ inlineStyle: |
   .cc-hero__car-title { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); color: var(--cc-paper); line-height: 1.05; letter-spacing: var(--cc-tracking-tight); margin: 0 0 8px; }
   .cc-hero__car-meta { color: var(--cc-asphalt-300); font-size: var(--cc-fs-sm); margin-bottom: 14px; }
   .cc-hero__car-price { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); font-size: var(--cc-fs-3xl); color: var(--cc-yellow); letter-spacing: 0; line-height: 1; -webkit-font-smoothing: subpixel-antialiased; font-variant-numeric: tabular-nums; }
+  /* Featured-article variant of the hero card */
+  .cc-hero__feat { aspect-ratio: 3/4; }
+  .cc-hero__feat .cc-hero__car-img::after { background: linear-gradient(180deg, rgba(10,11,13,0.15) 0%, rgba(10,11,13,0.55) 48%, rgba(10,11,13,0.96) 100%); }
+  .cc-hero__feat-title { font-family: var(--cc-font-body); font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-2xl); color: var(--cc-paper); line-height: 1.18; letter-spacing: 0; margin: 0 0 12px; text-wrap: balance; }
+  .cc-hero__feat-cta { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-sm); letter-spacing: var(--cc-tracking-wide); color: var(--cc-ink); background: var(--cc-yellow); padding: 9px 16px; border-radius: var(--cc-radius-sm); transition: gap var(--cc-dur-fast) var(--cc-ease-out); }
+  .cc-hero__feat-cta i { width: 15px; height: 15px; }
+  .cc-hero__feat:hover .cc-hero__feat-cta { gap: 12px; }
+  .cc-hero__feat:hover .cc-hero__feat-title { color: var(--cc-yellow); }
 
   /* Single italic-yellow chevron stripe — the brand accent (only here) */
   .cc-hero__chevron { position: absolute; bottom: -42px; right: -80px; width: 540px; height: 8px; background: var(--cc-yellow); transform: skewX(-28deg); opacity: 0.9; z-index: 1; }
@@ -132,6 +140,8 @@ inlineStyle: |
   .cc-btn--wa:hover { background: var(--cc-blue); color: var(--cc-yellow); box-shadow: 0 0 0 2px rgba(37,211,102,0.65), 0 0 24px rgba(37,211,102,0.7), 0 0 48px rgba(37,211,102,0.32); }
   .cc-btn--wa:hover i { color: #25D366; }
   .cc-btn--lg { padding: 14px 24px; min-height: 52px; font-size: var(--cc-fs-base); }
+  .cc-btn--xl { padding: 18px 38px; min-height: 60px; font-size: var(--cc-fs-lg); box-shadow: 0 6px 18px -6px rgba(255,255,0,0.45), 0 0 0 2px rgba(13,31,60,0.18); }
+  .cc-btn--xl i { width: 19px; height: 19px; }
 
   /* ===== SECTION ===== */
   .cc-section { padding: 80px 0; }
@@ -311,6 +321,7 @@ inlineStyle: |
   @media (max-width: 1100px) {
     .cc-hero__grid { grid-template-columns: 1fr; gap: 48px; }
     .cc-hero__car { max-width: 520px; }
+    .cc-hero__feat { aspect-ratio: 16/11; }
     .cc-stock-grid, .cc-cats, .cc-values { grid-template-columns: repeat(2, 1fr); }
     .cc-footer__grid { grid-template-columns: 1fr 1fr; }
     .cc-about { grid-template-columns: 1fr; padding: 32px; gap: 32px; }
@@ -351,9 +362,9 @@ inlineStyle: |
         Da dúvida ao stand, sem complicações.
       </p>
       <div class="cc-hero__actions">
-        <a class="cc-btn cc-btn--yellow cc-btn--lg" href="{{ site.basePath }}/artigos.html"><i data-lucide="book-open"></i>Começar a ler</a>
-        <a class="cc-btn cc-btn--ghost-light cc-btn--lg" href="#ferramentas"><i data-lucide="calculator"></i>Simuladores gratuitos</a>
-        <a class="cc-btn cc-btn--ghost-light cc-btn--lg" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock</a>
+        <a class="cc-btn cc-btn--yellow cc-btn--xl" href="{{ site.basePath }}/artigos.html"><i data-lucide="book-open"></i>Começar a ler</a>
+        <a class="cc-btn cc-btn--ghost-light" href="#ferramentas"><i data-lucide="calculator"></i>Simuladores gratuitos</a>
+        <a class="cc-btn cc-btn--ghost-light" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock</a>
       </div>
       <div class="cc-hero__stats">
         <div class="cc-stat"><strong>50+</strong><span>Viaturas em stock</span></div>
@@ -361,15 +372,17 @@ inlineStyle: |
         <div class="cc-stat"><strong>5★</strong><span>Sem pressão</span></div>
       </div>
     </div>
-    <a class="cc-hero__car" href="{{ stock[0].url }}" target="_blank" rel="noopener noreferrer">
-      <div class="cc-hero__car-img" style="background-image:url('{{ stock[0].image }}');"></div>
+    {% for featured in collections.featuredArticle %}
+    <a class="cc-hero__car cc-hero__feat" href="{{ site.basePath }}{{ featured.url }}">
+      <div class="cc-hero__car-img" style="background-image:url('{{ featured.data.heroImage }}');"></div>
       <div class="cc-hero__car-body">
-        <span class="cc-hero__car-eyebrow"><i data-lucide="star"></i>Em destaque no stand</span>
-        <p class="cc-hero__car-title">{{ stock[0].title }}</p>
-        <p class="cc-hero__car-meta">{{ stock[0].year }} · {{ stock[0].km }} · {{ stock[0].fuel }} · Garantia incluída</p>
-        <span class="cc-hero__car-price">{{ stock[0].price }}</span>
+        <span class="cc-hero__car-eyebrow"><i data-lucide="star"></i>Artigo em destaque · {{ featured.data.category }}</span>
+        <p class="cc-hero__feat-title">{{ featured.data.title }}</p>
+        <p class="cc-hero__car-meta">{{ featured.data.readTime }}</p>
+        <span class="cc-hero__feat-cta">Ler artigo<i data-lucide="arrow-right"></i></span>
       </div>
     </a>
+    {% endfor %}
   </div>
   <div class="cc-hero__chevron" aria-hidden="true"></div>
 </section>
@@ -464,27 +477,29 @@ inlineStyle: |
       <p class="cc-section__sub">Conteúdo útil para quem está a ponderar comprar — escrito sem jargão e sem agenda de venda.</p>
     </div>
     <div class="cc-articles">
-      {% for featured in collections.featuredArticle %}
-      <a href="{{ site.basePath }}{{ featured.url }}" class="cc-art-hero">
+      {% set lead = collections.homeArticles[0] %}
+      {% if lead %}
+      <a href="{{ site.basePath }}{{ lead.url }}" class="cc-art-hero">
         <div class="cc-art-hero__media">
-          <div class="cc-art-hero__img" style="background-image:url('{{ featured.data.heroImage }}');"></div>
+          <div class="cc-art-hero__img" style="background-image:url('{{ lead.data.heroImage }}');"></div>
         </div>
         <div class="cc-art-hero__body">
-          <span class="cc-art-eyebrow">{{ featured.data.category }}</span>
-          <h3 class="cc-art-hero__title">{{ featured.data.title }}</h3>
-          <p class="cc-art-hero__excerpt">{{ featured.data.description }}</p>
+          <span class="cc-art-eyebrow">{{ lead.data.category }}</span>
+          <h3 class="cc-art-hero__title">{{ lead.data.title }}</h3>
+          <p class="cc-art-hero__excerpt">{{ lead.data.description }}</p>
           <div class="cc-art-hero__meta">
-            <span>{{ featured.data.readTime }}</span>
+            <span>{{ lead.data.readTime }}</span>
             <span>·</span>
-            <span>{{ featured.data.category }}</span>
+            <span>{{ lead.data.category }}</span>
             <span>·</span>
-            <span>{{ featured.date | dateReadable }}</span>
+            <span>{{ lead.date | dateReadable }}</span>
           </div>
         </div>
       </a>
-      {% endfor %}
+      {% endif %}
       <div class="cc-art-list">
         {% for art in collections.homeArticles %}
+        {% if loop.index0 > 0 %}
         <a href="{{ site.basePath }}{{ art.url }}" class="cc-art-mini">
           <div class="cc-art-mini__media" style="background-image:url('{{ art.data.heroImage }}');"></div>
           <div class="cc-art-mini__body">
@@ -493,6 +508,7 @@ inlineStyle: |
             <p class="cc-art-mini__excerpt">{{ art.data.description | truncate(90) }}</p>
           </div>
         </a>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
