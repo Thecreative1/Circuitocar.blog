@@ -14,6 +14,8 @@ category: "Importação"
 readTime: "9 min de leitura"
 utmCampaign: "blog_importacao"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas"
+inventoryLabel: "Ver stock disponível"
 
 lead: "Antes de importar, é importante perceber se compensa. Muitos compradores não encontram em Portugal exatamente o carro que procuram — a motorização certa, a versão equipada, o histórico de manutenção que querem. A solução parece óbvia: ir buscar lá fora. Mas o preço que aparece no anúncio estrangeiro não é o custo final em Portugal."
 

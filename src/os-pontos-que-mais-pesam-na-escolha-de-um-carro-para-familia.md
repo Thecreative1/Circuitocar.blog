@@ -14,6 +14,8 @@ category: "Guia de Compra"
 readTime: "5 min de leitura"
 utmCampaign: "blog_familia"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas"
+inventoryLabel: "Ver carros de família"
 
 lead: "Quando a compra passa a servir uma família inteira, o critério muda. Espaço, bagageira, conforto, acessos e custos do dia a dia começam a pesar mais do que um anúncio bonito ou um detalhe estético."
 

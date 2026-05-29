@@ -14,6 +14,8 @@ category: "Atualidade"
 readTime: "8 min de leitura"
 utmCampaign: "blog_irao_combustiveis"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas"
+inventoryLabel: "Ver stock disponível"
 
 lead: "Quando há guerra no Médio Oriente, a primeira reação costuma ser olhar para as notícias. Mas para quem está a escolher carro, a pergunta prática é outra: isto pode mexer no custo de usar o carro todos os meses? A resposta curta é sim, sobretudo pela incerteza nos combustíveis."
 

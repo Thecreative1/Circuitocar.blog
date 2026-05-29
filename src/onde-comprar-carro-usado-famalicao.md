@@ -14,6 +14,8 @@ category: "Guia Local"
 readTime: "8 min de leitura"
 utmCampaign: "blog_leads"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas"
+inventoryLabel: "Ver stock em Famalicão"
 
 lead: "Quem procura carro usado na zona de Vila Nova de Famalicão quer basicamente três coisas: **não perder tempo**, **não cair numa má compra** e **falar com alguém que saiba orientar**. Este guia foi pensado exatamente para isso."
 

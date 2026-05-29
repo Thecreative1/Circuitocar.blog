@@ -15,6 +15,8 @@ featured: true
 readTime: "7 min de leitura"
 utmCampaign: "blog_opel_gt"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas"
+inventoryLabel: "Ver desportivos disponíveis"
 
 lead: "Quando se diz Opel, pensa-se em carros práticos, famílias, Corsa de cidade. Raramente se pensa em 264 cavalos, tração traseira e caixa manual de 5 velocidades num roadster de dois lugares. O Opel GT de 2009 é exactamente isso — e é um dos desportivos usados mais subestimados que existem."
 

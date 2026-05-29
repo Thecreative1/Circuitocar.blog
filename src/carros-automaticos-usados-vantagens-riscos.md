@@ -14,6 +14,8 @@ category: "Guia de Compra"
 readTime: "6 min de leitura"
 utmCampaign: "blog_automaticos"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas?caixa=automatica"
+inventoryLabel: "Ver automáticos disponíveis"
 
 lead: "Os carros automáticos já não são uma exceção. Para muita gente, são a forma mais confortável de viver o dia a dia. O importante é perceber quando isso compensa mêsmo e o que deve ser verificado antes de comprar usado."
 

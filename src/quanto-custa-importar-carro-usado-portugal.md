@@ -14,6 +14,8 @@ category: "Importação"
 readTime: "7 min de leitura"
 utmCampaign: "blog_custos_importacao"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas"
+inventoryLabel: "Ver stock disponível"
 
 lead: "A ideia parece simples: encontrar um carro mais barato lá fora e poupar algum dinheiro. E pode funcionar — mas só se fizer as contas certas antes de avançar. Neste artigo explicamos tudo o que vai pagar, com valores reais e verificados."
 

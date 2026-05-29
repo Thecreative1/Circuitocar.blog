@@ -14,6 +14,8 @@ category: "Híbridos"
 readTime: "7 min de leitura"
 utmCampaign: "blog_hibrido"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+inventoryUrl: "https://www.circuitocar.pt/viaturas?combustivel=hibrido"
+inventoryLabel: "Ver híbridos disponíveis"
 
 lead: "O interesse por híbridos usados continua forte porque muita gente quer baixar consumos sem dar o salto direto para o elétrico. A questão é perceber se faz sentido para o uso real e para o orçamento, não apenas seguir tendência."
 
