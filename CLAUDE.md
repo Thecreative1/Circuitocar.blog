@@ -126,6 +126,30 @@ Consequences when adding an article:
 - A new article with today's `date` and no `featured` flag **automatically becomes the hero** — usually what you want.
 - Only ONE article should ever have `featured: true`. If an old one has it set, the newest won't take the hero. Remove the stale flag if you want newest-wins behaviour.
 
+### Homepage hero — featured-article card (`.cc-hero__feat`)
+
+The hero right column is an **editorial card of the featured article** (not a stock car — this is a blog). It reuses `.cc-hero__car` styling plus a `.cc-hero__feat` modifier:
+- The card is **landscape `4/3`** (`16/11` on mobile). Hero photos from the inventory are landscape — a portrait card crops the car badly. Keep landscape, and tune `background-position` (currently `center 42%`) if a new photo sits high/low.
+- Pulls `featured.data.heroImage`, `.category`, `.title`, `.readTime`; CTA is a yellow "Ler artigo →" pill (`.cc-hero__feat-cta`).
+- A stronger gradient keeps the title readable over any photo.
+- Lead-gen is preserved by the "Ver stock" hero button + the "Stock em destaque" section below — the hero itself stays content-first.
+
+### Hero button hierarchy
+
+Three actions, clear visual priority (don't make them equal weight):
+1. **Começar a ler** — primary, `cc-btn cc-btn--yellow cc-btn--xl` (largest, glowing).
+2. **Simuladores gratuitos** — secondary, `cc-btn cc-btn--ghost-light` (regular size).
+3. **Ver stock** — tertiary, `cc-btn cc-btn--ghost-light`.
+
+### Verifying a visual change before pushing
+
+`npm run build` writes to `_site/`. To eyeball a layout change, serve `_site/` and screenshot — relative `/css` and `/img` paths only resolve over HTTP, not `file://`:
+```
+npx http-server _site -p 8199 -s
+# then Playwright: goto http://127.0.0.1:8199/ , screenshot (optionally .locator('.cc-hero__feat'))
+```
+Clean up temp `.cjs`/`.png` files and kill the server afterwards.
+
 ### After pushing — deploy timing
 
 GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns **404** even though the source is committed. Don't panic-debug a fresh 404 — wait, then re-check. `git pull --no-rebase` before push (Actions auto-commits the build).
