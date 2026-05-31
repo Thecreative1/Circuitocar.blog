@@ -1,0 +1,75 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness", "AutoDealer"],
+      "@id": "{{ site.url }}/#organization",
+      "name": "Circuito Car",
+      "url": "{{ site.mainSite }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/img/logo-yellow.png"
+      },
+      "image": "{{ site.url }}/img/og-blog.svg",
+      "description": {{ site.description | dump | safe }},
+      "priceRange": "€€",
+      "telephone": "{{ site.contact.marco.phone }}",
+      "email": "geral@circuitocar.pt",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ site.address.street | dump | safe }},
+        "addressLocality": {{ site.address.city | dump | safe }},
+        "addressRegion": {{ site.address.region | dump | safe }},
+        "postalCode": {{ site.address.zip | dump | safe }},
+        "addressCountry": "PT"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Joane" },
+        { "@type": "City", "name": "Vila Nova de Famalicão" },
+        { "@type": "City", "name": "Braga" },
+        { "@type": "City", "name": "Guimarães" },
+        { "@type": "AdministrativeArea", "name": "Vale do Ave" }
+      ],
+      "sameAs": [
+        "{{ site.mainSite }}",
+        "{{ site.url }}/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "name": {{ site.contact.marco.name | dump | safe }},
+          "telephone": "{{ site.contact.marco.phone }}",
+          "contactType": "customer support",
+          "availableLanguage": "pt-PT"
+        },
+        {
+          "@type": "ContactPoint",
+          "name": {{ site.contact.andre.name | dump | safe }},
+          "telephone": "{{ site.contact.andre.phone }}",
+          "contactType": "sales",
+          "availableLanguage": "pt-PT"
+        },
+        {
+          "@type": "ContactPoint",
+          "name": {{ site.contact.filipe.name | dump | safe }},
+          "telephone": "{{ site.contact.filipe.phone }}",
+          "contactType": "technical support",
+          "availableLanguage": "pt-PT"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": {{ site.title | dump | safe }},
+      "description": {{ site.description | dump | safe }},
+      "inLanguage": "pt-PT",
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      }
+    }
+  ]
+}
+</script>

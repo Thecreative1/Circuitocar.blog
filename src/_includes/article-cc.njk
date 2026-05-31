@@ -14,15 +14,22 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="pt_PT" />
+  <meta property="article:published_time" content="{{ date | dateIso }}" />
+  <meta property="article:modified_time" content="{{ (lastmod if lastmod else date) | dateIso }}" />
+  <meta property="article:section" content="{{ category }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta name="twitter:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
+  <meta name="author" content="{{ authorName if authorName else 'Circuito Car' }}" />
+  <meta name="publisher" content="Circuito Car" />
   <meta name="theme-color" content="#0A0B0D" />
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
   <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
   <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
+  <link rel="alternate" type="text/plain" title="AI site guide" href="{{ site.url }}/llms.txt" />
   {% include "google-tag.njk" %}
+  {% include "schema-site.njk" %}
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,19 +42,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": {{ title | dump | safe }},
-    "description": {{ description | dump | safe }},
-    "datePublished": "{{ date | dateIso }}",
-    "dateModified": "{{ (lastmod if lastmod else date) | dateIso }}",
-    "url": "{{ site.url }}{{ page.url }}",
-    "image": "{{ heroImage if heroImage else site.logo }}",
-    "author": { "@type": "Organization", "name": "Circuito Car" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Circuito Car",
-      "logo": { "@type": "ImageObject", "url": "{{ site.url }}/img/logo-yellow.png" }
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}#webpage",
+        "url": "{{ site.url }}{{ page.url }}",
+        "name": {{ (pageTitle if pageTitle else title) | dump | safe }},
+        "description": {{ description | dump | safe }},
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "about": { "@id": "{{ site.url }}/#organization" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": {{ (ogImage if ogImage else (heroImage if heroImage else site.logo)) | dump | safe }}
+        },
+        "breadcrumb": { "@id": "{{ site.url }}{{ page.url }}#breadcrumb" },
+        "inLanguage": "pt-PT"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ site.url }}{{ page.url }}#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Circuito Car Blog",
+            "item": "{{ site.url }}/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Artigos",
+            "item": "{{ site.url }}/artigos.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": {{ title | dump | safe }},
+            "item": "{{ site.url }}{{ page.url }}"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "{{ site.url }}{{ page.url }}#article",
+        "mainEntityOfPage": { "@id": "{{ site.url }}{{ page.url }}#webpage" },
+        "headline": {{ title | dump | safe }},
+        "description": {{ description | dump | safe }},
+        "datePublished": "{{ date | dateIso }}",
+        "dateModified": "{{ (lastmod if lastmod else date) | dateIso }}",
+        "url": "{{ site.url }}{{ page.url }}",
+        "image": {
+          "@type": "ImageObject",
+          "url": {{ (ogImage if ogImage else (heroImage if heroImage else site.logo)) | dump | safe }}
+        },
+        "articleSection": {{ category | dump | safe }},
+        "inLanguage": "pt-PT",
+        "author": { "@id": "{{ site.url }}/#organization" },
+        "publisher": { "@id": "{{ site.url }}/#organization" },
+        "isPartOf": { "@id": "{{ site.url }}/#website" }
+      }
+    ]
   }
   </script>
   {% if schemaOrg %}{{ schemaOrg | safe }}{% endif %}

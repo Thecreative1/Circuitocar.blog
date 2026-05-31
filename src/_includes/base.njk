@@ -18,8 +18,12 @@
   <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta name="twitter:image" content="{{ heroImage if heroImage else site.logo }}" />
+  <meta name="author" content="Circuito Car" />
+  <meta name="publisher" content="Circuito Car" />
   <meta name="theme-color" content="#090c11" />
+  <link rel="alternate" type="text/plain" title="AI site guide" href="{{ site.url }}/llms.txt" />
   {% include "google-tag.njk" %}
+  {% include "schema-site.njk" %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">

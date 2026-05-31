@@ -24,18 +24,65 @@ permalink: simulador_isv.html
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
   <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
   <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
+  <link rel="alternate" type="text/plain" title="AI site guide" href="{{ site.url }}/llms.txt" />
   {% include "google-tag.njk" %}
+  {% include "schema-site.njk" %}
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "{{ site.url }}/simulador_isv.html",
-    "url": "{{ site.url }}/simulador_isv.html",
-    "name": "Simulador de ISV 2026 | Circuito Car",
-    "description": "Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gratuito, sem registo.",
-    "isPartOf": { "@id": "{{ site.url }}/#website" },
-    "inLanguage": "pt-PT"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}/simulador_isv.html#webpage",
+        "url": "{{ site.url }}/simulador_isv.html",
+        "name": "Simulador de ISV 2026 | Circuito Car",
+        "description": "Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gratuito, sem registo.",
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "about": { "@id": "{{ site.url }}/simulador_isv.html#tool" },
+        "breadcrumb": { "@id": "{{ site.url }}/simulador_isv.html#breadcrumb" },
+        "inLanguage": "pt-PT"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ site.url }}/simulador_isv.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Circuito Car Blog",
+            "item": "{{ site.url }}/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Simulador de ISV 2026",
+            "item": "{{ site.url }}/simulador_isv.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "{{ site.url }}/simulador_isv.html#tool",
+        "name": "Simulador de ISV 2026",
+        "url": "{{ site.url }}/simulador_isv.html",
+        "description": "Ferramenta gratuita para estimar o ISV de carros usados importados para Portugal com base em cilindrada, CO2, combustivel, norma de emissoes e antiguidade.",
+        "applicationCategory": "TaxApplication",
+        "operatingSystem": "Web",
+        "isAccessibleForFree": true,
+        "inLanguage": "pt-PT",
+        "publisher": { "@id": "{{ site.url }}/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "potentialAction": {
+          "@type": "UseAction",
+          "target": "{{ site.url }}/simulador_isv.html#simulador"
+        }
+      }
+    ]
   }
   </script>
 
