@@ -6,30 +6,38 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ site.url }}/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>{{ site.url }}/artigos.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>{{ site.url }}/circuitocar_simulador_credito.html</loc>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ site.url }}/simulador_retoma.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/simulador_isv.html</loc>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   {%- for post in collections.articles %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date | dateIso }}</lastmod>
+    <lastmod>{{ (post.data.lastmod if post.data.lastmod else post.date) | dateIso }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
