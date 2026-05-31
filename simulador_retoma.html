@@ -21,6 +21,7 @@
   <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
   <link rel="apple-touch-icon" href="/img/logo-yellow.png" />
   <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="https://circuitocar.blog/rss.xml" />
+  <link rel="alternate" type="text/plain" title="AI site guide" href="https://circuitocar.blog/llms.txt" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SVM6PQS2C"></script>
 <script>
@@ -31,6 +32,82 @@
   gtag('config', 'G-8SVM6PQS2C');
 </script>
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness", "AutoDealer"],
+      "@id": "https://circuitocar.blog/#organization",
+      "name": "Circuito Car",
+      "url": "https://www.circuitocar.pt",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://circuitocar.blog/img/logo-yellow.png"
+      },
+      "image": "https://circuitocar.blog/img/og-blog.svg",
+      "description": "Guias práticos, simuladores de crédito e retoma e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga, Guimarães e Vale do Ave.",
+      "priceRange": "€€",
+      "telephone": "+351922017034",
+      "email": "geral@circuitocar.pt",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua do Relógio nº 430",
+        "addressLocality": "Joane",
+        "addressRegion": "V. N. Famalicão",
+        "postalCode": "4770-245",
+        "addressCountry": "PT"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Joane" },
+        { "@type": "City", "name": "Vila Nova de Famalicão" },
+        { "@type": "City", "name": "Braga" },
+        { "@type": "City", "name": "Guimarães" },
+        { "@type": "AdministrativeArea", "name": "Vale do Ave" }
+      ],
+      "sameAs": [
+        "https://www.circuitocar.pt",
+        "https://circuitocar.blog/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "name": "Marco Marinho",
+          "telephone": "+351922017034",
+          "contactType": "customer support",
+          "availableLanguage": "pt-PT"
+        },
+        {
+          "@type": "ContactPoint",
+          "name": "André Silva",
+          "telephone": "+351911899092",
+          "contactType": "sales",
+          "availableLanguage": "pt-PT"
+        },
+        {
+          "@type": "ContactPoint",
+          "name": "Filipe Rodrigues",
+          "telephone": "+351964197262",
+          "contactType": "technical support",
+          "availableLanguage": "pt-PT"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://circuitocar.blog/#website",
+      "url": "https://circuitocar.blog/",
+      "name": "Circuito Car Blog",
+      "description": "Guias práticos, simuladores de crédito e retoma e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga, Guimarães e Vale do Ave.",
+      "inLanguage": "pt-PT",
+      "publisher": {
+        "@id": "https://circuitocar.blog/#organization"
+      }
+    }
+  ]
+}
+</script>
+
 
   <script type="application/ld+json">
   {
@@ -38,15 +115,58 @@
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://circuitocar.blog/simulador_retoma.html",
+        "@id": "https://circuitocar.blog/simulador_retoma.html#webpage",
         "url": "https://circuitocar.blog/simulador_retoma.html",
         "name": "Simulador de Retoma | Circuito Car",
         "description": "Simulador gratuito de retoma para ter uma ideia de quanto vale o seu carro atual antes de visitar o stand.",
         "isPartOf": { "@id": "https://circuitocar.blog/#website" },
+        "about": { "@id": "https://circuitocar.blog/simulador_retoma.html#tool" },
+        "breadcrumb": { "@id": "https://circuitocar.blog/simulador_retoma.html#breadcrumb" },
         "inLanguage": "pt-PT"
       },
       {
+        "@type": "BreadcrumbList",
+        "@id": "https://circuitocar.blog/simulador_retoma.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Circuito Car Blog",
+            "item": "https://circuitocar.blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Simulador de Retoma",
+            "item": "https://circuitocar.blog/simulador_retoma.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://circuitocar.blog/simulador_retoma.html#tool",
+        "name": "Simulador de Retoma",
+        "url": "https://circuitocar.blog/simulador_retoma.html",
+        "description": "Ferramenta gratuita para estimar uma faixa indicativa de valor de retoma antes de visitar o stand.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "isAccessibleForFree": true,
+        "inLanguage": "pt-PT",
+        "publisher": { "@id": "https://circuitocar.blog/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "potentialAction": {
+          "@type": "UseAction",
+          "target": "https://circuitocar.blog/simulador_retoma.html#simulador"
+        }
+      },
+      {
         "@type": "FAQPage",
+        "@id": "https://circuitocar.blog/simulador_retoma.html#faq",
+        "isPartOf": { "@id": "https://circuitocar.blog/simulador_retoma.html#webpage" },
         "mainEntity": [
           {
             "@type": "Question",
