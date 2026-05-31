@@ -53,12 +53,12 @@ collections:
         name: category
         widget: select
         options:
-          - { label: "Família e Dia a Dia",   value: "Família e Dia a Dia" }
-          - { label: "Condução e Cidade",      value: "Condução e Cidade" }
-          - { label: "Híbridos e Elétricos",   value: "Híbridos e Elétricos" }
-          - { label: "Guias Locais",           value: "Guias Locais" }
-          - { label: "Compra e Venda",         value: "Compra e Venda" }
-          - { label: "Manutenção",             value: "Manutenção" }
+          - { label: "Importação",      value: "Importação" }
+          - { label: "Atualidade",      value: "Atualidade" }
+          - { label: "Guia de Compra",  value: "Guia de Compra" }
+          - { label: "Desportivos",     value: "Desportivos" }
+          - { label: "Guia Local",      value: "Guia Local" }
+          - { label: "Híbridos",        value: "Híbridos" }
 
       - label: "Descrição (SEO)"
         name: description
