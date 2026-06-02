@@ -29,12 +29,12 @@ sidebarTitle: "Não encontra o carro que procura?"
 sidebarDescription: "Diga-nos que viatura tem em mente — marca, modelo, motorização, versão. Analisamos opções no mercado nacional e, quando fizer sentido, estudamos a importação consigo."
 
 relatedArticles:
+  - title: "Quanto custa importar um carro usado para Portugal: a conta real"
+    url: "quanto-custa-importar-carro-usado-portugal.html"
+  - title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"
+    url: "financiamento-carro-usado-portugal.html"
   - title: "Onde comprar carro usado em Famalicão com mais confiança"
     url: "onde-comprar-carro-usado-famalicao.html"
-  - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
-    url: "carros-automaticos-usados-vantagens-riscos.html"
-  - title: "Vale a pena comprar um híbrido usado em 2026?"
-    url: "vale-a-pena-comprar-hibrido-usado-2026.html"
 
 andreDescription: "Para analisar propostas, financiamento e condições de aquisição."
 filipeDescription: "Para questões sobre o estado técnico, mecânica e historial da viatura."

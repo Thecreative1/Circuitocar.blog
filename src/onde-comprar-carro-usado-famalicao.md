@@ -38,8 +38,8 @@ sidebarTitle: "A 10 minutos de Famalicão"
 sidebarDescription: "Visita o stand sem marcação ou fala com a equipa por WhatsApp para preparar uma viatura específica para teste."
 
 relatedArticles:
-  - title: "Guerra no Irão: como a instabilidade pode influenciar a escolha do carro"
-    url: "guerra-irao-impacto-escolha-carro-usado.html"
+  - title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"
+    url: "financiamento-carro-usado-portugal.html"
   - title: "Vale a pena comprar um híbrido usado em 2026?"
     url: "vale-a-pena-comprar-hibrido-usado-2026.html"
   - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"

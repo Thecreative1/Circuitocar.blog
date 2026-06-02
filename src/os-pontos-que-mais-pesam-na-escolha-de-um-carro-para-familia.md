@@ -38,12 +38,12 @@ sidebarTitle: "Decidir com uso real"
 sidebarDescription: "Este artigo ajuda a filtrar ruído e a pensar em espaço, conforto e custos com mais clareza."
 
 relatedArticles:
+  - title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"
+    url: "financiamento-carro-usado-portugal.html"
   - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
     url: "carros-automaticos-usados-vantagens-riscos.html"
   - title: "Vale a pena comprar um híbrido usado em 2026?"
     url: "vale-a-pena-comprar-hibrido-usado-2026.html"
-  - title: "Onde comprar carro usado em Famalicão com mais confiança"
-    url: "onde-comprar-carro-usado-famalicao.html"
 
 andreDescription: "Mais indicado para enquadrar o tipo de viatura certo para a rotina da família."
 filipeDescription: "Mais indicado para esclarecer dúvidas sobre espaço, características e adequação da viatura."

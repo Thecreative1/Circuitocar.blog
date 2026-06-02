@@ -38,10 +38,10 @@ sidebarTitle: "Saiba o valor antes de vir"
 sidebarDescription: "Use o simulador de retoma para ter uma estimativa em 2 minutos. Depois confirmamos o valor no stand, sem compromisso."
 
 relatedArticles:
+  - title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"
+    url: "financiamento-carro-usado-portugal.html"
   - title: "Onde comprar carro usado em Famalicão com mais confiança"
     url: "onde-comprar-carro-usado-famalicao.html"
-  - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
-    url: "carros-automaticos-usados-vantagens-riscos.html"
   - title: "Os pontos que mais pesam na escolha de um carro para família"
     url: "os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html"
 
