@@ -28,6 +28,8 @@ inventoryLabel: "Ver stock disponível"
 sidebarBadge: "Ferramenta gratuita"
 sidebarTitle: "Simule a sua prestação em 2 minutos"
 sidebarDescription: "Use o simulador de crédito para ver a prestação mensal estimada, sem compromisso. Depois a equipa confirma os valores reais com o financiamento disponível."
+sidebarUrl: "/circuitocar_simulador_credito.html"
+sidebarUrlLabel: "Abrir simulador de crédito"
 sidebarWhatsappMsg: "Olá, quero simular o financiamento de um carro usado. Podem ajudar-me?"
 
 topbarLeft: "Guia de financiamento — perceba TAN, TAEG, entrada e prazo antes de assinar."

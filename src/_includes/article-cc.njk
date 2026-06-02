@@ -197,6 +197,9 @@
         <span class="cc-side-card__eyebrow">{{ sidebarBadge }}</span>
         <h3>{{ sidebarTitle }}</h3>
         <p>{{ sidebarDescription }}</p>
+        {% if sidebarUrl %}
+        <a class="cc-btn cc-btn--yellow" style="width:100%;justify-content:center;" href="{{ sidebarUrl }}"><i data-lucide="arrow-right"></i>{{ sidebarUrlLabel if sidebarUrlLabel else "Abrir ferramenta" }}</a>
+        {% endif %}
       </div>
 
       <div class="cc-side-card">
