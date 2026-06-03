@@ -14,14 +14,14 @@ readTime: "5 min de leitura"
 utmCampaign: "local_seo_{{ city.slug }}"
 
 eleventyComputed:
-  pageTitle: "Carros Usados em {{ city.name }} | Circuito Car"
-  title: "Carros Usados em {{ city.name }}"
-  description: "Procura carros usados em {{ city.name }}? O stand Circuito Car em Joane, Famalicão, fica a apenas {{ city.distanceKm }} km — viaturas verificadas, garantia e financiamento próprio."
-  ogTitle: "Carros Usados em {{ city.name }} — Circuito Car"
-  ogDescription: "Stand de carros usados a {{ city.distanceKm }} km de {{ city.name }}. Viaturas verificadas, financiamento e garantia. Visite-nos em Joane, Famalicão."
+  pageTitle: "Carros Usados {{ city.pIn or 'em' }} {{ city.name }} | Circuito Car"
+  title: "Carros Usados {{ city.pIn or 'em' }} {{ city.name }}"
+  description: "Procura carros usados {{ city.pIn or 'em' }} {{ city.name }}? O stand Circuito Car em Joane, Famalicão, fica a apenas {{ city.distanceKm }} km — viaturas verificadas, garantia e financiamento próprio."
+  ogTitle: "Carros Usados {{ city.pIn or 'em' }} {{ city.name }} — Circuito Car"
+  ogDescription: "Stand de carros usados a {{ city.distanceKm }} km {{ city.pOf or 'de' }} {{ city.name }}. Viaturas verificadas, financiamento e garantia. Visite-nos em Joane, Famalicão."
   ogImage: "https://circuitocar.blog/img/stand-circuitocar.webp"
   heroImage: "https://circuitocar.blog/img/stand-circuitocar.webp"
-  lead: "Procura carros usados em {{ city.name }}? O Circuito Car fica em Joane, Famalicão — a apenas {{ city.distanceKm }} km. Viaturas verificadas, garantia e financiamento próprio."
+  lead: "Procura carros usados {{ city.pIn or 'em' }} {{ city.name }}? O Circuito Car fica em Joane, Famalicão — a apenas {{ city.distanceKm }} km. Viaturas verificadas, garantia e financiamento próprio."
   schemaOrg: |
     <script type="application/ld+json">
     {
@@ -56,15 +56,15 @@ eleventyComputed:
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Onde fica o stand Circuito Car em relação a {{ city.name }}?",
+          "name": "Onde fica o stand Circuito Car em relação {{ city.pTo or 'a' }} {{ city.name }}?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O stand Circuito Car fica em Joane, Vila Nova de Famalicão, a cerca de {{ city.distanceKm }} km de {{ city.name }} — aproximadamente {{ city.driveMin }} minutos de carro."
+            "text": "O stand Circuito Car fica em Joane, Vila Nova de Famalicão, a cerca de {{ city.distanceKm }} km {{ city.pOf or 'de' }} {{ city.name }} — aproximadamente {{ city.driveMin }} minutos de carro."
           }
         },
         {
           "@type": "Question",
-          "name": "A Circuito Car entrega carros usados em {{ city.name }}?",
+          "name": "A Circuito Car entrega carros usados {{ city.pIn or 'em' }} {{ city.name }}?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim. Para quem não se pode deslocar, falamos primeiro por WhatsApp ou telefone, enviamos fotos e vídeo detalhados, e podemos combinar uma entrega ou um test-drive na sua área. Contacte-nos para saber mais."
@@ -72,10 +72,10 @@ eleventyComputed:
         },
         {
           "@type": "Question",
-          "name": "O Circuito Car tem financiamento próprio para clientes de {{ city.name }}?",
+          "name": "O Circuito Car tem financiamento próprio para clientes {{ city.pOf or 'de' }} {{ city.name }}?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. Trabalhamos com várias entidades financeiras e temos propostas de crédito automóvel para compradores de todo o norte do país, incluindo {{ city.name }}. Use o nosso simulador de crédito gratuito para uma estimativa sem compromisso."
+            "text": "Sim. Trabalhamos com várias entidades financeiras e temos propostas de crédito automóvel para compradores de todo o norte do país, incluindo {{ city.art or '' }}{{ city.name }}. Use o nosso simulador de crédito gratuito para uma estimativa sem compromisso."
           }
         }
       ]
@@ -116,18 +116,18 @@ inlineStyle: |
 <section class="cc-local-hero">
   <div class="cc-local-hero__inner">
     <span class="cc-local-hero__eyebrow">Stand em Joane · Famalicão</span>
-    <h1>Carros Usados<br>em <em>{{ city.name }}</em></h1>
+    <h1>Carros Usados<br>{{ city.pIn or 'em' }} <em>{{ city.name }}</em></h1>
     <p class="cc-local-hero__sub">
       {{ city.blurb }} O Circuito Car, em Joane (Famalicão), fica a apenas <strong>{{ city.distanceKm }} km</strong> — viaturas verificadas, com garantia e financiamento próprio.
     </p>
     <div class="cc-local-hero__badges">
       <span class="cc-local-hero__badge"><i data-lucide="shield-check"></i>Viaturas com garantia</span>
       <span class="cc-local-hero__badge"><i data-lucide="credit-card"></i>Financiamento próprio</span>
-      <span class="cc-local-hero__badge"><i data-lucide="map-pin"></i>A {{ city.distanceKm }} km de {{ city.name }}</span>
+      <span class="cc-local-hero__badge"><i data-lucide="map-pin"></i>A {{ city.distanceKm }} km {{ city.pOf or 'de' }} {{ city.name }}</span>
     </div>
     <div class="cc-local-hero__actions">
       <a class="cc-btn cc-btn--yellow cc-btn--xl" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=local_hero&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock disponível</a>
-      <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20estou%20em%20{{ city.name | urlencode }}%20%E2%80%94%20queria%20saber%20mais%20sobre%20as%20viaturas%20dispon%C3%ADveis.&utm_source=blog&utm_medium=local_hero_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Falar por WhatsApp</a>
+      <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20estou%20{{ city.pIn or 'em' }}%20{{ city.name | urlencode }}%20%E2%80%94%20queria%20saber%20mais%20sobre%20as%20viaturas%20dispon%C3%ADveis.&utm_source=blog&utm_medium=local_hero_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Falar por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -139,10 +139,10 @@ inlineStyle: |
 
     <div class="cc-local-dist">
       <i data-lucide="navigation"></i>
-      De <strong>{{ city.name }}</strong> ao stand Circuito Car: <strong>~{{ city.distanceKm }} km</strong> · <strong>~{{ city.driveMin }} min</strong> de carro
+      {{ (city.pOf or 'de') | capitalize }} <strong>{{ city.name }}</strong> ao stand Circuito Car: <strong>~{{ city.distanceKm }} km</strong> · <strong>~{{ city.driveMin }} min</strong> de carro
     </div>
 
-    <h2>Porque escolher a Circuito Car em {{ city.name }}?</h2>
+    <h2>Porque escolher a Circuito Car {{ city.pIn or 'em' }} {{ city.name }}?</h2>
     <p>{{ city.localContext }}</p>
     <p>
       Não é um stand impessoal. É uma equipa pequena, especializada, com stock rotativo de carros usados verificados — sempre com garantia e com possibilidade de financiamento próprio adaptado à sua situação.
@@ -161,9 +161,9 @@ inlineStyle: |
     </p>
     <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=local_body&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock Circuito Car</a>
 
-    <h2 style="margin-top: 40px;">Financiamento para clientes de {{ city.name }}</h2>
+    <h2 style="margin-top: 40px;">Financiamento para clientes {{ city.pOf or 'de' }} {{ city.name }}</h2>
     <p>
-      Trabalhamos com várias entidades financeiras e conseguimos propostas de crédito automóvel adaptadas a diferentes perfis — incluindo para quem vem de {{ city.name }} e concelhos vizinhos. Use o simulador gratuito para ter uma estimativa sem compromisso.
+      Trabalhamos com várias entidades financeiras e conseguimos propostas de crédito automóvel adaptadas a diferentes perfis — incluindo para quem vem {{ city.pOf or 'de' }} {{ city.name }} e concelhos vizinhos. Use o simulador gratuito para ter uma estimativa sem compromisso.
     </p>
     <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i>Simulador de crédito gratuito</a>
 
@@ -173,7 +173,7 @@ inlineStyle: |
     </p>
     <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="refresh-cw"></i>Simular valor de retoma</a>
 
-    <h2 style="margin-top: 40px;">Como chegar de {{ city.name }}</h2>
+    <h2 style="margin-top: 40px;">Como chegar {{ city.pOf or 'de' }} {{ city.name }}</h2>
     <p>
       O stand fica em <strong>Rua do Relógio nº 430, 4770-245 Joane, Vila Nova de Famalicão</strong>.
     </p>
@@ -187,7 +187,7 @@ inlineStyle: |
       {% for nearSlug in city.nearbySlugs %}
         {% for c in cities %}
           {% if c.slug === nearSlug %}
-            <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/carros-usados-{{ c.slug }}.html"><i data-lucide="map-pin"></i>Carros usados em {{ c.name }}</a>
+            <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/carros-usados-{{ c.slug }}.html"><i data-lucide="map-pin"></i>Carros usados {{ c.pIn or 'em' }} {{ c.name }}</a>
           {% endif %}
         {% endfor %}
       {% endfor %}
@@ -199,17 +199,17 @@ inlineStyle: |
       <h2>Perguntas frequentes</h2>
 
       <div class="cc-local-faq__item">
-        <p class="cc-local-faq__q">Onde fica o stand Circuito Car em relação a {{ city.name }}?</p>
-        <p class="cc-local-faq__a">Em Joane, Vila Nova de Famalicão — a cerca de {{ city.distanceKm }} km e {{ city.driveMin }} minutos de {{ city.name }}. A morada exata é Rua do Relógio nº 430, 4770-245 Joane.</p>
+        <p class="cc-local-faq__q">Onde fica o stand Circuito Car em relação {{ city.pTo or 'a' }} {{ city.name }}?</p>
+        <p class="cc-local-faq__a">Em Joane, Vila Nova de Famalicão — a cerca de {{ city.distanceKm }} km e {{ city.driveMin }} minutos {{ city.pOf or 'de' }} {{ city.name }}. A morada exata é Rua do Relógio nº 430, 4770-245 Joane.</p>
       </div>
 
       <div class="cc-local-faq__item">
-        <p class="cc-local-faq__q">A Circuito Car entrega carros em {{ city.name }}?</p>
+        <p class="cc-local-faq__q">A Circuito Car entrega carros {{ city.pIn or 'em' }} {{ city.name }}?</p>
         <p class="cc-local-faq__a">Falamos primeiro por WhatsApp ou telefone, enviamos fotos e vídeo detalhados da viatura. Para quem não se pode deslocar de imediato, podemos combinar alternativas — contacte-nos para ver o que é possível na sua situação.</p>
       </div>
 
       <div class="cc-local-faq__item">
-        <p class="cc-local-faq__q">Têm financiamento para clientes de {{ city.name }}?</p>
+        <p class="cc-local-faq__q">Têm financiamento para clientes {{ city.pOf or 'de' }} {{ city.name }}?</p>
         <p class="cc-local-faq__a">Sim. Trabalhamos com várias entidades financeiras e apresentamos propostas de crédito automóvel para compradores de todo o norte do país. Use o <a href="{{ site.basePath }}/circuitocar_simulador_credito.html">simulador de crédito</a> para uma estimativa sem compromisso.</p>
       </div>
 
@@ -232,7 +232,7 @@ inlineStyle: |
     <div class="cc-side-card cc-side-card--stock">
       <span class="cc-side-card__eyebrow">Stock disponível</span>
       <h3>Ver viaturas disponíveis</h3>
-      <p>Viaturas verificadas, com garantia, disponíveis agora no stand em Joane — a {{ city.distanceKm }} km de {{ city.name }}.</p>
+      <p>Viaturas verificadas, com garantia, disponíveis agora no stand em Joane — a {{ city.distanceKm }} km {{ city.pOf or 'de' }} {{ city.name }}.</p>
       <a class="cc-btn cc-btn--yellow" style="width:100%;justify-content:center;" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=local_sidebar&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock</a>
     </div>
 
@@ -258,7 +258,7 @@ inlineStyle: |
         <p>Disponível para informações sobre viaturas, marcar visitas e esclarecer dúvidas de financiamento.</p>
         <div class="cta-actions">
           <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar</a>
-          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20estou%20em%20{{ city.name | urlencode }}%20%E2%80%94%20queria%20saber%20mais.&utm_source=blog&utm_medium=local_sidebar_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp</a>
+          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20estou%20{{ city.pIn or 'em' }}%20{{ city.name | urlencode }}%20%E2%80%94%20queria%20saber%20mais.&utm_source=blog&utm_medium=local_sidebar_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp</a>
         </div>
       </div>
     </div>

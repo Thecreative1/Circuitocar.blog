@@ -57,6 +57,15 @@ inlineStyle: |
   .cc-archive-back:hover { color: var(--cc-yellow-deep); }
   .cc-archive-back i { width: 16px; height: 16px; }
 
+  /* ── VER MAIS (mostra 3, expande o resto) ── */
+  .cc-archive-card--more { display: none; }
+  .cc-cat-section.is-expanded .cc-archive-card--more { display: flex; }
+  .cc-cat-more-wrap { display: flex; justify-content: center; margin-top: 28px; }
+  .cc-cat-section.is-expanded .cc-cat-more-wrap { display: none; }
+  .cc-cat-more { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-sm); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; color: var(--cc-ink); background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 12px 26px; cursor: pointer; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), color var(--cc-dur-fast) var(--cc-ease-out); }
+  .cc-cat-more:hover { border-color: var(--cc-blue-mid); color: var(--cc-yellow-deep); }
+  .cc-cat-more i { width: 16px; height: 16px; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     .cc-archive-grid { grid-template-columns: repeat(2, 1fr); }
@@ -125,7 +134,7 @@ inlineStyle: |
       </div>
       <div class="cc-archive-grid">
         {% for art in catArticles %}
-        <a class="cc-archive-card" href="{{ site.basePath }}{{ art.url }}">
+        <a class="cc-archive-card{% if loop.index > 3 %} cc-archive-card--more{% endif %}" href="{{ site.basePath }}{{ art.url }}">
           {% if art.data.heroImage %}
           <div class="cc-archive-card__media">
             <div class="cc-archive-card__img" style="background-image:url('{{ art.data.heroImage }}');"></div>
@@ -144,8 +153,28 @@ inlineStyle: |
         </a>
         {% endfor %}
       </div>
+      {% if catArticles.length > 3 %}
+      <div class="cc-cat-more-wrap">
+        <button type="button" class="cc-cat-more" aria-expanded="false">
+          Ver mais {{ catArticles.length - 3 }} {% if catArticles.length - 3 == 1 %}artigo{% else %}artigos{% endif %}
+          <i data-lucide="chevron-down"></i>
+        </button>
+      </div>
+      {% endif %}
     </section>
     {% endif %}
   {% endfor %}
 
 </div>
+
+<script>
+  document.querySelectorAll('.cc-cat-more').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var section = btn.closest('.cc-cat-section');
+      if (section) {
+        section.classList.add('is-expanded');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
