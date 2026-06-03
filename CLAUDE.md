@@ -21,7 +21,8 @@ src/
     base-cc.njk          ← base layout (homepage + artigos)
     article-cc.njk       ← article layout (all blog posts)
     article-share.njk    ← share bar component
-    google-tag.njk       ← analytics
+    reviews-cc.njk       ← reusable reviews/testimonials block (cities + avaliacoes)
+    google-tag.njk       ← Google Analytics + cookie-consent banner (consent-gated)
   css/
     circuito-car-tokens.css  ← design tokens (colors, type, spacing)
     article-cc.css           ← article + simulator shared styles
@@ -29,8 +30,12 @@ src/
     lucide.min.js        ← icon library
   img/                   ← static images
   _data/cities.js        ← city data for programmatic local SEO pages
+  _data/stock.json       ← homepage "stock em destaque" cards (curated manually)
+  _data/reviews.js       ← customer reviews (Google) for the reviews block
   *.njk                  ← page templates (homepage, artigos, simulators, city pages)
   cidade-carros-usados.njk ← pagination template → /carros-usados-{slug}.html (12 cities)
+  avaliacoes.njk         ← dedicated reviews page → /avaliacoes.html
+  privacidade.njk        ← privacy policy (RGPD) → /privacidade.html
   *.md                   ← blog articles (Markdown + front matter)
 _site/                   ← build output (never edit)
 ```
@@ -207,6 +212,59 @@ Each page emits two JSON-LD blocks (injected via `schemaOrg` in the template):
 
 Both are in `src/cidade-carros-usados.njk` — edit there to change schema structure across all cities at once.
 
+## Stock em destaque (homepage)
+
+The 4 cars in the homepage "Viaturas em destaque" section are **curated manually** in `src/_data/stock.json` — they are NOT pulled live from circuitocar.pt. `src/index.njk` renders them with `{% for car in stock %}` (the grid is 4 columns → keep exactly 4 entries).
+
+### How to update it
+
+1. Open **circuitocar.pt/viaturas** and pick cars that present well — **low mileage, recent, varied** (mix of price points, body types, fuel). The homepage is a first-impression trust surface.
+2. Replace the entries in `src/_data/stock.json`. Each car uses these exact fields:
+
+```json
+{
+  "eyebrow": "Baixa km",        // small label: "Baixa km" / "SUV familiar" / "Elétrico" / "Premium"
+  "title": "Citroën C3 1.2 PureTech Shine",
+  "year": "2022",
+  "fuel": "Gasolina",           // Gasolina / Gasóleo / Elétrico / Híbrido
+  "km": "23.185 Km",            // PT format: dot thousands + " Km"
+  "price": "12.495€",           // PT format: dot thousands + "€"
+  "image": "https://omeustand.pt/viaturas/224/<photoid>_omeustand_foto.webp",
+  "url": "https://www.circuitocar.pt/viatura/<slug>-ID<id>.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
+}
+```
+
+3. `npm run build` and check the homepage.
+
+### Rules / gotchas
+
+- **It goes stale.** Because it's hardcoded, sold cars keep showing. Refresh periodically and confirm each `url` still resolves (not a 404/sold car).
+- **Keep the featured set low-km and presentable.** No 200k+ km cars in the *destaque* — it contradicts "carros verificados" and kills trust (see what-went-wrong below).
+- Keep the `url` UTM suffix (`?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage`).
+- `image` comes from `omeustand.pt` (inventory CDN) — grab the real photo URL from the car's page.
+- The blog **cannot edit circuitocar.pt** — it can only read it. `stock.json` is the blog's own curated copy.
+
+## Avaliações (reviews)
+
+Customer reviews live in `src/_data/reviews.js` and render via the reusable include `src/_includes/reviews-cc.njk`.
+
+- Shown on **every city page** (limited to 3 + "Ver todas") and on the **dedicated page** `/avaliacoes.html` (all of them).
+- To add/edit: update the `items` array in `reviews.js` (`name`, `rating`, `text`) and `googleUrl`.
+- The include accepts `reviewsLimit` (number) and `reviewsHeading` (string), set with `{% set %}` before `{% include "reviews-cc.njk" %}`.
+- Stars are lucide SVGs styled in `article-cc.css` (`.cc-review__stars svg`) — so any page showing reviews needs `extraCss: article-cc.css`.
+- **Do NOT add `AggregateRating`/`Review` schema** to these — self-serving review markup violates Google's rules and risks a penalty. Display visually only, and don't invent an aggregate score.
+
+## Privacidade e consentimento de cookies (RGPD)
+
+The blog is its own web property: it collects data (simulators) and runs its own Google Analytics, so it has its own RGPD duties — independent of circuitocar.pt.
+
+- **Privacy policy:** `src/privacidade.njk` → `/privacidade.html`, linked in the footer of every page. Uses `base-cc.njk` + `extraCss: article-cc.css`.
+- **Cookie consent:** lives entirely in `src/_includes/google-tag.njk` (included by every layout + the 3 simulators). Google Analytics is **consent-gated** — it does NOT load until the visitor clicks "Aceitar"; "Recusar" must stay equally easy.
+  - Choice stored in `localStorage` key `cc_cookie_consent` (`granted`/`denied`).
+  - The privacy page has a "Repor preferências de cookies" button (`onclick="ccOpenCookieSettings()"`) to withdraw consent.
+- **Any new third-party script that sets cookies** (maps embed, pixel, chat widget) MUST also be gated behind consent in `google-tag.njk` — never load it unconditionally.
+- Legal identification (razão social, NIF, Livro de Reclamações, RAL) belongs to the **stand / circuitocar.pt** (the point of sale), not the blog. Add to the blog only if the stand provides the data.
+
 ## Adding a new tool/simulator
 
 1. Create `src/tool-name.njk` as a standalone HTML page (see `simulador_isv.njk` as the reference).
@@ -265,3 +323,11 @@ site.address.street / .zip / .city / .region
 ## What went wrong in the local SEO session (don't repeat)
 
 - Created city pages without `tags: article` and `category: "Guia Local"` — pages built fine but were completely invisible in `artigos.html` and all collections. Always set both when a page should appear in the blog index.
+
+## What went wrong in the trust/stock session (don't repeat)
+
+- Homepage "stock em destaque" was showing cars with 232.000 km and 272.000 km — a trust killer on the first scroll. The featured set in `src/_data/stock.json` must stay **low-km and presentable**, and it's curated manually so it goes stale — refresh periodically.
+- Tried to "edit circuitocar.pt" — the blog has no access and it's managed by a third party. The blog can only **read** the .pt stock and mirror a curated selection into `stock.json`.
+- A new `base-cc.njk` page (privacy) rendered with an **unstyled header/footer** because it was missing `extraCss: article-cc.css`. base-cc pages need that for the shared component styles (header, footer, dock, buttons, reviews).
+- Lucide replaces `<i data-lucide>` with `<svg>`, so CSS targeting `i` does NOT style the icon — target `svg` (e.g. star `fill`), or both `i, svg`.
+- New pages must be added to `src/sitemap.njk` if they aren't tagged `article` (the sitemap loops `collections.articles` + a few static entries). `avaliacoes.html` and `privacidade.html` were added manually there.
