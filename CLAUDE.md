@@ -28,7 +28,9 @@ src/
   assets/
     lucide.min.js        ← icon library
   img/                   ← static images
-  *.njk                  ← page templates (homepage, artigos, simulators)
+  _data/cities.js        ← city data for programmatic local SEO pages
+  *.njk                  ← page templates (homepage, artigos, simulators, city pages)
+  cidade-carros-usados.njk ← pagination template → /carros-usados-{slug}.html (12 cities)
   *.md                   ← blog articles (Markdown + front matter)
 _site/                   ← build output (never edit)
 ```
@@ -154,6 +156,57 @@ Clean up temp `.cjs`/`.png` files and kill the server afterwards.
 
 GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns **404** even though the source is committed. Don't panic-debug a fresh 404 — wait, then re-check. `git pull --no-rebase` before push (Actions auto-commits the build).
 
+## Local SEO — programmatic city pages
+
+City landing pages live in **one template + one data file** — never create individual files per city.
+
+| File | Role |
+|------|------|
+| `src/_data/cities.js` | Array of city objects (name, slug, distanceKm, driveMin, demonym, blurb, …) |
+| `src/cidade-carros-usados.njk` | Eleventy pagination template → generates one page per city |
+
+**Generated URLs:** `/carros-usados-braga.html`, `/carros-usados-guimaraes.html`, … (12 cities total)
+
+### Critical: tags + category are mandatory
+
+Every city page **must** have these in the template front matter so pages appear in `artigos.html` under the correct section:
+
+```yaml
+tags: article
+category: "Guia Local"
+date: 2026-01-15       # past date — prevents hijacking the homepage hero
+readTime: "5 min de leitura"
+```
+
+Without `tags: article` the pages are invisible to all collections. Without `category: "Guia Local"` they won't appear under any section in artigos. This was missed in the first attempt.
+
+### Adding a new city
+
+Add one object to `src/_data/cities.js`:
+
+```js
+{
+  name: "Cidade",
+  slug: "cidade",           // used in permalink + UTM
+  district: "Braga",
+  region: "Minho",
+  distanceKm: 25,
+  driveMin: 28,
+  demonym: "cidadense",     // e.g. "clientes cidadenses"
+  blurb: "One sentence about the city and why buyers come from there."
+}
+```
+
+Run `npm run build` — the new page is generated automatically. No other files to touch.
+
+### Schema on city pages
+
+Each page emits two JSON-LD blocks (injected via `schemaOrg` in the template):
+- `AutoDealer` with `areaServed: { @type: City, name: city.name }`
+- `FAQPage` with 3 city-specific Q&As (distance, delivery, financing)
+
+Both are in `src/cidade-carros-usados.njk` — edit there to change schema structure across all cities at once.
+
 ## Adding a new tool/simulator
 
 1. Create `src/tool-name.njk` as a standalone HTML page (see `simulador_isv.njk` as the reference).
@@ -208,3 +261,7 @@ site.address.street / .zip / .city / .region
 - Stock CTA URL came out malformed (`/viaturas&utm_source=...`). The template now picks `?` vs `&` automatically based on whether `inventoryUrl` already has a query string — keep `inventoryUrl` as a clean base URL.
 - Confused "article not on the blog" with "article not in the big hero". A new article shows in the hero only if it's the `featuredArticle` (see Homepage featured logic). An old article had a stale `featured: true` pinning the hero — removed it so newest wins.
 - `grep` on root HTML showed stale output because local `npm run build` writes to `_site/`, while GitHub Actions writes to root. To verify a local build, grep `_site/`, not the root HTML files.
+
+## What went wrong in the local SEO session (don't repeat)
+
+- Created city pages without `tags: article` and `category: "Guia Local"` — pages built fine but were completely invisible in `artigos.html` and all collections. Always set both when a page should appear in the blog index.
