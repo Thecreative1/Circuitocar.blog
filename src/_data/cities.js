@@ -7,7 +7,11 @@ module.exports = [
     distanceKm: 18,
     driveMin: 20,
     demonym: "bracarense",
-    blurb: "Capital do Minho e uma das cidades com maior crescimento do país, Braga tem uma procura crescente por viaturas usadas de qualidade."
+    blurb: "Capital do Minho e uma das cidades com maior crescimento do país, Braga tem uma procura crescente por viaturas usadas de qualidade.",
+    localContext: "Com uma população jovem, universitária e cada vez mais exigente, os compradores bracarenses valorizam viaturas com historial limpo, bom estado de conservação e financiamento acessível. A proximidade a Joane — menos de 20 minutos pela A3 — torna a deslocação ao stand muito simples.",
+    route: "A3",
+    routeFrom: "De Braga, siga pela A3 em direção a Porto e saia em Famalicão Norte / Joane. São cerca de 18 km e 20 minutos em condições normais de trânsito.",
+    nearbySlugs: ["barcelos", "guimaraes", "fafe"]
   },
   {
     name: "Guimarães",
@@ -17,7 +21,11 @@ module.exports = [
     distanceKm: 22,
     driveMin: 25,
     demonym: "vimaranense",
-    blurb: "Cidade berço de Portugal e pólo industrial do Vale do Ave, Guimarães concentra muitos compradores que procuram carros usados com garantia e financiamento próprio."
+    blurb: "Cidade berço de Portugal e pólo industrial do Vale do Ave, Guimarães concentra muitos compradores que procuram carros usados com garantia e financiamento próprio.",
+    localContext: "O tecido industrial de Guimarães — têxtil, calçado e metalurgia — gera uma procura constante por viaturas práticas e fiáveis. Muitos profissionais vimaranenses preferem deslocar-se a um stand de confiança no Vale do Ave a comprar numa plataforma online sem poder ver o carro pessoalmente.",
+    route: "A7",
+    routeFrom: "De Guimarães, tome a A7 em direção a Famalicão e saia em Joane / Famalicão Sul. O percurso demora cerca de 25 minutos com trânsito normal.",
+    nearbySlugs: ["braga", "vizela", "felgueiras"]
   },
   {
     name: "Barcelos",
@@ -27,7 +35,11 @@ module.exports = [
     distanceKm: 20,
     driveMin: 22,
     demonym: "barcelense",
-    blurb: "Barcelos é uma cidade do Minho com forte tradição e uma comunidade crescente que valoriza viaturas verificadas e com historial conhecido."
+    blurb: "Barcelos é uma cidade do Minho com forte tradição e uma comunidade crescente que valoriza viaturas verificadas e com historial conhecido.",
+    localContext: "Barcelos tem uma comunidade activa de compradores que percorre a N306 ou a A11 até Famalicão em busca de stands com atendimento personalizado. A ligação entre as duas cidades é rápida e sem portagens significativas, tornando a visita ao Circuito Car uma opção cómoda.",
+    route: "N306 / A11",
+    routeFrom: "De Barcelos, siga pela N306 em direção a Famalicão, ou tome a A11 e saia em Famalicão. O percurso demora cerca de 22 minutos.",
+    nearbySlugs: ["braga", "povoa-de-varzim", "trofa"]
   },
   {
     name: "Santo Tirso",
@@ -37,7 +49,11 @@ module.exports = [
     distanceKm: 16,
     driveMin: 18,
     demonym: "tirsense",
-    blurb: "Santo Tirso fica no coração do Vale do Ave, a poucos minutos de Famalicão — ideal para quem quer deslocar-se rapidamente ao stand e encontrar o carro certo."
+    blurb: "Santo Tirso fica no coração do Vale do Ave, a poucos minutos de Famalicão — ideal para quem quer deslocar-se rapidamente ao stand e encontrar o carro certo.",
+    localContext: "Santo Tirso é um dos concelhos mais próximos do stand — apenas 16 km pela A7 ou pela EN 14. A indústria têxtil e a proximidade ao Grande Porto fazem de Santo Tirso um concelho com forte mobilidade e procura por viaturas usadas fiáveis para uso diário.",
+    route: "A7 / EN 14",
+    routeFrom: "De Santo Tirso, tome a A7 em direção a Famalicão ou siga pela EN 14 através de Rebordões. São apenas 16 km e cerca de 18 minutos de viagem.",
+    nearbySlugs: ["trofa", "vizela", "porto"]
   },
   {
     name: "Trofa",
@@ -47,7 +63,11 @@ module.exports = [
     distanceKm: 14,
     driveMin: 15,
     demonym: "trofense",
-    blurb: "Trofa é um dos concelhos mais próximos do nosso stand em Joane, tornando-a uma das localizações com melhor acesso às viaturas Circuito Car."
+    blurb: "Trofa é um dos concelhos mais próximos do nosso stand em Joane, tornando-a uma das localizações com melhor acesso às viaturas Circuito Car.",
+    localContext: "A Trofa é, de todas as cidades desta lista, a que fica mais perto do stand — apenas 14 km. O concelho tem crescido muito nos últimos anos e a procura por viaturas usadas de qualidade acompanha esse crescimento. Muitos clientes trofenses visitam o stand sem marcação prévia dado o tempo de deslocação reduzido.",
+    route: "A7",
+    routeFrom: "Da Trofa, tome a A7 em direção a norte e saia em Famalicão. São apenas 14 km e aproximadamente 15 minutos — o percurso mais curto de todas as cidades que servimos.",
+    nearbySlugs: ["santo-tirso", "porto", "vila-do-conde"]
   },
   {
     name: "Póvoa de Varzim",
@@ -57,7 +77,11 @@ module.exports = [
     distanceKm: 30,
     driveMin: 30,
     demonym: "poveiro",
-    blurb: "A Póvoa de Varzim, com a sua forte comunidade costeira e industrial, tem uma procura ativa por viaturas usadas com bom preço e garantia."
+    blurb: "A Póvoa de Varzim, com a sua forte comunidade costeira e industrial, tem uma procura ativa por viaturas usadas com bom preço e garantia.",
+    localContext: "A Póvoa de Varzim é uma cidade com forte identidade própria e uma comunidade activa. A ligação via A28 + A7 até Famalicão é directa e sem grandes congestionamentos fora das horas de ponta. Compradores poveiros encontram no Circuito Car uma alternativa ao mercado local com mais variedade de stock e atendimento directo.",
+    route: "A28 + A7",
+    routeFrom: "Da Póvoa de Varzim, tome a A28 em direção a sul até à ligação com a A7, e siga em direção a Famalicão. O percurso total é de cerca de 30 km e 30 minutos.",
+    nearbySlugs: ["vila-do-conde", "barcelos", "trofa"]
   },
   {
     name: "Vila do Conde",
@@ -67,7 +91,11 @@ module.exports = [
     distanceKm: 32,
     driveMin: 35,
     demonym: "vilacondense",
-    blurb: "Vila do Conde combina tradição marítima com um tecido empresarial moderno — e uma procura constante por carros usados fiáveis e bem preçados."
+    blurb: "Vila do Conde combina tradição marítima com um tecido empresarial moderno — e uma procura constante por carros usados fiáveis e bem preçados.",
+    localContext: "Vila do Conde tem crescido como polo empresarial e residencial, com muitos profissionais que necessitam de viaturas fiáveis para o dia-a-dia. A ligação pela A28 até Famalicão é rápida e cómoda, e o stand Circuito Car oferece uma alternativa de qualidade ao mercado automóvel da região litoral.",
+    route: "A28 + A7",
+    routeFrom: "De Vila do Conde, tome a A28 em direção a norte até à ligação com a A7, e siga para Famalicão. São cerca de 32 km e 35 minutos de viagem.",
+    nearbySlugs: ["povoa-de-varzim", "trofa", "porto"]
   },
   {
     name: "Felgueiras",
@@ -77,7 +105,11 @@ module.exports = [
     distanceKm: 28,
     driveMin: 30,
     demonym: "felgueirense",
-    blurb: "Felgueiras, terra do calçado e do empreendedorismo, tem compradores exigentes que procuram viaturas usadas com transparência e bom serviço."
+    blurb: "Felgueiras, terra do calçado e do empreendedorismo, tem compradores exigentes que procuram viaturas usadas com transparência e bom serviço.",
+    localContext: "Felgueiras é conhecida pelo empreendedorismo e pela indústria do calçado — e os compradores felgueirenses são igualmente exigentes na escolha do carro. A ligação pela A7 até Famalicão é directa e demora cerca de 30 minutos, tornando a visita ao Circuito Car uma opção acessível para quem quer ver o carro ao vivo antes de decidir.",
+    route: "A7",
+    routeFrom: "De Felgueiras, tome a A7 em direção a Famalicão e saia em Joane / Famalicão Sul. O percurso é de aproximadamente 28 km e 30 minutos.",
+    nearbySlugs: ["guimaraes", "vizela", "amarante"]
   },
   {
     name: "Fafe",
@@ -87,7 +119,11 @@ module.exports = [
     distanceKm: 24,
     driveMin: 28,
     demonym: "fafense",
-    blurb: "Fafe é uma cidade dinâmica do Alto Minho, com tradição ligada à emigração e à mobilidade — dois fatores que geram uma forte procura por carros usados de qualidade."
+    blurb: "Fafe é uma cidade dinâmica do Alto Minho, com tradição ligada à emigração e à mobilidade — dois fatores que geram uma forte procura por carros usados de qualidade.",
+    localContext: "Fafe tem uma ligação histórica à emigração e ao regresso — e quem regressa quer muitas vezes comprar um carro de confiança sem pagar preços de concessionário. A A7 liga Fafe a Famalicão em menos de 30 minutos, e o Circuito Car tem sido a escolha de muitos clientes fafenses que procuram transparência e bom serviço pós-venda.",
+    route: "A7",
+    routeFrom: "De Fafe, tome a A7 em direção a Famalicão e saia em Joane. São cerca de 24 km e 28 minutos de viagem.",
+    nearbySlugs: ["guimaraes", "vizela", "braga"]
   },
   {
     name: "Vizela",
@@ -97,7 +133,11 @@ module.exports = [
     distanceKm: 19,
     driveMin: 22,
     demonym: "vizelense",
-    blurb: "Vizela, com a sua indústria têxtil e qualidade de vida crescente, tem uma comunidade ativa de compradores que valorizam stands de confiança na região."
+    blurb: "Vizela, com a sua indústria têxtil e qualidade de vida crescente, tem uma comunidade ativa de compradores que valorizam stands de confiança na região.",
+    localContext: "Vizela é um dos concelhos mais jovens de Portugal e tem visto a sua população crescer significativamente. A procura por viaturas usadas de qualidade acompanha esse crescimento. A ligação pela A7 até Famalicão demora menos de 25 minutos, e o Circuito Car tem sido uma referência para compradores vizelenses que querem evitar as grandes plataformas online.",
+    route: "A7",
+    routeFrom: "De Vizela, tome a A7 em direção a Famalicão e saia em Joane / Famalicão Sul. São cerca de 19 km e 22 minutos de viagem.",
+    nearbySlugs: ["guimaraes", "fafe", "santo-tirso"]
   },
   {
     name: "Amarante",
@@ -107,7 +147,11 @@ module.exports = [
     distanceKm: 42,
     driveMin: 45,
     demonym: "amarantino",
-    blurb: "Amarante, porta de entrada do Douro, atrai compradores que procuram alternativas ao mercado local com mais stock e melhores condições de financiamento."
+    blurb: "Amarante, porta de entrada do Douro, atrai compradores que procuram alternativas ao mercado local com mais stock e melhores condições de financiamento.",
+    localContext: "Amarante fica a cerca de 45 minutos de Famalicão pela A4 e IP9 — uma distância que muitos compradores amarantinos consideram valer a pena quando encontram o carro certo. O mercado automóvel local em Amarante tem menos oferta de carros usados verificados, o que leva muitos compradores a alargar a sua pesquisa à região do Ave.",
+    route: "A4 + IP9",
+    routeFrom: "De Amarante, tome a A4 em direção a Porto e siga pelo IP9 (ou A7) em direção a Famalicão. O percurso é de cerca de 42 km e 45 minutos.",
+    nearbySlugs: ["felgueiras", "guimaraes", "porto"]
   },
   {
     name: "Porto",
@@ -117,6 +161,10 @@ module.exports = [
     distanceKm: 48,
     driveMin: 45,
     demonym: "portuense",
-    blurb: "Do Porto, muitos compradores deslocam-se ao norte do Ave em busca de melhores preços, menos concorrência e stands com atendimento personalizado como a Circuito Car."
+    blurb: "Do Porto, muitos compradores deslocam-se ao norte do Ave em busca de melhores preços, menos concorrência e stands com atendimento personalizado como a Circuito Car.",
+    localContext: "O mercado automóvel do Porto é competitivo e com preços mais elevados. Muitos compradores portuenses descobrem que vale a pena percorrer os 48 km pela A3 até Famalicão — onde encontram um stand familiar, atendimento directo com a equipa técnica e preços sem as margens dos grandes centros urbanos. A A3 tem portagem mas o percurso é rápido e sem trânsito fora das horas de ponta.",
+    route: "A3",
+    routeFrom: "Do Porto, tome a A3 em direção a Braga e saia em Famalicão Norte / Joane. São cerca de 48 km e 45 minutos fora das horas de ponta.",
+    nearbySlugs: ["trofa", "santo-tirso", "vila-do-conde"]
   }
 ];

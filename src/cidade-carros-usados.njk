@@ -142,9 +142,7 @@ inlineStyle: |
     </div>
 
     <h2>Porque escolher a Circuito Car em {{ city.name }}?</h2>
-    <p>
-      Muitos clientes {{ city.demonym }}s percorrem os {{ city.distanceKm }} km até ao nosso stand em Joane porque encontram aqui algo difícil de replicar nos grandes centros: atendimento direto com a equipa que conhece cada viatura, preços honestos e transparência total no historial dos carros.
-    </p>
+    <p>{{ city.localContext }}</p>
     <p>
       Não é um stand impessoal. É uma equipa pequena, especializada, com stock rotativo de carros usados verificados — sempre com garantia e com possibilidade de financiamento próprio adaptado à sua situação.
     </p>
@@ -176,9 +174,24 @@ inlineStyle: |
 
     <h2 style="margin-top: 40px;">Como chegar de {{ city.name }}</h2>
     <p>
-      O stand fica em <strong>Rua do Relógio nº 430, 4770-245 Joane, Vila Nova de Famalicão</strong>. A partir de {{ city.name }}, o percurso é simples pela A3/A7 e demora cerca de {{ city.driveMin }} minutos.
+      O stand fica em <strong>Rua do Relógio nº 430, 4770-245 Joane, Vila Nova de Famalicão</strong>.
     </p>
+    <p>{{ city.routeFrom }}</p>
     <a class="cc-btn cc-btn--ghost-dark" href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="map-pin"></i>Abrir no Google Maps</a>
+
+    {% if city.nearbySlugs and city.nearbySlugs.length %}
+    <h2 style="margin-top: 40px;">Também servimos a sua região</h2>
+    <p>O Circuito Car recebe clientes de toda a região norte. Se conhece alguém nas cidades vizinhas que procura carro usado, partilhe esta informação:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
+      {% for nearSlug in city.nearbySlugs %}
+        {% for c in cities %}
+          {% if c.slug === nearSlug %}
+            <a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/carros-usados-{{ c.slug }}.html"><i data-lucide="map-pin"></i>Carros usados em {{ c.name }}</a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+    {% endif %}
 
     <!-- FAQ -->
     <div class="cc-local-faq">
