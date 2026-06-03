@@ -10,33 +10,33 @@
     "url": "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
   },
   {
-    "eyebrow": "SUV",
-    "title": "Ford EcoSport 1.5 TDCi Titanium",
-    "year": "2018",
-    "fuel": "Gasóleo",
-    "km": "91.592 Km",
-    "price": "13.995€",
-    "image": "https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp",
-    "url": "https://www.circuitocar.pt/viatura/ford-ecosport-ID146050.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
+    "eyebrow": "SUV familiar",
+    "title": "Nissan Qashqai 1.3 DIG-T Acenta",
+    "year": "2023",
+    "fuel": "Gasolina",
+    "km": "23.721 Km",
+    "price": "22.950€",
+    "image": "https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp",
+    "url": "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
+  },
+  {
+    "eyebrow": "Elétrico",
+    "title": "Hyundai Kauai 39 kWh Vanguard",
+    "year": "2021",
+    "fuel": "Elétrico",
+    "km": "50.711 Km",
+    "price": "18.500€",
+    "image": "https://omeustand.pt/viaturas/224/7724382111_omeustand_foto.webp",
+    "url": "https://www.circuitocar.pt/viatura/hyundai-kauai-ID166454.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
   },
   {
     "eyebrow": "Premium",
-    "title": "BMW 116 D EfficientDynamics Line",
-    "year": "2016",
-    "fuel": "Gasóleo",
-    "km": "232.000 Km",
-    "price": "10.750€",
-    "image": "https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp",
-    "url": "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
-  },
-  {
-    "eyebrow": "Económico",
-    "title": "Ford Fiesta 1.6 TDCi Trend",
-    "year": "2012",
-    "fuel": "Gasóleo",
-    "km": "272.349 Km",
-    "price": "5.500€",
-    "image": "https://omeustand.pt/viaturas/224/7724357454_omeustand_foto.webp",
-    "url": "https://www.circuitocar.pt/viatura/ford-fiesta-ID162460.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
+    "title": "MINI Cooper SE 32.6 kWh",
+    "year": "2021",
+    "fuel": "Elétrico",
+    "km": "69.551 Km",
+    "price": "18.500€",
+    "image": "https://omeustand.pt/viaturas/224/7724454440_omeustand_foto.webp",
+    "url": "https://www.circuitocar.pt/viatura/mini-cooper-ID169163.html?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage"
   }
 ]
