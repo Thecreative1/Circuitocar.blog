@@ -18,7 +18,8 @@ eleventyComputed:
   description: "Procura carros usados em {{ city.name }}? O stand Circuito Car em Joane, Famalicão, fica a apenas {{ city.distanceKm }} km — viaturas verificadas, garantia e financiamento próprio."
   ogTitle: "Carros Usados em {{ city.name }} — Circuito Car"
   ogDescription: "Stand de carros usados a {{ city.distanceKm }} km de {{ city.name }}. Viaturas verificadas, financiamento e garantia. Visite-nos em Joane, Famalicão."
-  ogImage: "https://circuitocar.blog/img/og-blog.svg"
+  ogImage: "https://circuitocar.blog/img/stand-circuitocar.webp"
+  heroImage: "https://circuitocar.blog/img/stand-circuitocar.webp"
   lead: "Procura carros usados em {{ city.name }}? O Circuito Car fica em Joane, Famalicão — a apenas {{ city.distanceKm }} km. Viaturas verificadas, garantia e financiamento próprio."
   schemaOrg: |
     <script type="application/ld+json">
@@ -125,7 +126,7 @@ inlineStyle: |
     </div>
     <div class="cc-local-hero__actions">
       <a class="cc-btn cc-btn--yellow cc-btn--xl" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=local_hero&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock disponível</a>
-      <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.marco.whatsappBase }}?text=Olá%2C%20vim%20do%20blog%20e%20estou%20em%20{{ city.name | urlencode }}%20—%20queria%20saber%20mais%20sobre%20as%20viaturas%20disponíveis.&utm_source=blog&utm_medium=local_hero_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Falar por WhatsApp</a>
+      <a class="cc-btn cc-btn--ghost-light" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20estou%20em%20{{ city.name | urlencode }}%20%E2%80%94%20queria%20saber%20mais%20sobre%20as%20viaturas%20dispon%C3%ADveis.&utm_source=blog&utm_medium=local_hero_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Falar por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -142,19 +143,19 @@ inlineStyle: |
 
     <h2>Porque escolher a Circuito Car em {{ city.name }}?</h2>
     <p>
-      {{ city.blurb }} Muitos clientes {{ city.demonym }}s percorrem os {{ city.distanceKm }} km até ao nosso stand em Joane porque encontram aqui algo difícil de replicar nos grandes centros: atendimento direto com a equipa que conhece cada viatura, preços honestos e transparência total no historial dos carros.
+      Muitos clientes {{ city.demonym }}s percorrem os {{ city.distanceKm }} km até ao nosso stand em Joane porque encontram aqui algo difícil de replicar nos grandes centros: atendimento direto com a equipa que conhece cada viatura, preços honestos e transparência total no historial dos carros.
     </p>
     <p>
-      Não é um stand impessoal. É uma equipa pequena, especializada, com stock rotativo de viaturas verificadas — carros e motos usados, sempre com garantia e com possibilidade de financiamento próprio adaptado à sua situação.
+      Não é um stand impessoal. É uma equipa pequena, especializada, com stock rotativo de carros usados verificados — sempre com garantia e com possibilidade de financiamento próprio adaptado à sua situação.
     </p>
 
     <h2>O que encontra no nosso stock</h2>
     <ul>
       <li>Carros usados de várias marcas, verificados mecanicamente</li>
-      <li>Motos e scooters usadas com historial documentado</li>
       <li>Viaturas com garantia incluída</li>
       <li>Stock rotativo — novo stock regularmente</li>
-      <li>Viaturas com e sem financiamento disponível</li>
+      <li>Financiamento próprio disponível</li>
+      <li>Historial documentado em todas as viaturas</li>
     </ul>
     <p>
       Consulte o stock atualizado no site principal:
@@ -234,7 +235,7 @@ inlineStyle: |
 
     <div class="cc-side-card" id="equipa" style="scroll-margin-top: 90px;">
       <span class="cc-side-card__eyebrow">Contacto</span>
-      <h3>Fala com a Circuito Car</h3>
+      <h3>Fale com a Circuito Car</h3>
       <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
         <div class="cc-side-seller__top">
           <strong>{{ site.contact.marco.name }}</strong>
@@ -243,7 +244,7 @@ inlineStyle: |
         <p>Disponível para informações sobre viaturas, marcar visitas e esclarecer dúvidas de financiamento.</p>
         <div class="cta-actions">
           <a class="cc-btn cc-btn--dark" href="tel:{{ site.contact.marco.phone }}"><i data-lucide="phone"></i>Ligar</a>
-          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Olá%2C%20vim%20do%20blog%20e%20estou%20em%20{{ city.name | urlencode }}%20—%20queria%20saber%20mais.&utm_source=blog&utm_medium=local_sidebar_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp</a>
+          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20estou%20em%20{{ city.name | urlencode }}%20%E2%80%94%20queria%20saber%20mais.&utm_source=blog&utm_medium=local_sidebar_wa&utm_campaign=local_seo_{{ city.slug }}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp</a>
         </div>
       </div>
     </div>
