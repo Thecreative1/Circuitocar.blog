@@ -19,8 +19,8 @@ eleventyComputed:
   description: "Procura carros usados {{ city.pIn or 'em' }} {{ city.name }}? O stand Circuito Car em Joane, Famalicão, fica a apenas {{ city.distanceKm }} km — viaturas verificadas, garantia e financiamento próprio."
   ogTitle: "Carros Usados {{ city.pIn or 'em' }} {{ city.name }} — Circuito Car"
   ogDescription: "Stand de carros usados a {{ city.distanceKm }} km {{ city.pOf or 'de' }} {{ city.name }}. Viaturas verificadas, financiamento e garantia. Visite-nos em Joane, Famalicão."
-  ogImage: "https://circuitocar.blog/img/stand-circuitocar.webp"
-  heroImage: "https://circuitocar.blog/img/stand-circuitocar.webp"
+  ogImage: "https://circuitocar.blog/img/{{ city.photo }}"
+  heroImage: "https://circuitocar.blog/img/{{ city.photo }}"
   lead: "Procura carros usados {{ city.pIn or 'em' }} {{ city.name }}? O Circuito Car fica em Joane, Famalicão — a apenas {{ city.distanceKm }} km. Viaturas verificadas, garantia e financiamento próprio."
   schemaOrg: |
     <script type="application/ld+json">

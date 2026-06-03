@@ -2,6 +2,7 @@ module.exports = [
   {
     name: "Braga",
     slug: "braga",
+    photo: "stand-carros-usados-circuito-car-famalicao.webp",
     district: "Braga",
     region: "Minho",
     distanceKm: 18,
@@ -16,6 +17,7 @@ module.exports = [
   {
     name: "Guimarães",
     slug: "guimaraes",
+    photo: "circuito-car-stand-automovel-joane.webp",
     district: "Braga",
     region: "Minho",
     distanceKm: 22,
@@ -30,6 +32,7 @@ module.exports = [
   {
     name: "Barcelos",
     slug: "barcelos",
+    photo: "carros-usados-circuito-car-vale-do-ave.webp",
     district: "Braga",
     region: "Minho",
     distanceKm: 20,
@@ -44,6 +47,7 @@ module.exports = [
   {
     name: "Santo Tirso",
     slug: "santo-tirso",
+    photo: "stand-circuito-car-credito-automovel.webp",
     district: "Porto",
     region: "Vale do Ave",
     distanceKm: 16,
@@ -58,6 +62,7 @@ module.exports = [
   {
     name: "Trofa",
     slug: "trofa",
+    photo: "stand-carros-usados-circuito-car-famalicao.webp",
     district: "Porto",
     region: "Vale do Ave",
     distanceKm: 14,
@@ -73,6 +78,7 @@ module.exports = [
   {
     name: "Póvoa de Varzim",
     slug: "povoa-de-varzim",
+    photo: "circuito-car-stand-automovel-joane.webp",
     district: "Porto",
     region: "Minho Litoral",
     distanceKm: 30,
@@ -88,6 +94,7 @@ module.exports = [
   {
     name: "Vila do Conde",
     slug: "vila-do-conde",
+    photo: "carros-usados-circuito-car-vale-do-ave.webp",
     district: "Porto",
     region: "Minho Litoral",
     distanceKm: 32,
@@ -102,6 +109,7 @@ module.exports = [
   {
     name: "Felgueiras",
     slug: "felgueiras",
+    photo: "stand-circuito-car-credito-automovel.webp",
     district: "Porto",
     region: "Tâmega",
     distanceKm: 28,
@@ -116,6 +124,7 @@ module.exports = [
   {
     name: "Fafe",
     slug: "fafe",
+    photo: "stand-carros-usados-circuito-car-famalicao.webp",
     district: "Braga",
     region: "Vale do Ave",
     distanceKm: 24,
@@ -130,6 +139,7 @@ module.exports = [
   {
     name: "Vizela",
     slug: "vizela",
+    photo: "circuito-car-stand-automovel-joane.webp",
     district: "Braga",
     region: "Vale do Ave",
     distanceKm: 19,
@@ -144,6 +154,7 @@ module.exports = [
   {
     name: "Amarante",
     slug: "amarante",
+    photo: "carros-usados-circuito-car-vale-do-ave.webp",
     district: "Porto",
     region: "Tâmega e Sousa",
     distanceKm: 42,
@@ -158,6 +169,7 @@ module.exports = [
   {
     name: "Porto",
     slug: "porto",
+    photo: "stand-circuito-car-credito-automovel.webp",
     district: "Porto",
     region: "Grande Porto",
     distanceKm: 48,
