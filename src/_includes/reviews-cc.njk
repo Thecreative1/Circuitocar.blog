@@ -1,0 +1,30 @@
+{# Reusable reviews block. Optional vars set before include: reviewsLimit (number), reviewsHeading (string) #}
+<section class="cc-reviews">
+  <div class="cc-reviews__inner">
+    <span class="cc-reviews__eyebrow">Avaliações reais</span>
+    <h2 class="cc-reviews__title">{{ reviewsHeading or "O que dizem os nossos clientes" }}</h2>
+    <p class="cc-reviews__sub">Avaliações de clientes reais no Google — sem filtros, sem pressão.</p>
+
+    <div class="cc-reviews__grid">
+      {% for r in reviews.items %}
+        {% if not reviewsLimit or loop.index <= reviewsLimit %}
+        <figure class="cc-review">
+          <div class="cc-review__stars" role="img" aria-label="{{ r.rating }} em 5 estrelas">
+            {% for i in range(0, r.rating) %}<i data-lucide="star"></i>{% endfor %}
+          </div>
+          <blockquote class="cc-review__text">“{{ r.text }}”</blockquote>
+          <figcaption class="cc-review__meta">
+            <span class="cc-review__name">{{ r.name }}</span>
+            <span class="cc-review__src"><i data-lucide="badge-check"></i>Cliente · Google</span>
+          </figcaption>
+        </figure>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="cc-reviews__actions">
+      <a class="cc-btn cc-btn--ghost-dark" href="{{ reviews.googleUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="star"></i>Ver avaliações no Google</a>
+      {% if reviewsLimit %}<a class="cc-btn cc-btn--ghost-dark" href="{{ site.basePath }}/avaliacoes.html"><i data-lucide="message-square"></i>Ver todas as avaliações</a>{% endif %}
+    </div>
+  </div>
+</section>

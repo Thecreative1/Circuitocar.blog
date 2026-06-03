@@ -1,0 +1,118 @@
+---
+layout: base-cc.njk
+permalink: privacidade.html
+extraCss: article-cc.css
+pageTitle: "Política de Privacidade | Circuito Car"
+title: "Política de Privacidade"
+description: "Como a Circuito Car recolhe, utiliza e protege os seus dados pessoais, ao abrigo do RGPD. Os seus direitos e como os exercer."
+ogTitle: "Política de Privacidade — Circuito Car"
+ogDescription: "Como tratamos e protegemos os seus dados pessoais, ao abrigo do RGPD."
+utmCampaign: "blog_privacidade"
+inlineStyle: |
+  .cc-legal-hero { background: var(--cc-ink); color: var(--cc-paper); padding: 56px 0 44px; position: relative; overflow: hidden; border-bottom: 1px solid var(--cc-asphalt-800); }
+  .cc-legal-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(30,74,138,0.18) 0%, transparent 70%); pointer-events: none; }
+  .cc-legal-hero__inner { max-width: 880px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+  .cc-legal-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--cc-yellow); font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin-bottom: 16px; }
+  .cc-legal-hero__eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--cc-yellow); }
+  .cc-legal-hero h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; color: var(--cc-paper); font-size: clamp(32px, 4vw, 52px); line-height: 1; letter-spacing: var(--cc-tracking-tight); margin: 0 0 12px; }
+  .cc-legal-hero p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-asphalt-300); margin: 0; }
+  .cc-legal { max-width: 880px; margin: 0 auto; padding: 48px 32px 80px; }
+  .cc-legal h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); color: var(--cc-ink); margin: 36px 0 12px; }
+  .cc-legal h2:first-child { margin-top: 0; }
+  .cc-legal h3 { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); font-weight: var(--cc-fw-bold); color: var(--cc-ink); margin: 20px 0 8px; }
+  .cc-legal p, .cc-legal li { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg); }
+  .cc-legal p { margin: 0 0 14px; }
+  .cc-legal ul { padding-left: 22px; margin: 0 0 14px; }
+  .cc-legal li { margin-bottom: 6px; }
+  .cc-legal a { color: var(--cc-blue-mid); text-decoration: underline; }
+  .cc-legal a:hover { color: var(--cc-yellow-deep); }
+  .cc-legal__card { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 20px 24px; margin: 0 0 28px; }
+  .cc-legal__card p { margin: 0 0 6px; }
+  .cc-legal__card p:last-child { margin: 0; }
+  .cc-legal__updated { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); letter-spacing: 0.04em; margin-top: 8px; }
+  @media (max-width: 640px) {
+    .cc-legal-hero { padding: 40px 0 32px; }
+    .cc-legal-hero__inner, .cc-legal { padding-left: 20px; padding-right: 20px; }
+    .cc-legal { padding-top: 36px; padding-bottom: 60px; }
+    .cc-mobile-dock { display: flex; }
+  }
+  @media (min-width: 641px) { .cc-mobile-dock { display: none; } }
+---
+
+<section class="cc-legal-hero">
+  <div class="cc-legal-hero__inner">
+    <span class="cc-legal-hero__eyebrow">Circuito Car</span>
+    <h1>Política de Privacidade</h1>
+    <p>Como recolhemos, utilizamos e protegemos os seus dados pessoais, ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD).</p>
+  </div>
+</section>
+
+<div class="cc-legal">
+
+  <p>A sua privacidade é importante para a Circuito Car. Esta política explica, de forma clara, que dados pessoais recolhemos quando utiliza este site, para que os usamos, com quem os partilhamos e quais são os seus direitos. Ao utilizar o site, o utilizador toma conhecimento das práticas aqui descritas.</p>
+
+  <h2>1. Quem é o responsável pelo tratamento</h2>
+  <div class="cc-legal__card">
+    <p><strong>Circuito Car</strong></p>
+    <p>{{ site.address.street }}, {{ site.address.zip }} {{ site.address.city }}, {{ site.address.region }}</p>
+    <p>Telefone: {{ site.contact.marco.phoneDisplay }}</p>
+    <p>Email: <a href="mailto:geral@circuitocar.pt">geral@circuitocar.pt</a></p>
+  </div>
+  <p>A Circuito Car é a entidade responsável pela decisão sobre a forma como os seus dados pessoais são tratados no âmbito deste site.</p>
+
+  <h2>2. Que dados recolhemos</h2>
+  <p>Recolhemos apenas os dados necessários para lhe responder e prestar o serviço que solicita:</p>
+  <ul>
+    <li><strong>Dados de identificação e contacto</strong> — nome e número de telefone, quando os indica nos simuladores (crédito, retoma, ISV) ou quando nos contacta.</li>
+    <li><strong>Dados da viatura</strong> — informação que introduz nos simuladores (por exemplo, marca, modelo, ano, quilómetros), para gerar uma estimativa.</li>
+    <li><strong>Dados de navegação</strong> — informação técnica recolhida automaticamente (por exemplo, páginas visitadas e dados estatísticos anónimos), através de ferramentas de análise.</li>
+  </ul>
+  <p>Não recolhemos dados sensíveis nem solicitamos dados financeiros (como NIB, número de cartão ou credenciais bancárias) através deste site.</p>
+
+  <h2>3. Para que usamos os seus dados</h2>
+  <p>Tratamos os seus dados pessoais para as seguintes finalidades:</p>
+  <ul>
+    <li>Responder a pedidos de informação e de contacto;</li>
+    <li>Apresentar estimativas de crédito, de retoma ou de ISV que solicita;</li>
+    <li>Agendar visitas ao stand e dar seguimento ao seu interesse numa viatura;</li>
+    <li>Melhorar o funcionamento e o conteúdo do site (estatísticas de utilização).</li>
+  </ul>
+  <p><strong>Base legal:</strong> o tratamento assenta no seu <strong>consentimento</strong> (quando submete um formulário ou simulador) e no <strong>interesse legítimo</strong> da Circuito Car em responder a pedidos e melhorar os seus serviços, nos termos do artigo 6.º do RGPD.</p>
+
+  <h2>4. Com quem partilhamos os seus dados</h2>
+  <p>A Circuito Car <strong>não vende</strong> os seus dados pessoais. Os dados poderão ser partilhados apenas quando necessário e nas seguintes situações:</p>
+  <ul>
+    <li><strong>Parceiros de financiamento</strong> — caso solicite uma proposta de crédito, e apenas com o seu conhecimento, para obter as condições junto das entidades financeiras;</li>
+    <li><strong>Prestadores de serviços</strong> — entidades que nos apoiam no funcionamento do site (por exemplo, alojamento e análise estatística), sujeitas a obrigações de confidencialidade;</li>
+    <li><strong>Autoridades</strong> — quando exigido por lei.</li>
+  </ul>
+
+  <h2>5. Cookies e ferramentas de análise</h2>
+  <p>Este site utiliza cookies e ferramentas de análise de tráfego para compreender como os visitantes o utilizam e melhorar a experiência. Estas ferramentas podem recolher informação de forma agregada e estatística. Pode, a qualquer momento, configurar o seu navegador para recusar ou apagar cookies — note que algumas funcionalidades poderão ficar limitadas.</p>
+
+  <h2>6. Durante quanto tempo guardamos os dados</h2>
+  <p>Conservamos os seus dados apenas pelo período necessário para as finalidades indicadas, ou para cumprir obrigações legais. Quando deixarem de ser necessários, os dados são eliminados ou anonimizados de forma segura.</p>
+
+  <h2>7. Como protegemos os seus dados</h2>
+  <p>Adotamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, perda ou divulgação indevida.</p>
+
+  <h2>8. Os seus direitos</h2>
+  <p>Ao abrigo do RGPD, o utilizador tem direito a:</p>
+  <ul>
+    <li><strong>Acesso</strong> — saber que dados seus tratamos;</li>
+    <li><strong>Retificação</strong> — corrigir dados incorretos ou desatualizados;</li>
+    <li><strong>Apagamento</strong> — pedir a eliminação dos seus dados ("direito a ser esquecido");</li>
+    <li><strong>Limitação</strong> — restringir o tratamento em determinadas situações;</li>
+    <li><strong>Oposição</strong> — opor-se ao tratamento por motivos relacionados com a sua situação;</li>
+    <li><strong>Portabilidade</strong> — receber os seus dados num formato estruturado.</li>
+  </ul>
+  <p>Para exercer qualquer um destes direitos, contacte-nos por email para <a href="mailto:geral@circuitocar.pt">geral@circuitocar.pt</a> ou por telefone para {{ site.contact.marco.phoneDisplay }}.</p>
+
+  <h2>9. Reclamações</h2>
+  <p>Se considerar que o tratamento dos seus dados não cumpre o RGPD, tem o direito de apresentar reclamação junto da autoridade de controlo competente em Portugal — a <strong>Comissão Nacional de Proteção de Dados (CNPD)</strong>, através de <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer">www.cnpd.pt</a>.</p>
+
+  <h2>10. Alterações a esta política</h2>
+  <p>Esta política pode ser atualizada para refletir alterações legais ou de funcionamento do site. A versão em vigor é sempre a publicada nesta página.</p>
+  <p class="cc-legal__updated">Última atualização: 3 de junho de 2026</p>
+
+</div>

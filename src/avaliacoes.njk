@@ -1,0 +1,39 @@
+---
+layout: base-cc.njk
+permalink: avaliacoes.html
+extraCss: article-cc.css
+pageTitle: "Avaliações de Clientes | Circuito Car"
+title: "Avaliações de Clientes"
+description: "O que dizem os clientes da Circuito Car. Avaliações reais de quem comprou carro usado no nosso stand em Joane, Vila Nova de Famalicão."
+ogTitle: "Avaliações de Clientes — Circuito Car"
+ogDescription: "Avaliações reais de clientes da Circuito Car, stand de carros usados em Joane, Famalicão."
+utmCampaign: "blog_avaliacoes"
+inlineStyle: |
+  .cc-rev-hero { background: var(--cc-ink); color: var(--cc-paper); padding: 56px 0 44px; position: relative; overflow: hidden; border-bottom: 1px solid var(--cc-asphalt-800); }
+  .cc-rev-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(30,74,138,0.18) 0%, transparent 70%); pointer-events: none; }
+  .cc-rev-hero__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+  .cc-rev-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--cc-yellow); font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin-bottom: 16px; }
+  .cc-rev-hero__eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--cc-yellow); }
+  .cc-rev-hero h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; color: var(--cc-paper); font-size: clamp(32px, 4vw, 56px); line-height: 1; letter-spacing: var(--cc-tracking-tight); margin: 0 0 12px; }
+  .cc-rev-hero p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); max-width: 600px; margin: 0; }
+  /* a página dedicada não precisa do separador superior do componente */
+  .cc-rev-page .cc-reviews { border-top: 0; }
+  @media (max-width: 640px) {
+    .cc-rev-hero { padding: 40px 0 32px; }
+    .cc-rev-hero__inner { padding: 0 20px; }
+    .cc-mobile-dock { display: flex; }
+  }
+  @media (min-width: 641px) { .cc-mobile-dock { display: none; } }
+---
+
+<section class="cc-rev-hero">
+  <div class="cc-rev-hero__inner">
+    <span class="cc-rev-hero__eyebrow">Circuito Car</span>
+    <h1>Avaliações de <em>clientes</em></h1>
+    <p>O que dizem quem já comprou connosco. Avaliações reais publicadas no Google por clientes da Circuito Car.</p>
+  </div>
+</section>
+
+<div class="cc-rev-page">
+  {% include "reviews-cc.njk" %}
+</div>
