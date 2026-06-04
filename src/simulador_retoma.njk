@@ -601,18 +601,18 @@ permalink: simulador_retoma.html
     }
 
     function getStateFactor(estado) {
-      return { excelente: { factor: 1.06, label: 'Estado muito acima da média' }, muito_bom: { factor: 1.03, label: 'Estado forte para revenda' }, bom: { factor: 1, label: 'Estado comercial normal' }, razoavel: { factor: 0.93, label: 'Vai exigir mais desconto' }, fraco: { factor: 0.84, label: 'Desgaste visível pesa bastante' } }[estado];
+      return { excelente: { factor: 1.06, label: 'Estado muito acima da média' }, muito_bom: { factor: 1.03, label: 'Estado forte para revenda' }, bom: { factor: 1, label: 'Estado comercial normal' }, razoavel: { factor: 0.93, label: 'Vai exigir mais desconto' }, fraco: { factor: 0.84, label: 'Desgaste visível pesa bastante' } }[estado] || { factor: 1, label: 'Estado comercial normal' };
     }
 
     function getHistoryFactor(historico) {
-      return { completo: { factor: 1.03, label: 'Histórico completo valoriza confiança' }, parcial: { factor: 0.99, label: 'Histórico parcial tem impacto neutro/ligeiro' }, sem_registo: { factor: 0.94, label: 'Sem histórico claro reduz confiança' } }[historico];
+      return { completo: { factor: 1.03, label: 'Histórico completo valoriza confiança' }, parcial: { factor: 0.99, label: 'Histórico parcial tem impacto neutro/ligeiro' }, sem_registo: { factor: 0.94, label: 'Sem histórico claro reduz confiança' } }[historico] || { factor: 1, label: 'Histórico não especificado' };
     }
 
     function getOwnersFactor(donos) { return { '1': 1.02, '2': 1, '3': 0.98, '4': 0.95 }[donos] || 1; }
     function getClaimFactor(sinistros) { return { nao: 1, desconhecido: 0.97, sim: 0.9 }[sinistros] || 1; }
 
     function getLiquidityFactor(liquidez) {
-      return { alta: { factor: 1.02, label: 'Boa rotação comercial' }, media: { factor: 1, label: 'Procura equilibrada' }, baixa: { factor: 0.94, label: 'Risco de rotação mais lento' } }[liquidez];
+      return { alta: { factor: 1.02, label: 'Boa rotação comercial' }, media: { factor: 1, label: 'Procura equilibrada' }, baixa: { factor: 0.94, label: 'Risco de rotação mais lento' } }[liquidez] || { factor: 1, label: 'Procura equilibrada' };
     }
 
     function getCommercialMargin(idade, liquidez, estado) {
@@ -703,9 +703,11 @@ permalink: simulador_retoma.html
       document.getElementById('scoreHistorico').textContent = history.label;
       document.getElementById('scoreLiquidez').textContent = liquidity.label;
 
+      const estadoEl = document.getElementById('estado');
+      const estadoLabel = estadoEl.options[estadoEl.selectedIndex]?.textContent || data.estado;
       const explainLines = [
         `Partimos de uma referência de mercado de ${formatEuro(marketBase)} e ajustámos esse valor pela idade da viatura, quilometragem atual e procura comercial.`,
-        `O estado geral foi lido como "${document.querySelector('#estado option:checked').textContent}", o que influencia diretamente o custo de preparação e o desconto necessário para revenda.`,
+        `O estado geral foi lido como "${estadoLabel}", o que influencia diretamente o custo de preparação e o desconto necessário para revenda.`,
         `Aplicámos uma margem comercial aproximada de ${(margin * 100).toFixed(0)}% e um custo médio de preparação de ${formatEuro(prepCost)}.`
       ];
       document.getElementById('explainText').innerHTML = explainLines.map(line => `<p style="margin:0 0 10px;">${line}</p>`).join('');

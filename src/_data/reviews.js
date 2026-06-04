@@ -7,7 +7,7 @@ module.exports = {
     {
       name: "Filipa Oliveira",
       rating: 5,
-      text: "Atendimento profissional, honesto e muito transparente do início ao fim."
+      text: "Atendimento profissional, honesto e muito transparente do início ao fim. Excelente stand para quem procura carros semi-novos de qualidade."
     },
     {
       name: "Edmilson Pinheiro",
@@ -17,7 +17,7 @@ module.exports = {
     {
       name: "Jorge B. Cruz",
       rating: 5,
-      text: "Atendimento honesto e muito transparente. Ótimo stand para quem procura carros semi-novos de qualidade e confiáveis."
+      text: "Confiança! Atendimento honesto e muito transparente. Ótimo stand para quem procura carros semi-novos de qualidade e confiáveis."
     },
     {
       name: "Marco Couto",
