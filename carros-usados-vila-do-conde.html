@@ -25,14 +25,86 @@
   <link rel="apple-touch-icon" href="/img/logo-yellow.png" />
   <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="https://circuitocar.blog/rss.xml" />
   <link rel="alternate" type="text/plain" title="AI site guide" href="https://circuitocar.blog/llms.txt" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SVM6PQS2C"></script>
+  <!-- Google Analytics (gtag.js) — carregado APENAS após consentimento (RGPD / ePrivacy / Lei 41/2004) -->
+<style>
+  .cc-cookie { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 9999; max-width: 720px; margin: 0 auto; background: #0A0B0D; color: #FAFAF7; border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; box-shadow: 0 14px 44px rgba(0,0,0,0.4); padding: 18px 20px; font-family: 'Manrope', system-ui, -apple-system, sans-serif; }
+  .cc-cookie[hidden] { display: none; }
+  .cc-cookie__row { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .cc-cookie__text { flex: 1; min-width: 240px; font-size: 13px; line-height: 1.55; color: #c9ccd1; }
+  .cc-cookie__text strong { display: block; color: #fff; font-size: 14px; margin-bottom: 3px; }
+  .cc-cookie__text a { color: #FFD400; text-decoration: underline; }
+  .cc-cookie__actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .cc-cookie__btn { min-height: 44px; padding: 10px 22px; border-radius: 10px; font-family: 'Saira Condensed', sans-serif; font-style: italic; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; font-size: 14px; cursor: pointer; border: 1px solid transparent; transition: filter .15s ease, border-color .15s ease; }
+  .cc-cookie__btn--reject { background: transparent; color: #fff; border-color: rgba(255,255,255,0.32); }
+  .cc-cookie__btn--reject:hover { border-color: #fff; }
+  .cc-cookie__btn--accept { background: #FFD400; color: #0A0B0D; }
+  .cc-cookie__btn--accept:hover { filter: brightness(1.06); }
+  @media (max-width: 560px) { .cc-cookie { bottom: 76px; } .cc-cookie__actions { width: 100%; } .cc-cookie__btn { flex: 1; } }
+</style>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+(function () {
+  var GA_ID = 'G-8SVM6PQS2C';
+  var KEY = 'cc_cookie_consent';
 
-  gtag('config', 'G-8SVM6PQS2C');
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadGA() {
+    if (window.__ccGaLoaded) return;
+    window.__ccGaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function dismiss(v) {
+    save(v);
+    var el = document.getElementById('cc-cookie');
+    if (el) el.parentNode.removeChild(el);
+    if (v === 'granted') loadGA();
+  }
+
+  function showBanner() {
+    if (document.getElementById('cc-cookie')) return;
+    var d = document.createElement('div');
+    d.className = 'cc-cookie';
+    d.id = 'cc-cookie';
+    d.setAttribute('role', 'dialog');
+    d.setAttribute('aria-label', 'Consentimento de cookies');
+    d.innerHTML =
+      '<div class="cc-cookie__row">' +
+        '<div class="cc-cookie__text"><strong>A sua privacidade</strong>' +
+        'Usamos cookies essenciais e, com o seu consentimento, cookies de análise (Google Analytics) para melhorar o site. ' +
+        'Pode aceitar ou recusar. <a href="/privacidade.html">Política de Privacidade</a>.</div>' +
+        '<div class="cc-cookie__actions">' +
+          '<button type="button" class="cc-cookie__btn cc-cookie__btn--reject" id="cc-cookie-reject">Recusar</button>' +
+          '<button type="button" class="cc-cookie__btn cc-cookie__btn--accept" id="cc-cookie-accept">Aceitar</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(d);
+    document.getElementById('cc-cookie-accept').addEventListener('click', function () { dismiss('granted'); });
+    document.getElementById('cc-cookie-reject').addEventListener('click', function () { dismiss('denied'); });
+  }
+
+  // Permite reabrir o banner a partir da página de privacidade ("repor preferências").
+  window.ccOpenCookieSettings = function () { try { localStorage.removeItem(KEY); } catch (e) {} showBanner(); };
+
+  var choice = get();
+  if (choice === 'granted') {
+    loadGA();
+  } else if (choice !== 'denied') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showBanner);
+    } else {
+      showBanner();
+    }
+  }
+})();
 </script>
 
   <script type="application/ld+json">
