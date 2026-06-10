@@ -21,6 +21,8 @@ heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html?utm_
 heroImageAlt: "Citroën C3 2022 na Circuito Car — cilindrada reduzida, IUC baixo"
 heroWhatsappMsg: "Olá, vi o artigo sobre IUC e queria perceber quanto pagaria por um carro em stock."
 
+ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
+
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"
 

@@ -5,6 +5,7 @@ module.exports = {
   basePath: "",
   lang: "pt",
   logo: "https://circuitocar.blog/img/cc.png",
+  ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp",
   contact: {
     marco: {
       name: "Marco Marinho",

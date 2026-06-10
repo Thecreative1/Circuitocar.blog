@@ -10,14 +10,15 @@
   <meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta property="og:type" content="{{ ogType if ogType else 'website' }}" />
-  <meta property="og:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
+  <meta property="og:image" content="{{ ogImage if ogImage else site.ogImage }}" />
+  <meta property="og:image:type" content="image/webp" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="pt_PT" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
-  <meta name="twitter:image" content="{{ ogImage if ogImage else (heroImage if heroImage else site.logo) }}" />
+  <meta name="twitter:image" content="{{ ogImage if ogImage else site.ogImage }}" />
   <meta name="author" content="Circuito Car" />
   <meta name="publisher" content="Circuito Car" />
   <meta name="theme-color" content="#0A0B0D" />
