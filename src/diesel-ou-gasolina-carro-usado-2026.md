@@ -79,7 +79,7 @@ O diesel poupa cerca de 40 € por mês em combustível — se fizer 15.000 km a
 
 ---
 
-## Manutenção: a vantagem escondida do gasolina
+## Manutenção: a vantagem escondida da gasolina
 
 É aqui que muita gente se surpreende. Um diesel exige revisões mais frequentes em alguns componentes e tem peças que o gasolina simplesmente não tem:
 

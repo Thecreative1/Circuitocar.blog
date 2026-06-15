@@ -63,7 +63,7 @@ schemaOrg: |
         "name": "Qual é a diferença entre TAN e TAEG no crédito automóvel?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A TAN (Taxa Anual Nominal) é a taxa de juro pura aplicada ao capital em dívida. A TAEG (Taxa Anual de Encargos Efectiva Global) inclui a TAN mais todos os encargos associados — comissões, seguros obrigatórios e outros custos. Para comparar propostas de forma justa, use sempre a TAEG: é o número que representa o custo real do crédito."
+          "text": "A TAN (Taxa Anual Nominal) é a taxa de juro pura aplicada ao capital em dívida. A TAEG (Taxa Anual de Encargos Efetiva Global) inclui a TAN mais todos os encargos associados — comissões, seguros obrigatórios e outros custos. Para comparar propostas de forma justa, use sempre a TAEG: é o número que representa o custo real do crédito."
         }
       },
       {
@@ -116,9 +116,9 @@ O mecanismo é simples: pede emprestado um valor, paga-o em prestações mensais
 O que varia entre propostas — e que faz toda a diferença — são dois números:
 
 - **TAN** (Taxa Anual Nominal): a taxa de juro pura, aplicada ao capital em dívida.
-- **TAEG** (Taxa Anual de Encargos Efectiva Global): inclui a TAN mais todos os encargos — comissões de abertura, seguros obrigatórios e outros custos associados.
+- **TAEG** (Taxa Anual de Encargos Efetiva Global): inclui a TAN mais todos os encargos — comissões de abertura, seguros obrigatórios e outros custos associados.
 
-<div class="note"><strong>Regra prática:</strong> quando comparar duas propostas, use sempre a <strong>TAEG</strong>. É o único número que reflecte o custo real do crédito. Uma TAN baixa com comissões altas pode custar mais do que uma TAN ligeiramente superior sem encargos adicionais.</div>
+<div class="note"><strong>Regra prática:</strong> quando comparar duas propostas, use sempre a <strong>TAEG</strong>. É o único número que reflete o custo real do crédito. Uma TAN baixa com comissões altas pode custar mais do que uma TAN ligeiramente superior sem encargos adicionais.</div>
 
 ## Crédito pelo stand ou pelo banco: o que compensa mais?
 
@@ -134,14 +134,14 @@ Não há uma resposta universal — depende das condições concretas de cada pr
 ### Financiamento pelo banco
 
 - Pode oferecer taxa mais baixa se já tiver uma relação estabelecida e um bom histórico.
-- Dá-lhe mais controlo sobre os termos — pode negociar directamente.
+- Dá-lhe mais controlo sobre os termos — pode negociar diretamente.
 - Processo geralmente mais demorado e com mais documentação.
 
 **O conselho mais honesto:** peça as duas propostas e compare a TAEG. Em muitos casos, o financiamento pelo stand é mais competitivo do que se esperaria — especialmente quando há protocolos com entidades financeiras especializadas em crédito automóvel.
 
 ## Entrada: quanto é razoável?
 
-A entrada é o valor que paga logo no início, antes de o crédito arrancar. Não é obrigatória em todos os casos, mas tem um impacto directo na prestação e no custo total:
+A entrada é o valor que paga logo no início, antes de o crédito arrancar. Não é obrigatória em todos os casos, mas tem um impacto direto na prestação e no custo total:
 
 - **Sem entrada:** financia o valor total da viatura. A prestação é mais alta e os juros pagos ao longo do prazo são maiores.
 - **Com entrada:** reduz o montante financiado. A prestação baixa e o custo total do crédito é menor.
@@ -171,7 +171,7 @@ Os documentos normalmente pedidos são:
 - **Identificação:** Cartão de Cidadão ou BI e NIF.
 - **Comprovativo de morada** recente (factura de água, luz ou documento similar).
 - **Comprovativo de rendimento:** últimos 3 recibos de vencimento, ou declaração de IRS se for trabalhador independente.
-- **IBAN** para débito directo das prestações.
+- **IBAN** para débito direto das prestações.
 
 O stand ou a entidade financeira podem pedir documentação adicional dependendo do perfil e do valor financiado. Ter tudo organizado antecipadamente acelera o processo.
 

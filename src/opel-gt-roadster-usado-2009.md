@@ -17,7 +17,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver desportivos disponíveis"
 
-lead: "Quando se diz Opel, pensa-se em carros práticos, famílias, Corsa de cidade. Raramente se pensa em 264 cavalos, tração traseira e caixa manual de 5 velocidades num roadster de dois lugares. O Opel GT de 2009 é exactamente isso — e é um dos desportivos usados mais subestimados que existem."
+lead: "Quando se diz Opel, pensa-se em carros práticos, famílias, Corsa de cidade. Raramente se pensa em 264 cavalos, tração traseira e caixa manual de 5 velocidades num roadster de dois lugares. O Opel GT de 2009 é exatamente isso — e é um dos desportivos usados mais subestimados que existem."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp"
 heroImageLink: "https://www.circuitocar.pt/viatura/opel-gt-ID166512.html?utm_source=blog&utm_medium=hero_image&utm_campaign=blog_opel_gt"
@@ -41,7 +41,7 @@ filipeDescription: "Para questões técnicas sobre o motor, o estado mecânico e
 sidebarWhatsappMsg: "Olá, vi o artigo sobre o Opel GT e tenho interesse. Podem dar-me mais informações?"
 ---
 
-Há carros que existem. E há carros que fazem sentido. O Opel GT não se encaixa muito bem em nenhuma dessas categorias — e é exactamente por isso que vale a pena falar dele.
+Há carros que existem. E há carros que fazem sentido. O Opel GT não se encaixa muito bem em nenhuma dessas categorias — e é exatamente por isso que vale a pena falar dele.
 
 Este não é um guia para toda a gente. É para quem já sabe o que quer: um desportivo a sério, raro, com história, e que não vai aparecer nenhum igual estacionado à beira. Se isso ressoa, continue a ler.
 
@@ -49,13 +49,13 @@ Este não é um guia para toda a gente. É para quem já sabe o que quer: um des
 
 Para perceber o que é este Opel GT de 2009, é preciso recuar primeiro a 1968.
 
-Nesse ano, a Opel apresentou o GT original — um coupé pequeno e agressivo, com linhas inspiradas directamente no Corvette Stingray norte-americano. Tinha faróis escamoteáveis accionados manualmente, tração traseira e uma silhueta que nada tinha a ver com o que a Opel fazia na altura. Ficou conhecido como o "mini Corvette europeu". Foram produzidas mais de 100.000 unidades entre 1968 e 1973, e hoje é um clássico de colecção.
+Nesse ano, a Opel apresentou o GT original — um coupé pequeno e agressivo, com linhas inspiradas diretamente no Corvette Stingray norte-americano. Tinha faróis escamoteáveis accionados manualmente, tração traseira e uma silhueta que nada tinha a ver com o que a Opel fazia na altura. Ficou conhecido como o "mini Corvette europeu". Foram produzidas mais de 100.000 unidades entre 1968 e 1973, e hoje é um clássico de coleção.
 
 Depois disso — silêncio. Durante 34 anos, a Opel não voltou a fazer um desportivo a sério.
 
 Em 2006, o GT voltou. Não como exercício de nostalgia, mas como um projecto concreto: a General Motors encomendou o desenvolvimento à **Magna Steyr**, na Áustria, com base na mesma plataforma do Saturn Sky e do Pontiac Solstice — carros americanos com alma de roadster. O resultado foi apresentado no Salão de Detroit desse ano e entrou em produção em 2007.
 
-O que veio a seguir surpreendeu muita gente: **264 cavalos num motor 2.0 Turbo de quatro cilindros**, tração traseira, caixa manual, capota de lona retrátil, e um chassis que havia sido desenvolvido com influências directas da Lotus. Zero a 100 em 5,4 segundos. Peso inferior a 1.300 kg.
+O que veio a seguir surpreendeu muita gente: **264 cavalos num motor 2.0 Turbo de quatro cilindros**, tração traseira, caixa manual, capota de lona retrátil, e um chassis que havia sido desenvolvido com influências diretas da Lotus. Zero a 100 em 5,4 segundos. Peso inferior a 1.300 kg.
 
 A produção durou apenas três anos — 2007, 2008 e 2009. Estima-se que foram produzidas **menos de 7.000 unidades** em todo o mundo. Em 2009 saiu o último. E nunca mais houve um Opel GT.
 

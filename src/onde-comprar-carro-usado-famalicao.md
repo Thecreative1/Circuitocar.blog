@@ -57,7 +57,7 @@ Comprar carro usado pode ser uma excelente decisão — ou uma fonte de dores de
 Antes de se apaixonar por uma viatura, há perguntas mais importantes do que a cor, as jantes ou o ecrã. O essencial é perceber se o carro faz sentido para o seu uso real e se a compra está a ser feita com a informação certa.
 
 - **Tipo de utilização:** cidade, estrada, família, trabalho ou mistura dos quatro.
-- **Motorização adequada:** gasolina, diesel, híbrido ou elétrico não servem todos os casos da mêsma forma.
+- **Motorização adequada:** gasolina, diesel, híbrido ou elétrico não servem todos os casos da mesma forma.
 - **Histórico e estado geral:** sinais de desgaste, consistência visual, manutenção e coerência do conjunto.
 - **Qualidade do atendimento:** quando a conversa é clara e sem pressão, a compra costuma correr melhor.
 
@@ -92,7 +92,7 @@ Muita gente pesquisa durante dias e só depois tenta pedir ajuda. Ao contrário 
 
 ### 3. Procurar uma viatura sem clarificar o uso real
 
-Um utilitário para cidade, um SUV para família e um carro para viagens longas não respondem da mêsma forma. Sem essa clareza, a compra fica mais emocional do que racional.
+Um utilitário para cidade, um SUV para família e um carro para viagens longas não respondem da mesma forma. Sem essa clareza, a compra fica mais emocional do que racional.
 
 ## Se procura carro usado na zona, o próximo passo é simples
 

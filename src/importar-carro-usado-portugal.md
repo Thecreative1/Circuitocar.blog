@@ -118,7 +118,7 @@ O processo de legalização de um carro importado envolve os seguintes passos ge
 2. **Pagamento do ISV**: liquidado junto da Autoridade Tributária, com base nas características técnicas do veículo.
 3. **Certificado de Conformidade (CoC)**: pode ser exigido pelo IMT para confirmar que o veículo cumpre as normas de homologação europeias. Em carros originários de outros países da UE já existe na maioria dos casos; noutros pode ser necessário solicitá-lo ao fabricante.
 4. **Inspeção periódica obrigatória (IPO)**: se aplicável, realizada num centro de inspeção autorizado em Portugal.
-5. **Registo no IMT e emissão da matrícula portuguesa**: com toda a documentação em ordem, é efectuado o registo e emitido o DUA com a nova matrícula nacional.
+5. **Registo no IMT e emissão da matrícula portuguesa**: com toda a documentação em ordem, é efetuado o registo e emitido o DUA com a nova matrícula nacional.
 
 > *Os procedimentos e custos podem variar conforme a viatura, origem, emissões, documentação e legislação em vigor. Recomenda-se consulta a um despachante aduaneiro ou técnico especializado antes de avançar com qualquer processo de importação.*
 
@@ -147,7 +147,7 @@ Documentação pouco clara, historial em falta ou recusa em fornecer relatório 
 
 ## Como a CircuitoCar pode ajudar
 
-Se procura uma marca, modelo, motorização ou versão específica e não encontra uma boa opção em Portugal, fale com a CircuitoCar. Podemos ajudar a analisar alternativas no mercado nacional e, quando fizer sentido, estudar a possibilidade de importação. O objectivo não é importar por importar: é perceber se a viatura compensa depois de considerados o preço, transporte, impostos, documentação, legalização, registo e preparação.
+Se procura uma marca, modelo, motorização ou versão específica e não encontra uma boa opção em Portugal, fale com a CircuitoCar. Podemos ajudar a analisar alternativas no mercado nacional e, quando fizer sentido, estudar a possibilidade de importação. O objetivo não é importar por importar: é perceber se a viatura compensa depois de considerados o preço, transporte, impostos, documentação, legalização, registo e preparação.
 
 A nossa equipa conhece o mercado de usados e as questões que surgem com mais frequência neste processo — do cálculo do ISV à verificação do historial de um carro de origem alemã ou holandesa. Não vendemos ilusões de poupança; ajudamos a perceber se a operação faz sentido antes de qualquer compromisso.
 

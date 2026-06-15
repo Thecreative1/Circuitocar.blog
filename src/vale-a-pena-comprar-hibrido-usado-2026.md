@@ -24,7 +24,7 @@ heroImageLink: "https://www.circuitocar.pt/viatura/hyundai-ioniq-5-ID149434.html
 heroImageAlt: "Ver Hyundai Ioniq 5 em stock"
 heroWhatsappMsg: "Olá, vi o artigo sobre híbridos usados e quero mais informação."
 
-topbarLeft: "Guia pensado para responder a uma dúvida cada vez mais comum: híbrido usado compensa mêsmo?"
+topbarLeft: "Guia pensado para responder a uma dúvida cada vez mais comum: híbrido usado compensa mesmo?"
 topbarLinks:
   - url: "https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=topbar_stock&utm_campaign=blog_hibrido"
     label: "Ver Stock"
