@@ -11,7 +11,13 @@
   <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta property="og:type" content="{{ ogType if ogType else 'website' }}" />
   <meta property="og:image" content="{{ ogImage if ogImage else site.ogImage }}" />
+  {% if ogImage and (ogImage.endsWith('.svg')) %}
+  <meta property="og:image:type" content="image/svg+xml" />
+  {% elif ogImage and (ogImage.endsWith('.png')) %}
+  <meta property="og:image:type" content="image/png" />
+  {% else %}
   <meta property="og:image:type" content="image/webp" />
+  {% endif %}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="pt_PT" />

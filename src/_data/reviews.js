@@ -1,8 +1,9 @@
 // Avaliações reais de clientes (Google). Atualizar manualmente quando quiser destacar novas.
 // Nota: NÃO usar schema AggregateRating com estas reviews — viola as regras do Google e arrisca penalização.
 module.exports = {
-  // Link "Ver no Google" — substituível pelo link direto do perfil quando disponível.
-  googleUrl: "https://www.google.com/search?q=Circuito+Car+Joane+Famalic%C3%A3o",
+  // Link "Ver no Google" — substituir pelo URL direto de avaliações do Google Business quando disponível.
+  // Para obter: Google Maps → pesquisar "Circuito Car Joane" → Partilhar → copiar link.
+  googleUrl: "https://maps.google.com/?q=Circuito+Car+Rua+do+Rel%C3%B3gio+430+Joane",
   items: [
     {
       name: "Filipa Oliveira",
