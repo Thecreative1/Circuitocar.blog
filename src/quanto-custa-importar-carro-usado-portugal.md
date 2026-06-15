@@ -19,9 +19,9 @@ inventoryLabel: "Ver stock disponível"
 
 lead: "A ideia parece simples: encontrar um carro mais barato lá fora e poupar algum dinheiro. E pode funcionar — mas só se fizer as contas certas antes de avançar. Neste artigo explicamos tudo o que vai pagar, com valores reais e verificados."
 
-heroImage: "https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=hero_image&utm_campaign=blog_custos_importacao"
-heroImageAlt: "Carros usados disponíveis na Circuito Car em Joane, Famalicão"
+heroImage: "/img/importar-carro-bmw-116d-circuito-car.webp"
+heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_custos_importacao"
+heroImageAlt: "BMW 116d 2016 na Circuito Car — viatura importada da Alemanha"
 heroWhatsappMsg: "Olá, vi o artigo sobre custos de importação e gostava de perceber se compensa para a viatura que tenho em mente."
 
 sidebarBadge: "Ferramenta útil"
