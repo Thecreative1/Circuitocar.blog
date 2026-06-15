@@ -126,7 +126,7 @@ As tabelas de taxas são aprovadas anualmente no Orçamento de Estado e costumam
 ### O que faz baixar o IUC
 
 - Motor de cilindrada reduzida (1.0, 1.2)
-- Tecnologia mais eficiente (motor a gasolina moderno versus diesel equivalente)
+- Tecnologia mais eficiente — [um motor a gasolina moderno tende a emitir menos CO₂ do que o diesel equivalente](/diesel-ou-gasolina-carro-usado-2026.html)
 - Carro matriculado antes de 2007 sem CO₂ homologado
 - Elétrico puro (isento)
 
@@ -173,7 +173,7 @@ Se o IUC já foi pago e a venda ocorre a meio do período fiscal, o vendedor tem
 
 Os **elétricos puros** (Categoria E no Código do IUC) estão **isentos** do pagamento do IUC. É uma das vantagens fiscais concretas da mobilidade elétrica — uma poupança de €80 a €300/ano face a um equivalente a combustão, dependendo da potência do motor que substituiria.
 
-Os **híbridos plug-in e híbridos convencionais** pagam IUC normal (Categoria A), mas beneficiam geralmente de uma componente CO₂ mais baixa, dado que as emissões homologadas são inferiores às de um motor equivalente a gasolina ou gasóleo puro.
+Os [**híbridos plug-in e híbridos convencionais**](/vale-a-pena-comprar-hibrido-usado-2026.html) pagam IUC normal (Categoria A), mas beneficiam geralmente de uma componente CO₂ mais baixa, dado que as emissões homologadas são inferiores às de um motor equivalente a gasolina ou gasóleo puro.
 
 <a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa sobre custos anuais</a>
 

@@ -156,6 +156,6 @@ Um Volkswagen Polo 1.0 TSI de 2021 a gasolina, com 40.000 km, pode custar o mesm
 | Ideal para | Cidade, percursos curtos, < 15.000 km/ano | Autoestrada, > 20.000 km/ano |
 | Risco no mercado de usados | Baixo | Médio (depende do historial) |
 
-Se não tem certeza, fale com a equipa antes de decidir — às vezes a viatura certa é a que está disponível no stand e foi verificada, independentemente da motorização.
+Se o seu perfil é maioritariamente urbano, pode também considerar [um híbrido usado](/vale-a-pena-comprar-hibrido-usado-2026.html) — uma terceira opção que combina eficiência em cidade com a praticidade de não precisar de carregamentos. Se não tem certeza, fale com a equipa antes de decidir — às vezes a viatura certa é a que está disponível no stand e foi verificada, independentemente da motorização.
 
 <a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>

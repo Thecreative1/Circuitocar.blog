@@ -19,9 +19,9 @@ inventoryLabel: "Ver stock disponível"
 
 lead: "Antes de importar, é importante perceber se compensa. Muitos compradores não encontram em Portugal exatamente o carro que procuram — a motorização certa, a versão equipada, o histórico de manutenção que querem. A solução parece óbvia: ir buscar lá fora. Mas o preço que aparece no anúncio estrangeiro não é o custo final em Portugal."
 
-heroImage: "https://omeustand.pt/viaturas/224/7724416609_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=hero_image&utm_campaign=blog_importacao"
-heroImageAlt: "Carros usados disponíveis na Circuito Car em Joane, Famalicão"
+heroImage: "/img/importar-carro-bmw-116d-circuito-car.webp"
+heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_importacao"
+heroImageAlt: "BMW 116d 2016 na Circuito Car — exemplo de importação alemã verificada"
 heroWhatsappMsg: "Olá, vi o artigo sobre importação de carros usados e gostava de perceber se compensa para a viatura que tenho em mente."
 
 sidebarBadge: "Precisa de ajuda?"
@@ -96,7 +96,7 @@ Este é frequentemente o custo mais subestimado ao importar um carro para Portug
 **Registo e matrícula portuguesa**
 Inclui as taxas de registo no IMT e a emissão do Documento Único Automóvel (DUA). Habitualmente entre 200 € e 400 €.
 
-**IUC — Imposto Único de Circulação**
+**[IUC — Imposto Único de Circulação](/iuc-carros-usados-portugal.html)**
 O IUC anual é calculado em Portugal com base na cilindrada e nas emissões. Para carros com motorizações mais potentes ou emissões altas, o IUC pode ser significativamente mais elevado do que em equivalentes já matriculados em Portugal. Vale a pena simular antes de comprar.
 
 **Documentação e tradução**

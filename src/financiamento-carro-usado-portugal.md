@@ -148,7 +148,7 @@ A entrada é o valor que paga logo no início, antes de o crédito arrancar. Nã
 
 Na prática, uma entrada de 10% a 20% do valor do carro é um ponto de equilíbrio razoável para a maioria dos perfis — suficiente para melhorar as condições sem comprometer demasiado as poupanças.
 
-Se tem um carro para dar em retoma, o seu valor entra exactamente como uma entrada. Em vez de mobilizar dinheiro de uma conta, o carro actual paga uma parte do próximo.
+Se tem um carro para dar em [retoma](/como-funciona-retoma-carro-usado.html), o seu valor entra exactamente como uma entrada. Em vez de mobilizar dinheiro de uma conta, o carro actual paga uma parte do próximo.
 
 ## Prazo: quanto tempo é sensato financiar?
 

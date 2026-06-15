@@ -142,7 +142,7 @@ A regra prática é esta: **o que se desgasta com o uso normal não é garantia 
 
 ## Carros elétricos: o caso especial da bateria
 
-Para carros elétricos, a maior dúvida é sempre a bateria. O enquadramento legal é o mesmo — DL 84/2021 — mas há especificidades importantes.
+Para carros elétricos — e, em certa medida, para [híbridos plug-in](/vale-a-pena-comprar-hibrido-usado-2026.html) — a maior dúvida é sempre a bateria. O enquadramento legal é o mesmo — DL 84/2021 — mas há especificidades importantes.
 
 ### A bateria ESTÁ coberta pela garantia se:
 

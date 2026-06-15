@@ -57,7 +57,7 @@ Comprar carro usado pode ser uma excelente decisão — ou uma fonte de dores de
 Antes de se apaixonar por uma viatura, há perguntas mais importantes do que a cor, as jantes ou o ecrã. O essencial é perceber se o carro faz sentido para o seu uso real e se a compra está a ser feita com a informação certa.
 
 - **Tipo de utilização:** cidade, estrada, família, trabalho ou mistura dos quatro.
-- **Motorização adequada:** gasolina, diesel, híbrido ou elétrico não servem todos os casos da mesma forma.
+- **Motorização adequada:** [gasolina, diesel](/diesel-ou-gasolina-carro-usado-2026.html), [híbrido](/vale-a-pena-comprar-hibrido-usado-2026.html) ou elétrico não servem todos os casos da mesma forma.
 - **Histórico e estado geral:** sinais de desgaste, consistência visual, manutenção e coerência do conjunto.
 - **Qualidade do atendimento:** quando a conversa é clara e sem pressão, a compra costuma correr melhor.
 

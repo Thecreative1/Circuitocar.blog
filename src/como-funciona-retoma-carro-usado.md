@@ -140,7 +140,7 @@ Esta é a verdadeira dúvida de quem vai trocar de carro — e a resposta honest
 
 Vender a particular pode render um valor bruto mais alto. Em troca, exige tempo, paciência e alguma exposição: anúncios, telefonemas, marcações, pessoas a verem o carro, negociação, o risco do pagamento e, no fim, tratar da transferência de propriedade.
 
-A retoma raramente é o valor mais alto no papel, mas ganha noutro campo: **é imediata, é segura e resolve tudo de uma vez.** Não há período em que fica com dois carros (ou nenhum), nem a incerteza de quando vai conseguir vender. E há um detalhe que pesa mais do que parece — quando troca logo por outra viatura, **o valor da retoma abate diretamente no montante a financiar**, o que pode baixar a prestação ou a entrada.
+A retoma raramente é o valor mais alto no papel, mas ganha noutro campo: **é imediata, é segura e resolve tudo de uma vez.** Não há período em que fica com dois carros (ou nenhum), nem a incerteza de quando vai conseguir vender. E há um detalhe que pesa mais do que parece — quando troca logo por outra viatura, **o valor da retoma abate diretamente no montante a [financiar](/financiamento-carro-usado-portugal.html)**, o que pode baixar a prestação ou a entrada.
 
 Em resumo: se procura o último euro e tem tempo e disponibilidade, a venda a particular pode compensar. Se valoriza rapidez, segurança e simplicidade — sobretudo quando já vai levar outro carro — a retoma costuma ser a escolha mais sensata.
 

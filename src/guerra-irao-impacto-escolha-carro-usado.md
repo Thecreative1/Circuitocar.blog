@@ -62,7 +62,7 @@ Na prática, isto pode influenciar quatro escolhas:
 
 - **Gasolina:** continua a fazer sentido para quem faz poucos quilómetros, trajetos curtos e uso urbano ou misto.
 - **Diesel:** ainda pode compensar para quem faz muitos quilómetros em estrada, mas deve ser analisado com mais cuidado.
-- **Híbrido:** ganha interesse para cidade, trânsito e percursos mistos, sobretudo quando o objetivo é reduzir consumo sem depender de carregamentos.
+- **[Híbrido](/vale-a-pena-comprar-hibrido-usado-2026.html):** ganha interesse para cidade, trânsito e percursos mistos, sobretudo quando o objetivo é reduzir consumo sem depender de carregamentos.
 - **Elétrico:** pode ser boa opção para quem tem onde carregar e faz rotinas previsíveis, mas exige olhar para autonomia, carregamento e preço de entrada.
 
 <div class="note">
@@ -122,7 +122,7 @@ Quando há pressão sobre combustíveis, é fácil focar apenas no litro de gaso
 
 Por isso, vale a pena cruzar duas contas:
 
-- **Custo de compra:** preço, entrada, financiamento e retoma.
+- **Custo de compra:** preço, entrada, [financiamento](/financiamento-carro-usado-portugal.html) e [retoma](/como-funciona-retoma-carro-usado.html).
 - **Custo de uso:** combustível ou energia, manutenção, pneus, seguro e previsibilidade.
 
 O melhor carro não é sempre o mais barato. É o que encaixa melhor no seu uso e não aperta o orçamento se o contexto mudar.
