@@ -136,8 +136,10 @@ permalink: simulador_retoma.html
     .field label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
     .field input, .field select, .field textarea { font-family: var(--cc-font-body); font-size: var(--cc-fs-md); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); border-radius: var(--cc-radius-sm); padding: 12px 14px; outline: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), box-shadow var(--cc-dur-fast) var(--cc-ease-out); width: 100%; }
     .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--cc-ink); box-shadow: var(--cc-shadow-yellow); }
+    .field input[aria-invalid="true"], .field select[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--cc-signal-red); box-shadow: 0 0 0 3px rgba(229,52,43,0.15); }
     .field textarea { resize: vertical; min-height: 96px; line-height: 1.55; font-weight: var(--cc-fw-regular); }
     .field .hint { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
     .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin: 22px 0; padding: 16px; background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); }
     .checkbox-row input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--cc-yellow-deep); flex-shrink: 0; }
@@ -249,32 +251,34 @@ permalink: simulador_retoma.html
       <div class="panel-header">
         <div>
           <h2>Simulador de retoma</h2>
-          <p>Preenche os dados essenciais da viatura. Quanto mais realista for a informação, mais útil será a faixa apresentada.</p>
+          <p>Preencha os dados essenciais da viatura. Quanto mais realista for a informação, mais útil será a faixa apresentada.</p>
         </div>
         <div class="badge">Estimativa indicativa</div>
       </div>
 
       <form id="tradeInForm">
+        <p class="sr-only" id="hint-retoma-required">Campo obrigatório.</p>
+        <p class="sr-only" id="hint-retoma-optional">Campo opcional.</p>
         <div class="form-grid">
           <div class="field">
             <label for="marca">Marca</label>
-            <input id="marca" name="marca" type="text" placeholder="Ex.: Peugeot" required />
+            <input id="marca" name="marca" type="text" placeholder="Ex.: Peugeot" required aria-required="true" aria-describedby="hint-retoma-required" />
           </div>
           <div class="field">
             <label for="modelo">Modelo</label>
-            <input id="modelo" name="modelo" type="text" placeholder="Ex.: 308 SW" required />
+            <input id="modelo" name="modelo" type="text" placeholder="Ex.: 308 SW" required aria-required="true" aria-describedby="hint-retoma-required" />
           </div>
           <div class="field">
             <label for="ano">Ano da matrícula</label>
-            <input id="ano" name="ano" type="number" min="1998" max="2026" placeholder="Ex.: 2018" required />
+            <input id="ano" name="ano" type="number" min="1998" max="2026" placeholder="Ex.: 2018" required aria-required="true" aria-describedby="hint-retoma-required" />
           </div>
           <div class="field">
             <label for="kms">Quilómetros atuais</label>
-            <input id="kms" name="kms" type="number" min="0" step="1000" placeholder="Ex.: 128000" required />
+            <input id="kms" name="kms" type="number" min="0" step="1000" placeholder="Ex.: 128000" required aria-required="true" aria-describedby="hint-retoma-required" />
           </div>
           <div class="field">
             <label for="combustivel">Combustível</label>
-            <select id="combustivel" name="combustivel" required>
+            <select id="combustivel" name="combustivel" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="gasolina">Gasolina</option>
               <option value="diesel">Diesel</option>
@@ -286,7 +290,7 @@ permalink: simulador_retoma.html
           </div>
           <div class="field">
             <label for="caixa">Caixa</label>
-            <select id="caixa" name="caixa" required>
+            <select id="caixa" name="caixa" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="manual">Manual</option>
               <option value="automatica">Automática</option>
@@ -294,7 +298,7 @@ permalink: simulador_retoma.html
           </div>
           <div class="field">
             <label for="estado">Estado geral</label>
-            <select id="estado" name="estado" required>
+            <select id="estado" name="estado" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="excelente">Excelente</option>
               <option value="muito_bom">Muito bom</option>
@@ -305,7 +309,7 @@ permalink: simulador_retoma.html
           </div>
           <div class="field">
             <label for="historico">Histórico de manutenção</label>
-            <select id="historico" name="historico" required>
+            <select id="historico" name="historico" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="completo">Completo/documentado</option>
               <option value="parcial">Parcial</option>
@@ -314,7 +318,7 @@ permalink: simulador_retoma.html
           </div>
           <div class="field">
             <label for="donos">Número de proprietários</label>
-            <select id="donos" name="donos" required>
+            <select id="donos" name="donos" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -324,7 +328,7 @@ permalink: simulador_retoma.html
           </div>
           <div class="field">
             <label for="sinistros">Registo de sinistros relevantes</label>
-            <select id="sinistros" name="sinistros" required>
+            <select id="sinistros" name="sinistros" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="nao">Não</option>
               <option value="desconhecido">Desconhecido</option>
@@ -333,34 +337,34 @@ permalink: simulador_retoma.html
           </div>
           <div class="field">
             <label for="liquidez">Procura de mercado para este tipo de carro</label>
-            <select id="liquidez" name="liquidez" required>
+            <select id="liquidez" name="liquidez" required aria-required="true" aria-describedby="hint-retoma-required hint-liquidez">
               <option value="">Selecione</option>
               <option value="alta">Alta</option>
               <option value="media">Média</option>
               <option value="baixa">Baixa</option>
             </select>
-            <div class="hint">Utilitários e familiares comuns tendem a vender melhor do que nichos difíceis.</div>
+            <div class="hint" id="hint-liquidez">Utilitários e familiares comuns tendem a vender melhor do que nichos difíceis.</div>
           </div>
           <div class="field">
             <label for="mercado">Referência de mercado atual (€)</label>
-            <input id="mercado" name="mercado" type="number" min="1000" step="100" placeholder="Ex.: 14950" />
-            <div class="hint">Opcional. Uma média realista para este modelo/ano/km afina a estimativa.</div>
+            <input id="mercado" name="mercado" type="number" min="1000" step="100" placeholder="Ex.: 14950" aria-describedby="hint-mercado" />
+            <div class="hint" id="hint-mercado">Opcional. Uma média realista para este modelo/ano/km afina a estimativa.</div>
           </div>
           <div class="field full">
             <label for="observacoes">Observações úteis</label>
-            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex.: revisão feita recentemente, pneus novos, GPS, 7 lugares, alguns riscos na pintura..."></textarea>
+            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex.: revisão feita recentemente, pneus novos, GPS, 7 lugares, alguns riscos na pintura..." aria-describedby="hint-retoma-optional"></textarea>
           </div>
           <div class="field">
             <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" placeholder="O seu nome" required />
+            <input id="nome" name="nome" type="text" placeholder="O seu nome" required aria-required="true" aria-describedby="hint-retoma-required" />
           </div>
           <div class="field">
             <label for="telefone">Telemóvel</label>
-            <input id="telefone" name="telefone" type="tel" placeholder="9xx xxx xxx" required />
+            <input id="telefone" name="telefone" type="tel" placeholder="9xx xxx xxx" required aria-required="true" aria-describedby="hint-retoma-required" />
           </div>
           <div class="field full">
             <label for="objetivo">Pretende usar a retoma na compra de outra viatura?</label>
-            <select id="objetivo" name="objetivo" required>
+            <select id="objetivo" name="objetivo" required aria-required="true" aria-describedby="hint-retoma-required">
               <option value="">Selecione</option>
               <option value="sim">Sim, quero trocar de carro</option>
               <option value="talvez">Talvez, estou a avaliar</option>
@@ -370,7 +374,7 @@ permalink: simulador_retoma.html
         </div>
 
         <div class="checkbox-row">
-          <input id="consentimento" type="checkbox" required />
+          <input id="consentimento" type="checkbox" required aria-required="true" aria-describedby="hint-retoma-required" />
           <label for="consentimento">Confirmo que os dados inseridos são indicativos e aceito ser contactado pela equipa para afinar a avaliação, se necessário.</label>
         </div>
 
@@ -380,7 +384,7 @@ permalink: simulador_retoma.html
         </div>
       </form>
 
-      <div class="results" id="results">
+      <div class="results" id="results" aria-live="polite" aria-atomic="false">
         <div class="result-grid">
           <div class="result-card">
             <span class="result-label">Faixa provável de retoma</span>
@@ -564,6 +568,16 @@ permalink: simulador_retoma.html
   <script>
     const form = document.getElementById('tradeInForm');
     const results = document.getElementById('results');
+    form.querySelectorAll('input, select, textarea').forEach(function (field) {
+      field.addEventListener('invalid', function () {
+        field.setAttribute('aria-invalid', 'true');
+      });
+      ['input', 'change'].forEach(function (eventName) {
+        field.addEventListener(eventName, function () {
+          if (field.checkValidity()) field.removeAttribute('aria-invalid');
+        });
+      });
+    });
 
     const euro = new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
 
@@ -727,7 +741,7 @@ permalink: simulador_retoma.html
         `Gostava de afinar a avaliação.${data.observacoes ? ` Observações: ${data.observacoes}` : ''}`
       ].join(' ');
 
-      document.getElementById('whatsappBtn').href = `https://wa.me/351922017034?text=${encodeURIComponent(msg)}`;
+      document.getElementById('whatsappBtn').href = '{{ site.contact.marco.whatsappBase }}?text=' + encodeURIComponent(msg) + '&utm_source=simulador&utm_medium=results_whatsapp&utm_campaign=simulador_retoma';
 
       results.classList.add('active');
       results.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -106,7 +106,7 @@ Ainda assim, o híbrido não é magia. É preciso confirmar o estado da viatura,
 <p>Explique-nos a sua rotina: quilómetros por semana, tipo de percurso, família, orçamento e se pretende financiamento. A escolha fica muito mais clara.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_irao_combustiveis">Ver stock</a>
-<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Olá%2C%20vi%20o%20artigo%20sobre%20combustíveis%20e%20quero%20ajuda%20para%20escolher%20entre%20gasolina%2C%20diesel%20ou%20híbrido.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_irao_combustiveis" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp CircuitoCar</a>
+<a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
 </div>
 </div>
 

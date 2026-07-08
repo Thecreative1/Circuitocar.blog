@@ -77,7 +77,7 @@ Se a utilização for quase toda em autoestrada longa, se a compra for feita só
 <p>Em vez de decidir só por moda ou consumo teórico, pode enquadrar a escolha com o uso real e filtrar opções com mais lógica.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_hibrido">Ver stock</a>
-<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20quero%20ajuda%20para%20perceber%20se%20um%20h%C3%ADbrido%20usado%20faz%20sentido%20para%20mim.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_hibrido" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp CircuitoCar</a>
+<a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
 </div>
 </div>
 

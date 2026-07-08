@@ -61,7 +61,9 @@ const log = (sev, page, msg) => issues.push({ sev, page, msg });
 
     // 2. Article JSON-LD
     if (p.type === 'article') {
-      if (!html.includes('"@type": "Article"')) log('ERR', p.name, 'Missing Article JSON-LD');
+      if (!html.includes('"@type": "Article"') && !html.includes('"@type": "BlogPosting"')) {
+        log('ERR', p.name, 'Missing Article/BlogPosting JSON-LD');
+      }
       try {
         const ldMatches = [...html.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)];
         for (const m of ldMatches) {
@@ -92,13 +94,24 @@ const log = (sev, page, msg) => issues.push({ sev, page, msg });
 
     // 4. External links to circuitocar.pt should have UTMs
     for (const a of anchors) {
-      if (a.href.includes('circuitocar.pt') && !a.href.includes('utm_')) {
+      if (a.href.startsWith('http') && a.href.includes('circuitocar.pt') && !a.href.includes('utm_')) {
         log('WARN', p.name, `circuitocar.pt link without UTM: ${a.raw.slice(0, 80)}`);
       }
     }
 
     // 5. Broken images
-    const imgs = await page.$$eval('img', is => is.map(i => ({ src: i.src, alt: i.alt, ok: i.complete && i.naturalWidth > 0 })));
+    // Scroll once so lazy footer/header images get a chance to load before inspection.
+    await page.evaluate(async () => {
+      const step = Math.max(window.innerHeight, 600);
+      for (let y = 0; y <= document.body.scrollHeight; y += step) {
+        window.scrollTo(0, y);
+        await new Promise(resolve => setTimeout(resolve, 40));
+      }
+      window.scrollTo(0, 0);
+    });
+    await page.waitForTimeout(250);
+
+    const imgs = await page.$$eval('img', is => is.map(i => ({ src: i.src, alt: i.alt, ok: i.naturalWidth > 0 })));
     for (const i of imgs) {
       if (!i.ok) log('ERR', p.name, `Broken image: ${i.src}`);
       if (!i.alt) log('WARN', p.name, `Image missing alt: ${i.src}`);

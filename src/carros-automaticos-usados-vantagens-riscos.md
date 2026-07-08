@@ -76,7 +76,7 @@ O risco está menos no conceito "automático" e mais em comprar sem contexto. Qu
 <p>Em vez de comparar anúncios sem contexto, pode começar por filtrar o que encaixa no seu uso real.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_automaticos">Ver stock</a>
-<a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20quero%20ajuda%20para%20escolher%20um%20autom%C3%A1tico%20usado.&utm_source=blog&utm_medium=inline_whatsapp&utm_campaign=blog_automaticos" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>WhatsApp CircuitoCar</a>
+<a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
 </div>
 </div>
 
