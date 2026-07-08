@@ -254,6 +254,7 @@
     .field label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
     .input, .select { font-family: var(--cc-font-body); font-size: var(--cc-fs-md); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); border-radius: var(--cc-radius-sm); padding: 12px 14px; outline: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), box-shadow var(--cc-dur-fast) var(--cc-ease-out); width: 100%; }
     .input:focus, .select:focus { border-color: var(--cc-ink); box-shadow: var(--cc-shadow-yellow); }
+    .input[aria-invalid="true"], .select[aria-invalid="true"] { border-color: var(--cc-signal-red); box-shadow: 0 0 0 3px rgba(229,52,43,0.15); }
     .field small { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
 
     .calc-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; padding-top: 8px; }
@@ -332,22 +333,22 @@
   <div class="sim-wrap">
     <section class="sim-card" id="simulador">
       <h2>Simulador de Crédito</h2>
-      <p>Preenche os valores base e vê uma estimativa simples. A taxa pode ser ajustada consoante o perfil pretendido ou as condições da entidade financeira.</p>
+      <p>Preencha os valores base e veja uma estimativa simples. A taxa pode ser ajustada consoante o perfil pretendido ou as condições da entidade financeira.</p>
 
       <div class="form-grid">
         <div class="field">
           <label for="precoViatura">Preço da viatura (€)</label>
-          <input class="input" id="precoViatura" type="number" min="1000" step="100" value="18950" />
-          <small>Valor total de venda.</small>
+          <input class="input" id="precoViatura" type="number" min="1000" step="100" value="18950" aria-required="true" aria-describedby="hint-preco-viatura" />
+          <small id="hint-preco-viatura">Valor total de venda.</small>
         </div>
         <div class="field">
           <label for="entradaInicial">Entrada inicial (€)</label>
-          <input class="input" id="entradaInicial" type="number" min="0" step="100" value="3000" />
-          <small>Valor pago à cabeça pelo cliente.</small>
+          <input class="input" id="entradaInicial" type="number" min="0" step="100" value="3000" aria-required="true" aria-describedby="hint-entrada-inicial" />
+          <small id="hint-entrada-inicial">Valor pago à cabeça pelo cliente.</small>
         </div>
         <div class="field">
           <label for="prazoMeses">Prazo</label>
-          <select class="select" id="prazoMeses">
+          <select class="select" id="prazoMeses" aria-required="true" aria-describedby="hint-prazo-meses">
             <option value="24">24 meses</option>
             <option value="36">36 meses</option>
             <option value="48">48 meses</option>
@@ -356,22 +357,22 @@
             <option value="84">84 meses</option>
             <option value="96">96 meses</option>
           </select>
-          <small>Prazos mais longos baixam a prestação, mas aumentam o custo total.</small>
+          <small id="hint-prazo-meses">Prazos mais longos baixam a prestação, mas aumentam o custo total.</small>
         </div>
         <div class="field">
           <label for="taxaAnual">Taxa anual estimada (%)</label>
-          <input class="input" id="taxaAnual" type="number" min="0" max="30" step="0.1" value="8.9" />
-          <small>Valor indicativo, ajustável consoante cenário comercial.</small>
+          <input class="input" id="taxaAnual" type="number" min="0" max="30" step="0.1" value="8.9" aria-required="true" aria-describedby="hint-taxa-anual" />
+          <small id="hint-taxa-anual">Valor indicativo, ajustável consoante cenário comercial.</small>
         </div>
         <div class="field">
           <label for="comissaoInicial">Comissões / despesas iniciais (€)</label>
-          <input class="input" id="comissaoInicial" type="number" min="0" step="10" value="250" />
-          <small>Inclui despesas iniciais estimadas.</small>
+          <input class="input" id="comissaoInicial" type="number" min="0" step="10" value="250" aria-describedby="hint-comissao-inicial" />
+          <small id="hint-comissao-inicial">Inclui despesas iniciais estimadas.</small>
         </div>
         <div class="field">
           <label for="seguroOpcional">Seguro / extras mensais (€)</label>
-          <input class="input" id="seguroOpcional" type="number" min="0" step="1" value="0" />
-          <small>Campo opcional para aproximar cenários mais completos.</small>
+          <input class="input" id="seguroOpcional" type="number" min="0" step="1" value="0" aria-describedby="hint-seguro-opcional" />
+          <small id="hint-seguro-opcional">Campo opcional para aproximar cenários mais completos.</small>
         </div>
       </div>
 
@@ -380,7 +381,7 @@
         <button class="cc-btn cc-btn--ghost-dark" type="button" onclick="resetSimulacao()"><i data-lucide="rotate-ccw"></i>Repor valores</button>
       </div>
 
-      <div class="result-grid">
+      <div class="result-grid" aria-live="polite" aria-atomic="false">
         <div class="result-box highlight">
           <strong>Prestação mensal estimada</strong>
           <span id="prestacaoMensal">€ 0,00</span>
@@ -403,14 +404,14 @@
         <strong>Nota:</strong> esta simulação serve como orientação inicial para perceber a ordem de grandeza da prestação e do custo total. Os valores finais dependem sempre da análise do perfil, condições concretas e aprovação pela entidade financeira.
       </div>
 
-      <div class="warning" id="mensagemAviso" style="display:none;"></div>
+      <div class="warning" id="mensagemAviso" role="alert" aria-live="assertive" style="display:none;"></div>
     </section>
 
     <aside class="cc-sidebar" id="equipa">
       <div class="cc-side-card cc-side-card--warm">
         <span class="cc-side-card__eyebrow">Como usar</span>
-        <h3>Simula → vê stock → fala connosco</h3>
-        <p>Começa pela simulação para teres uma ideia da prestação. Depois explora o stock e, quando estiveres pronto, fala com a nossa equipa para uma proposta real.</p>
+        <h3>Simule → veja stock → fale connosco</h3>
+        <p>Comece pela simulação para ter uma ideia da prestação. Depois explore o stock e, quando estiver pronto, fale com a nossa equipa para uma proposta real.</p>
       </div>
 
       <div class="cc-side-card">
@@ -519,6 +520,7 @@
     }
 
     function calcularSimulacao() {
+      const fieldIds = ['precoViatura', 'entradaInicial', 'prazoMeses', 'taxaAnual', 'comissaoInicial', 'seguroOpcional'];
       const preco = parseFloat(document.getElementById('precoViatura').value) || 0;
       const entrada = parseFloat(document.getElementById('entradaInicial').value) || 0;
       const prazo = parseInt(document.getElementById('prazoMeses').value, 10) || 0;
@@ -527,24 +529,37 @@
       const extraMensal = parseFloat(document.getElementById('seguroOpcional').value) || 0;
       const aviso = document.getElementById('mensagemAviso');
 
+      fieldIds.forEach(function (id) {
+        document.getElementById(id).removeAttribute('aria-invalid');
+      });
       aviso.style.display = 'none';
       aviso.textContent = '';
 
-      if (preco <= 0 || prazo <= 0) {
-        aviso.textContent = 'Introduza valores válidos para preço e prazo.';
+      function showWarning(message, invalidIds) {
+        (invalidIds || []).forEach(function (id) {
+          document.getElementById(id).setAttribute('aria-invalid', 'true');
+        });
+        aviso.textContent = message;
         aviso.style.display = 'block';
+        if (invalidIds && invalidIds.length) document.getElementById(invalidIds[0]).focus();
+      }
+
+      if (preco <= 0 || prazo <= 0) {
+        showWarning('Introduza valores válidos para preço e prazo.', ['precoViatura', 'prazoMeses']);
         return;
       }
       if (entrada < 0 || comissao < 0 || extraMensal < 0) {
-        aviso.textContent = 'Não use valores negativos na entrada, comissões ou extras.';
-        aviso.style.display = 'block';
+        const negativeFields = [];
+        if (entrada < 0) negativeFields.push('entradaInicial');
+        if (comissao < 0) negativeFields.push('comissaoInicial');
+        if (extraMensal < 0) negativeFields.push('seguroOpcional');
+        showWarning('Não use valores negativos na entrada, comissões ou extras.', negativeFields);
         return;
       }
 
       const montanteBase = preco - entrada;
       if (montanteBase <= 0) {
-        aviso.textContent = 'A entrada inicial não pode ser igual ou superior ao preço da viatura.';
-        aviso.style.display = 'block';
+        showWarning('A entrada inicial não pode ser igual ou superior ao preço da viatura.', ['entradaInicial']);
         return;
       }
 
@@ -576,6 +591,9 @@
       document.getElementById('comissaoInicial').value = 250;
       document.getElementById('seguroOpcional').value = 0;
       document.getElementById('mensagemAviso').style.display = 'none';
+      ['precoViatura', 'entradaInicial', 'prazoMeses', 'taxaAnual', 'comissaoInicial', 'seguroOpcional'].forEach(function (id) {
+        document.getElementById(id).removeAttribute('aria-invalid');
+      });
       calcularSimulacao();
     }
 
