@@ -597,8 +597,8 @@ permalink: simulador_retoma.html
       else if (kms > 170000) base -= 3000;
       else if (kms > 130000) base -= 1800;
       else if (kms > 100000) base -= 900;
-      else if (kms < 70000) base += 700;
       else if (kms < 40000) base += 1600;
+      else if (kms < 70000) base += 700;
       const fuelAdjust = { gasolina: 0, diesel: -300, hibrido: 1000, plugin: 1600, eletrico: 800, gpl: -500 };
       const caixaAdjust = { manual: 0, automatica: 650 };
       base += fuelAdjust[combustivel] || 0;
