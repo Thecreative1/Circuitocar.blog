@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quanto Custa Ter um Carro por Mês? Calculadora Completa | Circuito Car</title>
+  <meta name="description" content="Calcule o custo mensal real de ter um carro em Portugal: prestação, combustível, IUC, seguro e manutenção — tudo numa só conta. Gratuito, sem registo." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Quanto Custa Ter um Carro por Mês? Calculadora Completa | Circuito Car" />
+  <meta property="og:description" content="A conta que nenhum anúncio mostra: prestação + combustível + IUC + seguro + manutenção. Descubra o custo mensal real antes de comprar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://circuitocar.blog/img/logo-yellow.png" />
+  <meta property="og:url" content="https://circuitocar.blog/custo-mensal-carro.html" />
+  <meta property="og:site_name" content="Circuito Car Blog" />
+  <meta property="og:locale" content="pt_PT" />
+  <link rel="canonical" href="https://circuitocar.blog/custo-mensal-carro.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quanto Custa Ter um Carro por Mês? Calculadora Completa | Circuito Car" />
+  <meta name="twitter:description" content="A conta que nenhum anúncio mostra: prestação + combustível + IUC + seguro + manutenção. Descubra o custo mensal real antes de comprar." />
+  <meta name="twitter:image" content="https://circuitocar.blog/img/logo-yellow.png" />
+  <link rel="icon" type="image/png" href="/img/logo-yellow.png" />
+  <link rel="apple-touch-icon" href="/img/logo-yellow.png" />
+  <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="https://circuitocar.blog/rss.xml" />
+  <link rel="alternate" type="text/plain" title="AI site guide" href="https://circuitocar.blog/llms.txt" />
+  <!-- Google Analytics (gtag.js) — carregado APENAS após consentimento (RGPD / ePrivacy / Lei 41/2004) -->
+<style>
+  .cc-cookie { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 9999; max-width: 720px; margin: 0 auto; background: #0A0B0D; color: #FAFAF7; border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; box-shadow: 0 14px 44px rgba(0,0,0,0.4); padding: 18px 20px; font-family: 'Manrope', system-ui, -apple-system, sans-serif; }
+  .cc-cookie[hidden] { display: none; }
+  .cc-cookie__row { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .cc-cookie__text { flex: 1; min-width: 240px; font-size: 13px; line-height: 1.55; color: #c9ccd1; }
+  .cc-cookie__text strong { display: block; color: #fff; font-size: 14px; margin-bottom: 3px; }
+  .cc-cookie__text a { color: #FFD400; text-decoration: underline; }
+  .cc-cookie__actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .cc-cookie__btn { min-height: 44px; padding: 10px 22px; border-radius: 10px; font-family: 'Saira Condensed', sans-serif; font-style: italic; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; font-size: 14px; cursor: pointer; border: 1px solid transparent; transition: filter .15s ease, border-color .15s ease; }
+  .cc-cookie__btn--reject { background: transparent; color: #fff; border-color: rgba(255,255,255,0.32); }
+  .cc-cookie__btn--reject:hover { border-color: #fff; }
+  .cc-cookie__btn--accept { background: #FFD400; color: #0A0B0D; }
+  .cc-cookie__btn--accept:hover { filter: brightness(1.06); }
+  @media (max-width: 560px) { .cc-cookie { bottom: 76px; } .cc-cookie__actions { width: 100%; } .cc-cookie__btn { flex: 1; } }
+</style>
+<script>
+(function () {
+  var GA_ID = 'G-8SVM6PQS2C';
+  var KEY = 'cc_cookie_consent';
+
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadGA() {
+    if (window.__ccGaLoaded) return;
+    window.__ccGaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function dismiss(v) {
+    save(v);
+    var el = document.getElementById('cc-cookie');
+    if (el) el.parentNode.removeChild(el);
+    if (v === 'granted') loadGA();
+  }
+
+  function showBanner() {
+    if (document.getElementById('cc-cookie')) return;
+    var d = document.createElement('div');
+    d.className = 'cc-cookie';
+    d.id = 'cc-cookie';
+    d.setAttribute('role', 'dialog');
+    d.setAttribute('aria-label', 'Consentimento de cookies');
+    d.innerHTML =
+      '<div class="cc-cookie__row">' +
+        '<div class="cc-cookie__text"><strong>A sua privacidade</strong>' +
+        'Usamos cookies essenciais e, com o seu consentimento, cookies de análise (Google Analytics) para melhorar o site. ' +
+        'Pode aceitar ou recusar. <a href="/privacidade.html">Política de Privacidade</a>.</div>' +
+        '<div class="cc-cookie__actions">' +
+          '<button type="button" class="cc-cookie__btn cc-cookie__btn--reject" id="cc-cookie-reject">Recusar</button>' +
+          '<button type="button" class="cc-cookie__btn cc-cookie__btn--accept" id="cc-cookie-accept">Aceitar</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(d);
+    document.getElementById('cc-cookie-accept').addEventListener('click', function () { dismiss('granted'); });
+    document.getElementById('cc-cookie-reject').addEventListener('click', function () { dismiss('denied'); });
+  }
+
+  // Permite reabrir o banner a partir da página de privacidade ("repor preferências").
+  window.ccOpenCookieSettings = function () { try { localStorage.removeItem(KEY); } catch (e) {} showBanner(); };
+
+  var choice = get();
+  if (choice === 'granted') {
+    loadGA();
+  } else if (choice !== 'denied') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showBanner);
+    } else {
+      showBanner();
+    }
+  }
+})();
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness", "AutoDealer"],
+      "@id": "https://circuitocar.blog/#organization",
+      "name": "Circuito Car",
+      "url": "https://www.circuitocar.pt",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://circuitocar.blog/img/logo-yellow.png"
+      },
+      "image": "https://circuitocar.blog/img/og-blog.svg",
+      "description": "Guias práticos, simuladores de crédito e retoma e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga, Guimarães e Vale do Ave.",
+      "priceRange": "€€",
+      "telephone": "+351922017034",
+      "email": "geral@circuitocar.pt",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua do Relógio nº 430",
+        "addressLocality": "Joane",
+        "addressRegion": "V. N. Famalicão",
+        "postalCode": "4770-245",
+        "addressCountry": "PT"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Joane" },
+        { "@type": "City", "name": "Vila Nova de Famalicão" },
+        { "@type": "City", "name": "Braga" },
+        { "@type": "City", "name": "Guimarães" },
+        { "@type": "AdministrativeArea", "name": "Vale do Ave" }
+      ],
+      "sameAs": [
+        "https://www.circuitocar.pt",
+        "https://circuitocar.blog/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "name": "Marco Marinho",
+          "telephone": "+351922017034",
+          "contactType": "customer support",
+          "availableLanguage": "pt-PT"
+        },
+        {
+          "@type": "ContactPoint",
+          "name": "André Silva",
+          "telephone": "+351911899092",
+          "contactType": "sales",
+          "availableLanguage": "pt-PT"
+        },
+        {
+          "@type": "ContactPoint",
+          "name": "Filipe Rodrigues",
+          "telephone": "+351964197262",
+          "contactType": "technical support",
+          "availableLanguage": "pt-PT"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://circuitocar.blog/#website",
+      "url": "https://circuitocar.blog/",
+      "name": "Circuito Car Blog",
+      "description": "Guias práticos, simuladores de crédito e retoma e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga, Guimarães e Vale do Ave.",
+      "inLanguage": "pt-PT",
+      "publisher": {
+        "@id": "https://circuitocar.blog/#organization"
+      }
+    }
+  ]
+}
+</script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://circuitocar.blog/custo-mensal-carro.html#webpage",
+        "url": "https://circuitocar.blog/custo-mensal-carro.html",
+        "name": "Quanto Custa Ter um Carro por Mês? Calculadora Completa | Circuito Car",
+        "description": "Calculadora gratuita do custo mensal real de ter um carro em Portugal: prestação, combustível, IUC, seguro e manutenção.",
+        "isPartOf": { "@id": "https://circuitocar.blog/#website" },
+        "about": { "@id": "https://circuitocar.blog/custo-mensal-carro.html#tool" },
+        "breadcrumb": { "@id": "https://circuitocar.blog/custo-mensal-carro.html#breadcrumb" },
+        "inLanguage": "pt-PT"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://circuitocar.blog/custo-mensal-carro.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Circuito Car Blog", "item": "https://circuitocar.blog/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculadora de Custo Mensal", "item": "https://circuitocar.blog/custo-mensal-carro.html" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://circuitocar.blog/custo-mensal-carro.html#tool",
+        "name": "Calculadora de Custo Mensal do Carro",
+        "url": "https://circuitocar.blog/custo-mensal-carro.html",
+        "description": "Ferramenta gratuita para estimar o custo mensal total de ter um carro: prestação do crédito, combustível ou energia, IUC, seguro e manutenção.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "isAccessibleForFree": true,
+        "inLanguage": "pt-PT",
+        "publisher": { "@id": "https://circuitocar.blog/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "potentialAction": { "@type": "UseAction", "target": "https://circuitocar.blog/custo-mensal-carro.html#calculadora" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://circuitocar.blog/custo-mensal-carro.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quanto custa ter um carro por mês em Portugal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para um carro usado típico comprado a crédito, o custo mensal total ronda os 250 € a 450 € — somando prestação, combustível, IUC, seguro e manutenção. Um utilitário a gasolina com prestação de 200 € pode custar cerca de 330 €/mês no total; um SUV a gasóleo com muitos quilómetros anuais pode ultrapassar os 500 €/mês. O valor exacto depende do preço da viatura, do financiamento e sobretudo dos quilómetros que faz por ano."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que está incluído no custo mensal de um carro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O custo mensal completo inclui: a prestação do crédito (se financiado), o combustível ou energia, o IUC dividido por 12 meses, o seguro automóvel e uma provisão para manutenção (revisões, pneus, inspeção periódica). Muitos compradores olham apenas para a prestação e subestimam o resto — que frequentemente representa 40 a 60% do custo total mensal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como posso reduzir o custo mensal do carro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As alavancas com mais impacto são: dar uma entrada maior (reduz a prestação e os juros totais), escolher a motorização certa para o uso real (gasolina para poucos quilómetros, gasóleo apenas acima de 15.000 a 20.000 km/ano), preferir viaturas com IUC baixo (menor cilindrada e emissões) e evitar prazos de crédito demasiado longos, que baixam a prestação mas aumentam muito o custo total."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O seguro e a manutenção estão incluídos na prestação do crédito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. A prestação do crédito cobre apenas a amortização do valor financiado mais os juros. O seguro automóvel, o IUC, o combustível e a manutenção são custos separados que se somam à prestação todos os meses. É por isso que uma prestação de 250 € se transforma facilmente num custo real de 400 €/mês."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="/css/circuito-car-tokens.css" />
+  <link rel="stylesheet" href="/css/article-cc.css" />
+
+  <style>
+    /* ----- Calculator-specific styles, on top of article-cc.css ----- */
+    .sim-wrap { max-width: 1280px; margin: 0 auto; padding: 56px 32px 96px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; align-items: start; }
+    .sim-card { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 36px; }
+    .sim-card h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.05; letter-spacing: var(--cc-tracking-tight); color: var(--cc-ink); margin: 0 0 10px; }
+    .sim-card > p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0 0 28px; max-width: 740px; }
+
+    .group-title { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-md); letter-spacing: var(--cc-tracking-wide); color: var(--cc-ink); margin: 28px 0 14px; display: flex; align-items: center; gap: 10px; }
+    .group-title:first-of-type { margin-top: 0; }
+    .group-title::after { content: ''; flex: 1; height: 1px; background: var(--cc-border); }
+
+    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 6px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
+    .input, .select { font-family: var(--cc-font-body); font-size: var(--cc-fs-md); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); border-radius: var(--cc-radius-sm); padding: 12px 14px; outline: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), box-shadow var(--cc-dur-fast) var(--cc-ease-out); width: 100%; }
+    .input:focus, .select:focus { border-color: var(--cc-ink); box-shadow: var(--cc-shadow-yellow); }
+    .input[aria-invalid="true"], .select[aria-invalid="true"] { border-color: var(--cc-signal-red); box-shadow: 0 0 0 3px rgba(229,52,43,0.15); }
+    .input:disabled { opacity: 0.45; cursor: not-allowed; }
+    .field small { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
+
+    .calc-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 28px 0; padding-top: 8px; }
+
+    .result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 20px; }
+    .result-box { background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .result-box strong { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
+    .result-box > span { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); font-size: var(--cc-fs-2xl); color: var(--cc-ink); letter-spacing: 0; line-height: 1; font-variant-numeric: tabular-nums; }
+    .result-box.highlight { background: var(--cc-ink); border-color: var(--cc-ink); }
+    .result-box.highlight strong { color: var(--cc-yellow); }
+    .result-box.highlight > span { color: var(--cc-yellow); font-size: var(--cc-fs-3xl); }
+
+    /* Breakdown bar */
+    .breakdown { margin-bottom: 24px; }
+    .breakdown__bar { display: flex; height: 26px; border-radius: var(--cc-radius-sm); overflow: hidden; border: 1px solid var(--cc-border-strong); background: var(--cc-paper-warm); }
+    .breakdown__seg { min-width: 0; transition: width var(--cc-dur-base) var(--cc-ease-out); }
+    .breakdown__seg--prestacao { background: var(--cc-ink); }
+    .breakdown__seg--combustivel { background: var(--cc-yellow); }
+    .breakdown__seg--iuc { background: var(--cc-blue-light); }
+    .breakdown__seg--fixos { background: var(--cc-fg-subtle); }
+    .breakdown__legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; }
+    .breakdown__key { display: flex; align-items: center; gap: 6px; font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); }
+    .breakdown__dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; border: 1px solid rgba(10,11,13,0.15); }
+
+    .note { background: var(--cc-yellow-tint); border-left: 4px solid var(--cc-yellow); border-radius: 0 var(--cc-radius-md) var(--cc-radius-md) 0; padding: 16px 20px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: 1.6; color: var(--cc-ink); }
+    .note strong { color: var(--cc-ink) !important; font-weight: var(--cc-fw-bold); }
+    .note a { color: var(--cc-ink); font-weight: var(--cc-fw-bold); }
+
+    .warning { background: rgba(229,52,43,0.08); border: 1px solid rgba(229,52,43,0.3); border-radius: var(--cc-radius-sm); padding: 12px 16px; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-signal-red); margin-top: 14px; font-weight: var(--cc-fw-semibold); }
+
+    /* FAQ section */
+    .faq-card h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-lg); color: var(--cc-ink); margin: 26px 0 8px; }
+    .faq-card h3:first-of-type { margin-top: 0; }
+    .faq-card p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0 0 4px; }
+    .faq-card a { color: var(--cc-ink); font-weight: var(--cc-fw-bold); }
+
+    @media (max-width: 1000px) {
+      .sim-wrap { grid-template-columns: 1fr; padding: 40px 24px 80px; }
+    }
+    @media (max-width: 640px) {
+      .sim-wrap { padding: 32px 16px 72px; }
+      .sim-card { padding: 24px; }
+      .form-grid, .result-grid { grid-template-columns: 1fr; }
+      .calc-actions { flex-direction: column; }
+      .calc-actions .cc-btn { width: 100%; }
+      .field, .input, .select { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cc-topbar">
+    <div class="cc-topbar__inner">
+      <span class="cc-topbar__pill"><span class="cc-topbar__dot"></span>Calculadora · Custo Mensal Real</span>
+      <div class="cc-topbar__links">
+        <a href="/">Voltar ao blog</a>
+        <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
+        <a href="/#contacto">Contacto equipa</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="cc-header">
+    <div class="cc-header__inner">
+      <a class="cc-header__logo" href="/" aria-label="Circuito Car — voltar à homepage">
+        <img src="/img/logo-yellow.png" alt="Circuito Car" />
+      </a>
+      <span class="cc-header__brand-tag">Calculadora</span>
+      <nav class="cc-header__nav" aria-label="Navegação principal">
+        <a href="/artigos.html">Artigos</a>
+        <a href="/circuitocar_simulador_credito.html">Crédito</a>
+        <a href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=header_stock&utm_campaign=custo_mensal" target="_blank" rel="noopener noreferrer">Viaturas</a>
+      </nav>
+      <a class="cc-header__cta" href="#equipa">
+        <i data-lucide="message-square"></i>Falar connosco
+      </a>
+    </div>
+  </header>
+
+  <!-- ── POST HERO (dark) ── -->
+  <section class="cc-post-hero">
+    <div class="cc-post-hero__inner">
+      <span class="cc-post-hero__eyebrow">A Conta Que Nenhum Anúncio Mostra</span>
+      <h1>Quanto custa <em>mesmo</em> ter este carro por mês?</h1>
+      <p class="cc-post-hero__lead">A prestação é só o começo. Some o combustível, o IUC, o seguro e a manutenção — e veja o custo mensal real antes de decidir. Gratuito, sem registo.</p>
+      <div class="cc-post-hero__actions">
+        <a class="cc-btn cc-btn--yellow" href="#calculadora"><i data-lucide="calculator"></i>Calcular agora</a>
+        <a class="cc-btn cc-btn--ghost-light" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=hero_stock&utm_campaign=custo_mensal" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver viaturas</a>
+      </div>
+    </div>
+    <div class="cc-post-hero__chevron" aria-hidden="true"></div>
+  </section>
+
+  <!-- ── CALCULATOR + SIDEBAR ── -->
+  <div class="sim-wrap">
+    <div>
+    <section class="sim-card" id="calculadora">
+      <h2>Custo Mensal Real</h2>
+      <p>Preencha os dados da viatura e do seu uso. Os valores sugeridos são médias realistas para Portugal — ajuste os que conhecer melhor.</p>
+
+      <h3 class="group-title">A viatura</h3>
+      <div class="form-grid">
+        <div class="field">
+          <label for="precoViatura">Preço da viatura (€)</label>
+          <input class="input" id="precoViatura" type="number" min="1000" step="100" value="18950" aria-required="true" aria-describedby="hint-preco" />
+          <small id="hint-preco">Valor total de venda.</small>
+        </div>
+        <div class="field">
+          <label for="combustivel">Combustível</label>
+          <select class="select" id="combustivel" aria-describedby="hint-combustivel" onchange="mudarCombustivel()">
+            <option value="gasolina" selected>Gasolina</option>
+            <option value="gasoleo">Gasóleo</option>
+            <option value="hibrido">Híbrido</option>
+            <option value="eletrico">Elétrico</option>
+          </select>
+          <small id="hint-combustivel">Atualiza consumo, preço de energia e IUC automaticamente.</small>
+        </div>
+        <div class="field">
+          <label for="cilindrada">Cilindrada (cc)</label>
+          <input class="input" id="cilindrada" type="number" min="0" max="8000" step="1" value="1200" aria-required="true" aria-describedby="hint-cilindrada" />
+          <small id="hint-cilindrada">Consta na ficha técnica ou livrete. Usada para o IUC.</small>
+        </div>
+        <div class="field">
+          <label for="co2">Emissões CO₂ (g/km)</label>
+          <input class="input" id="co2" type="number" min="0" max="500" step="1" value="120" aria-required="true" aria-describedby="hint-co2" />
+          <small id="hint-co2">Consta no DUA ou ficha técnica. Se não souber, deixe o valor sugerido.</small>
+        </div>
+        <div class="field">
+          <label for="anoMatricula">Ano de matrícula</label>
+          <input class="input" id="anoMatricula" type="number" min="2008" max="2026" step="1" value="2021" aria-required="true" aria-describedby="hint-ano" />
+          <small id="hint-ano">Determina a norma de emissões usada no IUC (NEDC ou WLTP).</small>
+        </div>
+        <div class="field">
+          <label for="kmAno">Quilómetros por ano</label>
+          <input class="input" id="kmAno" type="number" min="0" max="100000" step="500" value="15000" aria-required="true" aria-describedby="hint-km" />
+          <small id="hint-km">Média em Portugal: 12.000 a 15.000 km/ano.</small>
+        </div>
+      </div>
+
+      <h3 class="group-title">Financiamento</h3>
+      <div class="form-grid">
+        <div class="field">
+          <label for="prazoMeses">Prazo do crédito</label>
+          <select class="select" id="prazoMeses" aria-describedby="hint-prazo">
+            <option value="0">Sem financiamento (pronto pagamento)</option>
+            <option value="36">36 meses</option>
+            <option value="48">48 meses</option>
+            <option value="60" selected>60 meses</option>
+            <option value="72">72 meses</option>
+            <option value="84">84 meses</option>
+          </select>
+          <small id="hint-prazo">Prazos longos baixam a prestação mas aumentam o custo total.</small>
+        </div>
+        <div class="field">
+          <label for="entradaInicial">Entrada inicial (€)</label>
+          <input class="input" id="entradaInicial" type="number" min="0" step="100" value="3000" aria-describedby="hint-entrada" />
+          <small id="hint-entrada">Valor pago à cabeça. Ignorado se escolher pronto pagamento.</small>
+        </div>
+        <div class="field">
+          <label for="taxaAnual">Taxa anual estimada (%)</label>
+          <input class="input" id="taxaAnual" type="number" min="0" max="30" step="0.1" value="8.9" aria-describedby="hint-taxa" />
+          <small id="hint-taxa">Valor indicativo — a taxa real depende do perfil e da financeira.</small>
+        </div>
+      </div>
+
+      <h3 class="group-title">Custos de utilização</h3>
+      <div class="form-grid">
+        <div class="field">
+          <label for="consumoMedio">Consumo médio (<span id="unidadeConsumo">L/100 km</span>)</label>
+          <input class="input" id="consumoMedio" type="number" min="0" max="50" step="0.1" value="6.5" aria-describedby="hint-consumo" />
+          <small id="hint-consumo">Sugerido pela média do tipo de motor. Ajuste ao carro concreto.</small>
+        </div>
+        <div class="field">
+          <label for="precoEnergia">Preço (<span id="unidadePreco">€/litro</span>)</label>
+          <input class="input" id="precoEnergia" type="number" min="0" max="5" step="0.01" value="1.72" aria-describedby="hint-energia" />
+          <small id="hint-energia">Média nacional atual. Para elétricos, custo por kWh em casa.</small>
+        </div>
+        <div class="field">
+          <label for="seguroMensal">Seguro mensal (€)</label>
+          <input class="input" id="seguroMensal" type="number" min="0" step="1" value="30" aria-describedby="hint-seguro" />
+          <small id="hint-seguro">Terceiros: 15–30 €/mês · Todos os riscos: 40–80 €/mês.</small>
+        </div>
+        <div class="field">
+          <label for="manutencaoMensal">Manutenção mensal (€)</label>
+          <input class="input" id="manutencaoMensal" type="number" min="0" step="1" value="35" aria-describedby="hint-manutencao" />
+          <small id="hint-manutencao">Provisão para revisões, pneus e inspeção. Sugerida pelo tipo de motor.</small>
+        </div>
+      </div>
+
+      <div class="calc-actions">
+        <button class="cc-btn cc-btn--yellow" type="button" onclick="calcularCusto()"><i data-lucide="calculator"></i>Calcular custo mensal</button>
+        <button class="cc-btn cc-btn--ghost-dark" type="button" onclick="resetCusto()"><i data-lucide="rotate-ccw"></i>Repor valores</button>
+      </div>
+
+      <div aria-live="polite" aria-atomic="false">
+        <div class="result-grid">
+          <div class="result-box highlight">
+            <strong>Custo mensal total</strong>
+            <span id="totalMensal">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>Custo anual total</strong>
+            <span id="totalAnual">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>Prestação do crédito</strong>
+            <span id="resPrestacao">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong><span id="labelCombustivel">Combustível</span></strong>
+            <span id="resCombustivel">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>IUC (por mês)</strong>
+            <span id="resIuc">€ 0,00</span>
+          </div>
+          <div class="result-box">
+            <strong>Seguro + manutenção</strong>
+            <span id="resFixos">€ 0,00</span>
+          </div>
+        </div>
+
+        <div class="breakdown" aria-hidden="true">
+          <div class="breakdown__bar">
+            <div class="breakdown__seg breakdown__seg--prestacao" id="segPrestacao" style="width:0%"></div>
+            <div class="breakdown__seg breakdown__seg--combustivel" id="segCombustivel" style="width:0%"></div>
+            <div class="breakdown__seg breakdown__seg--iuc" id="segIuc" style="width:0%"></div>
+            <div class="breakdown__seg breakdown__seg--fixos" id="segFixos" style="width:0%"></div>
+          </div>
+          <div class="breakdown__legend">
+            <span class="breakdown__key"><span class="breakdown__dot" style="background:var(--cc-ink)"></span>Prestação</span>
+            <span class="breakdown__key"><span class="breakdown__dot" style="background:var(--cc-yellow)"></span>Combustível / energia</span>
+            <span class="breakdown__key"><span class="breakdown__dot" style="background:var(--cc-blue-light)"></span>IUC</span>
+            <span class="breakdown__key"><span class="breakdown__dot" style="background:var(--cc-fg-subtle)"></span>Seguro + manutenção</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Nota:</strong> valores indicativos para orientação inicial. O IUC é estimado para viaturas matriculadas depois de julho de 2007; híbridos plug-in e casos especiais podem ter regras próprias — veja o <a href="/iuc-carros-usados-portugal.html">artigo sobre o IUC</a>. A desvalorização da viatura não está incluída (não é um custo pago mensalmente). A prestação final depende sempre de aprovação da entidade financeira.
+      </div>
+
+      <div class="warning" id="mensagemAviso" role="alert" aria-live="assertive" style="display:none;"></div>
+
+      <div class="calc-actions" style="margin-bottom:0;">
+        <a class="cc-btn cc-btn--wa" id="btnWhatsapp" href="#" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Enviar resumo por WhatsApp</a>
+        <a class="cc-btn cc-btn--dark" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=resultado_stock&utm_campaign=custo_mensal" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver carros dentro deste orçamento</a>
+      </div>
+    </section>
+
+    <section class="sim-card faq-card" style="margin-top: 40px;">
+      <h2>Perguntas frequentes</h2>
+
+      <h3>Quanto custa ter um carro por mês em Portugal?</h3>
+      <p>Para um carro usado típico comprado a crédito, o total ronda os 250 € a 450 € por mês — somando prestação, combustível, IUC, seguro e manutenção. Um utilitário a gasolina com prestação de 200 € custa na realidade cerca de 330 €/mês. O maior fator de variação são os quilómetros anuais.</p>
+
+      <h3>O que está incluído no custo mensal?</h3>
+      <p>Prestação do crédito (se financiado), combustível ou energia, IUC a dividir por 12, seguro e uma provisão de manutenção (revisões, pneus, inspeção). A prestação costuma ser apenas 40 a 60% do custo real — o resto é o que os anúncios não mostram.</p>
+
+      <h3>Como reduzir o custo mensal?</h3>
+      <p>Entrada maior (menos juros), motorização certa para o uso real — <a href="/diesel-ou-gasolina-carro-usado-2026.html">gasóleo só compensa acima de 15.000–20.000 km/ano</a> —, viaturas com IUC baixo, e prazos de crédito equilibrados. Antes de decidir, compare o <a href="/financiamento-carro-usado-portugal.html">custo total do financiamento</a>, não só a prestação.</p>
+
+      <h3>O seguro e a manutenção estão na prestação?</h3>
+      <p>Não. A prestação cobre só a amortização e os juros. Seguro, IUC, combustível e manutenção somam-se todos os meses — é por isso que uma prestação de 250 € se transforma num custo real de 400 €/mês.</p>
+    </section>
+    </div>
+
+    <aside class="cc-sidebar" id="equipa">
+      <div class="cc-side-card cc-side-card--warm">
+        <span class="cc-side-card__eyebrow">Como usar</span>
+        <h3>Calcule → compare → decida</h3>
+        <p>Experimente a calculadora com dois ou três carros que está a considerar. A diferença no custo mensal real entre eles é frequentemente maior do que a diferença de preço sugere.</p>
+      </div>
+
+      <div class="cc-side-card">
+        <span class="cc-side-card__eyebrow">Equipa</span>
+        <h3>Fala com quem percebe</h3>
+
+        <!-- Marco — contacto principal -->
+        <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
+          <div class="cc-side-seller__top">
+            <strong>Marco Marinho</strong>
+            <span class="cc-side-seller__role" style="background: var(--cc-blue-light); color: var(--cc-paper);">Contacto Principal</span>
+          </div>
+          <p>Disponível para informações sobre viaturas, marcar visitas, esclarecer dúvidas de financiamento e retoma — e encaminha para a pessoa certa se necessário.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:+351922017034"><i data-lucide="phone"></i>Ligar para a CircuitoCar</a>
+            <a class="cc-btn cc-btn--wa" href="https://wa.me/351922017034?text=Ol%C3%A1%2C%20estive%20a%20usar%20a%20calculadora%20de%20custo%20mensal%20do%20blog%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_marco&utm_campaign=custo_mensal"><i data-lucide="message-circle"></i>Falar com a CircuitoCar</a>
+          </div>
+        </div>
+
+        <!-- Divider direção -->
+        <div style="display: flex; align-items: center; gap: 8px; padding: 4px 0;">
+          <span style="font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cc-fg-subtle); white-space: nowrap;">Direção</span>
+          <div style="flex: 1; height: 1px; background: var(--cc-border);"></div>
+        </div>
+
+        <!-- André — direção comercial -->
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>André Silva</strong>
+            <span class="cc-side-seller__role">Direção Comercial</span>
+          </div>
+          <p>Enquadramento financeiro, propostas e condições comerciais.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:+351911899092"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="https://wa.me/351911899092?text=Ol%C3%A1%2C%20estive%20a%20usar%20a%20calculadora%20de%20custo%20mensal%20do%20blog%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_andre&utm_campaign=custo_mensal"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Filipe — direção técnica -->
+        <div class="cc-side-seller">
+          <div class="cc-side-seller__top">
+            <strong>Filipe Rodrigues</strong>
+            <span class="cc-side-seller__role">Direção Técnica</span>
+          </div>
+          <p>Detalhes técnicos da viatura, características e questões específicas.</p>
+          <div class="cta-actions">
+            <a class="cc-btn cc-btn--dark" href="tel:+351964197262"><i data-lucide="phone"></i>Ligar</a>
+            <a class="cc-btn cc-btn--wa" href="https://wa.me/351964197262?text=Ol%C3%A1%2C%20estive%20a%20usar%20a%20calculadora%20de%20custo%20mensal%20do%20blog%20e%20quero%20mais%20informa%C3%A7%C3%A3o.&utm_source=simulador&utm_medium=sidebar_filipe&utm_campaign=custo_mensal"><i data-lucide="message-circle"></i>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-side-card cc-side-card--warm">
+        <span class="cc-side-card__eyebrow">Outras ferramentas</span>
+        <h3>Complete a conta</h3>
+        <p>Simule o crédito ao detalhe, avalie a retoma do seu carro atual ou calcule o ISV de uma importação.</p>
+        <a class="cc-btn cc-btn--ghost-dark" href="/circuitocar_simulador_credito.html" style="width:100%; margin-bottom:8px;"><i data-lucide="euro"></i>Simulador de crédito</a>
+        <a class="cc-btn cc-btn--ghost-dark" href="/simulador_retoma.html" style="width:100%; margin-bottom:8px;"><i data-lucide="repeat"></i>Simulador de retoma</a>
+        <a class="cc-btn cc-btn--ghost-dark" href="/simulador_isv.html" style="width:100%;"><i data-lucide="file-search"></i>Simulador de ISV</a>
+      </div>
+
+      <div class="cc-side-card cc-side-card--warm">
+        <span class="cc-side-card__eyebrow">Stock</span>
+        <h3>Próximo passo: ver viaturas</h3>
+        <p>Vê o stock atual em circuitocar.pt — todas as viaturas verificadas, com garantia.</p>
+        <a class="cc-btn cc-btn--yellow" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=sidebar_stock&utm_campaign=custo_mensal" target="_blank" rel="noopener noreferrer" style="width:100%;"><i data-lucide="car"></i>Ver stock</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="cc-footer">
+    <div class="cc-footer__inner">
+      <div class="cc-footer__grid">
+        <div class="cc-footer__col cc-footer__brand">
+          <img src="/img/logo-yellow.png" alt="Circuito Car" class="cc-footer__logo" />
+          <p>Calculadora gratuita do custo mensal real de ter um carro. Valores indicativos — as condições finais dependem do perfil e da entidade financeira.</p>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Explorar</h4>
+          <a href="/">Homepage</a>
+          <a href="/circuitocar_simulador_credito.html">Simulador de crédito</a>
+          <a href="/simulador_retoma.html">Simulador de retoma</a>
+          <a href="/simulador_isv.html">Simulador de ISV</a>
+          <a href="/artigos.html">Artigos</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Contacto</h4>
+          <a href="tel:+351922017034">Marco Marinho · 922 017 034</a>
+          <a href="tel:+351911899092">André Silva · 911 899 092</a>
+          <a href="tel:+351964197262">Filipe Rodrigues · 964 197 262</a>
+          <a href="/#contacto">Falar com a equipa</a>
+        </div>
+        <div class="cc-footer__col">
+          <h4>Localização</h4>
+          <p style="margin:0">Rua do Relógio nº 430<br>4770-245 Joane<br>V. N. Famalicão</p>
+        </div>
+      </div>
+      <div class="cc-footer__bottom">
+        <span>© 2026 Circuito Car. Todos os direitos reservados.</span>
+        <span>Estimativa indicativa. Não constitui proposta vinculativa.</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="cc-mobile-dock" aria-label="Navegação mobile">
+    <a href="/"><i data-lucide="home"></i><span>Início</span></a>
+    <a href="/artigos.html"><i data-lucide="book-open"></i><span>Blog</span></a>
+    <a href="/custo-mensal-carro.html" aria-current="page"><i data-lucide="wallet"></i><span>Custo/mês</span></a>
+    <a href="/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i><span>Crédito</span></a>
+    <a href="#equipa"><i data-lucide="message-square"></i><span>Contacto</span></a>
+  </nav>
+
+  <script>
+    var PERFIL_COMBUSTIVEL = {
+      gasolina: { consumo: 6.5, preco: 1.72, unidadeConsumo: 'L/100 km', unidadePreco: '€/litro', manutencao: 35, label: 'Combustível' },
+      gasoleo:  { consumo: 4.8, preco: 1.68, unidadeConsumo: 'L/100 km', unidadePreco: '€/litro', manutencao: 45, label: 'Combustível' },
+      hibrido:  { consumo: 5.0, preco: 1.72, unidadeConsumo: 'L/100 km', unidadePreco: '€/litro', manutencao: 40, label: 'Combustível' },
+      eletrico: { consumo: 16,  preco: 0.22, unidadeConsumo: 'kWh/100 km', unidadePreco: '€/kWh', manutencao: 25, label: 'Energia' }
+    };
+
+    function formatEuro(value) {
+      return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2 }).format(value);
+    }
+
+    function mudarCombustivel() {
+      var fuel = document.getElementById('combustivel').value;
+      var p = PERFIL_COMBUSTIVEL[fuel];
+      document.getElementById('consumoMedio').value = p.consumo;
+      document.getElementById('precoEnergia').value = p.preco;
+      document.getElementById('manutencaoMensal').value = p.manutencao;
+      document.getElementById('unidadeConsumo').textContent = p.unidadeConsumo;
+      document.getElementById('unidadePreco').textContent = p.unidadePreco;
+      document.getElementById('labelCombustivel').textContent = p.label;
+
+      var eletrico = fuel === 'eletrico';
+      var cil = document.getElementById('cilindrada');
+      var co2 = document.getElementById('co2');
+      cil.disabled = eletrico;
+      co2.disabled = eletrico;
+      if (eletrico) {
+        cil.removeAttribute('aria-invalid');
+        co2.removeAttribute('aria-invalid');
+      }
+      calcularCusto();
+    }
+
+    // IUC indicativo — categoria B (matrícula depois de julho 2007)
+    function calcularIUC(fuel, cc, co2, ano) {
+      if (fuel === 'eletrico') return 0;
+      var compCilindrada = cc <= 1250 ? 31.87 : cc <= 1750 ? 63.94 : cc <= 2500 ? 127.72 : 437.06;
+      var wltp = ano >= 2019;
+      var compCO2;
+      if (wltp) {
+        compCO2 = co2 <= 140 ? 64.35 : co2 <= 205 ? 96.42 : co2 <= 260 ? 209.37 : 358.72;
+      } else {
+        compCO2 = co2 <= 120 ? 64.35 : co2 <= 180 ? 96.42 : co2 <= 250 ? 209.37 : 358.72;
+      }
+      var adicionalGasoleo = 0;
+      if (fuel === 'gasoleo') {
+        if (wltp) {
+          adicionalGasoleo = co2 <= 140 ? 5.02 : co2 <= 205 ? 8.10 : co2 <= 260 ? 28.92 : 68.85;
+        } else {
+          adicionalGasoleo = co2 <= 120 ? 5.02 : co2 <= 180 ? 8.10 : co2 <= 250 ? 28.92 : 68.85;
+        }
+      }
+      return compCilindrada + compCO2 + adicionalGasoleo;
+    }
+
+    function calcularCusto() {
+      var fieldIds = ['precoViatura', 'cilindrada', 'co2', 'anoMatricula', 'kmAno', 'entradaInicial', 'taxaAnual', 'consumoMedio', 'precoEnergia', 'seguroMensal', 'manutencaoMensal'];
+      var aviso = document.getElementById('mensagemAviso');
+
+      fieldIds.forEach(function (id) {
+        document.getElementById(id).removeAttribute('aria-invalid');
+      });
+      aviso.style.display = 'none';
+      aviso.textContent = '';
+
+      function showWarning(message, invalidIds) {
+        (invalidIds || []).forEach(function (id) {
+          document.getElementById(id).setAttribute('aria-invalid', 'true');
+        });
+        aviso.textContent = message;
+        aviso.style.display = 'block';
+        if (invalidIds && invalidIds.length) document.getElementById(invalidIds[0]).focus();
+      }
+
+      var fuel = document.getElementById('combustivel').value;
+      var eletrico = fuel === 'eletrico';
+      var preco = parseFloat(document.getElementById('precoViatura').value) || 0;
+      var cc = eletrico ? 0 : parseFloat(document.getElementById('cilindrada').value) || 0;
+      var co2 = eletrico ? 0 : parseFloat(document.getElementById('co2').value) || 0;
+      var ano = parseInt(document.getElementById('anoMatricula').value, 10) || 0;
+      var kmAno = parseFloat(document.getElementById('kmAno').value) || 0;
+      var prazo = parseInt(document.getElementById('prazoMeses').value, 10) || 0;
+      var entrada = parseFloat(document.getElementById('entradaInicial').value) || 0;
+      var taxaAnual = parseFloat(document.getElementById('taxaAnual').value) || 0;
+      var consumo = parseFloat(document.getElementById('consumoMedio').value) || 0;
+      var precoEnergia = parseFloat(document.getElementById('precoEnergia').value) || 0;
+      var seguro = parseFloat(document.getElementById('seguroMensal').value) || 0;
+      var manutencao = parseFloat(document.getElementById('manutencaoMensal').value) || 0;
+
+      if (preco <= 0) {
+        showWarning('Introduza um preço de viatura válido.', ['precoViatura']);
+        return;
+      }
+      if (!eletrico && cc <= 0) {
+        showWarning('Introduza a cilindrada do motor (consta na ficha técnica ou livrete).', ['cilindrada']);
+        return;
+      }
+      var anoAtual = new Date().getFullYear();
+      if (ano < 2008 || ano > anoAtual) {
+        showWarning('Introduza um ano de matrícula entre 2008 e ' + anoAtual + '. Para carros anteriores a julho de 2007, o IUC segue outra tabela — fale connosco.', ['anoMatricula']);
+        return;
+      }
+      if (kmAno < 0 || kmAno > 100000) {
+        showWarning('Introduza um valor de quilómetros anuais entre 0 e 100.000.', ['kmAno']);
+        return;
+      }
+      if (prazo > 0 && entrada >= preco) {
+        showWarning('A entrada inicial não pode ser igual ou superior ao preço da viatura.', ['entradaInicial']);
+        return;
+      }
+      if (entrada < 0 || seguro < 0 || manutencao < 0 || consumo < 0 || precoEnergia < 0) {
+        showWarning('Não use valores negativos.', []);
+        return;
+      }
+
+      // 1. Prestação
+      var prestacao = 0;
+      if (prazo > 0) {
+        var montante = preco - entrada;
+        var taxaMensal = (taxaAnual / 100) / 12;
+        prestacao = taxaMensal === 0
+          ? montante / prazo
+          : montante * (taxaMensal / (1 - Math.pow(1 + taxaMensal, -prazo)));
+      }
+
+      // 2. Combustível / energia
+      var custoCombustivel = (kmAno / 12) * (consumo / 100) * precoEnergia;
+
+      // 3. IUC mensalizado
+      var iucAnual = calcularIUC(fuel, cc, co2, ano);
+      var iucMensal = iucAnual / 12;
+
+      // 4. Fixos
+      var fixos = seguro + manutencao;
+
+      var total = prestacao + custoCombustivel + iucMensal + fixos;
+
+      document.getElementById('totalMensal').textContent = formatEuro(total);
+      document.getElementById('totalAnual').textContent = formatEuro(total * 12);
+      document.getElementById('resPrestacao').textContent = prazo > 0 ? formatEuro(prestacao) : 'Sem crédito';
+      document.getElementById('resCombustivel').textContent = formatEuro(custoCombustivel);
+      document.getElementById('resIuc').textContent = eletrico ? 'Isento' : formatEuro(iucMensal);
+      document.getElementById('resFixos').textContent = formatEuro(fixos);
+
+      // Breakdown bar
+      if (total > 0) {
+        document.getElementById('segPrestacao').style.width = (prestacao / total * 100) + '%';
+        document.getElementById('segCombustivel').style.width = (custoCombustivel / total * 100) + '%';
+        document.getElementById('segIuc').style.width = (iucMensal / total * 100) + '%';
+        document.getElementById('segFixos').style.width = (fixos / total * 100) + '%';
+      }
+
+      // WhatsApp summary
+      var resumo = 'Olá! Usei a calculadora de custo mensal do blog Circuito Car.\n'
+        + 'Carro de ' + formatEuro(preco) + ' (' + fuel + ', ' + kmAno.toLocaleString('pt-PT') + ' km/ano)\n'
+        + 'Custo mensal estimado: ' + formatEuro(total) + '\n'
+        + '· Prestação: ' + (prazo > 0 ? formatEuro(prestacao) : 'sem crédito') + '\n'
+        + '· Combustível/energia: ' + formatEuro(custoCombustivel) + '\n'
+        + '· IUC: ' + (eletrico ? 'isento' : formatEuro(iucMensal) + '/mês') + '\n'
+        + '· Seguro + manutenção: ' + formatEuro(fixos) + '\n'
+        + 'Quero ver opções dentro deste orçamento.';
+      document.getElementById('btnWhatsapp').href =
+        'https://wa.me/351922017034?text=' + encodeURIComponent(resumo)
+        + '&utm_source=simulador&utm_medium=resultado_whatsapp&utm_campaign=custo_mensal';
+    }
+
+    function resetCusto() {
+      document.getElementById('precoViatura').value = 18950;
+      document.getElementById('combustivel').value = 'gasolina';
+      document.getElementById('cilindrada').value = 1200;
+      document.getElementById('co2').value = 120;
+      document.getElementById('anoMatricula').value = 2021;
+      document.getElementById('kmAno').value = 15000;
+      document.getElementById('prazoMeses').value = 60;
+      document.getElementById('entradaInicial').value = 3000;
+      document.getElementById('taxaAnual').value = 8.9;
+      document.getElementById('mensagemAviso').style.display = 'none';
+      mudarCombustivel();
+    }
+
+    mudarCombustivel();
+  </script>
+
+  <script src="/assets/lucide.min.js"></script>
+  <script>lucide.createIcons({ attrs: { 'aria-hidden': 'true', focusable: 'false' } });</script>
+</body>
+</html>
