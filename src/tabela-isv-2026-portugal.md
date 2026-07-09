@@ -105,7 +105,7 @@ schemaOrg: |
 
 O ISV está em todo o lado — em cada carro importado, em cada decisão de comprar fora de Portugal. Mas poucos sabem exactamente como é calculado. Esta página explica a estrutura do imposto, os escalões vigentes em 2026 e a tabela de redução que se aplica a carros usados.
 
-<div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas do ISV são actualizadas anualmente com o Orçamento de Estado. Os valores indicados neste artigo baseiam-se no Código do ISV em vigor e são indicativos. Para o cálculo preciso, use o <a href="/simulador_isv.html">simulador ISV</a> ou consulte a Autoridade Tributária (AT).</div>
+<div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas abaixo são as mesmas que o nosso <a href="/simulador_isv.html">simulador ISV</a> utiliza — tabelas oficiais de 2026 (Autoridade Tributária). São actualizadas anualmente com o Orçamento de Estado, pelo que os valores devem ser confirmados na data da legalização.</div>
 
 ## O que é o ISV e quem paga
 
@@ -125,36 +125,23 @@ O ISV tem **duas componentes** que são somadas:
 ISV = (Componente Cilindrada + Componente CO₂) × (1 − Redução por antiguidade)
 ```
 
-Cada componente é calculada com base numa tabela de escalões. A redução por antiguidade é depois aplicada ao total, dependendo do número de anos entre a primeira matrícula e a data de importação.
+Cada componente calcula-se da mesma forma: **multiplica-se o valor (cc ou g/km) pela taxa do escalão e subtrai-se a parcela a abater** desse escalão. Se o resultado for negativo, a componente é zero. A redução por antiguidade é depois aplicada ao total, dependendo do número de anos entre a primeira matrícula e a data de importação.
 
 ## Componente cilindrada
 
-A componente de cilindrada é calculada com base nos cc do motor. Existem escalões, e cada escalão tem uma taxa fixa acumulada mais uma taxa variável por cada cc acima do limite inferior.
+A componente de cilindrada é igual para todos os combustíveis — depende apenas dos cc do motor.
 
-### Tabela de cilindrada — Gasolina / GPL / GNC
-
-| Escalão (cc) | Parcela fixa (€) | Taxa por cc excedente (€) |
+| Escalão (cc) | Taxa por cc (€) | Parcela a abater (€) |
 |---|---|---|
-| Até 1.000 cc | 0 | — |
-| 1.001 a 1.250 cc | 507 | 0,00 |
-| 1.251 a 1.750 cc | 530 | 0,91 |
-| 1.751 a 2.600 cc | 985 | 3,07 |
-| > 2.600 cc | 3.591 | 4,35 |
+| Até 1.000 cc | 1,09 | 849,03 |
+| 1.001 a 1.250 cc | 1,18 | 850,69 |
+| Mais de 1.250 cc | 5,61 | 6.194,88 |
 
-**Como calcular:** localize o escalão em que cabe a cilindrada, some a parcela fixa e o produto dos cc excedentes pela taxa correspondente.
+**Como calcular:** cilindrada × taxa − parcela a abater.
 
-**Exemplo:** motor de 1.400 cc → escalão 1.251–1.750 → 530 + (1.400 − 1.251) × 0,91 = 530 + 135,59 = **~666 €** de componente de cilindrada.
+**Exemplo:** motor de 999 cc → 999 × 1,09 − 849,03 = **239,88 €**. Motor de 1.600 cc → 1.600 × 5,61 − 6.194,88 = **2.781,12 €**.
 
-### Tabela de cilindrada — Gasóleo
-
-| Escalão (cc) | Parcela fixa (€) | Taxa por cc excedente (€) |
-|---|---|---|
-| Até 1.500 cc | 0 | — |
-| 1.501 a 2.000 cc | 618 | 0,00 |
-| 2.001 a 3.000 cc | 650 | 1,52 |
-| > 3.000 cc | 2.170 | 3,53 |
-
-Os motores gasóleo têm geralmente mais cilindrada mínima por escalão, o que os penaliza menos nesta componente — mas tendem a ter emissões de CO₂ mais altas, pesando mais na componente seguinte.
+Repare no salto: **acima de 1.250 cc a taxa quase quintuplica**. É por isso que os motores pequenos (1.0, 1.2) são muito mais baratos de legalizar do que um 1.6 ou 2.0 — e uma das razões pelas quais os downsized a gasolina dominam as importações recentes.
 
 ## Componente CO₂
 
@@ -168,29 +155,56 @@ O Certificado de Conformidade (CoC) ou a ficha técnica do veículo indica qual 
 
 ### Tabela CO₂ — Gasolina NEDC
 
-| Escalão (g/km CO₂) | Parcela fixa (€) | Taxa por g excedente (€) |
+| Escalão (g/km CO₂) | Taxa por g (€) | Parcela a abater (€) |
 |---|---|---|
-| Até 99 g/km | 0 | — |
-| 100 a 115 g/km | 838 | 22,67 |
-| 116 a 145 g/km | 1.179 | 27,78 |
-| 146 a 175 g/km | 1.432 | 47,17 |
-| > 175 g/km | 2.837 | 79,34 |
+| Até 99 g/km | 4,62 | 427,00 |
+| 100 a 115 g/km | 8,09 | 750,99 |
+| 116 a 145 g/km | 52,56 | 5.903,94 |
+| 146 a 175 g/km | 61,24 | 7.140,17 |
+| 176 a 195 g/km | 155,97 | 23.627,27 |
+| Mais de 195 g/km | 205,65 | 33.390,12 |
 
 ### Tabela CO₂ — Gasolina WLTP
 
-| Escalão (g/km CO₂) | Parcela fixa (€) | Taxa por g excedente (€) |
+| Escalão (g/km CO₂) | Taxa por g (€) | Parcela a abater (€) |
 |---|---|---|
-| Até 117 g/km | 0 | — |
-| 118 a 136 g/km | 838 | 22,67 |
-| 137 a 172 g/km | 1.179 | 27,78 |
-| 173 a 207 g/km | 1.432 | 47,17 |
-| > 207 g/km | 2.837 | 79,34 |
+| Até 110 g/km | 0,44 | 43,02 |
+| 111 a 115 g/km | 1,10 | 115,80 |
+| 116 a 120 g/km | 1,38 | 147,79 |
+| 121 a 130 g/km | 5,27 | 619,17 |
+| 131 a 145 g/km | 6,38 | 762,73 |
+| 146 a 175 g/km | 41,54 | 5.819,56 |
+| 176 a 195 g/km | 51,38 | 7.247,39 |
+| 196 a 235 g/km | 193,01 | 34.190,52 |
+| Mais de 235 g/km | 233,81 | 41.910,96 |
 
-Os escalões do WLTP são mais altos do que os do NEDC para compensar os valores de CO₂ superiores produzidos por esse ciclo de medição. Um carro com 160 g/km NEDC pode ter 195 g/km WLTP — e a tabela aplicável é que determina o imposto.
+Os escalões do WLTP são mais finos e mais permissivos nos valores baixos, para compensar os valores de CO₂ superiores produzidos por esse ciclo de medição. Um gasolina com 120 g/km WLTP paga apenas 17,81 € de componente ambiental; com 150 g/km já paga 411,44 €.
 
-### Tabela CO₂ — Gasóleo NEDC e WLTP
+### Tabela CO₂ — Gasóleo NEDC
 
-As tabelas de CO₂ para gasóleo seguem a mesma estrutura, mas com escalões ligeiramente diferentes. Em geral, o diesel é mais penalizado nas emissões de CO₂ absolutas, mas beneficia de escalões mais permissivos na componente de cilindrada.
+| Escalão (g/km CO₂) | Taxa por g (€) | Parcela a abater (€) |
+|---|---|---|
+| Até 79 g/km | 5,78 | 439,04 |
+| 80 a 95 g/km | 23,45 | 1.848,58 |
+| 96 a 120 g/km | 79,22 | 7.195,63 |
+| 121 a 140 g/km | 175,73 | 18.924,92 |
+| 141 a 160 g/km | 195,43 | 21.720,92 |
+| Mais de 160 g/km | 268,42 | 33.447,90 |
+
+### Tabela CO₂ — Gasóleo WLTP
+
+| Escalão (g/km CO₂) | Taxa por g (€) | Parcela a abater (€) |
+|---|---|---|
+| Até 110 g/km | 1,72 | 11,50 |
+| 111 a 120 g/km | 18,96 | 1.906,19 |
+| 121 a 140 g/km | 65,04 | 7.360,85 |
+| 141 a 150 g/km | 127,40 | 16.080,57 |
+| 151 a 160 g/km | 160,81 | 21.176,06 |
+| 161 a 170 g/km | 221,69 | 29.227,38 |
+| 171 a 190 g/km | 274,08 | 36.987,98 |
+| Mais de 190 g/km | 282,35 | 38.271,32 |
+
+O gasóleo é claramente mais penalizado na componente ambiental: para os mesmos 130 g/km WLTP, um gasolina paga 66 € e um gasóleo paga 1.094 €. É uma diferença que muda por completo a conta de uma importação — e mais um motivo para calcular antes de comprar.
 
 ## Tabela de redução por antiguidade
 
@@ -210,27 +224,35 @@ Esta tabela é a mais consultada por quem importa carros usados. A redução apl
 | 9 a 10 anos | 75% | 25% |
 | Mais de 10 anos | 80% | 20% |
 
-**O que isto significa na prática:** um carro de 2019 importado em 2026 tem ~6 a 7 anos de antiguidade — paga cerca de 35 a 40% do ISV que pagaria se fosse novo.
+**O que isto significa na prática:** um carro de 2019 importado em 2026 tem 7 anos de antiguidade — beneficia de 60% de redução e paga apenas 40% do ISV que pagaria se fosse novo.
 
 Um carro de 2014 com 12 anos de antiguidade paga apenas 20% do ISV base.
 
-## Exemplo prático de cálculo
+## Exemplos práticos de cálculo
 
-**Viatura:** Volkswagen Golf 1.6 TDI gasóleo, 2020, 130 g/km CO₂ (WLTP), primeiro registo outubro 2020.
+### Exemplo 1 — gasolina pequeno (o caso mais favorável)
 
-**Antiguidade em julho 2026:** ~5 anos e 9 meses → escalão "5 a 6 anos" → redução de 52%.
+**Viatura:** VW Golf 1.0 TSI gasolina, 2021, 999 cc, 122 g/km CO₂ (WLTP).
 
-**Componente cilindrada (gasóleo, 1.600 cc):**
-- Escalão 1.501–2.000 cc → parcela fixa: 618 € + (1.600 − 1.501) × 0,00 € = **618 €**
+- **Componente cilindrada:** 999 × 1,09 − 849,03 = **239,88 €**
+- **Componente CO₂** (gasolina WLTP, escalão 121–130): 122 × 5,27 − 619,17 = **23,77 €**
+- **ISV base:** 239,88 + 23,77 = **263,65 €**
+- **Antiguidade:** 2021 → 2026 = 5 anos → redução de 43%
+- **ISV a pagar:** 263,65 × 0,57 = **~150 €**
 
-**Componente CO₂ (gasóleo WLTP, 130 g/km):**
-- Escalão 118–136 g/km → parcela fixa: 838 + (130 − 118) × 22,67 = 838 + 272 = **~1.110 €**
+### Exemplo 2 — gasóleo 1.6 (o caso clássico de importação)
 
-**ISV base total:** 618 + 1.110 = **1.728 €**
+**Viatura:** VW Golf 1.6 TDI gasóleo, 2020, 1.598 cc, 130 g/km CO₂ (WLTP).
 
-**Após redução de 52%:** 1.728 × (1 − 0,52) = 1.728 × 0,48 = **~830 €**
+- **Componente cilindrada:** 1.598 × 5,61 − 6.194,88 = **2.769,90 €**
+- **Componente CO₂** (gasóleo WLTP, escalão 121–140): 130 × 65,04 − 7.360,85 = **1.094,35 €**
+- **ISV base:** 2.769,90 + 1.094,35 = **3.864,25 €**
+- **Antiguidade:** 2020 → 2026 = 6 anos → redução de 52%
+- **ISV a pagar:** 3.864,25 × 0,48 = **~1.855 €**
 
-<div class="note"><strong>Atenção:</strong> Este exemplo é ilustrativo. Os valores exactos dependem das tabelas em vigor na data de importação e das especificações técnicas do veículo. Use o simulador para o cálculo preciso.</div>
+A comparação diz tudo: **o 1.0 gasolina paga ~150 € de ISV; o 1.6 gasóleo do ano anterior paga ~1.855 €**. A cilindrada acima de 1.250 cc e a tabela ambiental do gasóleo fazem uma diferença de mais de 1.700 € na mesma classe de carro.
+
+<div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. Os valores exactos dependem das especificações no Certificado de Conformidade e das tabelas em vigor na data de legalização — confirme sempre no simulador ou junto da Autoridade Tributária.</div>
 
 ## Quando o ISV é mínimo ou nulo
 
@@ -239,7 +261,7 @@ Casos em que o ISV é muito baixo ou zero:
 - **Veículos eléctricos a bateria:** isentos de ISV
 - **Híbridos plug-in:** beneficiam de reduções significativas conforme a autonomia eléctrica
 - **Carros com mais de 10 anos:** pagam apenas 20% do ISV base, o que pode tornar a importação economicamente viável mesmo para veículos com emissões mais altas
-- **Carros com emissões muito baixas em escalões isentos:** alguns motores de pequena cilindrada e baixas emissões ficam em escalão zero em ambas as componentes
+- **Motores muito pequenos com emissões baixas:** abaixo de ~780 cc a componente de cilindrada chega a zero, e um gasolina WLTP abaixo de ~98 g/km paga componente ambiental quase nula — casos raros, mas existem (citadinos e alguns híbridos)
 
 Para elétricos e híbridos plug-in, as regras têm especificidades próprias. Se estiver a considerar importar uma destas categorias, fale com a equipa antes de avançar.
 
