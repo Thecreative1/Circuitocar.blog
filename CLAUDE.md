@@ -354,8 +354,11 @@ City pages (12, generated): braga, guimaraes, barcelos, famalicao, santo-tirso, 
 | `/simulador_isv.html` | `src/simulador_isv.njk` |
 | `/simulador_retoma.html` | `src/simulador_retoma.njk` |
 | `/circuitocar_simulador_credito.html` | `src/circuitocar_simulador_credito.njk` |
+| `/custo-mensal-carro.html` | `src/custo-mensal-carro.njk` |
 
-All three already have full ARIA (live regions, aria-required, aria-describedby, aria-invalid). Don't add these again.
+All four already have full ARIA (live regions, aria-required, aria-describedby, aria-invalid) and the Google Fonts preload block. Don't add these again.
+
+The custo-mensal calculator (added 2026-07-09) sums prestação + combustível/energia + IUC + seguro + manutenção. Its IUC logic is an indicative Cat B estimate (post-July-2007 cars, NEDC vs WLTP inferred from ano de matrícula ≥ 2019). It has its own FAQ section + FAQPage/WebApplication JSON-LD. It occupies the 4th homepage tool card (2×2 grid) and its own mobile dock uses a "Custo/mês" slot in place of ISV/Retoma.
 
 ## Quality passes already done (don't redo)
 
