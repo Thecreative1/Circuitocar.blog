@@ -87,10 +87,25 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
 # Optional: featured: true  ← see "Homepage featured logic" below. Leave UNSET for normal articles.
 
-# Optional: inject extra JSON-LD (e.g. FAQPage) into <head>
+# FAQPage JSON-LD — RECOMMENDED for every content article (helps rich results in Google)
+# 3-5 Q&As. Questions must match real search queries. Answers factual, no marketing spin.
+# Do NOT add AggregateRating/Review schema — self-serving review markup violates Google policy.
 schemaOrg: |
   <script type="application/ld+json">
-  { "@context": "https://schema.org", "@type": "FAQPage", ... }
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Question text matching a real search query?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Factual answer, 2-4 sentences. No em dashes. Formal PT (você)."
+        }
+      }
+    ]
+  }
   </script>
 ---
 ```
@@ -305,7 +320,48 @@ site.address.street / .zip / .city / .region
 - [ ] Validation errors set `aria-invalid="true"` on the offending field and focus it
 - [ ] New nav items get `aria-current="page"` when URL matches
 - [ ] Images have meaningful `alt` text
+- [ ] New article has FAQPage JSON-LD schema in `schemaOrg:` (see template above — 3-5 Q&As, factual, no self-promotion)
 - [ ] `git pull origin main --no-rebase` before `git push`
+
+## Articles currently live (do not duplicate)
+
+As of 2026-07-09. All in `src/*.md`, `tags: article`. Check this list before creating new content.
+
+| Article slug | Category | FAQPage? |
+|---|---|---|
+| `financiamento-carro-usado-portugal` | Guia de Compra | ✓ |
+| `iuc-carros-usados-portugal` | Guia de Compra | — |
+| `garantia-carro-usado-portugal` | Guia de Compra | — |
+| `como-funciona-retoma-carro-usado` | Guia de Compra | — |
+| `checklist-comprar-carro-usado-antes-visita` | Guia de Compra | ✓ |
+| `diesel-ou-gasolina-carro-usado-2026` | Guia de Compra | ✓ |
+| `carros-automaticos-usados-vantagens-riscos` | Guia de Compra | ✓ |
+| `os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia` | Guia de Compra | ✓ |
+| `importar-carro-usado-portugal` | Importação | ✓ |
+| `quanto-custa-importar-carro-usado-portugal` | Importação | ✓ |
+| `tabela-isv-2026-portugal` | Importação | ✓ |
+| `vale-a-pena-comprar-hibrido-usado-2026` | Híbridos | — |
+| `onde-comprar-carro-usado-famalicao` | Guia Local | — |
+| `guerra-irao-impacto-escolha-carro-usado` | Atualidade | — |
+| `opel-gt-roadster-usado-2009` | Desportivos | — |
+
+City pages (12, generated): braga, guimaraes, barcelos, famalicao, santo-tirso, trofa, povoa-de-varzim, vila-do-conde, felgueiras, fafe, vizela, amarante, porto. **Never create individual city `.md` files** — add to `src/_data/cities.js` only.
+
+## Tools/simulators live
+
+| URL | Source |
+|---|---|
+| `/simulador_isv.html` | `src/simulador_isv.njk` |
+| `/simulador_retoma.html` | `src/simulador_retoma.njk` |
+| `/circuitocar_simulador_credito.html` | `src/circuitocar_simulador_credito.njk` |
+
+All three already have full ARIA (live regions, aria-required, aria-describedby, aria-invalid). Don't add these again.
+
+## Quality passes already done (don't redo)
+
+**`/impeccable` full pass (2026-06-15):** touch targets 44px, font preloads, ARIA live regions on all simulators, aria-required + aria-describedby + aria-invalid on all simulator inputs, aria-current on nav, overflow-wrap: break-word on .cc-prose, will-change: transform on .cc-header. Simulator copy clarified (cilindrada/CO₂/combustível hints). robots.txt sitemap URL corrected to circuitocar.blog domain.
+
+**FAQPage schema (2026-07-09):** Added to 8 of 15 articles (see table above). Missing from: iuc, garantia, retoma, hibrido, famalicao, guerra-irao, opel-gt — add when touching those articles.
 
 ## What went wrong in the first session (don't repeat)
 
@@ -331,3 +387,13 @@ site.address.street / .zip / .city / .region
 - A new `base-cc.njk` page (privacy) rendered with an **unstyled header/footer** because it was missing `extraCss: article-cc.css`. base-cc pages need that for the shared component styles (header, footer, dock, buttons, reviews).
 - Lucide replaces `<i data-lucide>` with `<svg>`, so CSS targeting `i` does NOT style the icon — target `svg` (e.g. star `fill`), or both `i, svg`.
 - New pages must be added to `src/sitemap.njk` if they aren't tagged `article` (the sitemap loops `collections.articles` + a few static entries). `avaliacoes.html` and `privacidade.html` were added manually there.
+
+## What went wrong in the ISV/schema session (don't repeat)
+
+Nothing broke — but document these patterns for future reference:
+
+- **FAQPage schema goes in front matter `schemaOrg:` block** (YAML literal block scalar with `|`), NOT in the article body. The hook `{% if schemaOrg %}{{ schemaOrg | safe }}{% endif %}` in `article-cc.njk` injects it into `<head>`. Writing it in the body means it renders as visible text, not as JSON-LD.
+- **YAML literal block scalar indentation:** the `<script>` tag and its contents must be indented by 2 spaces relative to `schemaOrg: |`. The closing `</script>` must also be indented. If indentation is wrong, Eleventy silently drops the block.
+- **ISV table values are indicative** — the Código do ISV updates annually with Orçamento de Estado. Always note in articles that values are indicative and users should verify with AT or use the simulator.
+- **New article with today's `date` auto-becomes the homepage hero.** If you don't want a new article to take the hero (e.g. a supplementary page like city guides or tool explainers), set `date:` to a past date — 2026-01-15 is the convention used for city pages.
+- **`relatedArticles` URLs must be existing `.html` filenames** — not slugs, not simulator paths. If the article doesn't exist yet, don't link to it.
