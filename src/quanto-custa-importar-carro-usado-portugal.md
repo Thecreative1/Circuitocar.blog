@@ -31,8 +31,8 @@ sidebarDescription: "Introduza a cilindrada, CO2, combustível e ano de matrícu
 relatedArticles:
   - title: "Importar carro usado para Portugal: quando compensa e como evitar erros"
     url: "importar-carro-usado-portugal.html"
-  - title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
-    url: "carros-automaticos-usados-vantagens-riscos.html"
+  - title: "Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade"
+    url: "tabela-isv-2026-portugal.html"
   - title: "Vale a pena comprar um híbrido usado em 2026?"
     url: "vale-a-pena-comprar-hibrido-usado-2026.html"
 

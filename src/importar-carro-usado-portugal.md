@@ -31,14 +31,56 @@ sidebarDescription: "Diga-nos que viatura tem em mente — marca, modelo, motori
 relatedArticles:
   - title: "Quanto custa importar um carro usado para Portugal: a conta real"
     url: "quanto-custa-importar-carro-usado-portugal.html"
+  - title: "Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade"
+    url: "tabela-isv-2026-portugal.html"
   - title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"
     url: "financiamento-carro-usado-portugal.html"
-  - title: "Onde comprar carro usado em Famalicão com mais confiança"
-    url: "onde-comprar-carro-usado-famalicao.html"
 
 andreDescription: "Para analisar propostas, financiamento e condições de aquisição."
 filipeDescription: "Para questões sobre o estado técnico, mecânica e historial da viatura."
 sidebarWhatsappMsg: "Olá, vi o artigo sobre importação de carros usados e gostava de conversar sobre uma viatura específica."
+
+schemaOrg: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quando compensa mesmo importar um carro usado para Portugal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Importar compensa quando o diferencial de preço entre o mercado de origem e o nacional é suficientemente grande para absorber o ISV, a Inspecção B, o despachante, o transporte e os emolumentos de registo — um total que pode facilmente somar 2.500 € a 4.000 € ou mais. Na maioria dos casos práticos, a poupança real é menor do que parece à primeira vista."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "De que países se importa mais carros usados para Portugal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Alemanha é de longe o mercado mais popular, seguida da Holanda, Bélgica, França e Espanha. Os mercados do norte da Europa são atrativos pela abundância de carros bem conservados, com histórico documentado e quilometragens mais baixas do que a média portuguesa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tenho de pagar ISV em carros importados de países da União Europeia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O ISV (Imposto Sobre Veículos) é um imposto nacional português que se aplica a qualquer veículo matriculado em Portugal pela primeira vez, independentemente do país de origem — mesmo que seja de um Estado-membro da UE. Não existe isenção de ISV pelo facto de o carro vir de outro país da UE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais os erros mais comuns ao importar um carro usado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Os erros mais frequentes são: não calcular o ISV antes de comprar; subestimar os custos de despachante, transporte e legalização; comprar sem inspecção técnica independente no país de origem; não verificar o historial do veículo; e não confirmar a norma de emissões (NEDC ou WLTP) necessária para o cálculo correcto do ISV."
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 Muitos compradores chegam a um ponto em que o mercado português simplesmente não tem o que procuram. A motorização certa, a versão com o equipamento completo, a quilometragem desejada, o histórico de manutenção documentado desde o início. E nesse momento surge a questão: e se fosse buscar o carro à Alemanha? Ou à Holanda?

@@ -52,6 +52,48 @@ andreDescription: "Acompanha o processo de compra e ajuda a perceber qual a moto
 filipeDescription: "Avalia o estado do motor, filtro de partículas e injetores de cada viatura antes de entrar em stock."
 
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
+
+schemaOrg: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "A partir de quantos km por ano compensa um carro diesel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O diesel começa a compensar em combustível a partir dos 15.000 a 20.000 km por ano, em percursos mistos ou de estrada. Abaixo desse valor, a poupança em combustível não costuma cobrir os maiores custos de manutenção do diesel — nomeadamente o filtro de partículas (DPF) e os injetores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é o filtro de partículas DPF e que problemas pode causar num carro usado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Filtro de Partículas Diesel (DPF ou FAP) retém os gases poluentes do motor diesel. Regenera-se automaticamente em viagens longas a velocidade constante, mas entope com uso maioritariamente urbano ou percursos curtos. A substituição de um DPF entupido pode custar entre 600 € e 1.500 €, por isso é um dos pontos mais importantes a verificar num diesel usado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Diesel ou gasolina para uso urbano: qual é a melhor escolha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para uso predominantemente urbano ou percursos curtos, o motor a gasolina é geralmente a melhor escolha. O diesel precisa de viagens mais longas para regenerar o filtro de partículas e tem custos de manutenção mais elevados. Um motor 1.0 ou 1.2 turbo a gasolina oferece eficiência, fiabilidade e manutenção mais simples para o dia a dia na cidade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O diesel paga mais IUC do que a gasolina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Em geral, sim. O IUC é calculado com base na cilindrada e nas emissões de CO₂. Os motores diesel tendem a ter emissões de CO₂ mais altas do que motores a gasolina de cilindrada equivalente, resultando numa fatura de IUC normalmente superior — com diferenças que podem ir de 50 € a 200 € por ano dependendo do modelo e do ano de matrícula."
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 Durante anos a resposta foi quase automática: se fizer muitos quilómetros, diesel; se andar pouco, gasolina. Em 2026, essa regra ainda tem alguma verdade — mas o contexto mudou. Os motores a gasolina ficaram muito mais eficientes, o custo de manutenção do diesel subiu, e comprar um diesel usado mal tratado pode sair muito mais caro do que parece à primeira vista.
