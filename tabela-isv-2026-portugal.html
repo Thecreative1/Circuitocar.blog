@@ -411,7 +411,7 @@
   <div class="cc-post-wrap">
     <article class="cc-prose">
       <p>O ISV está em todo o lado — em cada carro importado, em cada decisão de comprar fora de Portugal. Mas poucos sabem exactamente como é calculado. Esta página explica a estrutura do imposto, os escalões vigentes em 2026 e a tabela de redução que se aplica a carros usados.</p>
-<div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas do ISV são actualizadas anualmente com o Orçamento de Estado. Os valores indicados neste artigo baseiam-se no Código do ISV em vigor e são indicativos. Para o cálculo preciso, use o <a href="/simulador_isv.html">simulador ISV</a> ou consulte a Autoridade Tributária (AT).</div>
+<div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas abaixo são as mesmas que o nosso <a href="/simulador_isv.html">simulador ISV</a> utiliza — tabelas oficiais de 2026 (Autoridade Tributária). São actualizadas anualmente com o Orçamento de Estado, pelo que os valores devem ser confirmados na data da legalização.</div>
 <h2>O que é o ISV e quem paga</h2>
 <p>O ISV (Imposto Sobre Veículos) é cobrado na <strong>primeira matrícula em Portugal</strong> de qualquer veículo ligeiro de passageiros. Não importa se o carro vem da Alemanha, da França ou de Espanha — pertencer à UE não isenta ninguém.</p>
 <p>Se comprar um carro já matriculado em Portugal (num stand ou a particular), o ISV já foi pago na altura da primeira matrícula. Nesse caso, não paga novamente.</p>
@@ -424,81 +424,38 @@
 <p>O ISV tem <strong>duas componentes</strong> que são somadas:</p>
 <pre><code>ISV = (Componente Cilindrada + Componente CO₂) × (1 − Redução por antiguidade)
 </code></pre>
-<p>Cada componente é calculada com base numa tabela de escalões. A redução por antiguidade é depois aplicada ao total, dependendo do número de anos entre a primeira matrícula e a data de importação.</p>
+<p>Cada componente calcula-se da mesma forma: <strong>multiplica-se o valor (cc ou g/km) pela taxa do escalão e subtrai-se a parcela a abater</strong> desse escalão. Se o resultado for negativo, a componente é zero. A redução por antiguidade é depois aplicada ao total, dependendo do número de anos entre a primeira matrícula e a data de importação.</p>
 <h2>Componente cilindrada</h2>
-<p>A componente de cilindrada é calculada com base nos cc do motor. Existem escalões, e cada escalão tem uma taxa fixa acumulada mais uma taxa variável por cada cc acima do limite inferior.</p>
-<h3>Tabela de cilindrada — Gasolina / GPL / GNC</h3>
+<p>A componente de cilindrada é igual para todos os combustíveis — depende apenas dos cc do motor.</p>
 <table>
 <thead>
 <tr>
 <th>Escalão (cc)</th>
-<th>Parcela fixa (€)</th>
-<th>Taxa por cc excedente (€)</th>
+<th>Taxa por cc (€)</th>
+<th>Parcela a abater (€)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Até 1.000 cc</td>
-<td>0</td>
-<td>—</td>
+<td>1,09</td>
+<td>849,03</td>
 </tr>
 <tr>
 <td>1.001 a 1.250 cc</td>
-<td>507</td>
-<td>0,00</td>
+<td>1,18</td>
+<td>850,69</td>
 </tr>
 <tr>
-<td>1.251 a 1.750 cc</td>
-<td>530</td>
-<td>0,91</td>
-</tr>
-<tr>
-<td>1.751 a 2.600 cc</td>
-<td>985</td>
-<td>3,07</td>
-</tr>
-<tr>
-<td>&gt; 2.600 cc</td>
-<td>3.591</td>
-<td>4,35</td>
+<td>Mais de 1.250 cc</td>
+<td>5,61</td>
+<td>6.194,88</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Como calcular:</strong> localize o escalão em que cabe a cilindrada, some a parcela fixa e o produto dos cc excedentes pela taxa correspondente.</p>
-<p><strong>Exemplo:</strong> motor de 1.400 cc → escalão 1.251–1.750 → 530 + (1.400 − 1.251) × 0,91 = 530 + 135,59 = <strong>~666 €</strong> de componente de cilindrada.</p>
-<h3>Tabela de cilindrada — Gasóleo</h3>
-<table>
-<thead>
-<tr>
-<th>Escalão (cc)</th>
-<th>Parcela fixa (€)</th>
-<th>Taxa por cc excedente (€)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Até 1.500 cc</td>
-<td>0</td>
-<td>—</td>
-</tr>
-<tr>
-<td>1.501 a 2.000 cc</td>
-<td>618</td>
-<td>0,00</td>
-</tr>
-<tr>
-<td>2.001 a 3.000 cc</td>
-<td>650</td>
-<td>1,52</td>
-</tr>
-<tr>
-<td>&gt; 3.000 cc</td>
-<td>2.170</td>
-<td>3,53</td>
-</tr>
-</tbody>
-</table>
-<p>Os motores gasóleo têm geralmente mais cilindrada mínima por escalão, o que os penaliza menos nesta componente — mas tendem a ter emissões de CO₂ mais altas, pesando mais na componente seguinte.</p>
+<p><strong>Como calcular:</strong> cilindrada × taxa − parcela a abater.</p>
+<p><strong>Exemplo:</strong> motor de 999 cc → 999 × 1,09 − 849,03 = <strong>239,88 €</strong>. Motor de 1.600 cc → 1.600 × 5,61 − 6.194,88 = <strong>2.781,12 €</strong>.</p>
+<p>Repare no salto: <strong>acima de 1.250 cc a taxa quase quintuplica</strong>. É por isso que os motores pequenos (1.0, 1.2) são muito mais baratos de legalizar do que um 1.6 ou 2.0 — e uma das razões pelas quais os downsized a gasolina dominam as importações recentes.</p>
 <h2>Componente CO₂</h2>
 <p>A componente de CO₂ é onde o ISV é mais sensível. Aplica-se uma tabela diferente conforme a <strong>norma de emissões</strong> do veículo: <strong>NEDC</strong> (ciclo mais antigo) ou <strong>WLTP</strong> (ciclo mais recente, mais rigoroso).</p>
 <p>A partir de setembro de 2018 (entrada em vigor do WLTP), os carros novos passaram a ser homologados com o ciclo WLTP. Na prática:</p>
@@ -512,35 +469,40 @@
 <thead>
 <tr>
 <th>Escalão (g/km CO₂)</th>
-<th>Parcela fixa (€)</th>
-<th>Taxa por g excedente (€)</th>
+<th>Taxa por g (€)</th>
+<th>Parcela a abater (€)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Até 99 g/km</td>
-<td>0</td>
-<td>—</td>
+<td>4,62</td>
+<td>427,00</td>
 </tr>
 <tr>
 <td>100 a 115 g/km</td>
-<td>838</td>
-<td>22,67</td>
+<td>8,09</td>
+<td>750,99</td>
 </tr>
 <tr>
 <td>116 a 145 g/km</td>
-<td>1.179</td>
-<td>27,78</td>
+<td>52,56</td>
+<td>5.903,94</td>
 </tr>
 <tr>
 <td>146 a 175 g/km</td>
-<td>1.432</td>
-<td>47,17</td>
+<td>61,24</td>
+<td>7.140,17</td>
 </tr>
 <tr>
-<td>&gt; 175 g/km</td>
-<td>2.837</td>
-<td>79,34</td>
+<td>176 a 195 g/km</td>
+<td>155,97</td>
+<td>23.627,27</td>
+</tr>
+<tr>
+<td>Mais de 195 g/km</td>
+<td>205,65</td>
+<td>33.390,12</td>
 </tr>
 </tbody>
 </table>
@@ -549,41 +511,154 @@
 <thead>
 <tr>
 <th>Escalão (g/km CO₂)</th>
-<th>Parcela fixa (€)</th>
-<th>Taxa por g excedente (€)</th>
+<th>Taxa por g (€)</th>
+<th>Parcela a abater (€)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Até 117 g/km</td>
-<td>0</td>
-<td>—</td>
+<td>Até 110 g/km</td>
+<td>0,44</td>
+<td>43,02</td>
 </tr>
 <tr>
-<td>118 a 136 g/km</td>
-<td>838</td>
-<td>22,67</td>
+<td>111 a 115 g/km</td>
+<td>1,10</td>
+<td>115,80</td>
 </tr>
 <tr>
-<td>137 a 172 g/km</td>
-<td>1.179</td>
-<td>27,78</td>
+<td>116 a 120 g/km</td>
+<td>1,38</td>
+<td>147,79</td>
 </tr>
 <tr>
-<td>173 a 207 g/km</td>
-<td>1.432</td>
-<td>47,17</td>
+<td>121 a 130 g/km</td>
+<td>5,27</td>
+<td>619,17</td>
 </tr>
 <tr>
-<td>&gt; 207 g/km</td>
-<td>2.837</td>
-<td>79,34</td>
+<td>131 a 145 g/km</td>
+<td>6,38</td>
+<td>762,73</td>
+</tr>
+<tr>
+<td>146 a 175 g/km</td>
+<td>41,54</td>
+<td>5.819,56</td>
+</tr>
+<tr>
+<td>176 a 195 g/km</td>
+<td>51,38</td>
+<td>7.247,39</td>
+</tr>
+<tr>
+<td>196 a 235 g/km</td>
+<td>193,01</td>
+<td>34.190,52</td>
+</tr>
+<tr>
+<td>Mais de 235 g/km</td>
+<td>233,81</td>
+<td>41.910,96</td>
 </tr>
 </tbody>
 </table>
-<p>Os escalões do WLTP são mais altos do que os do NEDC para compensar os valores de CO₂ superiores produzidos por esse ciclo de medição. Um carro com 160 g/km NEDC pode ter 195 g/km WLTP — e a tabela aplicável é que determina o imposto.</p>
-<h3>Tabela CO₂ — Gasóleo NEDC e WLTP</h3>
-<p>As tabelas de CO₂ para gasóleo seguem a mesma estrutura, mas com escalões ligeiramente diferentes. Em geral, o diesel é mais penalizado nas emissões de CO₂ absolutas, mas beneficia de escalões mais permissivos na componente de cilindrada.</p>
+<p>Os escalões do WLTP são mais finos e mais permissivos nos valores baixos, para compensar os valores de CO₂ superiores produzidos por esse ciclo de medição. Um gasolina com 120 g/km WLTP paga apenas 17,81 € de componente ambiental; com 150 g/km já paga 411,44 €.</p>
+<h3>Tabela CO₂ — Gasóleo NEDC</h3>
+<table>
+<thead>
+<tr>
+<th>Escalão (g/km CO₂)</th>
+<th>Taxa por g (€)</th>
+<th>Parcela a abater (€)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Até 79 g/km</td>
+<td>5,78</td>
+<td>439,04</td>
+</tr>
+<tr>
+<td>80 a 95 g/km</td>
+<td>23,45</td>
+<td>1.848,58</td>
+</tr>
+<tr>
+<td>96 a 120 g/km</td>
+<td>79,22</td>
+<td>7.195,63</td>
+</tr>
+<tr>
+<td>121 a 140 g/km</td>
+<td>175,73</td>
+<td>18.924,92</td>
+</tr>
+<tr>
+<td>141 a 160 g/km</td>
+<td>195,43</td>
+<td>21.720,92</td>
+</tr>
+<tr>
+<td>Mais de 160 g/km</td>
+<td>268,42</td>
+<td>33.447,90</td>
+</tr>
+</tbody>
+</table>
+<h3>Tabela CO₂ — Gasóleo WLTP</h3>
+<table>
+<thead>
+<tr>
+<th>Escalão (g/km CO₂)</th>
+<th>Taxa por g (€)</th>
+<th>Parcela a abater (€)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Até 110 g/km</td>
+<td>1,72</td>
+<td>11,50</td>
+</tr>
+<tr>
+<td>111 a 120 g/km</td>
+<td>18,96</td>
+<td>1.906,19</td>
+</tr>
+<tr>
+<td>121 a 140 g/km</td>
+<td>65,04</td>
+<td>7.360,85</td>
+</tr>
+<tr>
+<td>141 a 150 g/km</td>
+<td>127,40</td>
+<td>16.080,57</td>
+</tr>
+<tr>
+<td>151 a 160 g/km</td>
+<td>160,81</td>
+<td>21.176,06</td>
+</tr>
+<tr>
+<td>161 a 170 g/km</td>
+<td>221,69</td>
+<td>29.227,38</td>
+</tr>
+<tr>
+<td>171 a 190 g/km</td>
+<td>274,08</td>
+<td>36.987,98</td>
+</tr>
+<tr>
+<td>Mais de 190 g/km</td>
+<td>282,35</td>
+<td>38.271,32</td>
+</tr>
+</tbody>
+</table>
+<p>O gasóleo é claramente mais penalizado na componente ambiental: para os mesmos 130 g/km WLTP, um gasolina paga 66 € e um gasóleo paga 1.094 €. É uma diferença que muda por completo a conta de uma importação — e mais um motivo para calcular antes de comprar.</p>
 <h2>Tabela de redução por antiguidade</h2>
 <p>Esta tabela é a mais consultada por quem importa carros usados. A redução aplica-se ao ISV total (componente cilindrada + CO₂) e depende dos anos que decorreram entre a primeira matrícula e a data de tributação em Portugal.</p>
 <table>
@@ -652,29 +727,36 @@
 </tr>
 </tbody>
 </table>
-<p><strong>O que isto significa na prática:</strong> um carro de 2019 importado em 2026 tem ~6 a 7 anos de antiguidade — paga cerca de 35 a 40% do ISV que pagaria se fosse novo.</p>
+<p><strong>O que isto significa na prática:</strong> um carro de 2019 importado em 2026 tem 7 anos de antiguidade — beneficia de 60% de redução e paga apenas 40% do ISV que pagaria se fosse novo.</p>
 <p>Um carro de 2014 com 12 anos de antiguidade paga apenas 20% do ISV base.</p>
-<h2>Exemplo prático de cálculo</h2>
-<p><strong>Viatura:</strong> Volkswagen Golf 1.6 TDI gasóleo, 2020, 130 g/km CO₂ (WLTP), primeiro registo outubro 2020.</p>
-<p><strong>Antiguidade em julho 2026:</strong> ~5 anos e 9 meses → escalão &quot;5 a 6 anos&quot; → redução de 52%.</p>
-<p><strong>Componente cilindrada (gasóleo, 1.600 cc):</strong></p>
+<h2>Exemplos práticos de cálculo</h2>
+<h3>Exemplo 1 — gasolina pequeno (o caso mais favorável)</h3>
+<p><strong>Viatura:</strong> VW Golf 1.0 TSI gasolina, 2021, 999 cc, 122 g/km CO₂ (WLTP).</p>
 <ul>
-<li>Escalão 1.501–2.000 cc → parcela fixa: 618 € + (1.600 − 1.501) × 0,00 € = <strong>618 €</strong></li>
+<li><strong>Componente cilindrada:</strong> 999 × 1,09 − 849,03 = <strong>239,88 €</strong></li>
+<li><strong>Componente CO₂</strong> (gasolina WLTP, escalão 121–130): 122 × 5,27 − 619,17 = <strong>23,77 €</strong></li>
+<li><strong>ISV base:</strong> 239,88 + 23,77 = <strong>263,65 €</strong></li>
+<li><strong>Antiguidade:</strong> 2021 → 2026 = 5 anos → redução de 43%</li>
+<li><strong>ISV a pagar:</strong> 263,65 × 0,57 = <strong>~150 €</strong></li>
 </ul>
-<p><strong>Componente CO₂ (gasóleo WLTP, 130 g/km):</strong></p>
+<h3>Exemplo 2 — gasóleo 1.6 (o caso clássico de importação)</h3>
+<p><strong>Viatura:</strong> VW Golf 1.6 TDI gasóleo, 2020, 1.598 cc, 130 g/km CO₂ (WLTP).</p>
 <ul>
-<li>Escalão 118–136 g/km → parcela fixa: 838 + (130 − 118) × 22,67 = 838 + 272 = <strong>~1.110 €</strong></li>
+<li><strong>Componente cilindrada:</strong> 1.598 × 5,61 − 6.194,88 = <strong>2.769,90 €</strong></li>
+<li><strong>Componente CO₂</strong> (gasóleo WLTP, escalão 121–140): 130 × 65,04 − 7.360,85 = <strong>1.094,35 €</strong></li>
+<li><strong>ISV base:</strong> 2.769,90 + 1.094,35 = <strong>3.864,25 €</strong></li>
+<li><strong>Antiguidade:</strong> 2020 → 2026 = 6 anos → redução de 52%</li>
+<li><strong>ISV a pagar:</strong> 3.864,25 × 0,48 = <strong>~1.855 €</strong></li>
 </ul>
-<p><strong>ISV base total:</strong> 618 + 1.110 = <strong>1.728 €</strong></p>
-<p><strong>Após redução de 52%:</strong> 1.728 × (1 − 0,52) = 1.728 × 0,48 = <strong>~830 €</strong></p>
-<div class="note"><strong>Atenção:</strong> Este exemplo é ilustrativo. Os valores exactos dependem das tabelas em vigor na data de importação e das especificações técnicas do veículo. Use o simulador para o cálculo preciso.</div>
+<p>A comparação diz tudo: <strong>o 1.0 gasolina paga ~150 € de ISV; o 1.6 gasóleo do ano anterior paga ~1.855 €</strong>. A cilindrada acima de 1.250 cc e a tabela ambiental do gasóleo fazem uma diferença de mais de 1.700 € na mesma classe de carro.</p>
+<div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. Os valores exactos dependem das especificações no Certificado de Conformidade e das tabelas em vigor na data de legalização — confirme sempre no simulador ou junto da Autoridade Tributária.</div>
 <h2>Quando o ISV é mínimo ou nulo</h2>
 <p>Casos em que o ISV é muito baixo ou zero:</p>
 <ul>
 <li><strong>Veículos eléctricos a bateria:</strong> isentos de ISV</li>
 <li><strong>Híbridos plug-in:</strong> beneficiam de reduções significativas conforme a autonomia eléctrica</li>
 <li><strong>Carros com mais de 10 anos:</strong> pagam apenas 20% do ISV base, o que pode tornar a importação economicamente viável mesmo para veículos com emissões mais altas</li>
-<li><strong>Carros com emissões muito baixas em escalões isentos:</strong> alguns motores de pequena cilindrada e baixas emissões ficam em escalão zero em ambas as componentes</li>
+<li><strong>Motores muito pequenos com emissões baixas:</strong> abaixo de ~780 cc a componente de cilindrada chega a zero, e um gasolina WLTP abaixo de ~98 g/km paga componente ambiental quase nula — casos raros, mas existem (citadinos e alguns híbridos)</li>
 </ul>
 <p>Para elétricos e híbridos plug-in, as regras têm especificidades próprias. Se estiver a considerar importar uma destas categorias, fale com a equipa antes de avançar.</p>
 <h2>Use o simulador para o cálculo exacto</h2>
