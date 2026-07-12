@@ -291,9 +291,9 @@ permalink: simulador_isv.html
             <small>Honorários habituais: 200–500 €.</small>
           </div>
           <div class="field">
-            <label for="inspecaoLegal">Inspecção B + legalização (€)</label>
+            <label for="inspecaoLegal">Inspeção B + legalização (€)</label>
             <input class="input" id="inspecaoLegal" type="number" min="0" step="10" value="289" />
-            <small>Inspecção B (93,52 €) + DUA, registo e chapas (~195 €).</small>
+            <small>Inspeção B (93,52 €) + DUA, registo e chapas (~195 €).</small>
           </div>
         </div>
       </div>
@@ -453,7 +453,7 @@ permalink: simulador_isv.html
       <div class="cc-side-card cc-side-card--warm">
         <span class="cc-side-card__eyebrow">Stock</span>
         <h3>Próximo passo: ver viaturas</h3>
-        <p>Vê o stock actual em circuitocar.pt — viaturas verificadas, com garantia, já legalizadas e prontas a circular.</p>
+        <p>Vê o stock atual em circuitocar.pt — viaturas verificadas, com garantia, já legalizadas e prontas a circular.</p>
         <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=simulador&utm_medium=sidebar_stock&utm_campaign=simulador_isv" target="_blank" rel="noopener noreferrer" style="width:100%;"><i data-lucide="car"></i>Ver stock</a>
       </div>
     </aside>
@@ -675,7 +675,7 @@ permalink: simulador_isv.html
         '<tr><td>ISV estimado</td><td>' + fmt(isvFinal) + '</td></tr>',
         transporte    ? '<tr><td>Transporte</td><td>' + fmt(transporte)    + '</td></tr>' : '',
         despachante   ? '<tr><td>Despachante</td><td>' + fmt(despachante)   + '</td></tr>' : '',
-        inspecaoLegal ? '<tr><td>Inspecção B + legalização</td><td>' + fmt(inspecaoLegal) + '</td></tr>' : '',
+        inspecaoLegal ? '<tr><td>Inspeção B + legalização</td><td>' + fmt(inspecaoLegal) + '</td></tr>' : '',
         '<tr class="total-row"><td><strong>Total estimado</strong></td><td><strong>' + fmt(total) + '</strong></td></tr>'
       ].join('');
       blocoTotal.style.display = 'block';

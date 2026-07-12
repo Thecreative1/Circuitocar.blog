@@ -6,7 +6,7 @@ date: 2026-06-02
 
 pageTitle: "Financiamento de carro usado em Portugal: guia completo 2026 | Circuito Car Blog"
 title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"
-description: "TAN, TAEG, entrada, prazo, crédito bancário ou do stand — tudo o que precisa de perceber antes de financiar um carro usado em Portugal. Guia prático e honesto para 2026."
+description: "TAN, TAEG, entrada, prazo, crédito bancário ou do stand — tudo o que precisa de perceber antes de financiar um carro usado em Portugal. Guia prático para 2026."
 ogTitle: "Financiamento de carro usado: o guia completo para 2026"
 ogDescription: "TAN, TAEG, entrada mínima, prazo ideal e crédito do stand vs. banco. Tudo explicado de forma clara antes de assinar qualquer contrato."
 
@@ -148,7 +148,7 @@ A entrada é o valor que paga logo no início, antes de o crédito arrancar. Nã
 
 Na prática, uma entrada de 10% a 20% do valor do carro é um ponto de equilíbrio razoável para a maioria dos perfis — suficiente para melhorar as condições sem comprometer demasiado as poupanças.
 
-Se tem um carro para dar em [retoma](/como-funciona-retoma-carro-usado.html), o seu valor entra exactamente como uma entrada. Em vez de mobilizar dinheiro de uma conta, o carro actual paga uma parte do próximo.
+Se tem um carro para dar em [retoma](/como-funciona-retoma-carro-usado.html), o seu valor entra exatamente como uma entrada. Em vez de mobilizar dinheiro de uma conta, o carro atual paga uma parte do próximo.
 
 ## Prazo: quanto tempo é sensato financiar?
 
@@ -169,7 +169,7 @@ Para a maioria dos carros usados em bom estado, um prazo entre 36 e 60 meses é 
 Os documentos normalmente pedidos são:
 
 - **Identificação:** Cartão de Cidadão ou BI e NIF.
-- **Comprovativo de morada** recente (factura de água, luz ou documento similar).
+- **Comprovativo de morada** recente (fatura de água, luz ou documento similar).
 - **Comprovativo de rendimento:** últimos 3 recibos de vencimento, ou declaração de IRS se for trabalhador independente.
 - **IBAN** para débito direto das prestações.
 
@@ -179,7 +179,7 @@ O stand ou a entidade financeira podem pedir documentação adicional dependendo
 
 Uma das formas mais práticas de trocar de carro é combinar a retoma com o financiamento. Funciona assim:
 
-1. O stand avalia o seu carro actual.
+1. O stand avalia o seu carro atual.
 2. O valor da avaliação entra como parte do pagamento da viatura que vai levar.
 3. A diferença — o que falta pagar — é o montante que vai a crédito.
 

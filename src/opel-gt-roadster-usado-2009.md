@@ -6,7 +6,7 @@ date: 2026-05-18
 
 pageTitle: "Opel GT usado: o roadster raro com 264 cv que poucos conhecem | Circuito Car Blog"
 title: "Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá arrepios"
-description: "264 cv, tração traseira, caixa manual e apenas 7.000 unidades produzidas no mundo. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um."
+description: "264 cv, tração traseira, caixa manual e apenas 7.000 unidades produzidas. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um."
 ogTitle: "Opel GT usado: 264 cv, tração traseira, série limitada"
 ogDescription: "A história do roadster mais improvável da Opel, o que o torna especial — e se faz sentido para si."
 
@@ -20,7 +20,7 @@ inventoryLabel: "Ver desportivos disponíveis"
 lead: "Quando se diz Opel, pensa-se em carros práticos, famílias, Corsa de cidade. Raramente se pensa em 264 cavalos, tração traseira e caixa manual de 5 velocidades num roadster de dois lugares. O Opel GT de 2009 é exatamente isso — e é um dos desportivos usados mais subestimados que existem."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/opel-gt-ID166512.html?utm_source=blog&utm_medium=hero_image&utm_campaign=blog_opel_gt"
+heroImageLink: "https://www.circuitocar.pt/viatura/opel-gt-ID166512.html"
 heroImageAlt: "Opel GT 2009 — roadster com 264 cv e tração traseira disponível na Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre o Opel GT e quero saber mais sobre esta viatura."
 
@@ -53,7 +53,7 @@ Nesse ano, a Opel apresentou o GT original — um coupé pequeno e agressivo, co
 
 Depois disso — silêncio. Durante 34 anos, a Opel não voltou a fazer um desportivo a sério.
 
-Em 2006, o GT voltou. Não como exercício de nostalgia, mas como um projecto concreto: a General Motors encomendou o desenvolvimento à **Magna Steyr**, na Áustria, com base na mesma plataforma do Saturn Sky e do Pontiac Solstice — carros americanos com alma de roadster. O resultado foi apresentado no Salão de Detroit desse ano e entrou em produção em 2007.
+Em 2006, o GT voltou. Não como exercício de nostalgia, mas como um projeto concreto: a General Motors encomendou o desenvolvimento à **Magna Steyr**, na Áustria, com base na mesma plataforma do Saturn Sky e do Pontiac Solstice — carros americanos com alma de roadster. O resultado foi apresentado no Salão de Detroit desse ano e entrou em produção em 2007.
 
 O que veio a seguir surpreendeu muita gente: **264 cavalos num motor 2.0 Turbo de quatro cilindros**, tração traseira, caixa manual, capota de lona retrátil, e um chassis que havia sido desenvolvido com influências diretas da Lotus. Zero a 100 em 5,4 segundos. Peso inferior a 1.300 kg.
 
@@ -121,7 +121,7 @@ A honestidade é importante: este não é um carro para amadores que querem pare
 
 ## O que diz quem conduz
 
-Quem conhece o Opel GT fala sempre de três coisas: o som do turbo, a forma como o carro comunica através do volante, e a reacção das pessoas quando param e olham.
+Quem conhece o Opel GT fala sempre de três coisas: o som do turbo, a forma como o carro comunica através do volante, e a reação das pessoas quando param e olham.
 
 É um carro que não pede atenção — mas recebe-a sempre.
 

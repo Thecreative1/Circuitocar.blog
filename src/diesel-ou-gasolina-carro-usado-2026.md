@@ -17,7 +17,7 @@ utmCampaign: "blog_diesel_gasolina"
 lead: "A pergunta que todos fazem antes de comprar carro usado: diesel ou gasolina? A resposta depende de como usa o carro, quantos quilómetros faz por ano e o que prioriza — poupança no combustível, custo de manutenção ou simplicidade. Este guia coloca os dois lado a lado com números reais para 2026."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_diesel_gasolina"
+heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html"
 heroImageAlt: "Nissan Qashqai 1.3 DIG-T gasolina 2023 na Circuito Car — motor moderno, baixo consumo"
 heroWhatsappMsg: "Olá, li o artigo sobre diesel vs gasolina e queria perceber qual a melhor opção para o meu caso."
 

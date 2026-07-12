@@ -18,7 +18,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "O ISV é o imposto que toda a gente que importa ou compra carro em Portugal paga sem perceber muito bem como é calculado. Esta página explica os escalões, a tabela de redução por antiguidade e mostra como o valor é determinado — com exemplos reais."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID157628.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_tabela_isv"
+heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID157628.html"
 heroImageAlt: "Carro importado — exemplo de cálculo de ISV 2026"
 heroWhatsappMsg: "Olá, vi a tabela de ISV 2026 e queria ajuda para calcular o ISV de uma viatura específica."
 
@@ -27,7 +27,7 @@ inventoryLabel: "Ver stock disponível"
 
 sidebarBadge: "Ferramenta gratuita"
 sidebarTitle: "Calcule o ISV da sua viatura"
-sidebarDescription: "Use o simulador para calcular o ISV exacto com base na cilindrada, CO₂, norma de emissões e ano de matrícula. Resultado instantâneo, sem registo."
+sidebarDescription: "Use o simulador para calcular o ISV exato com base na cilindrada, CO₂, norma de emissões e ano de matrícula. Resultado instantâneo, sem registo."
 sidebarUrl: "/simulador_isv.html"
 sidebarUrlLabel: "Abrir simulador ISV"
 sidebarWhatsappMsg: "Olá, vi a tabela de ISV 2026 e queria ajuda para calcular o ISV de uma viatura que estou a considerar importar."
@@ -95,7 +95,7 @@ schemaOrg: |
         "name": "Existe alguma isenção de ISV para carros elétricos ou híbridos plug-in?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. Os veículos 100% elétricos estão isentos de ISV em Portugal. Os híbridos plug-in beneficiam de uma redução significativa que varia conforme a autonomia elétrica do veículo. As regras exactas podem variar com alterações ao Código do ISV, por isso é importante confirmar com a Autoridade Tributária ou com a equipa Circuito Car antes de avançar com uma importação."
+          "text": "Sim. Os veículos 100% elétricos estão isentos de ISV em Portugal. Os híbridos plug-in beneficiam de uma redução significativa que varia conforme a autonomia elétrica do veículo. As regras exatas podem variar com alterações ao Código do ISV, por isso é importante confirmar com a Autoridade Tributária ou com a equipa Circuito Car antes de avançar com uma importação."
         }
       }
     ]
@@ -103,9 +103,9 @@ schemaOrg: |
   </script>
 ---
 
-O ISV está em todo o lado — em cada carro importado, em cada decisão de comprar fora de Portugal. Mas poucos sabem exactamente como é calculado. Esta página explica a estrutura do imposto, os escalões vigentes em 2026 e a tabela de redução que se aplica a carros usados.
+O ISV está em todo o lado — em cada carro importado, em cada decisão de comprar fora de Portugal. Mas poucos sabem exatamente como é calculado. Esta página explica a estrutura do imposto, os escalões vigentes em 2026 e a tabela de redução que se aplica a carros usados.
 
-<div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas abaixo são as mesmas que o nosso <a href="/simulador_isv.html">simulador ISV</a> utiliza — tabelas oficiais de 2026 (Autoridade Tributária). São actualizadas anualmente com o Orçamento de Estado, pelo que os valores devem ser confirmados na data da legalização.</div>
+<div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas abaixo são as mesmas que o nosso <a href="/simulador_isv.html">simulador ISV</a> utiliza — tabelas oficiais de 2026 (Autoridade Tributária). São atualizadas anualmente com o Orçamento de Estado, pelo que os valores devem ser confirmados na data da legalização.</div>
 
 ## O que é o ISV e quem paga
 
@@ -252,7 +252,7 @@ Um carro de 2014 com 12 anos de antiguidade paga apenas 20% do ISV base.
 
 A comparação diz tudo: **o 1.0 gasolina paga ~150 € de ISV; o 1.6 gasóleo do ano anterior paga ~1.855 €**. A cilindrada acima de 1.250 cc e a tabela ambiental do gasóleo fazem uma diferença de mais de 1.700 € na mesma classe de carro.
 
-<div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. Os valores exactos dependem das especificações no Certificado de Conformidade e das tabelas em vigor na data de legalização — confirme sempre no simulador ou junto da Autoridade Tributária.</div>
+<div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. Os valores exatos dependem das especificações no Certificado de Conformidade e das tabelas em vigor na data de legalização — confirme sempre no simulador ou junto da Autoridade Tributária.</div>
 
 ## Quando o ISV é mínimo ou nulo
 
@@ -265,11 +265,11 @@ Casos em que o ISV é muito baixo ou zero:
 
 Para elétricos e híbridos plug-in, as regras têm especificidades próprias. Se estiver a considerar importar uma destas categorias, fale com a equipa antes de avançar.
 
-## Use o simulador para o cálculo exacto
+## Use o simulador para o cálculo exato
 
-As tabelas apresentadas são indicativas. O simulador ISV da Circuito Car usa os valores actualizados da AT e considera:
+As tabelas apresentadas são indicativas. O simulador ISV da Circuito Car usa os valores atualizados da AT e considera:
 
-- cilindrada exacta do motor
+- cilindrada exata do motor
 - emissões de CO₂ em g/km
 - norma de emissões (NEDC ou WLTP)
 - ano de matrícula (para o cálculo da antiguidade)

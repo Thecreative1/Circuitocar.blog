@@ -17,7 +17,7 @@ utmCampaign: "blog_iuc"
 lead: "Quando compra um carro usado, o IUC é um custo anual que fica consigo — e que varia bastante consoante a motorização, as emissões e o ano de matrícula. Antes de decidir, vale a pena perceber o que vai pagar todos os anos. Este guia explica como se calcula, quando se paga e o que muda nos elétricos e híbridos."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_iuc"
+heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html"
 heroImageAlt: "Citroën C3 2022 na Circuito Car — cilindrada reduzida, IUC baixo"
 heroWhatsappMsg: "Olá, vi o artigo sobre IUC e queria perceber quanto pagaria por um carro em stock."
 

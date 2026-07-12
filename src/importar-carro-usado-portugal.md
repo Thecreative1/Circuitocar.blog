@@ -20,7 +20,7 @@ inventoryLabel: "Ver stock disponível"
 lead: "Antes de importar, é importante perceber se compensa. Muitos compradores não encontram em Portugal exatamente o carro que procuram — a motorização certa, a versão equipada, o histórico de manutenção que querem. A solução parece óbvia: ir buscar lá fora. Mas o preço que aparece no anúncio estrangeiro não é o custo final em Portugal."
 
 heroImage: "/img/importar-carro-bmw-116d-circuito-car.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_importacao"
+heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html"
 heroImageAlt: "BMW 116d 2016 na Circuito Car — exemplo de importação alemã verificada"
 heroWhatsappMsg: "Olá, vi o artigo sobre importação de carros usados e gostava de perceber se compensa para a viatura que tenho em mente."
 
@@ -51,7 +51,7 @@ schemaOrg: |
         "name": "Quando compensa mesmo importar um carro usado para Portugal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Importar compensa quando o diferencial de preço entre o mercado de origem e o nacional é suficientemente grande para absorber o ISV, a Inspecção B, o despachante, o transporte e os emolumentos de registo — um total que pode facilmente somar 2.500 € a 4.000 € ou mais. Na maioria dos casos práticos, a poupança real é menor do que parece à primeira vista."
+          "text": "Importar compensa quando o diferencial de preço entre o mercado de origem e o nacional é suficientemente grande para absorber o ISV, a Inspeção B, o despachante, o transporte e os emolumentos de registo — um total que pode facilmente somar 2.500 € a 4.000 € ou mais. Na maioria dos casos práticos, a poupança real é menor do que parece à primeira vista."
         }
       },
       {
@@ -75,7 +75,7 @@ schemaOrg: |
         "name": "Quais os erros mais comuns ao importar um carro usado?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Os erros mais frequentes são: não calcular o ISV antes de comprar; subestimar os custos de despachante, transporte e legalização; comprar sem inspecção técnica independente no país de origem; não verificar o historial do veículo; e não confirmar a norma de emissões (NEDC ou WLTP) necessária para o cálculo correcto do ISV."
+          "text": "Os erros mais frequentes são: não calcular o ISV antes de comprar; subestimar os custos de despachante, transporte e legalização; comprar sem inspeção técnica independente no país de origem; não verificar o historial do veículo; e não confirmar a norma de emissões (NEDC ou WLTP) necessária para o cálculo correto do ISV."
         }
       }
     ]

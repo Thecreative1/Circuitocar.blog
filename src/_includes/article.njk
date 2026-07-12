@@ -14,7 +14,7 @@ headerTagline: "Conteúdo útil alinhado com a marca"
       <a class="btn btn-primary" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero_stock&utm_campaign={{ utmCampaign }}">Ver viaturas disponíveis</a>
       <a class="btn btn-secondary btn-whatsapp" href="{{ site.contact.andre.whatsappBase }}?text={{ heroWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=hero_whatsapp&utm_campaign={{ utmCampaign }}">WhatsApp André</a>
     </div>
-    <a href="{{ heroImageLink }}?utm_source=blog&utm_medium=hero_image&utm_campaign={{ utmCampaign }}"
+    <a href="{{ heroImageLink }}{{ '&' if '?' in heroImageLink else '?' }}utm_source=blog&utm_medium=hero_image&utm_campaign={{ utmCampaign }}"
        aria-label="{{ heroImageAlt }}"
        style="display:block;margin-top:24px;min-height:360px;border-radius:22px;border:1px solid rgba(241,232,217,.08);box-shadow:0 18px 42px rgba(0,0,0,.22);background-color:#0b0d11;background-image:url('{{ heroImage }}');background-size:contain;background-position:center;background-repeat:no-repeat;"></a>
   </div>

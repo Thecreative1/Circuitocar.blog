@@ -6,9 +6,9 @@ date: 2026-05-28
 
 pageTitle: "Quanto custa importar um carro usado para Portugal: a conta real | Circuito Car Blog"
 title: "Quanto custa importar um carro usado para Portugal: a conta real antes de decidir"
-description: "ISV, Inspecção B, despachante e registo: saiba quanto custa mesmo importar um carro usado para Portugal antes de avançar. Contas reais com valores verificados de 2026."
+description: "ISV, Inspeção B, despachante e registo: saiba quanto custa mesmo importar um carro usado para Portugal. Contas reais com valores verificados de 2026."
 ogTitle: "Quanto custa importar um carro usado para Portugal"
-ogDescription: "ISV, Inspecção B, despachante e registo: a conta real antes de avançar com a importação."
+ogDescription: "ISV, Inspeção B, despachante e registo: a conta real antes de avançar com a importação."
 
 category: "Importação"
 readTime: "7 min de leitura"
@@ -20,7 +20,7 @@ inventoryLabel: "Ver stock disponível"
 lead: "A ideia parece simples: encontrar um carro mais barato lá fora e poupar algum dinheiro. E pode funcionar — mas só se fizer as contas certas antes de avançar. Neste artigo explicamos tudo o que vai pagar, com valores reais e verificados."
 
 heroImage: "/img/importar-carro-bmw-116d-circuito-car.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html?utm_source=blog&utm_medium=hero_img&utm_campaign=blog_custos_importacao"
+heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html"
 heroImageAlt: "BMW 116d 2016 na Circuito Car — viatura importada da Alemanha"
 heroWhatsappMsg: "Olá, vi o artigo sobre custos de importação e gostava de perceber se compensa para a viatura que tenho em mente."
 
@@ -64,10 +64,10 @@ schemaOrg: |
       },
       {
         "@type": "Question",
-        "name": "A Inspecção B substitui a IPO periódica?",
+        "name": "A Inspeção B substitui a IPO periódica?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Não. A Inspecção B é obrigatória para atribuição de matrícula portuguesa, mas não substitui a IPO periódica. Após a matrícula, o veículo fica sujeito às inspecções regulares de acordo com a sua idade."
+          "text": "Não. A Inspeção B é obrigatória para atribuição de matrícula portuguesa, mas não substitui a IPO periódica. Após a matrícula, o veículo fica sujeito às inspeções regulares de acordo com a sua idade."
         }
       },
       {
@@ -91,7 +91,7 @@ schemaOrg: |
   </script>
 ---
 
-Muitos compradores chegam a um ponto em que encontram um carro lá fora a um preço que parece claramente melhor do que o mercado nacional. E a questão surge naturalmente: e se for buscar? O problema é que o preço do anúncio estrangeiro não é o custo final em Portugal. A esse valor somam-se o ISV, a Inspecção B, a legalização, o despachante e o transporte — e a poupança real pode ser muito menor do que parece, ou até inexistente.
+Muitos compradores chegam a um ponto em que encontram um carro lá fora a um preço que parece claramente melhor do que o mercado nacional. E a questão surge naturalmente: e se for buscar? O problema é que o preço do anúncio estrangeiro não é o custo final em Portugal. A esse valor somam-se o ISV, a Inspeção B, a legalização, o despachante e o transporte — e a poupança real pode ser muito menor do que parece, ou até inexistente.
 
 Neste artigo, a nossa equipa explica cada custo com valores reais e verificados para 2026, para que possa fazer a conta completa antes de avançar.
 
@@ -135,11 +135,11 @@ Para calcular o ISV do carro específico que está a considerar, use o nosso [si
 
 Para veículos eléctricos puros, o ISV é zero. Para híbridos plug-in que cumpram os requisitos de autonomia e emissões, aplica-se um desconto de 75%. Se está a considerar estas opções, consulte também o nosso guia sobre [importação de carros usados para Portugal]({{ site.basePath }}/importar-carro-usado-portugal.html).
 
-## Inspecção B, registo e custos fixos de legalização
+## Inspeção B, registo e custos fixos de legalização
 
-Todo o veículo importado tem de fazer uma **Inspecção B** antes de receber matrícula portuguesa. Esta inspecção é diferente da IPO periódica habitual — é mais completa, realizada apenas em centros autorizados de categoria B, e custa **93,52 € em 2026** (com IVA incluído). Gera um Certificado Modelo 112, válido por 90 dias úteis.
+Todo o veículo importado tem de fazer uma **Inspeção B** antes de receber matrícula portuguesa. Esta inspeção é diferente da IPO periódica habitual — é mais completa, realizada apenas em centros autorizados de categoria B, e custa **93,52 € em 2026** (com IVA incluído). Gera um Certificado Modelo 112, válido por 90 dias úteis.
 
-Para além da Inspecção B, há custos fixos de legalização que rondam os **195 a 215 €** no total:
+Para além da Inspeção B, há custos fixos de legalização que rondam os **195 a 215 €** no total:
 
 <table>
   <thead><tr><th>Custo</th><th>Valor aproximado</th></tr></thead>
@@ -180,7 +180,7 @@ Para perceber o impacto total, vejamos um caso concreto. Um carro de 2022, gasol
   <tbody>
     <tr><td>Preço de compra (Espanha)</td><td>12.000 €</td></tr>
     <tr><td>ISV</td><td>1.913 €</td></tr>
-    <tr><td>Inspecção B</td><td>94 €</td></tr>
+    <tr><td>Inspeção B</td><td>94 €</td></tr>
     <tr><td>Legalização (DUA, registo, chapas)</td><td>195 €</td></tr>
     <tr><td>Despachante</td><td>350 €</td></tr>
     <tr><td>Transporte</td><td>400 €</td></tr>
@@ -190,7 +190,7 @@ Para perceber o impacto total, vejamos um caso concreto. Um carro de 2022, gasol
 
 O mesmo carro, já matriculado em Portugal num stand de confiança, custaria entre 14.000 e 16.000 euros dependendo do estado e do historial. A margem de poupança real — quando existe — raramente compensa o esforço e o tempo envolvidos.
 
-Pode ver o nosso stock actual de viaturas usadas em [circuitocar.pt/viaturas]({{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=article_stock&utm_campaign=blog_custos_importacao) para ter uma referência directa de preços no mercado nacional.
+Pode ver o nosso stock atual de viaturas usadas em [circuitocar.pt/viaturas]({{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=article_stock&utm_campaign=blog_custos_importacao) para ter uma referência directa de preços no mercado nacional.
 
 ## Vale a pena importar ou comprar directamente num stand?
 
@@ -200,7 +200,7 @@ Importar pode compensar se encontrar um veículo muito específico que não exis
 
 Na maioria dos casos práticos, comprar um carro usado num stand de confiança em Portugal tem vantagens claras:
 - O veículo já tem matrícula portuguesa
-- A Inspecção B já foi feita
+- A Inspeção B já foi feita
 - O historial é verificável e está em português
 - Não há surpresas fiscais a meio do processo
 - Há uma equipa real a quem recorrer se surgir algum problema
@@ -224,8 +224,8 @@ Um particular pode importar até dois veículos por ano sem necessidade de licen
 **O ISV é calculado sobre o preço de compra do carro?**
 Não. O ISV é calculado com base nas características técnicas do veículo — cilindrada e emissões de CO2 — e na sua antiguidade. O preço pago pelo carro não entra no cálculo.
 
-**A Inspecção B substitui a IPO periódica?**
-Não. A Inspecção B é obrigatória para atribuição de matrícula portuguesa, mas não substitui a IPO periódica. Após a matrícula, o veículo fica sujeito às inspecções regulares de acordo com a sua idade.
+**A Inspeção B substitui a IPO periódica?**
+Não. A Inspeção B é obrigatória para atribuição de matrícula portuguesa, mas não substitui a IPO periódica. Após a matrícula, o veículo fica sujeito às inspeções regulares de acordo com a sua idade.
 
 **Posso importar um carro do Reino Unido após o Brexit?**
 Sim, mas o processo é mais complexo do que importar de um país da UE. Pode haver lugar ao pagamento de IVA e taxas aduaneiras adicionais. Recomendamos sempre a consulta de um despachante para estes casos.
