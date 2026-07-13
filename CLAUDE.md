@@ -63,7 +63,7 @@ utmCampaign: "blog_slug"
 
 lead: "Lead paragraph shown in hero."
 heroImage: "https://..."     ← use a REAL recent car from circuitocar.pt; verify URL returns 200
-heroImageLink: "https://www.circuitocar.pt/viatura/<slug>-ID<id>.html"
+heroImageLink: "https://www.circuitocar.pt/viatura/<slug>-ID<id>.html"   ← CLEAN base URL, NO UTM; template adds UTM (handles ?/& automatically)
 heroImageAlt: "Alt text"
 heroWhatsappMsg: "Pre-filled WhatsApp message from hero button."
 
@@ -127,6 +127,11 @@ To add a NEW category, you must also add it to the `categories` array in `src/ar
 The whole site uses formal European Portuguese. Conjugate for "você", never "tu":
 - ✅ `o seu carro`, `pode`, `vê`, `faz`, `indique-nos`, `quando estiver pronto`
 - ❌ `o teu carro`, `podes`, `vês`, `fazes`, `dá-nos`, `quando estiveres pronto`
+
+**Spelling: Acordo Ortográfico de 1990 (AO90), always.** A full sweep was done 2026-07-12 — don't reintroduce pre-AO forms (they appear in body text, front matter AND FAQPage JSON-LD):
+- ✅ `inspeção`, `exato`, `correto`, `atual`, `fatura`, `projeto`, `reação`, `elétrico`
+- ❌ `inspecção`, `exacto`, `correcto`, `actual`, `factura`, `projecto`, `reacção`, `eléctrico`
+- Note: `contacto` and `facto` are still correct in PT-PT — do NOT "fix" those.
 
 ### Body content rules
 
@@ -400,3 +405,13 @@ Nothing broke — but document these patterns for future reference:
 - **ISV table values are indicative** — the Código do ISV updates annually with Orçamento de Estado. Always note in articles that values are indicative and users should verify with AT or use the simulator.
 - **New article with today's `date` auto-becomes the homepage hero.** If you don't want a new article to take the hero (e.g. a supplementary page like city guides or tool explainers), set `date:` to a past date — 2026-01-15 is the convention used for city pages.
 - **`relatedArticles` URLs must be existing `.html` filenames** — not slugs, not simulator paths. If the article doesn't exist yet, don't link to it.
+
+## What went wrong before the audit session (2026-07-12) (don't repeat)
+
+A full site audit (build, internal links, JSON-LD, meta tags, sitemap, external URLs, browser console, simulator math) found and fixed these — keep them fixed:
+
+- **`heroImageLink` with UTM in front matter produced double-`?` URLs** (`...?utm_campaign=blog_iuc?utm_source=...`) on 7 articles, breaking GA campaign tracking. The templates (`article-cc.njk` and legacy `article.njk`) now pick `?` vs `&` automatically — same pattern as `inventoryUrl`. Rule: **`heroImageLink` must always be a clean base URL with no query string**; the template appends `utm_source=blog&utm_medium=hero_image&utm_campaign={utmCampaign}`.
+- **Pre-AO90 spellings** were scattered across 5 articles + 2 simulators, including inside FAQPage JSON-LD (Google shows that text in rich results). See the spelling rule in "Writing style" — new content must be AO90.
+- **Meta descriptions must stay ≤165 chars** or Google truncates them (3 were trimmed: financiamento, opel-gt, quanto-custa-importar).
+- **Page titles >65 chars were left as-is deliberately** — the `| Circuito Car Blog` suffix pushes most over, Google just truncates the display, and retitling already-indexed pages risks rankings. Don't "fix" them.
+- Useful audit checks for the future (all passed 2026-07-12): every internal `href` resolves in `_site/`; every JSON-LD block parses; sitemap covers all HTML files with no orphans/duplicates; every `heroImage`/`heroImageLink`/`stock.json` URL returns 200 (sold cars = 404); zero console errors on homepage, artigos, article, all 4 tools, city page, privacidade; simulator outputs spot-checked against the fórmula.
