@@ -6,7 +6,7 @@ date: 2026-06-10
 
 pageTitle: "IUC em Portugal: quanto paga por um carro usado? Guia 2026 | Circuito Car Blog"
 title: "IUC em Portugal: quanto paga por um carro usado?"
-description: "Como se calcula o Imposto Único de Circulação, quando se paga, o que muda nos elétricos e como saber o valor exato antes de comprar. Guia prático para 2026."
+description: "Como se calcula o IUC, quanto paga por ano, o que muda nos elétricos e as novas datas fixas de pagamento a partir de 2027. Guia prático para carros usados."
 ogTitle: "IUC 2026: quanto paga por um carro usado em Portugal?"
 ogDescription: "Cilindrada, CO2, ano de matrícula — os três fatores que definem o seu IUC. Saiba o que esperar antes de comprar."
 
@@ -31,22 +31,22 @@ sidebarTitle: "Qual o IUC do carro que quer comprar?"
 sidebarDescription: "A equipa Circuito Car indica-lhe os custos anuais antes de decidir — sem surpresas depois da compra."
 sidebarWhatsappMsg: "Olá, antes de comprar queria saber qual seria o IUC do carro. Podem ajudar-me?"
 
-topbarLeft: "IUC 2026 — saiba o que vai pagar antes de comprar."
+topbarLeft: "IUC 2026 — e o que muda no pagamento a partir de 2027."
 topbarLinks:
-  - url: "/simulador_isv.html"
-    label: "Calculadora ISV"
+  - url: "/custo-mensal-carro.html"
+    label: "Custo mensal"
   - url: "#equipa"
     label: "Falar com a equipa"
   - url: "/"
     label: "Voltar ao blog"
 
 relatedArticles:
+  - title: "IUC: acabou o pagamento no mês da matrícula. O que muda em 2027 e 2028"
+    url: "iuc-novas-regras-pagamento-2027.html"
+  - title: "Vale a pena comprar um carro elétrico usado em 2026?"
+    url: "vale-a-pena-comprar-eletrico-usado-2026.html"
   - title: "Garantia de carros usados em Portugal: o que cobre e o que não cobre"
     url: "garantia-carro-usado-portugal.html"
-  - title: "Vale a pena comprar um híbrido usado em 2026?"
-    url: "vale-a-pena-comprar-hibrido-usado-2026.html"
-  - title: "Financiamento de carro usado em Portugal"
-    url: "financiamento-carro-usado-portugal.html"
 
 andreDescription: "André ajuda a comparar os custos anuais das viaturas em stock antes de tomar uma decisão."
 filipeDescription: "Filipe verifica os dados técnicos de cada viatura — cilindrada, CO2 e ano de matrícula — para uma estimativa precisa do IUC."
@@ -72,7 +72,7 @@ schemaOrg: |
         "name": "Quando tenho de pagar o IUC?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O IUC vence-se no mês do aniversário da primeira matrícula do veículo e deve ser pago dentro desse mês. Por exemplo, se o carro foi matriculado em março de 2018, o IUC vence todos os anos em março. O pagamento pode ser feito no Portal das Finanças, ATM/Multibanco, CTT ou aplicação MB Way."
+          "text": "Em 2026 o IUC vence-se no mês do aniversário da primeira matrícula do veículo e deve ser pago dentro desse mês. A partir de 2027 esta regra termina: o Decreto-Lei n.º 161/2026 fixa datas iguais para todos os veículos, com pagamento em outubro em 2027 e abril como mês base a partir de 2028. O pagamento pode ser feito no Portal das Finanças, ATM/Multibanco, CTT ou aplicação MB Way."
         }
       },
       {
@@ -144,9 +144,9 @@ Para ter uma ideia de ordem de grandeza — sem substituir o cálculo oficial:
 
 <div class="note"><strong>Nota:</strong> estes valores são estimativas indicativas para 2026. O valor exato depende do ano de matrícula concreto e das tabelas em vigor. Consulte sempre o simulador do <a href="https://www.portaldasfinancas.gov.pt" target="_blank" rel="noopener">Portal das Finanças</a> para o cálculo preciso.</div>
 
-## Quando e como se paga
+## Quando e como se paga (em 2026)
 
-O IUC vence-se no **mês do aniversário da primeira matrícula**. Se o carro foi matriculado em setembro de 2019, paga todos os anos em setembro.
+Em 2026, o IUC vence-se no **mês do aniversário da primeira matrícula**. Se o carro foi matriculado em setembro de 2019, paga todos os anos em setembro.
 
 A notificação chega por carta ou pelo portal pessoal da AT. Pode pagar através de:
 
@@ -156,6 +156,20 @@ A notificação chega por carta ou pelo portal pessoal da AT. Pode pagar atravé
 - Balcões dos CTT
 
 O prazo é o mês completo de vencimento. Pagamentos em atraso acumulam juros de mora — compensa não deixar para o último dia.
+
+## O que muda a partir de 2027
+
+Esta regra do mês da matrícula tem os dias contados. O **Decreto-Lei n.º 161/2026**, publicado a 4 de agosto de 2026, substitui o aniversário da matrícula por **datas fixas iguais para todos os veículos**, com entrada em vigor a 1 de janeiro de 2027:
+
+| Ano | Como se paga |
+|---|---|
+| **2026** | Sem alterações — no mês da matrícula |
+| **2027** | Até 500€: outubro · Acima de 500€: julho e outubro |
+| **2028 em diante** | Até 100€: abril · 100–500€: abril e outubro · Acima de 500€: abril, julho e outubro |
+
+O **valor do imposto não aumenta** por causa desta alteração — muda apenas o calendário de liquidação e pagamento. O cálculo continua a assentar na cilindrada, no CO₂ e na data da primeira matrícula, exatamente como descrito acima.
+
+<div class="note"><strong>Cuidado com a desinformação:</strong> circulam páginas a indicar fevereiro de 2026 como novo prazo. Está errado. Veja o calendário completo e o que isto significa para quem compra usado em <a href="/iuc-novas-regras-pagamento-2027.html">IUC: as novas regras de pagamento de 2027 e 2028</a>.</div>
 
 ## O que muda quando compra um carro usado
 
@@ -183,10 +197,12 @@ O método mais fiável é usar o simulador oficial da AT no Portal das Finanças
 
 Se preferir uma forma mais direta, a equipa Circuito Car pode indicar-lhe o valor estimado para qualquer viatura em stock antes de visitar — é uma das informações que faz parte da decisão e que convém ter clara antes de avançar.
 
+E se o que quer perceber é o peso total do carro no orçamento, a [calculadora de custo mensal](/custo-mensal-carro.html) soma o IUC à prestação, ao combustível ou eletricidade, ao seguro e à manutenção numa única conta.
+
 ## Em resumo
 
 - **IUC = cilindrada + CO₂** (para carros matriculados a partir de 2007)
-- **Paga-se uma vez por ano**, no mês do aniversário da primeira matrícula
+- **Em 2026 paga-se no mês do aniversário da primeira matrícula**; [a partir de 2027 passa a haver datas fixas iguais para todos](/iuc-novas-regras-pagamento-2027.html)
 - **Elétricos estão isentos**; híbridos pagam menos pela componente de CO₂ reduzida
 - **Antes de comprar um usado**, confirme que não há IUC em dívida associado à matrícula
 - **Para o valor exato**, use o simulador do Portal das Finanças ou pergunte à equipa
