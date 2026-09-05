@@ -6,7 +6,21 @@
     <atom:link href="https://circuitocar.blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>Guias práticos sobre compra de carros usados, híbridos, automáticos e crédito automóvel.</description>
     <language>pt</language>
-    <lastBuildDate>2026-07-09T00:00:00.000Z</lastBuildDate>
+    <lastBuildDate>2026-09-05T00:00:00.000Z</lastBuildDate>
+    <item>
+      <title>IUC: acabou o pagamento no mês da matrícula. O que muda em 2027 e 2028</title>
+      <link>https://circuitocar.blog/iuc-novas-regras-pagamento-2027.html</link>
+      <guid>https://circuitocar.blog/iuc-novas-regras-pagamento-2027.html</guid>
+      <pubDate>2026-09-05T00:00:00.000Z</pubDate>
+      <description>O Decreto-Lei 161/2026 fixa datas certas para pagar o IUC. Em 2026 nada muda, em 2027 há regime transitório e em 2028 abril passa a ser o mês base.</description>
+    </item>
+    <item>
+      <title>Vale a pena comprar um carro elétrico usado em 2026?</title>
+      <link>https://circuitocar.blog/vale-a-pena-comprar-eletrico-usado-2026.html</link>
+      <guid>https://circuitocar.blog/vale-a-pena-comprar-eletrico-usado-2026.html</guid>
+      <pubDate>2026-09-03T00:00:00.000Z</pubDate>
+      <description>Bateria, autonomia real, custo por 100 km e isenção de IUC. O guia honesto para decidir se um elétrico usado compensa no seu caso — e quando não compensa.</description>
+    </item>
     <item>
       <title>Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade</title>
       <link>https://circuitocar.blog/tabela-isv-2026-portugal.html</link>
@@ -33,7 +47,7 @@
       <link>https://circuitocar.blog/iuc-carros-usados-portugal.html</link>
       <guid>https://circuitocar.blog/iuc-carros-usados-portugal.html</guid>
       <pubDate>2026-06-10T00:00:00.000Z</pubDate>
-      <description>Como se calcula o Imposto Único de Circulação, quando se paga, o que muda nos elétricos e como saber o valor exato antes de comprar. Guia prático para 2026.</description>
+      <description>Como se calcula o IUC, quanto paga por ano, o que muda nos elétricos e as novas datas fixas de pagamento a partir de 2027. Guia prático para carros usados.</description>
     </item>
     <item>
       <title>Garantia de carros usados em Portugal: o que cobre e o que não cobre</title>
