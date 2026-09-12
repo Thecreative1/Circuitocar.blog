@@ -12,7 +12,12 @@ permalink: simulador_isv.html
   <meta property="og:title" content="Simulador de ISV 2026 | Circuito Car" />
   <meta property="og:description" content="Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gasolina e gasóleo, NEDC e WLTP. Gratuito, sem registo." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{ site.url }}/img/logo-yellow.png" />
+  <meta property="og:image" content="{{ site.url }}/img/og-simulador-isv.png" />
+  <meta property="og:image:secure_url" content="{{ site.url }}/img/og-simulador-isv.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Simulador de ISV 2026 da Circuito Car — calcule o imposto antes de importar" />
   <meta property="og:url" content="{{ site.url }}/simulador_isv.html" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="pt_PT" />
@@ -20,7 +25,8 @@ permalink: simulador_isv.html
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Simulador de ISV 2026 | Circuito Car" />
   <meta name="twitter:description" content="Calcule o ISV do seu carro importado com as tabelas oficiais de 2026. Gratuito, sem registo." />
-  <meta name="twitter:image" content="{{ site.url }}/img/logo-yellow.png" />
+  <meta name="twitter:image" content="{{ site.url }}/img/og-simulador-isv.png" />
+  <meta name="twitter:image:alt" content="Simulador de ISV 2026 da Circuito Car" />
   <link rel="icon" type="image/png" href="{{ site.basePath }}/img/logo-yellow.png" />
   <link rel="apple-touch-icon" href="{{ site.basePath }}/img/logo-yellow.png" />
   <link rel="alternate" type="application/rss+xml" title="Circuito Car Blog" href="{{ site.url }}/rss.xml" />
@@ -116,6 +122,7 @@ permalink: simulador_isv.html
     .toggle-row { display: flex; align-items: center; gap: 10px; margin: 4px 0 14px; cursor: pointer; }
     .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--cc-ink); cursor: pointer; flex-shrink: 0; }
     .toggle-row span { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); }
+    .toggle-row[hidden] { display: none; }
 
     .outros-custos { display: none; }
     .outros-custos.visible { display: block; }
@@ -215,6 +222,11 @@ permalink: simulador_isv.html
     <div class="cc-post-hero__chevron" aria-hidden="true"></div>
   </section>
 
+  <!-- ── PARTILHAR ── -->
+  {% set shareLabel = "Partilhar simulador" %}
+  {% set shareModifier = "top" %}
+  {% include "article-share.njk" %}
+
   <!-- ── SIMULATOR + SIDEBAR ── -->
   <div class="sim-wrap">
     <section class="sim-card" id="simulador">
@@ -237,7 +249,7 @@ permalink: simulador_isv.html
         </div>
         <div class="field">
           <label for="anoMatricula">Ano de matrícula</label>
-          <input class="input" id="anoMatricula" type="number" min="1990" max="2026" step="1" placeholder="ex: 2020" aria-required="true" aria-describedby="hint-ano" autocomplete="off" />
+          <input class="input" id="anoMatricula" type="number" min="1990" step="1" placeholder="ex: 2020" aria-required="true" aria-describedby="hint-ano" autocomplete="off" />
           <small id="hint-ano">Ano da primeira matrícula no país de origem.</small>
         </div>
       </div>
@@ -245,11 +257,11 @@ permalink: simulador_isv.html
       <div class="form-grid">
         <div class="field">
           <label for="combustivel">Combustível</label>
-          <select class="select" id="combustivel" aria-describedby="hint-combustivel">
+          <select class="select" id="combustivel" aria-describedby="hint-combustivel" onchange="toggleParticulas()">
             <option value="gasolina">Gasolina</option>
             <option value="gasoleo">Gasóleo</option>
           </select>
-          <small id="hint-combustivel">Eléctrico ou híbrido plug-in? Fale connosco — aplicam-se regras especiais.</small>
+          <small id="hint-combustivel">Elétrico ou híbrido plug-in? Fale connosco — aplicam-se regras especiais.</small>
         </div>
         <div class="field">
           <label for="norma">Norma de emissões CO2</label>
@@ -264,6 +276,11 @@ permalink: simulador_isv.html
       <div class="norma-hint">
         <strong>Como saber a norma?</strong> Carros matriculados antes de 2018 usam geralmente <strong>NEDC</strong>. A partir de 2020, <strong>WLTP</strong>. Carros de 2018 e 2019 podem ser de qualquer uma — verifique no Certificado de Conformidade (CoC) ou na ficha técnica do veículo.
       </div>
+
+      <label class="toggle-row" for="particulasBaixas" id="rowParticulas" hidden>
+        <input type="checkbox" id="particulasBaixas" />
+        <span>O CoC indica emissões de partículas <strong>inferiores a 0,001 g/km</strong> — isenta do agravamento de 500 € aplicado ao gasóleo.</span>
+      </label>
 
       <!-- Custos adicionais (opcional) -->
       <span class="sim-section-label">Custos adicionais (opcional)</span>
@@ -330,7 +347,7 @@ permalink: simulador_isv.html
           <div class="result-box highlight">
             <strong>ISV estimado a pagar</strong>
             <span id="rISVFinal">—</span>
-            <small>Após redução por antiguidade</small>
+            <small id="rISVFinalNota">Após redução por antiguidade</small>
           </div>
         </div>
 
@@ -342,7 +359,7 @@ permalink: simulador_isv.html
           </table>
         </details>
 
-        <!-- Total com outros custos (se activo) -->
+        <!-- Total com outros custos (se ativo) -->
         <div id="blocoTotal" style="display:none;">
           <span class="result-section-label">Total estimado de importação</span>
           <div class="result-grid">
@@ -366,7 +383,7 @@ permalink: simulador_isv.html
         </div>
 
         <div class="note">
-          <strong>Atenção:</strong> este simulador é uma ferramenta de estimativa baseada nas tabelas oficiais do ISV em vigor em 2026. O valor final do ISV é determinado pela Autoridade Tributária com base nos documentos do veículo. Em caso de dúvida, consulte sempre um despachante aduaneiro antes de avançar.
+          <strong>Atenção:</strong> este simulador é uma ferramenta de estimativa baseada nas tabelas oficiais do ISV em vigor em 2026. Inclui a redução por antiguidade e, nos veículos a gasóleo, o agravamento de 500 € previsto no artigo 7.º do Código do ISV. O valor final do ISV é determinado pela Autoridade Tributária com base nos documentos do veículo. Em caso de dúvida, consulte sempre um despachante aduaneiro antes de avançar.
         </div>
 
       </div>
@@ -379,7 +396,7 @@ permalink: simulador_isv.html
       <div class="cc-side-card cc-side-card--warm">
         <span class="cc-side-card__eyebrow">Como usar</span>
         <h3>Simule → compare → decida</h3>
-        <p>Calcule o ISV, some os restantes custos e compare com o preço de um carro equivalente já em Portugal. Se a diferença não compensar, fale connosco — temos stock seleccionado pronto a circular.</p>
+        <p>Calcule o ISV, some os restantes custos e compare com o preço de um carro equivalente já em Portugal. Se a diferença não compensar, fale connosco — temos stock selecionado pronto a circular.</p>
       </div>
 
       <div class="cc-side-card">
@@ -406,7 +423,7 @@ permalink: simulador_isv.html
 
       <div class="cc-side-card">
         <span class="cc-side-card__eyebrow">Equipa</span>
-        <h3>Fala com quem percebe</h3>
+        <h3>Fale com quem percebe</h3>
 
         <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
           <div class="cc-side-seller__top">
@@ -453,11 +470,15 @@ permalink: simulador_isv.html
       <div class="cc-side-card cc-side-card--warm">
         <span class="cc-side-card__eyebrow">Stock</span>
         <h3>Próximo passo: ver viaturas</h3>
-        <p>Vê o stock atual em circuitocar.pt — viaturas verificadas, com garantia, já legalizadas e prontas a circular.</p>
+        <p>Veja o stock atual em circuitocar.pt — viaturas verificadas, com garantia, já legalizadas e prontas a circular.</p>
         <a class="cc-btn cc-btn--yellow" href="{{ site.mainSite }}/viaturas?utm_source=simulador&utm_medium=sidebar_stock&utm_campaign=simulador_isv" target="_blank" rel="noopener noreferrer" style="width:100%;"><i data-lucide="car"></i>Ver stock</a>
       </div>
     </aside>
   </div>
+
+  <!-- ── PARTILHAR (fim) ── -->
+  {% set shareModifier = "bottom" %}
+  {% include "article-share.njk" %}
 
   <footer class="cc-footer">
     <div class="cc-footer__inner">
@@ -574,6 +595,10 @@ permalink: simulador_isv.html
     return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2 }).format(v);
   }
 
+  function taxa(v) {
+    return v.toFixed(2).replace('.', ',');
+  }
+
   function calcComponente(tabela, valor) {
     var entry = tabela.find(function(e) { return valor <= e.max; });
     if (!entry) return 0;
@@ -586,6 +611,13 @@ permalink: simulador_isv.html
     if (idade <= 0) return { pct: 0, anos: 0 };
     var entry = REDUCOES.find(function(e) { return idade <= e.maxAnos; });
     return { pct: entry ? entry.pct : 80, anos: idade };
+  }
+
+  function toggleParticulas() {
+    var row = document.getElementById('rowParticulas');
+    var isGasoleo = document.getElementById('combustivel').value === 'gasoleo';
+    row.hidden = !isGasoleo;
+    if (!isGasoleo) document.getElementById('particulasBaixas').checked = false;
   }
 
   function toggleOutrosCustos() {
@@ -634,12 +666,21 @@ permalink: simulador_isv.html
     var isvBase = compCil + compCO2;
 
     var reducao = getReducao(ano);
-    var isvFinal = isvBase * (1 - reducao.pct / 100);
+    var isvReduzido = isvBase * (1 - reducao.pct / 100);
+
+    // Agravamento do gasoleo: 500 EUR sobre o montante total do imposto a pagar
+    // (art. 7.o n.o 3 do CISV), excepto se o CoC indicar particulas < 0,001 g/km.
+    var isentoParticulas = document.getElementById('particulasBaixas').checked;
+    var agravamento = (combustivel === 'gasoleo' && !isentoParticulas) ? 500 : 0;
+    var isvFinal = isvReduzido + agravamento;
 
     document.getElementById('rCompCilindrada').textContent = fmt(compCil);
     document.getElementById('rCompCO2').textContent        = fmt(compCO2);
     document.getElementById('rISVBase').textContent        = fmt(isvBase);
     document.getElementById('rISVFinal').textContent       = fmt(isvFinal);
+    document.getElementById('rISVFinalNota').textContent   = agravamento
+      ? 'Após redução por antiguidade, com agravamento de 500 € do gasóleo'
+      : 'Após redução por antiguidade';
 
     var reducaoTexto = reducao.anos > 0
       ? reducao.anos + (reducao.anos === 1 ? ' ano' : ' anos') + ' de idade — redução de ' + reducao.pct + '%'
@@ -647,17 +688,18 @@ permalink: simulador_isv.html
     document.getElementById('reducaoTexto').textContent = reducaoTexto;
 
     var normaLabel = norma.toUpperCase();
-    var combLabel  = combustivel.charAt(0).toUpperCase() + combustivel.slice(1);
+    var combLabel  = combustivel === 'gasoleo' ? 'Gasóleo' : 'Gasolina';
     var detalhe = document.getElementById('detalheCalculo');
     detalhe.innerHTML = [
-      '<tr><td>Cilindrada: ' + cilindrada + ' cc × ' + ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).rate.toFixed(2) + ' €</td><td>' + fmt(cilindrada * ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).rate) + '</td></tr>',
+      '<tr><td>Cilindrada: ' + cilindrada + ' cc × ' + taxa(ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).rate) + ' €</td><td>' + fmt(cilindrada * ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).rate) + '</td></tr>',
       '<tr class="deduct-row"><td>— Parcela a abater</td><td>− ' + fmt(ISV.cilindrada.find(function(e){return cilindrada<=e.max;}).deduct) + '</td></tr>',
       '<tr class="total-row"><td>Componente cilindrada</td><td>' + fmt(compCil) + '</td></tr>',
-      '<tr><td>CO2: ' + co2 + ' g/km × ' + ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate.toFixed(2) + ' € (' + combLabel + ' ' + normaLabel + ')</td><td>' + fmt(co2 * ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate) + '</td></tr>',
+      '<tr><td>CO2: ' + co2 + ' g/km × ' + taxa(ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate) + ' € (' + combLabel + ' ' + normaLabel + ')</td><td>' + fmt(co2 * ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate) + '</td></tr>',
       '<tr class="deduct-row"><td>— Parcela a abater</td><td>− ' + fmt(ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).deduct) + '</td></tr>',
       '<tr class="total-row"><td>Componente ambiental CO2</td><td>' + fmt(compCO2) + '</td></tr>',
       '<tr><td><strong>ISV base (soma das componentes)</strong></td><td><strong>' + fmt(isvBase) + '</strong></td></tr>',
       '<tr class="deduct-row"><td>Redução por antiguidade (' + reducao.pct + '%)</td><td>− ' + fmt(isvBase * reducao.pct / 100) + '</td></tr>',
+      agravamento ? '<tr><td>Agravamento gasóleo (art. 7.º n.º 3 do CISV)</td><td>+ ' + fmt(agravamento) + '</td></tr>' : '',
       '<tr class="total-row"><td><strong>ISV estimado a pagar</strong></td><td><strong>' + fmt(isvFinal) + '</strong></td></tr>'
     ].join('');
 
@@ -694,7 +736,7 @@ permalink: simulador_isv.html
       var totC   = precoC + isvFinal + (parseFloat(document.getElementById('transporte').value)||0) + (parseFloat(document.getElementById('despachante').value)||0) + (parseFloat(document.getElementById('inspecaoLegal').value)||0);
       if (precoC > 0) msgPartes.push('Preço compra: ' + fmt(precoC) + ' | Total estimado: ' + fmt(totC));
     }
-    msgPartes.push('Gostava de perceber se compensa importar ou comprar directamente em Portugal.');
+    msgPartes.push('Gostava de perceber se compensa importar ou comprar diretamente em Portugal.');
     document.getElementById('btnWhatsApp').href = '{{ site.contact.marco.whatsappBase }}?text=' + encodeURIComponent(msgPartes.join('\n')) + '&utm_source=simulador&utm_medium=isv_resultado&utm_campaign=simulador_isv';
 
     var res = document.getElementById('resultados');
@@ -703,6 +745,10 @@ permalink: simulador_isv.html
     res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
+  // Mantem o limite do ano de matricula alinhado com o ano corrente.
+  document.getElementById('anoMatricula').max = new Date().getFullYear();
+  toggleParticulas();
+
   function resetSimulador() {
     ['cilindrada','co2','anoMatricula','precoCompra'].forEach(function(id) {
       var el = document.getElementById(id);
@@ -710,15 +756,20 @@ permalink: simulador_isv.html
     });
     document.getElementById('combustivel').value = 'gasolina';
     document.getElementById('norma').value = 'wltp';
+    toggleParticulas();
     document.getElementById('transporte').value = 400;
     document.getElementById('despachante').value = 350;
     document.getElementById('inspecaoLegal').value = 289;
     document.getElementById('incluirOutros').checked = false;
+    document.getElementById('particulasBaixas').checked = false;
     document.getElementById('outrosCustos').classList.remove('visible');
     document.getElementById('resultados').classList.remove('visible');
     document.getElementById('mensagemAviso').style.display = 'none';
   }
   </script>
+
+  {% set shareCampaign = "simulador_isv_share" %}
+  {% include "share-script.njk" %}
 
 </body>
 </html>
