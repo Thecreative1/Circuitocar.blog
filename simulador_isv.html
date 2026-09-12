@@ -240,6 +240,69 @@
           "@type": "UseAction",
           "target": "https://circuitocar.blog/simulador_isv.html#simulador"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://circuitocar.blog/simulador_isv.html#faq",
+        "inLanguage": "pt-PT",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como se calcula o ISV de um carro importado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O ISV soma duas componentes: a componente cilindrada, que multiplica os cm3 do motor por uma taxa e subtrai uma parcela fixa, e a componente ambiental, que faz o mesmo as emissoes de CO2. Sobre esse total aplica-se a reducao por antiguidade e, nos veiculos a gasoleo, o agravamento de 500 euros previsto no artigo 7.o do Codigo do ISV."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a reducao por antiguidade do ISV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quanto mais velho for o carro, menos ISV paga. A reducao comeca nos 10 por cento ate ao primeiro ano e chega aos 80 por cento acima dos dez anos, aplicando-se as duas componentes do imposto. A contagem e feita a partir da data da primeira matricula no pais de origem, nao da data em que o carro entra em Portugal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Porque e que os carros a gasoleo pagam mais 500 euros de ISV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O artigo 7.o do Codigo do ISV acrescenta 500 euros ao montante total a pagar nos ligeiros de passageiros a gasoleo. Ha uma excecao: se o Certificado de Conformidade indicar emissoes de particulas inferiores a 0,001 g/km, o agravamento nao se aplica. Muitos gasoleos recentes com filtro de particulas ficam abaixo desse valor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como sei se o meu carro usa NEDC ou WLTP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A norma consta no Certificado de Conformidade. Como regra pratica, carros matriculados ate 2018 usam quase sempre NEDC e a partir de 2020 usam WLTP. Os anos de 2018 e 2019 sao de transicao e podem ser de qualquer uma, pelo que convem confirmar antes de simular: a diferenca no imposto pode ser de centenas de euros."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Os carros eletricos e hibridos pagam ISV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Os eletricos a bateria estao isentos de ISV, novos ou usados importados. Os hibridos plug-in pagam uma taxa intermedia de 25 por cento desde que tenham pelo menos 50 km de autonomia eletrica e emissoes ate 50 g CO2/km, limite que sobe para 80 g nos modelos homologados segundo a norma Euro 6e-bis. Os hibridos convencionais, sem tomada, nao tem taxa intermedia e pagam o imposto por inteiro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O valor do simulador de ISV e o que vou pagar nas Financas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "E uma estimativa para decidir, nao uma liquidacao. O valor definitivo e apurado pela Autoridade Tributaria a partir dos documentos do veiculo, atraves da Declaracao Aduaneira de Veiculo. Se um dos dados introduzidos estiver errado no Certificado de Conformidade, nomeadamente o CO2, o valor final muda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto custa importar um carro usado, ao todo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para alem do ISV ha que contar com o transporte, o despachante, a inspecao B e a legalizacao, que juntos costumam somar entre 700 e 1.200 euros. O simulador permite incluir estes custos fixos para ver o total estimado da importacao."
+            }
+          }
+        ]
       }
     ]
   }
@@ -254,6 +317,7 @@
 
   <style>
     .sim-wrap { max-width: 1280px; margin: 0 auto; padding: 56px 32px 96px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; align-items: start; }
+    .sim-col { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
     .sim-card { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 36px; }
     .sim-card h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.05; letter-spacing: var(--cc-tracking-tight); color: var(--cc-ink); margin: 0 0 10px; }
     .sim-card > p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0 0 28px; max-width: 740px; }
@@ -317,13 +381,29 @@
     .wa-cta-block { background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); padding: 20px; margin-top: 20px; }
     .wa-cta-block p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin: 0 0 14px; line-height: 1.5; }
 
+    /* Explicacoes + FAQ (coluna principal, por baixo do simulador) */
+    .faq-card h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-lg); line-height: 1.15; color: var(--cc-ink); margin: 28px 0 8px; }
+    .faq-card h3:first-of-type { margin-top: 0; }
+    .faq-card p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0; max-width: 720px; }
+    .faq-card p + p { margin-top: 10px; }
+    .faq-card a { color: var(--cc-ink); font-weight: var(--cc-fw-bold); }
+
+    .sim-outro { grid-column: 1 / -1; }
+    .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .next-card { display: flex; flex-direction: column; gap: 6px; background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-md); padding: 18px 20px; text-decoration: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), background var(--cc-dur-fast) var(--cc-ease-out), transform var(--cc-dur-fast) var(--cc-ease-out); }
+    .next-card:hover { border-color: var(--cc-ink); background: var(--cc-paper-card); transform: translateY(-2px); }
+    .next-card:focus-visible { outline: 2px solid var(--cc-blue-light); outline-offset: 2px; }
+    .next-card__eyebrow { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: 10px; letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; color: var(--cc-fg-subtle); }
+    .next-card strong { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-md); line-height: 1.15; color: var(--cc-ink); }
+    .next-card span:last-child { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); line-height: 1.5; color: var(--cc-fg-muted); }
+
     @media (max-width: 1000px) {
       .sim-wrap { grid-template-columns: 1fr; padding: 40px 24px 80px; }
     }
     @media (max-width: 640px) {
       .sim-wrap { padding: 32px 16px 72px; }
       .sim-card { padding: 24px; }
-      .form-grid, .form-grid--3, .result-grid { grid-template-columns: 1fr; }
+      .form-grid, .form-grid--3, .result-grid, .next-grid { grid-template-columns: 1fr; }
       .calc-actions { flex-direction: column; }
       .calc-actions .cc-btn { width: 100%; }
       .field, .input, .select { min-width: 0; }
@@ -405,6 +485,7 @@
 
   <!-- ── SIMULATOR + SIDEBAR ── -->
   <div class="sim-wrap">
+    <div class="sim-col">
     <section class="sim-card" id="simulador">
       <h2>Simulador de ISV</h2>
       <p>Preencha os dados do veículo e obtenha uma estimativa do ISV a pagar na importação para Portugal. Os valores baseiam-se nas tabelas oficiais em vigor para 2026.</p>
@@ -568,6 +649,34 @@
 
     </section>
 
+    <section class="sim-card faq-card" id="faq">
+      <h2>Perguntas frequentes sobre o ISV</h2>
+      <p style="margin-bottom: 28px;">As dúvidas que mais nos chegam de quem está a pensar importar. Se a sua não estiver aqui, <a href="#equipa">fale connosco</a>.</p>
+
+      <h3>Como se calcula o ISV de um carro importado?</h3>
+      <p>O ISV soma duas componentes: a <strong>componente cilindrada</strong>, que multiplica os cm³ do motor por uma taxa e subtrai uma parcela fixa, e a <strong>componente ambiental</strong>, que faz o mesmo às emissões de CO₂. Sobre esse total aplica-se a redução por antiguidade e, nos veículos a gasóleo, o agravamento de 500 €. O simulador acima mostra cada passo em "Ver detalhe do cálculo".</p>
+
+      <h3>Como funciona a redução por antiguidade?</h3>
+      <p>Quanto mais velho for o carro, menos ISV paga. A redução começa nos 10% até ao primeiro ano e chega aos 80% acima dos dez anos, aplicando-se às duas componentes do imposto. A contagem é feita a partir da data da primeira matrícula no país de origem, não da data em que o carro entra em Portugal.</p>
+
+      <h3>Porque é que os carros a gasóleo pagam mais 500 €?</h3>
+      <p>O artigo 7.º do Código do ISV acrescenta 500 € ao montante total a pagar nos ligeiros de passageiros a gasóleo. Há uma exceção: se o Certificado de Conformidade indicar emissões de partículas inferiores a 0,001 g/km, o agravamento não se aplica. Muitos gasóleos recentes com filtro de partículas ficam abaixo desse valor, por isso vale a pena confirmar no CoC antes de assumir o custo.</p>
+
+      <h3>Como sei se o meu carro usa NEDC ou WLTP?</h3>
+      <p>A norma consta no Certificado de Conformidade. Como regra prática, carros matriculados até 2018 usam quase sempre NEDC e a partir de 2020 usam WLTP. Os anos de 2018 e 2019 são de transição e podem ser de qualquer uma, por isso confirme antes de simular: a diferença no imposto pode ser de centenas de euros.</p>
+
+      <h3>Os carros elétricos e híbridos pagam ISV?</h3>
+      <p>Os elétricos a bateria estão isentos de ISV, novos ou usados importados. Os híbridos plug-in pagam uma taxa intermédia de 25% desde que tenham pelo menos 50 km de autonomia elétrica e emissões até 50 g CO₂/km, limite que sobe para 80 g nos modelos homologados segundo a norma Euro 6e-bis. Os híbridos convencionais, sem tomada, não têm taxa intermédia e pagam o imposto por inteiro. Este simulador cobre gasolina e gasóleo, por isso nestes casos <a href="#equipa">fale connosco</a>.</p>
+
+      <h3>O valor do simulador é o que vou pagar nas Finanças?</h3>
+      <p>É uma estimativa fiável para decidir, não uma liquidação. O valor definitivo é apurado pela Autoridade Tributária a partir dos documentos do veículo, através da Declaração Aduaneira de Veículo. Se um dos dados que introduziu estiver errado no CoC, nomeadamente o CO₂, o valor final muda. Para uma compra que já está decidida, confirme sempre com um despachante.</p>
+
+      <h3>Quanto custa importar um carro, ao todo?</h3>
+      <p>Para além do ISV conte com o transporte, o despachante, a inspeção B e a legalização, que juntos costumam somar entre 700 € e 1.200 €. Ative a opção "Incluir custos fixos de importação" no simulador para ver o total estimado, ou leia o <a href="/quanto-custa-importar-carro-usado-portugal.html">guia completo de custos</a>.</p>
+    </section>
+
+    </div>
+
     <aside class="cc-sidebar" id="equipa">
       <div class="cc-side-card cc-side-card--warm">
         <span class="cc-side-card__eyebrow">Como usar</span>
@@ -650,6 +759,27 @@
         <a class="cc-btn cc-btn--yellow" href="https://www.circuitocar.pt/viaturas?utm_source=simulador&utm_medium=sidebar_stock&utm_campaign=simulador_isv" target="_blank" rel="noopener noreferrer" style="width:100%;"><i data-lucide="car"></i>Ver stock</a>
       </div>
     </aside>
+
+    <section class="sim-card sim-outro">
+      <span class="sim-section-label" style="margin-top: 0;">Continuar</span>
+      <div class="next-grid">
+        <a class="next-card" href="/quanto-custa-importar-carro-usado-portugal.html">
+          <span class="next-card__eyebrow">Guia</span>
+          <strong>Quanto custa importar</strong>
+          <span>Todos os custos para lá do ISV: transporte, despachante, inspeção B e legalização.</span>
+        </a>
+        <a class="next-card" href="/tabela-isv-2026-portugal.html">
+          <span class="next-card__eyebrow">Referência</span>
+          <strong>Tabela ISV 2026</strong>
+          <span>Os escalões de cilindrada e de CO₂ na íntegra, explicados passo a passo.</span>
+        </a>
+        <a class="next-card" href="/custo-mensal-carro.html">
+          <span class="next-card__eyebrow">Simulador</span>
+          <strong>Custo mensal do carro</strong>
+          <span>Já legalizado, quanto custa por mês: IUC, seguro, combustível e manutenção.</span>
+        </a>
+      </div>
+    </section>
   </div>
 
   <!-- ── PARTILHAR (fim) ── -->
