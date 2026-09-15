@@ -22,10 +22,10 @@ heroImageLink: "https://www.circuitocar.pt/viatura/mg-marvel-r-ID171403.html"
 heroImageAlt: "MG Marvel R elétrico usado na Circuito Car — perfil adequado a serviço TVDE"
 heroWhatsappMsg: "Olá, trabalho em TVDE e queria saber que viaturas em stock cumprem os requisitos."
 
-ogImage: "https://circuitocar.blog/img/og-carros-usados-tvde-2026-v1.jpg"
+ogImage: "https://circuitocar.blog/img/og-carros-usados-tvde-2026-v2.jpg"
 ogImageWidth: 1920
 ogImageHeight: 1008
-ogImageAlt: "Guia Circuito Car: que carros usados servem para TVDE em 2026"
+ogImageAlt: "MG Marvel R elétrico no stand Circuito Car com o título Que usados servem para TVDE? e a regra de menos de 7 anos"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"
