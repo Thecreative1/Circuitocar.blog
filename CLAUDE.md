@@ -57,6 +57,14 @@ description: "Meta description"
 ogTitle: "OG title"
 ogDescription: "OG description"
 
+# Share image (Facebook/WhatsApp) — RECOMMENDED if the article will be posted on social.
+# Facebook does NOT reliably preview WebP/SVG and needs width/height on first share.
+# Dedicated JPEG, 1920×1008, <600 KB, versioned filename (-v1, -v2…) — same recipe as og-simulador-isv-v2.jpg.
+ogImage: "https://circuitocar.blog/img/og-your-slug-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Alt text for the share image"
+
 category: "Guia de Compra"    ← MUST be one of the exact values listed below
 readTime: "6 min de leitura"
 utmCampaign: "blog_slug"
