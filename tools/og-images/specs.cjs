@@ -1,5 +1,14 @@
-// Uma entrada por artigo. layout: A (painel escuro inclinado), D (painel amarelo), G (painel claro, corte reto),
-// F (foto em cartão sobre fundo escuro), H (foto do stand a toda a largura).
+// Uma entrada por artigo (slug = nome do .md em src/).
+//   layout   A painel escuro inclinado · D painel amarelo · G painel claro, corte reto · F foto em cartão sobre navy
+//            H foto do parque do stand a toda a largura. Alternar: dois posts seguidos não devem ter o mesmo layout.
+//   photo    id da foto no inventário (o número em omeustand.pt/viaturas/224/<id>_omeustand_foto.webp) ou ficheiro em src/img
+//   car      nome do carro, só para o ogImageAlt
+//   h1       <br> = quebra de linha (só quebra aí), <em> = destaque. No layout G e D, um <em> não pode atravessar um <br>
+//   tag      subtítulo curto (quebra em 2 linhas equilibradas); chip = falso botão (não aparece no G)
+//   sticker  [linha pequena, número grande] — um facto do próprio artigo, nunca inventado
+//   wm       marca d'água (só F) · v = versão do ficheiro (default 1; subir sempre que mudar uma imagem já publicada)
+//   ph       { left, top, width } para acertar a foto se a frente do carro ficar tapada pelo painel
+// O og:image do TVDE (og-carros-usados-tvde-2026-v2.jpg) foi feito à mão antes deste gerador e não está aqui.
 module.exports = [
   { slug: 'carros-automaticos-usados-vantagens-riscos', layout: 'A', photo: '7724357451', car: 'Peugeot 2008 GT automático',
     eyebrow: 'GUIA DE COMPRA', h1: 'Automático<br>usado:<br><em>prós e riscos</em>',

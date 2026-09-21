@@ -3,3 +3,4 @@ _site/
 .env
 *.local
 .claude/
+tools/og-images/.cache/
