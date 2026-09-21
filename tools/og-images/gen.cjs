@@ -1,25 +1,42 @@
-// Gera as imagens OG dos artigos: HTML por layout -> Playwright a 2x -> sharp 1920x1008 JPEG q92 4:4:4.
+// Gera as imagens de partilha (og:image) dos artigos: HTML por layout -> Playwright a 2x -> sharp 1920x1008 JPEG q92 4:4:4.
 // Reduz o h1 até o texto ficar a >= 24 px do corte do painel e caber na coluna; reporta a folga final.
-// Uso: node gen.cjs [slug...]   (sem argumentos = todos)
-const { createRequire } = require('module');
-const req = createRequire('E:/Git Projects/GIT_HUB/Circuitocar.blog/package.json');
-const { chromium } = req('playwright');
-const sharp = req('sharp');
+//
+// Uso (a partir da raiz do repo):
+//   npm i --no-save sharp            # só na primeira vez: o sharp não está no package.json
+//   node tools/og-images/gen.cjs <slug> [slug...]
+// Escreve src/img/og-<slug>-v<v>.jpg e a simulação do feed (600 px) em tools/og-images/.cache/feed/<slug>.png.
+// Regras e front matter: ver a secção "Imagens de partilha" do CLAUDE.md.
+const { chromium } = require('playwright');
+const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 const { pathToFileURL } = require('url');
 const specs = require('./specs.cjs');
 
-const OG = path.join(__dirname, 'og');
-const FEED = path.join(__dirname, 'feed');
-const OUT = 'E:/Git Projects/GIT_HUB/Circuitocar.blog/src/img';
+const ROOT = path.resolve(__dirname, '../..');
+const OUT = path.join(ROOT, 'src/img');
+const CACHE = path.join(__dirname, '.cache');
+const FEED = path.join(CACHE, 'feed');
 fs.mkdirSync(FEED, { recursive: true });
 
 const FONTS = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,700;1,900&family=Manrope:wght@400;500;600;700&display=swap">`;
 const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")`;
 
 // A máscara tem de ir embutida: mask-image é pedido em modo CORS e o Chromium bloqueia-o a partir de file://.
-const LOGO = 'data:image/png;base64,' + fs.readFileSync(path.join(OG, 'logo-mask-1000.png')).toString('base64');
+const LOGO = 'data:image/png;base64,' + fs.readFileSync(path.join(__dirname, 'logo-mask.png')).toString('base64');
+
+// photo: só dígitos = id de foto do inventário (omeustand.pt, descarregada para a cache); senão, ficheiro em src/img.
+async function fetchPhoto(photo) {
+  const isId = /^\d+$/.test(photo);
+  const name = isId ? `${photo}.webp` : path.basename(photo);
+  const dest = path.join(CACHE, name);
+  if (fs.existsSync(dest)) return name;
+  if (!isId) { fs.copyFileSync(path.join(OUT, photo), dest); return name; }
+  const res = await fetch(`https://omeustand.pt/viaturas/224/${photo}_omeustand_foto.webp`);
+  if (!res.ok) throw new Error(`foto ${photo}: HTTP ${res.status} (carro vendido?)`);
+  fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
+  return name;
+}
 
 const BASE = `
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -174,13 +191,21 @@ function build(s) {
 }
 
 (async () => {
+  // Sem argumentos não faz nada: regenerar uma imagem já publicada com o mesmo nome deixa o Facebook com a versão antiga
+  // em cache. Para mudar uma imagem publicada, subir o `v` da entrada no specs.cjs.
   const only = process.argv.slice(2);
-  const list = only.length ? specs.filter(s => only.includes(s.slug)) : specs;
+  const missing = only.filter(o => !specs.some(s => s.slug === o));
+  if (!only.length || missing.length) {
+    console.error(missing.length ? `Sem entrada no specs.cjs: ${missing.join(', ')}` : 'Uso: node tools/og-images/gen.cjs <slug> [slug...]');
+    process.exit(1);
+  }
+  const list = specs.filter(s => only.includes(s.slug));
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 2 });
-  for (const s of list) {
+  for (const spec of list) {
+    const s = { ...spec, photo: await fetchPhoto(spec.photo) };
     const { html, L } = build(s);
-    const file = path.join(OG, `_${s.slug}.html`);
+    const file = path.join(CACHE, `_${s.slug}.html`);
     fs.writeFileSync(file, html);
     await p.goto(pathToFileURL(file).href, { waitUntil: 'networkidle' });
     await p.evaluate(() => document.fonts.ready);
@@ -204,7 +229,7 @@ function build(s) {
       const content = document.querySelector('.content');
       const h1 = document.querySelector('h1');
       let size = parseFloat(getComputedStyle(h1).fontSize);
-      const fits = () => clear('h1') >= 24 &&content.scrollHeight <= content.clientHeight + 1;
+      const fits = () => clear('h1') >= 24 && content.scrollHeight <= content.clientHeight + 1;
       while (!fits() && size > 58) { size -= 2; h1.style.fontSize = size + 'px'; }
       const st = document.querySelector('.sticker');
       return { h1: size, clear: Math.round(clear('h1')), other: Math.round(clear()), overflow: content.scrollHeight - content.clientHeight,
@@ -213,12 +238,17 @@ function build(s) {
     }, { xTop: L.xTop, xBot: L.xBot, edge: L.edge });
 
     const png = await p.screenshot({ type: 'png' });
-    const out = path.join(OUT, `og-${s.slug}-v1.jpg`);
+    const jpg = `og-${s.slug}-v${s.v || 1}.jpg`;
+    const out = path.join(OUT, jpg);
     await sharp(png).resize(1920, 1008, { kernel: 'lanczos3' }).sharpen({ sigma: 0.5 })
       .jpeg({ quality: 92, chromaSubsampling: '4:4:4' }).toFile(out);
     await sharp(out).resize(600, 315, { kernel: 'lanczos3' }).png().toFile(path.join(FEED, `${s.slug}.png`));
     const kb = Math.round(fs.statSync(out).size / 1024);
-    console.log(`${s.layout} ${s.slug.padEnd(62)} h1=${m.h1} folga=${m.clear} outros=${m.other} over=${m.overflow} font=${m.font} ${kb}KB${kb > 600 ? ' !!!' : ''}`);
+    // folga < 24 ou over > 0 = texto encostado ao corte ou a transbordar: encurtar o título/subtítulo e voltar a gerar.
+    console.log(`${s.layout} ${s.slug} h1=${m.h1} folga=${m.clear} outros=${m.other} over=${m.overflow} font=${m.font} ${kb}KB${kb > 600 ? ' !!! >600KB' : ''}`);
+    const title = s.h1.replace(/<br>/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    const who = s.car === 'stand' ? 'Parque do stand Circuito Car em Joane' : `${s.car} no stand Circuito Car`;
+    console.log(`  ogImage: "https://circuitocar.blog/img/${jpg}"\n  ogImageWidth: 1920\n  ogImageHeight: 1008\n  ogImageAlt: "${who}, com o título ${title}"`);
   }
   await b.close();
 })();
