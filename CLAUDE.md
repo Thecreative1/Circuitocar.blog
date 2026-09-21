@@ -195,8 +195,9 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
 **Estado (2026-09-21):**
-- ✅ All 20 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator). ✅ `/simulador_isv.html`: `og-simulador-isv-v2.jpg`.
-- ❌ Still missing: homepage + `artigos.html` (use `og-blog.svg` — Facebook ignores SVG), `circuitocar_simulador_credito` / `simulador_retoma` / `custo-mensal-carro` (use `logo-yellow.png`, 316×86, below Facebook's 200×200 minimum), and the 12 city pages (fall back to `site.ogImage`).
+- ✅ All 20 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
+- ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
+- ❌ Still missing: homepage + `artigos.html` (use `og-blog.svg` — Facebook ignores SVG; `base-cc.njk` also has no `image/jpeg` branch nor width/height yet) and the 12 city pages (use `city.photo`).
 
 **Rules (each one learned from a failed attempt):**
 - JPEG 1920×1008, **<600 KB** (WhatsApp shows no preview above that), q92 with `chromaSubsampling: '4:4:4'`. Never `palette: true` in sharp (banding).

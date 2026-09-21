@@ -82,6 +82,19 @@ module.exports = [
     eyebrow: 'ELÉTRICOS 2026', h1: 'Elétrico<br>usado: <em>compensa</em><br>mesmo?',
     tag: 'Bateria, autonomia real e custo por km', chip: 'LER O GUIA', sticker: ['PEÇA SEMPRE O', 'SOH'], wm: 'SOH' },
 
+  // Simuladores: o slug é só o nome do ficheiro; as meta tags estão escritas à mão no .njk de cada simulador.
+  { slug: 'simulador-credito', layout: 'D', photo: '7724025399', car: 'Peugeot 3008 GT Line',
+    eyebrow: 'SIMULADOR GRATUITO', h1: 'Quanto fica<br>a <em>prestação</em>?',
+    tag: 'Crédito automóvel sem registo nem compromisso', chip: 'SIMULAR AGORA', sticker: ['PRESTAÇÃO MENSAL', 'EM SEGUNDOS'] },
+
+  { slug: 'simulador-retoma', layout: 'F', photo: '7724352217', car: 'Cupra Born',
+    eyebrow: 'SIMULADOR DE RETOMA', h1: 'Saiba quanto<br>vale o seu<br><em>carro</em>',
+    tag: 'Uma ideia do valor antes de vir ao stand', chip: 'SIMULAR AGORA', sticker: ['SIMULADOR', 'GRÁTIS'], wm: '€' },
+
+  { slug: 'custo-mensal-carro', layout: 'G', photo: '7724257010', car: 'Opel Mokka-e',
+    eyebrow: 'CALCULADORA GRATUITA', h1: 'Quanto custa<br>ter carro<br><em>por mês</em>?',
+    tag: 'Prestação, combustível, IUC, seguro e manutenção', sticker: ['A CONTA COMPLETA', '5 CUSTOS'] },
+
   { slug: 'vale-a-pena-comprar-hibrido-usado-2026', layout: 'G', photo: '7724210070', car: 'Renault Arkana E-Tech híbrido',
     eyebrow: 'HÍBRIDOS', h1: 'Híbrido usado<br>em 2026:<br><em>vale a pena?</em>',
     tag: 'Custos, uso real e pontos críticos' },
