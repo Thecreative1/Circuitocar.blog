@@ -37,6 +37,7 @@ src/
   avaliacoes.njk         ← dedicated reviews page → /avaliacoes.html
   privacidade.njk        ← privacy policy (RGPD) → /privacidade.html
   *.md                   ← blog articles (Markdown + front matter)
+tools/og-images/         ← generator for the Facebook/WhatsApp share images (see "Imagens de partilha")
 _site/                   ← build output (never edit)
 ```
 
@@ -57,9 +58,9 @@ description: "Meta description"
 ogTitle: "OG title"
 ogDescription: "OG description"
 
-# Share image (Facebook/WhatsApp) — RECOMMENDED if the article will be posted on social.
+# Share image (Facebook/WhatsApp) — REQUIRED. Every article has one since 2026-09-21; don't ship one without it.
+# Generate it with tools/og-images (see "Imagens de partilha" below) — the script prints these 4 lines ready to paste.
 # Facebook does NOT reliably preview WebP/SVG and needs width/height on first share.
-# Dedicated JPEG, 1920×1008, <600 KB, versioned filename (-v1, -v2…) — same recipe as og-simulador-isv-v2.jpg.
 ogImage: "https://circuitocar.blog/img/og-your-slug-v1.jpg"
 ogImageWidth: 1920
 ogImageHeight: 1008
@@ -188,6 +189,40 @@ Clean up temp `.cjs`/`.png` files and kill the server afterwards.
 ### After pushing — deploy timing
 
 GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns **404** even though the source is committed. Don't panic-debug a fresh 404 — wait, then re-check. `git pull --no-rebase` before push (Actions auto-commits the build).
+
+## Imagens de partilha (og:image) — Facebook/WhatsApp
+
+The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
+
+**Estado (2026-09-21):**
+- ✅ All 20 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator). ✅ `/simulador_isv.html`: `og-simulador-isv-v2.jpg`.
+- ❌ Still missing: homepage + `artigos.html` (use `og-blog.svg` — Facebook ignores SVG), `circuitocar_simulador_credito` / `simulador_retoma` / `custo-mensal-carro` (use `logo-yellow.png`, 316×86, below Facebook's 200×200 minimum), and the 12 city pages (fall back to `site.ogImage`).
+
+**Rules (each one learned from a failed attempt):**
+- JPEG 1920×1008, **<600 KB** (WhatsApp shows no preview above that), q92 with `chromaSubsampling: '4:4:4'`. Never `palette: true` in sharp (banding).
+- Always set `ogImageWidth: 1920`, `ogImageHeight: 1008`, `ogImageAlt` in front matter.
+- **Versioned filename, never overwrite a published image.** Facebook caches by URL: same name = old picture forever, even after "Scrape Again". To change one, bump to `-v2` (the `v` field in `specs.cjs`).
+- **No text under ~25 px** at 1200 wide. Facebook shows the card at ~600 px, so everything is halved.
+- **Real stand photo** (inventory car against the Circuito Car wall) — the owner prefers it over text-only cards.
+- **Don't repeat the same layout in consecutive posts** — at feed size they look like the same post. The generator has 5 layouts (A dark slanted panel, D yellow panel, G light panel, F photo card, H full-width yard photo); rotate them.
+- The sticker number must be a fact **from the article itself** (e.g. "264 CV", "Redução até 80%"), never invented.
+
+**How to make one for a new article:**
+1. Pick a car on circuitocar.pt/viaturas (listing pages are `?page=1…13`; the photo id is the number in `omeustand.pt/viaturas/224/<id>_omeustand_foto.webp`). Low km, presentable, fits the topic, and a different car from the recent articles.
+2. Add an entry to `tools/og-images/specs.cjs` (fields are documented at the top of the file).
+3. First time on a machine: `npm i --no-save sharp` (sharp is not in `package.json` on purpose — CI doesn't need it). Playwright's Chromium is already a devDependency.
+4. `node tools/og-images/gen.cjs <slug>` → writes `src/img/og-<slug>-v1.jpg` and prints the 4 front matter lines. With no slug it refuses to run, so it can't silently overwrite published images.
+5. Check the feed preview in `tools/og-images/.cache/feed/<slug>.png` (600 px, gitignored). The script reports `folga` (px between the text and the panel edge) — if it's <24 or `over` >0, shorten the title/subtitle.
+6. Paste the front matter lines, `npm run build`, grep `_site/<slug>.html` for `og:image`, commit, push.
+
+**If Facebook shows an old or missing preview:** Sharing Debugger (developers.facebook.com/tools/debug) → paste the link → "Scrape Again". The `fb:app_id` warning is optional, ignore it.
+
+**Generator pitfalls (don't rediscover them):**
+- CSS `mask-image` with a local PNG paints **nothing** in Playwright over `file://` (the request is CORS and gets blocked). The logo silently disappeared from every image in the first round. The mask is now embedded as a `data:` URI — keep it that way.
+- The logo needs `flex-shrink:0`, otherwise it shrinks to 0 px when the text column is tight.
+- `h1` is `white-space:nowrap`: lines break only at `<br>`, and the font shrinks until it fits. In layouts D and G an `<em>` must not span a `<br>` (the highlight box breaks).
+- All inventory photos have the car facing left, so the text panel goes on the left. **Never mirror a photo** (plate and wall logo come out reversed).
+- A photo id that 404s = car sold; pick another. Old images already published are unaffected.
 
 ## Local SEO — programmatic city pages
 
@@ -334,31 +369,39 @@ site.address.street / .zip / .city / .region
 - [ ] New nav items get `aria-current="page"` when URL matches
 - [ ] Images have meaningful `alt` text
 - [ ] New article has FAQPage JSON-LD schema in `schemaOrg:` (see template above — 3-5 Q&As, factual, no self-promotion)
+- [ ] New article has its own share image (`tools/og-images`) + `ogImageWidth`/`ogImageHeight`/`ogImageAlt`, checked at feed size (600 px)
 - [ ] `git pull origin main --no-rebase` before `git push`
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-07-09. All in `src/*.md`, `tags: article`. Check this list before creating new content.
+As of 2026-09-21: 20 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
-| Article slug | Category | FAQPage? |
-|---|---|---|
-| `financiamento-carro-usado-portugal` | Guia de Compra | ✓ |
-| `iuc-carros-usados-portugal` | Guia de Compra | — |
-| `garantia-carro-usado-portugal` | Guia de Compra | — |
-| `como-funciona-retoma-carro-usado` | Guia de Compra | — |
-| `checklist-comprar-carro-usado-antes-visita` | Guia de Compra | ✓ |
-| `diesel-ou-gasolina-carro-usado-2026` | Guia de Compra | ✓ |
-| `carros-automaticos-usados-vantagens-riscos` | Guia de Compra | ✓ |
-| `os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia` | Guia de Compra | ✓ |
-| `importar-carro-usado-portugal` | Importação | ✓ |
-| `quanto-custa-importar-carro-usado-portugal` | Importação | ✓ |
-| `tabela-isv-2026-portugal` | Importação | ✓ |
-| `vale-a-pena-comprar-hibrido-usado-2026` | Híbridos | — |
-| `onde-comprar-carro-usado-famalicao` | Guia Local | — |
-| `guerra-irao-impacto-escolha-carro-usado` | Atualidade | — |
-| `opel-gt-roadster-usado-2009` | Desportivos | — |
+| Date | Article slug | Category | FAQPage? |
+|---|---|---|---|
+| 2026-09-05 | `iuc-novas-regras-pagamento-2027` | Atualidade | ✓ |
+| 2026-09-05 | `carros-usados-mais-caros-2026` | Atualidade | ✓ |
+| 2026-09-04 | `inspecao-automovel-ipo-2026-portugal` | Guia de Compra | ✓ |
+| 2026-09-03 | `vale-a-pena-comprar-eletrico-usado-2026` | Guia de Compra | ✓ |
+| 2026-09-02 | `carros-usados-tvde-2026` | Guia de Compra | ✓ |
+| 2026-07-09 | `tabela-isv-2026-portugal` | Importação | ✓ |
+| 2026-07-08 | `checklist-comprar-carro-usado-antes-visita` | Guia de Compra | ✓ |
+| 2026-06-16 | `diesel-ou-gasolina-carro-usado-2026` | Guia de Compra | ✓ |
+| 2026-06-10 | `iuc-carros-usados-portugal` | Guia de Compra | ✓ |
+| 2026-06-04 | `garantia-carro-usado-portugal` ⚠️ | Guia de Compra | ✓ |
+| 2026-06-02 | `financiamento-carro-usado-portugal` | Guia de Compra | ✓ |
+| 2026-05-29 | `como-funciona-retoma-carro-usado` | Guia de Compra | ✓ |
+| 2026-05-28 | `quanto-custa-importar-carro-usado-portugal` | Importação | ✓ |
+| 2026-05-20 | `importar-carro-usado-portugal` | Importação | ✓ |
+| 2026-05-18 | `opel-gt-roadster-usado-2009` | Desportivos | — |
+| 2026-05-18 | `guerra-irao-impacto-escolha-carro-usado` | Atualidade | — |
+| 2026-05-08 | `os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia` | Guia de Compra | ✓ |
+| 2026-05-01 | `carros-automaticos-usados-vantagens-riscos` | Guia de Compra | ✓ |
+| 2026-04-24 | `vale-a-pena-comprar-hibrido-usado-2026` | Híbridos | — |
+| 2026-04-10 | `onde-comprar-carro-usado-famalicao` | Guia Local | — |
 
-City pages (12, generated): braga, guimaraes, barcelos, famalicao, santo-tirso, trofa, povoa-de-varzim, vila-do-conde, felgueiras, fafe, vizela, amarante, porto. **Never create individual city `.md` files** — add to `src/_data/cities.js` only.
+⚠️ **`garantia-carro-usado-portugal` — prazos a confirmar antes de voltar a partilhar.** The article says used cars get 2 years, reducible to a 1-year minimum by agreement (that was the old DL 67/2003 regime). DL 84/2021, which the article itself cites, sets **3 years, reducible to 18 months for used goods by written agreement**. Check against the diploma and fix the body text **and** the FAQPage JSON-LD. The share image deliberately shows only "DL 84/2021", no durations.
+
+City pages (12, generated): braga, guimaraes, barcelos, santo-tirso, trofa, povoa-de-varzim, vila-do-conde, felgueiras, fafe, vizela, amarante, porto. **Never create individual city `.md` files** — add to `src/_data/cities.js` only.
 
 ## Tools/simulators live
 
@@ -377,7 +420,9 @@ The custo-mensal calculator (added 2026-07-09) sums prestação + combustível/e
 
 **`/impeccable` full pass (2026-06-15):** touch targets 44px, font preloads, ARIA live regions on all simulators, aria-required + aria-describedby + aria-invalid on all simulator inputs, aria-current on nav, overflow-wrap: break-word on .cc-prose, will-change: transform on .cc-header. Simulator copy clarified (cilindrada/CO₂/combustível hints). robots.txt sitemap URL corrected to circuitocar.blog domain.
 
-**FAQPage schema (2026-07-09):** Added to 8 of 15 articles (see table above). Missing from: iuc, garantia, retoma, hibrido, famalicao, guerra-irao, opel-gt — add when touching those articles.
+**FAQPage schema:** 16 of 20 articles have it (see table above). Still missing from: opel-gt, guerra-irao, hibrido, famalicao — add when touching those articles.
+
+**Share images (2026-09-21):** all 20 articles have a dedicated `og:image` JPEG with width/height/alt. Don't redo; for new articles use `tools/og-images`. What's left is listed in "Imagens de partilha".
 
 ## What went wrong in the first session (don't repeat)
 
