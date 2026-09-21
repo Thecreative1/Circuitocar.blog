@@ -9,6 +9,10 @@ title: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
 description: "Descubra quando faz sentido comprar um carro automático usado, que sinais de alerta deve verificar e como escolher com mais confiança."
 ogTitle: "Carros automáticos usados: vantagens, riscos e para quem fazem sentido"
 ogDescription: "Um guia prático para perceber os verdadeiros benefícios de um automático usado e o que deve analisar antes de comprar."
+ogImage: "https://circuitocar.blog/img/og-carros-automaticos-usados-vantagens-riscos-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Peugeot 2008 GT automático no stand Circuito Car, com o título Automático usado: prós e riscos"
 
 category: "Guia de Compra"
 readTime: "6 min de leitura"

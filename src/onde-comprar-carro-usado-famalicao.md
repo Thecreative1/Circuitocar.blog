@@ -9,6 +9,10 @@ title: "Onde comprar carro usado em Famalicão com mais confiança"
 description: "Descubra o que deve analisar antes de comprar carro usado em Famalicão, que erros evitar e como escolher com mais confiança."
 ogTitle: "Onde comprar carro usado em Famalicão com mais confiança"
 ogDescription: "Um guia prático para escolher melhor, evitar erros e falar com a equipa certa antes de comprar carro usado."
+ogImage: "https://circuitocar.blog/img/og-onde-comprar-carro-usado-famalicao-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Parque do stand Circuito Car em Joane, com o título Onde comprar usado com confiança"
 
 category: "Guia Local"
 readTime: "8 min de leitura"

@@ -9,6 +9,10 @@ title: "Vale a pena comprar um carro elétrico usado em 2026?"
 description: "Bateria, autonomia real, custo por 100 km e isenção de IUC. O guia honesto para decidir se um elétrico usado compensa no seu caso — e quando não compensa."
 ogTitle: "Elétrico usado em 2026: compensa mesmo?"
 ogDescription: "A oferta de elétricos usados está a crescer e os preços a descer. O que verificar na bateria e quando um elétrico não é a melhor escolha."
+ogImage: "https://circuitocar.blog/img/og-vale-a-pena-comprar-eletrico-usado-2026-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "MG4 elétrico no stand Circuito Car, com o título Elétrico usado: compensa mesmo?"
 
 category: "Guia de Compra"
 readTime: "9 min de leitura"
@@ -22,7 +26,6 @@ heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID171608.html"
 heroImageAlt: "MG4 elétrico usado na Circuito Car, em Joane, Vila Nova de Famalicão"
 heroWhatsappMsg: "Olá, li o artigo sobre elétricos usados e queria saber o estado da bateria de um carro em stock."
 
-ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver elétricos em stock"

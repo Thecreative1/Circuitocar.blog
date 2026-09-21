@@ -9,6 +9,10 @@ title: "Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidad
 description: "Tabela completa do ISV 2026 em Portugal: escalões de cilindrada e CO₂, redução por antiguidade e exemplos práticos de cálculo para carros usados importados."
 ogTitle: "Tabela ISV 2026 Portugal: escalões e como calcular"
 ogDescription: "Escalões de cilindrada e CO₂, NEDC vs WLTP, redução por antiguidade e exemplos reais — tudo sobre o ISV 2026 para carros importados."
+ogImage: "https://circuitocar.blog/img/og-tabela-isv-2026-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Mercedes-Benz Classe A no stand Circuito Car, com o título Escalões e redução por antiguidade"
 
 category: "Importação"
 readTime: "8 min de leitura"

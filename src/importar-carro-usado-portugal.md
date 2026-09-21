@@ -9,6 +9,10 @@ title: "Importar carro usado para Portugal: quando compensa e como evitar erros"
 description: "Quer importar um carro usado para Portugal? Saiba que custos considerar, como funciona a legalização e quando a CircuitoCar pode ajudar a encontrar a viatura certa."
 ogTitle: "Importar carro usado para Portugal: quando compensa?"
 ogDescription: "Guia completo sobre custos, ISV, legalização e erros a evitar ao importar um carro usado para Portugal."
+ogImage: "https://circuitocar.blog/img/og-importar-carro-usado-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "BMW 116d no stand Circuito Car, com o título Importar carro usado: compensa?"
 
 category: "Importação"
 readTime: "9 min de leitura"

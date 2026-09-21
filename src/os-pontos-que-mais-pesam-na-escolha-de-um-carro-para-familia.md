@@ -9,6 +9,10 @@ title: "Os pontos que mais pesam na escolha de um carro para família"
 description: "Saiba o que realmente importa ao escolher um carro de família usado: espaço, segurança, bagageira, conforto e custos do dia a dia."
 ogTitle: "Os pontos que mais pesam na escolha de um carro para família"
 ogDescription: "Um guia prático para escolher um carro familiar usado com mais clareza, menos impulso e mais critério."
+ogImage: "https://circuitocar.blog/img/og-os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Citroën Grand C4 SpaceTourer no stand Circuito Car, com o título O que mais pesa na escolha"
 
 category: "Guia de Compra"
 readTime: "5 min de leitura"

@@ -9,6 +9,10 @@ title: "IUC em Portugal: quanto paga por um carro usado?"
 description: "Como se calcula o IUC, quanto paga por ano, o que muda nos elétricos e as novas datas fixas de pagamento a partir de 2027. Guia prático para carros usados."
 ogTitle: "IUC 2026: quanto paga por um carro usado em Portugal?"
 ogDescription: "Cilindrada, CO2, ano de matrícula — os três fatores que definem o seu IUC. Saiba o que esperar antes de comprar."
+ogImage: "https://circuitocar.blog/img/og-iuc-carros-usados-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Peugeot 208 no stand Circuito Car, com o título Quanto paga de IUC num usado?"
 
 category: "Guia de Compra"
 readTime: "5 min de leitura"
@@ -21,7 +25,6 @@ heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html"
 heroImageAlt: "Citroën C3 2022 na Circuito Car — cilindrada reduzida, IUC baixo"
 heroWhatsappMsg: "Olá, vi o artigo sobre IUC e queria perceber quanto pagaria por um carro em stock."
 
-ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"

@@ -9,6 +9,10 @@ title: "Diesel ou gasolina em 2026? O guia prático para quem compra usado"
 description: "Custo de combustível, manutenção, IUC, DPF e uso real — tudo o que precisa de saber antes de escolher entre diesel e gasolina num carro usado em 2026."
 ogTitle: "Diesel ou gasolina em 2026? O que escolher num carro usado"
 ogDescription: "Combustível, manutenção, IUC e o uso que faz todos os dias — um guia direto ao ponto para tomar a decisão certa."
+ogImage: "https://circuitocar.blog/img/og-diesel-ou-gasolina-carro-usado-2026-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Skoda Kodiaq diesel no stand Circuito Car, com o título Diesel ou gasolina?"
 
 category: "Guia de Compra"
 readTime: "7 min de leitura"
@@ -21,7 +25,6 @@ heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html"
 heroImageAlt: "Nissan Qashqai 1.3 DIG-T gasolina 2023 na Circuito Car — motor moderno, baixo consumo"
 heroWhatsappMsg: "Olá, li o artigo sobre diesel vs gasolina e queria perceber qual a melhor opção para o meu caso."
 
-ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"

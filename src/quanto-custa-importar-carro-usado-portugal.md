@@ -9,6 +9,10 @@ title: "Quanto custa importar um carro usado para Portugal: a conta real antes d
 description: "ISV, Inspeção B, despachante e registo: saiba quanto custa mesmo importar um carro usado para Portugal. Contas reais com valores verificados de 2026."
 ogTitle: "Quanto custa importar um carro usado para Portugal"
 ogDescription: "ISV, Inspeção B, despachante e registo: a conta real antes de avançar com a importação."
+ogImage: "https://circuitocar.blog/img/og-quanto-custa-importar-carro-usado-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Mercedes-Benz CLA Shooting Brake no stand Circuito Car, com o título Quanto custa importar um usado?"
 
 category: "Importação"
 readTime: "7 min de leitura"

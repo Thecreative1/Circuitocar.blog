@@ -9,6 +9,10 @@ title: "Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá ar
 description: "264 cv, tração traseira, caixa manual e apenas 7.000 unidades produzidas. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um."
 ogTitle: "Opel GT usado: 264 cv, tração traseira, série limitada"
 ogDescription: "A história do roadster mais improvável da Opel, o que o torna especial — e se faz sentido para si."
+ogImage: "https://circuitocar.blog/img/og-opel-gt-roadster-usado-2009-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Opel GT 2009 no stand Circuito Car, com o título Opel GT: o roadster esquecido"
 
 category: "Desportivos"
 readTime: "7 min de leitura"

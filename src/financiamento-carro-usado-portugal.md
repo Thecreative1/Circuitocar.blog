@@ -9,6 +9,10 @@ title: "Financiamento de carro usado em Portugal: o que precisa de saber antes d
 description: "TAN, TAEG, entrada, prazo, crédito bancário ou do stand — tudo o que precisa de perceber antes de financiar um carro usado em Portugal. Guia prático para 2026."
 ogTitle: "Financiamento de carro usado: o guia completo para 2026"
 ogDescription: "TAN, TAEG, entrada mínima, prazo ideal e crédito do stand vs. banco. Tudo explicado de forma clara antes de assinar qualquer contrato."
+ogImage: "https://circuitocar.blog/img/og-financiamento-carro-usado-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Renault Captur no stand Circuito Car, com o título Antes de assinar o crédito"
 
 category: "Guia de Compra"
 readTime: "8 min de leitura"

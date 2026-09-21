@@ -9,6 +9,10 @@ title: "Vale a pena comprar um híbrido usado em 2026?"
 description: "Perceba quando um híbrido usado compensa, o que deve verificar na bateria e para que perfis faz realmente sentido em 2026."
 ogTitle: "Vale a pena comprar um híbrido usado em 2026?"
 ogDescription: "Um guia claro para perceber custos, utilização real e pontos críticos antes de comprar um híbrido usado."
+ogImage: "https://circuitocar.blog/img/og-vale-a-pena-comprar-hibrido-usado-2026-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Renault Arkana E-Tech híbrido no stand Circuito Car, com o título Híbrido usado em 2026: vale a pena?"
 
 category: "Híbridos"
 readTime: "7 min de leitura"

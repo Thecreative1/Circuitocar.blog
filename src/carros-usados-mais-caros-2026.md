@@ -9,6 +9,10 @@ title: "Porque é que os carros usados estão mais caros em 2026"
 description: "Procura a subir 16% e oferta a cair 3% em julho: o preço médio dos usados chegou aos 24.800€. Os números do mercado e o que muda para quem vai comprar."
 ogTitle: "Carros usados mais caros em 2026: os números do mercado"
 ogDescription: "Preço médio nos 24.800€, procura a crescer e oferta a encolher no segmento mais barato. O que os dados de 2026 dizem a quem quer comprar um usado."
+ogImage: "https://circuitocar.blog/img/og-carros-usados-mais-caros-2026-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Ford EcoSport no stand Circuito Car, com o título Porque estão os usados mais caros?"
 
 category: "Atualidade"
 readTime: "8 min de leitura"
@@ -22,7 +26,6 @@ heroImageLink: "https://www.circuitocar.pt/viatura/ford-ecosport-ID146050.html"
 heroImageAlt: "Ford EcoSport usado na Circuito Car — viatura no segmento abaixo dos 15 mil euros"
 heroWhatsappMsg: "Olá, li o artigo sobre os preços dos usados e queria saber que viaturas tem abaixo dos 15 mil euros."
 
-ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"

@@ -9,6 +9,10 @@ title: "Como funciona a retoma de um carro usado (e como ter uma avaliação jus
 description: "Saiba como é calculado o valor da retoma, o que valoriza ou desvaloriza o seu carro e quando compensa mais do que vender a particular. Guia prático para 2026."
 ogTitle: "Como funciona a retoma de um carro usado"
 ogDescription: "Como é calculado o valor, o que faz subir ou descer a avaliação e quando a retoma compensa mais do que vender a particular."
+ogImage: "https://circuitocar.blog/img/og-como-funciona-retoma-carro-usado-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Jeep Renegade no stand Circuito Car, com o título Quanto vale o seu carro?"
 
 category: "Guia de Compra"
 readTime: "7 min de leitura"

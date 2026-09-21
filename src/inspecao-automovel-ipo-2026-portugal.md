@@ -9,6 +9,10 @@ title: "Inspeção automóvel 2026: prazos, preços e a nova regra dos recalls"
 description: "Desde março de 2026, um recall por corrigir chumba o carro na inspeção. Prazos por idade, preço da IPO, tipos de deficiência e o que verificar num usado."
 ogTitle: "Inspeção automóvel 2026: o que mudou na IPO"
 ogDescription: "A nova regra dos recalls, os prazos por idade do carro, quanto custa e o que acontece se reprovar."
+ogImage: "https://circuitocar.blog/img/og-inspecao-automovel-ipo-2026-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Citroën C4 Cactus no stand Circuito Car, com o título Inspeção: a nova regra dos recalls"
 
 category: "Guia de Compra"
 readTime: "8 min de leitura"
@@ -22,7 +26,6 @@ heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html"
 heroImageAlt: "Citroën C3 usado na Circuito Car, com inspeção e histórico verificados"
 heroWhatsappMsg: "Olá, li o artigo sobre a inspeção e queria saber o estado da IPO de uma viatura em stock."
 
-ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"

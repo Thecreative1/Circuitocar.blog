@@ -9,6 +9,10 @@ title: "Guerra no Irão: como a instabilidade pode influenciar a escolha do carr
 description: "Perceba como a guerra no Irão, os combustíveis mais voláteis e a incerteza energética podem pesar na escolha de um carro usado."
 ogTitle: "Guerra no Irão e escolha de carro usado: o que muda?"
 ogDescription: "Um guia prático para decidir com mais calma entre gasolina, diesel, híbrido e elétrico num período de combustíveis voláteis."
+ogImage: "https://circuitocar.blog/img/og-guerra-irao-impacto-escolha-carro-usado-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Tesla Model 3 no stand Circuito Car, com o título Guerra no Irão e o seu próximo carro"
 
 category: "Atualidade"
 readTime: "8 min de leitura"

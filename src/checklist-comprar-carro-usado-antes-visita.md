@@ -9,6 +9,10 @@ title: "Checklist para comprar carro usado antes de visitar o stand"
 description: "Uma checklist simples para preparar a visita ao stand: orçamento, crédito, retoma, documentos, estado da viatura e perguntas certas antes de comprar carro usado."
 ogTitle: "Checklist para Comprar Carro Usado | Circuito Car Blog"
 ogDescription: "Prepare a visita ao stand com uma checklist prática: orçamento, financiamento, retoma, histórico, teste e documentação."
+ogImage: "https://circuitocar.blog/img/og-checklist-comprar-carro-usado-antes-visita-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Citroën C3 no stand Circuito Car, com o título Checklist para comprar usado"
 
 category: "Guia de Compra"
 readTime: "6 min de leitura"

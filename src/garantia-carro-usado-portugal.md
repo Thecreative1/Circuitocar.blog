@@ -9,6 +9,10 @@ title: "Garantia de carros usados em Portugal: o que cobre e o que não cobre"
 description: "O que a lei obriga o stand a garantir, o que fica de fora, e o que muda nos elétricos. Guia claro para quem compra um carro usado em Portugal."
 ogTitle: "Garantia de carros usados: o que diz a lei em Portugal"
 ogDescription: "Duração, cobertura, exclusões e como reclamar. Tudo o que precisa de saber antes de assinar."
+ogImage: "https://circuitocar.blog/img/og-garantia-carro-usado-portugal-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Citroën ë-C4 elétrico no stand Circuito Car, com o título Garantia de usados: o que cobre?"
 
 category: "Guia de Compra"
 readTime: "6 min de leitura"

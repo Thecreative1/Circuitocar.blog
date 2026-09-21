@@ -9,6 +9,10 @@ title: "IUC: acabou o pagamento no mês da matrícula. O que muda em 2027 e 2028
 description: "O Decreto-Lei 161/2026 fixa datas certas para pagar o IUC. Em 2026 nada muda, em 2027 há regime transitório e em 2028 abril passa a ser o mês base."
 ogTitle: "IUC com datas fixas: o que muda em 2027 e 2028"
 ogDescription: "O IUC deixa de ser pago no aniversário da matrícula. Calendário ano a ano, escalões e o que isto significa para quem compra carro usado."
+ogImage: "https://circuitocar.blog/img/og-iuc-novas-regras-pagamento-2027-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Nissan Qashqai no stand Circuito Car, com o título Acabou o IUC no mês da matrícula"
 
 category: "Atualidade"
 readTime: "7 min de leitura"
@@ -22,7 +26,6 @@ heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html"
 heroImageAlt: "Nissan Qashqai usado na Circuito Car — IUC anual a somar ao custo de posse"
 heroWhatsappMsg: "Olá, li o artigo sobre as novas regras do IUC e queria saber quanto pagaria por uma viatura em stock."
 
-ogImage: "https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp"
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
 inventoryLabel: "Ver stock disponível"
