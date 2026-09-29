@@ -52,6 +52,47 @@ relatedArticles:
 andreDescription: "Mais indicado para enquadrar orçamento, financiamento e tipo de viatura."
 filipeDescription: "Mais indicado para comparar consumos, motores e utilização real."
 sidebarWhatsappMsg: "Olá, quero ajuda para escolher carro tendo em conta os combustíveis e custos mensais."
+schemaOrg: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "A guerra no Irão pode fazer subir os combustíveis em Portugal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pode. O Golfo Pérsico e o Estreito de Ormuz são uma zona importante para o transporte de petróleo, e a instabilidade na região tende a tornar os preços mais voláteis. Isso não significa subidas permanentes, mas aumenta a incerteza no custo de usar o carro todos os meses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Com combustíveis voláteis, é melhor escolher gasolina ou diesel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende da quilometragem. A gasolina faz mais sentido para quem faz poucos quilómetros e sobretudo trajetos urbanos ou mistos. O diesel continua a compensar para quem faz muitos quilómetros em estrada e autoestrada, mas perde vantagem em trajetos curtos e uso de cidade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vale a pena mudar para um elétrico por causa do preço dos combustíveis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Só se a rotina encaixar. O elétrico fica menos exposto ao preço da gasolina e do gasóleo, mas compensa sobretudo para quem pode carregar em casa ou no trabalho. Quem depende apenas de carregamentos públicos deve contar com o preço por kWh, o tempo de carregamento e a autonomia real."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Devo trocar de carro agora por causa da guerra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não é necessário decidir por receio. O mais útil é olhar para o custo mensal total, que inclui prestação, combustível ou energia, seguro, IUC e manutenção, e escolher uma viatura adequada ao uso real que continue a fazer sentido se os preços da energia oscilarem."
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 A guerra no Irão voltou a lembrar uma coisa simples: o preço de um carro não é apenas o valor que aparece no anúncio. Para muitas famílias, o que pesa todos os meses é a soma de **combustível, prestação, seguro, manutenção e desvalorização**.

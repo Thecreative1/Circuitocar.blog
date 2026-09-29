@@ -43,6 +43,39 @@ relatedArticles:
 andreDescription: "Para enquadrar financiamento, orçamento e condições de aquisição."
 filipeDescription: "Para questões técnicas sobre o motor, o estado mecânico e o histórico."
 sidebarWhatsappMsg: "Olá, vi o artigo sobre o Opel GT e tenho interesse. Podem dar-me mais informações?"
+schemaOrg: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quantos cavalos tem o Opel GT de 2009?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Opel GT de 2007 a 2009 usa um motor 2.0 Turbo de quatro cilindros com 264 cv. A potência chega às rodas traseiras através de uma caixa manual de 5 velocidades. É um roadster de dois lugares com capota de lona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Em que anos foi produzido o Opel GT moderno?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Opel GT moderno foi produzido apenas entre 2007 e 2009 e partilha a plataforma do Saturn Sky e do Pontiac Solstice. O nome recupera o Opel GT original, um coupé produzido entre 1968 e 1973. Depois de 2009 a Opel não voltou a lançar nenhum GT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Opel GT serve para uso diário?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Serve para quem aceita as suas limitações. Tem apenas dois lugares, uma mala com volume muito reduzido, caixa exclusivamente manual e um seguro normalmente mais caro do que o de um carro familiar. Faz mais sentido como segundo carro ou para quem conduz sobretudo por prazer."
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 Há carros que existem. E há carros que fazem sentido. O Opel GT não se encaixa muito bem em nenhuma dessas categorias — e é exatamente por isso que vale a pena falar dele.

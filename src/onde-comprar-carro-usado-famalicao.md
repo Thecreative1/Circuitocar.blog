@@ -52,6 +52,39 @@ relatedArticles:
 andreDescription: "Mais indicado para primeiras conversas, apoio na escolha e enquadramento comercial."
 filipeDescription: "Mais indicado para detalhes técnicos, dúvidas específicas e esclarecimento mais aprofundado."
 sidebarWhatsappMsg: "Olá, vi o artigo sobre comprar carro usado em Famalicão e quero mais informação."
+schemaOrg: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Onde fica a Circuito Car?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Circuito Car fica na Rua do Relógio n.º 430, 4770-245 Joane, em Vila Nova de Famalicão. Fica a cerca de 20 minutos de Braga e 25 minutos de Guimarães, com acesso prático a partir de Santo Tirso, Trofa e do Vale do Ave."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É melhor comprar carro usado num stand ou a um particular?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Num stand profissional o comprador tem direito à garantia legal do Decreto-Lei n.º 84/2021: 3 anos, que num usado podem ser reduzidos por acordo escrito até um mínimo de 18 meses. Numa venda entre particulares essa garantia legal de consumo não se aplica, por isso o risco fica sobretudo do lado do comprador."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que devo analisar antes de comprar um carro usado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Comece pelo uso real: cidade, estrada, família ou trabalho. Depois escolha a motorização adequada, confirme o histórico de manutenção e o estado geral e veja a viatura ao vivo antes de decidir. Decidir só pelo preço é o erro mais comum."
+        }
+      }
+    ]
+  }
+  </script>
 ---
 
 Comprar carro usado pode ser uma excelente decisão — ou uma fonte de dores de cabeça. Tudo depende de **onde compra**, **o que verifica** e **quem o acompanha no processo**. Na prática, muita gente na zona de Famalicão, Joane, Guimarães, Braga e arredores começa por ver anúncios, comparar preços e tentar perceber o que é "bom negócio". O problema é que preço baixo, sozinho, não significa compra inteligente.

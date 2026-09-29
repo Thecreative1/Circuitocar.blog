@@ -394,12 +394,12 @@ As of 2026-09-29: 21 articles, newest first. All in `src/*.md`, `tags: article`,
 | 2026-05-29 | `como-funciona-retoma-carro-usado` | Guia de Compra | ✓ |
 | 2026-05-28 | `quanto-custa-importar-carro-usado-portugal` | Importação | ✓ |
 | 2026-05-20 | `importar-carro-usado-portugal` | Importação | ✓ |
-| 2026-05-18 | `opel-gt-roadster-usado-2009` | Desportivos | — |
-| 2026-05-18 | `guerra-irao-impacto-escolha-carro-usado` | Atualidade | — |
+| 2026-05-18 | `opel-gt-roadster-usado-2009` | Desportivos | ✓ |
+| 2026-05-18 | `guerra-irao-impacto-escolha-carro-usado` | Atualidade | ✓ |
 | 2026-05-08 | `os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia` | Guia de Compra | ✓ |
 | 2026-05-01 | `carros-automaticos-usados-vantagens-riscos` | Guia de Compra | ✓ |
-| 2026-04-24 | `vale-a-pena-comprar-hibrido-usado-2026` | Híbridos | — |
-| 2026-04-10 | `onde-comprar-carro-usado-famalicao` | Guia Local | — |
+| 2026-04-24 | `vale-a-pena-comprar-hibrido-usado-2026` | Híbridos | ✓ |
+| 2026-04-10 | `onde-comprar-carro-usado-famalicao` | Guia Local | ✓ |
 
 **Legal facts already verified (2026-09-29) — keep them right in new content:** garantia (DL 84/2021) = 3 years, reducible to 18 months for used cars only by written agreement; presumption of pre-existing defect 2 years (1 year if reduced). IUC = due in full by whoever owns the car on the first day of the tax period — no proportional refund, and unpaid IUC stays with the old owner (does NOT follow the car). EVs are IUC-exempt under art. 5.º CIUC (Categoria E is motorcycles).
 
@@ -422,7 +422,7 @@ The custo-mensal calculator (added 2026-07-09) sums prestação + combustível/e
 
 **`/impeccable` full pass (2026-06-15):** touch targets 44px, font preloads, ARIA live regions on all simulators, aria-required + aria-describedby + aria-invalid on all simulator inputs, aria-current on nav, overflow-wrap: break-word on .cc-prose, will-change: transform on .cc-header. Simulator copy clarified (cilindrada/CO₂/combustível hints). robots.txt sitemap URL corrected to circuitocar.blog domain.
 
-**FAQPage schema:** 17 of 21 articles have it (see table above). Still missing from: opel-gt, guerra-irao, hibrido, famalicao — add when touching those articles.
+**FAQPage schema:** all 21 articles have it (the last 4 — opel-gt, guerra-irao, hibrido, famalicao — added 2026-09-29). Every new article must ship with one.
 
 **Share images (2026-09-21):** all 20 articles have a dedicated `og:image` JPEG with width/height/alt. Don't redo; for new articles use `tools/og-images`. What's left is listed in "Imagens de partilha".
 
