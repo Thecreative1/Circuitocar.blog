@@ -91,7 +91,7 @@ schemaOrg: |
         "name": "O que acontece ao IUC quando compro um carro usado?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A obrigação do IUC transita automaticamente para o novo proprietário com a transferência de matrícula. Como comprador, deve verificar se existe IUC em dívida antes de fechar o negócio, pois os impostos em atraso acompanham o veículo e não o proprietário anterior."
+          "text": "O IUC de cada ano é devido por inteiro por quem é proprietário no primeiro dia do mês da matrícula. Se comprar antes desse mês, o IUC do ano é seu; se comprar depois, só paga a partir do ano seguinte. Não há reembolso proporcional ao vendedor, e um IUC em atraso fica com o antigo proprietário, não passa para o comprador. Registe a propriedade em seu nome logo após a compra."
         }
       }
     ]
@@ -176,15 +176,19 @@ O **valor do imposto não aumenta** por causa desta alteração — muda apenas 
 
 ## O que muda quando compra um carro usado
 
-A obrigação do IUC transita para o novo proprietário **a partir da data de transferência de matrícula**. Dois aspetos práticos a ter em conta:
+O IUC de cada ano é devido **por inteiro** por quem é proprietário no **primeiro dia do período de tributação**, que em 2026 começa no mês do aniversário da matrícula. Três aspetos práticos a ter em conta:
 
-### Verifique se existe IUC em dívida
+### Veja em que mês foi matriculado o carro
 
-Os impostos em atraso acompanham o veículo — não o proprietário anterior. Antes de fechar o negócio, confirme no portal da AT que não há dívidas fiscais associadas à matrícula. Um stand profissional garante que o processo de transferência é feito sem irregularidades pendentes.
+Se comprar o carro **antes** do mês da matrícula, o IUC desse ano é seu. Se comprar **depois**, o imposto desse ano já cabia ao vendedor e o seu primeiro IUC só chega no ano seguinte. Vale a pena saber isto antes de fazer contas ao primeiro ano de posse.
 
-### O vendedor pode pedir reembolso proporcional
+### Não há reembolso proporcional
 
-Se o IUC já foi pago e a venda ocorre a meio do período fiscal, o vendedor tem direito a solicitar reembolso dos meses em que já não é proprietário. Este processo é feito pelo vendedor; como comprador não precisa de intervir, mas é útil saber que pode acontecer.
+O IUC não se divide pelos meses em que cada um teve o carro. Se o vendedor já pagou o imposto do ano e vende o carro a seguir, **não tem direito a reembolso** dos meses restantes; e o comprador não paga esse ano. Qualquer acerto entre as partes é um acordo privado, não uma regra da AT.
+
+### IUC em atraso fica com quem era o dono
+
+Um IUC por pagar é uma dívida de quem era proprietário quando o imposto se tornou exigível, e **não passa para o comprador** com a transferência. Mesmo assim, faça o registo da propriedade em seu nome logo após a compra: é o registo que diz à AT quem é o dono em cada ano. Num stand profissional, esse registo é tratado no processo de venda.
 
 ## Elétricos e híbridos: o que muda
 
@@ -207,7 +211,7 @@ E se o que quer perceber é o peso total do carro no orçamento, a [calculadora 
 - **IUC = cilindrada + CO₂** (para carros matriculados a partir de 2007)
 - **Em 2026 paga-se no mês do aniversário da primeira matrícula**; [a partir de 2027 passa a haver datas fixas iguais para todos](/iuc-novas-regras-pagamento-2027.html)
 - **Elétricos estão isentos**; híbridos pagam menos pela componente de CO₂ reduzida
-- **Antes de comprar um usado**, confirme que não há IUC em dívida associado à matrícula
+- **Não há reembolso proporcional:** o IUC do ano é de quem é dono no mês da matrícula, e um IUC em atraso fica com o antigo proprietário
 - **Para o valor exato**, use o simulador do Portal das Finanças ou pergunte à equipa
 
 Saber o IUC de um carro antes de comprar é simples — e faz parte do cálculo realista do custo total anual de propriedade. Junto com o seguro, a manutenção e o combustível, dá-lhe uma imagem completa do que vai gastar por ano com a viatura que escolher.

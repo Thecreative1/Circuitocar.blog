@@ -171,9 +171,9 @@ O que continua a variar de carro para carro é **quanto** vai pagar, e isso não
 
 O diploma mantém a lógica de proporcionalidade para veículos que entram em circulação durante o ano, com o imposto a refletir os meses completos decorridos entre 1 de janeiro e a data da matrícula. Se estiver nesse caso, confirme sempre o valor liquidado no Portal das Finanças.
 
-### Continue a verificar dívidas antes de comprar
+### Registe o carro em seu nome logo após a compra
 
-Nada disto altera um ponto essencial: **o IUC em dívida acompanha o veículo, não o proprietário anterior**. Antes de fechar negócio, confirme que não existem valores em atraso associados à matrícula. Num stand profissional, essa verificação faz parte do processo de transferência.
+Nada disto altera um ponto essencial: o IUC é devido por quem consta como proprietário quando o imposto se torna exigível. Um IUC em atraso fica com o antigo dono e **não passa para o comprador**, mas é o registo de propriedade que diz à AT quem é o dono em cada ano. Por isso, o registo em seu nome deve ser feito logo após a compra. Num stand profissional, isso faz parte do processo de venda.
 
 ## Quanto vai pagar, ao certo
 

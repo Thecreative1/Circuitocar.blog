@@ -131,7 +131,7 @@ Em 2026 as regras do IUC ainda são as antigas: o imposto paga-se **no mês do a
 
 Na prática, isto significa:
 
-- **Carro matriculado entre janeiro e setembro:** o IUC de 2026 já deve estar pago. Confirme que não há valores em dívida.
+- **Carro matriculado entre janeiro e setembro:** o IUC de 2026 já cabia ao vendedor. O seu primeiro IUC será o de 2027.
 - **Carro matriculado em outubro, novembro ou dezembro:** se comprar antes desse mês, é provável que seja **você** a pagar o IUC de 2026. Conte com essa despesa.
 
 Depois, entra o novo calendário do **Decreto-Lei n.º 161/2026**. Em 2027, ano de transição, um IUC **até 500€ paga-se numa única prestação em outubro**. Para a grande maioria dos ligeiros de passageiros, isto quer dizer que, depois do pagamento de 2026, o próximo IUC só chega em outubro de 2027. Os elétricos, como o Peugeot e-208 da imagem, estão isentos.
