@@ -195,7 +195,7 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
 **Estado (2026-09-21):**
-- ✅ All 20 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
+- ✅ All 21 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
 - ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
 - ❌ Still missing: homepage + `artigos.html` (use `og-blog.svg` — Facebook ignores SVG; `base-cc.njk` also has no `image/jpeg` branch nor width/height yet) and the 12 city pages (use `city.photo`).
 
@@ -375,10 +375,11 @@ site.address.street / .zip / .city / .region
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-09-21: 20 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
+As of 2026-09-29: 21 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
+| 2026-09-29 | `comprar-carro-usado-fim-do-ano` | Guia de Compra | ✓ |
 | 2026-09-05 | `iuc-novas-regras-pagamento-2027` | Atualidade | ✓ |
 | 2026-09-05 | `carros-usados-mais-caros-2026` | Atualidade | ✓ |
 | 2026-09-04 | `inspecao-automovel-ipo-2026-portugal` | Guia de Compra | ✓ |
@@ -421,7 +422,7 @@ The custo-mensal calculator (added 2026-07-09) sums prestação + combustível/e
 
 **`/impeccable` full pass (2026-06-15):** touch targets 44px, font preloads, ARIA live regions on all simulators, aria-required + aria-describedby + aria-invalid on all simulator inputs, aria-current on nav, overflow-wrap: break-word on .cc-prose, will-change: transform on .cc-header. Simulator copy clarified (cilindrada/CO₂/combustível hints). robots.txt sitemap URL corrected to circuitocar.blog domain.
 
-**FAQPage schema:** 16 of 20 articles have it (see table above). Still missing from: opel-gt, guerra-irao, hibrido, famalicao — add when touching those articles.
+**FAQPage schema:** 17 of 21 articles have it (see table above). Still missing from: opel-gt, guerra-irao, hibrido, famalicao — add when touching those articles.
 
 **Share images (2026-09-21):** all 20 articles have a dedicated `og:image` JPEG with width/height/alt. Don't redo; for new articles use `tools/og-images`. What's left is listed in "Imagens de partilha".
 
