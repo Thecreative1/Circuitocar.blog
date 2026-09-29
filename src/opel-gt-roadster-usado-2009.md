@@ -6,7 +6,7 @@ date: 2026-05-18
 
 pageTitle: "Opel GT usado: o roadster raro com 264 cv que poucos conhecem | Circuito Car Blog"
 title: "Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá arrepios"
-description: "264 cv, tração traseira, caixa manual e apenas 7.000 unidades produzidas. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um."
+description: "264 cv, tração traseira, caixa manual e cerca de 7.500 unidades. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado — e temos um."
 ogTitle: "Opel GT usado: 264 cv, tração traseira, série limitada"
 ogDescription: "A história do roadster mais improvável da Opel, o que o torna especial — e se faz sentido para si."
 ogImage: "https://circuitocar.blog/img/og-opel-gt-roadster-usado-2009-v1.jpg"
@@ -86,19 +86,19 @@ Este não é um guia para toda a gente. É para quem já sabe o que quer: um des
 
 Para perceber o que é este Opel GT de 2009, é preciso recuar primeiro a 1968.
 
-Nesse ano, a Opel apresentou o GT original — um coupé pequeno e agressivo, com linhas inspiradas diretamente no Corvette Stingray norte-americano. Tinha faróis escamoteáveis accionados manualmente, tração traseira e uma silhueta que nada tinha a ver com o que a Opel fazia na altura. Ficou conhecido como o "mini Corvette europeu". Foram produzidas mais de 100.000 unidades entre 1968 e 1973, e hoje é um clássico de coleção.
+Nesse ano, a Opel apresentou o GT original — um coupé pequeno e agressivo, com linhas inspiradas diretamente no Corvette Stingray norte-americano. Tinha faróis escamoteáveis acionados manualmente, tração traseira e uma silhueta que nada tinha a ver com o que a Opel fazia na altura. Ficou conhecido como o "mini Corvette europeu". Foram produzidas mais de 100.000 unidades entre 1968 e 1973, e hoje é um clássico de coleção.
 
 Depois disso — silêncio. Durante 34 anos, a Opel não voltou a fazer um desportivo a sério.
 
-Em 2006, o GT voltou. Não como exercício de nostalgia, mas como um projeto concreto: a General Motors encomendou o desenvolvimento à **Magna Steyr**, na Áustria, com base na mesma plataforma do Saturn Sky e do Pontiac Solstice — carros americanos com alma de roadster. O resultado foi apresentado no Salão de Detroit desse ano e entrou em produção em 2007.
+Em 2007, o GT voltou. Não como exercício de nostalgia, mas como um projeto concreto da General Motors, que na altura era dona da Opel: o novo GT usa a **plataforma Kappa**, a mesma do Saturn Sky e do Pontiac Solstice, carros americanos com alma de roadster. Era fabricado nos Estados Unidos, na fábrica da GM em **Wilmington, no Delaware**, lado a lado com esses dois modelos.
 
-O que veio a seguir surpreendeu muita gente: **264 cavalos num motor 2.0 Turbo de quatro cilindros**, tração traseira, caixa manual, capota de lona retrátil, e um chassis que havia sido desenvolvido com influências diretas da Lotus. Zero a 100 em 5,4 segundos. Peso inferior a 1.300 kg.
+O que veio a seguir surpreendeu muita gente: **264 cavalos e 353 Nm num motor 2.0 Turbo de quatro cilindros** com injeção direta, tração traseira, caixa manual de 5 velocidades e capota de lona. Zero a 100 km/h em **5,7 segundos**, 229 km/h de velocidade máxima e cerca de **1.330 kg** de peso.
 
-A produção durou apenas três anos — 2007, 2008 e 2009. Estima-se que foram produzidas **menos de 7.000 unidades** em todo o mundo. Em 2009 saiu o último. E nunca mais houve um Opel GT.
+A produção durou pouco: entre 2007 e 2009 foram feitas **cerca de 7.500 unidades**. Em 2009 a fábrica de Wilmington fechou e o GT saiu de produção. E nunca mais houve um Opel GT.
 
 <div class="cta-inline">
 <h3>Este é um dos últimos disponíveis em Portugal</h3>
-<p>Com menos de 7.000 unidades produzidas, encontrar um Opel GT em bom estado e com garantia não é fácil. Este tem 18 meses de garantia e está em Joane, Famalicão.</p>
+<p>Com cerca de 7.500 unidades produzidas, encontrar um Opel GT em bom estado e com garantia não é fácil. Este tem 18 meses de garantia e está em Joane, Famalicão.</p>
 <div class="cta-actions">
 <a class="btn btn-primary" href="https://www.circuitocar.pt/viatura/opel-gt-ID166512.html?utm_source=blog&utm_medium=inline_stock&utm_campaign=blog_opel_gt" target="_blank" rel="noopener noreferrer">Ver a ficha completa</a>
 <a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
@@ -111,19 +111,19 @@ Há desportivos com mais potência. Há roadsters mais bonitos. Mas o Opel GT te
 
 **Tração traseira.** Numa época em que quase tudo tem tração dianteira, este carro mantém o equilíbrio clássico de um desportivo a sério. Para quem gosta de conduzir de verdade — não apenas de se deslocar — isto faz toda a diferença.
 
-**264 cv com 1.300 kg.** O rácio peso-potência é o que define um carro rápido de um carro que parece rápido. Este é realmente rápido.
+**264 cv para cerca de 1.330 kg.** O rácio peso-potência é o que define um carro rápido de um carro que parece rápido. Este é realmente rápido.
 
 **Caixa manual de 5 velocidades.** Não há modo Sport. Não há paddle shifters. Há uma alavanca, uma embraiagem, e a decisão em cada curva é do condutor.
 
 **Capota de lona retrátil.** Roadster puro. Ar, sol, estrada. Com capota fechada, o interior fecha como uma concha — sem folgas, sem barulhos estranhos.
 
-**Produção limitada.** Com menos de 7.000 unidades produzidas no mundo, não é um carro que se encontre em todo o lado. Nem em Portugal, nem na Europa. Isso tem valor — hoje e no futuro.
+**Produção limitada.** Com cerca de 7.500 unidades produzidas no mundo, não é um carro que se encontre em todo o lado. Nem em Portugal, nem na Europa. Isso tem valor — hoje e no futuro.
 
 ## Os números deste exemplar
 
 Este exemplar específico, disponível na Circuito Car, foi registado em **Abril de 2009** — o último ano de produção. Tem **143.016 Km** e o motor **2.0 Turbo com 264 cv**. O preço é **20.995€**, com **18 meses de garantia** incluídos.
 
-Para um roadster desta raridade, com esta mecânica, estes números fazem sentido. Estamos longe de um carro descuidado — e a garantia reflecte isso.
+Para um roadster desta raridade, com esta mecânica, estes números fazem sentido. Estamos longe de um carro descuidado — e a garantia reflete isso.
 
 ## Para quem é este carro
 
@@ -166,7 +166,7 @@ Nas estradas portuguesas, com curvas e algum espaço, este roadster é uma exper
 
 ## O essencial
 
-O Opel GT de 2009 é um dos roadsters mais subestimados do mercado usado europeu. Com menos de 7.000 unidades produzidas, 264 cv, tração traseira e uma história que liga dois momentos diferentes da Opel desportiva, este exemplar não vai ficar muito tempo disponível.
+O Opel GT de 2009 é um dos roadsters mais subestimados do mercado usado europeu. Com cerca de 7.500 unidades produzidas, 264 cv, tração traseira e uma história que liga dois momentos diferentes da Opel desportiva, este exemplar não vai ficar muito tempo disponível.
 
 Se está a pensar num carro diferente — um carro que seja realmente seu — vale a pena pelo menos ir vê-lo.
 
