@@ -84,7 +84,7 @@ schemaOrg: |
         "name": "Os carros elétricos usados pagam IUC em Portugal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Não. Os veículos elétricos puros estão isentos de IUC, por se enquadrarem na Categoria E do Código do IUC. A poupança situa-se normalmente entre 80 e 300 euros por ano face a um veículo equivalente a combustão. Os híbridos plug-in não beneficiam desta isenção e pagam IUC normal."
+          "text": "Não. Os veículos elétricos puros estão isentos de IUC, ao abrigo do artigo 5.º do Código do IUC. A poupança situa-se normalmente entre 80 e 300 euros por ano face a um veículo equivalente a combustão. Os híbridos plug-in não beneficiam desta isenção e pagam IUC normal."
         }
       },
       {
@@ -174,7 +174,7 @@ A leitura é simples: **quem carrega em casa poupa muito; quem depende de carreg
 
 ## O que ainda joga a favor
 
-- **IUC: isento.** Os elétricos puros enquadram-se na Categoria E e não pagam [IUC](/iuc-carros-usados-portugal.html) — uma poupança de 80€ a 300€ por ano face a um equivalente a combustão. Note que a alteração do calendário do imposto [a partir de 2027](/iuc-novas-regras-pagamento-2027.html) não altera esta isenção.
+- **IUC: isento.** Os elétricos puros estão isentos pelo artigo 5.º do Código do IUC e não pagam [IUC](/iuc-carros-usados-portugal.html) — uma poupança de 80€ a 300€ por ano face a um equivalente a combustão. Note que a alteração do calendário do imposto [a partir de 2027](/iuc-novas-regras-pagamento-2027.html) não altera esta isenção.
 - **Manutenção mais simples e mais barata.** Sem óleo, sem filtros de óleo, sem velas, sem correia de distribuição, sem embraiagem. E os travões duram bastante mais, porque grande parte da travagem é regenerativa.
 - **ISV na importação.** Os elétricos puros estão isentos de ISV, o que altera por completo a conta de importar face a um carro a combustão. Veja a [tabela de ISV 2026](/tabela-isv-2026-portugal.html).
 - **Preços em queda relativa.** Enquanto o resto do mercado de usados sobe por falta de oferta, o elétrico usado está a beneficiar da entrada dos ex-leasings.

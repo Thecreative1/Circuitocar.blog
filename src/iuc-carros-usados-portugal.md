@@ -83,7 +83,7 @@ schemaOrg: |
         "name": "Os carros elétricos pagam IUC em Portugal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Os veículos elétricos puros estão isentos do pagamento do IUC em Portugal, enquadrados na Categoria E do Código do IUC. Esta isenção é um dos incentivos fiscais ao uso de veículos sem emissões e representa uma poupança significativa face a viaturas equivalentes a combustão."
+          "text": "Os veículos elétricos puros estão isentos do pagamento do IUC em Portugal, ao abrigo do artigo 5.º do Código do IUC. Esta isenção é um dos incentivos fiscais ao uso de veículos sem emissões e representa uma poupança significativa face a viaturas equivalentes a combustão."
         }
       },
       {
@@ -192,7 +192,7 @@ Um IUC por pagar é uma dívida de quem era proprietário quando o imposto se to
 
 ## Elétricos e híbridos: o que muda
 
-Os **elétricos puros** (Categoria E no Código do IUC) estão **isentos** do pagamento do IUC. É uma das vantagens fiscais concretas da mobilidade elétrica — uma poupança de €80 a €300/ano face a um equivalente a combustão, dependendo da potência do motor que substituiria.
+Os **elétricos puros** estão **isentos** do pagamento do IUC, ao abrigo do artigo 5.º do Código do IUC. É uma das vantagens fiscais concretas da mobilidade elétrica — uma poupança de €80 a €300/ano face a um equivalente a combustão, dependendo da potência do motor que substituiria.
 
 Os [**híbridos plug-in e híbridos convencionais**](/vale-a-pena-comprar-hibrido-usado-2026.html) pagam IUC normal (Categoria A), mas beneficiam geralmente de uma componente CO₂ mais baixa, dado que as emissões homologadas são inferiores às de um motor equivalente a gasolina ou gasóleo puro.
 
