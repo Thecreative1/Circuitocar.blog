@@ -29,8 +29,9 @@
   <meta property="og:image:width" content="1920" />
   <meta property="og:image:height" content="1008" />
   {% endif %}
-  {% if ogImageAlt %}
-  <meta property="og:image:alt" content="{{ ogImageAlt }}" />
+  {% set _ogAlt = ogImageAlt if ogImageAlt else (site.ogImageAlt if not ogImage else "") %}
+  {% if _ogAlt %}
+  <meta property="og:image:alt" content="{{ _ogAlt }}" />
   {% endif %}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
@@ -39,8 +40,8 @@
   <meta name="twitter:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta name="twitter:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta name="twitter:image" content="{{ ogImage if ogImage else site.ogImage }}" />
-  {% if ogImageAlt %}
-  <meta name="twitter:image:alt" content="{{ ogImageAlt }}" />
+  {% if _ogAlt %}
+  <meta name="twitter:image:alt" content="{{ _ogAlt }}" />
   {% endif %}
   <meta name="author" content="Circuito Car" />
   <meta name="publisher" content="Circuito Car" />

@@ -6,6 +6,7 @@ module.exports = {
   lang: "pt",
   logo: "https://circuitocar.blog/img/cc.png",
   ogImage: "https://circuitocar.blog/img/og-blog-home-v1.jpg",   // fallback de partilha (JPEG 1920x1008, ver tools/og-images)
+  ogImageAlt: "Parque do stand Circuito Car em Joane, com o título Guias para comprar usado sem sustos",
   contact: {
     marco: {
       name: "Marco Marinho",
