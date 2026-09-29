@@ -389,7 +389,7 @@ As of 2026-09-29: 21 articles, newest first. All in `src/*.md`, `tags: article`,
 | 2026-07-08 | `checklist-comprar-carro-usado-antes-visita` | Guia de Compra | ✓ |
 | 2026-06-16 | `diesel-ou-gasolina-carro-usado-2026` | Guia de Compra | ✓ |
 | 2026-06-10 | `iuc-carros-usados-portugal` | Guia de Compra | ✓ |
-| 2026-06-04 | `garantia-carro-usado-portugal` ⚠️ | Guia de Compra | ✓ |
+| 2026-06-04 | `garantia-carro-usado-portugal` | Guia de Compra | ✓ |
 | 2026-06-02 | `financiamento-carro-usado-portugal` | Guia de Compra | ✓ |
 | 2026-05-29 | `como-funciona-retoma-carro-usado` | Guia de Compra | ✓ |
 | 2026-05-28 | `quanto-custa-importar-carro-usado-portugal` | Importação | ✓ |
@@ -401,7 +401,7 @@ As of 2026-09-29: 21 articles, newest first. All in `src/*.md`, `tags: article`,
 | 2026-04-24 | `vale-a-pena-comprar-hibrido-usado-2026` | Híbridos | — |
 | 2026-04-10 | `onde-comprar-carro-usado-famalicao` | Guia Local | — |
 
-⚠️ **`garantia-carro-usado-portugal` — prazos a confirmar antes de voltar a partilhar.** The article says used cars get 2 years, reducible to a 1-year minimum by agreement (that was the old DL 67/2003 regime). DL 84/2021, which the article itself cites, sets **3 years, reducible to 18 months for used goods by written agreement**. Check against the diploma and fix the body text **and** the FAQPage JSON-LD. The share image deliberately shows only "DL 84/2021", no durations.
+**Legal facts already verified (2026-09-29) — keep them right in new content:** garantia (DL 84/2021) = 3 years, reducible to 18 months for used cars only by written agreement; presumption of pre-existing defect 2 years (1 year if reduced). IUC = due in full by whoever owns the car on the first day of the tax period — no proportional refund, and unpaid IUC stays with the old owner (does NOT follow the car). EVs are IUC-exempt under art. 5.º CIUC (Categoria E is motorcycles).
 
 City pages (12, generated): braga, guimaraes, barcelos, santo-tirso, trofa, povoa-de-varzim, vila-do-conde, felgueiras, fafe, vizela, amarante, porto. **Never create individual city `.md` files** — add to `src/_data/cities.js` only.
 

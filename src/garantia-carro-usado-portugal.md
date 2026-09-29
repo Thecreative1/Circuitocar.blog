@@ -55,7 +55,7 @@ schemaOrg: |
         "name": "Qual é a duração mínima da garantia de um carro usado comprado num stand?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O mínimo legal é 1 ano, se stand e comprador acordarem por escrito. Sem esse acordo, a garantia é de 2 anos, conforme o Decreto-Lei n.º 84/2021."
+          "text": "Segundo o Decreto-Lei n.º 84/2021, a garantia legal é de 3 anos a contar da entrega. Nos carros usados, stand e comprador podem acordar por escrito uma redução, mas nunca abaixo de 18 meses. Nesse caso, a presunção de que o defeito já existia na entrega passa de 2 anos para 1 ano."
         }
       },
       {
@@ -97,14 +97,14 @@ A regra é simples: quando compra um carro a um stand profissional, tem sempre d
 
 ## Quanto tempo dura a garantia
 
-Para bens usados, a lei estabelece o seguinte:
+O Decreto-Lei n.º 84/2021 fixa os prazos a contar da data de entrega do carro:
 
-- **2 anos** — duração padrão, sem qualquer acordo especial
-- **Mínimo de 1 ano** — se o stand e o comprador acordarem por escrito uma duração inferior
+- **3 anos**: duração-regra, sem qualquer acordo especial
+- **Mínimo de 18 meses**: só para bens usados, e só se o stand e o comprador acordarem por escrito uma duração inferior
 
-Na prática, a maioria dos stands acorda 1 ano com o comprador, que é o mínimo legal permitido para bens usados. Este acordo deve constar explicitamente no contrato de compra e venda — verifique sempre antes de assinar.
+Na prática, muitos stands acordam os 18 meses com o comprador, que é o mínimo legal para um carro usado. Esse acordo tem de constar do contrato de compra e venda. Se o contrato não disser nada, a garantia é de 3 anos. Verifique sempre antes de assinar.
 
-> **Regra importante:** nos primeiros **12 meses** após a compra, qualquer defeito que apareça presume-se que já existia no momento da venda. O ónus da prova está do lado do stand. A partir do segundo ano, passa a ser o comprador a ter de demonstrar que o defeito era pré-existente.
+> **Regra importante:** durante um período inicial, qualquer defeito que apareça presume-se já existente no momento da entrega, e é o stand que tem de provar o contrário. Esse período é de **2 anos**, ou de **1 ano** se a garantia tiver sido reduzida para 18 meses. Depois disso, e até ao fim da garantia, passa a ser o comprador a ter de demonstrar que o defeito já existia.
 
 ---
 
@@ -193,7 +193,7 @@ O stand tem de propor reparação ou substituição sem custo. Se a reparação 
 
 Convém distinguir dois conceitos que aparecem com frequência:
 
-**Garantia legal** — imposta por lei, obrigatória para qualquer stand. É o que descrevemos neste artigo: mínimo de 1 ano, cobre defeitos de conformidade.
+**Garantia legal** — imposta por lei, obrigatória para qualquer stand. É o que descrevemos neste artigo: 3 anos, ou no mínimo 18 meses num usado com acordo escrito, e cobre defeitos de conformidade.
 
 **Garantia comercial** — opcional, oferecida pelo stand ou fabricante como valor acrescentado. Pode ter cobertura mais alargada, incluir assistência em viagem, veículo de substituição, ou cobrir componentes específicos. Os termos variam conforme o que estiver contratualizado.
 
@@ -203,8 +203,8 @@ Quando vir "X meses de garantia" num anúncio, pergunte sempre: é garantia lega
 
 ## Em resumo
 
-- **Garantia mínima:** 1 ano (com acordo escrito) ou 2 anos (sem acordo)
-- **Primeiro ano:** qualquer defeito presume-se pré-existente — o stand tem de provar o contrário
+- **Duração:** 3 anos, ou no mínimo 18 meses num usado se houver acordo escrito no contrato
+- **Presunção a favor do comprador:** 2 anos (1 ano se a garantia foi reduzida para 18 meses), em que o stand tem de provar que o defeito não existia na entrega
 - **Cobre:** defeitos de conformidade existentes à data da venda
 - **Não cobre:** desgaste normal, danos causados pelo comprador, falta de manutenção
 - **Elétricos:** bateria coberta para defeitos de fabrico; degradação normal de capacidade não está coberta
