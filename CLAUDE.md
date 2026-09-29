@@ -194,10 +194,11 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
-**Estado (2026-09-21):**
+**Estado (2026-09-29): every public page has a JPEG share image.**
 - ✅ All 21 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
 - ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
-- ❌ Still missing: homepage + `artigos.html` (use `og-blog.svg` — Facebook ignores SVG; `base-cc.njk` also has no `image/jpeg` branch nor width/height yet) and the 12 city pages (use `city.photo`).
+- ✅ Homepage (`og-blog-home-v1.jpg`, layout H) and `artigos.html` (`og-artigos-v1.jpg`, layout G) — set in the front matter of `src/index.njk` / `src/artigos.njk`. `og-blog-home-v1.jpg` is also `site.ogImage`, the fallback for base-cc pages without their own (privacidade, avaliações); `base-cc.njk` now has the jpeg type, width/height (1920×1008 on fallback) and alt, like `article-cc.njk`.
+- ✅ 12 city pages: `og-carros-usados-<slug>-v1.jpg`. Specs are generated in `specs.cjs` from `src/_data/cities.js` (car per city in `CITY_CARS`, layouts rotate A/D/G/F, sticker = `distanceKm`/`driveMin`). A new city needs a `CITY_CARS` entry + `node tools/og-images/gen.cjs carros-usados-<slug>`; the template path is fixed at `-v1`, so to replace a published city image bump the version in both `specs.cjs` and `cidade-carros-usados.njk`.
 
 **Rules (each one learned from a failed attempt):**
 - JPEG 1920×1008, **<600 KB** (WhatsApp shows no preview above that), q92 with `chromaSubsampling: '4:4:4'`. Never `palette: true` in sharp (banding).
@@ -424,7 +425,7 @@ The custo-mensal calculator (added 2026-07-09) sums prestação + combustível/e
 
 **FAQPage schema:** all 21 articles have it (the last 4 — opel-gt, guerra-irao, hibrido, famalicao — added 2026-09-29). Every new article must ship with one.
 
-**Share images (2026-09-21):** all 20 articles have a dedicated `og:image` JPEG with width/height/alt. Don't redo; for new articles use `tools/og-images`. What's left is listed in "Imagens de partilha".
+**Share images (2026-09-29):** all 21 articles, the 4 tools, homepage, artigos and the 12 city pages have a dedicated `og:image` JPEG with width/height/alt. Don't redo; for new pages use `tools/og-images`.
 
 ## What went wrong in the first session (don't repeat)
 

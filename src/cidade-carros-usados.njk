@@ -12,6 +12,9 @@ category: "Guia Local"
 date: 2026-01-15
 readTime: "5 min de leitura"
 utmCampaign: "local_seo_{{ city.slug }}"
+# Imagem de partilha: gerada por tools/og-images (entradas carros-usados-<slug> no specs.cjs). Subir o -v1 se mudar.
+ogImageWidth: 1920
+ogImageHeight: 1008
 
 eleventyComputed:
   pageTitle: "Carros Usados {{ city.pIn or 'em' }} {{ city.name }} | Circuito Car"
@@ -19,7 +22,8 @@ eleventyComputed:
   description: "Procura carros usados {{ city.pIn or 'em' }} {{ city.name }}? O stand Circuito Car em Joane, Famalicão, fica a apenas {{ city.distanceKm }} km — viaturas verificadas, garantia e financiamento próprio."
   ogTitle: "Carros Usados {{ city.pIn or 'em' }} {{ city.name }} — Circuito Car"
   ogDescription: "Stand de carros usados a {{ city.distanceKm }} km {{ city.pOf or 'de' }} {{ city.name }}. Viaturas verificadas, financiamento e garantia. Visite-nos em Joane, Famalicão."
-  ogImage: "https://circuitocar.blog/img/{{ city.photo }}"
+  ogImage: "https://circuitocar.blog/img/og-carros-usados-{{ city.slug }}-v1.jpg"
+  ogImageAlt: "Carro usado no stand Circuito Car em Joane, com o título Carros usados perto {{ city.pOf or 'de' }} {{ city.name }}"
   heroImage: "https://circuitocar.blog/img/{{ city.photo }}"
   lead: "Procura carros usados {{ city.pIn or 'em' }} {{ city.name }}? O Circuito Car fica em Joane, Famalicão — a apenas {{ city.distanceKm }} km. Viaturas verificadas, garantia e financiamento próprio."
   schemaOrg: |

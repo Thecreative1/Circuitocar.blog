@@ -102,4 +102,32 @@ module.exports = [
   { slug: 'vale-a-pena-comprar-hibrido-usado-2026', layout: 'G', photo: '7724210070', car: 'Renault Arkana E-Tech híbrido',
     eyebrow: 'HÍBRIDOS', h1: 'Híbrido usado<br>em 2026:<br><em>vale a pena?</em>',
     tag: 'Custos, uso real e pontos críticos' },
+  // Páginas base-cc: ogImage/Width/Height/Alt no front matter de src/index.njk e src/artigos.njk.
+  { slug: 'blog-home', layout: 'H', photo: 'stand-circuito-car-credito-automovel.webp', car: 'stand',
+    eyebrow: 'CIRCUITO CAR BLOG', h1: 'Guias para<br>comprar <em>usado</em><br>sem sustos',
+    tag: 'Artigos, simuladores gratuitos e stock verificado', chip: 'LER O BLOG' },
+
+  { slug: 'artigos', layout: 'G', photo: '7724197985', car: 'MG ZS',
+    eyebrow: 'CIRCUITO CAR BLOG', h1: 'Todos os<br><em>guias</em> num<br>só sítio',
+    tag: 'Compra, crédito, impostos e importação' },
 ];
+
+// Páginas de cidade (src/cidade-carros-usados.njk): uma entrada por cidade de src/_data/cities.js, slug = carros-usados-<slug>.
+// O template lê og-carros-usados-<slug>-v<cityOgV>.jpg; a foto e o layout vêm daqui (rodar A/D/G/F, carros diferentes).
+// O autocolante usa distanceKm/driveMin do cities.js (factos da própria página).
+const CITY_CARS = {
+  braga: ['7723834622', 'Volvo XC40 Recharge'], guimaraes: ['7724444918', 'Renault Mégane E-Tech'],
+  barcelos: ['7724382111', 'Hyundai Kauai'], 'santo-tirso': ['7724440817', 'Nissan Qashqai'],
+  trofa: ['7724454440', 'MINI Cooper SE'], 'povoa-de-varzim': ['7724081087', 'Jeep Avenger'],
+  'vila-do-conde': ['7723922792', 'Peugeot 308'], felgueiras: ['7724373360', 'Kia e-Niro'],
+  fafe: ['7724587279', 'Volkswagen ID.3'], vizela: ['7723990943', 'DS 3 Crossback'],
+  amarante: ['7723834608', 'Peugeot 5008'], porto: ['7724702503', 'Tesla Model 3'],
+};
+require('../../src/_data/cities.js').forEach((c, i) => {
+  const [photo, car] = CITY_CARS[c.slug] || [];
+  if (!photo) return;
+  module.exports.push({ slug: 'carros-usados-' + c.slug, layout: 'ADGF'[i % 4], photo, car,
+    eyebrow: 'STAND EM JOANE', h1: 'Carros usados<br>perto ' + (c.pOf || 'de') + '<br><em>' + c.name + '</em>',
+    tag: 'Viaturas verificadas, crédito e garantia', chip: 'VER VIATURAS',
+    sticker: ['A ' + c.driveMin + ' MIN DE CARRO', c.distanceKm + ' KM'] });
+});
