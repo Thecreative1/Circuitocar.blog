@@ -10,6 +10,10 @@
 //   ph       { left, top, width } para acertar a foto se a frente do carro ficar tapada pelo painel
 // O og:image do TVDE (og-carros-usados-tvde-2026-v2.jpg) foi feito à mão antes deste gerador e não está aqui.
 module.exports = [
+  { slug: 'carro-eletrico-sem-garagem', layout: 'D', photo: '7724611180', car: 'Fiat 500e Icon',
+    eyebrow: 'CARREGAR NA RUA', h1: 'Elétrico<br>sem garagem:<br><em>compensa?</em>',
+    tag: 'Custos, postos e tempo de carga', chip: 'LER O GUIA', sticker: ['COMPARE CUSTOS', 'POR 100 KM'], v: 1 },
+
   { slug: 'carros-automaticos-usados-vantagens-riscos', layout: 'A', photo: '7724357451', car: 'Peugeot 2008 GT automático',
     eyebrow: 'GUIA DE COMPRA', h1: 'Automático<br>usado:<br><em>prós e riscos</em>',
     tag: 'O que verificar antes de comprar', chip: 'LER O GUIA' },

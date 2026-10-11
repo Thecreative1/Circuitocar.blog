@@ -111,6 +111,15 @@ schemaOrg: |
 3. Run `npm run build` locally to verify — it will warn if front matter keys are missing.
 4. The article appears automatically in `artigos.html` under its category — no manual list update needed.
 
+### Mandatory Facebook/WhatsApp share image
+
+Every article must have a **branded share image**, not just the raw inventory photo. Reuse the editable HTML/CSS layouts in `tools/og-images/gen.cjs` and add an entry in `tools/og-images/specs.cjs`; see also the detailed "Imagens de partilha" section in `CLAUDE.md`.
+
+- Use a real stand photo, Circuito Car branding, a short readable headline and an established layout. Keep the original inventory photo as `heroImage`.
+- Generate with `node tools/og-images/gen.cjs <slug>`. Inspect the 600px feed preview in `tools/og-images/.cache/feed/` and ensure the headline and car remain legible without clipping.
+- Output a versioned JPEG in `src/img/`, 1920×1008 and under 600 KB. Set `ogImage`, `ogImageWidth`, `ogImageHeight` and `ogImageAlt` in front matter. Never overwrite an already published image URL; increment the version when replacing it.
+- Verify the built and deployed Open Graph/Twitter tags and image URL. Facebook may retain a cached link preview; request a fresh scrape in Sharing Debugger if needed, without promising that an existing post will update automatically.
+
 ### Valid categories (MUST match exactly — defined in `src/artigos.njk`)
 
 A typo or new value creates an empty/missing section. Pick one of:

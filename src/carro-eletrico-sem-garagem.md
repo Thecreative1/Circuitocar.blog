@@ -10,8 +10,10 @@ homeTitle: "Elétrico sem garagem?"
 description: "Sem garagem nem tomada em casa? Compare custos por 100 km, tempo de carregamento e postos disponíveis antes de comprar um carro elétrico usado."
 ogTitle: "Elétrico sem garagem: faça as contas antes de comprar"
 ogDescription: "Carregar na rua pode compensar. Veja os custos por 100 km e como testar se os postos disponíveis encaixam na sua rotina."
-ogImage: "https://omeustand.pt/viaturas/224/7724611180_omeustand_foto.webp"
-ogImageAlt: "Fiat 500e Icon elétrico de 2022 na Circuito Car, em Joane"
+ogImage: "https://circuitocar.blog/img/og-carro-eletrico-sem-garagem-v1.jpg"
+ogImageWidth: 1920
+ogImageHeight: 1008
+ogImageAlt: "Fiat 500e Icon no stand Circuito Car, com o título Elétrico sem garagem: compensa?"
 
 category: "Guia de Compra"
 readTime: "9 min de leitura"
