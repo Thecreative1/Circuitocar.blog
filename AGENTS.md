@@ -42,6 +42,18 @@ _site/                   ← build output (never edit)
 
 ## Adding a new article
 
+### Mandatory research before writing
+
+Before every new article, **research online what readers are asking about the topic**. This is a permanent editorial rule, requested on 2026-10-11.
+
+1. Review existing articles in `src/` to avoid repeating the same search intent. Choose a distinct angle and relevant internal links.
+2. Search in European Portuguese for the main question and related queries. Read relevant search results and public discussions to identify concrete doubts, objections and vocabulary. Use autocomplete/related questions or Search Console data when available.
+3. Treat discussion threads as qualitative evidence of reader questions, **not** as evidence for prices, legislation, technical claims or representative public opinion. Never invent search volumes, keyword rankings or Google Trends/Search Console findings. Say explicitly when research is qualitative.
+4. Verify factual answers using current primary sources: official operators, manufacturers, regulators and legislation. Record the date checked; distinguish announced changes from rules already in force and check transitional regimes.
+5. Save a concise research note in `docs/editorial/<article-slug>.md` (outside `src/`, so it is not published): date, queries, linked evidence of reader questions, chosen angle, primary sources, assumptions and facts requiring future rechecks.
+6. Use the findings to shape the title, introduction, sections and FAQ naturally. Answer the main question early; do not stuff keywords or copy forum comments.
+7. Link factual sources near the claims in the article. Label calculations as illustrative when appropriate, state assumptions and separate energy savings from total ownership costs. Any FAQ schema must match the visible questions and answers.
+
 1. Create `src/your-slug.md` with this front matter:
 
 ```yaml
@@ -137,7 +149,7 @@ Consequences when adding an article:
 
 The hero right column is an **editorial card of the featured article** (not a stock car — this is a blog). It reuses `.cc-hero__car` styling plus a `.cc-hero__feat` modifier:
 - The card is **landscape `4/3`** (`16/11` on mobile). Hero photos from the inventory are landscape — a portrait card crops the car badly. Keep landscape, and tune `background-position` (currently `center 42%`) if a new photo sits high/low.
-- Pulls `featured.data.heroImage`, `.category`, `.title`, `.readTime`; CTA is a yellow "Ler artigo →" pill (`.cc-hero__feat-cta`).
+- Pulls `featured.data.heroImage`, `.category`, `.homeTitle` (falls back to `.title`), `.readTime`; CTA is a yellow "Ler artigo →" pill (`.cc-hero__feat-cta`). Use an optional short `homeTitle` for long article titles so the mobile card stays readable; keep the full `title` for the article H1 and check the card at 320px and 390px.
 - A stronger gradient keeps the title readable over any photo.
 - Lead-gen is preserved by the "Ver stock" hero button + the "Stock em destaque" section below — the hero itself stays content-first.
 
