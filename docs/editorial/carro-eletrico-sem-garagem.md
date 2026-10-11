@@ -1,5 +1,11 @@
 # Pesquisa editorial — Carro elétrico sem garagem
 
+## Revisão de clareza — 11 de outubro de 2026
+
+Após observação do utilizador, revistas todas as secções para responder à pergunta antes de apresentar condições. A secção noturna distingue permanência autorizada, fim da carga e custo de inatividade, com uma recomendação prática. Exemplo aritmético: uma hora após o fim da carga, menos 15 minutos de tolerância, dá 45 × 0,20 € = 9 € adicionais na regra publicada pelo Continente; não implica acesso noturno ao parque. Reconsultadas as fontes oficiais Continente, Tesla e FAQ MOBI.E. A Tesla distingue congestionamento em local movimentado do simples fim da carga; pode haver cobrança durante a sessão ao atingir o limiar indicado.
+
+Acrescentados exemplos de duração com potência média (30 kWh / 11 kW ≈ 2 h 45 min; / 60 kW = 30 min), meios de acesso concretos e resposta a posto ocupado/avariado. O título sobre escolha do carro passou a pedir critérios de verificação, correspondendo ao conteúdo. FAQ visível e JSON-LD atualizados em conjunto. O resultado editorial passa a ser resposta → condições → exemplo → ação, sem transformar exemplos em regras universais.
+
 Pesquisa e verificação: **11 de outubro de 2026**. Artigo: `src/carro-eletrico-sem-garagem.md`.
 
 ## Método e intenção

@@ -52,6 +52,7 @@ Before every new article, **research online what readers are asking about the to
 4. Verify factual answers using current primary sources: official operators, manufacturers, regulators and legislation. Record the date checked; distinguish announced changes from rules already in force and check transitional regimes.
 5. Save a concise research note in `docs/editorial/<article-slug>.md` (outside `src/`, so it is not published): date, queries, linked evidence of reader questions, chosen angle, primary sources, assumptions and facts requiring future rechecks.
 6. Use the findings to shape the title, introduction, sections and FAQ naturally. Answer the main question early; do not stuff keywords or copy forum comments.
+   - Every question heading must receive a direct answer in the first sentence or paragraph. Then explain the conditions, give a concrete example and state what the reader should do. "It depends" or "check the rules" alone is not an answer. If the evidence cannot support a yes/no, name the deciding condition immediately. Make headings match the answer actually supplied; distinguish permission, cost and practical suitability.
 7. Link factual sources near the claims in the article. Label calculations as illustrative when appropriate, state assumptions and separate energy savings from total ownership costs. Any FAQ schema must match the visible questions and answers.
 
 1. Create `src/your-slug.md` with this front matter:
