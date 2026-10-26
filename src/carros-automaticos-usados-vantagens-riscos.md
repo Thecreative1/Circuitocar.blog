@@ -24,8 +24,8 @@ inventoryLabel: "Ver automáticos disponíveis"
 lead: "Os carros automáticos já não são uma exceção. Para muita gente, são a forma mais confortável de viver o dia a dia. O importante é perceber quando isso compensa mesmo e o que deve ser verificado antes de comprar usado."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID157628.html"
-heroImageAlt: "Ver MG4 em stock"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
+heroImageAlt: "MG4 elétrico automático no stand Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre carros automáticos usados e quero mais informação."
 
 topbarLeft: "Guia pensado para responder a uma dúvida real: automático usado compensa ou complica?"

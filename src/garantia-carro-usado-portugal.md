@@ -21,7 +21,7 @@ utmCampaign: "blog_garantia"
 lead: "Todos os carros usados vendidos por um stand têm garantia — é uma obrigação legal, não uma oferta comercial. Mas o que cobre exatamente? E o que fica de fora? Este guia explica de forma clara o que a lei portuguesa garante, o que se aplica de diferente aos elétricos, e o que fazer se aparecer um problema depois da compra."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "Nissan Qashqai 2023 no stand Circuito Car"
 heroWhatsappMsg: "Olá, li o artigo sobre garantia de carros usados e gostava de esclarecer algumas dúvidas antes de comprar."
 

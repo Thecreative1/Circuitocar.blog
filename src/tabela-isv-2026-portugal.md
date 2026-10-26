@@ -22,7 +22,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "O ISV é o imposto que toda a gente que importa ou compra carro em Portugal paga sem perceber muito bem como é calculado. Esta página explica os escalões, a tabela de redução por antiguidade e mostra como o valor é determinado — com exemplos reais."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID157628.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "Carro importado — exemplo de cálculo de ISV 2026"
 heroWhatsappMsg: "Olá, vi a tabela de ISV 2026 e queria ajuda para calcular o ISV de uma viatura específica."
 

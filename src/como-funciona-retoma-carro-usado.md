@@ -24,8 +24,8 @@ inventoryLabel: "Ver stock disponível"
 lead: "Dar o carro atual como entrada é, para muita gente, a parte mais confusa da troca. Quanto vale realmente? Como é calculado o valor? E compensa mais a retoma ou vender a particular? Este guia responde a tudo com clareza — sem rodeios."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html"
-heroImageAlt: "Ver Nissan Qashqai 1.3 DIG-T Acenta de 2023 em stock"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
+heroImageAlt: "Nissan Qashqai 1.3 DIG-T Acenta de 2023 no stand Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre retoma e quero uma avaliação do meu carro."
 
 topbarLeft: "Guia criado para explicar a retoma com transparência — como o valor é calculado e como prepará-lo."

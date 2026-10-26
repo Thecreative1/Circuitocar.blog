@@ -24,8 +24,8 @@ inventoryLabel: "Ver carros de família"
 lead: "Quando a compra passa a servir uma família inteira, o critério muda. Espaço, bagageira, conforto, acessos e custos do dia a dia começam a pesar mais do que um anúncio bonito ou um detalhe estético."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724136150_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c4-grand-picasso-ID155809.html"
-heroImageAlt: "Ver Citroën C4 Grand Picasso em stock"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
+heroImageAlt: "Citroën C4 Grand Picasso, monovolume familiar, no stand Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre carro para família e quero mais informação."
 
 topbarLeft: "Guia criado para ajudar famílias a escolher com mais lógica e menos ruído."

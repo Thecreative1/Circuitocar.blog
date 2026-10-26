@@ -18,7 +18,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "Quem trabalha em TVDE não escolhe carro pelas mesmas razões que os outros condutores. Há uma regra legal que elimina metade do mercado à partida — o limite de 7 anos desde a primeira matrícula — e depois há a conta que interessa: com 40.000 ou 60.000 km por ano, o consumo e a manutenção pesam mais do que o preço de compra. Este guia explica as regras em vigor e como escolher com critério."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724509725_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/mg-marvel-r-ID171403.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "MG Marvel R elétrico usado na Circuito Car — perfil adequado a serviço TVDE"
 heroWhatsappMsg: "Olá, trabalho em TVDE e queria saber que viaturas em stock cumprem os requisitos."
 

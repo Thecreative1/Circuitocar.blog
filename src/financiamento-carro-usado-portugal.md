@@ -22,8 +22,8 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "Financiar um carro usado é uma decisão que muita gente toma sem perceber completamente o que está a assinar. TAN, TAEG, prazo, entrada, seguro associado — cada variável muda o que vai pagar ao longo de meses ou anos. Este guia explica tudo de forma clara, para que a decisão seja sua — informada e sem surpresas."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/citroen-c3-ID157553.html"
-heroImageAlt: "Citroën C3 1.2 PureTech Shine 2022 em stock na Circuito Car"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
+heroImageAlt: "Citroën C3 1.2 PureTech Shine 2022 no stand Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre financiamento e queria perceber as opções disponíveis para um carro usado."
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"

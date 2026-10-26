@@ -22,7 +22,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "Foi publicado em Diário da República o diploma que acaba com o pagamento do IUC no mês do aniversário da matrícula. A mudança entra em vigor a 1 de janeiro de 2027, tem um regime transitório nesse mesmo ano e só fica completa em 2028. Este artigo explica o calendário ano a ano, sem a confusão que circula online."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/nissan-qashqai-ID168789.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "Nissan Qashqai usado na Circuito Car — IUC anual a somar ao custo de posse"
 heroWhatsappMsg: "Olá, li o artigo sobre as novas regras do IUC e queria saber quanto pagaria por uma viatura em stock."
 

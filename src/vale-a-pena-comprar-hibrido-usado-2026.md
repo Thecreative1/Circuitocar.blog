@@ -24,8 +24,8 @@ inventoryLabel: "Ver híbridos disponíveis"
 lead: "O interesse por híbridos usados continua forte porque muita gente quer baixar consumos sem dar o salto direto para o elétrico. A questão é perceber se faz sentido para o uso real e para o orçamento, não apenas seguir tendência."
 
 heroImage: "https://omeustand.pt/viaturas/224/7723979753_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/hyundai-ioniq-5-ID149434.html"
-heroImageAlt: "Ver Hyundai Ioniq 5 em stock"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
+heroImageAlt: "Hyundai Ioniq 5 no stand Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre híbridos usados e quero mais informação."
 
 topbarLeft: "Guia pensado para responder a uma dúvida cada vez mais comum: híbrido usado compensa mesmo?"

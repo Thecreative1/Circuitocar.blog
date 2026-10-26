@@ -10,6 +10,10 @@
 //   ph       { left, top, width } para acertar a foto se a frente do carro ficar tapada pelo painel
 // O og:image do TVDE (og-carros-usados-tvde-2026-v2.jpg) foi feito à mão antes deste gerador e não está aqui.
 module.exports = [
+  { slug: 'carros-usados-ate-15000-euros', layout: 'F', photo: '7724454236', car: 'Peugeot 208 de 2022',
+    eyebrow: 'GUIA DE COMPRA', h1: 'Usados<br>até 15.000€:<br><em>o que comprar</em>',
+    tag: 'Quatro perfis e os erros a evitar', chip: 'LER O GUIA', sticker: ['PROCURA ABAIXO DE 15 MIL', '+25%'], wm: '15' },
+
   { slug: 'carro-eletrico-sem-garagem', layout: 'D', photo: '7724611180', car: 'Fiat 500e Icon',
     eyebrow: 'CARREGAR NA RUA', h1: 'Elétrico<br>sem garagem:<br><em>compensa?</em>',
     tag: 'Custos, postos e tempo de carga', chip: 'LER O GUIA', sticker: ['COMPARE CUSTOS', 'POR 100 KM'], v: 1 },

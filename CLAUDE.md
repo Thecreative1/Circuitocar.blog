@@ -195,7 +195,7 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
 **Estado (2026-09-29): every public page has a JPEG share image.**
-- ✅ All 22 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
+- ✅ All 23 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
 - ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
 - ✅ Homepage (`og-blog-home-v1.jpg`, layout H) and `artigos.html` (`og-artigos-v1.jpg`, layout G) — set in the front matter of `src/index.njk` / `src/artigos.njk`. `og-blog-home-v1.jpg` is also `site.ogImage`, the fallback for base-cc pages without their own (privacidade, avaliações); `base-cc.njk` now has the jpeg type, width/height (1920×1008 on fallback) and alt, like `article-cc.njk`.
 - ✅ 12 city pages: `og-carros-usados-<slug>-v1.jpg`. Specs are generated in `specs.cjs` from `src/_data/cities.js` (car per city in `CITY_CARS`, layouts rotate A/D/G/F, sticker = `distanceKm`/`driveMin`). A new city needs a `CITY_CARS` entry + `node tools/og-images/gen.cjs carros-usados-<slug>`; the template path is fixed at `-v1`, so to replace a published city image bump the version in both `specs.cjs` and `cidade-carros-usados.njk`.
@@ -312,7 +312,10 @@ The 4 cars in the homepage "Viaturas em destaque" section are **curated manually
 ### Detecting sold cars (learned 2026-10-26)
 
 **circuitocar.pt never returns 404 for a sold car.** `/viatura/<slug>-ID<id>.html` answers **200** with an empty record (title `Circuito Car -    - Circuito Car`, "0 Km", no registo) or, for a while, the full old page. An HTTP-status check passes every sold car — the 2026-07-12 audit relied on it.
-The reliable check: crawl `https://www.circuitocar.pt/viaturas?page=1…N` (12 per page, stop at an empty page), collect the `ID<id>` numbers and confirm every ID referenced in `src/` (articles, `stock.json`, `specs.cjs`) is in that list. A sold car featured in an article (e.g. the Opel GT, sold Oct 2026) means rewording the article in past tense and pointing its links to `/viaturas`, not just swapping the URL. Photos on `omeustand.pt` usually keep working after the sale.
+**The listing also keeps sold cars** (in Oct 2026: 161 cards, only 19 for sale). A sold card has `<div class="vendido">VENDIDO</div>` and an empty price block; a car for sale shows `NN.NNN&euro;`. The reliable check: crawl `https://www.circuitocar.pt/viaturas?page=1…N` (12 per page, stop at an empty page), split on `<div class="viaturas-cell">`, keep the IDs with a price and no `vendido` class, and confirm every `ID<id>` referenced in `src/` (articles, `stock.json`, `specs.cjs`) is in that set. Also compare the prices in `stock.json` — they drop over time.
+- A sold car used only as `heroImageLink`: point it to `https://www.circuitocar.pt/viaturas` and make `heroImageAlt` neutral ("no stand Circuito Car", never "em stock"/"à venda"). The photo can stay.
+- A sold car the article is *about* (e.g. the Opel GT, Oct 2026): reword the article in past tense and point every link to `/viaturas`.
+Photos on `omeustand.pt` usually keep working after the sale.
 
 ## Avaliações (reviews)
 
@@ -381,10 +384,11 @@ site.address.street / .zip / .city / .region
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-10-26: 22 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
+As of 2026-10-26: 23 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
+| 2026-10-26 | `carros-usados-ate-15000-euros` | Guia de Compra | ✓ |
 | 2026-10-11 | `carro-eletrico-sem-garagem` | Guia de Compra | ✓ |
 | 2026-09-29 | `comprar-carro-usado-fim-do-ano` | Guia de Compra | ✓ |
 | 2026-09-05 | `iuc-novas-regras-pagamento-2027` | Atualidade | ✓ |

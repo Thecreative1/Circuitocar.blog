@@ -22,7 +22,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "Em junho de 2026, os elétricos foram pela primeira vez a motorização mais matriculada em Portugal. Ao mesmo tempo, os primeiros contratos de leasing estão a terminar e a encher o mercado de usados. Resultado: nunca houve tanta escolha nem preços tão acessíveis. Mas um elétrico usado não é para toda a gente — e a bateria é a única peça que precisa mesmo de verificar."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724518951_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/mg-mg4-ID171608.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "MG4 elétrico usado na Circuito Car, em Joane, Vila Nova de Famalicão"
 heroWhatsappMsg: "Olá, li o artigo sobre elétricos usados e queria saber o estado da bateria de um carro em stock."
 

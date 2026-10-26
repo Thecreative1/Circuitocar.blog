@@ -24,8 +24,8 @@ inventoryLabel: "Ver stock em Famalicão"
 lead: "Quem procura carro usado na zona de Vila Nova de Famalicão quer basicamente três coisas: **não perder tempo**, **não cair numa má compra** e **falar com alguém que saiba orientar**. Este guia foi pensado exatamente para isso."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724223933_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/jeep-renegade-ID159868.html"
-heroImageAlt: "Ver Jeep Renegade em stock"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
+heroImageAlt: "Jeep Renegade no stand Circuito Car, em Joane"
 heroWhatsappMsg: "Olá, vi o artigo sobre comprar carro usado em Famalicão e quero mais informação."
 
 topbarLeft: "Guia para quem quer comprar carro usado em Famalicão e arredores."
