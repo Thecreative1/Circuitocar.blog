@@ -195,7 +195,7 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
 **Estado (2026-09-29): every public page has a JPEG share image.**
-- ✅ All 21 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
+- ✅ All 22 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
 - ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
 - ✅ Homepage (`og-blog-home-v1.jpg`, layout H) and `artigos.html` (`og-artigos-v1.jpg`, layout G) — set in the front matter of `src/index.njk` / `src/artigos.njk`. `og-blog-home-v1.jpg` is also `site.ogImage`, the fallback for base-cc pages without their own (privacidade, avaliações); `base-cc.njk` now has the jpeg type, width/height (1920×1008 on fallback) and alt, like `article-cc.njk`.
 - ✅ 12 city pages: `og-carros-usados-<slug>-v1.jpg`. Specs are generated in `specs.cjs` from `src/_data/cities.js` (car per city in `CITY_CARS`, layouts rotate A/D/G/F, sticker = `distanceKm`/`driveMin`). A new city needs a `CITY_CARS` entry + `node tools/og-images/gen.cjs carros-usados-<slug>`; the template path is fixed at `-v1`, so to replace a published city image bump the version in both `specs.cjs` and `cidade-carros-usados.njk`.
@@ -303,11 +303,16 @@ The 4 cars in the homepage "Viaturas em destaque" section are **curated manually
 
 ### Rules / gotchas
 
-- **It goes stale.** Because it's hardcoded, sold cars keep showing. Refresh periodically and confirm each `url` still resolves (not a 404/sold car).
+- **It goes stale.** Because it's hardcoded, sold cars keep showing. Refresh periodically and confirm each car is still for sale (see "Detecting sold cars" below).
 - **Keep the featured set low-km and presentable.** No 200k+ km cars in the *destaque* — it contradicts "carros verificados" and kills trust (see what-went-wrong below).
 - Keep the `url` UTM suffix (`?utm_source=blog&utm_medium=stock_grid&utm_campaign=homepage`).
 - `image` comes from `omeustand.pt` (inventory CDN) — grab the real photo URL from the car's page.
 - The blog **cannot edit circuitocar.pt** — it can only read it. `stock.json` is the blog's own curated copy.
+
+### Detecting sold cars (learned 2026-10-26)
+
+**circuitocar.pt never returns 404 for a sold car.** `/viatura/<slug>-ID<id>.html` answers **200** with an empty record (title `Circuito Car -    - Circuito Car`, "0 Km", no registo) or, for a while, the full old page. An HTTP-status check passes every sold car — the 2026-07-12 audit relied on it.
+The reliable check: crawl `https://www.circuitocar.pt/viaturas?page=1…N` (12 per page, stop at an empty page), collect the `ID<id>` numbers and confirm every ID referenced in `src/` (articles, `stock.json`, `specs.cjs`) is in that list. A sold car featured in an article (e.g. the Opel GT, sold Oct 2026) means rewording the article in past tense and pointing its links to `/viaturas`, not just swapping the URL. Photos on `omeustand.pt` usually keep working after the sale.
 
 ## Avaliações (reviews)
 
@@ -376,10 +381,11 @@ site.address.street / .zip / .city / .region
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-09-29: 21 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
+As of 2026-10-26: 22 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
+| 2026-10-11 | `carro-eletrico-sem-garagem` | Guia de Compra | ✓ |
 | 2026-09-29 | `comprar-carro-usado-fim-do-ano` | Guia de Compra | ✓ |
 | 2026-09-05 | `iuc-novas-regras-pagamento-2027` | Atualidade | ✓ |
 | 2026-09-05 | `carros-usados-mais-caros-2026` | Atualidade | ✓ |
@@ -470,4 +476,4 @@ A full site audit (build, internal links, JSON-LD, meta tags, sitemap, external 
 - **Pre-AO90 spellings** were scattered across 5 articles + 2 simulators, including inside FAQPage JSON-LD (Google shows that text in rich results). See the spelling rule in "Writing style" — new content must be AO90.
 - **Meta descriptions must stay ≤165 chars** or Google truncates them (3 were trimmed: financiamento, opel-gt, quanto-custa-importar).
 - **Page titles >65 chars were left as-is deliberately** — the `| Circuito Car Blog` suffix pushes most over, Google just truncates the display, and retitling already-indexed pages risks rankings. Don't "fix" them.
-- Useful audit checks for the future (all passed 2026-07-12): every internal `href` resolves in `_site/`; every JSON-LD block parses; sitemap covers all HTML files with no orphans/duplicates; every `heroImage`/`heroImageLink`/`stock.json` URL returns 200 (sold cars = 404); zero console errors on homepage, artigos, article, all 4 tools, city page, privacidade; simulator outputs spot-checked against the fórmula.
+- Useful audit checks for the future (all passed 2026-07-12): every internal `href` resolves in `_site/`; every JSON-LD block parses; sitemap covers all HTML files with no orphans/duplicates; every `heroImage`/`heroImageLink`/`stock.json` URL returns 200; zero console errors on homepage, artigos, article, all 4 tools, city page, privacidade; simulator outputs spot-checked against the fórmula.

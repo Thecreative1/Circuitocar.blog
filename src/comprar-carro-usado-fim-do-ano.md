@@ -3,6 +3,7 @@ layout: article-cc.njk
 permalink: comprar-carro-usado-fim-do-ano.html
 tags: article
 date: 2026-09-29
+lastmod: 2026-10-26
 
 pageTitle: "Comprar carro usado no fim do ano ou esperar por janeiro? | Circuito Car Blog"
 title: "Comprar carro usado no fim do ano: vale a pena esperar por janeiro?"
@@ -91,7 +92,7 @@ schemaOrg: |
         "name": "O Orçamento do Estado para 2027 muda o preço dos carros usados?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Num carro usado já matriculado em Portugal o ISV já foi pago, por isso o Orçamento do Estado não altera esse valor. O que pode mudar são as taxas do IUC anual e o ISV de carros importados, normalmente com efeitos a 1 de janeiro. A proposta é entregue no Parlamento até 10 de outubro e só fica definitiva depois da votação final."
+          "text": "Num carro usado já matriculado em Portugal o ISV já foi pago, por isso o Orçamento do Estado não altera esse valor. A proposta para 2027, entregue em outubro de 2026, não aumenta as taxas do ISV nem do IUC e mantém o adicional de IUC dos carros a gasóleo. Só fica definitiva com a votação final global, marcada para 24 de novembro."
         }
       }
     ]
@@ -170,15 +171,19 @@ Pode parecer estranho, mas o outono e o inverno são uma boa altura para fazer o
 
 Leve a [checklist antes da visita](/checklist-comprar-carro-usado-antes-visita.html) e acrescente estes pontos.
 
-## 6. O Orçamento do Estado para 2027: o que pode mudar
+## 6. O Orçamento do Estado para 2027: o que muda
 
-A proposta de Orçamento do Estado é entregue no Parlamento **até 10 de outubro** e é nela que costumam vir as atualizações das tabelas do IUC e do ISV, normalmente com efeitos a **1 de janeiro**.
+A proposta de Orçamento do Estado para 2027 foi entregue no Parlamento em outubro de 2026. Para os automóveis, a fiscalidade fica quase igual:
 
-Para quem compra um **usado já matriculado em Portugal**, o impacto é pequeno: o ISV foi pago quando o carro foi matriculado e não volta a ser cobrado. O que pode mudar é o IUC anual.
+- **ISV:** a proposta não aumenta as taxas.
+- **IUC:** também não há aumento das taxas. Mantém-se o **adicional de IUC dos carros a gasóleo** (categorias A e B), que pode chegar aos 68,85€ por ano.
+- **Apoios à compra de elétricos:** o Governo diz que se mantêm, mas a proposta ainda não define verba nem condições.
 
-Para quem pensa **importar**, o caso é diferente. O ISV é calculado com as tabelas em vigor quando o imposto é liquidado, por isso uma importação que fique para janeiro pode apanhar tabelas novas, para melhor ou para pior. Se é o seu caso, faça a conta no [simulador de ISV](/simulador_isv.html) e volte a confirmá-la quando o Orçamento for aprovado.
+Para quem compra um **usado já matriculado em Portugal**, o impacto é pequeno: o ISV foi pago quando o carro foi matriculado e não volta a ser cobrado, e o IUC anual não deverá subir. A mudança que conta mais em 2027 é a das **datas de pagamento do IUC**, que já está aprovada e não depende do Orçamento (veja o ponto 2).
 
-Não vale a pena decidir com base em rumores sobre a proposta. Só depois da votação final, habitualmente no fim de novembro, é que as taxas ficam definidas.
+Para quem pensa **importar**, as tabelas de ISV de 2027 deverão ser as mesmas de 2026, por isso adiar a importação para janeiro não traz vantagem fiscal. Faça a conta no [simulador de ISV](/simulador_isv.html).
+
+Atenção: isto é a **proposta**. O texto ainda pode mudar na especialidade e só fica definitivo com a votação final global, marcada para **24 de novembro**.
 
 ## 7. O carro certo não espera por si
 
