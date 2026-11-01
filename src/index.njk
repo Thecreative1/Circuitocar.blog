@@ -180,6 +180,9 @@ inlineStyle: |
   .cc-tool__head h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); line-height: 1.05; color: var(--cc-ink); margin: 0 0 4px; }
   .cc-tool__head p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin: 0; }
   .cc-tool__body { padding: 22px 28px 28px; display: flex; flex-direction: column; gap: 18px; flex: 1; }
+  .cc-tool__tag { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: var(--cc-radius-pill); background: var(--cc-ink); color: var(--cc-yellow); font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); }
+  .cc-tool__tag i, .cc-tool__tag svg { width: 13px; height: 13px; }
+  .cc-tool__body .cc-btn { margin-top: auto; }
   .cc-tool__feats { display: grid; gap: 10px; }
   .cc-tool__feat { display: flex; align-items: flex-start; gap: 10px; font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); }
   .cc-tool__feat i { width: 16px; height: 16px; color: var(--cc-yellow-deep); flex-shrink: 0; margin-top: 2px; }
@@ -417,12 +420,12 @@ inlineStyle: |
 </section>
 
 <!-- ── TOOLS ── -->
-<section class="cc-section" id="ferramentas">
+<section class="cc-section cc-section--dark" id="ferramentas">
   <div class="cc-wrap">
     <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Ferramentas Interativas</span>
-      <h2 class="cc-section__title">Calculadoras inteligentes para o seu <em>próximo carro</em></h2>
-      <p class="cc-section__sub">Calcule a sua prestação mensal e avalie quanto vale o seu carro atual — antes de ir a qualquer stand, sem compromisso.</p>
+      <span class="cc-section__eyebrow">Simuladores online</span>
+      <h2 class="cc-section__title">Simuladores gratuitos: faça as <em>contas aqui</em></h2>
+      <p class="cc-section__sub">Escolha um simulador, preencha os dados e veja o resultado na hora. Sem registo e sem compromisso.</p>
     </div>
     <div class="cc-tools">
       <div class="cc-tool">
@@ -434,13 +437,14 @@ inlineStyle: |
           </div>
         </div>
         <div class="cc-tool__body">
+          <span class="cc-tool__tag"><i data-lucide="zap"></i>Grátis · Resultado na hora</span>
           <div class="cc-tool__feats">
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Prestação calculada com TAEG realista</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Resultado imediato, sem registo nem formulário</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envie a simulação ao stand por WhatsApp</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Sem compromisso, antes de visitar o stand</span></div>
           </div>
-          <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i>Abrir Simulador de Crédito</a>
+          <a class="cc-btn cc-btn--yellow cc-btn--lg" href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i>Usar simulador de crédito<i data-lucide="arrow-right"></i></a>
         </div>
       </div>
       <div class="cc-tool">
@@ -452,13 +456,14 @@ inlineStyle: |
           </div>
         </div>
         <div class="cc-tool__body">
+          <span class="cc-tool__tag"><i data-lucide="zap"></i>Grátis · Resultado na hora</span>
           <div class="cc-tool__feats">
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Análise por marca, modelo, ano e quilometagem</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Fatores: combustível, estado, histórico e sinistros</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Estimativa baseada no mercado atual de usados</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Receba o resumo da avaliação no WhatsApp</span></div>
           </div>
-          <a class="cc-btn cc-btn--dark" href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i>Abrir Simulador de Retoma</a>
+          <a class="cc-btn cc-btn--yellow cc-btn--lg" href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i>Usar simulador de retoma<i data-lucide="arrow-right"></i></a>
         </div>
       </div>
       <div class="cc-tool">
@@ -470,13 +475,14 @@ inlineStyle: |
           </div>
         </div>
         <div class="cc-tool__body">
+          <span class="cc-tool__tag"><i data-lucide="zap"></i>Grátis · Resultado na hora</span>
           <div class="cc-tool__feats">
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Tabelas oficiais 2026 — gasolina e gasóleo</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Normas NEDC e WLTP, redução por antiguidade incluída</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Total estimado com transporte, despachante e legalização</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envie a simulação à equipa por WhatsApp</span></div>
           </div>
-          <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/simulador_isv.html"><i data-lucide="calculator"></i>Abrir Simulador de ISV</a>
+          <a class="cc-btn cc-btn--yellow cc-btn--lg" href="{{ site.basePath }}/simulador_isv.html"><i data-lucide="calculator"></i>Usar simulador de ISV<i data-lucide="arrow-right"></i></a>
         </div>
       </div>
       <div class="cc-tool">
@@ -488,13 +494,14 @@ inlineStyle: |
           </div>
         </div>
         <div class="cc-tool__body">
+          <span class="cc-tool__tag"><i data-lucide="zap"></i>Grátis · Resultado na hora</span>
           <div class="cc-tool__feats">
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Soma prestação, combustível, IUC, seguro e manutenção</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Compare gasolina, gasóleo, híbrido e elétrico</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Gráfico com o peso de cada custo no total</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envie o resumo à equipa por WhatsApp</span></div>
           </div>
-          <a class="cc-btn cc-btn--dark" href="{{ site.basePath }}/custo-mensal-carro.html"><i data-lucide="wallet"></i>Calcular Custo Mensal</a>
+          <a class="cc-btn cc-btn--yellow cc-btn--lg" href="{{ site.basePath }}/custo-mensal-carro.html"><i data-lucide="wallet"></i>Calcular custo mensal<i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </div>
