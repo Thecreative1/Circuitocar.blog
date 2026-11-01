@@ -239,6 +239,23 @@ The stand's Facebook page shares blog links regularly. A link without a proper i
 - A photo id that 404s = car sold; pick another. Old images already published are unaffected.
 - Inventory photos top out at 1440×1080 and are heavily compressed (~90 KB); no larger version exists on `omeustand.pt`. Since 2026-11-01 the generator preprocesses them (`crispPhoto` in `gen.cjs`: lanczos to 1696 px + moderate sharpen) so they survive Facebook's recompression. Don't raise the sharpen: stronger values halo the plate and roofline. Images generated before that date don't have it, and stay as they are unless bumped to a new version.
 
+## Search Console e indexação
+
+**Diagnóstico de 2026-11-01:** só 19 de 45 páginas indexadas e 0 links externos. Em 3 meses, 31 cliques e 5,39 mil impressões. A parte técnica está bem (`canonical`, `robots`, sitemap). A falta de autoridade é a causa mais provável, por isso um link em `circuitocar.pt` vale mais do que mais artigos. Compare com estes números antes de concluir que uma mudança funcionou.
+
+**Como aceder:** o browser integrado da app costuma ter a sessão Google do dono aberta. A propriedade é `sc-domain:circuitocar.blog`. Nunca introduza credenciais.
+
+**Pedir indexação** (só com autorização do dono):
+1. Abra `https://search.google.com/search-console?resource_id=sc-domain%3Acircuitocar.blog`.
+2. Clique na lupa no topo, escreva o URL completo e carregue em Enter. O link direto `/search-console/inspect?...&id=...` dá 404.
+3. Clique em "Request indexing" e espere até 2 minutos. Só conte a página como pedida depois de aparecer "Indexing requested".
+
+**Limites:**
+- A quota é diária e pode já estar esgotada no primeiro pedido, como aconteceu em 2026-11-01. Com "Quota Exceeded", pare e tente noutro dia.
+- Peça primeiro as páginas mais importantes. Pedir indexação não garante que o Google aceite a página.
+- Depois de publicar páginas novas, volte a submeter `https://circuitocar.blog/sitemap.xml`.
+- O Search Console só mede o Google. As visitas do Facebook não aparecem aí.
+
 ## Local SEO — programmatic city pages
 
 City landing pages live in **one template + one data file** — never create individual files per city.
