@@ -10,6 +10,10 @@
 //   ph       { left, top, width } para acertar a foto se a frente do carro ficar tapada pelo painel
 // O og:image do TVDE (og-carros-usados-tvde-2026-v2.jpg) foi feito à mão antes deste gerador e não está aqui.
 module.exports = [
+  { slug: 'apoio-80-carros-eletricos-2027', layout: 'G', photo: '7724621078', car: 'Opel Mokka-e de 2021',
+    eyebrow: 'ATUALIDADE · OE 2027', h1: 'Apoio a<br>elétricos:<br><em>o que se sabe</em>',
+    tag: 'Quem pode pedir e o que ainda falta', sticker: ['APOIO ANUNCIADO ATÉ', '80%'] },
+
   { slug: 'carros-usados-ate-15000-euros', layout: 'F', photo: '7724454236', car: 'Peugeot 208 de 2022',
     eyebrow: 'GUIA DE COMPRA', h1: 'Usados<br>até 15.000€:<br><em>o que comprar</em>',
     tag: 'Quatro perfis e os erros a evitar', chip: 'LER O GUIA', sticker: ['PROCURA ABAIXO DE 15 MIL', '+25%'], wm: '15' },

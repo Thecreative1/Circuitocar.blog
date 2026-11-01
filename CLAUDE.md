@@ -195,7 +195,7 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
 **Estado (2026-09-29): every public page has a JPEG share image.**
-- ✅ All 23 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
+- ✅ All 24 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
 - ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
 - ✅ Homepage (`og-blog-home-v1.jpg`, layout H) and `artigos.html` (`og-artigos-v1.jpg`, layout G) — set in the front matter of `src/index.njk` / `src/artigos.njk`. `og-blog-home-v1.jpg` is also `site.ogImage`, the fallback for base-cc pages without their own (privacidade, avaliações); `base-cc.njk` now has the jpeg type, width/height (1920×1008 on fallback) and alt, like `article-cc.njk`.
 - ✅ 12 city pages: `og-carros-usados-<slug>-v1.jpg`. Specs are generated in `specs.cjs` from `src/_data/cities.js` (car per city in `CITY_CARS`, layouts rotate A/D/G/F, sticker = `distanceKm`/`driveMin`). A new city needs a `CITY_CARS` entry + `node tools/og-images/gen.cjs carros-usados-<slug>`; the template path is fixed at `-v1`, so to replace a published city image bump the version in both `specs.cjs` and `cidade-carros-usados.njk`.
@@ -206,16 +206,19 @@ The stand's Facebook page shares blog links regularly. A link without a proper i
 - **Versioned filename, never overwrite a published image.** Facebook caches by URL: same name = old picture forever, even after "Scrape Again". To change one, bump to `-v2` (the `v` field in `specs.cjs`).
 - **No text under ~25 px** at 1200 wide. Facebook shows the card at ~600 px, so everything is halved.
 - **Real stand photo** (inventory car against the Circuito Car wall) — the owner prefers it over text-only cards.
+- **Photo quality is checked on every image, before publishing** — the owner's explicit requirement, because Facebook recompresses and a soft photo looks bad in the feed. Don't publish on the 600 px preview alone: open the original at full size and the Facebook simulation (steps 5 and 6 below). Plate, badge and headlights must look sharp. If they don't, pick another photo or car.
 - **Don't repeat the same layout in consecutive posts** — at feed size they look like the same post. The generator has 5 layouts (A dark slanted panel, D yellow panel, G light panel, F photo card, H full-width yard photo); rotate them.
 - The sticker number must be a fact **from the article itself** (e.g. "264 CV", "Redução até 80%"), never invented.
 
 **How to make one for a new article:**
-1. Pick a car on circuitocar.pt/viaturas (listing pages are `?page=1…13`; the photo id is the number in `omeustand.pt/viaturas/224/<id>_omeustand_foto.webp`). Low km, presentable, fits the topic, and a different car from the recent articles.
+1. Pick a car on circuitocar.pt/viaturas (listing pages are `?page=1…13`; the photo id is the number in `omeustand.pt/viaturas/224/<id>_omeustand_foto.webp`). Low km, presentable, fits the topic, and a different car from the recent articles. Some newer listings use `<car-name>-<random>.webp` instead of a numeric id: the generator only downloads numeric ids, so pick another car or save that photo in `src/img` and use the filename. Dark cars lose the most detail when compressed; if two cars fit equally, take the lighter or more colourful one.
 2. Add an entry to `tools/og-images/specs.cjs` (fields are documented at the top of the file).
 3. First time on a machine: `npm i --no-save sharp` (sharp is not in `package.json` on purpose — CI doesn't need it). Playwright's Chromium is already a devDependency.
 4. `node tools/og-images/gen.cjs <slug>` → writes `src/img/og-<slug>-v1.jpg` and prints the 4 front matter lines. With no slug it refuses to run, so it can't silently overwrite published images.
 5. Check the feed preview in `tools/og-images/.cache/feed/<slug>.png` (600 px, gitignored). The script reports `folga` (px between the text and the panel edge) — if it's <24 or `over` >0, shorten the title/subtitle.
-6. Paste the front matter lines, `npm run build`, grep `_site/<slug>.html` for `og:image`, commit, push.
+6. **Check the photo quality:** open `src/img/og-<slug>-v1.jpg` at full size and `tools/og-images/.cache/feed/<slug>-fb.jpg` (1200 px, an estimate of Facebook's recompression, q72 4:2:0). If the image isn't published yet, regenerate over the same `-v1`; once published, bump the version.
+7. Paste the front matter lines, `npm run build`, grep `_site/<slug>.html` for `og:image`, commit, push.
+8. After the deploy, the real test is Facebook itself: the owner can paste the link into the Sharing Debugger (needs their login). Report that this wasn't checked unless it was.
 
 **If Facebook shows an old or missing preview:** Sharing Debugger (developers.facebook.com/tools/debug) → paste the link → "Scrape Again". The `fb:app_id` warning is optional, ignore it.
 
@@ -225,6 +228,7 @@ The stand's Facebook page shares blog links regularly. A link without a proper i
 - `h1` is `white-space:nowrap`: lines break only at `<br>`, and the font shrinks until it fits. In layouts D and G an `<em>` must not span a `<br>` (the highlight box breaks).
 - All inventory photos have the car facing left, so the text panel goes on the left. **Never mirror a photo** (plate and wall logo come out reversed).
 - A photo id that 404s = car sold; pick another. Old images already published are unaffected.
+- Inventory photos top out at 1440×1080 and are heavily compressed (~90 KB); no larger version exists on `omeustand.pt`. Since 2026-11-01 the generator preprocesses them (`crispPhoto` in `gen.cjs`: lanczos to 1696 px + moderate sharpen) so they survive Facebook's recompression. Don't raise the sharpen: stronger values halo the plate and roofline. Images generated before that date don't have it, and stay as they are unless bumped to a new version.
 
 ## Local SEO — programmatic city pages
 
@@ -379,15 +383,16 @@ site.address.street / .zip / .city / .region
 - [ ] New nav items get `aria-current="page"` when URL matches
 - [ ] Images have meaningful `alt` text
 - [ ] New article has FAQPage JSON-LD schema in `schemaOrg:` (see template above — 3-5 Q&As, factual, no self-promotion)
-- [ ] New article has its own share image (`tools/og-images`) + `ogImageWidth`/`ogImageHeight`/`ogImageAlt`, checked at feed size (600 px)
+- [ ] New article has its own share image (`tools/og-images`) + `ogImageWidth`/`ogImageHeight`/`ogImageAlt`, checked at feed size (600 px), at full size and in the Facebook simulation (`<slug>-fb.jpg`)
 - [ ] `git pull origin main --no-rebase` before `git push`
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-10-26: 23 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
+As of 2026-11-01: 24 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
+| 2026-11-01 | `apoio-80-carros-eletricos-2027` | Atualidade | ✓ |
 | 2026-10-26 | `carros-usados-ate-15000-euros` | Guia de Compra | ✓ |
 | 2026-10-11 | `carro-eletrico-sem-garagem` | Guia de Compra | ✓ |
 | 2026-09-29 | `comprar-carro-usado-fim-do-ano` | Guia de Compra | ✓ |

@@ -4,7 +4,8 @@
 // Uso (a partir da raiz do repo):
 //   npm i --no-save sharp            # só na primeira vez: o sharp não está no package.json
 //   node tools/og-images/gen.cjs <slug> [slug...]
-// Escreve src/img/og-<slug>-v<v>.jpg e a simulação do feed (600 px) em tools/og-images/.cache/feed/<slug>.png.
+// Escreve src/img/og-<slug>-v<v>.jpg e, em tools/og-images/.cache/feed/, a simulação do feed (<slug>.png, 600 px)
+// e a da recompressão do Facebook (<slug>-fb.jpg, 1200 px, estimativa: q72 4:2:0).
 // Regras e front matter: ver a secção "Imagens de partilha" do CLAUDE.md.
 const { chromium } = require('playwright');
 const sharp = require('sharp');
@@ -36,6 +37,18 @@ async function fetchPhoto(photo) {
   if (!res.ok) throw new Error(`foto ${photo}: HTTP ${res.status} (carro vendido?)`);
   fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
   return name;
+}
+
+// As fotos do inventário vêm a 1440 px e muito comprimidas (~90 KB). Sem isto, o Chromium amplia-as a 2x com um filtro
+// mole e o Facebook ainda as recomprime. Só nitidez moderada: valores mais altos criam halos na matrícula e no tejadilho.
+async function crispPhoto(name) {
+  const out = name.replace(/\.\w+$/, '') + '-crisp.png';
+  const dest = path.join(CACHE, out);
+  if (!fs.existsSync(dest)) {
+    await sharp(path.join(CACHE, name)).resize(1696, null, { kernel: 'lanczos3' })
+      .sharpen({ sigma: 0.8, m1: 0.6, m2: 1.2 }).png().toFile(dest);
+  }
+  return out;
 }
 
 const BASE = `
@@ -203,7 +216,7 @@ function build(s) {
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 2 });
   for (const spec of list) {
-    const s = { ...spec, photo: await fetchPhoto(spec.photo) };
+    const s = { ...spec, photo: await crispPhoto(await fetchPhoto(spec.photo)) };
     const { html, L } = build(s);
     const file = path.join(CACHE, `_${s.slug}.html`);
     fs.writeFileSync(file, html);
@@ -243,6 +256,7 @@ function build(s) {
     await sharp(png).resize(1920, 1008, { kernel: 'lanczos3' }).sharpen({ sigma: 0.5 })
       .jpeg({ quality: 92, chromaSubsampling: '4:4:4' }).toFile(out);
     await sharp(out).resize(600, 315, { kernel: 'lanczos3' }).png().toFile(path.join(FEED, `${s.slug}.png`));
+    await sharp(out).resize(1200, 630, { kernel: 'lanczos3' }).jpeg({ quality: 72, chromaSubsampling: '4:2:0' }).toFile(path.join(FEED, `${s.slug}-fb.jpg`));
     const kb = Math.round(fs.statSync(out).size / 1024);
     // folga < 24 ou over > 0 = texto encostado ao corte ou a transbordar: encurtar o título/subtítulo e voltar a gerar.
     console.log(`${s.layout} ${s.slug} h1=${m.h1} folga=${m.clear} outros=${m.other} over=${m.overflow} font=${m.font} ${kb}KB${kb > 600 ? ' !!! >600KB' : ''}`);
