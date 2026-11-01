@@ -146,6 +146,10 @@ The whole site uses formal European Portuguese. Conjugate for "você", never "tu
 
 ### Body content rules
 
+- **Article length:** aim for 1000+ words of real substance. Three articles of ~275 words were visited by Google but not indexed, and were rewritten on 2026-11-01. When rewriting an indexed or published article, keep its URL and add `lastmod`.
+- **Tables:** at most 3 short columns. On a phone, 4 columns of text become unreadable, so use a list with bold labels instead.
+- **Stock links:** `circuitocar.pt/viaturas?combustivel=...` and `?caixa=...` don't filter anything (tested 2026-11-01). Use the plain `/viaturas` link, and don't label it "Ver híbridos" or "Ver automáticos".
+
 - **Contact CTA**: never hardcode André/Filipe call/WhatsApp buttons in the body. Use a single button linking to the contact card:
   ```html
   <a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
