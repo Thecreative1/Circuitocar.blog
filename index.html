@@ -490,6 +490,26 @@ a.cc-loc-tag:hover { background: var(--cc-yellow); }
 .cc-mobile-dock a:hover, .cc-mobile-dock a:active { color: var(--cc-yellow); }
 .cc-mobile-dock i { width: 20px; height: 20px; }
 
+/* ===== AVALIAÇÕES (igual a article-cc.css, que a homepage não carrega) ===== */
+.cc-reviews { background: var(--cc-paper-card); border-top: 1px solid var(--cc-border); border-bottom: 1px solid var(--cc-border); padding: 56px 0; }
+.cc-reviews__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+.cc-reviews__eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--cc-yellow-deep); font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin-bottom: 12px; }
+.cc-reviews__eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--cc-yellow-deep); }
+.cc-reviews__title { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-2xl); color: var(--cc-ink); margin: 0 0 6px; line-height: 1; }
+.cc-reviews__sub { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin: 0 0 28px; }
+.cc-reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 28px; }
+.cc-review { display: flex; flex-direction: column; gap: 12px; background: var(--cc-paper); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 22px 24px; }
+.cc-review__stars { display: inline-flex; gap: 2px; }
+.cc-review__stars i, .cc-review__stars svg { width: 16px; height: 16px; fill: var(--cc-yellow-deep); stroke: var(--cc-yellow-deep); }
+.cc-review__text { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg); margin: 0; flex: 1; }
+.cc-review__meta { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
+.cc-review__name { font-family: var(--cc-font-body); font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-sm); color: var(--cc-ink); }
+.cc-review__src { display: inline-flex; align-items: center; gap: 5px; font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); letter-spacing: 0.04em; }
+.cc-review__src i, .cc-review__src svg { width: 13px; height: 13px; stroke: var(--cc-blue-mid); }
+.cc-reviews__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 1024px) { .cc-reviews__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .cc-reviews { padding: 44px 0; } .cc-reviews__inner { padding: 0 20px; } .cc-reviews__grid { grid-template-columns: 1fr; } }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   .cc-topbar__dot { animation: none; }
@@ -873,6 +893,68 @@ a.cc-loc-tag:hover { background: var(--cc-yellow); }
   </div>
 </section>
 
+<!-- ── AVALIAÇÕES ── -->
+
+
+<section class="cc-reviews">
+  <div class="cc-reviews__inner">
+    <span class="cc-reviews__eyebrow">Avaliações reais</span>
+    <h2 class="cc-reviews__title">O que dizem os nossos clientes</h2>
+    <p class="cc-reviews__sub">Avaliações de clientes reais, publicadas no Google.</p>
+
+    <div class="cc-reviews__grid">
+      
+        
+        <figure class="cc-review">
+          <div class="cc-review__stars" role="img" aria-label="5 em 5 estrelas">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <blockquote class="cc-review__text">“Atendimento profissional, honesto e muito transparente do início ao fim. Excelente stand para quem procura carros semi-novos de qualidade.”</blockquote>
+          <figcaption class="cc-review__meta">
+            <span class="cc-review__name">Filipa Oliveira</span>
+            <span class="cc-review__src"><i data-lucide="badge-check"></i>Cliente · Google</span>
+          </figcaption>
+        </figure>
+        
+      
+        
+        <figure class="cc-review">
+          <div class="cc-review__stars" role="img" aria-label="5 em 5 estrelas">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <blockquote class="cc-review__text">“Excelente atendimento e viaturas. Indico a todos os conhecidos e familiares, de Norte a Sul.”</blockquote>
+          <figcaption class="cc-review__meta">
+            <span class="cc-review__name">Edmilson Pinheiro</span>
+            <span class="cc-review__src"><i data-lucide="badge-check"></i>Cliente · Google</span>
+          </figcaption>
+        </figure>
+        
+      
+        
+        <figure class="cc-review">
+          <div class="cc-review__stars" role="img" aria-label="5 em 5 estrelas">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <blockquote class="cc-review__text">“Confiança! Atendimento honesto e muito transparente. Ótimo stand para quem procura carros semi-novos de qualidade e confiáveis.”</blockquote>
+          <figcaption class="cc-review__meta">
+            <span class="cc-review__name">Jorge B. Cruz</span>
+            <span class="cc-review__src"><i data-lucide="badge-check"></i>Cliente · Google</span>
+          </figcaption>
+        </figure>
+        
+      
+        
+      
+    </div>
+
+    <div class="cc-reviews__actions">
+      <a class="cc-btn cc-btn--ghost-dark" href="https://maps.google.com/?q=Circuito+Car+Rua+do+Rel%C3%B3gio+430+Joane" target="_blank" rel="noopener noreferrer"><i data-lucide="star"></i>Ver avaliações no Google</a>
+      <a class="cc-btn cc-btn--ghost-dark" href="/avaliacoes.html"><i data-lucide="message-square"></i>Ver todas as avaliações</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── ABOUT ── -->
 <section class="cc-section" id="sobre">
   <div class="cc-wrap">
@@ -1012,6 +1094,7 @@ a.cc-loc-tag:hover { background: var(--cc-yellow); }
           <a href="/artigos.html">Artigos</a>
           <a href="/#ferramentas">Ferramentas</a>
           <a href="/#stock">Stock em destaque</a>
+          <a href="/avaliacoes.html">Avaliações</a>
           <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=blog_geral" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">

@@ -421,9 +421,30 @@
   <!-- ── ARTICLE + SIDEBAR ── -->
   <div class="cc-post-wrap">
     <article class="cc-prose">
+      
+      
+      
+      <details class="cc-toc" id="cc-toc">
+        <summary>Neste artigo</summary>
+        <ol>
+          <li><a href="#o-que-e-o-isv-e-quem-paga">O que é o ISV e quem paga</a></li>
+          <li><a href="#a-formula-do-isv">A fórmula do ISV</a></li>
+          <li><a href="#componente-cilindrada">Componente cilindrada</a></li>
+          <li><a href="#componente-co">Componente CO₂</a></li>
+          <li><a href="#tabela-de-reducao-por-antiguidade">Tabela de redução por antiguidade</a></li>
+          <li><a href="#exemplos-praticos-de-calculo">Exemplos práticos de cálculo</a></li>
+          <li><a href="#quando-o-isv-e-minimo-ou-nulo">Quando o ISV é mínimo ou nulo</a></li>
+          <li><a href="#use-o-simulador-para-o-calculo-exato">Use o simulador para o cálculo exato</a></li>
+          <li><a href="#calcule-o-isv-da-sua-viatura">Calcule o ISV da sua viatura</a></li>
+          <li><a href="#o-isv-no-contexto-dos-custos-de-importacao">O ISV no contexto dos custos de importação</a></li>
+          <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+        </ol>
+      </details>
+      <script>if (window.matchMedia('(min-width: 821px)').matches) document.getElementById('cc-toc').open = true;</script>
+      
       <p>O ISV está em todo o lado — em cada carro importado, em cada decisão de comprar fora de Portugal. Mas poucos sabem exatamente como é calculado. Esta página explica a estrutura do imposto, os escalões vigentes em 2026 e a tabela de redução que se aplica a carros usados.</p>
 <div class="note"><strong>Nota sobre os valores apresentados:</strong> As tabelas abaixo são as mesmas que o nosso <a href="/simulador_isv.html">simulador ISV</a> utiliza — tabelas oficiais de 2026 (Autoridade Tributária). São atualizadas anualmente com o Orçamento de Estado, pelo que os valores devem ser confirmados na data da legalização.</div>
-<h2>O que é o ISV e quem paga</h2>
+<h2 id="o-que-e-o-isv-e-quem-paga">O que é o ISV e quem paga</h2>
 <p>O ISV (Imposto Sobre Veículos) é cobrado na <strong>primeira matrícula em Portugal</strong> de qualquer veículo ligeiro de passageiros. Não importa se o carro vem da Alemanha, da França ou de Espanha — pertencer à UE não isenta ninguém.</p>
 <p>Se comprar um carro já matriculado em Portugal (num stand ou a particular), o ISV já foi pago na altura da primeira matrícula. Nesse caso, não paga novamente.</p>
 <p>Paga ISV quando:</p>
@@ -431,12 +452,12 @@
 <li>importa um carro do estrangeiro e o matricula em Portugal pela primeira vez</li>
 <li>adquire um veículo novo (o concessionário inclui o ISV no preço)</li>
 </ul>
-<h2>A fórmula do ISV</h2>
+<h2 id="a-formula-do-isv">A fórmula do ISV</h2>
 <p>O ISV tem <strong>duas componentes</strong> que são somadas:</p>
 <pre><code>ISV = (Componente Cilindrada + Componente CO₂) × (1 − Redução por antiguidade)
 </code></pre>
 <p>Cada componente calcula-se da mesma forma: <strong>multiplica-se o valor (cc ou g/km) pela taxa do escalão e subtrai-se a parcela a abater</strong> desse escalão. Se o resultado for negativo, a componente é zero. A redução por antiguidade é depois aplicada ao total, dependendo do número de anos entre a primeira matrícula e a data de importação.</p>
-<h2>Componente cilindrada</h2>
+<h2 id="componente-cilindrada">Componente cilindrada</h2>
 <p>A componente de cilindrada é igual para todos os combustíveis — depende apenas dos cc do motor.</p>
 <table>
 <thead>
@@ -467,7 +488,7 @@
 <p><strong>Como calcular:</strong> cilindrada × taxa − parcela a abater.</p>
 <p><strong>Exemplo:</strong> motor de 999 cc → 999 × 1,09 − 849,03 = <strong>239,88 €</strong>. Motor de 1.600 cc → 1.600 × 5,61 − 6.194,88 = <strong>2.781,12 €</strong>.</p>
 <p>Repare no salto: <strong>acima de 1.250 cc a taxa quase quintuplica</strong>. É por isso que os motores pequenos (1.0, 1.2) são muito mais baratos de legalizar do que um 1.6 ou 2.0 — e uma das razões pelas quais os downsized a gasolina dominam as importações recentes.</p>
-<h2>Componente CO₂</h2>
+<h2 id="componente-co">Componente CO₂</h2>
 <p>A componente de CO₂ é onde o ISV é mais sensível. Aplica-se uma tabela diferente conforme a <strong>norma de emissões</strong> do veículo: <strong>NEDC</strong> (ciclo mais antigo) ou <strong>WLTP</strong> (ciclo mais recente, mais rigoroso).</p>
 <p>A partir de setembro de 2018 (entrada em vigor do WLTP), os carros novos passaram a ser homologados com o ciclo WLTP. Na prática:</p>
 <ul>
@@ -670,7 +691,7 @@
 </tbody>
 </table>
 <p>O gasóleo é claramente mais penalizado na componente ambiental: para os mesmos 130 g/km WLTP, um gasolina paga 66 € e um gasóleo paga 1.094 €. É uma diferença que muda por completo a conta de uma importação — e mais um motivo para calcular antes de comprar.</p>
-<h2>Tabela de redução por antiguidade</h2>
+<h2 id="tabela-de-reducao-por-antiguidade">Tabela de redução por antiguidade</h2>
 <p>Esta tabela é a mais consultada por quem importa carros usados. A redução aplica-se ao ISV total (componente cilindrada + CO₂) e depende dos anos que decorreram entre a primeira matrícula e a data de tributação em Portugal.</p>
 <table>
 <thead>
@@ -740,7 +761,7 @@
 </table>
 <p><strong>O que isto significa na prática:</strong> um carro de 2019 importado em 2026 tem 7 anos de antiguidade — beneficia de 60% de redução e paga apenas 40% do ISV que pagaria se fosse novo.</p>
 <p>Um carro de 2014 com 12 anos de antiguidade paga apenas 20% do ISV base.</p>
-<h2>Exemplos práticos de cálculo</h2>
+<h2 id="exemplos-praticos-de-calculo">Exemplos práticos de cálculo</h2>
 <h3>Exemplo 1 — gasolina pequeno (o caso mais favorável)</h3>
 <p><strong>Viatura:</strong> VW Golf 1.0 TSI gasolina, 2021, 999 cc, 122 g/km CO₂ (WLTP).</p>
 <ul>
@@ -761,7 +782,7 @@
 </ul>
 <p>A comparação diz tudo: <strong>o 1.0 gasolina paga ~150 € de ISV; o 1.6 gasóleo do ano anterior paga ~1.855 €</strong>. A cilindrada acima de 1.250 cc e a tabela ambiental do gasóleo fazem uma diferença de mais de 1.700 € na mesma classe de carro.</p>
 <div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. Os valores exatos dependem das especificações no Certificado de Conformidade e das tabelas em vigor na data de legalização — confirme sempre no simulador ou junto da Autoridade Tributária.</div>
-<h2>Quando o ISV é mínimo ou nulo</h2>
+<h2 id="quando-o-isv-e-minimo-ou-nulo">Quando o ISV é mínimo ou nulo</h2>
 <p>Casos em que o ISV é muito baixo ou zero:</p>
 <ul>
 <li><strong>Veículos eléctricos a bateria:</strong> isentos de ISV</li>
@@ -770,7 +791,7 @@
 <li><strong>Motores muito pequenos com emissões baixas:</strong> abaixo de ~780 cc a componente de cilindrada chega a zero, e um gasolina WLTP abaixo de ~98 g/km paga componente ambiental quase nula — casos raros, mas existem (citadinos e alguns híbridos)</li>
 </ul>
 <p>Para elétricos e híbridos plug-in, as regras têm especificidades próprias. Se estiver a considerar importar uma destas categorias, fale com a equipa antes de avançar.</p>
-<h2>Use o simulador para o cálculo exato</h2>
+<h2 id="use-o-simulador-para-o-calculo-exato">Use o simulador para o cálculo exato</h2>
 <p>As tabelas apresentadas são indicativas. O simulador ISV da Circuito Car usa os valores atualizados da AT e considera:</p>
 <ul>
 <li>cilindrada exata do motor</li>
@@ -781,18 +802,44 @@
 </ul>
 <p>O resultado inclui o ISV total estimado e é calculado instantaneamente, sem registo.</p>
 <div class="cta-inline">
-<h2 style="margin-top:0">Calcule o ISV da sua viatura</h2>
+<h2 style="margin-top:0" id="calcule-o-isv-da-sua-viatura">Calcule o ISV da sua viatura</h2>
 <p>Introduza as especificações do carro e obtenha uma estimativa do ISV em segundos.</p>
 <div class="cta-actions">
 <a class="cc-btn cc-btn--yellow" href="/simulador_isv.html"><i data-lucide="calculator"></i>Abrir simulador ISV</a>
 <a class="cc-btn cc-btn--ghost-dark" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
 </div>
 </div>
-<h2>O ISV no contexto dos custos de importação</h2>
+<h2 id="o-isv-no-contexto-dos-custos-de-importacao">O ISV no contexto dos custos de importação</h2>
 <p>O ISV é normalmente o maior custo variável ao importar um carro usado — mas não é o único. A <a href="/quanto-custa-importar-carro-usado-portugal.html">conta real de importação</a> inclui também transporte, inspeção prévia, emolumentos de registo e preparação. Um carro que parece barato no anúncio alemão pode sair mais caro do que um equivalente já matriculado em Portugal depois de somar tudo.</p>
 <p>Antes de avançar, calcule o ISV com o simulador, some os restantes custos e compare com o mercado nacional. Se não encontrar o carro certo em Portugal, a Circuito Car pode ajudar a analisar se a importação compensa para a viatura específica que procura.</p>
 <p><a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a></p>
 
+      
+      <section class="cc-faq">
+        <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+        <details class="cc-faq__item">
+          <summary>O que é o ISV e quem o paga?</summary>
+          <p>O ISV (Imposto Sobre Veículos) é um imposto nacional português pago na primeira matrícula de qualquer veículo em Portugal. Aplica-se tanto a carros novos como a carros usados importados do estrangeiro — incluindo de países da União Europeia. Quem já compra um carro com matrícula portuguesa não paga ISV; esse imposto já foi pago na altura da primeira matrícula.</p>
+        </details>
+        <details class="cc-faq__item">
+          <summary>Como é calculado o ISV em 2026?</summary>
+          <p>O ISV 2026 é calculado somando duas componentes: a componente de cilindrada (baseada nos cc do motor) e a componente de CO₂ (baseada nas emissões em g/km). A cada componente aplica-se depois uma redução percentual conforme a antiguidade do veículo. O resultado final é o ISV a pagar. A norma de emissões (NEDC ou WLTP) determina qual tabela de CO₂ se aplica.</p>
+        </details>
+        <details class="cc-faq__item">
+          <summary>Qual a diferença entre NEDC e WLTP no cálculo do ISV?</summary>
+          <p>NEDC e WLTP são dois ciclos de medição de emissões. O WLTP é mais rigoroso e produz valores de CO₂ mais elevados para o mesmo motor. Em Portugal, o ISV usa tabelas diferentes para cada norma — a tabela WLTP tem escalões mais altos para compensar os valores superiores. Carros matriculados antes de setembro de 2018 usam geralmente NEDC; os mais recentes usam WLTP. O Certificado de Conformidade (CoC) indica qual a norma aplicável.</p>
+        </details>
+        <details class="cc-faq__item">
+          <summary>Um carro com 10 anos paga muito ISV?</summary>
+          <p>Não. A tabela de redução por antiguidade do ISV prevê uma redução de 80% para veículos com mais de 10 anos de antiguidade. Isso significa que um carro de 2014 ou anterior paga apenas 20% do ISV que pagaria se fosse novo. A redução começa nos 10% (menos de 1 ano) e chega a 80% (mais de 10 anos), tornando os carros mais antigos muito menos penalizados pelo ISV.</p>
+        </details>
+        <details class="cc-faq__item">
+          <summary>Existe alguma isenção de ISV para carros elétricos ou híbridos plug-in?</summary>
+          <p>Sim. Os veículos 100% elétricos estão isentos de ISV em Portugal. Os híbridos plug-in beneficiam de uma redução significativa que varia conforme a autonomia elétrica do veículo. As regras exatas podem variar com alterações ao Código do ISV, por isso é importante confirmar com a Autoridade Tributária ou com a equipa Circuito Car antes de avançar com uma importação.</p>
+        </details>
+        
+      </section>
+      
     </article>
 
     <aside class="cc-sidebar">
@@ -829,7 +876,7 @@
 
       <div class="cc-side-card" id="equipa" style="scroll-margin-top: 90px;">
         <span class="cc-side-card__eyebrow">Contacto</span>
-        <h3>Fala com a Circuito Car</h3>
+        <h3>Fale com a Circuito Car</h3>
 
         <!-- Marco — primary, blue-accented -->
         <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
@@ -948,6 +995,7 @@
           <a href="/artigos.html">Artigos</a>
           <a href="/#ferramentas">Ferramentas</a>
           <a href="/#stock">Stock em destaque</a>
+          <a href="/avaliacoes.html">Avaliações</a>
           <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=blog_tabela_isv" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">

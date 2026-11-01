@@ -255,11 +255,24 @@
 .cc-archive-hero h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; color: var(--cc-paper); font-size: clamp(36px, 4.2vw, 60px); line-height: 0.98; letter-spacing: var(--cc-tracking-tight); margin: 0 0 16px; }
 .cc-archive-hero p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); max-width: 600px; margin: 0; }
 
+/* ── PESQUISA ── */
+.cc-archive-search { position: relative; max-width: 600px; margin-top: 24px; }
+.cc-archive-search label { display: block; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); font-weight: var(--cc-fw-bold); color: var(--cc-paper); margin-bottom: 8px; }
+.cc-archive-search input { width: 100%; min-height: 52px; padding: 12px 16px; border: 2px solid var(--cc-asphalt-600); border-radius: var(--cc-radius-md); background: var(--cc-paper); color: var(--cc-ink); font-family: var(--cc-font-body); font-size: 16px; }
+.cc-archive-search input:focus { outline: none; border-color: var(--cc-yellow); }
+.cc-archive-status { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); margin: 0 0 28px; }
+.cc-archive-status:empty { display: none; }
+.cc-archive-empty { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 28px; margin-bottom: 32px; }
+.cc-archive-empty p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); color: var(--cc-fg-muted); margin: 0 0 16px; }
+.cc-archive-card[hidden], .cc-cat-section[hidden], .cc-archive-empty[hidden] { display: none !important; }
+.is-searching .cc-archive-card--more { display: flex; }
+.is-searching .cc-cat-more-wrap, .is-searching .cc-cat-section--recent, .is-searching .cc-archive-back, .is-searching .cc-cat-section__count { display: none; }
+
 /* ── FILTER CHIPS ── */
 .cc-filter-bar { background: var(--cc-paper-card); border-bottom: 1px solid var(--cc-border); position: sticky; top: 57px; z-index: 40; }
 .cc-filter-bar__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
 .cc-filter-bar__inner::-webkit-scrollbar { display: none; }
-.cc-filter-chip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; padding: 10px 16px; color: var(--cc-fg-muted); border-bottom: 2px solid transparent; transition: color var(--cc-dur-fast) var(--cc-ease-out), border-color var(--cc-dur-fast) var(--cc-ease-out); }
+.cc-filter-chip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; min-height: 44px; padding: 10px 16px; color: var(--cc-fg-muted); border-bottom: 2px solid transparent; transition: color var(--cc-dur-fast) var(--cc-ease-out), border-color var(--cc-dur-fast) var(--cc-ease-out); }
 .cc-filter-chip:hover { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
 .cc-filter-chip--all { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
 
@@ -359,12 +372,18 @@
     
 
 
+
+
 <!-- ── ARCHIVE HERO ── -->
 <section class="cc-archive-hero">
   <div class="cc-archive-hero__inner">
     <span class="cc-archive-hero__eyebrow">Circuito Car Blog</span>
     <h1>Todos os <em>Artigos</em></h1>
     <p>Guias práticos e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga e Guimarães — escritos pela equipa do stand.</p>
+    <form class="cc-archive-search" role="search" onsubmit="return false">
+      <label for="cc-search">Pesquisar nos guias</label>
+      <input id="cc-search" type="search" placeholder="Ex.: garantia, IUC, elétrico, Braga" autocomplete="off" enterkeyhint="search" aria-controls="todos" />
+    </form>
   </div>
 </section>
 
@@ -377,7 +396,7 @@
     
       
       
-        <a class="cc-filter-chip" href="#importacao">Importação</a>
+        <a class="cc-filter-chip" href="#guia-de-compra">Guia de Compra</a>
       
     
       
@@ -387,7 +406,12 @@
     
       
       
-        <a class="cc-filter-chip" href="#guia-de-compra">Guia de Compra</a>
+        <a class="cc-filter-chip" href="#importacao">Importação</a>
+      
+    
+      
+      
+        <a class="cc-filter-chip" href="#hibridos">Híbridos</a>
       
     
       
@@ -400,11 +424,6 @@
         <a class="cc-filter-chip" href="#guia-local">Guia Local</a>
       
     
-      
-      
-        <a class="cc-filter-chip" href="#hibridos">Híbridos</a>
-      
-    
   </div>
 </div>
 
@@ -415,84 +434,18 @@
     <i data-lucide="arrow-left"></i>Voltar à homepage
   </a>
 
-  
-    
-    
-    <section class="cc-cat-section" id="importacao">
-      <div class="cc-cat-section__head">
-        <h2 class="cc-cat-section__label">Importação</h2>
-        <span class="cc-cat-section__count">3 artigos</span>
-      </div>
-      <div class="cc-archive-grid">
-        
-        <a class="cc-archive-card" href="/tabela-isv-2026-portugal.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Importação</span>
-            <h3 class="cc-archive-card__title">Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade</h3>
-            <p class="cc-archive-card__desc">Tabela completa do ISV 2026 em Portugal: escalões de cilindrada e CO₂, redução por antiguidade e exemplos práticos de cálculo para carros usados importados.</p>
-            <div class="cc-archive-card__meta">
-              <span>8 min de leitura</span>
-              <span>·</span>
-              <span>9 de julho de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card" href="/quanto-custa-importar-carro-usado-portugal.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('/img/importar-carro-bmw-116d-circuito-car.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Importação</span>
-            <h3 class="cc-archive-card__title">Quanto custa importar um carro usado para Portugal: a conta real antes de decidir</h3>
-            <p class="cc-archive-card__desc">ISV, Inspeção B, despachante e registo: saiba quanto custa mesmo importar um carro usado para Portugal. Contas reais com valores verificados de 2026.</p>
-            <div class="cc-archive-card__meta">
-              <span>7 min de leitura</span>
-              <span>·</span>
-              <span>28 de maio de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card" href="/importar-carro-usado-portugal.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('/img/importar-carro-bmw-116d-circuito-car.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Importação</span>
-            <h3 class="cc-archive-card__title">Importar carro usado para Portugal: quando compensa e como evitar erros</h3>
-            <p class="cc-archive-card__desc">Quer importar um carro usado para Portugal? Saiba que custos considerar, como funciona a legalização e quando a CircuitoCar pode ajudar a encontrar a viatura certa.</p>
-            <div class="cc-archive-card__meta">
-              <span>9 min de leitura</span>
-              <span>·</span>
-              <span>20 de maio de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-      </div>
+  <p class="cc-archive-status" id="cc-search-status" aria-live="polite"></p>
+  <div class="cc-archive-empty" id="cc-search-empty" hidden>
+    <p>Não encontrámos nenhum guia com esse termo. Tente outra palavra ou pergunte-nos diretamente.</p>
+    <a class="cc-btn cc-btn--yellow" href="/#contacto"><i data-lucide="message-square"></i>Falar com a equipa</a>
+  </div>
+
+  <section class="cc-cat-section cc-cat-section--recent" id="recentes">
+    <div class="cc-cat-section__head">
+      <h2 class="cc-cat-section__label">Mais recentes</h2>
+    </div>
+    <div class="cc-archive-grid">
       
-    </section>
-    
-  
-    
-    
-    <section class="cc-cat-section" id="atualidade">
-      <div class="cc-cat-section__head">
-        <h2 class="cc-cat-section__label">Atualidade</h2>
-        <span class="cc-cat-section__count">4 artigos</span>
-      </div>
-      <div class="cc-archive-grid">
-        
         <a class="cc-archive-card" href="/apoio-80-carros-eletricos-2027.html">
           
           <div class="cc-archive-card__media">
@@ -510,72 +463,46 @@
             </div>
           </div>
         </a>
-        
-        <a class="cc-archive-card" href="/carros-usados-mais-caros-2026.html">
+
+        <a class="cc-archive-card" href="/carros-usados-ate-15000-euros.html">
           
           <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp');"></div>
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724454236_omeustand_foto.webp');"></div>
           </div>
           
           <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Atualidade</span>
-            <h3 class="cc-archive-card__title">Porque é que os carros usados estão mais caros em 2026</h3>
-            <p class="cc-archive-card__desc">Procura a subir 16% e oferta a cair 3% em julho: o preço médio dos usados chegou aos 24.800€. Os números do mercado e o que muda para quem vai comprar.</p>
+            <span class="cc-archive-card__eyebrow">Guia de Compra</span>
+            <h3 class="cc-archive-card__title">Carros usados até 15.000€: o que dá para comprar em 2026 e como escolher bem</h3>
+            <p class="cc-archive-card__desc">Citadino recente, SUV compacto, elétrico ou diesel? O que 15.000€ compram hoje num carro usado, os modelos a considerar e os erros a evitar.</p>
             <div class="cc-archive-card__meta">
-              <span>8 min de leitura</span>
+              <span>9 min de leitura</span>
               <span>·</span>
-              <span>5 de setembro de 2026</span>
+              <span>26 de outubro de 2026</span>
             </div>
           </div>
         </a>
-        
-        <a class="cc-archive-card" href="/iuc-novas-regras-pagamento-2027.html">
+
+        <a class="cc-archive-card" href="/carro-eletrico-sem-garagem.html">
           
           <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp');"></div>
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724611180_omeustand_foto.webp');"></div>
           </div>
           
           <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Atualidade</span>
-            <h3 class="cc-archive-card__title">IUC: acabou o pagamento no mês da matrícula. O que muda em 2027 e 2028</h3>
-            <p class="cc-archive-card__desc">O Decreto-Lei 161/2026 fixa datas certas para pagar o IUC. Em 2026 nada muda, em 2027 há regime transitório e em 2028 abril passa a ser o mês base.</p>
+            <span class="cc-archive-card__eyebrow">Guia de Compra</span>
+            <h3 class="cc-archive-card__title">Carro elétrico sem garagem: compensa depender dos carregadores públicos?</h3>
+            <p class="cc-archive-card__desc">Sem garagem nem tomada em casa? Compare custos por 100 km, tempo de carregamento e postos disponíveis antes de comprar um carro elétrico usado.</p>
             <div class="cc-archive-card__meta">
-              <span>7 min de leitura</span>
+              <span>10 min de leitura</span>
               <span>·</span>
-              <span>5 de setembro de 2026</span>
+              <span>11 de outubro de 2026</span>
             </div>
           </div>
         </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/guerra-irao-impacto-escolha-carro-usado.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Atualidade</span>
-            <h3 class="cc-archive-card__title">Guerra no Irão: como a instabilidade pode influenciar a escolha do carro</h3>
-            <p class="cc-archive-card__desc">Perceba como a guerra no Irão, os combustíveis mais voláteis e a incerteza energética podem pesar na escolha de um carro usado.</p>
-            <div class="cc-archive-card__meta">
-              <span>8 min de leitura</span>
-              <span>·</span>
-              <span>18 de maio de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-      </div>
-      
-      <div class="cc-cat-more-wrap">
-        <button type="button" class="cc-cat-more" aria-expanded="false">
-          Ver mais 1 artigo
-          <i data-lucide="chevron-down"></i>
-        </button>
-      </div>
-      
-    </section>
-    
+
+    </div>
+  </section>
+
   
     
     
@@ -585,6 +512,7 @@
         <span class="cc-cat-section__count">14 artigos</span>
       </div>
       <div class="cc-archive-grid">
+        
         
         <a class="cc-archive-card" href="/carros-usados-ate-15000-euros.html">
           
@@ -603,6 +531,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card" href="/carro-eletrico-sem-garagem.html">
           
@@ -621,6 +551,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card" href="/comprar-carro-usado-fim-do-ano.html">
           
@@ -639,6 +571,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/inspecao-automovel-ipo-2026-portugal.html">
           
@@ -657,6 +591,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/vale-a-pena-comprar-eletrico-usado-2026.html">
           
@@ -675,6 +611,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-tvde-2026.html">
           
@@ -693,6 +631,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/checklist-comprar-carro-usado-antes-visita.html">
           
@@ -711,6 +651,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/diesel-ou-gasolina-carro-usado-2026.html">
           
@@ -729,6 +671,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/iuc-carros-usados-portugal.html">
           
@@ -747,6 +691,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/garantia-carro-usado-portugal.html">
           
@@ -765,6 +711,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/financiamento-carro-usado-portugal.html">
           
@@ -783,6 +731,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/como-funciona-retoma-carro-usado.html">
           
@@ -801,6 +751,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html">
           
@@ -819,6 +771,8 @@
             </div>
           </div>
         </a>
+
+        
         
         <a class="cc-archive-card cc-archive-card--more" href="/carros-automaticos-usados-vantagens-riscos.html">
           
@@ -837,6 +791,7 @@
             </div>
           </div>
         </a>
+
         
       </div>
       
@@ -852,31 +807,100 @@
   
     
     
-    <section class="cc-cat-section" id="desportivos">
+    <section class="cc-cat-section" id="atualidade">
       <div class="cc-cat-section__head">
-        <h2 class="cc-cat-section__label">Desportivos</h2>
-        <span class="cc-cat-section__count">1 artigo</span>
+        <h2 class="cc-cat-section__label">Atualidade</h2>
+        <span class="cc-cat-section__count">4 artigos</span>
       </div>
       <div class="cc-archive-grid">
         
-        <a class="cc-archive-card" href="/opel-gt-roadster-usado-2009.html">
+        
+        <a class="cc-archive-card" href="/apoio-80-carros-eletricos-2027.html">
           
           <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp');"></div>
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724621078_omeustand_foto.webp');"></div>
           </div>
           
           <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Desportivos</span>
-            <h3 class="cc-archive-card__title">Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá arrepios</h3>
-            <p class="cc-archive-card__desc">264 cv, tração traseira, caixa manual e cerca de 7.500 unidades. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado. Saiba o que procurar.</p>
+            <span class="cc-archive-card__eyebrow">Atualidade</span>
+            <h3 class="cc-archive-card__title">Apoio de 80% para carros elétricos: quem pode receber e o que ainda falta saber</h3>
+            <p class="cc-archive-card__desc">O Governo anunciou um apoio de até 80% para comprar carros elétricos. Veja quem pode receber, as contas reais e o que falta definir, incluindo os usados.</p>
             <div class="cc-archive-card__meta">
               <span>7 min de leitura</span>
+              <span>·</span>
+              <span>1 de novembro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card" href="/carros-usados-mais-caros-2026.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7723893907_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Atualidade</span>
+            <h3 class="cc-archive-card__title">Porque é que os carros usados estão mais caros em 2026</h3>
+            <p class="cc-archive-card__desc">Procura a subir 16% e oferta a cair 3% em julho: o preço médio dos usados chegou aos 24.800€. Os números do mercado e o que muda para quem vai comprar.</p>
+            <div class="cc-archive-card__meta">
+              <span>8 min de leitura</span>
+              <span>·</span>
+              <span>5 de setembro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card" href="/iuc-novas-regras-pagamento-2027.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724444664_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Atualidade</span>
+            <h3 class="cc-archive-card__title">IUC: acabou o pagamento no mês da matrícula. O que muda em 2027 e 2028</h3>
+            <p class="cc-archive-card__desc">O Decreto-Lei 161/2026 fixa datas certas para pagar o IUC. Em 2026 nada muda, em 2027 há regime transitório e em 2028 abril passa a ser o mês base.</p>
+            <div class="cc-archive-card__meta">
+              <span>7 min de leitura</span>
+              <span>·</span>
+              <span>5 de setembro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/guerra-irao-impacto-escolha-carro-usado.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Atualidade</span>
+            <h3 class="cc-archive-card__title">Guerra no Irão: como a instabilidade pode influenciar a escolha do carro</h3>
+            <p class="cc-archive-card__desc">Perceba como a guerra no Irão, os combustíveis mais voláteis e a incerteza energética podem pesar na escolha de um carro usado.</p>
+            <div class="cc-archive-card__meta">
+              <span>8 min de leitura</span>
               <span>·</span>
               <span>18 de maio de 2026</span>
             </div>
           </div>
         </a>
+
         
+      </div>
+      
+      <div class="cc-cat-more-wrap">
+        <button type="button" class="cc-cat-more" aria-expanded="false">
+          Ver mais 1 artigo
+          <i data-lucide="chevron-down"></i>
+        </button>
       </div>
       
     </section>
@@ -884,254 +908,73 @@
   
     
     
-    <section class="cc-cat-section" id="guia-local">
+    <section class="cc-cat-section" id="importacao">
       <div class="cc-cat-section__head">
-        <h2 class="cc-cat-section__label">Guia Local</h2>
-        <span class="cc-cat-section__count">13 artigos</span>
+        <h2 class="cc-cat-section__label">Importação</h2>
+        <span class="cc-cat-section__count">3 artigos</span>
       </div>
       <div class="cc-archive-grid">
         
-        <a class="cc-archive-card" href="/onde-comprar-carro-usado-famalicao.html">
+        
+        <a class="cc-archive-card" href="/tabela-isv-2026-portugal.html">
           
           <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724223933_omeustand_foto.webp');"></div>
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724173046_omeustand_foto.webp');"></div>
           </div>
           
           <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Onde comprar carro usado em Famalicão com mais confiança</h3>
-            <p class="cc-archive-card__desc">Descubra o que deve analisar antes de comprar carro usado em Famalicão, que erros evitar e como escolher com mais confiança.</p>
+            <span class="cc-archive-card__eyebrow">Importação</span>
+            <h3 class="cc-archive-card__title">Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade</h3>
+            <p class="cc-archive-card__desc">Tabela completa do ISV 2026 em Portugal: escalões de cilindrada e CO₂, redução por antiguidade e exemplos práticos de cálculo para carros usados importados.</p>
             <div class="cc-archive-card__meta">
               <span>8 min de leitura</span>
               <span>·</span>
-              <span>10 de abril de 2026</span>
+              <span>9 de julho de 2026</span>
             </div>
           </div>
         </a>
+
         
-        <a class="cc-archive-card" href="/carros-usados-braga.html">
+        
+        <a class="cc-archive-card" href="/quanto-custa-importar-carro-usado-portugal.html">
           
           <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-carros-usados-circuito-car-famalicao.webp');"></div>
+            <div class="cc-archive-card__img" style="background-image:url('/img/importar-carro-bmw-116d-circuito-car.webp');"></div>
           </div>
           
           <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Braga</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Braga? O stand Circuito Car em Joane, Famalicão, fica a apenas 18 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <span class="cc-archive-card__eyebrow">Importação</span>
+            <h3 class="cc-archive-card__title">Quanto custa importar um carro usado para Portugal: a conta real antes de decidir</h3>
+            <p class="cc-archive-card__desc">ISV, Inspeção B, despachante e registo: saiba quanto custa mesmo importar um carro usado para Portugal. Contas reais com valores verificados de 2026.</p>
             <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
+              <span>7 min de leitura</span>
               <span>·</span>
-              <span>15 de janeiro de 2026</span>
+              <span>28 de maio de 2026</span>
             </div>
           </div>
         </a>
+
         
-        <a class="cc-archive-card" href="/carros-usados-guimaraes.html">
+        
+        <a class="cc-archive-card" href="/importar-carro-usado-portugal.html">
           
           <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/circuito-car-stand-automovel-joane.webp');"></div>
+            <div class="cc-archive-card__img" style="background-image:url('/img/importar-carro-bmw-116d-circuito-car.webp');"></div>
           </div>
           
           <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Guimarães</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Guimarães? O stand Circuito Car em Joane, Famalicão, fica a apenas 22 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <span class="cc-archive-card__eyebrow">Importação</span>
+            <h3 class="cc-archive-card__title">Importar carro usado para Portugal: quando compensa e como evitar erros</h3>
+            <p class="cc-archive-card__desc">Quer importar um carro usado para Portugal? Saiba que custos considerar, como funciona a legalização e quando a CircuitoCar pode ajudar a encontrar a viatura certa.</p>
             <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
+              <span>9 min de leitura</span>
               <span>·</span>
-              <span>15 de janeiro de 2026</span>
+              <span>20 de maio de 2026</span>
             </div>
           </div>
         </a>
+
         
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-barcelos.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Barcelos</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Barcelos? O stand Circuito Car em Joane, Famalicão, fica a apenas 20 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-santo-tirso.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-circuito-car-credito-automovel.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Santo Tirso</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Santo Tirso? O stand Circuito Car em Joane, Famalicão, fica a apenas 16 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-trofa.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-carros-usados-circuito-car-famalicao.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados na Trofa</h3>
-            <p class="cc-archive-card__desc">Procura carros usados na Trofa? O stand Circuito Car em Joane, Famalicão, fica a apenas 14 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-povoa-de-varzim.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/circuito-car-stand-automovel-joane.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados na Póvoa de Varzim</h3>
-            <p class="cc-archive-card__desc">Procura carros usados na Póvoa de Varzim? O stand Circuito Car em Joane, Famalicão, fica a apenas 30 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-vila-do-conde.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Vila do Conde</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Vila do Conde? O stand Circuito Car em Joane, Famalicão, fica a apenas 32 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-felgueiras.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-circuito-car-credito-automovel.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Felgueiras</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Felgueiras? O stand Circuito Car em Joane, Famalicão, fica a apenas 28 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-fafe.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-carros-usados-circuito-car-famalicao.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Fafe</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Fafe? O stand Circuito Car em Joane, Famalicão, fica a apenas 24 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-vizela.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/circuito-car-stand-automovel-joane.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Vizela</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Vizela? O stand Circuito Car em Joane, Famalicão, fica a apenas 19 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-amarante.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados em Amarante</h3>
-            <p class="cc-archive-card__desc">Procura carros usados em Amarante? O stand Circuito Car em Joane, Famalicão, fica a apenas 42 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-porto.html">
-          
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-circuito-car-credito-automovel.webp');"></div>
-          </div>
-          
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">Guia Local</span>
-            <h3 class="cc-archive-card__title">Carros Usados no Porto</h3>
-            <p class="cc-archive-card__desc">Procura carros usados no Porto? O stand Circuito Car em Joane, Famalicão, fica a apenas 48 km — viaturas verificadas, garantia e financiamento próprio.</p>
-            <div class="cc-archive-card__meta">
-              <span>5 min de leitura</span>
-              <span>·</span>
-              <span>15 de janeiro de 2026</span>
-            </div>
-          </div>
-        </a>
-        
-      </div>
-      
-      <div class="cc-cat-more-wrap">
-        <button type="button" class="cc-cat-more" aria-expanded="false">
-          Ver mais 10 artigos
-          <i data-lucide="chevron-down"></i>
-        </button>
       </div>
       
     </section>
@@ -1145,6 +988,7 @@
         <span class="cc-cat-section__count">1 artigo</span>
       </div>
       <div class="cc-archive-grid">
+        
         
         <a class="cc-archive-card" href="/vale-a-pena-comprar-hibrido-usado-2026.html">
           
@@ -1163,7 +1007,323 @@
             </div>
           </div>
         </a>
+
         
+      </div>
+      
+    </section>
+    
+  
+    
+    
+    <section class="cc-cat-section" id="desportivos">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Desportivos</h2>
+        <span class="cc-cat-section__count">1 artigo</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        
+        <a class="cc-archive-card" href="/opel-gt-roadster-usado-2009.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724383789_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Desportivos</span>
+            <h3 class="cc-archive-card__title">Opel GT: o roadster que ninguém esperava da Opel — e que ainda dá arrepios</h3>
+            <p class="cc-archive-card__desc">264 cv, tração traseira, caixa manual e cerca de 7.500 unidades. O Opel GT de 2009 é um dos desportivos usados mais subestimados do mercado. Saiba o que procurar.</p>
+            <div class="cc-archive-card__meta">
+              <span>7 min de leitura</span>
+              <span>·</span>
+              <span>18 de maio de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+      </div>
+      
+    </section>
+    
+  
+    
+    
+    <section class="cc-cat-section" id="guia-local">
+      <div class="cc-cat-section__head">
+        <h2 class="cc-cat-section__label">Guia Local</h2>
+        <span class="cc-cat-section__count">13 artigos</span>
+      </div>
+      <div class="cc-archive-grid">
+        
+        
+        <a class="cc-archive-card" href="/onde-comprar-carro-usado-famalicao.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://omeustand.pt/viaturas/224/7724223933_omeustand_foto.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Onde comprar carro usado em Famalicão com mais confiança</h3>
+            <p class="cc-archive-card__desc">Descubra o que deve analisar antes de comprar carro usado em Famalicão, que erros evitar e como escolher com mais confiança.</p>
+            <div class="cc-archive-card__meta">
+              <span>8 min de leitura</span>
+              <span>·</span>
+              <span>10 de abril de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card" href="/carros-usados-braga.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-carros-usados-circuito-car-famalicao.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Braga</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Braga? O stand Circuito Car em Joane, Famalicão, fica a apenas 18 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card" href="/carros-usados-guimaraes.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/circuito-car-stand-automovel-joane.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Guimarães</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Guimarães? O stand Circuito Car em Joane, Famalicão, fica a apenas 22 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-barcelos.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Barcelos</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Barcelos? O stand Circuito Car em Joane, Famalicão, fica a apenas 20 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-santo-tirso.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-circuito-car-credito-automovel.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Santo Tirso</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Santo Tirso? O stand Circuito Car em Joane, Famalicão, fica a apenas 16 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-trofa.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-carros-usados-circuito-car-famalicao.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados na Trofa</h3>
+            <p class="cc-archive-card__desc">Procura carros usados na Trofa? O stand Circuito Car em Joane, Famalicão, fica a apenas 14 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-povoa-de-varzim.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/circuito-car-stand-automovel-joane.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados na Póvoa de Varzim</h3>
+            <p class="cc-archive-card__desc">Procura carros usados na Póvoa de Varzim? O stand Circuito Car em Joane, Famalicão, fica a apenas 30 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-vila-do-conde.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Vila do Conde</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Vila do Conde? O stand Circuito Car em Joane, Famalicão, fica a apenas 32 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-felgueiras.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-circuito-car-credito-automovel.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Felgueiras</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Felgueiras? O stand Circuito Car em Joane, Famalicão, fica a apenas 28 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-fafe.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-carros-usados-circuito-car-famalicao.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Fafe</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Fafe? O stand Circuito Car em Joane, Famalicão, fica a apenas 24 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-vizela.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/circuito-car-stand-automovel-joane.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Vizela</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Vizela? O stand Circuito Car em Joane, Famalicão, fica a apenas 19 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-amarante.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/carros-usados-circuito-car-vale-do-ave.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados em Amarante</h3>
+            <p class="cc-archive-card__desc">Procura carros usados em Amarante? O stand Circuito Car em Joane, Famalicão, fica a apenas 42 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+        
+        <a class="cc-archive-card cc-archive-card--more" href="/carros-usados-porto.html">
+          
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('https://circuitocar.blog/img/stand-circuito-car-credito-automovel.webp');"></div>
+          </div>
+          
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">Guia Local</span>
+            <h3 class="cc-archive-card__title">Carros Usados no Porto</h3>
+            <p class="cc-archive-card__desc">Procura carros usados no Porto? O stand Circuito Car em Joane, Famalicão, fica a apenas 48 km — viaturas verificadas, garantia e financiamento próprio.</p>
+            <div class="cc-archive-card__meta">
+              <span>5 min de leitura</span>
+              <span>·</span>
+              <span>15 de janeiro de 2026</span>
+            </div>
+          </div>
+        </a>
+
+        
+      </div>
+      
+      <div class="cc-cat-more-wrap">
+        <button type="button" class="cc-cat-more" aria-expanded="false">
+          Ver mais 10 artigos
+          <i data-lucide="chevron-down"></i>
+        </button>
       </div>
       
     </section>
@@ -1173,6 +1333,33 @@
 </div>
 
 <script>
+  (function () {
+    var input = document.getElementById('cc-search');
+    var body = document.getElementById('todos');
+    var status = document.getElementById('cc-search-status');
+    var empty = document.getElementById('cc-search-empty');
+    var sections = [].slice.call(body.querySelectorAll('.cc-cat-section:not(.cc-cat-section--recent)'));
+    var clean = function (t) { return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };
+    input.addEventListener('input', function () {
+      var terms = clean(input.value).trim().split(/\s+/).filter(Boolean);
+      var total = 0;
+      body.classList.toggle('is-searching', terms.length > 0);
+      sections.forEach(function (section) {
+        var hits = 0;
+        section.querySelectorAll('.cc-archive-card').forEach(function (card) {
+          var text = clean(card.textContent);
+          var match = terms.every(function (t) { return text.indexOf(t) !== -1; });
+          card.hidden = !match;
+          if (match) hits++;
+        });
+        section.hidden = hits === 0;
+        total += hits;
+      });
+      empty.hidden = !terms.length || total > 0;
+      status.textContent = !terms.length ? '' : total === 0 ? 'Nenhum guia encontrado.' : total === 1 ? '1 guia encontrado.' : total + ' guias encontrados.';
+    });
+  })();
+
   document.querySelectorAll('.cc-cat-more').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var section = btn.closest('.cc-cat-section');
@@ -1198,6 +1385,7 @@
           <a href="/artigos.html">Artigos</a>
           <a href="/#ferramentas">Ferramentas</a>
           <a href="/#stock">Stock em destaque</a>
+          <a href="/avaliacoes.html">Avaliações</a>
           <a href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign=blog_artigos" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">
