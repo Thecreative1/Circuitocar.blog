@@ -24,7 +24,7 @@ inventoryLabel: "Ver stock disponível"
 lead: "Antes de importar, é importante perceber se compensa. Muitos compradores não encontram em Portugal exatamente o carro que procuram — a motorização certa, a versão equipada, o histórico de manutenção que querem. A solução parece óbvia: ir buscar lá fora. Mas o preço que aparece no anúncio estrangeiro não é o custo final em Portugal."
 
 heroImage: "/img/importar-carro-bmw-116d-circuito-car.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "BMW 116d 2016 na Circuito Car — exemplo de importação alemã verificada"
 heroWhatsappMsg: "Olá, vi o artigo sobre importação de carros usados e gostava de perceber se compensa para a viatura que tenho em mente."
 

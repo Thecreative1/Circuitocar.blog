@@ -129,7 +129,7 @@ A typo or new value creates an empty/missing section. Pick one of:
 
 `Importação` · `Atualidade` · `Guia de Compra` · `Desportivos` · `Guia Local` · `Híbridos`
 
-To add a NEW category, you must also add it to the `categories` array in `src/artigos.njk` (with a matching `id`), and ideally a card in the homepage `#categorias` section.
+To add a NEW category, you must also add it to the `categories` array in `src/artigos.njk` (with a matching `id`), and ideally a link in the homepage `#categorias` row ("Por tema", inside the Artigos section).
 
 ### Writing style — ALWAYS formal "você" (northern PT register)
 
@@ -176,6 +176,15 @@ Three actions, clear visual priority (don't make them equal weight):
 1. **Começar a ler** — primary, `cc-btn cc-btn--yellow cc-btn--xl` (largest, glowing).
 2. **Simuladores gratuitos** — secondary, `cc-btn cc-btn--ghost-light` (regular size).
 3. **Ver stock** — tertiary, `cc-btn cc-btn--ghost-light`.
+
+### Homepage structure (reorganised 2026-11-01)
+
+Six sections, content first: Hero → Artigos (with "Os guias mais procurados" and "Por tema") → Ferramentas → Stock → Sobre → Contacto (includes the old "Onde estamos": hours, Maps, links to every city page). The "3 passos" and "Porquê a Circuito Car" sections were removed on purpose, because they repeated other sections and made the phone page ~21 screens long (now ~14). Don't add sections back without removing one.
+
+- **Anchors other pages rely on:** `#stock`, `#ferramentas`, `#artigos`, `#categorias`, `#sobre`, `#contacto`, `#local-seo` (the "Visitar o Stand" card). Keep them when moving things.
+- **Hero stats must be facts that stay true.** "50+ viaturas" was false (16 for sale in Nov 2026) and "5★ Google" could not be verified, so both were removed. The guide count comes from the `onlyGuides` filter, which excludes city pages. Only bring a Google rating back with the real score and review count from the owner.
+- **"Os guias mais procurados" is a hand-written list in `src/index.njk`**, chosen from Search Console, and also gives Google a path to guides it hasn't indexed. Review it when the data changes; every URL must exist.
+- **Internal links matter here:** with no external links, these homepage links are how Google finds pages. Don't turn city or guide links back into plain text.
 
 ### Verifying a visual change before pushing
 

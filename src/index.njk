@@ -140,22 +140,7 @@ inlineStyle: |
   .cc-stock-card__price { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); font-size: var(--cc-fs-2xl); color: var(--cc-ink); letter-spacing: 0; line-height: 1; -webkit-font-smoothing: subpixel-antialiased; font-variant-numeric: tabular-nums; margin-top: 10px; }
   .cc-stock-foot { text-align: center; margin-top: 40px; }
 
-  /* ===== 3-STEP GRID ===== */
-  .cc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .cc-step { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; }
-  .cc-step__icon { width: 44px; height: 44px; border-radius: var(--cc-radius-md); background: var(--cc-yellow); color: var(--cc-ink); display: grid; place-items: center; }
-  .cc-step__icon i { width: 22px; height: 22px; }
-  .cc-step__num { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-yellow-deep); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
-  .cc-step h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); line-height: 1.1; color: var(--cc-ink); margin: 0; }
-  .cc-step p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0; }
 
-  /* ===== CATEGORIES ===== */
-  .cc-cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .cc-cat { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 24px; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), transform var(--cc-dur-base) var(--cc-ease-out); }
-  .cc-cat:hover { border-color: var(--cc-blue-mid); transform: translateY(-2px); }
-  .cc-cat__num { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-yellow-deep); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; margin-bottom: 14px; }
-  .cc-cat h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-lg); line-height: 1.1; color: var(--cc-ink); margin: 0 0 8px; }
-  .cc-cat p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0; }
 
   /* ===== ARTICLES (editorial style, NO chip overlay) ===== */
   .cc-articles { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
@@ -199,27 +184,27 @@ inlineStyle: |
   .cc-tool__feat { display: flex; align-items: flex-start; gap: 10px; font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); }
   .cc-tool__feat i { width: 16px; height: 16px; color: var(--cc-yellow-deep); flex-shrink: 0; margin-top: 2px; }
 
-  /* ===== LOCAL / VISIT ===== */
-  .cc-local { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .cc-local-card { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-top: 3px solid var(--cc-blue); border-radius: var(--cc-radius-lg); padding: 28px; }
-  .cc-local-card h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); line-height: 1.05; color: var(--cc-ink); margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
-  .cc-local-card h3 i { width: 22px; height: 22px; color: var(--cc-yellow-deep); }
-  .cc-local-card p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-fg-muted); margin: 0 0 14px; }
-  .cc-local-card strong { color: var(--cc-ink); font-weight: var(--cc-fw-semibold); }
   .cc-tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
   .cc-loc-tag { display: inline-flex; align-items: center; padding: 5px 11px; border-radius: var(--cc-radius-pill); font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); background: var(--cc-paper-warm); border: 1px solid var(--cc-blue-mid); color: var(--cc-ink); letter-spacing: 0.02em; }
+  /* ===== GUIAS MAIS PROCURADOS + TEMAS ===== */
+  .cc-popular { margin-top: 48px; }
+  .cc-popular__title { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); line-height: 1.1; color: var(--cc-ink); margin: 0 0 14px; }
+  .cc-popular__list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .cc-popular__list a { display: flex; align-items: center; min-height: 44px; padding: 8px 0; border-bottom: 1px solid var(--cc-border); font-size: var(--cc-fs-base); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); transition: color var(--cc-dur-fast) var(--cc-ease-out); }
+  .cc-popular__list a:hover { color: var(--cc-yellow-deep); }
+  .cc-themes { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; scroll-margin-top: 90px; }
+  .cc-themes__label { font-size: var(--cc-fs-xs); font-weight: var(--cc-fw-bold); letter-spacing: 0.14em; text-transform: uppercase; color: var(--cc-fg-muted); margin-right: 6px; }
+  a.cc-loc-tag { min-height: 44px; transition: background var(--cc-dur-fast) var(--cc-ease-out); }
+  a.cc-loc-tag:hover { background: var(--cc-yellow); }
+  .cc-cities__title { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); font-weight: var(--cc-fw-bold); color: var(--cc-ink); margin: 20px 0 0; }
+  .cc-visit__btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .cc-visit__mail { margin: 18px 0 0 !important; font-size: var(--cc-fs-sm) !important; }
+  .cc-visit__mail a { text-decoration: underline; text-underline-offset: 3px; }
+  .cc-contact-card { scroll-margin-top: 90px; }
   .cc-hours { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: 1.9; color: var(--cc-fg-muted); }
   .cc-hours strong { color: var(--cc-ink); font-weight: var(--cc-fw-semibold); }
   .cc-hours .cc-hours--closed { color: var(--cc-fg-subtle); }
 
-  /* ===== VALUES (dark band) ===== */
-  .cc-values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .cc-val { background: var(--cc-asphalt-900); border: 1px solid var(--cc-asphalt-700); border-radius: var(--cc-radius-lg); padding: 26px; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), transform var(--cc-dur-base) var(--cc-ease-out); }
-  .cc-val:hover { border-color: var(--cc-yellow); transform: translateY(-2px); }
-  .cc-val__icon { width: 40px; height: 40px; border-radius: var(--cc-radius-md); background: var(--cc-yellow); color: var(--cc-ink); display: grid; place-items: center; margin-bottom: 16px; }
-  .cc-val__icon i { width: 20px; height: 20px; }
-  .cc-val h3 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-lg); line-height: 1.1; color: var(--cc-paper); margin: 0 0 8px; }
-  .cc-val p { font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); margin: 0; }
 
   /* ===== ABOUT ===== */
   .cc-about { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -278,7 +263,7 @@ inlineStyle: |
     .cc-topbar__dot { animation: none; }
     .cc-hero__car, .cc-stock-card, .cc-stock-card__img,
     .cc-art-hero, .cc-art-hero__img, .cc-art-mini,
-    .cc-cat, .cc-tool, .cc-val { transition: none; transform: none !important; }
+    .cc-tool { transition: none; transform: none !important; }
   }
 
   /* ===== RESPONSIVE ===== */
@@ -286,7 +271,7 @@ inlineStyle: |
     .cc-hero__grid { grid-template-columns: 1fr; gap: 48px; }
     .cc-hero__car { max-width: 520px; }
     .cc-hero__feat { aspect-ratio: 16/11; }
-    .cc-stock-grid, .cc-cats, .cc-values { grid-template-columns: repeat(2, 1fr); }
+    .cc-stock-grid { grid-template-columns: repeat(2, 1fr); }
     .cc-footer__grid { grid-template-columns: 1fr 1fr; }
     .cc-about { grid-template-columns: 1fr; padding: 32px; gap: 32px; }
   }
@@ -299,20 +284,24 @@ inlineStyle: |
     .cc-section { padding: 56px 0; }
     .cc-header__nav { display: none; }
     .cc-header__brand-tag { margin-left: auto; }
-    .cc-steps, .cc-articles, .cc-tools, .cc-local, .cc-contact { grid-template-columns: 1fr; }
-    .cc-cats { grid-template-columns: 1fr 1fr; }
+    .cc-articles, .cc-tools, .cc-contact { grid-template-columns: 1fr; }
     .cc-footer__grid { grid-template-columns: 1fr; gap: 28px; }
     .cc-art-mini { grid-template-columns: 96px 1fr; }
+    .cc-tool__feats { display: none; }
     .cc-mobile-dock { display: flex; }
     body { padding-bottom: 72px; }
   }
   @media (max-width: 520px) {
-    .cc-stock-grid { grid-template-columns: 1fr; gap: 14px; }
-    .cc-values { grid-template-columns: 1fr; }
+    .cc-stock-grid { gap: 12px; }
+    .cc-stock-card__body { padding: 12px 12px 14px; }
+    .cc-stock-card__title { font-size: var(--cc-fs-sm); }
+    .cc-stock-card__meta { gap: 6px; }
+    .cc-stock-card__price { font-size: var(--cc-fs-xl); }
+    .cc-popular__list { grid-template-columns: 1fr; }
     .cc-sellers { grid-template-columns: 1fr; }
     .cc-topbar__pill { display: none; }
     .cc-hero__actions .cc-btn, .cc-section__head .cc-btn, .cc-stock .cc-btn { width: 100%; }
-    .cc-local-card, .cc-contact-card { padding: 22px; }
+    .cc-contact-card { padding: 22px; }
   }
 ---
 
@@ -333,9 +322,9 @@ inlineStyle: |
         <a class="cc-btn cc-btn--ghost-light" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=hero&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock</a>
       </div>
       <div class="cc-hero__stats">
-        <div class="cc-stat"><strong>50+</strong><span>Viaturas em stock</span></div>
+        <div class="cc-stat"><strong>{{ (collections.articles | onlyGuides).length }}</strong><span>Guias gratuitos</span></div>
+        <div class="cc-stat"><strong>4</strong><span>Simuladores gratuitos</span></div>
         <div class="cc-stat"><strong>Joane</strong><span>Famalicão · Vale do Ave</span></div>
-        <div class="cc-stat"><strong>5★</strong><span>Google · Joane</span></div>
       </div>
     </div>
     {% for featured in collections.featuredArticle %}
@@ -351,87 +340,6 @@ inlineStyle: |
     {% endfor %}
   </div>
   <div class="cc-hero__chevron" aria-hidden="true"></div>
-</section>
-
-<!-- ── STOCK EM DESTAQUE ── -->
-<section class="cc-section" id="stock">
-  <div class="cc-wrap">
-    <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Stock atualizado</span>
-      <h2 class="cc-section__title">Viaturas em <em>destaque</em> no stand</h2>
-      <p class="cc-section__sub">Uma seleção do nosso stock atual em Joane. Todas verificadas, com garantia, prontas a sair. Stock completo em circuitocar.pt.</p>
-    </div>
-    <div class="cc-stock-grid">
-
-      {% for car in stock %}
-      <a class="cc-stock-card" href="{{ car.url }}" target="_blank" rel="noopener noreferrer">
-        <div class="cc-stock-card__media"><div class="cc-stock-card__img" style="background-image:url('{{ car.image }}');"></div></div>
-        <div class="cc-stock-card__body">
-          <span class="cc-stock-card__eyebrow">{{ car.eyebrow }}</span>
-          <h3 class="cc-stock-card__title">{{ car.title }}</h3>
-          <div class="cc-stock-card__meta">
-            <span><i data-lucide="calendar"></i>{{ car.year }}</span>
-            <span><i data-lucide="fuel"></i>{{ car.fuel }}</span>
-            <span><i data-lucide="gauge"></i>{{ car.km }}</span>
-          </div>
-          <div class="cc-stock-card__price">{{ car.price }}</div>
-        </div>
-      </a>
-      {% endfor %}
-
-    </div>
-    <div class="cc-stock-foot">
-      <a class="cc-btn cc-btn--dark cc-btn--lg" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=stock_all&utm_campaign=homepage" target="_blank" rel="noopener noreferrer"><i data-lucide="arrow-right"></i>Ver stock completo em circuitocar.pt</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── HOW IT WORKS ── -->
-<section class="cc-section cc-section--warm">
-  <div class="cc-wrap">
-    <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Como este blog ajuda</span>
-      <h2 class="cc-section__title">Da dúvida à <em>decisão</em>, em 3 passos simples</h2>
-      <p class="cc-section__sub">Conteúdo pensado para quem está a ponderar comprar carro — com informação honesta, sem pressão de venda.</p>
-    </div>
-    <div class="cc-steps">
-      <div class="cc-step">
-        <div class="cc-step__icon"><i data-lucide="book-open"></i></div>
-        <span class="cc-step__num">Passo 01</span>
-        <h3>Informe-se sem pressão</h3>
-        <p>Leia os guias sobre tipos de carros, híbridos, caixas automáticas e o que perguntar num stand — tudo escrito para compradores reais, não para especialistas.</p>
-      </div>
-      <div class="cc-step">
-        <div class="cc-step__icon"><i data-lucide="calculator"></i></div>
-        <span class="cc-step__num">Passo 02</span>
-        <h3>Calcula e simula</h3>
-        <p>Use os simuladores gratuitos de crédito e retoma para saber ao certo a prestação mensal e quanto vale o seu carro atual — antes de falar com alguém.</p>
-      </div>
-      <div class="cc-step">
-        <div class="cc-step__icon"><i data-lucide="message-square"></i></div>
-        <span class="cc-step__num">Passo 03</span>
-        <h3>Contacte quando estiver pronto</h3>
-        <p>Quando a dúvida estiver esclarecida, fala com a equipa da Circuito Car por WhatsApp ou telefone — sem compromisso, sem pressão.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CATEGORIES ── -->
-<section class="cc-section" id="categorias">
-  <div class="cc-wrap">
-    <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Por tema</span>
-      <h2 class="cc-section__title">Encontre o guia certo para a sua <em>dúvida</em></h2>
-      <p class="cc-section__sub">Conteúdo organizado por tipo de pesquisa — desde quem quer comprar perto de casa até quem está a ponderar híbrido ou financiamento.</p>
-    </div>
-    <div class="cc-cats">
-      <a class="cc-cat" href="{{ site.basePath }}/artigos.html#guia-local"><div class="cc-cat__num">01 — Onde Comprar</div><h3>Guias Locais</h3><p>Para quem está a comparar stands na zona — Famalicão, Guimarães, Braga, Trofa e Vale do Ave. O que perguntar e o que verificar.</p></a>
-      <a class="cc-cat" href="{{ site.basePath }}/artigos.html#hibridos"><div class="cc-cat__num">02 — Tipos de Motor</div><h3>Híbridos e Elétricos</h3><p>Para quem está a ponderar mudar de gasóleo. Custos reais, autonomia, manutenção e o que esperar de um híbrido em segunda mão.</p></a>
-      <a class="cc-cat" href="{{ site.basePath }}/artigos.html#guia-de-compra"><div class="cc-cat__num">03 — Perfis de Uso</div><h3>Guias de Compra</h3><p>Para famílias, condução urbana e viagens longas. Como escolher pelo uso real e não pelo que parece bem no papel.</p></a>
-      <a class="cc-cat" href="{{ site.basePath }}/#ferramentas"><div class="cc-cat__num">04 — Ferramentas</div><h3>Financiamento e Retoma</h3><p>Simuladores gratuitos para estimar a prestação mensal e quanto vale o seu carro atual — antes de falar com alguém.</p></a>
-    </div>
-  </div>
 </section>
 
 <!-- ── ARTICLES ── -->
@@ -483,6 +391,28 @@ inlineStyle: |
         <i data-lucide="book-open"></i>Ver todos os artigos
       </a>
     </div>
+    <div class="cc-popular">
+      <h3 class="cc-popular__title">Os guias mais procurados</h3>
+      <ul class="cc-popular__list">
+        <li><a href="{{ site.basePath }}/garantia-carro-usado-portugal.html">Garantia de carro usado: o que a lei cobre</a></li>
+        <li><a href="{{ site.basePath }}/diesel-ou-gasolina-carro-usado-2026.html">Diesel ou gasolina num carro usado?</a></li>
+        <li><a href="{{ site.basePath }}/tabela-isv-2026-portugal.html">Tabela do ISV 2026: escalões e redução</a></li>
+        <li><a href="{{ site.basePath }}/inspecao-automovel-ipo-2026-portugal.html">Inspeção automóvel em 2026</a></li>
+        <li><a href="{{ site.basePath }}/checklist-comprar-carro-usado-antes-visita.html">Checklist antes de comprar carro usado</a></li>
+        <li><a href="{{ site.basePath }}/quanto-custa-importar-carro-usado-portugal.html">Quanto custa importar um carro usado</a></li>
+        <li><a href="{{ site.basePath }}/vale-a-pena-comprar-hibrido-usado-2026.html">Vale a pena comprar um híbrido usado?</a></li>
+        <li><a href="{{ site.basePath }}/os-pontos-que-mais-pesam-na-escolha-de-um-carro-para-familia.html">Como escolher um carro para a família</a></li>
+      </ul>
+    </div>
+    <div class="cc-themes" id="categorias">
+      <span class="cc-themes__label">Por tema</span>
+      <a class="cc-loc-tag" href="{{ site.basePath }}/artigos.html#guia-de-compra">Guias de compra</a>
+      <a class="cc-loc-tag" href="{{ site.basePath }}/artigos.html#atualidade">Atualidade</a>
+      <a class="cc-loc-tag" href="{{ site.basePath }}/artigos.html#importacao">Importação</a>
+      <a class="cc-loc-tag" href="{{ site.basePath }}/artigos.html#hibridos">Híbridos</a>
+      <a class="cc-loc-tag" href="{{ site.basePath }}/artigos.html#guia-local">Guias locais</a>
+      <a class="cc-loc-tag" href="{{ site.basePath }}/artigos.html#desportivos">Desportivos</a>
+    </div>
   </div>
 </section>
 
@@ -500,15 +430,15 @@ inlineStyle: |
           <div class="cc-tool__icon"><i data-lucide="euro"></i></div>
           <div>
             <h3>Simulador de Crédito Automóvel</h3>
-            <p>Calcula prestação mensal, juros e custo total do financiamento em tempo real.</p>
+            <p>Calcule a prestação mensal, os juros e o custo total do financiamento em tempo real.</p>
           </div>
         </div>
         <div class="cc-tool__body">
           <div class="cc-tool__feats">
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Calcula prestação com TAEG realista</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Prestação calculada com TAEG realista</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Resultado imediato, sem registo nem formulário</span></div>
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envia a simulação ao stand por WhatsApp</span></div>
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Sem compromisso — usa antes de visitar o stand</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envie a simulação ao stand por WhatsApp</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Sem compromisso, antes de visitar o stand</span></div>
           </div>
           <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/circuitocar_simulador_credito.html"><i data-lucide="calculator"></i>Abrir Simulador de Crédito</a>
         </div>
@@ -526,7 +456,7 @@ inlineStyle: |
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Análise por marca, modelo, ano e quilometagem</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Fatores: combustível, estado, histórico e sinistros</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Estimativa baseada no mercado atual de usados</span></div>
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Recebe o resumo da avaliação no WhatsApp</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Receba o resumo da avaliação no WhatsApp</span></div>
           </div>
           <a class="cc-btn cc-btn--dark" href="{{ site.basePath }}/simulador_retoma.html"><i data-lucide="repeat"></i>Abrir Simulador de Retoma</a>
         </div>
@@ -544,7 +474,7 @@ inlineStyle: |
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Tabelas oficiais 2026 — gasolina e gasóleo</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Normas NEDC e WLTP, redução por antiguidade incluída</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Total estimado com transporte, despachante e legalização</span></div>
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envia a simulação à equipa por WhatsApp</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envie a simulação à equipa por WhatsApp</span></div>
           </div>
           <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/simulador_isv.html"><i data-lucide="calculator"></i>Abrir Simulador de ISV</a>
         </div>
@@ -560,9 +490,9 @@ inlineStyle: |
         <div class="cc-tool__body">
           <div class="cc-tool__feats">
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Soma prestação, combustível, IUC, seguro e manutenção</span></div>
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Compara gasolina, gasóleo, híbrido e elétrico</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Compare gasolina, gasóleo, híbrido e elétrico</span></div>
             <div class="cc-tool__feat"><i data-lucide="check"></i><span>Gráfico com o peso de cada custo no total</span></div>
-            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envia o resumo à equipa por WhatsApp</span></div>
+            <div class="cc-tool__feat"><i data-lucide="check"></i><span>Envie o resumo à equipa por WhatsApp</span></div>
           </div>
           <a class="cc-btn cc-btn--dark" href="{{ site.basePath }}/custo-mensal-carro.html"><i data-lucide="wallet"></i>Calcular Custo Mensal</a>
         </div>
@@ -571,58 +501,35 @@ inlineStyle: |
   </div>
 </section>
 
-<!-- ── LOCAL / VISIT ── -->
-<section class="cc-section cc-section--warm" id="local-seo">
+<!-- ── STOCK EM DESTAQUE ── -->
+<section class="cc-section cc-section--warm" id="stock">
   <div class="cc-wrap">
     <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Onde estamos</span>
-      <h2 class="cc-section__title">Em Joane, a servir todo o <em>Vale do Ave</em></h2>
-      <p class="cc-section__sub">Estamos em Joane, mas servimos toda a região — Famalicão, Guimarães, Braga, Trofa e Santo Tirso a menos de 30 minutos.</p>
+      <span class="cc-section__eyebrow">Stock em Joane</span>
+      <h2 class="cc-section__title">Viaturas em <em>destaque</em> no stand</h2>
+      <p class="cc-section__sub">Uma seleção de viaturas do nosso stand em Joane. Veja o stock completo e confirme a disponibilidade em circuitocar.pt.</p>
     </div>
-    <div class="cc-local">
-      <div class="cc-local-card">
-        <h3><i data-lucide="map-pin"></i>Rua do Relógio nº 430, Joane</h3>
-        <p>Estamos na <strong>Rua do Relógio nº 430, 4770-245 Joane</strong>, em Vila Nova de Famalicão. Fácil acesso pela A7 e A3, parqueamento próprio no stand.</p>
-        <div class="cc-tag-list">
-          <span class="cc-loc-tag">Famalicão · 10 min</span>
-          <span class="cc-loc-tag">Guimarães · 20 min</span>
-          <span class="cc-loc-tag">Braga · 25 min</span>
-          <span class="cc-loc-tag">Trofa · 15 min</span>
-          <span class="cc-loc-tag">Santo Tirso · 20 min</span>
-        </div>
-        <div style="margin-top:18px;">
-          <a class="cc-btn cc-btn--blue" href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="map"></i>Abrir no Google Maps</a>
-        </div>
-      </div>
-      <div class="cc-local-card">
-        <h3><i data-lucide="clock"></i>Quando pode visitar</h3>
-        <p>Visite o stand sem marcação durante o horário de funcionamento, ou marque por WhatsApp se quiser uma viatura específica preparada para teste.</p>
-        <div class="cc-hours">
-          <div><strong>Segunda a Sexta</strong> · 09:00 – 13:00 · 14:00 – 19:00</div>
-          <div><strong>Sábado</strong> · 09:00 – 13:00</div>
-          <div class="cc-hours--closed">Domingo · Fechado</div>
-        </div>
-        <div style="margin-top:18px;">
-          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%21%20Vim%20pelo%20blog%20da%20Circuito%20Car%20e%20queria%20marcar%20uma%20visita%20ao%20stand.%20Quando%20%C3%A9%20poss%C3%ADvel%3F&utm_source=blog&utm_medium=local_wa&utm_campaign=homepage" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Marcar visita por WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="cc-stock-grid">
 
-<!-- ── VALUE PROPS (dark band) ── -->
-<section class="cc-section cc-section--dark">
-  <div class="cc-wrap">
-    <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Porquê a Circuito Car</span>
-      <h2 class="cc-section__title">Um stand com quem pode <em>contar</em></h2>
-      <p class="cc-section__sub">Em Joane, Famalicão, com acesso fácil de toda a região do Ave — e uma equipa que prefere clientes satisfeitos a vendas rápidas.</p>
+      {% for car in stock %}
+      <a class="cc-stock-card" href="{{ car.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="cc-stock-card__media"><div class="cc-stock-card__img" style="background-image:url('{{ car.image }}');"></div></div>
+        <div class="cc-stock-card__body">
+          <span class="cc-stock-card__eyebrow">{{ car.eyebrow }}</span>
+          <h3 class="cc-stock-card__title">{{ car.title }}</h3>
+          <div class="cc-stock-card__meta">
+            <span><i data-lucide="calendar"></i>{{ car.year }}</span>
+            <span><i data-lucide="fuel"></i>{{ car.fuel }}</span>
+            <span><i data-lucide="gauge"></i>{{ car.km }}</span>
+          </div>
+          <div class="cc-stock-card__price">{{ car.price }}</div>
+        </div>
+      </a>
+      {% endfor %}
+
     </div>
-    <div class="cc-values">
-      <div class="cc-val"><div class="cc-val__icon"><i data-lucide="handshake"></i></div><h3>Atendimento sem pressão</h3><p>A equipa ouve antes de propor. Pode perguntar, comparar e pensar — sem sentir que há pressa para fechar negócio.</p></div>
-      <div class="cc-val"><div class="cc-val__icon"><i data-lucide="shield-check"></i></div><h3>Carros verificados</h3><p>Cada viatura passa por inspeção antes de entrar em stock. O que vê no site é o que encontra no stand, sem surpresas.</p></div>
-      <div class="cc-val"><div class="cc-val__icon"><i data-lucide="euro"></i></div><h3>Financiamento na hora</h3><p>Tratamos o crédito automóvel diretamente no stand, com condições competitivas e aprovação rápida — sem burocracia desnecessária.</p></div>
-      <div class="cc-val"><div class="cc-val__icon"><i data-lucide="map-pin"></i></div><h3>Perto de si</h3><p>Localização central em Joane com acesso fácil de Famalicão, Guimarães, Braga, Trofa e Santo Tirso. Visita sem marcação.</p></div>
+    <div class="cc-stock-foot">
+      <a class="cc-btn cc-btn--dark cc-btn--lg" href="https://www.circuitocar.pt/viaturas?utm_source=blog&utm_medium=stock_all&utm_campaign=homepage" target="_blank" rel="noopener noreferrer"><i data-lucide="arrow-right"></i>Ver stock completo em circuitocar.pt</a>
     </div>
   </div>
 </section>
@@ -658,9 +565,9 @@ inlineStyle: |
 <section class="cc-section cc-section--warm" id="contacto">
   <div class="cc-wrap">
     <div class="cc-section__head">
-      <span class="cc-section__eyebrow">Contacto</span>
-      <h2 class="cc-section__title">Fala com a equipa <em>Circuito Car</em></h2>
-      <p class="cc-section__sub">Do artigo ao stand — o próximo passo é simples.</p>
+      <span class="cc-section__eyebrow">Contacto e localização</span>
+      <h2 class="cc-section__title">Fale connosco ou visite-nos em <em>Joane</em></h2>
+      <p class="cc-section__sub">Estamos na Rua do Relógio, em Joane, Vila Nova de Famalicão, e servimos todo o Vale do Ave e o Norte.</p>
     </div>
     <div class="cc-contact">
       <div class="cc-contact-card">
@@ -715,15 +622,27 @@ inlineStyle: |
 
         </div>
       </div>
-      <div class="cc-contact-card">
+      <div class="cc-contact-card" id="local-seo">
         <h3>Visitar o Stand</h3>
         <p><strong>{{ site.address.street }}<br>{{ site.address.zip }} {{ site.address.city }}, {{ site.address.region }}</strong></p>
-        <p>Localização central com fácil acesso de Famalicão, Guimarães, Braga, Trofa e Santo Tirso. Venha ver viaturas ao vivo, testar, falar de retoma ou tratar financiamento — sem compromisso.</p>
-        <p style="margin-top: -4px;"><a href="mailto:geral@circuitocar.pt" style="font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); text-decoration: underline; text-underline-offset: 3px;">geral@circuitocar.pt</a> &mdash; para pedidos escritos, documentos e propostas formais.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="cc-btn cc-btn--yellow" href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="map"></i>Abrir no Maps</a>
-          <a class="cc-btn cc-btn--ghost-dark" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=contact_stock&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver Stock Online</a>
+        <p>Fácil acesso pela A7 e A3, com parqueamento próprio. Visite sem marcação, ou marque por WhatsApp se quiser uma viatura preparada para teste.</p>
+        <div class="cc-hours">
+          <div><strong>Segunda a Sexta</strong> · 09:00 – 13:00 · 14:00 – 19:00</div>
+          <div><strong>Sábado</strong> · 09:00 – 13:00</div>
+          <div class="cc-hours--closed">Domingo · Fechado</div>
         </div>
+        <h4 class="cc-cities__title">Clientes de toda a região</h4>
+        <div class="cc-tag-list">
+          <a class="cc-loc-tag" href="{{ site.basePath }}/onde-comprar-carro-usado-famalicao.html">Famalicão</a>
+          {% for c in cities %}<a class="cc-loc-tag" href="{{ site.basePath }}/carros-usados-{{ c.slug }}.html">{{ c.name }} · {{ c.driveMin }} min</a>
+          {% endfor %}
+        </div>
+        <div class="cc-visit__btns">
+          <a class="cc-btn cc-btn--wa" href="{{ site.contact.marco.whatsappBase }}?text=Ol%C3%A1%21%20Vim%20pelo%20blog%20da%20Circuito%20Car%20e%20queria%20marcar%20uma%20visita%20ao%20stand.%20Quando%20%C3%A9%20poss%C3%ADvel%3F&utm_source=blog&utm_medium=local_wa&utm_campaign=homepage" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i>Marcar visita</a>
+          <a class="cc-btn cc-btn--blue" href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener noreferrer"><i data-lucide="map"></i>Abrir no Maps</a>
+          <a class="cc-btn cc-btn--ghost-dark" href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=contact_stock&utm_campaign=blog_leads" target="_blank" rel="noopener noreferrer"><i data-lucide="car"></i>Ver stock online</a>
+        </div>
+        <p class="cc-visit__mail"><a href="mailto:geral@circuitocar.pt">geral@circuitocar.pt</a> · para pedidos escritos, documentos e propostas formais.</p>
       </div>
     </div>
   </div>

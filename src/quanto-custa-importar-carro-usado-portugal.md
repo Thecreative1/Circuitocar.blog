@@ -24,7 +24,7 @@ inventoryLabel: "Ver stock disponível"
 lead: "A ideia parece simples: encontrar um carro mais barato lá fora e poupar algum dinheiro. E pode funcionar — mas só se fizer as contas certas antes de avançar. Neste artigo explicamos tudo o que vai pagar, com valores reais e verificados."
 
 heroImage: "/img/importar-carro-bmw-116d-circuito-car.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/bmw-116-ID167756.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "BMW 116d 2016 na Circuito Car — viatura importada da Alemanha"
 heroWhatsappMsg: "Olá, vi o artigo sobre custos de importação e gostava de perceber se compensa para a viatura que tenho em mente."
 

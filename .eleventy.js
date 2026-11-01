@@ -37,6 +37,11 @@ module.exports = function(eleventyConfig) {
     return (articles || []).filter(a => a.data && a.data.category === category);
   });
 
+  // Only hand-written articles (.md), without the generated city pages
+  eleventyConfig.addFilter("onlyGuides", function(articles) {
+    return (articles || []).filter(a => a.inputPath.endsWith(".md"));
+  });
+
   // Absolute URL filter (used by RSS)
   eleventyConfig.addFilter("absoluteUrl", function(url, base) {
     return new URL(url, base).href;

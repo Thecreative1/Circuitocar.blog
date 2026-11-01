@@ -23,7 +23,7 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 lead: "Com o outono a chegar, muita gente adia a troca de carro para \"depois do Natal\" ou \"para o ano\". Às vezes faz sentido esperar, outras vezes esperar sai mais caro. Este guia mostra o que muda de facto entre outubro e janeiro: o valor da retoma, o IUC, a inspeção e o orçamento."
 
 heroImage: "https://omeustand.pt/viaturas/224/7724709695_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viatura/peugeot-e-208-ID179126.html"
+heroImageLink: "https://www.circuitocar.pt/viaturas"
 heroImageAlt: "Peugeot e-208 de 2023 no stand Circuito Car, em Joane"
 heroWhatsappMsg: "Olá, li o artigo sobre comprar carro usado no fim do ano e queria ver opções em stock."
 
