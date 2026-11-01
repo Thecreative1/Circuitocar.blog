@@ -39,7 +39,7 @@ topbarLinks:
 
 sidebarBadge: "Stand em Joane"
 sidebarTitle: "A 10 minutos de Famalicão"
-sidebarDescription: "Visita o stand sem marcação ou fala com a equipa por WhatsApp para preparar uma viatura específica para teste."
+sidebarDescription: "Visite o stand sem marcação ou fale com a equipa por WhatsApp para preparar uma viatura específica para teste."
 
 relatedArticles:
   - title: "Financiamento de carro usado em Portugal: o que precisa de saber antes de assinar"

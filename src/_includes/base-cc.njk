@@ -6,7 +6,7 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <title>{{ pageTitle if pageTitle else title }}</title>
   <meta name="description" content="{{ description }}" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="robots" content="{{ robots if robots else 'index,follow,max-image-preview:large' }}" />
   <meta property="og:title" content="{{ ogTitle if ogTitle else title }}" />
   <meta property="og:description" content="{{ ogDescription if ogDescription else description }}" />
   <meta property="og:type" content="{{ ogType if ogType else 'website' }}" />
@@ -152,6 +152,7 @@
           <a href="{{ site.basePath }}/artigos.html">Artigos</a>
           <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
           <a href="{{ site.basePath }}/#stock">Stock em destaque</a>
+          <a href="{{ site.basePath }}/avaliacoes.html">Avaliações</a>
           <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign if utmCampaign else 'blog_geral' }}" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">

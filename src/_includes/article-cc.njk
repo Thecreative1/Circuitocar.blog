@@ -200,7 +200,29 @@
   <!-- ── ARTICLE + SIDEBAR ── -->
   <div class="cc-post-wrap">
     <article class="cc-prose">
-      {{ content | safe }}
+      {% set toc = content | tocItems %}
+      {% set faqs = schemaOrg | faqItems(content) %}
+      {% if toc.length %}
+      <details class="cc-toc" id="cc-toc">
+        <summary>Neste artigo</summary>
+        <ol>
+          {% for item in toc %}<li><a href="#{{ item.id }}">{{ item.text | safe }}</a></li>
+          {% endfor %}{% if faqs.length %}<li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>{% endif %}
+        </ol>
+      </details>
+      <script>if (window.matchMedia('(min-width: 821px)').matches) document.getElementById('cc-toc').open = true;</script>
+      {% endif %}
+      {{ content | withHeadingIds | safe }}
+      {% if faqs.length %}
+      <section class="cc-faq">
+        <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+        {% for f in faqs %}<details class="cc-faq__item">
+          <summary>{{ f.q | escape }}</summary>
+          <p>{{ f.a | escape }}</p>
+        </details>
+        {% endfor %}
+      </section>
+      {% endif %}
     </article>
 
     <aside class="cc-sidebar">
@@ -233,7 +255,7 @@
 
       <div class="cc-side-card" id="equipa" style="scroll-margin-top: 90px;">
         <span class="cc-side-card__eyebrow">Contacto</span>
-        <h3>Fala com a Circuito Car</h3>
+        <h3>Fale com a Circuito Car</h3>
 
         <!-- Marco — primary, blue-accented -->
         <div class="cc-side-seller" style="border-top: 3px solid var(--cc-blue-light); background: var(--cc-paper-card);">
@@ -319,6 +341,7 @@
           <a href="{{ site.basePath }}/artigos.html">Artigos</a>
           <a href="{{ site.basePath }}/#ferramentas">Ferramentas</a>
           <a href="{{ site.basePath }}/#stock">Stock em destaque</a>
+          <a href="{{ site.basePath }}/avaliacoes.html">Avaliações</a>
           <a href="{{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=footer_stock&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">Ver stock completo</a>
         </div>
         <div class="cc-footer__col">

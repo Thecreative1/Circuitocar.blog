@@ -55,7 +55,7 @@ schemaOrg: |
         "name": "Quantos carros posso importar por ano em Portugal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Um particular pode importar até dois veículos por ano sem necessidade de licença comercial. A partir do terceiro, a actividade pode ser considerada de carácter comercial e fica sujeita a obrigações fiscais adicionais."
+          "text": "Um particular pode importar até dois veículos por ano sem necessidade de licença comercial. A partir do terceiro, a atividade pode ser considerada de caráter comercial e fica sujeita a obrigações fiscais adicionais."
         }
       },
       {
@@ -84,7 +84,7 @@ schemaOrg: |
       },
       {
         "@type": "Question",
-        "name": "Quanto tempo demora o processo de importação de um carro?",
+        "name": "Quanto tempo demora o processo de importação?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Com toda a documentação em ordem e um despachante a tratar do processo, o tempo médio é de duas a quatro semanas. Sem apoio especializado, pode demorar significativamente mais."
@@ -223,7 +223,7 @@ Na Circuito Car, trabalhamos com carros usados seleccionados, muitos deles de or
 ## Perguntas frequentes sobre custos de importação
 
 **Quantos carros posso importar por ano em Portugal?**
-Um particular pode importar até dois veículos por ano sem necessidade de licença comercial. A partir do terceiro, a actividade pode ser considerada de carácter comercial e fica sujeita a obrigações fiscais adicionais.
+Um particular pode importar até dois veículos por ano sem necessidade de licença comercial. A partir do terceiro, a atividade pode ser considerada de caráter comercial e fica sujeita a obrigações fiscais adicionais.
 
 **O ISV é calculado sobre o preço de compra do carro?**
 Não. O ISV é calculado com base nas características técnicas do veículo — cilindrada e emissões de CO2 — e na sua antiguidade. O preço pago pelo carro não entra no cálculo.

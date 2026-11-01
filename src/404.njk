@@ -1,0 +1,42 @@
+---
+layout: base-cc.njk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+extraCss: article-cc.css
+robots: "noindex,follow"
+pageTitle: "Página não encontrada | Circuito Car Blog"
+title: "Página não encontrada"
+description: "Esta página não existe ou mudou de endereço. Veja os guias e os simuladores do Circuito Car Blog."
+utmCampaign: "blog_404"
+inlineStyle: |
+  .cc-404 { background: var(--cc-ink); color: var(--cc-paper); padding: 72px 0 80px; }
+  .cc-404__inner { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+  .cc-404__eyebrow { color: var(--cc-yellow); font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-sm); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
+  .cc-404 h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: clamp(36px, 5vw, 64px); line-height: 1; color: var(--cc-paper); margin: 14px 0 16px; }
+  .cc-404 p { font-family: var(--cc-font-body); font-size: var(--cc-fs-lg); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); max-width: 620px; margin: 0 0 28px; }
+  .cc-404__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+  .cc-404 h2 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; font-size: var(--cc-fs-xl); color: var(--cc-paper); margin: 0 0 8px; }
+  .cc-404__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .cc-404__list a { display: flex; align-items: center; min-height: 48px; border-bottom: 1px solid var(--cc-asphalt-700); font-family: var(--cc-font-body); font-weight: var(--cc-fw-semibold); color: var(--cc-paper); }
+  .cc-404__list a:hover { color: var(--cc-yellow); }
+  @media (max-width: 640px) { .cc-404 { padding: 48px 0 56px; } .cc-404__inner { padding: 0 20px; } .cc-404__list { grid-template-columns: 1fr; } }
+---
+
+<section class="cc-404">
+  <div class="cc-404__inner">
+    <span class="cc-404__eyebrow">Erro 404</span>
+    <h1>Esta página não existe</h1>
+    <p>O endereço pode estar errado ou a página pode ter mudado de sítio. Continue por aqui:</p>
+    <div class="cc-404__actions">
+      <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/artigos.html"><i data-lucide="book-open"></i>Ver todos os guias</a>
+      <a class="cc-btn cc-btn--ghost-light" href="{{ site.basePath }}/"><i data-lucide="house"></i>Ir para a homepage</a>
+    </div>
+    <h2>Simuladores gratuitos</h2>
+    <ul class="cc-404__list">
+      <li><a href="{{ site.basePath }}/circuitocar_simulador_credito.html">Simulador de crédito</a></li>
+      <li><a href="{{ site.basePath }}/simulador_retoma.html">Simulador de retoma</a></li>
+      <li><a href="{{ site.basePath }}/simulador_isv.html">Simulador de ISV</a></li>
+      <li><a href="{{ site.basePath }}/custo-mensal-carro.html">Calculadora de custo mensal</a></li>
+    </ul>
+  </div>
+</section>

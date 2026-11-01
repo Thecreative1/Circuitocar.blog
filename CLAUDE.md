@@ -119,7 +119,9 @@ schemaOrg: |
 ---
 ```
 
-2. Write the article body in Markdown below the `---`.
+2. Write the article body in Markdown below the `---`. Use `##` for the main sections.
+   - **Index ("Neste artigo"):** added automatically from the `##` headings when the article has 700+ words and 4+ headings. It starts closed on phones and open on desktop.
+   - **FAQ:** the `schemaOrg` questions are shown automatically at the end of the article, because Google requires FAQ markup to be visible. Don't also write them in the body. If an article has its own "Perguntas frequentes" section, the automatic one is skipped, and its questions must then match the schema word for word.
 3. Run `npm run build` locally to verify — it will warn if front matter keys are missing.
 4. The article appears automatically in `artigos.html` under its category — no manual list update needed.
 
@@ -179,7 +181,9 @@ Three actions, clear visual priority (don't make them equal weight):
 
 ### Homepage structure (reorganised 2026-11-01)
 
-Six sections, content first: Hero → Artigos (with "Os guias mais procurados" and "Por tema") → Ferramentas → Stock → Sobre → Contacto (includes the old "Onde estamos": hours, Maps, links to every city page). The "3 passos" and "Porquê a Circuito Car" sections were removed on purpose, because they repeated other sections and made the phone page ~21 screens long (now ~14). Don't add sections back without removing one.
+Seven sections, content first: Hero → Artigos (with "Os guias mais procurados" and "Por tema") → Ferramentas (dark band) → Stock → Avaliações (3 reviews) → Sobre → Contacto (includes the old "Onde estamos": hours, Maps, links to every city page). The "3 passos" and "Porquê a Circuito Car" sections were removed on purpose, because they repeated other sections and made the phone page ~21 screens long (now ~16). Don't add sections back without removing one.
+
+The homepage doesn't load `article-cc.css`, so the review styles are copied into its `inlineStyle`. If `.cc-review*` changes in the CSS file, change the copy too.
 
 - **Anchors other pages rely on:** `#stock`, `#ferramentas`, `#artigos`, `#categorias`, `#sobre`, `#contacto`, `#local-seo` (the "Visitar o Stand" card). Keep them when moving things.
 - **Hero stats must be facts that stay true.** "50+ viaturas" was false (16 for sale in Nov 2026) and "5★ Google" could not be verified, so both were removed. The guide count comes from the `onlyGuides` filter, which excludes city pages. Only bring a Google rating back with the real score and review count from the owner.
@@ -305,7 +309,12 @@ Each page emits two JSON-LD blocks (injected via `schemaOrg` in the template):
 - `AutoDealer` with `areaServed: { @type: City, name: city.name }`
 - `FAQPage` with 3 city-specific Q&As (distance, delivery, financing)
 
-Both are in `src/cidade-carros-usados.njk` — edit there to change schema structure across all cities at once.
+Both are in `src/cidade-carros-usados.njk` — edit there to change schema structure across all cities at once. The visible FAQ is written separately in the same file, so keep its questions identical to the schema, and don't promise anything in the schema that the page doesn't say.
+
+## Página de artigos e página de erro
+
+- `src/artigos.njk` has a client-side search (no external service) over the cards, ignoring accents. It starts with "Mais recentes" (3 newest guides), then the categories, with city pages last under "Guia Local".
+- `src/404.njk` → `/404.html`: GitHub Pages serves it for any missing address. It's `noindex` through the `robots` front matter value (supported by `base-cc.njk`) and stays out of the sitemap.
 
 ## Stock em destaque (homepage)
 

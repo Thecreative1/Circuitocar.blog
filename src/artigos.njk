@@ -22,11 +22,24 @@ inlineStyle: |
   .cc-archive-hero h1 { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-black); text-transform: uppercase; color: var(--cc-paper); font-size: clamp(36px, 4.2vw, 60px); line-height: 0.98; letter-spacing: var(--cc-tracking-tight); margin: 0 0 16px; }
   .cc-archive-hero p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); line-height: var(--cc-lh-loose); color: var(--cc-asphalt-300); max-width: 600px; margin: 0; }
 
+  /* ── PESQUISA ── */
+  .cc-archive-search { position: relative; max-width: 600px; margin-top: 24px; }
+  .cc-archive-search label { display: block; font-family: var(--cc-font-body); font-size: var(--cc-fs-sm); font-weight: var(--cc-fw-bold); color: var(--cc-paper); margin-bottom: 8px; }
+  .cc-archive-search input { width: 100%; min-height: 52px; padding: 12px 16px; border: 2px solid var(--cc-asphalt-600); border-radius: var(--cc-radius-md); background: var(--cc-paper); color: var(--cc-ink); font-family: var(--cc-font-body); font-size: 16px; }
+  .cc-archive-search input:focus { outline: none; border-color: var(--cc-yellow); }
+  .cc-archive-status { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); margin: 0 0 28px; }
+  .cc-archive-status:empty { display: none; }
+  .cc-archive-empty { background: var(--cc-paper-card); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-lg); padding: 28px; margin-bottom: 32px; }
+  .cc-archive-empty p { font-family: var(--cc-font-body); font-size: var(--cc-fs-base); color: var(--cc-fg-muted); margin: 0 0 16px; }
+  .cc-archive-card[hidden], .cc-cat-section[hidden], .cc-archive-empty[hidden] { display: none !important; }
+  .is-searching .cc-archive-card--more { display: flex; }
+  .is-searching .cc-cat-more-wrap, .is-searching .cc-cat-section--recent, .is-searching .cc-archive-back, .is-searching .cc-cat-section__count { display: none; }
+
   /* ── FILTER CHIPS ── */
   .cc-filter-bar { background: var(--cc-paper-card); border-bottom: 1px solid var(--cc-border); position: sticky; top: 57px; z-index: 40; }
   .cc-filter-bar__inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
   .cc-filter-bar__inner::-webkit-scrollbar { display: none; }
-  .cc-filter-chip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; padding: 10px 16px; color: var(--cc-fg-muted); border-bottom: 2px solid transparent; transition: color var(--cc-dur-fast) var(--cc-ease-out), border-color var(--cc-dur-fast) var(--cc-ease-out); }
+  .cc-filter-chip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; min-height: 44px; padding: 10px 16px; color: var(--cc-fg-muted); border-bottom: 2px solid transparent; transition: color var(--cc-dur-fast) var(--cc-ease-out), border-color var(--cc-dur-fast) var(--cc-ease-out); }
   .cc-filter-chip:hover { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
   .cc-filter-chip--all { color: var(--cc-ink); border-bottom-color: var(--cc-yellow); }
 
@@ -88,13 +101,33 @@ inlineStyle: |
 ---
 
 {% set categories = [
-  { name: "Importação",    id: "importacao" },
-  { name: "Atualidade",    id: "atualidade" },
   { name: "Guia de Compra", id: "guia-de-compra" },
+  { name: "Atualidade",    id: "atualidade" },
+  { name: "Importação",    id: "importacao" },
+  { name: "Híbridos",      id: "hibridos" },
   { name: "Desportivos",   id: "desportivos" },
-  { name: "Guia Local",    id: "guia-local" },
-  { name: "Híbridos",      id: "hibridos" }
+  { name: "Guia Local",    id: "guia-local" }
 ] %}
+
+{% macro archiveCard(art, basePath, more) %}
+        <a class="cc-archive-card{% if more %} cc-archive-card--more{% endif %}" href="{{ basePath }}{{ art.url }}">
+          {% if art.data.heroImage %}
+          <div class="cc-archive-card__media">
+            <div class="cc-archive-card__img" style="background-image:url('{{ art.data.heroImage }}');"></div>
+          </div>
+          {% endif %}
+          <div class="cc-archive-card__body">
+            <span class="cc-archive-card__eyebrow">{{ art.data.category }}</span>
+            <h3 class="cc-archive-card__title">{{ art.data.title }}</h3>
+            <p class="cc-archive-card__desc">{{ art.data.description }}</p>
+            <div class="cc-archive-card__meta">
+              <span>{{ art.data.readTime }}</span>
+              <span>·</span>
+              <span>{{ art.date | dateReadable }}</span>
+            </div>
+          </div>
+        </a>
+{% endmacro %}
 
 <!-- ── ARCHIVE HERO ── -->
 <section class="cc-archive-hero">
@@ -102,6 +135,10 @@ inlineStyle: |
     <span class="cc-archive-hero__eyebrow">Circuito Car Blog</span>
     <h1>Todos os <em>Artigos</em></h1>
     <p>Guias práticos e conselhos honestos para quem quer comprar carro usado em Famalicão, Braga e Guimarães — escritos pela equipa do stand.</p>
+    <form class="cc-archive-search" role="search" onsubmit="return false">
+      <label for="cc-search">Pesquisar nos guias</label>
+      <input id="cc-search" type="search" placeholder="Ex.: garantia, IUC, elétrico, Braga" autocomplete="off" enterkeyhint="search" aria-controls="todos" />
+    </form>
   </div>
 </section>
 
@@ -127,6 +164,21 @@ inlineStyle: |
     <i data-lucide="arrow-left"></i>Voltar à homepage
   </a>
 
+  <p class="cc-archive-status" id="cc-search-status" aria-live="polite"></p>
+  <div class="cc-archive-empty" id="cc-search-empty" hidden>
+    <p>Não encontrámos nenhum guia com esse termo. Tente outra palavra ou pergunte-nos diretamente.</p>
+    <a class="cc-btn cc-btn--yellow" href="{{ site.basePath }}/#contacto"><i data-lucide="message-square"></i>Falar com a equipa</a>
+  </div>
+
+  <section class="cc-cat-section cc-cat-section--recent" id="recentes">
+    <div class="cc-cat-section__head">
+      <h2 class="cc-cat-section__label">Mais recentes</h2>
+    </div>
+    <div class="cc-archive-grid">
+      {% for art in collections.articles | onlyGuides %}{% if loop.index <= 3 %}{{ archiveCard(art, site.basePath, false) }}{% endif %}{% endfor %}
+    </div>
+  </section>
+
   {% for cat in categories %}
     {% set catArticles = collections.articles | filterByCategory(cat.name) %}
     {% if catArticles.length %}
@@ -137,23 +189,7 @@ inlineStyle: |
       </div>
       <div class="cc-archive-grid">
         {% for art in catArticles %}
-        <a class="cc-archive-card{% if loop.index > 3 %} cc-archive-card--more{% endif %}" href="{{ site.basePath }}{{ art.url }}">
-          {% if art.data.heroImage %}
-          <div class="cc-archive-card__media">
-            <div class="cc-archive-card__img" style="background-image:url('{{ art.data.heroImage }}');"></div>
-          </div>
-          {% endif %}
-          <div class="cc-archive-card__body">
-            <span class="cc-archive-card__eyebrow">{{ art.data.category }}</span>
-            <h3 class="cc-archive-card__title">{{ art.data.title }}</h3>
-            <p class="cc-archive-card__desc">{{ art.data.description }}</p>
-            <div class="cc-archive-card__meta">
-              <span>{{ art.data.readTime }}</span>
-              <span>·</span>
-              <span>{{ art.date | dateReadable }}</span>
-            </div>
-          </div>
-        </a>
+        {{ archiveCard(art, site.basePath, loop.index > 3) }}
         {% endfor %}
       </div>
       {% if catArticles.length > 3 %}
@@ -171,6 +207,33 @@ inlineStyle: |
 </div>
 
 <script>
+  (function () {
+    var input = document.getElementById('cc-search');
+    var body = document.getElementById('todos');
+    var status = document.getElementById('cc-search-status');
+    var empty = document.getElementById('cc-search-empty');
+    var sections = [].slice.call(body.querySelectorAll('.cc-cat-section:not(.cc-cat-section--recent)'));
+    var clean = function (t) { return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };
+    input.addEventListener('input', function () {
+      var terms = clean(input.value).trim().split(/\s+/).filter(Boolean);
+      var total = 0;
+      body.classList.toggle('is-searching', terms.length > 0);
+      sections.forEach(function (section) {
+        var hits = 0;
+        section.querySelectorAll('.cc-archive-card').forEach(function (card) {
+          var text = clean(card.textContent);
+          var match = terms.every(function (t) { return text.indexOf(t) !== -1; });
+          card.hidden = !match;
+          if (match) hits++;
+        });
+        section.hidden = hits === 0;
+        total += hits;
+      });
+      empty.hidden = !terms.length || total > 0;
+      status.textContent = !terms.length ? '' : total === 0 ? 'Nenhum guia encontrado.' : total === 1 ? '1 guia encontrado.' : total + ' guias encontrados.';
+    });
+  })();
+
   document.querySelectorAll('.cc-cat-more').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var section = btn.closest('.cc-cat-section');
