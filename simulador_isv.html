@@ -225,7 +225,7 @@
         "@id": "https://circuitocar.blog/simulador_isv.html#tool",
         "name": "Simulador de ISV 2026",
         "url": "https://circuitocar.blog/simulador_isv.html",
-        "description": "Ferramenta gratuita para estimar o ISV de carros usados importados para Portugal com base em cilindrada, CO2, combustivel, norma de emissoes e antiguidade.",
+        "description": "Ferramenta gratuita para estimar o ISV de carros usados importados para Portugal com base em cilindrada, CO2, combustível, norma de emissões, origem e data da primeira matrícula.",
         "applicationCategory": "TaxApplication",
         "operatingSystem": "Web",
         "isAccessibleForFree": true,
@@ -251,23 +251,31 @@
             "name": "Como se calcula o ISV de um carro importado?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "O ISV soma duas componentes: a componente cilindrada, que multiplica os cm3 do motor por uma taxa e subtrai uma parcela fixa, e a componente ambiental, que faz o mesmo as emissoes de CO2. Sobre esse total aplica-se a reducao por antiguidade e, nos veiculos a gasoleo, o agravamento de 500 euros previsto no artigo 7.o do Codigo do ISV."
+              "text": "O ISV soma duas componentes: a componente cilindrada, que multiplica os cm³ do motor por uma taxa e subtrai uma parcela fixa, e a componente ambiental, que faz o mesmo às emissões de CO₂. Nos veículos a gasóleo acresce o agravamento de 500 € previsto no artigo 7.º do Código do ISV. Se o carro vier de outro país da União Europeia, aplica-se depois a todo esse valor a redução por antiguidade."
             }
           },
           {
             "@type": "Question",
-            "name": "Como funciona a reducao por antiguidade do ISV?",
+            "name": "Como funciona a redução por antiguidade do ISV?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Quanto mais velho for o carro, menos ISV paga. A reducao comeca nos 10 por cento ate ao primeiro ano e chega aos 80 por cento acima dos dez anos, aplicando-se as duas componentes do imposto. A contagem e feita a partir da data da primeira matricula no pais de origem, nao da data em que o carro entra em Portugal."
+              "text": "Quanto mais velho for o carro, menos ISV paga. A redução começa nos 10% até ao primeiro ano e chega aos 80% acima dos dez anos, e aplica-se a todo o imposto, incluindo o agravamento do gasóleo. Conta o tempo desde a primeira matrícula no país de origem até ao fim do prazo para entregar a Declaração Aduaneira de Veículo, 20 dias úteis depois de o carro entrar em Portugal. Por isso o mês conta: com 4 anos e 11 meses a redução é de 43%, com 5 anos e 1 mês já é de 52%."
             }
           },
           {
             "@type": "Question",
-            "name": "Porque e que os carros a gasoleo pagam mais 500 euros de ISV?",
+            "name": "Um carro importado de fora da UE tem redução de ISV?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "O artigo 7.o do Codigo do ISV acrescenta 500 euros ao montante total a pagar nos ligeiros de passageiros a gasoleo. Ha uma excecao: se o Certificado de Conformidade indicar emissoes de particulas inferiores a 0,001 g/km, o agravamento nao se aplica. Muitos gasoleos recentes com filtro de particulas ficam abaixo desse valor."
+              "text": "Não. A redução por antiguidade só se aplica a carros com matrícula definitiva de outro país da União Europeia. Um usado que venha do Reino Unido, da Suíça ou dos Estados Unidos paga o ISV por inteiro, como se fosse novo, e paga ainda IVA e, em muitos casos, direitos aduaneiros na importação. Desde o Brexit, os carros vindos do Reino Unido são tratados como vindos de um país terceiro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Porque é que os carros a gasóleo pagam mais 500 € de ISV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O artigo 7.º do Código do ISV acrescenta 500 € ao imposto dos ligeiros de passageiros a gasóleo. Nos usados vindos da União Europeia, este valor também beneficia da redução por antiguidade. Há uma exceção: se o Certificado de Conformidade indicar emissões de partículas inferiores a 0,001 g/km, o agravamento não se aplica. Muitos gasóleos recentes com filtro de partículas ficam abaixo desse valor."
             }
           },
           {
@@ -275,23 +283,23 @@
             "name": "Como sei se o meu carro usa NEDC ou WLTP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A norma consta no Certificado de Conformidade. Como regra pratica, carros matriculados ate 2018 usam quase sempre NEDC e a partir de 2020 usam WLTP. Os anos de 2018 e 2019 sao de transicao e podem ser de qualquer uma, pelo que convem confirmar antes de simular: a diferenca no imposto pode ser de centenas de euros."
+              "text": "A norma consta no Certificado de Conformidade. Como regra prática, carros matriculados até 2018 usam quase sempre NEDC e a partir de 2020 usam WLTP. Os anos de 2018 e 2019 são de transição e podem ser de qualquer uma, por isso confirme antes de simular: a diferença no imposto pode ser de centenas de euros."
             }
           },
           {
             "@type": "Question",
-            "name": "Os carros eletricos e hibridos pagam ISV?",
+            "name": "Os carros elétricos e híbridos pagam ISV?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Os eletricos a bateria estao isentos de ISV, novos ou usados importados. Os hibridos plug-in pagam uma taxa intermedia de 25 por cento desde que tenham pelo menos 50 km de autonomia eletrica e emissoes ate 50 g CO2/km, limite que sobe para 80 g nos modelos homologados segundo a norma Euro 6e-bis. Os hibridos convencionais, sem tomada, nao tem taxa intermedia e pagam o imposto por inteiro."
+              "text": "Os elétricos a bateria estão isentos de ISV, novos ou usados importados. Os híbridos plug-in pagam uma taxa intermédia de 25% desde que tenham pelo menos 50 km de autonomia elétrica e emissões até 50 g CO₂/km, limite que sobe para 80 g nos modelos homologados segundo a norma Euro 6e-bis. Os híbridos convencionais, sem tomada, não têm taxa intermédia e pagam o imposto por inteiro."
             }
           },
           {
             "@type": "Question",
-            "name": "O valor do simulador de ISV e o que vou pagar nas Financas?",
+            "name": "O valor do simulador de ISV é o que vou pagar nas Finanças?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "E uma estimativa para decidir, nao uma liquidacao. O valor definitivo e apurado pela Autoridade Tributaria a partir dos documentos do veiculo, atraves da Declaracao Aduaneira de Veiculo. Se um dos dados introduzidos estiver errado no Certificado de Conformidade, nomeadamente o CO2, o valor final muda."
+              "text": "É uma estimativa para decidir, não uma liquidação. O simulador calcula a idade ao mês, à data de hoje, por isso pode falhar um escalão no mês em que o carro faz anos. O valor definitivo é apurado pela Autoridade Tributária a partir dos documentos do veículo, através da Declaração Aduaneira de Veículo. Se um dos dados introduzidos estiver errado no Certificado de Conformidade, nomeadamente o CO₂, o valor final muda."
             }
           },
           {
@@ -299,7 +307,7 @@
             "name": "Quanto custa importar um carro usado, ao todo?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Para alem do ISV ha que contar com o transporte, o despachante, a inspecao B e a legalizacao, que juntos costumam somar entre 700 e 1.200 euros. O simulador permite incluir estes custos fixos para ver o total estimado da importacao."
+              "text": "Para além do ISV há que contar com o transporte, o despachante, a inspeção B e a legalização, que juntos costumam somar entre 700 € e 1.200 €. O simulador permite incluir estes custos fixos para ver o total estimado da importação."
             }
           }
         ]
@@ -330,7 +338,7 @@
     .field label { font-family: var(--cc-font-display); font-style: italic; font-weight: var(--cc-fw-bold); font-size: var(--cc-fs-xs); color: var(--cc-fg-muted); letter-spacing: var(--cc-tracking-wider); text-transform: uppercase; }
     .input, .select { font-family: var(--cc-font-body); font-size: var(--cc-fs-md); font-weight: var(--cc-fw-semibold); color: var(--cc-ink); background: var(--cc-paper-warm); border: 1px solid var(--cc-border-strong); border-radius: var(--cc-radius-sm); padding: 12px 14px; outline: none; transition: border-color var(--cc-dur-fast) var(--cc-ease-out), box-shadow var(--cc-dur-fast) var(--cc-ease-out); width: 100%; }
     .input:focus, .select:focus { border-color: var(--cc-ink); box-shadow: var(--cc-shadow-yellow); }
-    .input[aria-invalid="true"] { border-color: var(--cc-signal-red); box-shadow: 0 0 0 3px rgba(229,52,43,0.15); }
+    .input[aria-invalid="true"], .select[aria-invalid="true"] { border-color: var(--cc-signal-red); box-shadow: 0 0 0 3px rgba(229,52,43,0.15); }
     .field small { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); line-height: 1.4; }
 
     .norma-hint { font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); background: var(--cc-paper-warm); border: 1px solid var(--cc-border); border-radius: var(--cc-radius-sm); padding: 10px 14px; line-height: 1.5; margin-bottom: 20px; }
@@ -493,7 +501,7 @@
       <!-- Dados do veículo -->
       <span class="sim-section-label">Dados do veículo</span>
 
-      <div class="form-grid form-grid--3">
+      <div class="form-grid">
         <div class="field">
           <label for="cilindrada">Cilindrada (cm³)</label>
           <input class="input" id="cilindrada" type="number" min="500" max="9000" step="1" placeholder="ex: 1600" aria-required="true" aria-describedby="hint-cilindrada" autocomplete="off" />
@@ -504,10 +512,40 @@
           <input class="input" id="co2" type="number" min="0" max="600" step="1" placeholder="ex: 145" aria-required="true" aria-describedby="hint-co2" autocomplete="off" />
           <small id="hint-co2">Consta no Certificado de Conformidade (CoC) ou ficha técnica, linha CO₂.</small>
         </div>
+      </div>
+
+      <div class="form-grid form-grid--3">
         <div class="field">
-          <label for="anoMatricula">Ano de matrícula</label>
+          <label for="mesMatricula">Mês da 1.ª matrícula</label>
+          <select class="select" id="mesMatricula" aria-required="true" aria-describedby="hint-mes">
+            <option value="">Escolha o mês</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+          <small id="hint-mes">A redução conta ao mês. Data no campo B do certificado de matrícula.</small>
+        </div>
+        <div class="field">
+          <label for="anoMatricula">Ano da 1.ª matrícula</label>
           <input class="input" id="anoMatricula" type="number" min="1990" step="1" placeholder="ex: 2020" aria-required="true" aria-describedby="hint-ano" autocomplete="off" />
-          <small id="hint-ano">Ano da primeira matrícula no país de origem.</small>
+          <small id="hint-ano">Primeira matrícula no país de origem.</small>
+        </div>
+        <div class="field">
+          <label for="origem">Proveniência</label>
+          <select class="select" id="origem" aria-describedby="hint-origem">
+            <option value="ue">União Europeia</option>
+            <option value="fora">Fora da UE</option>
+          </select>
+          <small id="hint-origem">Reino Unido, Suíça, EUA… Fora da UE não há redução por antiguidade.</small>
         </div>
       </div>
 
@@ -588,6 +626,9 @@
           <span id="reducaoTexto"></span>
         </div>
 
+        <div class="norma-hint" id="notaEscalao" hidden></div>
+        <div class="norma-hint" id="notaOrigem" hidden>Carros com matrícula de fora da UE (incluindo o Reino Unido, desde o Brexit) pagam o ISV por inteiro, como se fossem novos. Na importação pagam ainda <strong>IVA</strong> e, em muitos casos, <strong>direitos aduaneiros</strong> sobre o valor do carro, que este simulador não inclui.</div>
+
         <div class="result-grid">
           <div class="result-box">
             <strong>Componente cilindrada</strong>
@@ -598,8 +639,9 @@
             <span id="rCompCO2">—</span>
           </div>
           <div class="result-box">
-            <strong>ISV base (antes da redução)</strong>
+            <strong>ISV antes da redução</strong>
             <span id="rISVBase">—</span>
+            <small id="rISVBaseNota" hidden>Inclui o agravamento de 500 € do gasóleo</small>
           </div>
           <div class="result-box highlight">
             <strong>ISV estimado a pagar</strong>
@@ -640,7 +682,7 @@
         </div>
 
         <div class="note">
-          <strong>Atenção:</strong> este simulador é uma ferramenta de estimativa baseada nas tabelas oficiais do ISV em vigor em 2026. Inclui a redução por antiguidade e, nos veículos a gasóleo, o agravamento de 500 € previsto no artigo 7.º do Código do ISV. O valor final do ISV é determinado pela Autoridade Tributária com base nos documentos do veículo. Em caso de dúvida, consulte sempre um despachante aduaneiro antes de avançar.
+          <strong>Atenção:</strong> este simulador é uma ferramenta de estimativa baseada nas tabelas oficiais do ISV em vigor em 2026. Inclui o agravamento de 500 € do gasóleo previsto no artigo 7.º do Código do ISV e, nos carros vindos de outro país da UE, a redução por antiguidade, com a idade calculada ao mês à data de hoje. O valor final do ISV é determinado pela Autoridade Tributária com base nos documentos do veículo. Em caso de dúvida, consulte sempre um despachante aduaneiro antes de avançar.
         </div>
 
       </div>
@@ -654,13 +696,16 @@
       <p style="margin-bottom: 28px;">As dúvidas que mais nos chegam de quem está a pensar importar. Se a sua não estiver aqui, <a href="#equipa">fale connosco</a>.</p>
 
       <h3>Como se calcula o ISV de um carro importado?</h3>
-      <p>O ISV soma duas componentes: a <strong>componente cilindrada</strong>, que multiplica os cm³ do motor por uma taxa e subtrai uma parcela fixa, e a <strong>componente ambiental</strong>, que faz o mesmo às emissões de CO₂. Sobre esse total aplica-se a redução por antiguidade e, nos veículos a gasóleo, o agravamento de 500 €. O simulador acima mostra cada passo em "Ver detalhe do cálculo".</p>
+      <p>O ISV soma duas componentes: a <strong>componente cilindrada</strong>, que multiplica os cm³ do motor por uma taxa e subtrai uma parcela fixa, e a <strong>componente ambiental</strong>, que faz o mesmo às emissões de CO₂. Nos veículos a gasóleo acresce o agravamento de 500 € previsto no artigo 7.º do Código do ISV. Se o carro vier de outro país da União Europeia, aplica-se depois a todo esse valor a redução por antiguidade. O simulador acima mostra cada passo em "Ver detalhe do cálculo".</p>
 
       <h3>Como funciona a redução por antiguidade?</h3>
-      <p>Quanto mais velho for o carro, menos ISV paga. A redução começa nos 10% até ao primeiro ano e chega aos 80% acima dos dez anos, aplicando-se às duas componentes do imposto. A contagem é feita a partir da data da primeira matrícula no país de origem, não da data em que o carro entra em Portugal.</p>
+      <p>Quanto mais velho for o carro, menos ISV paga. A redução começa nos 10% até ao primeiro ano e chega aos 80% acima dos dez anos, e aplica-se a todo o imposto, incluindo o agravamento do gasóleo. Conta o tempo desde a primeira matrícula no país de origem até ao fim do prazo para entregar a Declaração Aduaneira de Veículo, 20 dias úteis depois de o carro entrar em Portugal. Por isso o mês conta: com 4 anos e 11 meses a redução é de 43%, com 5 anos e 1 mês já é de 52%.</p>
+
+      <h3>Um carro importado de fora da UE tem redução de ISV?</h3>
+      <p>Não. A redução por antiguidade só se aplica a carros com matrícula definitiva de outro país da União Europeia. Um usado que venha do Reino Unido, da Suíça ou dos Estados Unidos paga o ISV por inteiro, como se fosse novo, e paga ainda IVA e, em muitos casos, direitos aduaneiros na importação. Desde o Brexit, os carros vindos do Reino Unido são tratados como vindos de um país terceiro.</p>
 
       <h3>Porque é que os carros a gasóleo pagam mais 500 €?</h3>
-      <p>O artigo 7.º do Código do ISV acrescenta 500 € ao montante total a pagar nos ligeiros de passageiros a gasóleo. Há uma exceção: se o Certificado de Conformidade indicar emissões de partículas inferiores a 0,001 g/km, o agravamento não se aplica. Muitos gasóleos recentes com filtro de partículas ficam abaixo desse valor, por isso vale a pena confirmar no CoC antes de assumir o custo.</p>
+      <p>O artigo 7.º do Código do ISV acrescenta 500 € ao imposto dos ligeiros de passageiros a gasóleo. Nos usados vindos da União Europeia, este valor também beneficia da redução por antiguidade. Há uma exceção: se o Certificado de Conformidade indicar emissões de partículas inferiores a 0,001 g/km, o agravamento não se aplica. Muitos gasóleos recentes com filtro de partículas ficam abaixo desse valor, por isso vale a pena confirmar no CoC antes de assumir o custo.</p>
 
       <h3>Como sei se o meu carro usa NEDC ou WLTP?</h3>
       <p>A norma consta no Certificado de Conformidade. Como regra prática, carros matriculados até 2018 usam quase sempre NEDC e a partir de 2020 usam WLTP. Os anos de 2018 e 2019 são de transição e podem ser de qualquer uma, por isso confirme antes de simular: a diferença no imposto pode ser de centenas de euros.</p>
@@ -669,7 +714,7 @@
       <p>Os elétricos a bateria estão isentos de ISV, novos ou usados importados. Os híbridos plug-in pagam uma taxa intermédia de 25% desde que tenham pelo menos 50 km de autonomia elétrica e emissões até 50 g CO₂/km, limite que sobe para 80 g nos modelos homologados segundo a norma Euro 6e-bis. Os híbridos convencionais, sem tomada, não têm taxa intermédia e pagam o imposto por inteiro. Este simulador cobre gasolina e gasóleo, por isso nestes casos <a href="#equipa">fale connosco</a>.</p>
 
       <h3>O valor do simulador é o que vou pagar nas Finanças?</h3>
-      <p>É uma estimativa fiável para decidir, não uma liquidação. O valor definitivo é apurado pela Autoridade Tributária a partir dos documentos do veículo, através da Declaração Aduaneira de Veículo. Se um dos dados que introduziu estiver errado no CoC, nomeadamente o CO₂, o valor final muda. Para uma compra que já está decidida, confirme sempre com um despachante.</p>
+      <p>É uma estimativa para decidir, não uma liquidação. O simulador calcula a idade ao mês, à data de hoje, por isso pode falhar um escalão no mês em que o carro faz anos. O valor definitivo é apurado pela Autoridade Tributária a partir dos documentos do veículo, através da Declaração Aduaneira de Veículo. Se um dos dados que introduziu estiver errado no CoC, nomeadamente o CO₂, o valor final muda. Para uma compra que já está decidida, confirme sempre com um despachante.</p>
 
       <h3>Quanto custa importar um carro, ao todo?</h3>
       <p>Para além do ISV conte com o transporte, o despachante, a inspeção B e a legalização, que juntos costumam somar entre 700 € e 1.200 €. Ative a opção "Incluir custos fixos de importação" no simulador para ver o total estimado, ou leia o <a href="/quanto-custa-importar-carro-usado-portugal.html">guia completo de custos</a>.</p>
@@ -687,23 +732,23 @@
       <div class="cc-side-card">
         <span class="cc-side-card__eyebrow">Tabelas ISV 2026</span>
         <h3>Escalões de redução</h3>
-        <p style="font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin-bottom: 12px; line-height: 1.5;">A redução por antiguidade aplica-se ao ISV total e varia com a idade do veículo:</p>
+        <p style="font-size: var(--cc-fs-sm); color: var(--cc-fg-muted); margin-bottom: 12px; line-height: 1.5;">A redução aplica-se a todo o ISV, incluindo o agravamento do gasóleo, e conta o tempo desde a primeira matrícula até ao fim do prazo da DAV:</p>
         <table style="width:100%; font-family: var(--cc-font-body); font-size: var(--cc-fs-xs); border-collapse: collapse;">
           <tbody>
             <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Até 1 ano</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">10%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">1 a 2 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">20%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">2 a 3 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">28%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">3 a 4 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">35%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">4 a 5 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">43%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">5 a 6 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">52%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">6 a 7 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">60%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">7 a 8 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">65%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">8 a 9 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">70%</td></tr>
-            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">9 a 10 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">75%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 1 a 2 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">20%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 2 a 3 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">28%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 3 a 4 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">35%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 4 a 5 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">43%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 5 a 6 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">52%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 6 a 7 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">60%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 7 a 8 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">65%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 8 a 9 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">70%</td></tr>
+            <tr style="border-bottom: 1px solid var(--cc-border);"><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 9 a 10 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">75%</td></tr>
             <tr><td style="padding: 5px 8px; color: var(--cc-fg-muted);">Mais de 10 anos</td><td style="padding: 5px 8px; text-align:right; font-weight: 600;">80%</td></tr>
           </tbody>
         </table>
-        <p style="font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); margin-top: 10px; line-height: 1.4;">Fonte: Tabelas ISV 2026 — Autoridade Tributária. Aplicável a importações da UE.</p>
+        <p style="font-size: var(--cc-fs-xs); color: var(--cc-fg-subtle); margin-top: 10px; line-height: 1.4;">Fonte: tabela D do artigo 11.º do Código do ISV. Só se aplica a carros com matrícula de outro país da UE; de fora da UE não há redução.</p>
       </div>
 
       <div class="cc-side-card">
@@ -934,12 +979,32 @@
     return Math.max(0, valor * entry.rate - entry.deduct);
   }
 
-  function getReducao(ano) {
-    var anoAtual = new Date().getFullYear();
-    var idade = anoAtual - ano;
-    if (idade <= 0) return { pct: 0, anos: 0 };
-    var entry = REDUCOES.find(function(e) { return idade <= e.maxAnos; });
-    return { pct: entry ? entry.pct : 80, anos: idade };
+  var MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+
+  // Tempo de uso (art. 11.º n.º 2 do CISV): da 1.ª matrícula ao fim do prazo da DAV.
+  // Calculado ao mês, à data de hoje. No mês em que o carro faz anos assume-se o
+  // escalão anterior (estimativa prudente) e o utilizador é avisado.
+  // A redução só existe para matrículas de outro Estado-Membro da UE (art. 11.º n.º 1).
+  function getReducao(mes, ano, origem) {
+    var hoje = new Date();
+    var meses = (hoje.getFullYear() - ano) * 12 + (hoje.getMonth() + 1 - mes);
+    var idx = REDUCOES.findIndex(function(e) { return meses <= e.maxAnos * 12; });
+    var entry = REDUCOES[idx];
+    var res = { meses: meses, pct: origem === 'ue' ? entry.pct : 0 };
+    if (origem === 'ue' && idx < REDUCOES.length - 1) {
+      res.limiteAnos = entry.maxAnos;
+      res.proximoPct = REDUCOES[idx + 1].pct;
+      // 1 = faz anos este mes; 2 = no proximo; ...
+      res.mesesAteProximo = entry.maxAnos * 12 + 1 - meses;
+    }
+    return res;
+  }
+
+  function fmtIdade(meses) {
+    var a = Math.floor(meses / 12), m = meses % 12, partes = [];
+    if (a) partes.push(a + (a === 1 ? ' ano' : ' anos'));
+    if (m) partes.push(m + (m === 1 ? ' mês' : ' meses'));
+    return partes.length ? partes.join(' e ') : 'menos de 1 mês';
   }
 
   function toggleParticulas() {
@@ -958,18 +1023,21 @@
   function calcularISV() {
     var aviso = document.getElementById('mensagemAviso');
     aviso.style.display = 'none';
-    ['cilindrada','co2','anoMatricula'].forEach(function(id) {
+    ['cilindrada','co2','mesMatricula','anoMatricula'].forEach(function(id) {
       document.getElementById(id).removeAttribute('aria-invalid');
     });
 
     var cilindrada   = parseInt(document.getElementById('cilindrada').value)   || 0;
     var co2          = parseInt(document.getElementById('co2').value)           || 0;
+    var mes          = parseInt(document.getElementById('mesMatricula').value)  || 0;
     var ano          = parseInt(document.getElementById('anoMatricula').value)  || 0;
+    var origem       = document.getElementById('origem').value;
     var combustivel  = document.getElementById('combustivel').value;
     var norma        = document.getElementById('norma').value;
     var incluirOutros = document.getElementById('incluirOutros').checked;
 
     function invalidar(id, msg) {
+      document.getElementById('resultados').classList.remove('visible');
       document.getElementById(id).setAttribute('aria-invalid', 'true');
       document.getElementById(id).focus();
       aviso.textContent = msg;
@@ -984,37 +1052,62 @@
       invalidar('co2', 'Introduza um valor de CO2 válido (entre 0 e 600 g/km).');
       return;
     }
-    if (ano < 1990 || ano > new Date().getFullYear()) {
-      invalidar('anoMatricula', 'Introduza um ano de matrícula entre 1990 e ' + new Date().getFullYear() + '.');
+    var hoje = new Date();
+    if (ano < 1990 || ano > hoje.getFullYear()) {
+      invalidar('anoMatricula', 'Introduza um ano de matrícula entre 1990 e ' + hoje.getFullYear() + '.');
+      return;
+    }
+    if (!mes) {
+      invalidar('mesMatricula', 'Escolha o mês da primeira matrícula. A redução por antiguidade conta ao mês.');
+      return;
+    }
+    if (ano === hoje.getFullYear() && mes > hoje.getMonth() + 1) {
+      invalidar('mesMatricula', 'A data da primeira matrícula não pode ser no futuro.');
       return;
     }
 
     var tabelaCO2Key = combustivel + '_' + norma;
     var compCil = calcComponente(ISV.cilindrada, cilindrada);
     var compCO2 = calcComponente(ISV[tabelaCO2Key], co2);
-    var isvBase = compCil + compCO2;
 
-    var reducao = getReducao(ano);
-    var isvReduzido = isvBase * (1 - reducao.pct / 100);
-
-    // Agravamento do gasoleo: 500 EUR sobre o montante total do imposto a pagar
-    // (art. 7.o n.o 3 do CISV), excepto se o CoC indicar particulas < 0,001 g/km.
+    // Agravamento do gasoleo: 500 EUR (art. 7.o n.o 3 do CISV), excepto se o CoC
+    // indicar particulas < 0,001 g/km. Desde 2025 a reducao da tabela D aplica-se
+    // tambem a este agravamento (art. 11.o n.o 1: "incluindo-se o agravamento").
     var isentoParticulas = document.getElementById('particulasBaixas').checked;
     var agravamento = (combustivel === 'gasoleo' && !isentoParticulas) ? 500 : 0;
-    var isvFinal = isvReduzido + agravamento;
+    var isvBase = compCil + compCO2 + agravamento;
+
+    var reducao = getReducao(mes, ano, origem);
+    var valorReducao = isvBase * reducao.pct / 100;
+    var isvFinal = isvBase - valorReducao;
+    var idadeTxt = fmtIdade(reducao.meses);
 
     document.getElementById('rCompCilindrada').textContent = fmt(compCil);
     document.getElementById('rCompCO2').textContent        = fmt(compCO2);
     document.getElementById('rISVBase').textContent        = fmt(isvBase);
+    document.getElementById('rISVBaseNota').hidden         = !agravamento;
     document.getElementById('rISVFinal').textContent       = fmt(isvFinal);
-    document.getElementById('rISVFinalNota').textContent   = agravamento
-      ? 'Após redução por antiguidade, com agravamento de 500 € do gasóleo'
-      : 'Após redução por antiguidade';
+    document.getElementById('rISVFinalNota').textContent   = origem === 'ue'
+      ? 'Após redução por antiguidade de ' + reducao.pct + '%'
+      : 'Sem redução: carro de fora da UE';
 
-    var reducaoTexto = reducao.anos > 0
-      ? reducao.anos + (reducao.anos === 1 ? ' ano' : ' anos') + ' de idade — redução de ' + reducao.pct + '%'
-      : 'Carro do ano corrente — sem redução por antiguidade';
-    document.getElementById('reducaoTexto').textContent = reducaoTexto;
+    document.getElementById('reducaoTexto').textContent = origem === 'ue'
+      ? idadeTxt + ' desde a 1.ª matrícula — redução de ' + reducao.pct + '%'
+      : 'Carro de fora da UE — sem redução por antiguidade';
+
+    // Aviso quando o carro faz anos este mes ou nos dois seguintes.
+    var notaEscalao = document.getElementById('notaEscalao');
+    notaEscalao.hidden = true;
+    if (reducao.mesesAteProximo && reducao.mesesAteProximo <= 3) {
+      var anosTxt = reducao.limiteAnos + (reducao.limiteAnos === 1 ? ' ano' : ' anos');
+      var quando = MESES[mes - 1] + ' de ' + (ano + reducao.limiteAnos);
+      var isvProximo = isvBase * (1 - reducao.proximoPct / 100);
+      notaEscalao.innerHTML = '<strong>Perto de mudar de escalão.</strong> O carro completa ' + anosTxt +
+        ' em ' + quando + '. Se o prazo da DAV (20 dias úteis depois de o carro entrar em Portugal) terminar depois do dia da primeira matrícula, a redução sobe para ' +
+        reducao.proximoPct + '% e o ISV desce para cerca de ' + fmt(isvProximo) + '.';
+      notaEscalao.hidden = false;
+    }
+    document.getElementById('notaOrigem').hidden = origem === 'ue';
 
     var normaLabel = norma.toUpperCase();
     var combLabel  = combustivel === 'gasoleo' ? 'Gasóleo' : 'Gasolina';
@@ -1026,9 +1119,11 @@
       '<tr><td>CO2: ' + co2 + ' g/km × ' + taxa(ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate) + ' € (' + combLabel + ' ' + normaLabel + ')</td><td>' + fmt(co2 * ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).rate) + '</td></tr>',
       '<tr class="deduct-row"><td>— Parcela a abater</td><td>− ' + fmt(ISV[tabelaCO2Key].find(function(e){return co2<=e.max;}).deduct) + '</td></tr>',
       '<tr class="total-row"><td>Componente ambiental CO2</td><td>' + fmt(compCO2) + '</td></tr>',
-      '<tr><td><strong>ISV base (soma das componentes)</strong></td><td><strong>' + fmt(isvBase) + '</strong></td></tr>',
-      '<tr class="deduct-row"><td>Redução por antiguidade (' + reducao.pct + '%)</td><td>− ' + fmt(isvBase * reducao.pct / 100) + '</td></tr>',
       agravamento ? '<tr><td>Agravamento gasóleo (art. 7.º n.º 3 do CISV)</td><td>+ ' + fmt(agravamento) + '</td></tr>' : '',
+      '<tr><td><strong>ISV antes da redução</strong></td><td><strong>' + fmt(isvBase) + '</strong></td></tr>',
+      origem === 'ue'
+        ? '<tr class="deduct-row"><td>Redução por antiguidade (' + reducao.pct + '%, ' + idadeTxt + ')</td><td>− ' + fmt(valorReducao) + '</td></tr>'
+        : '<tr class="deduct-row"><td>Redução por antiguidade (fora da UE: não se aplica)</td><td>− ' + fmt(0) + '</td></tr>',
       '<tr class="total-row"><td><strong>ISV estimado a pagar</strong></td><td><strong>' + fmt(isvFinal) + '</strong></td></tr>'
     ].join('');
 
@@ -1056,8 +1151,9 @@
 
     var msgPartes = [
       'Olá, calculei o ISV no vosso simulador:',
-      'Cilindrada: ' + cilindrada + ' cc | CO2: ' + co2 + ' g/km (' + combLabel + ', ' + normaLabel + ') | Ano: ' + ano,
-      'Redução por antiguidade: ' + reducao.pct + '% (' + reducao.anos + ' anos)',
+      'Cilindrada: ' + cilindrada + ' cc | CO2: ' + co2 + ' g/km (' + combLabel + ', ' + normaLabel + ')',
+      '1.ª matrícula: ' + (mes < 10 ? '0' : '') + mes + '/' + ano + ' | Origem: ' + (origem === 'ue' ? 'UE' : 'fora da UE'),
+      'Redução por antiguidade: ' + reducao.pct + '%' + (origem === 'ue' ? ' (' + idadeTxt + ')' : ' (fora da UE)'),
       'ISV estimado: ' + fmt(isvFinal)
     ];
     if (incluirOutros) {
@@ -1079,10 +1175,13 @@
   toggleParticulas();
 
   function resetSimulador() {
-    ['cilindrada','co2','anoMatricula','precoCompra'].forEach(function(id) {
+    ['cilindrada','co2','mesMatricula','anoMatricula','precoCompra'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) el.value = '';
     });
+    document.getElementById('origem').value = 'ue';
+    document.getElementById('notaEscalao').hidden = true;
+    document.getElementById('notaOrigem').hidden = true;
     document.getElementById('combustivel').value = 'gasolina';
     document.getElementById('norma').value = 'wltp';
     toggleParticulas();
