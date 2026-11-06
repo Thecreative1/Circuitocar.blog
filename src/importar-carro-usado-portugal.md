@@ -3,6 +3,7 @@ layout: article-cc.njk
 permalink: importar-carro-usado-portugal.html
 tags: article
 date: 2026-05-20
+lastmod: 2026-11-06
 
 pageTitle: "Importar carro usado para Portugal: quando compensa? | Circuito Car Blog"
 title: "Importar carro usado para Portugal: quando compensa e como evitar erros"
@@ -55,7 +56,7 @@ schemaOrg: |
         "name": "Quando compensa mesmo importar um carro usado para Portugal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Importar compensa quando o diferencial de preço entre o mercado de origem e o nacional é suficientemente grande para absorber o ISV, a Inspeção B, o despachante, o transporte e os emolumentos de registo — um total que pode facilmente somar 2.500 € a 4.000 € ou mais. Na maioria dos casos práticos, a poupança real é menor do que parece à primeira vista."
+          "text": "Importar compensa quando o diferencial de preço entre o mercado de origem e o nacional é suficientemente grande para absorver o ISV, a Inspeção B, o despachante, o transporte e os emolumentos de registo — um total que pode facilmente somar 2.500 € a 4.000 € ou mais. Na maioria dos casos práticos, a poupança real é menor do que parece à primeira vista."
         }
       },
       {
@@ -137,7 +138,7 @@ O transporte de uma viatura da Alemanha ou Holanda para Portugal pode custar ent
 Um relatório técnico independente no país de origem — indispensável se não for pessoalmente verificar o carro — custa normalmente entre 150 € e 400 €. É um custo que quase sempre se justifica.
 
 **ISV — Imposto sobre Veículos**
-Este é frequentemente o custo mais subestimado ao importar um carro para Portugal. O ISV é calculado com base nas emissões de CO₂ e na cilindrada do veículo, e pode representar vários milhares de euros — especialmente em carros a gasolina com motores maiores ou emissões mais elevadas. Um carro com 150 g/km de CO₂ e 2.000 cc pode gerar um ISV entre 3.000 € e 7.000 €, dependendo do ano de primeira matrícula. Consulte sempre a tabela do IMT antes de avançar.
+Este é frequentemente o custo mais subestimado ao importar um carro para Portugal. O ISV é calculado com base nas emissões de CO₂ e na cilindrada do veículo, e pode representar vários milhares de euros — especialmente em carros com motores maiores ou emissões mais elevadas. Um gasolina com 2.000 cc e 150 g/km de CO₂ fica entre cerca de 5.400 € (WLTP) e 7.100 € (NEDC) antes da redução por antiguidade. Se vier de outro país da UE, essa redução baixa o valor entre 10% e 80%, conforme o tempo desde a primeira matrícula. Se vier de fora da UE, como da Suíça ou do Reino Unido, paga o ISV por inteiro. Faça a conta no [simulador de ISV](/simulador_isv.html) antes de avançar.
 
 **Registo e matrícula portuguesa**
 Inclui as taxas de registo no IMT e a emissão do Documento Único Automóvel (DUA). Habitualmente entre 200 € e 400 €.

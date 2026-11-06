@@ -3,6 +3,7 @@ layout: article-cc.njk
 permalink: tabela-isv-2026-portugal.html
 tags: article
 date: 2026-07-09
+lastmod: 2026-11-06
 
 pageTitle: "Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade | Circuito Car Blog"
 title: "Tabela ISV 2026 Portugal: escalões, cálculo e redução por antiguidade"
@@ -31,7 +32,7 @@ inventoryLabel: "Ver stock disponível"
 
 sidebarBadge: "Ferramenta gratuita"
 sidebarTitle: "Calcule o ISV da sua viatura"
-sidebarDescription: "Use o simulador para calcular o ISV exato com base na cilindrada, CO₂, norma de emissões e ano de matrícula. Resultado instantâneo, sem registo."
+sidebarDescription: "Use o simulador para estimar o ISV com base na cilindrada, CO₂, norma de emissões, origem do carro e data da primeira matrícula. Resultado instantâneo, sem registo."
 sidebarUrl: "/simulador_isv.html"
 sidebarUrlLabel: "Abrir simulador ISV"
 sidebarWhatsappMsg: "Olá, vi a tabela de ISV 2026 e queria ajuda para calcular o ISV de uma viatura que estou a considerar importar."
@@ -67,7 +68,7 @@ schemaOrg: |
         "name": "O que é o ISV e quem o paga?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O ISV (Imposto Sobre Veículos) é um imposto nacional português pago na primeira matrícula de qualquer veículo em Portugal. Aplica-se tanto a carros novos como a carros usados importados do estrangeiro — incluindo de países da União Europeia. Quem já compra um carro com matrícula portuguesa não paga ISV; esse imposto já foi pago na altura da primeira matrícula."
+          "text": "O ISV (Imposto Sobre Veículos) é um imposto nacional português pago na primeira matrícula de qualquer veículo em Portugal. Aplica-se tanto a carros novos como a carros usados importados do estrangeiro, incluindo os que vêm de países da União Europeia. Quem compra um carro já com matrícula portuguesa não paga ISV, porque esse imposto foi pago na altura da primeira matrícula."
         }
       },
       {
@@ -75,7 +76,7 @@ schemaOrg: |
         "name": "Como é calculado o ISV em 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O ISV 2026 é calculado somando duas componentes: a componente de cilindrada (baseada nos cc do motor) e a componente de CO₂ (baseada nas emissões em g/km). A cada componente aplica-se depois uma redução percentual conforme a antiguidade do veículo. O resultado final é o ISV a pagar. A norma de emissões (NEDC ou WLTP) determina qual tabela de CO₂ se aplica."
+          "text": "O ISV 2026 soma duas componentes: a componente de cilindrada, baseada nos cc do motor, e a componente de CO₂, baseada nas emissões em g/km. Nos carros a gasóleo acresce um agravamento de 500 €, exceto se o Certificado de Conformidade indicar partículas inferiores a 0,001 g/km. Nos usados vindos de outro país da União Europeia, aplica-se depois a todo o imposto uma redução conforme o tempo decorrido desde a primeira matrícula. A norma de emissões (NEDC ou WLTP) determina qual tabela de CO₂ se aplica."
         }
       },
       {
@@ -91,7 +92,7 @@ schemaOrg: |
         "name": "Um carro com 10 anos paga muito ISV?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Não. A tabela de redução por antiguidade do ISV prevê uma redução de 80% para veículos com mais de 10 anos de antiguidade. Isso significa que um carro de 2014 ou anterior paga apenas 20% do ISV que pagaria se fosse novo. A redução começa nos 10% (menos de 1 ano) e chega a 80% (mais de 10 anos), tornando os carros mais antigos muito menos penalizados pelo ISV."
+          "text": "Depende da origem e da data exata. Um carro com matrícula de outro país da União Europeia e mais de 10 anos desde a primeira matrícula tem a redução máxima de 80% e paga apenas 20% do ISV de um carro novo. Até completar os 10 anos fica no escalão de 75%. A idade conta até ao fim do prazo para entregar a Declaração Aduaneira de Veículo, por isso o mês da primeira matrícula pode mudar o escalão. Um carro vindo de fora da União Europeia, como do Reino Unido, não tem redução por antiguidade."
         }
       },
       {
@@ -99,7 +100,7 @@ schemaOrg: |
         "name": "Existe alguma isenção de ISV para carros elétricos ou híbridos plug-in?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. Os veículos 100% elétricos estão isentos de ISV em Portugal. Os híbridos plug-in beneficiam de uma redução significativa que varia conforme a autonomia elétrica do veículo. As regras exatas podem variar com alterações ao Código do ISV, por isso é importante confirmar com a Autoridade Tributária ou com a equipa Circuito Car antes de avançar com uma importação."
+          "text": "Sim. Os veículos 100% elétricos estão isentos de ISV em Portugal. Os híbridos plug-in pagam 25% do imposto quando cumprem os requisitos de autonomia elétrica e de emissões: em regra, pelo menos 50 km em modo elétrico e menos de 50 g/km de CO₂, ou 80 g/km nos homologados segundo a norma Euro 6e-bis. Como as regras mudam com o Orçamento do Estado, confirme com a Autoridade Tributária ou com a equipa Circuito Car antes de avançar com uma importação."
         }
       }
     ]
@@ -121,15 +122,17 @@ Paga ISV quando:
 - importa um carro do estrangeiro e o matricula em Portugal pela primeira vez
 - adquire um veículo novo (o concessionário inclui o ISV no preço)
 
+A origem do carro muda muito a conta. Um usado com matrícula de outro país da **União Europeia** tem direito à redução por antiguidade. Um usado que venha **de fora da UE** (Reino Unido, Suíça, Estados Unidos) paga o imposto por inteiro, como explicamos [mais abaixo](#carros-de-fora-da-ue-sem-reducao-por-antiguidade).
+
 ## A fórmula do ISV
 
-O ISV tem **duas componentes** que são somadas:
+O ISV tem **duas componentes** que são somadas, mais um agravamento nos carros a gasóleo:
 
-```
-ISV = (Componente Cilindrada + Componente CO₂) × (1 − Redução por antiguidade)
-```
+<div class="note"><strong>ISV = (componente cilindrada + componente CO₂ + agravamento do gasóleo) × (1 − redução por antiguidade)</strong></div>
 
-Cada componente calcula-se da mesma forma: **multiplica-se o valor (cc ou g/km) pela taxa do escalão e subtrai-se a parcela a abater** desse escalão. Se o resultado for negativo, a componente é zero. A redução por antiguidade é depois aplicada ao total, dependendo do número de anos entre a primeira matrícula e a data de importação.
+Cada componente calcula-se da mesma forma: **multiplica-se o valor (cc ou g/km) pela taxa do escalão e subtrai-se a parcela a abater** desse escalão. Se o resultado for negativo, a componente é zero.
+
+Nos ligeiros de passageiros a gasóleo soma-se um **agravamento de 500 €**, exceto se o Certificado de Conformidade indicar emissões de partículas inferiores a 0,001 g/km. A redução por antiguidade aplica-se depois a todo o imposto, incluindo esse agravamento, mas só nos usados vindos de outro país da União Europeia.
 
 ## Componente cilindrada
 
@@ -212,74 +215,96 @@ O gasóleo é claramente mais penalizado na componente ambiental: para os mesmos
 
 ## Tabela de redução por antiguidade
 
-Esta tabela é a mais consultada por quem importa carros usados. A redução aplica-se ao ISV total (componente cilindrada + CO₂) e depende dos anos que decorreram entre a primeira matrícula e a data de tributação em Portugal.
+Esta tabela é a mais consultada por quem importa carros usados. Desde 2025 há uma só tabela (tabela D do artigo 11.º do Código do ISV), que se aplica a todo o imposto: componente cilindrada, componente CO₂ e agravamento do gasóleo.
 
-| Antiguidade do veículo | Redução aplicada | ISV pago |
+| Tempo desde a 1.ª matrícula | Redução | ISV pago |
 |---|---|---|
-| Menos de 1 ano | 10% | 90% do ISV base |
-| 1 a 2 anos | 20% | 80% |
-| 2 a 3 anos | 28% | 72% |
-| 3 a 4 anos | 35% | 65% |
-| 4 a 5 anos | 43% | 57% |
-| 5 a 6 anos | 52% | 48% |
-| 6 a 7 anos | 60% | 40% |
-| 7 a 8 anos | 65% | 35% |
-| 8 a 9 anos | 70% | 30% |
-| 9 a 10 anos | 75% | 25% |
+| Até 1 ano | 10% | 90% |
+| Mais de 1 a 2 anos | 20% | 80% |
+| Mais de 2 a 3 anos | 28% | 72% |
+| Mais de 3 a 4 anos | 35% | 65% |
+| Mais de 4 a 5 anos | 43% | 57% |
+| Mais de 5 a 6 anos | 52% | 48% |
+| Mais de 6 a 7 anos | 60% | 40% |
+| Mais de 7 a 8 anos | 65% | 35% |
+| Mais de 8 a 9 anos | 70% | 30% |
+| Mais de 9 a 10 anos | 75% | 25% |
 | Mais de 10 anos | 80% | 20% |
 
-**O que isto significa na prática:** um carro de 2019 importado em 2026 tem 7 anos de antiguidade — beneficia de 60% de redução e paga apenas 40% do ISV que pagaria se fosse novo.
+### Conta a data, não só o ano
 
-Um carro de 2014 com 12 anos de antiguidade paga apenas 20% do ISV base.
+O tempo de uso conta desde o dia da primeira matrícula até ao **fim do prazo para entregar a Declaração Aduaneira de Veículo (DAV)**, que é de 20 dias úteis depois de o carro entrar em Portugal. Por isso o ano de matrícula não chega para saber a redução.
+
+Veja dois carros de 2021, ambos com o prazo da DAV a terminar no fim de novembro de 2026:
+
+- **Matriculado em março de 2021:** 5 anos e 8 meses, escalão "mais de 5 a 6 anos", **redução de 52%**.
+- **Matriculado em dezembro de 2021:** 4 anos e 11 meses, escalão "mais de 4 a 5 anos", **redução de 43%**.
+
+São 9 pontos de diferença com o mesmo ano de matrícula. Num gasóleo 1.6 como o do exemplo 2, isso vale perto de 400 €. Se o carro estiver a poucas semanas de mudar de escalão, faça a conta antes de marcar o transporte.
+
+Um carro com mais de 10 anos desde a primeira matrícula paga apenas 20% do ISV base.
+
+## Carros de fora da UE: sem redução por antiguidade
+
+A tabela de redução só se aplica a carros com matrícula definitiva de **outro país da União Europeia**. Um usado que venha do Reino Unido, da Suíça, dos Estados Unidos ou do Japão paga o ISV por inteiro, como se fosse novo, mesmo que tenha 15 anos.
+
+Desde o Brexit, a Autoridade Tributária trata os carros vindos do Reino Unido como vindos de um país terceiro, sem direito à redução. Na importação de fora da UE paga ainda IVA e, em muitos casos, direitos aduaneiros sobre o valor do carro.
+
+Fica de fora deste cálculo quem muda a residência para Portugal e traz o próprio carro: esse caso tem um regime de isenção com regras próprias. Confirme com um despachante antes de avançar.
 
 ## Exemplos práticos de cálculo
 
 ### Exemplo 1 — gasolina pequeno (o caso mais favorável)
 
-**Viatura:** VW Golf 1.0 TSI gasolina, 2021, 999 cc, 122 g/km CO₂ (WLTP).
+Nos dois exemplos, o carro vem da Alemanha e o prazo da DAV termina no fim de novembro de 2026.
+
+**Viatura:** VW Golf 1.0 TSI gasolina, 999 cc, 122 g/km CO₂ (WLTP), primeira matrícula em março de 2021.
 
 - **Componente cilindrada:** 999 × 1,09 − 849,03 = **239,88 €**
 - **Componente CO₂** (gasolina WLTP, escalão 121–130): 122 × 5,27 − 619,17 = **23,77 €**
-- **ISV base:** 239,88 + 23,77 = **263,65 €**
-- **Antiguidade:** 2021 → 2026 = 5 anos → redução de 43%
-- **ISV a pagar:** 263,65 × 0,57 = **~150 €**
+- **ISV antes da redução:** 239,88 + 23,77 = **263,65 €**
+- **Antiguidade:** 5 anos e 8 meses, escalão "mais de 5 a 6 anos", redução de 52%
+- **ISV a pagar:** 263,65 × 0,48 = **~127 €**
 
 ### Exemplo 2 — gasóleo 1.6 (o caso clássico de importação)
 
-**Viatura:** VW Golf 1.6 TDI gasóleo, 2020, 1.598 cc, 130 g/km CO₂ (WLTP).
+**Viatura:** VW Golf 1.6 TDI gasóleo, 1.598 cc, 130 g/km CO₂ (WLTP), primeira matrícula em setembro de 2020.
 
 - **Componente cilindrada:** 1.598 × 5,61 − 6.194,88 = **2.769,90 €**
 - **Componente CO₂** (gasóleo WLTP, escalão 121–140): 130 × 65,04 − 7.360,85 = **1.094,35 €**
-- **ISV base:** 2.769,90 + 1.094,35 = **3.864,25 €**
-- **Antiguidade:** 2020 → 2026 = 6 anos → redução de 52%
-- **ISV a pagar:** 3.864,25 × 0,48 = **~1.855 €**
+- **Agravamento do gasóleo:** **500 €** (não se aplica se o CoC indicar partículas inferiores a 0,001 g/km)
+- **ISV antes da redução:** 2.769,90 + 1.094,35 + 500 = **4.364,25 €**
+- **Antiguidade:** 6 anos e 2 meses, escalão "mais de 6 a 7 anos", redução de 60%
+- **ISV a pagar:** 4.364,25 × 0,40 = **~1.746 €** (~1.546 € se o CoC dispensar o agravamento)
 
-A comparação diz tudo: **o 1.0 gasolina paga ~150 € de ISV; o 1.6 gasóleo do ano anterior paga ~1.855 €**. A cilindrada acima de 1.250 cc e a tabela ambiental do gasóleo fazem uma diferença de mais de 1.700 € na mesma classe de carro.
+A comparação diz tudo: **o 1.0 gasolina paga ~127 € de ISV; o 1.6 gasóleo paga ~1.746 €**. A cilindrada acima de 1.250 cc, a tabela ambiental do gasóleo e o agravamento fazem uma diferença de mais de 1.600 € na mesma classe de carro.
 
-<div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. Os valores exatos dependem das especificações no Certificado de Conformidade e das tabelas em vigor na data de legalização — confirme sempre no simulador ou junto da Autoridade Tributária.</div>
+**E se o Golf 1.6 TDI viesse do Reino Unido?** Sem redução por antiguidade, pagaria o ISV por inteiro: cerca de **4.364 €**, mais IVA e eventuais direitos aduaneiros.
+
+<div class="note"><strong>Atenção:</strong> Estes exemplos usam as mesmas tabelas do <a href="/simulador_isv.html">simulador ISV</a>. O valor final depende dos dados do Certificado de Conformidade, da data exata da primeira matrícula e das tabelas em vigor na data de legalização. Confirme sempre no simulador ou junto da Autoridade Tributária.</div>
 
 ## Quando o ISV é mínimo ou nulo
 
 Casos em que o ISV é muito baixo ou zero:
 
-- **Veículos eléctricos a bateria:** isentos de ISV
-- **Híbridos plug-in:** beneficiam de reduções significativas conforme a autonomia eléctrica
-- **Carros com mais de 10 anos:** pagam apenas 20% do ISV base, o que pode tornar a importação economicamente viável mesmo para veículos com emissões mais altas
+- **Veículos elétricos a bateria:** isentos de ISV
+- **Híbridos plug-in:** pagam 25% do ISV quando cumprem os requisitos de autonomia elétrica e de emissões (em regra, pelo menos 50 km em modo elétrico e menos de 50 g/km de CO₂)
+- **Carros vindos da UE com mais de 10 anos:** pagam apenas 20% do ISV base, o que pode tornar a importação economicamente viável mesmo para veículos com emissões mais altas
 - **Motores muito pequenos com emissões baixas:** abaixo de ~780 cc a componente de cilindrada chega a zero, e um gasolina WLTP abaixo de ~98 g/km paga componente ambiental quase nula — casos raros, mas existem (citadinos e alguns híbridos)
 
 Para elétricos e híbridos plug-in, as regras têm especificidades próprias. Se estiver a considerar importar uma destas categorias, fale com a equipa antes de avançar.
 
-## Use o simulador para o cálculo exato
+## Faça a estimativa do seu carro no simulador
 
-As tabelas apresentadas são indicativas. O simulador ISV da Circuito Car usa os valores atualizados da AT e considera:
+As tabelas acima servem para perceber o cálculo. Para o carro que está a considerar, o simulador ISV da Circuito Car faz a conta com as mesmas tabelas de 2026 e considera:
 
-- cilindrada exata do motor
-- emissões de CO₂ em g/km
-- norma de emissões (NEDC ou WLTP)
-- ano de matrícula (para o cálculo da antiguidade)
-- tipo de combustível
+- cilindrada do motor
+- emissões de CO₂ em g/km e norma de emissões (NEDC ou WLTP)
+- mês e ano da primeira matrícula, para calcular a idade ao mês
+- origem do carro (UE ou fora da UE)
+- combustível e agravamento do gasóleo
 
-O resultado inclui o ISV total estimado e é calculado instantaneamente, sem registo.
+O resultado é uma estimativa, calculada instantaneamente e sem registo. O valor definitivo é o que a Autoridade Tributária liquida com base na DAV e nos documentos do carro.
 
 <div class="cta-inline">
 <h2 style="margin-top:0">Calcule o ISV da sua viatura</h2>
@@ -296,4 +321,7 @@ O ISV é normalmente o maior custo variável ao importar um carro usado — mas 
 
 Antes de avançar, calcule o ISV com o simulador, some os restantes custos e compare com o mercado nacional. Se não encontrar o carro certo em Portugal, a Circuito Car pode ajudar a analisar se a importação compensa para a viatura específica que procura.
 
-<a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
+<div class="cta-actions">
+<a class="cc-btn cc-btn--yellow" href="/simulador_isv.html"><i data-lucide="calculator"></i>Calcular o ISV no simulador</a>
+<a class="cc-btn cc-btn--ghost-dark" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
+</div>

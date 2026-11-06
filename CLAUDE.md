@@ -458,6 +458,8 @@ As of 2026-11-01: 24 articles, newest first. All in `src/*.md`, `tags: article`,
 
 **Legal facts already verified (2026-09-29) — keep them right in new content:** garantia (DL 84/2021) = 3 years, reducible to 18 months for used cars only by written agreement; presumption of pre-existing defect 2 years (1 year if reduced). IUC = due in full by whoever owns the car on the first day of the tax period — no proportional refund, and unpaid IUC stays with the old owner (does NOT follow the car). EVs are IUC-exempt under art. 5.º CIUC (Categoria E is motorcycles).
 
+**ISV facts verified 2026-11-06 (art. 11.º CISV, wording since Lei 45-A/2024):** one Tabela D (10% até 1 ano … 80% mais de 10 anos) applied to the whole tax — cilindrada + ambiental + the 500 € diesel agravamento (art. 7.º n.º 3), so the 500 € is reduced too. Age = from the first registration to the end of the DAV deadline (20 dias úteis after the car enters Portugal, art. 20.º): count by month, never by year only ("2021 → 2026 = 5 anos" is wrong). The reduction only applies to registrations from another EU state: UK (post-Brexit), Switzerland, USA pay full ISV plus IVA and often customs duty. PHEV = 25% (≥50 km elétrico and <50 g/km, or 80 g/km Euro 6e-bis). Never call the simulator result "exato" — it's an estimate.
+
 City pages (12, generated): braga, guimaraes, barcelos, santo-tirso, trofa, povoa-de-varzim, vila-do-conde, felgueiras, fafe, vizela, amarante, porto. **Never create individual city `.md` files** — add to `src/_data/cities.js` only.
 
 ## Tools/simulators live

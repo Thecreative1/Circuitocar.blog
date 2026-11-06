@@ -3,6 +3,7 @@ layout: article-cc.njk
 permalink: quanto-custa-importar-carro-usado-portugal.html
 tags: article
 date: 2026-05-28
+lastmod: 2026-11-06
 
 pageTitle: "Quanto custa importar um carro usado para Portugal: a conta real | Circuito Car Blog"
 title: "Quanto custa importar um carro usado para Portugal: a conta real antes de decidir"
@@ -30,7 +31,7 @@ heroWhatsappMsg: "Olá, vi o artigo sobre custos de importação e gostava de pe
 
 sidebarBadge: "Ferramenta útil"
 sidebarTitle: "Simule o ISV do seu carro"
-sidebarDescription: "Introduza a cilindrada, CO2, combustível e ano de matrícula — e veja o ISV estimado em segundos. Gratuito, sem registo."
+sidebarDescription: "Introduza a cilindrada, CO2, combustível, origem e data da primeira matrícula — e veja o ISV estimado em segundos. Gratuito, sem registo."
 
 relatedArticles:
   - title: "Importar carro usado para Portugal: quando compensa e como evitar erros"
@@ -79,7 +80,7 @@ schemaOrg: |
         "name": "Posso importar um carro do Reino Unido após o Brexit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, mas o processo é mais complexo do que importar de um país da UE. Pode haver lugar ao pagamento de IVA e taxas aduaneiras adicionais. Recomenda-se sempre a consulta de um despachante para estes casos."
+          "text": "Sim, mas o processo é mais complexo e mais caro do que importar de um país da UE. Desde o Brexit, um carro vindo do Reino Unido é tratado como vindo de um país terceiro: paga o ISV por inteiro, sem redução por antiguidade, e ainda IVA e, em muitos casos, direitos aduaneiros. Recomenda-se sempre a consulta de um despachante para estes casos."
         }
       },
       {
@@ -135,9 +136,16 @@ O que alivia consideravelmente o ISV nos carros usados é a **redução por anti
   </tbody>
 </table>
 
-Para calcular o ISV do carro específico que está a considerar, use o nosso [simulador de ISV gratuito]({{ site.basePath }}/simulador_isv.html) — basta introduzir a cilindrada, as emissões de CO2, o combustível, a norma e o ano de matrícula.
+Dois pormenores mudam muito esta tabela:
 
-Para veículos eléctricos puros, o ISV é zero. Para híbridos plug-in que cumpram os requisitos de autonomia e emissões, aplica-se um desconto de 75%. Se está a considerar estas opções, consulte também o nosso guia sobre [importação de carros usados para Portugal]({{ site.basePath }}/importar-carro-usado-portugal.html).
+- **A idade conta ao mês, não ao ano.** Vai do dia da primeira matrícula até ao fim do prazo para entregar a Declaração Aduaneira de Veículo (20 dias úteis depois de o carro entrar em Portugal). Dois carros do mesmo ano podem cair em escalões diferentes.
+- **A redução só existe para carros vindos de outro país da UE.** Um usado do Reino Unido, da Suíça ou dos Estados Unidos paga o ISV por inteiro, como se fosse novo.
+
+Nos carros a gasóleo soma-se ainda um agravamento de 500 €, exceto se o Certificado de Conformidade indicar partículas inferiores a 0,001 g/km. A redução por antiguidade também se aplica a esse valor.
+
+Para calcular o ISV do carro específico que está a considerar, use o nosso [simulador de ISV gratuito]({{ site.basePath }}/simulador_isv.html) — basta introduzir a cilindrada, as emissões de CO2, o combustível, a norma, a origem e o mês e ano da primeira matrícula.
+
+Para veículos elétricos puros, o ISV é zero. Para híbridos plug-in que cumpram os requisitos de autonomia e emissões, aplica-se um desconto de 75%. Se está a considerar estas opções, consulte também o nosso guia sobre [importação de carros usados para Portugal]({{ site.basePath }}/importar-carro-usado-portugal.html).
 
 ## Inspeção B, registo e custos fixos de legalização
 
@@ -164,18 +172,18 @@ Tecnicamente, não é obrigatório contratar um despachante para importar um ve�
 
 Um despachante ou agência especializada trata do DAV (Declaração Aduaneira de Veículo), da liquidação do ISV e de todo o processo de registo. Os honorários situam-se habitualmente entre **200 e 500 euros**, dependendo da complexidade do caso e do prestador.
 
-O nosso conselho é directo: pague o despachante. O tempo que poupa e os erros que evita valem bem o custo.
+O nosso conselho é direto: pague o despachante. O tempo que poupa e os erros que evita valem bem o custo.
 
 ## A conta real: um exemplo calculado
 
-Para perceber o impacto total, vejamos um caso concreto. Um carro de 2022, gasolina, motor 1.6L (1.600 cc), com 145 g/km de CO2 (norma WLTP), comprado em Espanha a 12.000 €.
+Para perceber o impacto total, vejamos um caso concreto. Um carro a gasolina com primeira matrícula em junho de 2022, motor 1.6L (1.600 cc), com 145 g/km de CO2 (norma WLTP), comprado em Espanha a 12.000 € e legalizado em novembro de 2026.
 
 **Cálculo do ISV:**
-- Componente cilindrada (1.600 cc): 1.600 × 5,61 € − 6.194,88 € = **2.781 €**
-- Componente ambiental CO2 (WLTP, 145 g/km): 145 × 6,38 € − 762,73 € = **162 €**
-- ISV base: 2.943 €
-- Redução por antiguidade (4 anos → 35%): − 1.030 €
-- **ISV a pagar: 1.913 €**
+- Componente cilindrada (1.600 cc): 1.600 × 5,61 € − 6.194,88 € = **2.781,12 €**
+- Componente ambiental CO2 (WLTP, 145 g/km): 145 × 6,38 € − 762,73 € = **162,37 €**
+- ISV antes da redução: 2.943,49 €
+- Redução por antiguidade (4 anos e 5 meses, escalão "mais de 4 a 5 anos" → 43%): − 1.265,70 €
+- **ISV a pagar: 1.677,79 €**
 
 **Custos totais:**
 
@@ -183,20 +191,20 @@ Para perceber o impacto total, vejamos um caso concreto. Um carro de 2022, gasol
   <thead><tr><th>Custo</th><th>Valor</th></tr></thead>
   <tbody>
     <tr><td>Preço de compra (Espanha)</td><td>12.000 €</td></tr>
-    <tr><td>ISV</td><td>1.913 €</td></tr>
+    <tr><td>ISV</td><td>1.678 €</td></tr>
     <tr><td>Inspeção B</td><td>94 €</td></tr>
     <tr><td>Legalização (DUA, registo, chapas)</td><td>195 €</td></tr>
     <tr><td>Despachante</td><td>350 €</td></tr>
     <tr><td>Transporte</td><td>400 €</td></tr>
-    <tr><td><strong>Total estimado</strong></td><td><strong>~14.952 €</strong></td></tr>
+    <tr><td><strong>Total estimado</strong></td><td><strong>~14.717 €</strong></td></tr>
   </tbody>
 </table>
 
 O mesmo carro, já matriculado em Portugal num stand de confiança, custaria entre 14.000 e 16.000 euros dependendo do estado e do historial. A margem de poupança real — quando existe — raramente compensa o esforço e o tempo envolvidos.
 
-Pode ver o nosso stock atual de viaturas usadas em [circuitocar.pt/viaturas]({{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=article_stock&utm_campaign=blog_custos_importacao) para ter uma referência directa de preços no mercado nacional.
+Pode ver o nosso stock atual de viaturas usadas em [circuitocar.pt/viaturas]({{ site.mainSite }}/viaturas?utm_source=blog&utm_medium=article_stock&utm_campaign=blog_custos_importacao) para ter uma referência direta de preços no mercado nacional.
 
-## Vale a pena importar ou comprar directamente num stand?
+## Vale a pena importar ou comprar diretamente num stand?
 
 Esta é a pergunta que mais nos fazem, e a resposta honesta é: depende.
 
@@ -209,7 +217,7 @@ Na maioria dos casos práticos, comprar um carro usado num stand de confiança e
 - Não há surpresas fiscais a meio do processo
 - Há uma equipa real a quem recorrer se surgir algum problema
 
-Na Circuito Car, trabalhamos com carros usados seleccionados, muitos deles de origem estrangeira já legalizados e prontos a circular. Não tem de fazer este processo sozinho — e se tiver dúvidas sobre se vale a pena importar um carro específico, fale connosco antes de avançar.
+Na Circuito Car, trabalhamos com carros usados selecionados, muitos deles de origem estrangeira já legalizados e prontos a circular. Não tem de fazer este processo sozinho — e se tiver dúvidas sobre se vale a pena importar um carro específico, fale connosco antes de avançar.
 
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 8px;">
   <a class="cc-btn cc-btn--yellow" href="{{ site.contact.marco.whatsappBase }}?text={{ sidebarWhatsappMsg | urlencode }}&utm_source=blog&utm_medium=article_cta&utm_campaign={{ utmCampaign }}" target="_blank" rel="noopener noreferrer">
@@ -232,7 +240,7 @@ Não. O ISV é calculado com base nas características técnicas do veículo —
 Não. A Inspeção B é obrigatória para atribuição de matrícula portuguesa, mas não substitui a IPO periódica. Após a matrícula, o veículo fica sujeito às inspeções regulares de acordo com a sua idade.
 
 **Posso importar um carro do Reino Unido após o Brexit?**
-Sim, mas o processo é mais complexo do que importar de um país da UE. Pode haver lugar ao pagamento de IVA e taxas aduaneiras adicionais. Recomendamos sempre a consulta de um despachante para estes casos.
+Sim, mas o processo é mais complexo e mais caro do que importar de um país da UE. Desde o Brexit, um carro vindo do Reino Unido é tratado como vindo de um país terceiro: paga o ISV por inteiro, sem redução por antiguidade, e ainda IVA e, em muitos casos, direitos aduaneiros. Recomenda-se sempre a consulta de um despachante para estes casos.
 
 **Quanto tempo demora o processo de importação?**
 Com toda a documentação em ordem e um despachante a tratar do processo, o tempo médio é de duas a quatro semanas. Sem apoio especializado, pode demorar significativamente mais.
