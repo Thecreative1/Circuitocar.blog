@@ -212,7 +212,7 @@ GitHub Actions builds + deploys in ~2 min. Until it finishes the new URL returns
 The stand's Facebook page shares blog links regularly. A link without a proper image loses most of the clicks, so **every article gets its own share image**.
 
 **Estado (2026-09-29): every public page has a JPEG share image.**
-- ✅ All 24 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
+- ✅ All 25 articles: `src/img/og-<slug>-v1.jpg` (TVDE is `-v2`, made by hand before the generator).
 - ✅ All 4 tools: `og-simulador-isv-v2.jpg` (by hand), `og-simulador-credito-v1.jpg`, `og-simulador-retoma-v1.jpg`, `og-custo-mensal-carro-v1.jpg` (generator). The tools are standalone pages, so their og tags are hand-written in each `.njk` head (copy the ISV block: image, secure_url, type, width, height, alt + twitter:image/alt).
 - ✅ Homepage (`og-blog-home-v1.jpg`, layout H) and `artigos.html` (`og-artigos-v1.jpg`, layout G) — set in the front matter of `src/index.njk` / `src/artigos.njk`. `og-blog-home-v1.jpg` is also `site.ogImage`, the fallback for base-cc pages without their own (privacidade, avaliações); `base-cc.njk` now has the jpeg type, width/height (1920×1008 on fallback) and alt, like `article-cc.njk`.
 - ✅ 12 city pages: `og-carros-usados-<slug>-v1.jpg`. Specs are generated in `specs.cjs` from `src/_data/cities.js` (car per city in `CITY_CARS`, layouts rotate A/D/G/F, sticker = `distanceKm`/`driveMin`). A new city needs a `CITY_CARS` entry + `node tools/og-images/gen.cjs carros-usados-<slug>`; the template path is fixed at `-v1`, so to replace a published city image bump the version in both `specs.cjs` and `cidade-carros-usados.njk`.
@@ -427,10 +427,11 @@ site.address.street / .zip / .city / .region
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-11-01: 24 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
+As of 2026-11-12: 25 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
+| 2026-11-12 | `erros-carro-eletrico-nao-carrega` | Guia de Compra | ✓ |
 | 2026-11-01 | `apoio-80-carros-eletricos-2027` | Atualidade | ✓ |
 | 2026-10-26 | `carros-usados-ate-15000-euros` | Guia de Compra | ✓ |
 | 2026-10-11 | `carro-eletrico-sem-garagem` | Guia de Compra | ✓ |

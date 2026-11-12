@@ -10,6 +10,10 @@
 //   ph       { left, top, width } para acertar a foto se a frente do carro ficar tapada pelo painel
 // O og:image do TVDE (og-carros-usados-tvde-2026-v2.jpg) foi feito à mão antes deste gerador e não está aqui.
 module.exports = [
+  { slug: 'erros-carro-eletrico-nao-carrega', layout: 'A', photo: '7724766375', car: 'Renault Mégane E-Tech elétrico',
+    eyebrow: 'ELÉTRICOS · AVARIAS', h1: 'Elétrico<br>não carrega?<br><em>Veja o AC</em>',
+    tag: 'As avarias mais comuns e o que fazer', chip: 'LER O GUIA', sticker: ['1.ª CAUSA DE AVARIA', 'BATERIA 12 V'] },
+
   { slug: 'apoio-80-carros-eletricos-2027', layout: 'G', photo: '7724621078', car: 'Opel Mokka-e de 2021',
     eyebrow: 'ATUALIDADE · OE 2027', h1: 'Apoio a<br>elétricos:<br><em>o que se sabe</em>',
     tag: 'Quem pode pedir e o que ainda falta', sticker: ['APOIO ANUNCIADO ATÉ', '80%'] },
