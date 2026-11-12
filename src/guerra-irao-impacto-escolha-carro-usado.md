@@ -23,9 +23,9 @@ inventoryLabel: "Ver stock disponível"
 
 lead: "Quando há guerra no Médio Oriente, a primeira reação costuma ser olhar para as notícias. Mas para quem está a escolher carro, a pergunta prática é outra: isto pode mexer no custo de usar o carro todos os meses? A resposta curta é sim, sobretudo pela incerteza nos combustíveis."
 
-heroImage: "https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viaturas"
-heroImageAlt: "Ver viaturas disponíveis na Circuito Car"
+heroImage: "https://omeustand.pt/viaturas/224/nissan-leaf-n-connecta-circuito-car-JwxfNXKo_Rqp.webp"
+heroImageLink: "https://www.circuitocar.pt/viatura/nissan-leaf-ID182592.html"
+heroImageAlt: "Nissan Leaf elétrico de 2023 no stand Circuito Car"
 heroWhatsappMsg: "Olá, vi o artigo sobre a guerra no Irão e o impacto na escolha do carro. Quero ajuda para escolher uma viatura."
 
 topbarLeft: "Guia prático para escolher carro em tempos de combustíveis voláteis."

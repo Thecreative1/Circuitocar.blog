@@ -21,9 +21,9 @@ footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"
 
 lead: "A inspeção periódica obrigatória mudou em 2026: a partir de 1 de março, um carro que se apresente com um recall da marca ativo e por corrigir é automaticamente reprovado. Este guia explica os prazos por idade do veículo, quanto custa, o que faz um carro chumbar e o que deve exigir ver quando compra um usado."
 
-heroImage: "https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viaturas"
-heroImageAlt: "Citroën C3 usado na Circuito Car, com inspeção e histórico verificados"
+heroImage: "https://omeustand.pt/viaturas/224/kia-e-niro-64kwh-circuito-car-oBcdmkgGSy7L.webp"
+heroImageLink: "https://www.circuitocar.pt/viatura/kia-e-niro-ID181939.html"
+heroImageAlt: "Kia e-Niro azul no stand Circuito Car, em Joane"
 heroWhatsappMsg: "Olá, li o artigo sobre a inspeção e queria saber o estado da IPO de uma viatura em stock."
 
 

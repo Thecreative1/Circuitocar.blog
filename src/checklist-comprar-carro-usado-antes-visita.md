@@ -19,9 +19,9 @@ readTime: "6 min de leitura"
 utmCampaign: "blog_checklist_visita"
 
 lead: "Antes de visitar um stand, vale a pena levar as perguntas certas. Esta checklist ajuda-o a comparar melhor, evitar decisões por impulso e perceber se a viatura faz sentido para o seu uso real."
-heroImage: "https://omeustand.pt/viaturas/224/7724173085_omeustand_foto.webp"
-heroImageLink: "https://www.circuitocar.pt/viaturas"
-heroImageAlt: "Citroën C3 usado no stand Circuito Car, em Joane"
+heroImage: "https://omeustand.pt/viaturas/224/renault-zoe-r110-life-52-circuito-car-oKc7wjW1dvEA.webp"
+heroImageLink: "https://www.circuitocar.pt/viatura/renault-zoe-ID182674.html"
+heroImageAlt: "Renault Zoe branco no stand Circuito Car, em Joane"
 heroWhatsappMsg: "Olá, vi a checklist para comprar carro usado e quero ajuda para preparar uma visita ao stand."
 
 inventoryUrl: "https://www.circuitocar.pt/viaturas"
