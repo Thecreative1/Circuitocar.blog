@@ -14,7 +14,7 @@ ogImageWidth: 1920
 ogImageHeight: 1008
 ogImageAlt: "MG4 elétrico no stand Circuito Car, com o título Elétrico usado: compensa mesmo?"
 
-category: "Guia de Compra"
+category: "Elétricos"
 readTime: "9 min de leitura"
 utmCampaign: "blog_eletrico_usado"
 footerNote: "Stand em Joane, Vila Nova de Famalicão · circuitocar.pt"

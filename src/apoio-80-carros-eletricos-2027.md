@@ -15,7 +15,7 @@ ogImageWidth: 1920
 ogImageHeight: 1008
 ogImageAlt: "Opel Mokka-e de 2021 no stand Circuito Car, com o título Apoio a elétricos: o que se sabe"
 
-category: "Atualidade"
+category: "Elétricos"
 readTime: "7 min de leitura"
 utmCampaign: "blog_apoio_eletricos_2027"
 

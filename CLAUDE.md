@@ -129,7 +129,9 @@ schemaOrg: |
 
 A typo or new value creates an empty/missing section. Pick one of:
 
-`Importação` · `Atualidade` · `Guia de Compra` · `Desportivos` · `Guia Local` · `Híbridos`
+`Importação` · `Atualidade` · `Guia de Compra` · `Elétricos` · `Desportivos` · `Guia Local` · `Híbridos`
+
+`Elétricos` was created 2026-11-12 (4 articles moved there: apoio-80, sem-garagem, erros, vale-a-pena-eletrico). Use it for any electric-car topic.
 
 To add a NEW category, you must also add it to the `categories` array in `src/artigos.njk` (with a matching `id`), and ideally a link in the homepage `#categorias` row ("Por tema", inside the Artigos section).
 
@@ -431,15 +433,15 @@ As of 2026-11-12: 25 articles, newest first. All in `src/*.md`, `tags: article`,
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
-| 2026-11-12 | `erros-carro-eletrico-nao-carrega` | Guia de Compra | ✓ |
-| 2026-11-01 | `apoio-80-carros-eletricos-2027` | Atualidade | ✓ |
+| 2026-11-12 | `erros-carro-eletrico-nao-carrega` | Elétricos | ✓ |
+| 2026-11-01 | `apoio-80-carros-eletricos-2027` | Elétricos | ✓ |
 | 2026-10-26 | `carros-usados-ate-15000-euros` | Guia de Compra | ✓ |
-| 2026-10-11 | `carro-eletrico-sem-garagem` | Guia de Compra | ✓ |
+| 2026-10-11 | `carro-eletrico-sem-garagem` | Elétricos | ✓ |
 | 2026-09-29 | `comprar-carro-usado-fim-do-ano` | Guia de Compra | ✓ |
 | 2026-09-05 | `iuc-novas-regras-pagamento-2027` | Atualidade | ✓ |
 | 2026-09-05 | `carros-usados-mais-caros-2026` | Atualidade | ✓ |
 | 2026-09-04 | `inspecao-automovel-ipo-2026-portugal` | Guia de Compra | ✓ |
-| 2026-09-03 | `vale-a-pena-comprar-eletrico-usado-2026` | Guia de Compra | ✓ |
+| 2026-09-03 | `vale-a-pena-comprar-eletrico-usado-2026` | Elétricos | ✓ |
 | 2026-09-02 | `carros-usados-tvde-2026` | Guia de Compra | ✓ |
 | 2026-07-09 | `tabela-isv-2026-portugal` | Importação | ✓ |
 | 2026-07-08 | `checklist-comprar-carro-usado-antes-visita` | Guia de Compra | ✓ |

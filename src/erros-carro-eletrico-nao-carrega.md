@@ -16,7 +16,7 @@ ogImageWidth: 1920
 ogImageHeight: 1008
 ogImageAlt: "Renault Mégane E-Tech elétrico no stand Circuito Car, com o título Elétrico não carrega? Veja o AC"
 
-category: "Guia de Compra"
+category: "Elétricos"
 readTime: "11 min de leitura"
 utmCampaign: "blog_erros_eletrico"
 lead: "Esta semana entrou no stand um condutor com um Opel elétrico que não carregava. A causa não estava na bateria nem na tomada: estava no ar condicionado. Parece estranho, mas faz sentido, e é um bom ponto de partida para perceber as avarias que mais aparecem nos elétricos."

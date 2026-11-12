@@ -16,7 +16,7 @@ ogImageWidth: 1920
 ogImageHeight: 1008
 ogImageAlt: "Fiat 500e Icon no stand Circuito Car, com o título Elétrico sem garagem: compensa?"
 
-category: "Guia de Compra"
+category: "Elétricos"
 readTime: "10 min de leitura"
 utmCampaign: "blog_eletrico_sem_garagem"
 lead: "Um elétrico sem garagem pode fazer sentido se conseguir carregar onde já costuma parar, a um preço que compense e com uma alternativa por perto. Antes de escolher o carro, vale a pena escolher os postos — e fazer as contas com o custo final do carregamento."
