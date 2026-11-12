@@ -402,7 +402,9 @@ All articles are available at `artigos.html`, grouped by category with anchor-li
 
 ### Article image convention
 
-Article images are loaded via inline `style="background-image:url('…')"` on div elements — not via CSS class selectors. Use the `heroImage` frontmatter field.
+The article cover is an `<img class="cc-post-cover__img">` in `article-cc.njk`, filled from the `heroImage` front matter field (with `heroImageAlt`, and `heroImageLink` wrapping it). Styles live in `src/css/article-cc.css`: `height: auto` + `aspect-ratio` 3/2 on desktop and 4/3 on phones, always `object-fit: cover` (never `contain`, which left white bands on phones until 2026-11-12). Each article uses a different car; see the "Cover photo" rule in CLAUDE.md.
+
+Cards on the homepage and in `artigos.html` still use `background-image` with `background-size: cover`.
 
 Image source: `omeustand.pt/viaturas/224/[id]_omeustand_foto.webp` for vehicle-specific photos, or equivalent quality source.
 

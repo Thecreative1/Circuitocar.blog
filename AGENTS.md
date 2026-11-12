@@ -75,7 +75,7 @@ readTime: "6 min de leitura"
 utmCampaign: "blog_slug"
 
 lead: "Lead paragraph shown in hero."
-heroImage: "https://..."     ← use a REAL recent car from circuitocar.pt; verify URL returns 200
+heroImage: "https://..."     ← a REAL car FOR SALE on circuitocar.pt, NOT used as heroImage by any other article; verify URL returns 200
 heroImageLink: "https://www.circuitocar.pt/viatura/<slug>-ID<id>.html"
 heroImageAlt: "Alt text"
 heroWhatsappMsg: "Pre-filled WhatsApp message from hero button."
@@ -137,6 +137,11 @@ The whole site uses formal European Portuguese. Conjugate for "você", never "tu
 
 ### Body content rules
 
+- **Cover photo (`heroImage`): one car per article.** No two articles share a photo. In Nov 2026 the Citroën C3 was on 5 articles and the Nissan Qashqai on 4, so the articles looked the same; 9 were swapped on 2026-11-12. Before choosing, list the photos in use:
+  ```
+  grep -h "^heroImage:" src/*.md | sort | uniq -c | sort -rn
+  ```
+  Pick a car that is **for sale** (it has a price and no `VENDIDO` on circuitocar.pt/viaturas; the car page never 404s after a sale) and fits the topic where possible (diesel article → diesel car; IUC article → combustion car, since EVs don't pay IUC). The stock is mostly electric, so save the few combustion cars for the topics that need them. Photos named `<car>-circuito-car-<random>.webp` instead of a numeric id work fine as `heroImage`; only the og generator needs numeric ids. While the car is for sale, `heroImageLink` points to its page; when it sells, switch it to `/viaturas`.
 - **Contact CTA**: never hardcode André/Filipe call/WhatsApp buttons in the body. Use a single button linking to the contact card:
   ```html
   <a class="cc-btn cc-btn--yellow" href="#equipa"><i data-lucide="message-square"></i>Falar com a equipa</a>
@@ -327,6 +332,7 @@ site.address.street / .zip / .city / .region
 - [ ] Validation errors set `aria-invalid="true"` on the offending field and focus it
 - [ ] New nav items get `aria-current="page"` when URL matches
 - [ ] Images have meaningful `alt` text
+- [ ] Cover photo (`heroImage`) not used by any other article, car for sale, and checked on a phone (390 px): it fills the frame, no bands
 - [ ] `git pull origin main --no-rebase` before `git push`
 
 ## What went wrong in the first session (don't repeat)
@@ -345,6 +351,12 @@ site.address.street / .zip / .city / .region
 ## What went wrong in the local SEO session (don't repeat)
 
 - Created city pages without `tags: article` and `category: "Guia Local"` — pages built fine but were completely invisible in `artigos.html` and all collections. Always set both when a page should appear in the blog index.
+
+## What went wrong in the mobile cover session (2026-11-12) (don't repeat)
+
+- **The cover photo on phones had big white/grey bands above and below the car, on all 25 articles.** The `<img width="1200" height="675">` in `article-cc.njk` turns into CSS `height: 675px`, which overrides `aspect-ratio`. On a 390 px phone the box became 350×675, and the mobile rule `object-fit: contain` shrank the 4:3 photo into the middle. Fix in `article-cc.css`: `height: auto` (always needed when an `img` has width/height attributes and you rely on `aspect-ratio`), `object-fit: cover` everywhere, 4/3 on phones and 3/2 on desktop (16/9 cut off the front wheels). Never use `object-fit: contain` on car photos.
+- **How to check:** at 390 px, measure every `img` with `getBoundingClientRect()` and flag any box whose ratio differs from the photo's. Before screenshotting, set `localStorage.cc_cookie_consent` and hide `.cc-mobile-dock, .cc-header`: the cookie banner and the dock cover the photo and hide the problem.
+- **Repeated cover photos** made different articles look identical in the article list and on the homepage. See the "Cover photo" rule in "Body content rules".
 
 ## What went wrong in the trust/stock session (don't repeat)
 
