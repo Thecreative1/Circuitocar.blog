@@ -10,6 +10,10 @@
 //   ph       { left, top, width } para acertar a foto se a frente do carro ficar tapada pelo painel
 // O og:image do TVDE (og-carros-usados-tvde-2026-v2.jpg) foi feito à mão antes deste gerador e não está aqui.
 module.exports = [
+  { slug: 'perguntar-ao-maps-google-maps-portugal', layout: 'D', photo: '7724711666', car: 'Peugeot e-208 GT Line',
+    eyebrow: 'ATUALIDADE · GOOGLE MAPS', h1: 'O Google Maps<br><em>já responde</em>',
+    tag: 'Perguntar ao Maps chegou a Portugal', chip: 'LER O ARTIGO', sticker: ['EM PORTUGAL DESDE', '16 NOV'] },
+
   { slug: 'erros-carro-eletrico-nao-carrega', layout: 'A', photo: '7724766375', car: 'Renault Mégane E-Tech elétrico',
     eyebrow: 'ELÉTRICOS · AVARIAS', h1: 'Elétrico<br>não carrega?<br><em>Veja o AC</em>',
     tag: 'As avarias mais comuns e o que fazer', chip: 'LER O GUIA', sticker: ['1.ª CAUSA DE AVARIA', 'BATERIA 12 V'] },

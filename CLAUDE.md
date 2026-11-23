@@ -365,7 +365,7 @@ The 4 cars in the homepage "Viaturas em destaque" section are **curated manually
 **The listing also keeps sold cars** (in Oct 2026: 161 cards, only 19 for sale). A sold card has `<div class="vendido">VENDIDO</div>` and an empty price block; a car for sale shows `NN.NNN&euro;`. The reliable check: crawl `https://www.circuitocar.pt/viaturas?page=1…N` (12 per page, stop at an empty page), split on `<div class="viaturas-cell">`, keep the IDs with a price and no `vendido` class, and confirm every `ID<id>` referenced in `src/` (articles, `stock.json`, `specs.cjs`) is in that set. Also compare the prices in `stock.json` — they drop over time.
 - A sold car used only as `heroImageLink`: point it to `https://www.circuitocar.pt/viaturas` and make `heroImageAlt` neutral ("no stand Circuito Car", never "em stock"/"à venda"). The photo can stay.
 - A sold car the article is *about* (e.g. the Opel GT, Oct 2026): reword the article in past tense and point every link to `/viaturas`.
-- Since 2026-11-12, 9 articles point `heroImageLink` at a specific car (Leaf ID182592, Corsa-e ID182239, e-Niro ID181939, Zoe ID182674, ID.4 ID181957, Juke ID147284, 208 ID169683, Born ID181075, MG ZS ID181195). They will sell: check them in the monthly review.
+- Since 2026-11-12, 9 articles point `heroImageLink` at a specific car (Leaf ID182592, Corsa-e ID182239, e-Niro ID181939, Zoe ID182674, ID.4 ID181957, Juke ID147284, 208 ID169683, Born ID181075, MG ZS ID181195), plus the e-208 ID179127 since 2026-11-23. They will sell: check them in the monthly review.
 Photos on `omeustand.pt` usually keep working after the sale.
 
 ## Avaliações (reviews)
@@ -436,10 +436,11 @@ site.address.street / .zip / .city / .region
 
 ## Articles currently live (do not duplicate)
 
-As of 2026-11-12: 25 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
+As of 2026-11-23: 26 articles, newest first. All in `src/*.md`, `tags: article`, and **all have their own share image** (`og-<slug>-v1.jpg`, TVDE `-v2`). Check this list before creating new content.
 
 | Date | Article slug | Category | FAQPage? |
 |---|---|---|---|
+| 2026-11-23 | `perguntar-ao-maps-google-maps-portugal` | Atualidade | ✓ |
 | 2026-11-12 | `erros-carro-eletrico-nao-carrega` | Elétricos | ✓ |
 | 2026-11-01 | `apoio-80-carros-eletricos-2027` | Elétricos | ✓ |
 | 2026-10-26 | `carros-usados-ate-15000-euros` | Guia de Compra | ✓ |
